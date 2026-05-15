@@ -1,0 +1,42 @@
+name: DKD DrabornEagle public web
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: dkd-company-pages
+  cancel-in-progress: true
+
+jobs:
+  dkd_build_pages:
+    runs-on: ubuntu-latest
+    steps:
+      - name: DKD Checkout repository
+        uses: actions/checkout@v4
+
+      - name: DKD Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: DKD Upload company pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  dkd_deploy_pages:
+    needs: dkd_build_pages
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.dkd_deployment.outputs.page_url }}
+    steps:
+      - name: DKD Deploy GitHub Pages
+        id: dkd_deployment
+        uses: actions/deploy-pages@v4
