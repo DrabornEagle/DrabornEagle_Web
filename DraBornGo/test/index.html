@@ -3,241 +3,190 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DraBornGo Hizmet Ağı | Siparişler ve Kurye Başvurusu</title>
-  <meta name="description" content="DraBornGo Hizmet Ağı; fiziksel hizmet siparişleri, kurye teslimat akışı, canlı takip ve kurye başvurusu için profesyonel bilgilendirme sayfası.">
+  <title>DraBornGo Hizmet Ağı | Profesyonel Sipariş ve Kurye Ağı</title>
+  <meta name="description" content="DraBornGo Hizmet Ağı; fiziksel hizmet siparişleri, kurye operasyon akışı ve kurye başvurusu için profesyonel tanıtım sayfası.">
   <meta name="theme-color" content="#07111f">
   <meta property="og:title" content="DraBornGo Hizmet Ağı">
-  <meta property="og:description" content="Hizmet Ağı siparişleri, güvenli teslimat süreci ve kurye başvuru akışı.">
+  <meta property="og:description" content="Kurye destekli fiziksel hizmet siparişleri ve kurye başvuru ağı.">
   <meta property="og:type" content="website">
   <style>
     :root{
-      --dkd_page_background_value:#07111f;
-      --dkd_panel_background_value:rgba(14,27,46,.86);
-      --dkd_panel_soft_value:rgba(255,255,255,.075);
-      --dkd_text_value:#f7fbff;
-      --dkd_muted_text_value:#b7c5d8;
-      --dkd_line_value:rgba(255,255,255,.16);
-      --dkd_primary_value:#48d6ff;
-      --dkd_secondary_value:#8b5cf6;
-      --dkd_success_value:#86efac;
-      --dkd_warning_value:#ffd166;
-      --dkd_shadow_value:0 24px 80px rgba(0,0,0,.32);
+      --dkd_page_background_color:#06111f;
+      --dkd_panel_background_color:rgba(11,23,42,.78);
+      --dkd_panel_strong_color:rgba(12,24,45,.94);
+      --dkd_border_color:rgba(255,255,255,.12);
+      --dkd_soft_border_color:rgba(255,255,255,.08);
+      --dkd_text_color:#f8fbff;
+      --dkd_muted_text_color:#aab8ce;
+      --dkd_primary_color:#59d7ff;
+      --dkd_secondary_color:#7c5cff;
+      --dkd_success_color:#7ef0ba;
+      --dkd_warning_color:#ffd66b;
+      --dkd_shadow_color:0 28px 90px rgba(0,0,0,.34);
+      --dkd_soft_shadow_color:0 18px 48px rgba(0,0,0,.22);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:radial-gradient(circle at 18% 0,#194778 0,var(--dkd_page_background_value) 42%,#050912 100%);color:var(--dkd_text_value);line-height:1.65}
-    a{color:inherit}
-    .dkd_page_shell{width:min(1180px,calc(100% - 32px));margin:0 auto;padding:24px 0 56px}
-    .dkd_navbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0 24px}
-    .dkd_brand_lockup{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .dkd_brand_mark{width:46px;height:46px;border-radius:18px;background:linear-gradient(135deg,var(--dkd_primary_value),var(--dkd_secondary_value));display:grid;place-items:center;font-weight:900;color:#04111f;box-shadow:0 14px 36px rgba(72,214,255,.22)}
-    .dkd_brand_title{font-size:18px;font-weight:900;letter-spacing:.2px}
-    .dkd_brand_subtitle{display:block;color:var(--dkd_muted_text_value);font-size:12px;font-weight:700;letter-spacing:.8px;text-transform:uppercase}
-    .dkd_nav_actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
-    .dkd_nav_link,.dkd_primary_button,.dkd_soft_button{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:1px solid var(--dkd_line_value);border-radius:999px;text-decoration:none;font-weight:900;letter-spacing:.2px;min-height:44px;padding:11px 16px}
-    .dkd_nav_link{background:rgba(255,255,255,.06);color:var(--dkd_muted_text_value)}
-    .dkd_primary_button{background:linear-gradient(135deg,var(--dkd_primary_value),var(--dkd_secondary_value));color:#04111f;border-color:transparent;box-shadow:0 16px 38px rgba(72,214,255,.22)}
-    .dkd_soft_button{background:rgba(72,214,255,.12);color:var(--dkd_text_value)}
-    .dkd_hero_grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(320px,.75fr);gap:20px;align-items:stretch}
-    .dkd_hero_panel,.dkd_side_panel,.dkd_section_panel{border:1px solid var(--dkd_line_value);border-radius:34px;background:linear-gradient(145deg,rgba(72,214,255,.16),rgba(139,92,246,.10)),var(--dkd_panel_background_value);box-shadow:var(--dkd_shadow_value);overflow:hidden}
-    .dkd_hero_panel{padding:34px;position:relative}
-    .dkd_hero_panel:after{content:"";position:absolute;right:-90px;top:-90px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(134,239,172,.32),transparent 64%);pointer-events:none}
-    .dkd_badge_row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
-    .dkd_badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--dkd_line_value);background:rgba(255,255,255,.07);color:var(--dkd_success_value);font-weight:900;font-size:13px}
-    .dkd_hero_title{margin:0;font-size:clamp(36px,7vw,74px);line-height:1.02;letter-spacing:-2.4px}
-    .dkd_hero_text{max-width:760px;margin:18px 0 0;color:var(--dkd_muted_text_value);font-size:18px}
-    .dkd_hero_actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-    .dkd_metric_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
-    .dkd_metric_card{padding:16px;border-radius:22px;background:rgba(255,255,255,.075);border:1px solid var(--dkd_line_value)}
-    .dkd_metric_value{display:block;font-size:24px;font-weight:900;color:var(--dkd_primary_value)}
-    .dkd_metric_label{display:block;color:var(--dkd_muted_text_value);font-size:13px;font-weight:700}
-    .dkd_side_panel{padding:24px;background:linear-gradient(180deg,rgba(134,239,172,.12),rgba(72,214,255,.08)),var(--dkd_panel_background_value)}
-    .dkd_checkout_card{padding:18px;border-radius:26px;background:#f7fbff;color:#06111f;box-shadow:0 20px 54px rgba(0,0,0,.24)}
-    .dkd_checkout_topline{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:1px solid rgba(6,17,31,.12);padding-bottom:14px;margin-bottom:14px}
-    .dkd_checkout_title{margin:0;font-size:18px;font-weight:900}
-    .dkd_checkout_status{display:inline-flex;border-radius:999px;background:#e8fff1;color:#0c7a3b;font-weight:900;font-size:12px;padding:6px 10px;white-space:nowrap}
-    .dkd_order_line{display:flex;justify-content:space-between;gap:12px;padding:11px 0;border-bottom:1px solid rgba(6,17,31,.09);font-size:14px}
-    .dkd_order_line span:first-child{color:#526072;font-weight:800}
-    .dkd_order_line span:last-child{text-align:right;font-weight:900}
-    .dkd_checkout_note{margin:14px 0 0;color:#526072;font-size:13px}
-    .dkd_section{margin-top:22px}
-    .dkd_section_panel{padding:28px;background:rgba(14,27,46,.84)}
-    .dkd_section_header{display:flex;justify-content:space-between;gap:18px;align-items:flex-end;margin-bottom:18px}
-    .dkd_kicker{margin:0 0 6px;color:var(--dkd_primary_value);font-size:13px;font-weight:900;letter-spacing:1.2px;text-transform:uppercase}
-    .dkd_section_title{margin:0;font-size:clamp(26px,4.4vw,44px);line-height:1.08;letter-spacing:-1px}
-    .dkd_section_text{margin:8px 0 0;color:var(--dkd_muted_text_value);max-width:740px}
-    .dkd_cards_grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
-    .dkd_service_card{min-height:250px;padding:20px;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.105),rgba(255,255,255,.055));border:1px solid var(--dkd_line_value);display:flex;flex-direction:column;justify-content:space-between}
-    .dkd_service_icon{width:48px;height:48px;border-radius:18px;background:rgba(72,214,255,.14);display:grid;place-items:center;font-size:24px;border:1px solid var(--dkd_line_value)}
-    .dkd_service_title{margin:14px 0 8px;font-size:19px;line-height:1.2}
-    .dkd_service_text{margin:0;color:var(--dkd_muted_text_value);font-size:14px}
-    .dkd_price_tag{display:inline-flex;width:max-content;margin-top:16px;padding:7px 10px;border-radius:999px;background:rgba(134,239,172,.12);color:var(--dkd_success_value);font-size:13px;font-weight:900;border:1px solid rgba(134,239,172,.26)}
-    .dkd_flow_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .dkd_flow_card{padding:20px;border-radius:26px;background:rgba(255,255,255,.07);border:1px solid var(--dkd_line_value)}
-    .dkd_flow_number{width:38px;height:38px;border-radius:14px;background:linear-gradient(135deg,var(--dkd_primary_value),var(--dkd_success_value));color:#04111f;display:grid;place-items:center;font-weight:900;margin-bottom:14px}
-    .dkd_flow_title{margin:0 0 8px;font-size:18px}
-    .dkd_flow_text{margin:0;color:var(--dkd_muted_text_value);font-size:14px}
-    .dkd_application_layout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:16px;align-items:stretch}
-    .dkd_application_card{padding:22px;border-radius:28px;border:1px solid var(--dkd_line_value);background:linear-gradient(160deg,rgba(139,92,246,.18),rgba(72,214,255,.09))}
-    .dkd_application_list{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}
-    .dkd_application_list li{padding:13px 14px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid var(--dkd_line_value);color:var(--dkd_muted_text_value);font-weight:700}
+    body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--dkd_text_color);background:radial-gradient(circle at 0 0,rgba(89,215,255,.18),transparent 28%),radial-gradient(circle at 100% 10%,rgba(124,92,255,.20),transparent 30%),linear-gradient(180deg,#0b1730 0%,#07111f 48%,#050b15 100%);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .dkd_page_shell{width:min(1220px,calc(100% - 32px));margin:0 auto;padding:24px 0 64px}
+    .dkd_topbar{position:sticky;top:0;z-index:30;backdrop-filter:blur(16px);background:rgba(6,17,31,.58);border:1px solid var(--dkd_soft_border_color);border-radius:999px;padding:12px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:6px;box-shadow:var(--dkd_soft_shadow_color)}
+    .dkd_brand_area{display:flex;align-items:center;gap:12px;min-width:0}
+    .dkd_brand_mark{width:48px;height:48px;border-radius:18px;background:linear-gradient(135deg,var(--dkd_primary_color),var(--dkd_secondary_color));display:grid;place-items:center;color:#08111e;font-size:18px;font-weight:900;box-shadow:0 14px 38px rgba(89,215,255,.22);flex:none}
+    .dkd_brand_title{font-weight:900;font-size:18px;letter-spacing:.2px}
+    .dkd_brand_subtitle{display:block;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--dkd_muted_text_color);font-weight:800}
+    .dkd_topbar_links{display:flex;align-items:center;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    .dkd_nav_link,.dkd_button_primary,.dkd_button_secondary,.dkd_button_light{min-height:44px;display:inline-flex;align-items:center;justify-content:center;padding:11px 16px;border-radius:999px;border:1px solid var(--dkd_border_color);font-weight:850;letter-spacing:.1px;gap:8px;transition:transform .2s ease,background .2s ease,border-color .2s ease}
+    .dkd_nav_link{background:rgba(255,255,255,.05);color:var(--dkd_muted_text_color)}
+    .dkd_nav_link:hover,.dkd_button_primary:hover,.dkd_button_secondary:hover,.dkd_button_light:hover{transform:translateY(-1px)}
+    .dkd_button_primary{background:linear-gradient(135deg,var(--dkd_primary_color),var(--dkd_secondary_color));border-color:transparent;color:#07111f;box-shadow:0 18px 44px rgba(89,215,255,.18)}
+    .dkd_button_secondary{background:rgba(89,215,255,.11);color:var(--dkd_text_color)}
+    .dkd_button_light{background:#fff;color:#07111f;border-color:transparent}
+    .dkd_hero_shell{margin-top:22px;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(380px,.94fr);gap:22px;align-items:stretch}
+    .dkd_glass_panel{background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));border:1px solid var(--dkd_border_color);border-radius:32px;box-shadow:var(--dkd_shadow_color);overflow:hidden;position:relative}
+    .dkd_hero_content{padding:36px;background:radial-gradient(circle at 100% 0,rgba(126,240,186,.18),transparent 24%),linear-gradient(145deg,rgba(89,215,255,.10),rgba(124,92,255,.08))}
+    .dkd_badge_row{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px}
+    .dkd_badge{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border-radius:999px;border:1px solid var(--dkd_border_color);background:rgba(255,255,255,.06);font-size:13px;font-weight:850;color:var(--dkd_success_color)}
+    .dkd_hero_title{margin:0;font-size:clamp(38px,7vw,74px);line-height:1.02;letter-spacing:-2.5px;max-width:720px}
+    .dkd_hero_title span{display:block;color:var(--dkd_primary_color)}
+    .dkd_hero_text{margin:18px 0 0;max-width:720px;color:var(--dkd_muted_text_color);font-size:18px}
+    .dkd_hero_action_row{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+    .dkd_hero_metric_grid{margin-top:28px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+    .dkd_metric_card{padding:18px;border-radius:22px;background:rgba(255,255,255,.06);border:1px solid var(--dkd_soft_border_color);backdrop-filter:blur(10px)}
+    .dkd_metric_value{display:block;font-size:28px;font-weight:900;color:var(--dkd_primary_color);line-height:1.1}
+    .dkd_metric_label{display:block;font-size:13px;color:var(--dkd_muted_text_color);font-weight:700;margin-top:6px}
+    .dkd_hero_visual{padding:28px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 25% 20%,rgba(89,215,255,.15),transparent 20%),radial-gradient(circle at 85% 8%,rgba(124,92,255,.22),transparent 24%),linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,.025));min-height:720px}
+    .dkd_visual_stage{width:min(100%,510px);position:relative;display:flex;align-items:center;justify-content:center;min-height:640px}
+    .dkd_glow_orb_primary,.dkd_glow_orb_secondary{position:absolute;border-radius:999px;filter:blur(10px);opacity:.92}
+    .dkd_glow_orb_primary{width:210px;height:210px;left:4px;top:20px;background:radial-gradient(circle,rgba(89,215,255,.55),rgba(89,215,255,.06) 68%,transparent 76%)}
+    .dkd_glow_orb_secondary{width:210px;height:210px;right:0;bottom:40px;background:radial-gradient(circle,rgba(124,92,255,.42),rgba(124,92,255,.05) 70%,transparent 78%)}
+    .dkd_phone_mockup{position:relative;width:320px;padding:14px;border-radius:42px;background:linear-gradient(180deg,#0e1627,#050a12);border:1px solid rgba(255,255,255,.16);box-shadow:0 34px 80px rgba(0,0,0,.42);z-index:2}
+    .dkd_phone_topbar{width:120px;height:24px;border-radius:0 0 16px 16px;background:#02050a;position:absolute;left:50%;transform:translateX(-50%);top:0}
+    .dkd_phone_screen{overflow:hidden;border-radius:30px;min-height:620px;background:linear-gradient(180deg,#eff7ff 0%,#f8fbff 100%);color:#08111f;position:relative}
+    .dkd_phone_screen_inner{padding:18px}
+    .dkd_app_topline{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:18px}
+    .dkd_app_brand_chip{display:inline-flex;align-items:center;gap:10px;padding:10px 12px;border-radius:18px;background:#fff;box-shadow:0 14px 28px rgba(12,19,35,.08);font-weight:900;font-size:13px}
+    .dkd_app_brand_chip_mark{width:30px;height:30px;border-radius:12px;background:linear-gradient(135deg,var(--dkd_primary_color),var(--dkd_secondary_color));display:grid;place-items:center;color:#08111f;font-weight:900}
+    .dkd_app_status_chip{padding:10px 12px;border-radius:16px;background:#08111f;color:#d7f6ff;font-size:12px;font-weight:900}
+    .dkd_app_headline{padding:18px;border-radius:24px;background:linear-gradient(135deg,#08111f,#15355d);color:#f8fbff;box-shadow:0 18px 34px rgba(8,17,31,.18)}
+    .dkd_app_headline p{margin:0;color:#d5e6f6;font-size:13px}
+    .dkd_app_headline h3{margin:10px 0 0;font-size:22px;line-height:1.2}
+    .dkd_app_stat_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:14px}
+    .dkd_app_stat_card{padding:12px;border-radius:18px;background:#fff;box-shadow:0 12px 22px rgba(8,17,31,.06);text-align:center}
+    .dkd_app_stat_value{display:block;font-size:18px;font-weight:900;color:#07111f}
+    .dkd_app_stat_label{display:block;font-size:11px;color:#566579;font-weight:700;margin-top:4px}
+    .dkd_app_order_card{margin-top:16px;padding:16px;border-radius:24px;background:#fff;box-shadow:0 18px 30px rgba(12,19,35,.08)}
+    .dkd_app_order_header{display:flex;justify-content:space-between;gap:12px;align-items:center}
+    .dkd_app_order_header h4{margin:0;font-size:17px;line-height:1.2}
+    .dkd_app_state_pill{padding:8px 10px;border-radius:999px;background:#ebfff4;color:#118e4d;font-size:11px;font-weight:900;white-space:nowrap}
+    .dkd_app_order_text{margin:10px 0 0;font-size:13px;color:#6a798e}
+    .dkd_app_route_block{margin-top:14px;padding:14px;border-radius:18px;background:linear-gradient(180deg,#f5f9ff,#eef5ff);border:1px solid rgba(9,19,35,.06)}
+    .dkd_app_route_line{display:flex;align-items:center;gap:10px;font-size:12px;color:#334155;font-weight:800;margin-top:8px}
+    .dkd_app_route_dot{width:10px;height:10px;border-radius:999px;background:#59d7ff;flex:none}
+    .dkd_app_route_dot_secondary{background:#7ef0ba}
+    .dkd_app_footer_action{margin-top:14px;display:flex;gap:10px}
+    .dkd_app_footer_button{flex:1;min-height:42px;border-radius:16px;display:grid;place-items:center;font-size:12px;font-weight:900}
+    .dkd_app_footer_button_primary{background:#08111f;color:#f8fbff}
+    .dkd_app_footer_button_soft{background:#eff4fb;color:#08111f}
+    .dkd_floating_card{position:absolute;padding:16px;border-radius:22px;border:1px solid rgba(255,255,255,.14);background:rgba(10,21,38,.84);backdrop-filter:blur(14px);box-shadow:0 22px 46px rgba(0,0,0,.24);z-index:3;width:220px}
+    .dkd_floating_card_top{right:-10px;top:44px}
+    .dkd_floating_card_bottom{left:-16px;bottom:78px}
+    .dkd_floating_kicker{display:block;font-size:11px;letter-spacing:1.1px;text-transform:uppercase;color:var(--dkd_muted_text_color);font-weight:800}
+    .dkd_floating_value{display:block;margin-top:6px;font-size:22px;font-weight:900;line-height:1.1}
+    .dkd_floating_text{margin:8px 0 0;font-size:12px;color:var(--dkd_muted_text_color)}
+    .dkd_section_shell{margin-top:22px}
+    .dkd_section_panel{padding:30px}
+    .dkd_section_header{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+    .dkd_section_kicker{margin:0 0 8px;color:var(--dkd_primary_color);font-size:12px;letter-spacing:1.4px;text-transform:uppercase;font-weight:900}
+    .dkd_section_title{margin:0;font-size:clamp(28px,4.5vw,46px);line-height:1.08;letter-spacing:-1.2px}
+    .dkd_section_text{margin:10px 0 0;color:var(--dkd_muted_text_color);max-width:760px}
+    .dkd_order_showcase_grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .dkd_order_showcase_card{min-height:278px;padding:20px;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03));border:1px solid var(--dkd_border_color);display:flex;flex-direction:column;justify-content:space-between}
+    .dkd_order_icon_shell{width:58px;height:58px;border-radius:20px;display:grid;place-items:center;background:rgba(89,215,255,.12);border:1px solid var(--dkd_soft_border_color);font-size:28px}
+    .dkd_order_showcase_card h3{margin:16px 0 8px;font-size:20px;line-height:1.2}
+    .dkd_order_showcase_card p{margin:0;color:var(--dkd_muted_text_color);font-size:14px}
+    .dkd_order_tag{display:inline-flex;width:max-content;margin-top:16px;padding:8px 11px;border-radius:999px;background:rgba(126,240,186,.12);border:1px solid rgba(126,240,186,.24);color:var(--dkd_success_color);font-size:12px;font-weight:900}
+    .dkd_process_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .dkd_process_card{padding:22px;border-radius:28px;background:linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.03));border:1px solid var(--dkd_border_color)}
+    .dkd_process_step{width:44px;height:44px;border-radius:16px;display:grid;place-items:center;background:linear-gradient(135deg,var(--dkd_primary_color),var(--dkd_success_color));color:#07111f;font-weight:900;margin-bottom:14px}
+    .dkd_process_card h3{margin:0 0 10px;font-size:18px}
+    .dkd_process_card p{margin:0;color:var(--dkd_muted_text_color);font-size:14px}
+    .dkd_application_layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:16px}
+    .dkd_application_info_card,.dkd_application_feature_card{padding:24px;border-radius:28px;border:1px solid var(--dkd_border_color);background:linear-gradient(180deg,rgba(255,255,255,.07),rgba(255,255,255,.03))}
+    .dkd_application_info_card{background:linear-gradient(150deg,rgba(124,92,255,.18),rgba(89,215,255,.08))}
+    .dkd_application_note_list{display:grid;gap:10px;margin:18px 0 0;padding:0;list-style:none}
+    .dkd_application_note_list li{padding:14px;border-radius:18px;background:rgba(255,255,255,.07);border:1px solid var(--dkd_soft_border_color);font-weight:750;color:var(--dkd_muted_text_color)}
+    .dkd_application_feature_grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+    .dkd_application_feature_item{padding:16px;border-radius:20px;background:rgba(255,255,255,.06);border:1px solid var(--dkd_soft_border_color)}
+    .dkd_application_feature_item h4{margin:0 0 6px;font-size:15px}
+    .dkd_application_feature_item p{margin:0;color:var(--dkd_muted_text_color);font-size:13px}
     .dkd_trust_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
-    .dkd_trust_card{padding:18px;border-radius:24px;background:rgba(255,255,255,.07);border:1px solid var(--dkd_line_value)}
-    .dkd_trust_title{margin:0 0 6px;font-size:17px}
-    .dkd_trust_text{margin:0;color:var(--dkd_muted_text_value);font-size:14px}
-    .dkd_legal_links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
-    .dkd_footer{margin-top:26px;padding:22px;border-radius:26px;border:1px solid var(--dkd_line_value);background:rgba(255,255,255,.055);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--dkd_muted_text_value);font-size:14px}
-    @media(max-width:920px){.dkd_hero_grid,.dkd_application_layout{grid-template-columns:1fr}.dkd_cards_grid{grid-template-columns:repeat(2,minmax(0,1fr))}.dkd_trust_grid,.dkd_flow_grid{grid-template-columns:1fr}}
-    @media(max-width:640px){.dkd_page_shell{width:min(100% - 22px,1180px);padding-top:14px}.dkd_navbar,.dkd_section_header{align-items:flex-start;flex-direction:column}.dkd_nav_actions{justify-content:flex-start}.dkd_hero_panel,.dkd_side_panel,.dkd_section_panel{border-radius:26px;padding:22px}.dkd_metric_grid,.dkd_cards_grid{grid-template-columns:1fr}.dkd_hero_title{letter-spacing:-1.2px}.dkd_nav_link,.dkd_primary_button,.dkd_soft_button{width:100%}.dkd_hero_actions .dkd_primary_button,.dkd_hero_actions .dkd_soft_button{width:100%}}
+    .dkd_trust_card{padding:22px;border-radius:24px;background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.03));border:1px solid var(--dkd_border_color)}
+    .dkd_trust_card h3{margin:0 0 8px;font-size:18px}
+    .dkd_trust_card p{margin:0;color:var(--dkd_muted_text_color);font-size:14px}
+    .dkd_legal_button_row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+    .dkd_footer{margin-top:24px;padding:22px 24px;border-radius:26px;border:1px solid var(--dkd_border_color);background:rgba(255,255,255,.04);display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--dkd_muted_text_color);font-size:14px}
+    @media(max-width:1080px){.dkd_hero_shell,.dkd_application_layout,.dkd_order_showcase_grid,.dkd_process_grid,.dkd_trust_grid{grid-template-columns:1fr 1fr}.dkd_hero_shell{grid-template-columns:1fr}.dkd_hero_visual{min-height:auto}.dkd_visual_stage{min-height:620px}}
+    @media(max-width:820px){.dkd_topbar{border-radius:28px;align-items:flex-start;flex-direction:column}.dkd_topbar_links{justify-content:flex-start}.dkd_order_showcase_grid,.dkd_process_grid,.dkd_trust_grid,.dkd_application_layout,.dkd_application_feature_grid{grid-template-columns:1fr}.dkd_hero_metric_grid{grid-template-columns:1fr}.dkd_floating_card_top{right:-2px;top:10px}.dkd_floating_card_bottom{left:-2px;bottom:34px}}
+    @media(max-width:640px){.dkd_page_shell{width:min(100% - 20px,1220px);padding-top:14px}.dkd_hero_content,.dkd_section_panel,.dkd_hero_visual{padding:22px}.dkd_hero_title{letter-spacing:-1.3px}.dkd_hero_action_row .dkd_button_primary,.dkd_hero_action_row .dkd_button_secondary,.dkd_topbar_links .dkd_nav_link,.dkd_topbar_links .dkd_button_primary{width:100%}.dkd_phone_mockup{width:100%;max-width:330px}.dkd_floating_card{width:188px;padding:14px}.dkd_visual_stage{min-height:580px}}
   </style>
 </head>
 <body>
   <main class="dkd_page_shell">
-    <nav class="dkd_navbar" aria-label="DraBornGo gezinme">
-      <a class="dkd_brand_lockup" href="/DraBornGo/test/" aria-label="DraBornGo Hizmet Ağı ana sayfa">
+    <header class="dkd_topbar" aria-label="DraBornGo ana gezinme">
+      <a class="dkd_brand_area" href="/DraBornGo/test/" aria-label="DraBornGo Hizmet Ağı ana sayfa">
         <span class="dkd_brand_mark">DB</span>
         <span><span class="dkd_brand_title">DraBornGo</span><span class="dkd_brand_subtitle">Hizmet Ağı Merkezi</span></span>
       </a>
-      <div class="dkd_nav_actions">
+      <nav class="dkd_topbar_links" aria-label="Sayfa bölümleri">
         <a class="dkd_nav_link" href="#dkd_orders_section">Siparişler</a>
         <a class="dkd_nav_link" href="#dkd_application_section">Kurye Başvurusu</a>
-        <a class="dkd_nav_link" href="#dkd_trust_section">Güven</a>
-      </div>
-    </nav>
+        <a class="dkd_nav_link" href="#dkd_trust_section">Güven ve Şeffaflık</a>
+        <a class="dkd_button_primary" href="mailto:support@draborneagle.com?subject=DraBornGo%20Bilgi%20Talebi">İletişime Geç</a>
+      </nav>
+    </header>
 
-    <section class="dkd_hero_grid" aria-label="DraBornGo Hizmet Ağı tanıtımı">
-      <div class="dkd_hero_panel">
-        <div class="dkd_badge_row">
-          <span class="dkd_badge">Fiziksel hizmet siparişleri</span>
-          <span class="dkd_badge">Kurye + teslimat akışı</span>
-          <span class="dkd_badge">Canlı takip odaklı</span>
-        </div>
-        <h1 class="dkd_hero_title">Şehir içi hizmet siparişleri için profesyonel DraBornGo vitrini.</h1>
-        <p class="dkd_hero_text">DraBornGo Hizmet Ağı; restoran/market teslimatı, paket gönderimi, nakliye talebi ve yerel servis ihtiyaçlarını tek merkezde toplayan fiziksel hizmet odaklı bir mobil deneyimdir. Bu test sayfası ödeme kuruluşu ve iş ortağı incelemesine uygun, açık ve güven veren bir e-ticaret vitrini olarak hazırlanmıştır.</p>
-        <div class="dkd_hero_actions">
-          <a class="dkd_primary_button" href="#dkd_orders_section">Hizmet Ağı siparişlerini incele</a>
-          <a class="dkd_soft_button" href="#dkd_application_section">Kurye başvurusu alanı</a>
-        </div>
-        <div class="dkd_metric_grid" aria-label="DraBornGo hizmet göstergeleri">
-          <div class="dkd_metric_card"><span class="dkd_metric_value">4</span><span class="dkd_metric_label">ana sipariş kategorisi</span></div>
-          <div class="dkd_metric_card"><span class="dkd_metric_value">3</span><span class="dkd_metric_label">durum takibi adımı</span></div>
-          <div class="dkd_metric_card"><span class="dkd_metric_value">0</span><span class="dkd_metric_label">kart bilgisi bu sayfada alınmaz</span></div>
-        </div>
+    <section class="dkd_hero_shell" aria-label="DraBornGo profesyonel tanıtım alanı">
+      <div class="dkd_glass_panel dkd_hero_content">
+        <div class="dkd_badge_row"><span class="dkd_badge">Fiziksel hizmet siparişleri</span><span class="dkd_badge">Kurye operasyon akışı</span><span class="dkd_badge">Canlı takip odaklı altyapı</span></div>
+        <h1 class="dkd_hero_title">Şehir içi hizmet siparişleri için <span>premium DraBornGo vitrini</span></h1>
+        <p class="dkd_hero_text">DraBornGo Hizmet Ağı; restoran ve market teslimatı, paket ve evrak gönderimi, nakliye talepleri ve yerel servis ihtiyaçlarını tek merkezde toplayan fiziksel hizmet odaklı bir platform deneyimidir. Bu sayfa, sanal POS şirketleri ve iş ortakları için hizmet kapsamını açık biçimde gösteren profesyonel bir tanıtım/mobil mockup sunumu olarak tasarlanmıştır.</p>
+        <div class="dkd_hero_action_row"><a class="dkd_button_primary" href="#dkd_orders_section">Hizmet siparişlerini incele</a><a class="dkd_button_secondary" href="#dkd_application_section">Kurye başvurusu alanı</a></div>
+        <div class="dkd_hero_metric_grid" aria-label="Hizmet metrik kartları"><article class="dkd_metric_card"><span class="dkd_metric_value">4+</span><span class="dkd_metric_label">ana sipariş kategorisi</span></article><article class="dkd_metric_card"><span class="dkd_metric_value">3</span><span class="dkd_metric_label">net teslimat durum adımı</span></article><article class="dkd_metric_card"><span class="dkd_metric_value">0</span><span class="dkd_metric_label">kart bilgisi bu sayfada alınmaz</span></article></div>
       </div>
-      <aside class="dkd_side_panel" aria-label="Örnek sipariş özeti">
-        <div class="dkd_checkout_card">
-          <div class="dkd_checkout_topline">
-            <div><p class="dkd_kicker">Örnek Hizmet Ağı siparişi</p><h2 class="dkd_checkout_title">Paket Teslimatı</h2></div>
-            <span class="dkd_checkout_status">Hazır</span>
-          </div>
-          <div class="dkd_order_line"><span>Hizmet türü</span><span>Fiziksel teslimat</span></div>
-          <div class="dkd_order_line"><span>Takip</span><span>Kurye kabul / teslim aldı / teslim etti</span></div>
-          <div class="dkd_order_line"><span>Ödeme kapsamı</span><span>Sadece fiziksel hizmet</span></div>
-          <div class="dkd_order_line"><span>Güvenlik</span><span>KVKK + hesap silme bağlantıları</span></div>
-          <p class="dkd_checkout_note">Canlı ödeme entegrasyonu devreye alınmadan bu sayfada kart numarası, CVV veya banka bilgisi toplanmaz.</p>
-        </div>
-      </aside>
-    </section>
 
-    <section id="dkd_orders_section" class="dkd_section">
-      <div class="dkd_section_panel">
-        <div class="dkd_section_header">
-          <div>
-            <p class="dkd_kicker">E-ticaret tarzı hizmet vitrini</p>
-            <h2 class="dkd_section_title">Hizmet Ağı siparişleri</h2>
-            <p class="dkd_section_text">Sipariş kartları kullanıcıya hangi fiziksel hizmeti aldığını, teslimatın nasıl ilerlediğini ve işlem kapsamını net gösterir. Amaç, sanal pos incelemesinde “ne satılıyor, nasıl teslim ediliyor, kullanıcı nasıl bilgilendiriliyor?” sorularını açık cevaplamaktır.</p>
+      <div class="dkd_glass_panel dkd_hero_visual" aria-label="Uygulama mockup alanı">
+        <div class="dkd_visual_stage">
+          <div class="dkd_glow_orb_primary"></div><div class="dkd_glow_orb_secondary"></div>
+          <aside class="dkd_floating_card dkd_floating_card_top"><span class="dkd_floating_kicker">Sipariş şeffaflığı</span><span class="dkd_floating_value">Fiziksel Hizmet</span><p class="dkd_floating_text">Teslimat, kurye ve hizmet ağı sipariş kapsamı kullanıcıya açıkça gösterilir.</p></aside>
+          <div class="dkd_phone_mockup">
+            <div class="dkd_phone_topbar"></div>
+            <div class="dkd_phone_screen"><div class="dkd_phone_screen_inner">
+              <div class="dkd_app_topline"><div class="dkd_app_brand_chip"><span class="dkd_app_brand_chip_mark">DB</span><span>DraBornGo</span></div><span class="dkd_app_status_chip">Kurye Takip Aktif</span></div>
+              <section class="dkd_app_headline"><p>Hizmet Ağı Siparişleri</p><h3>Paket teslimatı ve kurye akışı tek ekranda</h3></section>
+              <div class="dkd_app_stat_grid"><article class="dkd_app_stat_card"><span class="dkd_app_stat_value">12</span><span class="dkd_app_stat_label">aktif görev</span></article><article class="dkd_app_stat_card"><span class="dkd_app_stat_value">4.9</span><span class="dkd_app_stat_label">puan</span></article><article class="dkd_app_stat_card"><span class="dkd_app_stat_value">24m</span><span class="dkd_app_stat_label">ortalama süre</span></article></div>
+              <article class="dkd_app_order_card"><div class="dkd_app_order_header"><div><h4>Örnek Sipariş · Paket Teslimatı</h4></div><span class="dkd_app_state_pill">Kurye kabul etti</span></div><p class="dkd_app_order_text">Gönderici adresi, alıcı adresi ve teslimat notu ile profesyonel sipariş takibi.</p><div class="dkd_app_route_block"><div class="dkd_app_route_line"><span class="dkd_app_route_dot"></span><span>İşletmeden / göndericiden teslim alındı</span></div><div class="dkd_app_route_line"><span class="dkd_app_route_dot dkd_app_route_dot_secondary"></span><span>Alıcı adresine teslimat devam ediyor</span></div></div><div class="dkd_app_footer_action"><div class="dkd_app_footer_button dkd_app_footer_button_primary">Canlı Takip</div><div class="dkd_app_footer_button dkd_app_footer_button_soft">Detay</div></div></article>
+            </div></div>
           </div>
-          <a class="dkd_soft_button" href="#dkd_trust_section">Şeffaflık notları</a>
-        </div>
-        <div class="dkd_cards_grid">
-          <article class="dkd_service_card">
-            <div><div class="dkd_service_icon">🛵</div><h3 class="dkd_service_title">Restoran / Market Teslimatı</h3><p class="dkd_service_text">Yerel işletme siparişlerinin kurye kabulü, teslim alma ve müşteriye teslim durumlarıyla takip edilmesi.</p></div>
-            <span class="dkd_price_tag">Fiziksel hizmet</span>
-          </article>
-          <article class="dkd_service_card">
-            <div><div class="dkd_service_icon">📦</div><h3 class="dkd_service_title">Paket ve Evrak Gönderimi</h3><p class="dkd_service_text">Gönderici adresi, alıcı adresi, paket görseli ve teslimat notu ile şehir içi paket teslimatı.</p></div>
-            <span class="dkd_price_tag">Kurye akışı</span>
-          </article>
-          <article class="dkd_service_card">
-            <div><div class="dkd_service_icon">🚚</div><h3 class="dkd_service_title">Nakliye / Lojistik Talebi</h3><p class="dkd_service_text">Küçük taşıma, ikinci el eşya, parça yük ve lokasyon bazlı lojistik talep yönetimi.</p></div>
-            <span class="dkd_price_tag">Talep + teklif</span>
-          </article>
-          <article class="dkd_service_card">
-            <div><div class="dkd_service_icon">🧰</div><h3 class="dkd_service_title">Yerel Servis İstekleri</h3><p class="dkd_service_text">Tamir, temizlik, mobil destek ve benzeri iş ortaklığı hizmetlerinin talep kartı mantığında sunulması.</p></div>
-            <span class="dkd_price_tag">Hizmet ağı</span>
-          </article>
+          <aside class="dkd_floating_card dkd_floating_card_bottom"><span class="dkd_floating_kicker">Kurye başvurusu</span><span class="dkd_floating_value">Başvuruya Açık</span><p class="dkd_floating_text">Bölge, araç tipi ve çalışma uygunluğu bilgileriyle kurye ağına katılım akışı.</p></aside>
         </div>
       </div>
     </section>
 
-    <section class="dkd_section">
-      <div class="dkd_section_panel">
-        <div class="dkd_section_header">
-          <div>
-            <p class="dkd_kicker">Sipariş yaşam döngüsü</p>
-            <h2 class="dkd_section_title">Net, denetlenebilir ve kullanıcıya anlaşılır akış</h2>
-          </div>
-        </div>
-        <div class="dkd_flow_grid">
-          <article class="dkd_flow_card"><div class="dkd_flow_number">1</div><h3 class="dkd_flow_title">Talep oluşturulur</h3><p class="dkd_flow_text">Kullanıcı hizmet türünü, adresi ve ihtiyaç detayını girer; sistem siparişi Hizmet Ağı merkezinde listeler.</p></article>
-          <article class="dkd_flow_card"><div class="dkd_flow_number">2</div><h3 class="dkd_flow_title">Kurye görevi kabul eder</h3><p class="dkd_flow_text">Uygun kurye veya iş ortağı görevi kabul eder; kullanıcıya durum ve canlı takip bilgisi gösterilir.</p></article>
-          <article class="dkd_flow_card"><div class="dkd_flow_number">3</div><h3 class="dkd_flow_title">Teslimat tamamlanır</h3><p class="dkd_flow_text">Teslim alma ve teslim etme adımları kayıt altına alınır; destek ve iptal/iade yönlendirmesi açık tutulur.</p></article>
-        </div>
-      </div>
-    </section>
+    <section id="dkd_orders_section" class="dkd_section_shell"><div class="dkd_glass_panel dkd_section_panel"><div class="dkd_section_header"><div><p class="dkd_section_kicker">E-ticaret tarzı hizmet vitrini</p><h2 class="dkd_section_title">Hizmet Ağı sipariş kategorileri</h2><p class="dkd_section_text">Sanal POS ve iş ortaklığı incelemelerinde ürün/hizmet kapsamı net görünmelidir. Aşağıdaki kartlar, DraBornGo’da hangi fiziksel hizmet akışlarının sunulduğunu profesyonel şekilde gösterir.</p></div><a class="dkd_button_secondary" href="#dkd_trust_section">Yasal ve güven bilgileri</a></div><div class="dkd_order_showcase_grid">
+      <article class="dkd_order_showcase_card"><div><div class="dkd_order_icon_shell">🛵</div><h3>Restoran / Market</h3><p>İşletme siparişleri, kurye kabulü, teslim alma ve müşteriye ulaştırma akışını şeffaf biçimde gösterir.</p></div><span class="dkd_order_tag">Fiziksel teslimat</span></article>
+      <article class="dkd_order_showcase_card"><div><div class="dkd_order_icon_shell">📦</div><h3>Paket / Evrak</h3><p>Gönderici ve alıcı adresi, paket notları ve teslimat adımlarıyla şehir içi kurye hizmeti sunulur.</p></div><span class="dkd_order_tag">Kurye akışı</span></article>
+      <article class="dkd_order_showcase_card"><div><div class="dkd_order_icon_shell">🚚</div><h3>Nakliye / Lojistik</h3><p>Küçük taşıma, ikinci el eşya ve parça yük ihtiyaçları için talep oluşturma ve operasyon takibi sağlar.</p></div><span class="dkd_order_tag">Talep ve takip</span></article>
+      <article class="dkd_order_showcase_card"><div><div class="dkd_order_icon_shell">🧰</div><h3>Yerel Hizmetler</h3><p>Servis, montaj, temizlik veya benzeri yerel hizmet taleplerinin liste mantığında toplanmasını hedefler.</p></div><span class="dkd_order_tag">Hizmet ağı</span></article>
+    </div></div></section>
 
-    <section id="dkd_application_section" class="dkd_section">
-      <div class="dkd_section_panel">
-        <div class="dkd_application_layout">
-          <div class="dkd_application_card">
-            <p class="dkd_kicker">Kurye başvurusu</p>
-            <h2 class="dkd_section_title">DraBornGo kurye ağına katıl</h2>
-            <p class="dkd_section_text">Kurye başvurusu; kimlik, iletişim, hizmet bölgesi, araç tipi ve operasyon uygunluğu bilgileriyle değerlendirilir. Bu test sayfası canlı başvuru formu yerine başvuru kapsamını açıklar.</p>
-            <div class="dkd_hero_actions">
-              <a class="dkd_primary_button" href="mailto:support@draborneagle.com?subject=DraBornGo%20Kurye%20Basvurusu">E-posta ile başvur</a>
-              <a class="dkd_soft_button" href="/draborngo/terms/">Başvuru şartları</a>
-            </div>
-          </div>
-          <div class="dkd_application_card">
-            <h3 class="dkd_service_title">Başvuruda değerlendirilen bilgiler</h3>
-            <ul class="dkd_application_list">
-              <li>Ad soyad, e-posta ve telefon gibi temel iletişim bilgileri</li>
-              <li>Hizmet verilecek şehir, bölge ve uygun çalışma saatleri</li>
-              <li>Araç tipi, teslimat kapasitesi ve operasyon uygunluğu</li>
-              <li>Güvenlik, destek ve kullanıcı memnuniyeti kurallarına uyum</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section class="dkd_section_shell"><div class="dkd_glass_panel dkd_section_panel"><div class="dkd_section_header"><div><p class="dkd_section_kicker">Operasyon akışı</p><h2 class="dkd_section_title">Siparişten teslimata net yaşam döngüsü</h2><p class="dkd_section_text">Fiziksel hizmet platformları için kullanıcıyı yönlendiren ve ödeme sağlayıcıya güven veren en önemli konu, teslimat akışının açık olmasıdır.</p></div></div><div class="dkd_process_grid"><article class="dkd_process_card"><div class="dkd_process_step">1</div><h3>Talep oluşturulur</h3><p>Kullanıcı hizmet türü, adres ve ihtiyaç detayını paylaşır. Sistem bu talebi ilgili kategori içinde görünür hale getirir.</p></article><article class="dkd_process_card"><div class="dkd_process_step">2</div><h3>Kurye veya iş ortağı görevi kabul eder</h3><p>Operasyon uygunluğuna göre görev atanır; canlı takip ve durum bilgisi kullanıcıya modern bir arayüzle sunulur.</p></article><article class="dkd_process_card"><div class="dkd_process_step">3</div><h3>Teslimat tamamlanır</h3><p>Teslim alma ve teslim etme aşamaları kayıt altına alınır; destek, iletişim ve kayıt şeffaflığı korunur.</p></article></div></div></section>
 
-    <section id="dkd_trust_section" class="dkd_section">
-      <div class="dkd_section_panel">
-        <div class="dkd_section_header">
-          <div>
-            <p class="dkd_kicker">Sanal pos ve Google Play uyumu için açıklık</p>
-            <h2 class="dkd_section_title">Güven, yasal bağlantılar ve ödeme şeffaflığı</h2>
-            <p class="dkd_section_text">DraBornGo; bu alanda dijital ürün, token, oyun içi avantaj veya abonelik satışı sunmaz. Sayfa fiziksel hizmet siparişlerini açıklar; ödeme entegrasyonu eklenirse kart bilgileri yalnızca lisanslı ödeme kuruluşu altyapısında alınmalıdır.</p>
-          </div>
-        </div>
-        <div class="dkd_trust_grid">
-          <article class="dkd_trust_card"><h3 class="dkd_trust_title">Açık hizmet kapsamı</h3><p class="dkd_trust_text">Siparişler kurye, paket, nakliye ve yerel servis gibi fiziksel hizmetlerle sınırlandırılır.</p></article>
-          <article class="dkd_trust_card"><h3 class="dkd_trust_title">Veri ve hesap kontrolü</h3><p class="dkd_trust_text">Gizlilik politikası ve hesap/veri silme bağlantıları kullanıcıya görünür şekilde sunulur.</p></article>
-          <article class="dkd_trust_card"><h3 class="dkd_trust_title">Ödeme güvenliği</h3><p class="dkd_trust_text">Bu test sayfasında kart bilgisi toplanmaz; canlı ödeme için güvenli ödeme kuruluşu yönlendirmesi gerekir.</p></article>
-        </div>
-        <div class="dkd_legal_links" aria-label="Yasal bağlantılar">
-          <a class="dkd_soft_button" href="/draborngo/privacy/">Gizlilik Politikası</a>
-          <a class="dkd_soft_button" href="/draborngo/account-deletion/">Hesap ve Veri Silme</a>
-          <a class="dkd_soft_button" href="/draborngo/terms/">Kullanım Şartları</a>
-          <a class="dkd_soft_button" href="mailto:support@draborneagle.com">Destek ve iletişim</a>
-        </div>
-      </div>
-    </section>
+    <section id="dkd_application_section" class="dkd_section_shell"><div class="dkd_glass_panel dkd_section_panel"><div class="dkd_section_header"><div><p class="dkd_section_kicker">Kurye başvurusu</p><h2 class="dkd_section_title">DraBornGo kurye ağına profesyonel katılım</h2><p class="dkd_section_text">Bu alan, kurye adaylarından beklenen temel bilgileri ve başvuru kapsamını özetler. Canlı form yerine şeffaf başvuru bilgilendirme yapısı kullanılmıştır.</p></div></div><div class="dkd_application_layout"><article class="dkd_application_info_card"><h3>Kurye ağına katıl</h3><p class="dkd_section_text">Bölgesel çalışma, araç tipi, iletişim uygunluğu ve operasyon kurallarına uyum; başvuru değerlendirmesinde dikkate alınır.</p><div class="dkd_hero_action_row"><a class="dkd_button_light" href="mailto:support@draborneagle.com?subject=DraBornGo%20Kurye%20Basvurusu">E-posta ile başvur</a><a class="dkd_button_secondary" href="/draborngo/terms/">Başvuru şartları</a></div><ul class="dkd_application_note_list"><li>Ad soyad, telefon ve e-posta gibi temel iletişim bilgileri</li><li>Hizmet verilecek şehir, bölge ve uygun çalışma saatleri</li><li>Araç tipi, taşıma kapasitesi ve teslimat uygunluğu</li><li>Güvenlik, destek ve kullanıcı memnuniyeti ilkelerine uyum</li></ul></article><article class="dkd_application_feature_card"><h3>Neden profesyonel görünür?</h3><p class="dkd_section_text">Bu mockup; hem kullanıcı akışını hem de iş ortağı güvenini destekleyecek şekilde kurumsal ve premium düzen mantığıyla hazırlanmıştır.</p><div class="dkd_application_feature_grid"><div class="dkd_application_feature_item"><h4>Açık hizmet kapsamı</h4><p>Ne satıldığı ve neyin teslim edildiği kolayca anlaşılır.</p></div><div class="dkd_application_feature_item"><h4>Mobil deneyim vurgusu</h4><p>Telefon mockup bileşeni gerçek ürün hissi verir.</p></div><div class="dkd_application_feature_item"><h4>Kurumsal sunum</h4><p>Premium kart yapısı ve güçlü tipografi güven algısı oluşturur.</p></div><div class="dkd_application_feature_item"><h4>Başvuru netliği</h4><p>Kurye katılım sürecinin kapsamı belirsiz bırakılmaz.</p></div></div></article></div></div></section>
 
-    <footer class="dkd_footer">
-      <span>DrabornEagle · DraBornGo Hizmet Ağı test sayfası</span>
-      <span>Son güncelleme: 20 Mayıs 2026 · support@draborneagle.com</span>
-    </footer>
+    <section id="dkd_trust_section" class="dkd_section_shell"><div class="dkd_glass_panel dkd_section_panel"><div class="dkd_section_header"><div><p class="dkd_section_kicker">Güven ve şeffaflık</p><h2 class="dkd_section_title">Sanal POS ve Google Play incelemesine uygun net anlatım</h2><p class="dkd_section_text">DraBornGo bu tanıtım alanında fiziksel hizmet siparişlerini açıklar. Kart bilgisi toplamaz, finansal yatırım ürünü sunmaz ve dijital içerik satışı yapmaz. Bu yaklaşım, ödeme sağlayıcı ve platform politikaları açısından daha güvenli bir çerçeve sunar.</p></div></div><div class="dkd_trust_grid"><article class="dkd_trust_card"><h3>Hizmet odaklı kapsam</h3><p>Kurye, paket, nakliye ve yerel hizmet istekleri gibi fiziksel hizmetlere odaklanır; kullanıcı ne için ödeme yaptığını anlar.</p></article><article class="dkd_trust_card"><h3>Veri ve hesap görünürlüğü</h3><p>Gizlilik politikası, kullanım şartları ve hesap/veri silme bağlantıları görünür tutularak uyum desteği sağlanır.</p></article><article class="dkd_trust_card"><h3>Ödeme güvenliği</h3><p>Bu test sayfasında kart verisi toplanmaz. Canlı tahsilat eklenirse yalnızca lisanslı ödeme altyapısı üzerinden ilerlenmelidir.</p></article></div><div class="dkd_legal_button_row"><a class="dkd_button_secondary" href="/draborngo/privacy/">Gizlilik Politikası</a><a class="dkd_button_secondary" href="/draborngo/account-deletion/">Hesap ve Veri Silme</a><a class="dkd_button_secondary" href="/draborngo/terms/">Kullanım Şartları</a><a class="dkd_button_secondary" href="mailto:support@draborneagle.com">Destek ve İletişim</a></div></div></section>
+
+    <footer class="dkd_footer"><span>DrabornEagle · DraBornGo Hizmet Ağı test sayfası</span><span>Son güncelleme: 20 Mayıs 2026 · support@draborneagle.com</span></footer>
   </main>
 </body>
 </html>
