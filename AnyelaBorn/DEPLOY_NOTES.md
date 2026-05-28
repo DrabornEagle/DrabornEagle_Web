@@ -1,20 +1,9 @@
-# Anyela Born Club — Home Mockup React v1.5
+# DKD AnyelaBorn Home Wide Mockup v1.6
 
-Bu paket yalnızca `www.draborneagle.com/AnyelaBorn/` ana sayfasını günceller.
-
-## Teknik yaklaşım
-
-- Canlı sayfa React ile render edilir.
-- Build gerektirmeyen ESM React kullanıldı; Termux'ta `npm build` çalıştırılmaz.
-- İkonlar elle SVG olarak çizilmedi; profesyonel ikon kütüphanesi `@phosphor-icons/react` kullanıldı.
-- Kadın görselleri kullanıcının sağladığı görsellerden optimize edilip `.webp` olarak eklendi.
-- Tasarım mobil öncelikli, premium platform hissi verecek şekilde hazırlandı.
-
-## Güncellenen dosyalar
-
-- `index.html`
-- `assets/dkd-anyela-home-app.js`
-- `assets/dkd-anyela-home.css`
-- `assets/dkd-anyela-*.webp`
-- `src/*` geliştirme kaynakları
-
+Bu paket sadece Ana Sayfa için hazırlanmıştır. Mockup görünümüne yaklaşmak için sabit geniş mobil sahne kullanır:
+- meta viewport width=980
+- iç sahne genişliği 941px
+- React ESM canlı render
+- Phosphor Icons React ikonları
+- Kadın görselleri kullanıcının gönderdiği/önceki assetlerden alınmıştır
+- npm build gerekmez
