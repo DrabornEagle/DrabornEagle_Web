@@ -1,18 +1,20 @@
-# Anyela Born Club v2 Premium Mockup
+# Anyela Born Club Premium Mobile Mockup
 
-Adres:
+Yayın adresi:
 https://www.draborneagle.com/AnyelaBorn/
 
 Bu sürüm:
-- No-build React kullanır.
-- Termux Vite build hatasına takılmaz.
-- Site içi chat mockup içerir.
-- Ses/görsel/video/dekont yükleme arayüzü içerir.
-- Paket, sipariş ve reklam ekranları vardır.
-- Supabase henüz bağlı değildir.
+- 9:16 mobil öncelikli premium mockup tasarım
+- Ana sayfa
+- Sohbet ekranı
+- Paket / ödeme / dekont / sipariş durumu ekranı
+- Reklam paketi ekranı
+- No-build React CDN kullanır
+- Termux tarafında Vite build gerektirmez
 
-Sonraki adımlar:
-1. Anyela hero/avatar görselleri ekleme.
-2. Paket fiyatlarını netleştirme.
-3. Kurallar/gizlilik ekranını ayrı detaylandırma.
-4. Supabase en son bağlama.
+Not:
+Hero görsel alanı şimdilik CSS ile premium görsel hissi oluşturur.
+Birebir karakter fotoğrafı eklemek için ileride:
+AnyelaBorn/assets/anyela-hero.jpg
+AnyelaBorn/assets/anyela-avatar.jpg
+dosyaları bağlanabilir.
