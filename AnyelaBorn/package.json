@@ -1,11 +1,16 @@
 {
+  "name": "dkd-anyela-born-home",
+  "version": "1.5.0",
+  "private": true,
+  "type": "module",
+  "description": "Anyela Born Club mobile-first React homepage. Live deploy uses static React ESM for GitHub Pages without a local build step.",
   "scripts": {
-    "build": "echo Static React build is precompiled"
+    "serve": "npx serve .",
+    "note": "echo 'Live deploy does not require npm build; source React is included for development.'"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "not-required-local-icons",
-    "react": "18.x",
-    "react-dom": "18.x"
-  },
-  "devDependencies": {}
+    "@phosphor-icons/react": "^2.1.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
 }
