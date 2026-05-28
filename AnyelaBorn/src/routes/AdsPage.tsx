@@ -1,3 +1,0 @@
-import { dkdPackages } from '../data/dkdAnyelaData';
-import { DkdPageHero, DkdPackageCard } from '../components/DkdShared';
-export function DkdAdsPage() { const dkdBusinessPackages = dkdPackages.filter((dkdPackage) => dkdPackage.dkdGroup === 'business'); return <><DkdPageHero dkdKicker="İşletme reklamları" dkdTitle="Anyela Born markanızın AI reklam yüzü olsun." dkdText="Marka, ürün veya hizmet için sosyal medya reklam içerikleri hazırlanır." /><section className="dkd-section"><div className="dkd-container dkd-grid-4">{dkdBusinessPackages.map((dkdPackage) => <DkdPackageCard key={dkdPackage.dkdSlug} dkdPackage={dkdPackage} />)}</div></section></>; }
