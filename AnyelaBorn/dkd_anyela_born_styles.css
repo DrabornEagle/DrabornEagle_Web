@@ -1,0 +1,1221 @@
+:root {
+  --dkd-anyela-ink: #10264b;
+  --dkd-anyela-muted: #526382;
+  --dkd-anyela-pink: #ff2d91;
+  --dkd-anyela-hot-pink: #ff1494;
+  --dkd-anyela-coral: #ff7e58;
+  --dkd-anyela-orange: #ff8939;
+  --dkd-anyela-aqua: #16c8ce;
+  --dkd-anyela-teal: #09aeb8;
+  --dkd-anyela-violet: #8b35dd;
+  --dkd-anyela-purple: #6e2ac7;
+  --dkd-anyela-card: rgba(255, 255, 255, 0.86);
+  --dkd-anyela-shadow: 0 18px 42px rgba(38, 48, 83, 0.16);
+  --dkd-anyela-soft-shadow: 0 10px 24px rgba(22, 35, 72, 0.13);
+  --dkd-anyela-radius-xl: 28px;
+  --dkd-anyela-radius-lg: 22px;
+  --dkd-anyela-radius-md: 18px;
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--dkd-anyela-ink);
+  background:
+    radial-gradient(circle at 12% 8%, rgba(255, 45, 145, 0.34), transparent 24%),
+    radial-gradient(circle at 88% 0%, rgba(255, 126, 88, 0.28), transparent 25%),
+    radial-gradient(circle at 100% 80%, rgba(22, 200, 206, 0.28), transparent 32%),
+    linear-gradient(150deg, #fff7fb 0%, #eefbff 45%, #fff6ed 100%);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font-family: inherit;
+}
+
+#dkd-anyela-born-root {
+  min-height: 100vh;
+}
+
+.dkd-anyela-page {
+  position: relative;
+  min-height: 100vh;
+  padding: 18px 10px;
+  overflow: hidden;
+}
+
+.dkd-anyela-page-glow {
+  position: fixed;
+  z-index: 0;
+  border-radius: 999px;
+  filter: blur(22px);
+  opacity: 0.54;
+  pointer-events: none;
+}
+
+.dkd-anyela-page-glow-one {
+  width: 180px;
+  height: 180px;
+  left: -70px;
+  top: 80px;
+  background: rgba(255, 45, 145, 0.42);
+}
+
+.dkd-anyela-page-glow-two {
+  width: 220px;
+  height: 220px;
+  right: -90px;
+  bottom: 100px;
+  background: rgba(22, 200, 206, 0.32);
+}
+
+.dkd-anyela-phone-shell {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 430px);
+  min-height: calc(100vh - 36px);
+  margin: 0 auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.76);
+  border-radius: 38px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.78), rgba(244, 251, 255, 0.92)),
+    radial-gradient(circle at 0% 12%, rgba(255, 45, 145, 0.16), transparent 42%),
+    radial-gradient(circle at 100% 36%, rgba(22, 200, 206, 0.16), transparent 38%);
+  box-shadow: 0 28px 70px rgba(16, 38, 75, 0.26);
+}
+
+.dkd-anyela-scroll-area {
+  padding: 12px 14px 82px;
+}
+
+.dkd-anyela-header {
+  position: relative;
+  display: flex;
+  min-height: 92px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 22px 16px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 255, 255, 0.3), transparent 20%),
+    linear-gradient(123deg, #ff2d91 0%, #ff7e58 49%, #8752e0 100%);
+}
+
+.dkd-anyela-header::before,
+.dkd-anyela-header::after {
+  position: absolute;
+  width: 150px;
+  height: 120px;
+  content: "";
+  opacity: 0.18;
+  background:
+    radial-gradient(ellipse at 50% 100%, transparent 0 41%, rgba(20, 15, 64, 0.7) 42% 44%, transparent 45%),
+    radial-gradient(ellipse at 18% 60%, transparent 0 42%, rgba(20, 15, 64, 0.7) 43% 45%, transparent 46%),
+    radial-gradient(ellipse at 82% 60%, transparent 0 42%, rgba(20, 15, 64, 0.7) 43% 45%, transparent 46%);
+}
+
+.dkd-anyela-header::before {
+  left: -36px;
+  top: -28px;
+  transform: rotate(-28deg);
+}
+
+.dkd-anyela-header::after {
+  right: -48px;
+  top: -22px;
+  transform: rotate(26deg);
+}
+
+.dkd-anyela-logo-area {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #fff;
+}
+
+.dkd-anyela-logo-mark {
+  display: grid;
+  width: 45px;
+  height: 45px;
+  place-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.78);
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 0 24px rgba(255, 255, 255, 0.52), inset 0 0 18px rgba(255, 255, 255, 0.18);
+}
+
+.dkd-anyela-logo-mark svg {
+  width: 28px;
+  height: 28px;
+}
+
+.dkd-anyela-logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.dkd-anyela-logo-script {
+  font-family: "Pacifico", cursive;
+  font-size: 34px;
+  letter-spacing: 0.2px;
+  text-shadow: 0 0 18px rgba(255, 255, 255, 0.66);
+}
+
+.dkd-anyela-logo-subtitle {
+  margin-top: 2px;
+  margin-left: 54px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.4px;
+}
+
+.dkd-anyela-menu-button {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 22px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.16);
+  backdrop-filter: blur(16px);
+}
+
+.dkd-anyela-menu-button svg {
+  width: 29px;
+  height: 29px;
+}
+
+.dkd-anyela-hero-card {
+  position: relative;
+  min-height: 330px;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, 0.86);
+  border-radius: 28px;
+  color: #fff;
+  background:
+    linear-gradient(180deg, rgba(46, 14, 70, 0.12), rgba(8, 20, 50, 0.32)),
+    linear-gradient(155deg, #1f123c 0%, #471555 26%, #e44470 54%, #fc7d53 76%, #0b2044 100%);
+  box-shadow: var(--dkd-anyela-shadow);
+}
+
+.dkd-anyela-hero-sky,
+.dkd-anyela-hero-skyline,
+.dkd-anyela-hero-water,
+.dkd-anyela-hero-palm,
+.dkd-anyela-neon-ring,
+.dkd-anyela-silhouette,
+.dkd-anyela-hero-signature,
+.dkd-anyela-hero-content {
+  position: absolute;
+}
+
+.dkd-anyela-hero-sky {
+  inset: 0;
+  background:
+    radial-gradient(circle at 50% 22%, rgba(255, 235, 193, 0.34), transparent 16%),
+    radial-gradient(circle at 63% 34%, rgba(255, 45, 145, 0.38), transparent 32%),
+    linear-gradient(180deg, #1c113d 0%, #581457 30%, #d63a73 58%, #ff8b52 78%, #101a3b 100%);
+}
+
+.dkd-anyela-hero-sky::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.46;
+  background:
+    radial-gradient(ellipse at 24% 30%, rgba(10, 3, 28, 0.56) 0 11%, transparent 12%),
+    radial-gradient(ellipse at 46% 24%, rgba(13, 8, 35, 0.5) 0 13%, transparent 14%),
+    radial-gradient(ellipse at 70% 29%, rgba(34, 12, 48, 0.48) 0 15%, transparent 16%);
+  filter: blur(3px);
+}
+
+.dkd-anyela-hero-palm {
+  width: 140px;
+  height: 190px;
+  bottom: 20px;
+  opacity: 0.72;
+  background:
+    linear-gradient(96deg, transparent 47%, #050917 48% 52%, transparent 53%),
+    radial-gradient(ellipse at 50% 3%, transparent 0 34%, #070b1b 35% 38%, transparent 39%),
+    radial-gradient(ellipse at 17% 18%, transparent 0 39%, #070b1b 40% 43%, transparent 44%),
+    radial-gradient(ellipse at 83% 20%, transparent 0 39%, #070b1b 40% 43%, transparent 44%),
+    radial-gradient(ellipse at 30% 3%, transparent 0 39%, #070b1b 40% 43%, transparent 44%),
+    radial-gradient(ellipse at 70% 3%, transparent 0 39%, #070b1b 40% 43%, transparent 44%);
+}
+
+.dkd-anyela-hero-palm-left {
+  left: -26px;
+  transform: rotate(-11deg);
+}
+
+.dkd-anyela-hero-palm-right {
+  right: -78px;
+  transform: scale(0.9) rotate(11deg);
+}
+
+.dkd-anyela-hero-skyline {
+  right: 66px;
+  bottom: 82px;
+  width: 220px;
+  height: 80px;
+  opacity: 0.76;
+  background:
+    linear-gradient(to top, #050815 0 48%, transparent 49%),
+    linear-gradient(to right, transparent 0 6%, #050815 6% 12%, transparent 12% 16%, #050815 16% 24%, transparent 24% 28%, #050815 28% 34%, transparent 34% 40%, #050815 40% 48%, transparent 48% 56%, #050815 56% 62%, transparent 62% 69%, #050815 69% 76%, transparent 76% 82%, #050815 82% 90%, transparent 90% 100%);
+  clip-path: polygon(0 100%, 0 58%, 9% 58%, 9% 36%, 18% 36%, 18% 68%, 29% 68%, 29% 28%, 38% 28%, 38% 60%, 50% 60%, 50% 42%, 59% 42%, 59% 70%, 71% 70%, 71% 18%, 80% 18%, 80% 64%, 91% 64%, 91% 36%, 100% 36%, 100% 100%);
+}
+
+.dkd-anyela-hero-water {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 86px;
+  opacity: 0.78;
+  background:
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 8px),
+    linear-gradient(180deg, rgba(255, 45, 145, 0.3), rgba(6, 20, 52, 0.94));
+}
+
+.dkd-anyela-neon-ring {
+  right: 42px;
+  top: 48px;
+  width: 170px;
+  height: 170px;
+  border: 6px solid rgba(255, 41, 175, 0.88);
+  border-radius: 50%;
+  box-shadow: 0 0 26px rgba(255, 41, 175, 0.95), inset 0 0 18px rgba(255, 41, 175, 0.54);
+}
+
+.dkd-anyela-silhouette {
+  right: 28px;
+  bottom: 0;
+  width: 180px;
+  height: 258px;
+  filter: drop-shadow(0 0 26px rgba(255, 35, 175, 0.52));
+}
+
+.dkd-anyela-silhouette::before {
+  position: absolute;
+  top: 28px;
+  right: 64px;
+  width: 62px;
+  height: 72px;
+  content: "";
+  border-radius: 48% 45% 42% 54%;
+  background: #050713;
+  transform: rotate(8deg);
+}
+
+.dkd-anyela-silhouette::after {
+  position: absolute;
+  top: 77px;
+  right: 82px;
+  width: 56px;
+  height: 85px;
+  content: "";
+  border-radius: 44% 42% 54% 48%;
+  background: #050713;
+  transform: rotate(8deg);
+}
+
+.dkd-anyela-hair {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  width: 128px;
+  height: 182px;
+  border-radius: 64% 36% 72% 35%;
+  background: radial-gradient(circle at 40% 20%, #12081d 0 30%, #050713 64%);
+  clip-path: polygon(30% 0, 74% 4%, 100% 28%, 84% 52%, 100% 85%, 52% 100%, 26% 78%, 0 64%, 19% 40%, 0 20%);
+}
+
+.dkd-anyela-body {
+  position: absolute;
+  right: 8px;
+  bottom: -10px;
+  width: 156px;
+  height: 168px;
+  border-radius: 58% 45% 0 0;
+  background: linear-gradient(90deg, #050713 0%, #090819 100%);
+  clip-path: polygon(34% 0, 70% 9%, 96% 100%, 18% 100%, 0 34%);
+}
+
+.dkd-anyela-hero-content {
+  z-index: 4;
+  top: 34px;
+  left: 33px;
+  width: 58%;
+}
+
+.dkd-anyela-hero-content h1 {
+  margin: 0;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(34px, 9.4vw, 46px);
+  font-weight: 900;
+  line-height: 0.94;
+  letter-spacing: -1px;
+  text-shadow: 0 6px 16px rgba(0, 0, 0, 0.46);
+}
+
+.dkd-anyela-hero-content h1 span {
+  display: block;
+  margin-top: 8px;
+  font-family: "Pacifico", cursive;
+  font-size: clamp(36px, 10.5vw, 52px);
+  font-weight: 400;
+  color: #ff71d3;
+  text-shadow: 0 0 20px rgba(255, 45, 145, 0.96), 0 4px 9px rgba(0, 0, 0, 0.38);
+}
+
+.dkd-anyela-hero-content p {
+  width: 250px;
+  max-width: 100%;
+  margin: 14px 0 22px;
+  font-size: 19px;
+  font-weight: 700;
+  line-height: 1.28;
+  text-shadow: 0 3px 10px rgba(0, 0, 0, 0.48);
+}
+
+.dkd-anyela-primary-button {
+  display: inline-flex;
+  min-height: 58px;
+  align-items: center;
+  gap: 18px;
+  justify-content: center;
+  padding: 0 28px;
+  border: 1px solid rgba(255, 255, 255, 0.56);
+  border-radius: 999px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 900;
+  text-decoration: none;
+  background: linear-gradient(135deg, #ff2d91 0%, #ff7d58 100%);
+  box-shadow: 0 15px 26px rgba(255, 45, 145, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.52);
+}
+
+.dkd-anyela-primary-button svg {
+  width: 22px;
+  height: 22px;
+}
+
+.dkd-anyela-hero-signature {
+  z-index: 5;
+  right: 45px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-family: "Pacifico", cursive;
+  font-size: 48px;
+  color: #fff;
+  text-shadow: 0 0 20px #ff2d91, 0 0 32px #ff2d91;
+}
+
+.dkd-anyela-hero-signature svg {
+  width: 31px;
+  height: 31px;
+}
+
+.dkd-anyela-video-card {
+  display: grid;
+  grid-template-columns: 142px 1fr 46px;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 88% 0%, rgba(255, 255, 255, 0.32), transparent 26%),
+    linear-gradient(135deg, #45d6dc 0%, #08adb8 100%);
+  box-shadow: var(--dkd-anyela-soft-shadow);
+}
+
+.dkd-anyela-video-thumb {
+  position: relative;
+  min-height: 70px;
+  overflow: hidden;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 28% 31%, rgba(255, 231, 183, 0.55), transparent 15%),
+    linear-gradient(180deg, #2d1454 0%, #d94577 52%, #ff8a4b 70%, #123259 100%);
+  box-shadow: inset 0 -20px 22px rgba(5, 10, 28, 0.42);
+}
+
+.dkd-anyela-video-thumb::before,
+.dkd-anyela-video-thumb::after {
+  position: absolute;
+  bottom: 10px;
+  width: 60px;
+  height: 70px;
+  content: "";
+  opacity: 0.78;
+  background:
+    linear-gradient(91deg, transparent 47%, #070b18 48% 52%, transparent 53%),
+    radial-gradient(ellipse at 50% 2%, transparent 0 35%, #070b18 36% 39%, transparent 40%),
+    radial-gradient(ellipse at 19% 20%, transparent 0 39%, #070b18 40% 43%, transparent 44%),
+    radial-gradient(ellipse at 81% 20%, transparent 0 39%, #070b18 40% 43%, transparent 44%);
+}
+
+.dkd-anyela-video-thumb::before {
+  left: 0;
+}
+
+.dkd-anyela-video-thumb::after {
+  right: -18px;
+  transform: rotate(9deg);
+}
+
+.dkd-anyela-video-play {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  display: grid;
+  width: 54px;
+  height: 54px;
+  place-items: center;
+  margin: auto;
+  border-radius: 50%;
+  color: #0d2d5b;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 18px rgba(9, 33, 70, 0.28);
+}
+
+.dkd-anyela-video-play svg {
+  width: 25px;
+  height: 25px;
+  margin-left: 3px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.dkd-anyela-video-copy h2,
+.dkd-anyela-video-copy p {
+  margin: 0;
+}
+
+.dkd-anyela-video-copy h2 {
+  font-size: 21px;
+  line-height: 1.15;
+  font-weight: 900;
+}
+
+.dkd-anyela-video-copy p {
+  margin-top: 6px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.dkd-anyela-video-action {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.58);
+  border-radius: 15px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.dkd-anyela-video-action svg {
+  width: 22px;
+  height: 22px;
+  fill: currentColor;
+  stroke: none;
+}
+
+.dkd-anyela-section {
+  margin-top: 14px;
+}
+
+.dkd-anyela-section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 12px 0 8px;
+  text-align: center;
+}
+
+.dkd-anyela-section-title h2 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.dkd-anyela-title-deco {
+  min-width: 22px;
+  color: var(--dkd-anyela-aqua);
+  font-size: 20px;
+  line-height: 1;
+}
+
+.dkd-anyela-workflow-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.dkd-anyela-workflow-card {
+  display: grid;
+  min-height: 93px;
+  grid-template-columns: 66px 1fr;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  border: 1px solid rgba(173, 190, 218, 0.55);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.94), rgba(248, 251, 255, 0.75));
+  box-shadow: 0 8px 17px rgba(19, 40, 80, 0.12);
+}
+
+.dkd-anyela-icon-bubble {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  box-shadow: 0 9px 20px rgba(30, 42, 76, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.38);
+}
+
+.dkd-anyela-icon-bubble svg {
+  width: 29px;
+  height: 29px;
+}
+
+.dkd-tone-pink {
+  background: linear-gradient(145deg, #ff5cad, #ff177e);
+}
+
+.dkd-tone-aqua {
+  background: linear-gradient(145deg, #36dfe0, #00a7b1);
+}
+
+.dkd-tone-violet {
+  background: linear-gradient(145deg, #a653ef, #7824d1);
+}
+
+.dkd-tone-orange {
+  background: linear-gradient(145deg, #ffa255, #ff6e2f);
+}
+
+.dkd-anyela-workflow-copy h3,
+.dkd-anyela-workflow-copy p {
+  margin: 0;
+}
+
+.dkd-anyela-workflow-copy h3 {
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 1.18;
+}
+
+.dkd-anyela-workflow-copy p {
+  margin-top: 4px;
+  color: #273a64;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+.dkd-anyela-package-row {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dkd-anyela-package-card {
+  display: flex;
+  min-height: 214px;
+  flex-direction: column;
+  align-items: center;
+  padding: 13px 8px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.84);
+  border-radius: 19px;
+  text-align: center;
+  box-shadow: 0 10px 18px rgba(17, 33, 69, 0.12);
+}
+
+.dkd-package-pink {
+  background: linear-gradient(180deg, #fff1f8, #fffafa);
+  border-color: rgba(255, 45, 145, 0.22);
+}
+
+.dkd-package-aqua {
+  background: linear-gradient(180deg, #efffff, #fbffff);
+  border-color: rgba(22, 200, 206, 0.26);
+}
+
+.dkd-package-violet {
+  background: linear-gradient(180deg, #f8f1ff, #fffaff);
+  border-color: rgba(139, 53, 221, 0.22);
+}
+
+.dkd-package-orange {
+  background: linear-gradient(180deg, #fff7ef, #fffdfb);
+  border-color: rgba(255, 137, 57, 0.24);
+}
+
+.dkd-anyela-package-card .dkd-anyela-icon-bubble {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 11px;
+}
+
+.dkd-anyela-package-card h3,
+.dkd-anyela-package-card p,
+.dkd-anyela-package-card strong {
+  margin: 0;
+}
+
+.dkd-anyela-package-card h3 {
+  min-height: 36px;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.08;
+}
+
+.dkd-anyela-package-card p {
+  min-height: 32px;
+  margin-top: 5px;
+  color: #31436e;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.dkd-anyela-package-card strong {
+  margin-top: 8px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.dkd-package-pink strong {
+  color: var(--dkd-anyela-pink);
+}
+
+.dkd-package-aqua strong {
+  color: var(--dkd-anyela-teal);
+}
+
+.dkd-package-violet strong {
+  color: var(--dkd-anyela-violet);
+}
+
+.dkd-package-orange strong {
+  color: var(--dkd-anyela-orange);
+}
+
+.dkd-anyela-select-button {
+  width: 100%;
+  min-height: 34px;
+  margin-top: auto;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 900;
+  box-shadow: 0 8px 16px rgba(30, 42, 76, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+}
+
+.dkd-anyela-service-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+}
+
+.dkd-anyela-service-card {
+  position: relative;
+  display: grid;
+  min-height: 92px;
+  grid-template-columns: 50px 1fr 15px;
+  align-items: center;
+  gap: 8px;
+  padding: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.86);
+  border-radius: 17px;
+  box-shadow: 0 8px 17px rgba(17, 33, 69, 0.1);
+}
+
+.dkd-service-pink {
+  background: linear-gradient(145deg, #fff0f7, #fff8fc);
+}
+
+.dkd-service-aqua {
+  background: linear-gradient(145deg, #ecffff, #fbffff);
+}
+
+.dkd-service-violet {
+  background: linear-gradient(145deg, #f5edff, #fffaff);
+}
+
+.dkd-anyela-service-card .dkd-anyela-icon-bubble {
+  width: 48px;
+  height: 48px;
+}
+
+.dkd-anyela-service-card .dkd-anyela-icon-bubble svg {
+  width: 24px;
+  height: 24px;
+}
+
+.dkd-anyela-service-copy h3,
+.dkd-anyela-service-copy p {
+  margin: 0;
+}
+
+.dkd-anyela-service-copy h3 {
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.dkd-anyela-service-copy p {
+  margin-top: 4px;
+  color: #31436e;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.18;
+}
+
+.dkd-anyela-service-arrow {
+  width: 16px;
+  height: 16px;
+  color: var(--dkd-anyela-violet);
+}
+
+.dkd-anyela-payment-card {
+  display: grid;
+  grid-template-columns: 88px 1fr 118px;
+  gap: 12px;
+  align-items: center;
+  margin-top: 16px;
+  padding: 13px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.94);
+  border-radius: 20px;
+  background:
+    radial-gradient(circle at 0% 100%, rgba(255, 255, 255, 0.52), transparent 40%),
+    linear-gradient(128deg, rgba(24, 203, 211, 0.88), rgba(199, 255, 246, 0.88));
+  box-shadow: var(--dkd-anyela-soft-shadow);
+}
+
+.dkd-anyela-payment-shield {
+  position: relative;
+  display: grid;
+  min-height: 76px;
+  place-items: center;
+  border-radius: 18px;
+  color: #fff;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.24), rgba(0, 151, 172, 0.28));
+}
+
+.dkd-anyela-payment-shield::before {
+  position: absolute;
+  width: 65px;
+  height: 65px;
+  content: "";
+  border: 2px solid rgba(255, 255, 255, 0.58);
+  border-radius: 26px 26px 32px 32px;
+  clip-path: polygon(50% 0, 90% 16%, 90% 55%, 50% 100%, 10% 55%, 10% 16%);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.38);
+}
+
+.dkd-anyela-payment-shield svg {
+  z-index: 1;
+  width: 31px;
+  height: 31px;
+}
+
+.dkd-anyela-payment-copy h2,
+.dkd-anyela-payment-copy p {
+  margin: 0;
+}
+
+.dkd-anyela-payment-copy h2 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.dkd-anyela-payment-copy p {
+  margin-top: 6px;
+  color: #24395f;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.dkd-anyela-payment-action {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 8px;
+}
+
+.dkd-anyela-payment-action button {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 0;
+  border-radius: 12px;
+  color: #fff;
+  background: linear-gradient(135deg, #07567a, #083d62);
+  box-shadow: 0 11px 20px rgba(3, 55, 90, 0.28);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.dkd-anyela-payment-action button svg {
+  width: 19px;
+  height: 19px;
+}
+
+.dkd-anyela-payment-action span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: #245d74;
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.dkd-anyela-payment-action span svg {
+  width: 13px;
+  height: 13px;
+}
+
+.dkd-anyela-rules-section {
+  margin-top: 14px;
+}
+
+.dkd-anyela-rules-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.dkd-anyela-rules-title svg {
+  width: 22px;
+  height: 22px;
+  color: var(--dkd-anyela-teal);
+}
+
+.dkd-anyela-rules-title h2 {
+  margin: 0;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.dkd-anyela-rule-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-top: 8px;
+  padding: 12px;
+  border: 1px solid rgba(173, 190, 218, 0.55);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 16px rgba(17, 33, 69, 0.09);
+}
+
+.dkd-anyela-rule-item {
+  display: grid;
+  grid-template-columns: 31px 1fr;
+  gap: 8px;
+  align-items: start;
+}
+
+.dkd-anyela-rule-check {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border: 2px solid var(--dkd-anyela-teal);
+  border-radius: 50%;
+  color: var(--dkd-anyela-teal);
+}
+
+.dkd-anyela-rule-check svg {
+  width: 17px;
+  height: 17px;
+}
+
+.dkd-anyela-rule-item h3,
+.dkd-anyela-rule-item p {
+  margin: 0;
+}
+
+.dkd-anyela-rule-item h3 {
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.dkd-anyela-rule-item p {
+  margin-top: 4px;
+  color: #31436e;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.22;
+}
+
+.dkd-anyela-final-cta {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 155px;
+  gap: 10px;
+  align-items: center;
+  margin-top: 12px;
+  padding: 17px 16px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.94);
+  border-radius: 22px;
+  color: #fff;
+  background:
+    linear-gradient(95deg, rgba(22, 22, 70, 0.08), rgba(255, 45, 145, 0.28)),
+    linear-gradient(135deg, #ff2d91 0%, #ff7e58 52%, #7b34da 100%);
+  box-shadow: 0 12px 24px rgba(255, 45, 145, 0.22);
+}
+
+.dkd-anyela-final-cta::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.35;
+  background:
+    radial-gradient(circle at 17% 20%, rgba(255, 255, 255, 0.32), transparent 14%),
+    repeating-linear-gradient(160deg, transparent 0 12px, rgba(255, 255, 255, 0.08) 13px 14px);
+}
+
+.dkd-anyela-final-cta > * {
+  position: relative;
+  z-index: 1;
+}
+
+.dkd-anyela-final-cta h2,
+.dkd-anyela-final-cta p {
+  margin: 0;
+}
+
+.dkd-anyela-final-cta h2 {
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.dkd-anyela-final-cta p {
+  margin-top: 2px;
+  font-family: "Pacifico", cursive;
+  font-size: 21px;
+  text-shadow: 0 0 16px rgba(255, 255, 255, 0.54);
+}
+
+.dkd-anyela-room-button {
+  display: flex;
+  min-height: 52px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.52);
+  border-radius: 999px;
+  color: #fff;
+  background: linear-gradient(135deg, #ff4fab, #ff9b52);
+  box-shadow: 0 12px 22px rgba(128, 27, 116, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.dkd-anyela-room-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.dkd-anyela-bottom-nav {
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+  left: 14px;
+  z-index: 20;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  padding: 9px 6px calc(9px + env(safe-area-inset-bottom));
+  border: 1px solid rgba(255, 255, 255, 0.92);
+  border-radius: 24px 24px 0 0;
+  background: rgba(255, 255, 255, 0.93);
+  box-shadow: 0 -12px 28px rgba(21, 39, 74, 0.15);
+  backdrop-filter: blur(20px);
+}
+
+.dkd-anyela-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  border: 0;
+  color: #10264b;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.dkd-anyela-nav-item svg {
+  width: 24px;
+  height: 24px;
+}
+
+.dkd-anyela-nav-item.dkd-active {
+  color: var(--dkd-anyela-pink);
+}
+
+@media (max-width: 430px) {
+  .dkd-anyela-page {
+    padding: 0;
+  }
+
+  .dkd-anyela-phone-shell {
+    width: 100%;
+    min-height: 100vh;
+    border: 0;
+    border-radius: 0;
+  }
+
+  .dkd-anyela-scroll-area {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .dkd-anyela-hero-card {
+    min-height: 324px;
+  }
+}
+
+@media (max-width: 390px) {
+  .dkd-anyela-header {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .dkd-anyela-logo-script {
+    font-size: 30px;
+  }
+
+  .dkd-anyela-menu-button {
+    width: 47px;
+    height: 47px;
+  }
+
+  .dkd-anyela-hero-content {
+    left: 25px;
+    width: 62%;
+  }
+
+  .dkd-anyela-hero-content p {
+    font-size: 17px;
+  }
+
+  .dkd-anyela-primary-button {
+    min-height: 52px;
+    padding: 0 22px;
+    font-size: 18px;
+  }
+
+  .dkd-anyela-neon-ring {
+    right: 26px;
+    width: 152px;
+    height: 152px;
+  }
+
+  .dkd-anyela-silhouette {
+    right: 14px;
+  }
+
+  .dkd-anyela-hero-signature {
+    right: 35px;
+    font-size: 40px;
+  }
+
+  .dkd-anyela-video-card {
+    grid-template-columns: 120px 1fr 38px;
+  }
+
+  .dkd-anyela-package-row {
+    gap: 6px;
+  }
+
+  .dkd-anyela-package-card {
+    padding-right: 6px;
+    padding-left: 6px;
+  }
+
+  .dkd-anyela-package-card h3 {
+    font-size: 14px;
+  }
+
+  .dkd-anyela-package-card strong {
+    font-size: 20px;
+  }
+
+  .dkd-anyela-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dkd-anyela-service-card {
+    min-height: 78px;
+  }
+
+  .dkd-anyela-payment-card {
+    grid-template-columns: 74px 1fr;
+  }
+
+  .dkd-anyela-payment-action {
+    grid-column: 1 / -1;
+  }
+
+  .dkd-anyela-rule-list {
+    grid-template-columns: 1fr;
+  }
+
+  .dkd-anyela-final-cta {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
