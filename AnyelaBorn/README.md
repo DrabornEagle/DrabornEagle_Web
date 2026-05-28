@@ -1,16 +1,20 @@
 # Anyela Born Club
 
-Mobil öncelikli premium fan/AI influencer deneyim sayfası.
-
 Adres hedefi:
 
-https://www.draborneagle.com/AnyelaBorn
+https://www.draborneagle.com/AnyelaBorn/
 
-İlk sürüm:
-- Statik sayfa
-- IBAN + dekont
-- Manuel/yari manuel ödeme onayı
-- WhatsApp yönlendirme
-- ChatGPT yardımıyla manuel sohbet yönetimi
-- ElevenLabs ile sesli cevap
-- Manuel görsel/video üretimi
+Bu sürüm:
+- WhatsApp yönlendirmesi içermez.
+- Site içi mobil chat/web-app arayüzü içerir.
+- Paket seçimi, chat, ses/görsel/video/dekont yükleme arayüzü, sipariş durumu ve reklam paketi ekranları vardır.
+- Backend henüz bağlı değildir.
+- İlk sürüm manuel/yari manuel yönetim için tasarlanmıştır.
+
+Sonraki teknik adım:
+- Supabase Auth
+- Supabase Database
+- Supabase Storage
+- Admin cevap paneli
+- Chat mesajlarını gerçek zamanlı kaydetme
+- Dosya yükleme ve sipariş durum takibi
