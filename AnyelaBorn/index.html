@@ -3,86 +3,479 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#020611" />
-  <title>Anyela Born Club | Premium Digital Experience</title>
-  <meta name="description" content="Anyela Born Club özel sohbet, sesli mesaj, görsel/video siparişi ve işletmeler için AI reklam yüzü paketleri." />
-  <link rel="stylesheet" href="assets/fa/css/all.min.css" />
+  <title>Anyela Born Club | Miami Premium Fan Deneyimi</title>
+  <meta name="description" content="Anyela Born Club; özel chat, sesli mesaj, özel görsel/video konseptleri ve işletmeler için AI reklam yüzü paketleri sunan Miami temalı premium deneyim sayfasıdır." />
+  <meta name="theme-color" content="#07111f" />
+  <meta property="og:title" content="Anyela Born Club" />
+  <meta property="og:description" content="Miami temalı premium Anyela Born deneyimi: özel chat, sesli mesaj, görsel/video konseptleri ve işletme reklam paketleri." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <style>
     :root{
-      --dkd-bg:#020611;--dkd-bg-2:#050b16;--dkd-card:rgba(9,18,33,.82);--dkd-card-2:rgba(12,24,43,.92);--dkd-line:rgba(123,172,230,.18);--dkd-line-2:rgba(34,160,255,.55);--dkd-text:#f7fbff;--dkd-muted:#98a8bd;--dkd-blue:#1b7cff;--dkd-cyan:#10e4ff;--dkd-violet:#674dff;--dkd-gold:#f6c86c;--dkd-bronze:#d89a63;--dkd-green:#1fe09a;--dkd-red:#ff5a63;--dkd-shadow:0 30px 90px rgba(0,0,0,.58);--dkd-radius:28px;--dkd-radius-sm:18px;color-scheme:dark;
+      --dkd_ocean_night:#06111f;
+      --dkd_ocean_deep:#0b1e35;
+      --dkd_panel_color:rgba(255,255,255,.075);
+      --dkd_panel_strong_color:rgba(255,255,255,.115);
+      --dkd_border_color:rgba(255,255,255,.18);
+      --dkd_soft_border_color:rgba(255,255,255,.10);
+      --dkd_text_color:#fff9f2;
+      --dkd_muted_text_color:#bed0e6;
+      --dkd_aqua_color:#12e4ff;
+      --dkd_miami_coral:#ff6b61;
+      --dkd_sunset_color:#ffb84d;
+      --dkd_neon_lilac:#ad7cff;
+      --dkd_mint_color:#83ffd7;
+      --dkd_dark_text:#08111f;
+      --dkd_shadow_color:0 32px 110px rgba(0,0,0,.42);
+      --dkd_card_shadow:0 22px 58px rgba(0,0,0,.27);
+      --dkd_radius_xl:34px;
+      --dkd_radius_lg:26px;
+      --dkd_radius_md:20px;
     }
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;min-height:100vh;background:radial-gradient(circle at 78% 0%,rgba(24,124,255,.22),transparent 32%),radial-gradient(circle at 0% 28%,rgba(0,224,255,.12),transparent 28%),linear-gradient(180deg,#01030a 0%,#05101f 48%,#020611 100%);color:var(--dkd-text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;overflow-x:hidden}button,input,textarea{font:inherit}button{cursor:pointer}img{display:block;max-width:100%}a{text-decoration:none;color:inherit}.dkd-app{max-width:540px;min-height:100vh;margin:0 auto;position:relative;background:linear-gradient(180deg,rgba(4,9,19,.96),rgba(1,4,12,.99));box-shadow:0 0 0 1px rgba(255,255,255,.03),0 0 95px rgba(0,0,0,.72);isolation:isolate}.dkd-app:before{content:"";position:fixed;inset:0;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.018) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(circle at 50% 8%,#000,transparent 80%);opacity:.24;z-index:-1}.dkd-screen{display:none;min-height:100vh;padding:16px 14px 104px}.dkd-screen.dkd-active{display:block}.dkd-header{position:sticky;top:0;z-index:30;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:8px 4px 16px;background:linear-gradient(180deg,rgba(2,6,17,.96),rgba(2,6,17,.68) 84%,transparent);backdrop-filter:blur(18px)}.dkd-logo{display:flex;align-items:center;gap:12px}.dkd-logo-mark{width:58px;height:58px;border-radius:19px;display:grid;place-items:center;background:radial-gradient(circle at 35% 25%,rgba(16,228,255,.23),transparent 54%),linear-gradient(145deg,rgba(7,19,35,.86),rgba(1,4,12,.62));border:1px solid rgba(16,228,255,.16);box-shadow:0 0 34px rgba(16,130,255,.18);font-family:Georgia,serif;font-weight:800;font-size:30px;letter-spacing:-5px;color:#20e4ff}.dkd-logo-text strong{display:block;font-family:Georgia,serif;letter-spacing:4px;font-size:17px}.dkd-logo-text span{display:block;letter-spacing:8px;color:var(--dkd-cyan);font-size:11px;margin-top:2px}.dkd-icon-btn,.dkd-back{width:48px;height:48px;border-radius:17px;border:1px solid rgba(255,255,255,.1);background:rgba(15,22,35,.82);color:white;display:grid;place-items:center;box-shadow:0 14px 36px rgba(0,0,0,.32)}.dkd-pill{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid rgba(127,178,232,.16);border-radius:999px;background:rgba(13,22,36,.72);color:#d9e9ff;font-weight:800;font-size:13px;letter-spacing:.2px}.dkd-pill i{color:var(--dkd-cyan)}.dkd-hero{position:relative;overflow:hidden;border:1px solid var(--dkd-line);border-radius:var(--dkd-radius);background:linear-gradient(130deg,rgba(10,19,34,.98) 0%,rgba(7,13,23,.92) 47%,rgba(4,8,16,.74) 100%);box-shadow:var(--dkd-shadow);min-height:390px;padding:24px 20px;display:flex;flex-direction:column;justify-content:flex-end}.dkd-hero:after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 78% 36%,rgba(31,122,255,.32),transparent 22%),linear-gradient(90deg,rgba(2,6,17,.96),rgba(2,6,17,.70) 43%,rgba(2,6,17,.20));pointer-events:none}.dkd-hero-img{position:absolute;inset:0 0 auto auto;width:65%;height:100%;object-fit:cover;object-position:center;opacity:.93;filter:saturate(1.07) contrast(1.05)}.dkd-neon-ring{position:absolute;right:18px;top:42px;width:210px;height:210px;border:6px solid rgba(29,125,255,.92);border-left-color:transparent;border-bottom-color:rgba(16,228,255,.25);border-radius:50%;filter:drop-shadow(0 0 18px rgba(29,125,255,.72));opacity:.94}.dkd-hero-content{position:relative;z-index:2;max-width:68%}.dkd-title{font-size:47px;line-height:.98;margin:14px 0 12px;font-weight:950;letter-spacing:-1.6px}.dkd-title .dkd-blue{color:var(--dkd-blue)}.dkd-lead{font-size:17px;line-height:1.45;color:#c8d3df;margin:0 0 20px}.dkd-actions{display:flex;gap:10px;flex-wrap:wrap}.dkd-btn{border:0;border-radius:18px;padding:15px 17px;font-weight:900;display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;transition:.2s transform,.2s opacity}.dkd-btn:active{transform:scale(.98)}.dkd-btn-blue{background:linear-gradient(135deg,#2258ff,#08bfff);box-shadow:0 18px 35px rgba(29,125,255,.28);color:white}.dkd-btn-dark{background:rgba(5,8,15,.76);border:1px solid rgba(255,255,255,.14);color:white}.dkd-btn-gold{background:linear-gradient(135deg,#c7892f,#ffd788);color:#140d04}.dkd-section{margin-top:14px;border:1px solid var(--dkd-line);border-radius:24px;background:linear-gradient(180deg,rgba(10,19,34,.80),rgba(5,9,17,.74));box-shadow:0 14px 48px rgba(0,0,0,.32);padding:16px}.dkd-section-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px}.dkd-section h2,.dkd-section h3{margin:0}.dkd-section h2{font-size:23px}.dkd-link{color:#3190ff;font-weight:800;display:inline-flex;align-items:center;gap:9px}.dkd-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.dkd-step{min-height:142px;border:1px solid rgba(255,255,255,.11);border-radius:19px;background:rgba(13,22,37,.72);padding:14px 10px;text-align:center}.dkd-step b{display:block;color:#6671ff;margin-bottom:8px}.dkd-step i{font-size:29px;color:#287dff;margin:3px 0 13px}.dkd-step strong{display:block;font-size:14px}.dkd-step span{display:block;font-size:12px;color:var(--dkd-muted);line-height:1.35;margin-top:5px}.dkd-pack-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.dkd-pack{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-radius:22px;background:radial-gradient(circle at 75% 8%,rgba(29,125,255,.10),transparent 30%),rgba(6,12,23,.88);padding:16px;min-height:256px}.dkd-pack.dkd-highlight{border-color:rgba(27,124,255,.65);box-shadow:0 0 0 1px rgba(27,124,255,.16),0 18px 50px rgba(27,124,255,.14)}.dkd-pack.dkd-gold{border-color:rgba(246,200,108,.42);background:radial-gradient(circle at 84% 8%,rgba(246,200,108,.16),transparent 33%),rgba(8,12,17,.9)}.dkd-tag{display:inline-flex;align-items:center;justify-content:center;border-radius:9px;padding:5px 11px;font-size:12px;font-weight:950;margin-bottom:15px}.dkd-tag-bronze{background:linear-gradient(135deg,#a66b3e,#f2b071);color:#150b04}.dkd-tag-silver{background:linear-gradient(135deg,#aeb6c0,#fff);color:#111827}.dkd-tag-gold{background:linear-gradient(135deg,#c58b31,#ffdb83);color:#1f1305}.dkd-price{font-size:30px;font-weight:950;margin:12px 0}.dkd-price small{font-size:14px;color:var(--dkd-muted);font-weight:600}.dkd-list{display:grid;gap:9px;margin:0 0 14px;padding:0;list-style:none}.dkd-list li{font-size:13px;color:#d6dfeb;display:flex;gap:8px;align-items:flex-start}.dkd-list i{color:#79beff;margin-top:3px}.dkd-video-card{display:grid;grid-template-columns:1.1fr 1fr;gap:0;overflow:hidden;border:1px solid rgba(34,160,255,.45);border-radius:22px;background:rgba(4,10,20,.88)}.dkd-video-thumb{position:relative;min-height:160px}.dkd-video-thumb img{width:100%;height:100%;object-fit:cover}.dkd-play{position:absolute;inset:0;display:grid;place-items:center}.dkd-play span{width:76px;height:76px;border-radius:50%;display:grid;place-items:center;background:rgba(14,25,47,.58);border:2px solid rgba(90,168,255,.88);box-shadow:0 0 35px rgba(27,124,255,.45);font-size:28px}.dkd-video-text{padding:18px}.dkd-trust{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.dkd-trust-item{display:flex;gap:10px;align-items:center;padding:14px 10px;border-radius:18px;background:rgba(12,22,38,.72);border:1px solid rgba(255,255,255,.08)}.dkd-trust-item i{font-size:24px;color:#2a88ff}.dkd-trust-item b{font-size:13px}.dkd-trust-item span{display:block;font-size:12px;color:var(--dkd-muted)}.dkd-auth-top{text-align:center;padding:18px 0 12px}.dkd-auth-top .dkd-logo-mark{margin:0 auto 10px}.dkd-auth-box{border:1px solid var(--dkd-line);border-radius:27px;background:rgba(10,18,32,.82);padding:16px}.dkd-tabs{display:grid;grid-template-columns:repeat(2,1fr);gap:0;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:18px}.dkd-tab{padding:14px;border:0;background:transparent;color:var(--dkd-muted);font-weight:950}.dkd-tab.dkd-selected{color:#238cff;border-bottom:3px solid #18b8ff}.dkd-field{height:60px;border-radius:16px;border:1px solid rgba(255,255,255,.13);background:rgba(4,9,17,.65);display:flex;align-items:center;gap:12px;padding:0 16px;margin-bottom:12px;color:#c9d5e2}.dkd-field input{flex:1;background:transparent;border:0;outline:0;color:#fff}.dkd-social{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}.dkd-benefits{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}.dkd-benefit{border:1px solid rgba(255,255,255,.09);border-radius:18px;background:rgba(9,17,30,.72);padding:14px;display:flex;gap:11px;align-items:center}.dkd-benefit i{font-size:24px;color:#257fff}.dkd-filter{display:flex;gap:9px;overflow-x:auto;padding:4px 0 10px;scrollbar-width:none}.dkd-filter::-webkit-scrollbar{display:none}.dkd-filter button{flex:0 0 auto;border-radius:18px;border:1px solid rgba(255,255,255,.12);background:rgba(10,18,32,.76);color:white;padding:13px 17px;font-weight:850;display:flex;align-items:center;gap:9px}.dkd-filter button.dkd-selected{background:linear-gradient(135deg,rgba(34,88,255,.7),rgba(8,191,255,.52));border-color:rgba(28,156,255,.88);box-shadow:0 0 24px rgba(28,156,255,.25)}.dkd-feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.dkd-feature{border:1px solid rgba(255,255,255,.1);border-radius:19px;background:rgba(10,18,32,.70);padding:15px;display:flex;gap:11px;align-items:center}.dkd-feature i{font-size:27px;color:#238cff}.dkd-feature span{font-size:13px;color:#d7e2ee}.dkd-pricing-wide{display:grid;grid-template-columns:1fr 1fr;gap:12px}.dkd-faq{display:grid;gap:8px}.dkd-faq div{border:1px solid rgba(255,255,255,.08);border-radius:14px;background:rgba(4,9,17,.72);padding:14px;display:flex;justify-content:space-between;align-items:center}.dkd-wave{height:42px;border-radius:16px;background:repeating-linear-gradient(90deg,transparent 0 7px,rgba(29,125,255,.75) 8px 10px,transparent 11px 17px);filter:drop-shadow(0 0 12px rgba(29,125,255,.45));mask-image:linear-gradient(180deg,transparent 0,#000 35%,#000 65%,transparent 100%);margin:13px 0}.dkd-process{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.dkd-process .dkd-step{min-height:112px}.dkd-upload-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}.dkd-upload{min-height:155px;border:1.5px dashed rgba(160,185,216,.35);border-radius:20px;display:grid;place-items:center;text-align:center;color:#d8e6f3;background:rgba(4,9,17,.48)}.dkd-upload i{font-size:34px;color:#2b91ff;margin-bottom:9px}.dkd-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}.dkd-gallery img{height:75px;width:100%;object-fit:cover;border-radius:12px}.dkd-select-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;overflow-x:auto;scrollbar-width:none}.dkd-select-card{min-width:118px;border:1px solid rgba(255,255,255,.11);border-radius:18px;background:rgba(11,19,33,.72);padding:13px;text-align:center;position:relative}.dkd-select-card.dkd-selected{border-color:#159dff;box-shadow:0 0 0 1px rgba(21,157,255,.15)}.dkd-select-card i{font-size:27px;color:#267fff;margin-bottom:10px}.dkd-chips{display:flex;gap:9px;flex-wrap:wrap}.dkd-chip{border:1px solid rgba(255,255,255,.13);border-radius:999px;padding:12px 16px;background:rgba(10,18,32,.66);font-weight:800}.dkd-chip.dkd-selected{border-color:#0fe4ff;color:#eaffff;background:rgba(9,45,69,.58)}.dkd-business-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.dkd-mini-card{border:1px solid rgba(255,255,255,.11);border-radius:18px;background:rgba(11,19,33,.74);padding:12px;text-align:center}.dkd-mini-card i{font-size:28px;color:#2b8cff;margin-bottom:8px}.dkd-payment-card{border:1px solid rgba(34,160,255,.54);border-radius:23px;background:radial-gradient(circle at 80% 10%,rgba(65,123,255,.18),transparent 38%),rgba(9,17,31,.82);padding:16px;display:grid;grid-template-columns:1fr 1.3fr auto;gap:14px;align-items:center}.dkd-copy-row{display:grid;grid-template-columns:95px 1fr auto;gap:8px;align-items:center;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.06)}.dkd-alert{border:1px solid rgba(246,200,108,.55);border-radius:16px;background:rgba(81,54,15,.22);padding:12px;display:flex;gap:10px}.dkd-timeline{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;text-align:center}.dkd-time-node{color:var(--dkd-muted);font-size:12px}.dkd-time-node i{display:grid;place-items:center;margin:0 auto 8px;width:54px;height:54px;border-radius:50%;border:1px solid rgba(255,255,255,.12);font-size:22px}.dkd-time-node.dkd-current{color:white}.dkd-time-node.dkd-current i{border-color:#2b87ff;color:white;box-shadow:0 0 22px rgba(43,135,255,.45);background:rgba(29,125,255,.18)}.dkd-chat-head{display:grid;grid-template-columns:112px 1fr 130px;gap:14px;align-items:center}.dkd-avatar{position:relative}.dkd-avatar img{width:110px;height:110px;object-fit:cover;border-radius:32px;border:2px solid rgba(35,142,255,.66);box-shadow:0 0 30px rgba(35,142,255,.38)}.dkd-online{width:13px;height:13px;border-radius:50%;background:var(--dkd-green);display:inline-block}.dkd-chat-list{display:grid;gap:13px;margin-top:18px}.dkd-msg{display:flex;gap:10px;align-items:flex-end}.dkd-msg.dkd-me{justify-content:flex-end}.dkd-bubble{max-width:76%;padding:13px 14px;border-radius:19px;background:rgba(18,29,45,.92);border:1px solid rgba(255,255,255,.08);line-height:1.35}.dkd-me .dkd-bubble{background:linear-gradient(135deg,#174dca,#1c7cff);border-color:rgba(126,186,255,.45)}.dkd-media{max-width:82%;border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.11);position:relative}.dkd-media img{width:100%;height:130px;object-fit:cover}.dkd-compose{position:sticky;bottom:0;background:linear-gradient(180deg,transparent,rgba(2,6,17,.98) 16%);padding-top:15px}.dkd-input{min-height:60px;border:1px solid rgba(255,255,255,.1);border-radius:23px;background:rgba(12,20,33,.95);display:flex;align-items:center;gap:10px;padding:9px 10px 9px 18px}.dkd-input input{flex:1;background:transparent;border:0;outline:0;color:white}.dkd-input button{width:46px;height:46px;border-radius:50%;border:0;background:linear-gradient(135deg,#2258ff,#08bfff);color:white}.dkd-chat-actions{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:8px}.dkd-chat-actions button{border:1px solid rgba(255,255,255,.09);border-radius:16px;background:rgba(9,17,31,.82);color:white;padding:12px 6px;font-size:12px}.dkd-profile-head{display:grid;grid-template-columns:112px 1fr auto;gap:14px;align-items:center}.dkd-order{display:grid;grid-template-columns:112px 1fr auto;gap:12px;align-items:center;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(8,14,25,.55);padding:10px;margin-bottom:10px}.dkd-order img{width:100px;height:86px;object-fit:cover;border-radius:16px}.dkd-admin-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.dkd-admin-stat{border:1px solid rgba(255,255,255,.1);border-radius:19px;background:rgba(10,18,32,.77);padding:14px;min-height:140px}.dkd-admin-stat i{font-size:25px;color:#2c8dff;margin-bottom:25px}.dkd-admin-stat b{display:block;font-size:31px;margin:7px 0}.dkd-approval{display:grid;grid-template-columns:58px 1fr 56px auto auto;gap:10px;align-items:center;border:1px solid rgba(255,255,255,.08);border-radius:18px;background:rgba(8,14,25,.58);padding:10px;margin-bottom:10px}.dkd-approval img{width:52px;height:52px;border-radius:50%;object-fit:cover}.dkd-receipt{width:45px;height:56px;background:linear-gradient(180deg,#fff,#d9e2ee);border-radius:8px;color:#111;display:grid;place-items:center;font-size:21px}.dkd-approve,.dkd-reject{border-radius:14px;background:transparent;padding:11px 12px;font-weight:850}.dkd-approve{border:1px solid rgba(31,224,154,.7);color:var(--dkd-green)}.dkd-reject{border:1px solid rgba(255,90,99,.75);color:var(--dkd-red)}.dkd-bottom-nav{position:fixed;left:50%;bottom:0;transform:translateX(-50%);width:100%;max-width:540px;z-index:40;padding:8px 10px calc(8px + env(safe-area-inset-bottom));background:linear-gradient(180deg,transparent,rgba(2,6,17,.97) 20%)}.dkd-bottom-inner{display:grid;grid-template-columns:repeat(5,1fr);gap:4px;border:1px solid rgba(255,255,255,.1);border-radius:24px;background:rgba(9,17,31,.94);backdrop-filter:blur(20px);padding:8px}.dkd-nav-btn{border:0;border-radius:17px;background:transparent;color:#8290a3;display:grid;place-items:center;gap:4px;padding:8px 4px;font-size:11px}.dkd-nav-btn i{font-size:22px}.dkd-nav-btn.dkd-active{color:#238cff;background:rgba(27,124,255,.13);box-shadow:inset 0 0 0 1px rgba(27,124,255,.18),0 0 24px rgba(27,124,255,.18)}.dkd-drawer{border:1px solid rgba(43,130,255,.31);border-radius:23px;background:rgba(10,18,32,.86);padding:16px;margin-top:16px}.dkd-two{display:grid;grid-template-columns:1fr 1fr;gap:10px}.dkd-foot{font-size:11px;text-align:center;color:#65748a;margin-top:17px;padding-bottom:12px}.dkd-small{font-size:12px;color:var(--dkd-muted)}.dkd-status{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:8px 10px;background:rgba(31,224,154,.10);color:var(--dkd-green);border:1px solid rgba(31,224,154,.36);font-weight:800;font-size:12px}@media(max-width:430px){.dkd-screen{padding-left:10px;padding-right:10px}.dkd-title{font-size:39px}.dkd-hero{min-height:350px}.dkd-hero-content{max-width:72%}.dkd-steps,.dkd-pack-grid,.dkd-feature-row,.dkd-process,.dkd-trust,.dkd-admin-stats{grid-template-columns:repeat(2,1fr)}.dkd-pricing-wide,.dkd-payment-card,.dkd-chat-head,.dkd-profile-head{grid-template-columns:1fr}.dkd-business-grid{grid-template-columns:repeat(2,1fr)}.dkd-approval{grid-template-columns:46px 1fr 42px}.dkd-approval .dkd-approve,.dkd-approval .dkd-reject{grid-column:auto}.dkd-chat-actions{grid-template-columns:repeat(2,1fr)}.dkd-select-grid{grid-template-columns:repeat(5,130px)}.dkd-pack{min-height:230px}.dkd-video-card{grid-template-columns:1fr}.dkd-payment-card{align-items:start}.dkd-order{grid-template-columns:92px 1fr}.dkd-order>button,.dkd-order>div:last-child{grid-column:1/-1}.dkd-bottom-inner{grid-template-columns:repeat(5,1fr)}}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:#06111f}
+    body{
+      margin:0;
+      font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+      color:var(--dkd_text_color);
+      min-height:100vh;
+      background:
+        radial-gradient(circle at 12% 8%,rgba(18,228,255,.32),transparent 26%),
+        radial-gradient(circle at 92% 4%,rgba(255,107,97,.30),transparent 27%),
+        radial-gradient(circle at 50% 38%,rgba(173,124,255,.22),transparent 34%),
+        linear-gradient(180deg,#07111f 0%,#0b1e35 42%,#060b17 100%);
+      line-height:1.55;
+      overflow-x:hidden;
+    }
+    body:before{
+      content:"";
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      background:
+        linear-gradient(115deg,transparent 0 62%,rgba(255,255,255,.06) 62.15%,transparent 62.45%),
+        linear-gradient(155deg,transparent 0 72%,rgba(255,255,255,.035) 72.15%,transparent 72.45%);
+      opacity:.8;
+      z-index:-2;
+    }
+    a{color:inherit;text-decoration:none}
+    button,input,textarea,select{font:inherit}
+    .dkd_page_shell{width:min(1240px,calc(100% - 32px));margin:0 auto;padding:18px 0 70px}
+    .dkd_icon{width:20px;height:20px;stroke-width:2.3;flex:none}
+    .dkd_large_icon{width:28px;height:28px;stroke-width:2.1;flex:none}
+    .dkd_topbar{
+      position:sticky;top:10px;z-index:40;
+      display:flex;align-items:center;justify-content:space-between;gap:16px;
+      min-height:72px;padding:12px 14px 12px 16px;border-radius:999px;
+      background:rgba(5,13,25,.62);border:1px solid var(--dkd_soft_border_color);
+      backdrop-filter:blur(20px);box-shadow:0 18px 44px rgba(0,0,0,.22)
+    }
+    .dkd_brand_cluster{display:flex;align-items:center;gap:12px;min-width:0}
+    .dkd_brand_mark{
+      width:48px;height:48px;border-radius:18px;display:grid;place-items:center;font-weight:950;color:var(--dkd_dark_text);
+      background:linear-gradient(135deg,var(--dkd_aqua_color),var(--dkd_sunset_color) 55%,var(--dkd_miami_coral));
+      box-shadow:0 14px 38px rgba(18,228,255,.24)
+    }
+    .dkd_brand_title{display:block;font-size:18px;font-weight:950;line-height:1;letter-spacing:-.3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .dkd_brand_subtitle{display:block;margin-top:5px;font-size:11px;color:var(--dkd_muted_text_color);text-transform:uppercase;letter-spacing:1.4px;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+    .dkd_topbar_actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+    .dkd_nav_pill,.dkd_button_primary,.dkd_button_secondary,.dkd_button_light{
+      min-height:44px;border-radius:999px;border:1px solid var(--dkd_border_color);display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 15px;font-weight:900;letter-spacing:.05px;transition:transform .22s ease,filter .22s ease,border-color .22s ease,background .22s ease
+    }
+    .dkd_nav_pill{background:rgba(255,255,255,.06);color:var(--dkd_muted_text_color);font-size:13px}
+    .dkd_button_primary{background:linear-gradient(135deg,var(--dkd_aqua_color),var(--dkd_sunset_color) 55%,var(--dkd_miami_coral));border-color:transparent;color:var(--dkd_dark_text);box-shadow:0 20px 54px rgba(18,228,255,.20)}
+    .dkd_button_secondary{background:rgba(255,255,255,.075);color:var(--dkd_text_color)}
+    .dkd_button_light{background:#fff9f2;color:#07111f;border-color:transparent}
+    .dkd_nav_pill:hover,.dkd_button_primary:hover,.dkd_button_secondary:hover,.dkd_button_light:hover{transform:translateY(-2px);filter:saturate(1.08)}
+    .dkd_hero_grid{margin-top:20px;display:grid;grid-template-columns:minmax(0,1.02fr) minmax(380px,.98fr);gap:18px;align-items:stretch}
+    .dkd_glass_panel{position:relative;overflow:hidden;border-radius:var(--dkd_radius_xl);background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.048));border:1px solid var(--dkd_border_color);box-shadow:var(--dkd_shadow_color);backdrop-filter:blur(18px)}
+    .dkd_hero_content{padding:34px;min-height:720px;display:flex;flex-direction:column;justify-content:space-between;background:radial-gradient(circle at 100% 0,rgba(255,184,77,.16),transparent 26%),radial-gradient(circle at 0 100%,rgba(18,228,255,.14),transparent 28%)}
+    .dkd_badge_row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+    .dkd_badge{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--dkd_soft_border_color);background:rgba(255,255,255,.075);color:#dffbff;border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900}
+    .dkd_hero_kicker{margin:0 0 12px;color:var(--dkd_aqua_color);text-transform:uppercase;letter-spacing:1.7px;font-size:12px;font-weight:950}
+    .dkd_hero_title{margin:0;font-size:clamp(42px,7vw,82px);line-height:.98;letter-spacing:-3.2px;max-width:780px}
+    .dkd_hero_title span{display:block;background:linear-gradient(135deg,#fff,var(--dkd_aqua_color) 38%,var(--dkd_sunset_color) 72%,var(--dkd_miami_coral));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .dkd_hero_text{margin:20px 0 0;color:var(--dkd_muted_text_color);font-size:18px;max-width:760px}
+    .dkd_hero_action_row{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+    .dkd_hero_metric_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:28px}
+    .dkd_metric_card{padding:18px;border-radius:24px;border:1px solid var(--dkd_soft_border_color);background:rgba(255,255,255,.075)}
+    .dkd_metric_value{display:block;font-size:28px;font-weight:950;color:var(--dkd_aqua_color);line-height:1}
+    .dkd_metric_label{display:block;margin-top:8px;color:var(--dkd_muted_text_color);font-size:13px;font-weight:750}
+    .dkd_hero_note{margin:24px 0 0;padding:16px;border-radius:24px;background:rgba(8,17,31,.42);border:1px solid var(--dkd_soft_border_color);color:#dcecff;font-size:14px}
+    .dkd_visual_panel{padding:28px;min-height:720px;display:flex;align-items:center;justify-content:center;background:radial-gradient(circle at 30% 10%,rgba(255,107,97,.16),transparent 30%),radial-gradient(circle at 88% 78%,rgba(18,228,255,.14),transparent 26%)}
+    .dkd_visual_stage{position:relative;width:min(100%,540px);min-height:648px;display:grid;place-items:center}
+    .dkd_palm_arc{position:absolute;inset:22px;border-radius:52px;border:1px solid rgba(255,255,255,.10);background:linear-gradient(160deg,rgba(18,228,255,.10),rgba(255,107,97,.06));transform:rotate(-3deg)}
+    .dkd_phone_mockup{position:relative;z-index:2;width:336px;border-radius:44px;padding:13px;background:linear-gradient(180deg,#111b2f,#050811);border:1px solid rgba(255,255,255,.20);box-shadow:0 42px 98px rgba(0,0,0,.48)}
+    .dkd_phone_notch{position:absolute;top:0;left:50%;transform:translateX(-50%);width:118px;height:25px;border-radius:0 0 18px 18px;background:#02050a;z-index:4}
+    .dkd_phone_screen{overflow:hidden;min-height:620px;border-radius:32px;background:#fff9f2;color:#07111f;position:relative}
+    .dkd_phone_screen:before{content:"";position:absolute;inset:0 0 auto 0;height:210px;background:linear-gradient(135deg,var(--dkd_aqua_color),var(--dkd_sunset_color) 60%,var(--dkd_miami_coral));opacity:.97}
+    .dkd_phone_inner{position:relative;z-index:1;padding:18px}
+    .dkd_phone_header{display:flex;align-items:center;justify-content:space-between;gap:10px;color:#07111f;margin-bottom:15px}
+    .dkd_avatar_chip{display:flex;align-items:center;gap:10px;font-weight:950}
+    .dkd_avatar_circle{width:42px;height:42px;border-radius:16px;background:linear-gradient(145deg,#07111f,#183653);display:grid;place-items:center;color:#fff9f2;box-shadow:0 14px 30px rgba(7,17,31,.18)}
+    .dkd_online_dot{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:950;background:rgba(7,17,31,.86);color:#cffaff;padding:8px 10px;border-radius:999px}
+    .dkd_online_dot:before{content:"";width:8px;height:8px;border-radius:99px;background:#35ffab;box-shadow:0 0 0 5px rgba(53,255,171,.13)}
+    .dkd_phone_hero_card{margin-top:26px;padding:18px;border-radius:26px;background:rgba(255,255,255,.84);box-shadow:0 18px 44px rgba(7,17,31,.16);border:1px solid rgba(7,17,31,.08);backdrop-filter:blur(10px)}
+    .dkd_phone_hero_card h3{margin:0;font-size:25px;line-height:1.1;letter-spacing:-.8px}
+    .dkd_phone_hero_card p{margin:10px 0 0;color:#405067;font-size:13px;font-weight:680}
+    .dkd_chat_preview{margin-top:16px;display:flex;flex-direction:column;gap:10px}
+    .dkd_chat_bubble{max-width:88%;padding:12px 14px;border-radius:18px;font-size:13px;font-weight:730;line-height:1.35;box-shadow:0 10px 20px rgba(7,17,31,.08)}
+    .dkd_chat_bubble_anyela{background:#07111f;color:#fff9f2;border-bottom-left-radius:7px}
+    .dkd_chat_bubble_user{align-self:flex-end;background:#f1f5fb;color:#07111f;border-bottom-right-radius:7px}
+    .dkd_phone_package_grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:16px}
+    .dkd_phone_package_card{padding:13px;border-radius:18px;background:#fff;border:1px solid rgba(7,17,31,.06);box-shadow:0 10px 18px rgba(7,17,31,.06)}
+    .dkd_phone_package_title{display:block;font-size:12px;font-weight:950;color:#07111f}
+    .dkd_phone_package_price{display:block;margin-top:5px;font-size:17px;font-weight:950;color:#ff5d57}
+    .dkd_phone_bottom_bar{margin-top:15px;min-height:48px;border-radius:18px;background:#07111f;color:#fff9f2;display:flex;align-items:center;justify-content:center;gap:8px;font-size:13px;font-weight:950}
+    .dkd_float_card{position:absolute;z-index:3;width:218px;padding:16px;border-radius:24px;background:rgba(6,17,31,.82);border:1px solid rgba(255,255,255,.16);box-shadow:0 24px 54px rgba(0,0,0,.34);backdrop-filter:blur(18px)}
+    .dkd_float_card_top{top:42px;right:-8px}
+    .dkd_float_card_bottom{bottom:54px;left:-8px}
+    .dkd_float_kicker{display:flex;align-items:center;gap:8px;color:var(--dkd_aqua_color);font-size:11px;text-transform:uppercase;letter-spacing:1.3px;font-weight:950}
+    .dkd_float_value{display:block;margin-top:8px;font-size:22px;font-weight:950;line-height:1.05}
+    .dkd_float_text{margin:8px 0 0;color:var(--dkd_muted_text_color);font-size:12px}
+    .dkd_section{margin-top:18px}
+    .dkd_section_panel{padding:30px}
+    .dkd_section_header{display:flex;justify-content:space-between;align-items:flex-end;gap:18px;flex-wrap:wrap;margin-bottom:22px}
+    .dkd_section_kicker{margin:0 0 8px;color:var(--dkd_aqua_color);font-size:12px;text-transform:uppercase;letter-spacing:1.55px;font-weight:950}
+    .dkd_section_title{margin:0;font-size:clamp(30px,5vw,54px);line-height:1.06;letter-spacing:-1.6px}
+    .dkd_section_text{margin:10px 0 0;color:var(--dkd_muted_text_color);max-width:840px;font-size:16px}
+    .dkd_feature_grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .dkd_feature_card,.dkd_step_card,.dkd_package_card,.dkd_business_card,.dkd_rule_card,.dkd_admin_card{border-radius:var(--dkd_radius_lg);border:1px solid var(--dkd_soft_border_color);background:linear-gradient(180deg,rgba(255,255,255,.085),rgba(255,255,255,.045));box-shadow:var(--dkd_card_shadow)}
+    .dkd_feature_card{padding:20px;min-height:230px;display:flex;flex-direction:column;justify-content:space-between}
+    .dkd_icon_box{width:58px;height:58px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(135deg,rgba(18,228,255,.18),rgba(255,184,77,.12));border:1px solid rgba(255,255,255,.12);color:#e9fdff}
+    .dkd_feature_card h3,.dkd_step_card h3,.dkd_package_card h3,.dkd_business_card h3,.dkd_rule_card h3,.dkd_admin_card h3{margin:16px 0 8px;font-size:20px;line-height:1.15;letter-spacing:-.4px}
+    .dkd_feature_card p,.dkd_step_card p,.dkd_package_card p,.dkd_business_card p,.dkd_rule_card p,.dkd_admin_card p{margin:0;color:var(--dkd_muted_text_color);font-size:14px}
+    .dkd_video_grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(280px,.9fr);gap:16px;align-items:stretch}
+    .dkd_video_frame{min-height:360px;border-radius:30px;border:1px solid rgba(255,255,255,.16);background:radial-gradient(circle at 25% 20%,rgba(18,228,255,.24),transparent 28%),radial-gradient(circle at 88% 20%,rgba(255,107,97,.22),transparent 30%),linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.035));display:grid;place-items:center;position:relative;overflow:hidden}
+    .dkd_video_frame:after{content:"MIAMI CLUB PREVIEW";position:absolute;bottom:18px;left:18px;right:18px;color:rgba(255,255,255,.12);font-size:34px;font-weight:950;letter-spacing:3px;text-align:center}
+    .dkd_play_button{width:96px;height:96px;border-radius:999px;display:grid;place-items:center;background:linear-gradient(135deg,#fff9f2,var(--dkd_aqua_color));color:#07111f;box-shadow:0 26px 70px rgba(18,228,255,.25);position:relative;z-index:2}
+    .dkd_video_copy{padding:24px;border-radius:30px;background:rgba(7,17,31,.36);border:1px solid var(--dkd_soft_border_color)}
+    .dkd_step_grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;counter-reset:dkd_step_counter}
+    .dkd_step_card{padding:20px;position:relative;min-height:220px;counter-increment:dkd_step_counter}
+    .dkd_step_card:before{content:counter(dkd_step_counter);position:absolute;right:18px;top:16px;font-size:44px;line-height:1;font-weight:950;color:rgba(255,255,255,.10)}
+    .dkd_package_grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .dkd_package_card{padding:20px;display:flex;flex-direction:column;gap:16px;min-height:330px;position:relative;overflow:hidden}
+    .dkd_package_card:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--dkd_aqua_color),var(--dkd_sunset_color),var(--dkd_miami_coral));opacity:.88}
+    .dkd_package_card_highlight{background:linear-gradient(180deg,rgba(255,184,77,.16),rgba(255,255,255,.055));border-color:rgba(255,184,77,.35)}
+    .dkd_package_topline{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+    .dkd_package_tag{display:inline-flex;align-items:center;gap:7px;border-radius:999px;padding:7px 10px;background:rgba(255,255,255,.08);border:1px solid var(--dkd_soft_border_color);font-size:11px;font-weight:950;text-transform:uppercase;letter-spacing:.8px;color:#e4fbff}
+    .dkd_package_price{font-size:30px;font-weight:950;line-height:1;color:#fff}
+    .dkd_package_price span{display:block;margin-top:6px;font-size:12px;color:var(--dkd_muted_text_color);font-weight:800}
+    .dkd_package_list{margin:0;padding:0;list-style:none;display:grid;gap:9px;color:#e8f4ff;font-size:14px}
+    .dkd_package_list li{display:flex;gap:9px;align-items:flex-start}
+    .dkd_package_list li:before{content:"";width:8px;height:8px;border-radius:99px;background:var(--dkd_mint_color);margin-top:7px;box-shadow:0 0 0 5px rgba(131,255,215,.09);flex:none}
+    .dkd_business_grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .dkd_business_card{padding:20px;min-height:290px;display:flex;flex-direction:column;justify-content:space-between}
+    .dkd_business_price{font-size:28px;font-weight:950;color:var(--dkd_sunset_color)}
+    .dkd_payment_grid{display:grid;grid-template-columns:minmax(0,.95fr) minmax(320px,1.05fr);gap:16px}
+    .dkd_payment_box{padding:24px;border-radius:30px;background:#fff9f2;color:#07111f;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+    .dkd_payment_box h3{font-size:26px;margin:0 0 10px;letter-spacing:-.8px}
+    .dkd_payment_box p{color:#4b5c72;margin:0 0 18px;font-weight:650}
+    .dkd_fake_form{display:grid;gap:12px}
+    .dkd_input_like{min-height:52px;border-radius:18px;background:#f0f5fb;border:1px solid rgba(7,17,31,.09);display:flex;align-items:center;gap:10px;padding:0 14px;color:#66758a;font-weight:780}
+    .dkd_upload_box{min-height:132px;border:2px dashed rgba(7,17,31,.18);border-radius:22px;display:grid;place-items:center;text-align:center;padding:18px;background:#f7fbff;color:#405067;font-weight:850}
+    .dkd_admin_grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .dkd_admin_card{padding:18px;min-height:198px}
+    .dkd_chat_room_mockup{display:grid;grid-template-columns:minmax(0,.9fr) minmax(300px,1.1fr);gap:16px}
+    .dkd_room_sidebar{padding:22px;border-radius:30px;background:rgba(255,255,255,.08);border:1px solid var(--dkd_soft_border_color)}
+    .dkd_room_main{padding:22px;border-radius:30px;background:#fff9f2;color:#07111f;box-shadow:0 24px 58px rgba(0,0,0,.25)}
+    .dkd_room_user_card{padding:15px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid var(--dkd_soft_border_color);margin-top:12px}
+    .dkd_room_message{padding:13px 14px;border-radius:18px;margin-top:10px;font-size:14px;font-weight:700}
+    .dkd_room_message_dark{background:#07111f;color:#fff9f2;border-bottom-left-radius:7px}
+    .dkd_room_message_light{background:#edf3fb;color:#07111f;border-bottom-right-radius:7px;margin-left:38px}
+    .dkd_room_composer{display:grid;grid-template-columns:1fr auto auto auto;gap:8px;margin-top:16px;align-items:center}
+    .dkd_room_composer_bar{min-height:48px;border-radius:17px;background:#edf3fb;padding:0 13px;display:flex;align-items:center;color:#607087;font-weight:780}
+    .dkd_room_icon_button{width:48px;height:48px;border-radius:17px;background:#07111f;color:#fff;display:grid;place-items:center}
+    .dkd_rule_grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .dkd_rule_card{padding:20px;min-height:170px}
+    .dkd_footer{margin-top:18px;padding:28px;border-radius:32px;background:rgba(5,13,25,.70);border:1px solid var(--dkd_soft_border_color);display:flex;justify-content:space-between;gap:18px;align-items:center;flex-wrap:wrap}
+    .dkd_footer small{color:var(--dkd_muted_text_color);font-weight:700;max-width:760px}
+    .dkd_mobile_sticky_cta{position:fixed;left:12px;right:12px;bottom:12px;z-index:50;display:none;gap:10px;padding:10px;border-radius:24px;background:rgba(5,13,25,.84);border:1px solid var(--dkd_soft_border_color);backdrop-filter:blur(16px);box-shadow:0 18px 44px rgba(0,0,0,.32)}
+    .dkd_mobile_sticky_cta a{flex:1;min-height:48px;font-size:13px;padding:10px}
+    @media (max-width:1080px){
+      .dkd_hero_grid,.dkd_video_grid,.dkd_payment_grid,.dkd_chat_room_mockup{grid-template-columns:1fr}
+      .dkd_hero_content,.dkd_visual_panel{min-height:auto}
+      .dkd_feature_grid,.dkd_step_grid,.dkd_business_grid,.dkd_admin_grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .dkd_package_grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .dkd_visual_stage{min-height:620px}
+    }
+    @media (max-width:760px){
+      .dkd_page_shell{width:min(100% - 22px,640px);padding:10px 0 92px}
+      .dkd_topbar{position:relative;top:auto;border-radius:28px;align-items:flex-start;flex-direction:column;padding:14px}
+      .dkd_brand_title{font-size:17px}
+      .dkd_topbar_actions{width:100%;display:grid;grid-template-columns:1fr 1fr}
+      .dkd_nav_pill{display:none}
+      .dkd_button_primary,.dkd_button_secondary,.dkd_button_light{width:100%;padding:10px 12px;font-size:13px}
+      .dkd_hero_content,.dkd_visual_panel,.dkd_section_panel{padding:18px;border-radius:28px}
+      .dkd_hero_title{font-size:48px;letter-spacing:-2px}
+      .dkd_hero_text{font-size:16px}
+      .dkd_hero_metric_grid{grid-template-columns:1fr}
+      .dkd_visual_stage{min-height:580px;width:100%}
+      .dkd_phone_mockup{width:min(100%,326px)}
+      .dkd_float_card{position:relative;left:auto;right:auto;top:auto;bottom:auto;width:100%;margin-top:12px}
+      .dkd_float_card_top,.dkd_float_card_bottom{display:none}
+      .dkd_feature_grid,.dkd_step_grid,.dkd_package_grid,.dkd_business_grid,.dkd_admin_grid,.dkd_rule_grid{grid-template-columns:1fr}
+      .dkd_feature_card,.dkd_step_card,.dkd_package_card,.dkd_business_card,.dkd_admin_card,.dkd_rule_card{min-height:auto}
+      .dkd_video_frame{min-height:270px}
+      .dkd_video_frame:after{font-size:22px;letter-spacing:1.6px}
+      .dkd_payment_box{padding:18px}
+      .dkd_room_composer{grid-template-columns:1fr repeat(3,44px)}
+      .dkd_room_icon_button{width:44px;height:44px;border-radius:15px}
+      .dkd_section_title{font-size:35px}
+      .dkd_mobile_sticky_cta{display:flex}
+    }
+    @media (max-width:430px){
+      .dkd_page_shell{width:min(100% - 18px,410px)}
+      .dkd_hero_title{font-size:42px}
+      .dkd_phone_screen{min-height:594px}
+      .dkd_phone_package_grid{grid-template-columns:1fr}
+      .dkd_topbar_actions{grid-template-columns:1fr}
+      .dkd_mobile_sticky_cta{left:8px;right:8px;bottom:8px}
+    }
   </style>
 </head>
 <body>
-  <main class="dkd-app" id="dkdApp">
-    <section class="dkd-screen dkd-active" data-page="home">
-      <header class="dkd-header"><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn" data-go="packages"><i class="fa-solid fa-bars"></i></button></header>
-      <div class="dkd-hero"><img class="dkd-hero-img" src="assets/img/dkd_anyela_car_orange_01.jpg" alt="Anyela Born"/><span class="dkd-neon-ring"></span><div class="dkd-hero-content"><span class="dkd-pill"><i class="fa-solid fa-certificate"></i> RESMİ FAN KULÜBÜ</span><h1 class="dkd-title">Anyela ile <span class="dkd-blue">Özel Deneyime</span> Katıl</h1><p class="dkd-lead">Özel sohbet, sesli mesajlar, özel görsel/video siparişleri ve marka iş birlikleri için doğru yerdesin.</p><div class="dkd-actions"><button class="dkd-btn dkd-btn-blue" data-go="packages"><i class="fa-solid fa-gem"></i> PAKETLERİ GÖR <i class="fa-solid fa-arrow-right"></i></button><button class="dkd-btn dkd-btn-dark" data-go="chat"><i class="fa-solid fa-lock"></i> ÖZEL ODAYI AÇ</button></div></div></div>
-      <section class="dkd-section"><div class="dkd-section-head"><h2>NASIL ÇALIŞIR?</h2></div><div class="dkd-steps"><div class="dkd-step"><b>01</b><i class="fa-solid fa-user-plus"></i><strong>Üye Ol</strong><span>Hesabını oluştur ve giriş yap.</span></div><div class="dkd-step"><b>02</b><i class="fa-solid fa-credit-card"></i><strong>Paketi Seç</strong><span>Sana uygun paketi seç ve ödemeni yap.</span></div><div class="dkd-step"><b>03</b><i class="fa-regular fa-comments"></i><strong>İçeriğe Eriş</strong><span>Özel içeriklere ve sohbetlere katıl.</span></div><div class="dkd-step"><b>04</b><i class="fa-regular fa-star"></i><strong>Bağ Kur</strong><span>Özel deneyimlerin tadını çıkar.</span></div></div></section>
-      <section class="dkd-section"><div class="dkd-section-head"><h2>ÖNE ÇIKAN PAKETLER</h2><button class="dkd-link dkd-btn dkd-btn-dark" data-go="packages">TÜM PAKETLER <i class="fa-solid fa-arrow-right"></i></button></div><div class="dkd-pack-grid"><article class="dkd-pack"><span class="dkd-tag dkd-tag-bronze">BRONZ</span><div class="dkd-price">₺249 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Özel paylaşımlar</li><li><i class="fa-solid fa-check"></i>Hikaye & günlük içerikler</li><li><i class="fa-solid fa-check"></i>Topluluk sohbeti</li></ul></article><article class="dkd-pack dkd-highlight"><span class="dkd-tag dkd-tag-silver">SILVER</span><div class="dkd-price">₺499 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Tüm Bronz avantajları</li><li><i class="fa-solid fa-check"></i>Özel sesli mesajlar</li><li><i class="fa-solid fa-check"></i>Öncelikli yanıt</li></ul></article><article class="dkd-pack dkd-gold"><span class="dkd-tag dkd-tag-gold">GOLD</span><div class="dkd-price">₺999 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Görsel/video siparişleri</li><li><i class="fa-solid fa-check"></i>1'e 1 özel sohbet</li><li><i class="fa-solid fa-check"></i>Kişiselleştirilmiş içerikler</li></ul></article></div></section>
-      <section class="dkd-section"><h2>TANITIM VİDEOSU</h2><div class="dkd-video-card" style="margin-top:14px"><div class="dkd-video-thumb"><img src="assets/img/dkd_anyela_yacht_silver_07.jpg" alt="Tanıtım videosu"/><div class="dkd-play"><span><i class="fa-solid fa-play"></i></span></div></div><div class="dkd-video-text"><h2>Anyela Born Club’a Hoş Geldin</h2><p class="dkd-small">Kulübün ayrıcalıklarını keşfet ve Anyela ile benzersiz bir deneyime adım at.</p><p class="dkd-link"><i class="fa-regular fa-clock"></i> 01:28</p></div></div></section>
-      <section class="dkd-section"><div class="dkd-trust"><div class="dkd-trust-item"><i class="fa-solid fa-shield-halved"></i><div><b>GÜVENLİ ÖDEME</b><span>256-bit SSL</span></div></div><div class="dkd-trust-item"><i class="fa-solid fa-user-shield"></i><div><b>GİZLİLİK</b><span>Bilgilerin güvende</span></div></div><div class="dkd-trust-item"><i class="fa-solid fa-headset"></i><div><b>7/24 DESTEK</b><span>Her zaman yanında</span></div></div></div><div class="dkd-foot">Anyela Born dijital karakter deneyimidir. İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır.</div></section>
+  <main class="dkd_page_shell">
+    <nav class="dkd_topbar" aria-label="Anyela Born Club menü">
+      <a class="dkd_brand_cluster" href="#dkd_top">
+        <span class="dkd_brand_mark">AB</span>
+        <span>
+          <strong class="dkd_brand_title">Anyela Born Club</strong>
+          <span class="dkd_brand_subtitle">Miami premium deneyim</span>
+        </span>
+      </a>
+      <div class="dkd_topbar_actions">
+        <a class="dkd_nav_pill" href="#dkd_packages"><i data-lucide="sparkles" class="dkd_icon"></i>Paketler</a>
+        <a class="dkd_nav_pill" href="#dkd_business"><i data-lucide="building-2" class="dkd_icon"></i>İşletme</a>
+        <a class="dkd_button_secondary" href="#dkd_payment"><i data-lucide="receipt-text" class="dkd_icon"></i>Dekont Yükle</a>
+        <a class="dkd_button_primary" href="#dkd_packages"><i data-lucide="message-circle-heart" class="dkd_icon"></i>Paketi Seç</a>
+      </div>
+    </nav>
+
+    <section id="dkd_top" class="dkd_hero_grid" aria-label="Anyela Born Club ana tanıtım">
+      <div class="dkd_glass_panel dkd_hero_content">
+        <div>
+          <div class="dkd_badge_row">
+            <span class="dkd_badge"><i data-lucide="palm-tree" class="dkd_icon"></i>Miami temalı özel club</span>
+            <span class="dkd_badge"><i data-lucide="shield-check" class="dkd_icon"></i>Kontrollü ve güvenli v1</span>
+            <span class="dkd_badge"><i data-lucide="wallet-cards" class="dkd_icon"></i>IBAN + dekont onayı</span>
+          </div>
+          <p class="dkd_hero_kicker">Private AI character experience</p>
+          <h1 class="dkd_hero_title">Anyela ile <span>özel Miami deneyimi</span></h1>
+          <p class="dkd_hero_text">Anyela Born Club; özel yazılı sohbet, kişiye özel sesli cevap, konsept görsel/video siparişi ve markalar için AI reklam yüzü paketlerini tek premium sayfada toplar.</p>
+          <div class="dkd_hero_action_row">
+            <a class="dkd_button_primary" href="#dkd_packages"><i data-lucide="crown" class="dkd_icon"></i>Fan Paketlerini Gör</a>
+            <a class="dkd_button_secondary" href="#dkd_room"><i data-lucide="messages-square" class="dkd_icon"></i>Chat Odası Önizle</a>
+            <a class="dkd_button_light" href="#dkd_business"><i data-lucide="megaphone" class="dkd_icon"></i>Reklam Yüzü Paketi</a>
+          </div>
+          <div class="dkd_hero_metric_grid">
+            <div class="dkd_metric_card"><span class="dkd_metric_value">149₺</span><span class="dkd_metric_label">Başlangıç sohbet paketi</span></div>
+            <div class="dkd_metric_card"><span class="dkd_metric_value">249₺</span><span class="dkd_metric_label">Kişiye özel sesli giriş</span></div>
+            <div class="dkd_metric_card"><span class="dkd_metric_value">1.500₺+</span><span class="dkd_metric_label">İşletme reklam paketi</span></div>
+          </div>
+        </div>
+        <p class="dkd_hero_note"><strong>Şeffaf not:</strong> Anyela Born dijital karakter deneyimidir. İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır.</p>
+      </div>
+
+      <div class="dkd_glass_panel dkd_visual_panel">
+        <div class="dkd_visual_stage" aria-label="Mobil chat mockup">
+          <div class="dkd_palm_arc"></div>
+          <div class="dkd_float_card dkd_float_card_top">
+            <span class="dkd_float_kicker"><i data-lucide="waves" class="dkd_icon"></i>Miami flow</span>
+            <span class="dkd_float_value">Voice + Chat</span>
+            <p class="dkd_float_text">Kullanıcı özel odada yazı, ses, görsel ve video referansı gönderebilir.</p>
+          </div>
+          <div class="dkd_phone_mockup">
+            <span class="dkd_phone_notch"></span>
+            <div class="dkd_phone_screen">
+              <div class="dkd_phone_inner">
+                <div class="dkd_phone_header">
+                  <div class="dkd_avatar_chip"><span class="dkd_avatar_circle"><i data-lucide="sparkles" class="dkd_icon"></i></span><span>Anyela Born</span></div>
+                  <span class="dkd_online_dot">Online</span>
+                </div>
+                <div class="dkd_phone_hero_card">
+                  <h3>Özel odanı aç ve paketini başlat</h3>
+                  <p>Paketi seç, IBAN ödemeni yap, dekontu yükle. Admin onayından sonra özel chat odan açılır.</p>
+                </div>
+                <div class="dkd_chat_preview">
+                  <div class="dkd_chat_bubble dkd_chat_bubble_anyela">Merhaba, Miami club odana hoş geldin 🌴 Hangi deneyimi başlatıyoruz?</div>
+                  <div class="dkd_chat_bubble dkd_chat_bubble_user">Bana özel sesli cevap ve 2 görsel konsept istiyorum.</div>
+                  <div class="dkd_chat_bubble dkd_chat_bubble_anyela">Harika. Kıyafet, mekan veya ürün referansını yükleyebilirsin.</div>
+                </div>
+                <div class="dkd_phone_package_grid">
+                  <div class="dkd_phone_package_card"><span class="dkd_phone_package_title">Voice Intro</span><span class="dkd_phone_package_price">249₺</span></div>
+                  <div class="dkd_phone_package_card"><span class="dkd_phone_package_title">Photo Set</span><span class="dkd_phone_package_price">1.499₺</span></div>
+                  <div class="dkd_phone_package_card"><span class="dkd_phone_package_title">Private Chat</span><span class="dkd_phone_package_price">499₺</span></div>
+                  <div class="dkd_phone_package_card"><span class="dkd_phone_package_title">Brand Mini</span><span class="dkd_phone_package_price">1.500₺</span></div>
+                </div>
+                <div class="dkd_phone_bottom_bar"><i data-lucide="audio-lines" class="dkd_icon"></i>Sesli cevap teslimi hazır</div>
+              </div>
+            </div>
+          </div>
+          <div class="dkd_float_card dkd_float_card_bottom">
+            <span class="dkd_float_kicker"><i data-lucide="image-plus" class="dkd_icon"></i>Custom content</span>
+            <span class="dkd_float_value">Görsel / Video</span>
+            <p class="dkd_float_text">Konsept, kıyafet, ürün ve reklam içeriği teslim alanı.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="login">
-      <div class="dkd-auth-top"><div class="dkd-logo-mark">AB</div><h1>Anyela Born Club’a <span style="color:var(--dkd-blue)">Hoş Geldin</span></h1><p class="dkd-lead">Özel ayrıcalıklar, sesli mesajlar, kişisel deneyimler ve daha fazlası seni bekliyor.</p></div><div class="dkd-auth-box"><div class="dkd-tabs"><button class="dkd-tab dkd-selected">GİRİŞ YAP</button><button class="dkd-tab">KAYIT OL</button></div><label class="dkd-field"><i class="fa-regular fa-user"></i><input placeholder="E-posta veya kullanıcı adı" /></label><label class="dkd-field"><i class="fa-solid fa-lock"></i><input type="password" placeholder="Şifre"/><i class="fa-regular fa-eye"></i></label><div style="display:flex;justify-content:space-between;margin:10px 0 16px"><span><i class="fa-solid fa-square-check" style="color:var(--dkd-blue)"></i> Beni Hatırla</span><a class="dkd-link">Şifremi Unuttum?</a></div><div class="dkd-social"><button class="dkd-btn dkd-btn-dark"><i class="fa-brands fa-google"></i> Google</button><button class="dkd-btn dkd-btn-dark"><i class="fa-brands fa-apple"></i> Apple</button><button class="dkd-btn dkd-btn-dark"><i class="fa-brands fa-x-twitter"></i> X</button></div></div><button class="dkd-btn dkd-btn-blue" style="width:100%;margin-top:16px" data-go="home">GİRİŞ YAP <i class="fa-solid fa-arrow-right"></i></button><button class="dkd-btn dkd-btn-dark" style="width:100%;margin-top:10px">KAYIT OL <i class="fa-solid fa-arrow-right"></i></button><section class="dkd-section"><h2>Neden Hesap Oluşturmalısın?</h2><div class="dkd-benefits"><div class="dkd-benefit"><i class="fa-solid fa-gem"></i><span>Özel paketlere erişim</span></div><div class="dkd-benefit"><i class="fa-regular fa-message"></i><span>Anyela ile özel sohbet</span></div><div class="dkd-benefit"><i class="fa-solid fa-circle-play"></i><span>Video & görseller</span></div><div class="dkd-benefit"><i class="fa-solid fa-gift"></i><span>Sürpriz ayrıcalıklar</span></div></div></section>
+    <section class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Ana özellikler">
+      <div class="dkd_section_header">
+        <div>
+          <p class="dkd_section_kicker">Platform yapısı</p>
+          <h2 class="dkd_section_title">Tek sayfada satış, ödeme ve özel oda mantığı</h2>
+          <p class="dkd_section_text">v1 sürümü manuel kontrollü çalışır: ödeme dekontu admin tarafından onaylanır, kullanıcıya özel oda açılır ve cevaplar/teslimler panelden yönetilir.</p>
+        </div>
+      </div>
+      <div class="dkd_feature_grid">
+        <article class="dkd_feature_card"><div class="dkd_icon_box"><i data-lucide="message-circle-heart" class="dkd_large_icon"></i></div><div><h3>Özel Chat</h3><p>Yazılı mesaj, paket durumu, teslim dosyaları ve ek paket teklifleri aynı odada görünür.</p></div></article>
+        <article class="dkd_feature_card"><div class="dkd_icon_box"><i data-lucide="mic-2" class="dkd_large_icon"></i></div><div><h3>Sesli Cevap</h3><p>Kullanıcı sesli mesaj gönderebilir; Anyela sesi manuel hazırlanıp odaya yüklenir.</p></div></article>
+        <article class="dkd_feature_card"><div class="dkd_icon_box"><i data-lucide="images" class="dkd_large_icon"></i></div><div><h3>Özel Görsel</h3><p>Kıyafet, mekan veya ürün referansından Anyela konsept görselleri teslim edilir.</p></div></article>
+        <article class="dkd_feature_card"><div class="dkd_icon_box"><i data-lucide="badge-dollar-sign" class="dkd_large_icon"></i></div><div><h3>Reklam Paketi</h3><p>İşletmeler için Anyela reklam yüzü, kısa video, kapak görseli ve paylaşım metni.</p></div></article>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="packages">
-      <header class="dkd-header"><button class="dkd-back" data-go="home"><i class="fa-solid fa-chevron-left"></i></button><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn" data-go="home"><i class="fa-solid fa-bars"></i></button></header><div class="dkd-hero"><img class="dkd-hero-img" src="assets/img/dkd_anyela_car_red_02.jpg"/><span class="dkd-neon-ring"></span><div class="dkd-hero-content"><span class="dkd-pill"><i class="fa-solid fa-gem"></i> PAKETLER</span><h1 class="dkd-title">Sana Uygun <span class="dkd-blue">Paketi Seç</span></h1><p class="dkd-lead">Deneyimini bir üst seviyeye taşı. Sana özel avantajlarla ayrıcalıkları keşfet.</p></div></div><div class="dkd-filter"><button class="dkd-selected"><i class="fa-solid fa-layer-group"></i>Tümü</button><button data-go="fan"><i class="fa-regular fa-user"></i>Fan</button><button data-go="voice"><i class="fa-solid fa-wave-square"></i>Voice</button><button data-go="custom"><i class="fa-regular fa-image"></i>Görsel/Video</button><button data-go="business"><i class="fa-solid fa-briefcase"></i>İşletme</button></div><section class="dkd-section"><div class="dkd-pack-grid"><article class="dkd-pack"><span class="dkd-tag dkd-tag-bronze">BRONZ</span><h3>Anyela Intro</h3><div class="dkd-price">₺249 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Özel paylaşımlar</li><li><i class="fa-solid fa-check"></i>Topluluk sohbeti</li><li><i class="fa-solid fa-star"></i>4.7 puan</li></ul><button class="dkd-btn dkd-btn-gold">Satın Al</button></article><article class="dkd-pack dkd-highlight"><span class="dkd-tag dkd-tag-silver">SILVER</span><h3>Private Chat</h3><div class="dkd-price">₺499 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Özel sesli mesajlar</li><li><i class="fa-solid fa-check"></i>Öncelikli yanıt</li><li><i class="fa-solid fa-star"></i>4.9 puan</li></ul><button class="dkd-btn dkd-btn-blue" data-go="payment">Satın Al</button></article><article class="dkd-pack dkd-gold"><span class="dkd-tag dkd-tag-gold">GOLD</span><h3>VIP Fan Pack</h3><div class="dkd-price">₺999 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Görsel/video siparişleri</li><li><i class="fa-solid fa-check"></i>1'e 1 özel sohbet</li><li><i class="fa-solid fa-star"></i>5.0 puan</li></ul><button class="dkd-btn dkd-btn-gold" data-go="payment">Satın Al</button></article></div></section><section class="dkd-section"><div class="dkd-feature-row"><div class="dkd-feature"><i class="fa-solid fa-gem"></i><span>%100 güvenli ödeme</span></div><div class="dkd-feature"><i class="fa-solid fa-shield"></i><span>Kolay paket değişimi</span></div><div class="dkd-feature"><i class="fa-solid fa-headset"></i><span>7/24 destek</span></div></div></section>
+    <section class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Tanıtım videosu">
+      <div class="dkd_video_grid">
+        <div class="dkd_video_frame"><div class="dkd_play_button"><i data-lucide="play" class="dkd_large_icon"></i></div></div>
+        <div class="dkd_video_copy">
+          <p class="dkd_section_kicker">Anyela karşılama videosu</p>
+          <h2 class="dkd_section_title">İlk ekranda güven veren konuşmalı video alanı</h2>
+          <p class="dkd_section_text">Bu alana Anyela’nın kısa karşılama videosu eklenir. Video; özel sohbet, sesli cevap, görsel/video sipariş ve işletme reklam paketlerini sıcak ama premium bir dille anlatır.</p>
+          <div class="dkd_hero_action_row">
+            <a class="dkd_button_primary" href="#dkd_payment"><i data-lucide="receipt" class="dkd_icon"></i>Ödeme Akışına Git</a>
+            <a class="dkd_button_secondary" href="#dkd_rules"><i data-lucide="shield-alert" class="dkd_icon"></i>Kuralları Gör</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="fan">
-      <header class="dkd-header"><button class="dkd-back" data-go="packages"><i class="fa-solid fa-chevron-left"></i></button><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn"><i class="fa-solid fa-bars"></i></button></header><div class="dkd-hero"><img class="dkd-hero-img" src="assets/img/dkd_anyela_car_orange_01.jpg"/><span class="dkd-neon-ring"></span><div class="dkd-hero-content"><span class="dkd-pill"><i class="fa-solid fa-certificate"></i> FAN'A ÖZEL</span><h1 class="dkd-title">Fan Sohbet <span class="dkd-blue">Paketleri</span></h1><p class="dkd-lead">Anyela ile daha yakın, daha özel. Yaz, konuş, bağ kur.</p></div></div><section class="dkd-section"><h2>Neler Kazanırsın?</h2><div class="dkd-feature-row" style="margin-top:14px"><div class="dkd-feature"><i class="fa-regular fa-comments"></i><span>Yazılı sohbet</span></div><div class="dkd-feature"><i class="fa-solid fa-bolt"></i><span>Öncelikli yanıt</span></div><div class="dkd-feature"><i class="fa-solid fa-lock"></i><span>Özel oda erişimi</span></div></div></section><section class="dkd-section"><div class="dkd-pricing-wide"><article class="dkd-pack dkd-highlight"><h2>Anyela Private Chat</h2><p class="dkd-small">Daha yakın, daha özel.</p><div class="dkd-price">₺499 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Yazılı sohbet hakkı</li><li><i class="fa-solid fa-check"></i>Özel oda erişimi</li><li><i class="fa-solid fa-check"></i>Öncelikli yanıt</li></ul><button class="dkd-btn dkd-btn-blue" data-go="payment">Paketi Seç</button></article><article class="dkd-pack dkd-gold"><h2>VIP Fan Pack</h2><p class="dkd-small">En ayrıcalıklı deneyim.</p><div class="dkd-price">₺999 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>VIP öncelik</li><li><i class="fa-solid fa-check"></i>Sesli mesajlar</li><li><i class="fa-solid fa-check"></i>Özel sürprizler</li></ul><button class="dkd-btn dkd-btn-gold" data-go="payment">Paketi Seç</button></article></div></section><section class="dkd-section"><h2>SIKÇA SORULAN SORULAR</h2><div class="dkd-faq" style="margin-top:12px"><div>Mesajlarıma ne kadar sürede yanıt alırım? <i class="fa-solid fa-chevron-down"></i></div><div>Özel oda nedir ve nasıl erişirim? <i class="fa-solid fa-chevron-down"></i></div><div>Paketimi değiştirebilir miyim? <i class="fa-solid fa-chevron-down"></i></div></div></section>
+    <section class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Nasıl çalışır">
+      <div class="dkd_section_header"><div><p class="dkd_section_kicker">4 adım</p><h2 class="dkd_section_title">Kullanıcı için çok basit akış</h2></div></div>
+      <div class="dkd_step_grid">
+        <article class="dkd_step_card"><div class="dkd_icon_box"><i data-lucide="package-check" class="dkd_large_icon"></i></div><h3>Paket seçer</h3><p>Fan, ses, görsel/video veya işletme reklam paketlerinden birini seçer.</p></article>
+        <article class="dkd_step_card"><div class="dkd_icon_box"><i data-lucide="landmark" class="dkd_large_icon"></i></div><h3>IBAN öder</h3><p>Açıklama alanına kullanıcı adı ve paket adını yazar.</p></article>
+        <article class="dkd_step_card"><div class="dkd_icon_box"><i data-lucide="file-check-2" class="dkd_large_icon"></i></div><h3>Dekont yükler</h3><p>Admin panelde ödeme bekleyenler listesine düşer.</p></article>
+        <article class="dkd_step_card"><div class="dkd_icon_box"><i data-lucide="door-open" class="dkd_large_icon"></i></div><h3>Oda açılır</h3><p>Onay sonrası özel chat odası ve dosya teslim alanı aktif olur.</p></article>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="voice">
-      <header class="dkd-header"><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn" data-go="packages"><i class="fa-solid fa-bars"></i></button></header><div class="dkd-hero"><img class="dkd-hero-img" src="assets/img/dkd_anyela_yacht_blue_04.jpg"/><span class="dkd-neon-ring"></span><div class="dkd-hero-content"><span class="dkd-pill"><i class="fa-solid fa-microphone-lines"></i> SESLİ DENEYİM SERİSİ</span><h1 class="dkd-title">Sesli Mesaj / <span class="dkd-blue">Voice Chat</span> Paketleri</h1><p class="dkd-lead">Sesini gönder, Anyela sana özel cevaplasın.</p></div></div><section class="dkd-section"><div class="dkd-feature-row"><div class="dkd-feature"><i class="fa-solid fa-headphones"></i><span>Anyela’dan özel sesli yanıt</span></div><div class="dkd-feature"><i class="fa-solid fa-shield"></i><span>Gizli ve kişiye özel</span></div><div class="dkd-feature"><i class="fa-regular fa-star"></i><span>Benzersiz deneyim</span></div></div></section><section class="dkd-section"><h2>NASIL ÇALIŞIR?</h2><div class="dkd-process" style="margin-top:14px"><div class="dkd-step"><i class="fa-regular fa-paper-plane"></i><strong>1. Ses Gönder</strong><span>Mesajını ilet.</span></div><div class="dkd-step"><i class="fa-solid fa-wave-square"></i><strong>2. Anyela Dinler</strong><span>Yanıt hazırlanır.</span></div><div class="dkd-step"><i class="fa-regular fa-heart"></i><strong>3. Cevaplasın</strong><span>Sesli yanıt ulaşır.</span></div></div></section><section class="dkd-section"><div class="dkd-pack-grid"><article class="dkd-pack"><h2>Anyela Voice <span style="color:var(--dkd-blue)">Intro</span></h2><div class="dkd-wave"></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>30 sn kısa selamlama</li><li><i class="fa-solid fa-check"></i>İsme özel hitap</li></ul><div class="dkd-price">₺199 <small>/tek seferlik</small></div><button class="dkd-btn dkd-btn-blue">PAKETİ SEÇ</button></article><article class="dkd-pack dkd-highlight"><h2>Anyela Voice <span style="color:var(--dkd-blue)">Chat</span></h2><div class="dkd-wave"></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>5 dakikaya kadar</li><li><i class="fa-solid fa-check"></i>Sohbet formatında</li></ul><div class="dkd-price">₺599</div><button class="dkd-btn dkd-btn-blue">PAKETİ SEÇ</button></article><article class="dkd-pack"><h2>Anyela Voice <span style="color:var(--dkd-blue)">Pack</span></h2><div class="dkd-wave"></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>3 adet sesli yanıt</li><li><i class="fa-solid fa-check"></i>Öncelikli teslimat</li></ul><div class="dkd-price">₺1.499</div><button class="dkd-btn dkd-btn-blue">PAKETİ SEÇ</button></article></div></section>
+    <section id="dkd_packages" class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Fan paketleri">
+      <div class="dkd_section_header">
+        <div><p class="dkd_section_kicker">Fan paketleri</p><h2 class="dkd_section_title">Hızlı satılabilir v1 paketleri</h2><p class="dkd_section_text">İlk yayında karar yorgunluğu oluşturmayan sade paket yapısı. Kartlar mobil ekranda tek tek güçlü görünür.</p></div>
+      </div>
+      <div class="dkd_package_grid">
+        <article class="dkd_package_card"><div class="dkd_package_topline"><span class="dkd_package_tag"><i data-lucide="message-circle" class="dkd_icon"></i>Giriş</span><span class="dkd_package_price">149₺<span>Anyela Intro</span></span></div><h3>Tanışma Chat</h3><p>Özel odaya giriş için düşük fiyatlı başlangıç paketi.</p><ul class="dkd_package_list"><li>10 dakikalık yazılı sohbet hakkı</li><li>Site içi özel oda</li><li>Ek paket yönlendirme</li></ul><a class="dkd_button_primary" href="#dkd_payment">Bu paketi seç</a></article>
+        <article class="dkd_package_card dkd_package_card_highlight"><div class="dkd_package_topline"><span class="dkd_package_tag"><i data-lucide="audio-lines" class="dkd_icon"></i>Popüler</span><span class="dkd_package_price">249₺<span>Voice Intro</span></span></div><h3>Kişiye Özel Ses</h3><p>Anyela’dan kişiye özel kısa sesli cevap almak isteyenler için.</p><ul class="dkd_package_list"><li>1 kullanıcı mesajı</li><li>1 kişiye özel sesli cevap</li><li>Hızlı teslim edilebilir ürün</li></ul><a class="dkd_button_primary" href="#dkd_payment">Bu paketi seç</a></article>
+        <article class="dkd_package_card"><div class="dkd_package_topline"><span class="dkd_package_tag"><i data-lucide="messages-square" class="dkd_icon"></i>Chat</span><span class="dkd_package_price">499₺<span>Private Chat</span></span></div><h3>Özel Mesajlaşma</h3><p>Anyela ile daha uzun özel mesajlaşma deneyimi.</p><ul class="dkd_package_list"><li>30 dakika özel mesajlaşma hakkı</li><li>Kıyafet/görsel fikri konuşma</li><li>Ek ses/görsel paketi teklifi</li></ul><a class="dkd_button_primary" href="#dkd_payment">Bu paketi seç</a></article>
+        <article class="dkd_package_card"><div class="dkd_package_topline"><span class="dkd_package_tag"><i data-lucide="shirt" class="dkd_icon"></i>Style</span><span class="dkd_package_price">499₺<span>Style Concept</span></span></div><h3>Stil Konsepti</h3><p>Kıyafet/kombin referansından Anyela tarzı özel konsept.</p><ul class="dkd_package_list"><li>Referans görsel kabulü</li><li>Benzer tarz / ilham konsepti</li><li>2 özel görsel teslimi</li></ul><a class="dkd_button_primary" href="#dkd_payment">Bu paketi seç</a></article>
+        <article class="dkd_package_card dkd_package_card_highlight"><div class="dkd_package_topline"><span class="dkd_package_tag"><i data-lucide="image-plus" class="dkd_icon"></i>Kârlı</span><span class="dkd_package_price">1.499₺<span>Photo Set</span></span></div><h3>5 Özel Görsel</h3><p>Kullanıcının istediği kıyafet, mekan veya konsept üzerinden set.</p><ul class="dkd_package_list"><li>5 özel Anyela görseli</li><li>Konsept yönlendirmesi</li><li>Chat odasında teslim</li></ul><a class="dkd_button_primary" href="#dkd_payment">Bu paketi seç</a></article>
+        <article class="dkd_package_card"><div class="dkd_package_topline"><span class="dkd_package_tag"><i data-lucide="video" class="dkd_icon"></i>Premium</span><span class="dkd_package_price">2.499₺+<span>Talking Video</span></span></div><h3>Konuşmalı Video</h3><p>Doğum günü, özel selam veya ürün tanıtımı için kısa video.</p><ul class="dkd_package_list"><li>İsme/konsepte özel metin</li><li>Anyela sesli video</li><li>Premium teslim alanı</li></ul><a class="dkd_button_primary" href="#dkd_payment">Bu paketi seç</a></article>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="custom">
-      <header class="dkd-header"><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn" data-go="packages"><i class="fa-solid fa-bars"></i></button></header><div class="dkd-hero"><img class="dkd-hero-img" src="assets/img/dkd_anyela_yacht_gold_03.jpg"/><span class="dkd-neon-ring"></span><div class="dkd-hero-content"><h1 class="dkd-title">Özel Görsel & <span class="dkd-blue">Video Siparişi</span></h1><p class="dkd-lead">Referanslarını yükle, detayları seç, sana özel içeriği Anyela ile gerçeğe dönüştürelim.</p></div></div><section class="dkd-section"><div class="dkd-section-head"><h2>REFERANSLARINI YÜKLE</h2><span class="dkd-small">En fazla 8 görsel, 2 video.</span></div><div class="dkd-upload-grid"><div class="dkd-upload"><div><i class="fa-regular fa-image"></i><b>Fotoğraf Yükle</b><br><span class="dkd-small">PNG, JPG</span></div></div><div class="dkd-upload"><div><i class="fa-solid fa-video"></i><b>Video Yükle</b><br><span class="dkd-small">MP4, MOV</span></div></div></div><h3 style="margin:16px 0 10px">İLHAM GALERİSİ</h3><div class="dkd-gallery"><img src="assets/img/dkd_anyela_yacht_gold_03.jpg"><img src="assets/img/dkd_anyela_yacht_blue_04.jpg"><img src="assets/img/dkd_anyela_yacht_green_05.jpg"><img src="assets/img/dkd_anyela_yacht_aqua_06.jpg"><img src="assets/img/dkd_anyela_yacht_silver_07.jpg"><img src="assets/img/dkd_anyela_car_red_02.jpg"></div></section><section class="dkd-section"><h2>İÇERİK TÜRÜNÜ SEÇ</h2><div class="dkd-select-grid" style="margin-top:12px"><div class="dkd-select-card dkd-selected"><i class="fa-solid fa-shirt"></i><b>Style Concept</b><p class="dkd-small">Konsept görsel</p></div><div class="dkd-select-card"><i class="fa-solid fa-camera"></i><b>Photo Set</b><p class="dkd-small">Tema serisi</p></div><div class="dkd-select-card"><i class="fa-solid fa-video"></i><b>Talking Video</b><p class="dkd-small">Konuşma videosu</p></div><div class="dkd-select-card"><i class="fa-solid fa-cake-candles"></i><b>Doğum Günü</b><p class="dkd-small">Özel paket</p></div><div class="dkd-select-card"><i class="fa-regular fa-star"></i><b>Özel Talep</b><p class="dkd-small">Senin fikrin</p></div></div></section><section class="dkd-section"><div class="dkd-pack-grid"><article class="dkd-pack"><span class="dkd-tag dkd-tag-bronze">BRONZ</span><div class="dkd-price">₺249</div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>5 Fotoğraf</li><li><i class="fa-solid fa-check"></i>3 gün teslim</li></ul></article><article class="dkd-pack dkd-highlight"><span class="dkd-tag dkd-tag-silver">SILVER</span><div class="dkd-price">₺499</div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>10 Fotoğraf</li><li><i class="fa-solid fa-check"></i>1 kısa video</li></ul></article><article class="dkd-pack dkd-gold"><span class="dkd-tag dkd-tag-gold">GOLD</span><div class="dkd-price">₺999</div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>20+ fotoğraf</li><li><i class="fa-solid fa-check"></i>Öncelikli teslim</li></ul></article></div></section>
+    <section id="dkd_business" class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="İşletme reklam paketleri">
+      <div class="dkd_section_header"><div><p class="dkd_section_kicker">B2B reklam yüzü</p><h2 class="dkd_section_title">Anyela markanızın AI reklam yüzü olsun</h2><p class="dkd_section_text">Restoran, kafe, butik, güzellik salonu, otel, turizm, emlak, oto galeri, mobil uygulama ve oyun projeleri için sosyal medyaya uygun içerik paketleri.</p></div></div>
+      <div class="dkd_business_grid">
+        <article class="dkd_business_card"><div><div class="dkd_icon_box"><i data-lucide="megaphone" class="dkd_large_icon"></i></div><h3>Reklam Mini</h3><p>1 kısa Anyela reklam videosu, 1 kapak görseli, 1 paylaşım açıklaması.</p></div><strong class="dkd_business_price">1.500₺</strong></article>
+        <article class="dkd_business_card"><div><div class="dkd_icon_box"><i data-lucide="clapperboard" class="dkd_large_icon"></i></div><h3>Reklam Standart</h3><p>3 kısa video, 3 görsel, 3 paylaşım metni, Reels/TikTok formatı.</p></div><strong class="dkd_business_price">4.500₺</strong></article>
+        <article class="dkd_business_card"><div><div class="dkd_icon_box"><i data-lucide="rocket" class="dkd_large_icon"></i></div><h3>Reklam Pro</h3><p>5 video, 5 görsel, story/reels/tiktok formatları, hashtag önerileri.</p></div><strong class="dkd_business_price">7.500₺</strong></article>
+        <article class="dkd_business_card"><div><div class="dkd_icon_box"><i data-lucide="gem" class="dkd_large_icon"></i></div><h3>Marka Yüzü</h3><p>1 haftalık marka konsepti, ürün/hizmet tanıtımı ve özel içerik seti.</p></div><strong class="dkd_business_price">12.000₺+</strong></article>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="business">
-      <header class="dkd-header"><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn" data-go="packages"><i class="fa-solid fa-bars"></i></button></header><div class="dkd-hero"><img class="dkd-hero-img" src="assets/img/dkd_anyela_yacht_green_05.jpg"/><span class="dkd-neon-ring"></span><div class="dkd-hero-content"><span class="dkd-pill"><i class="fa-solid fa-briefcase"></i> İŞLETMELER İÇİN</span><h1 class="dkd-title">Anyela <span class="dkd-blue">Reklam Yüzünüz</span> Olsun</h1><p class="dkd-lead">Markanızı en etkileyici şekilde tanıtalım. Anyela, markanızın sesi ve yüzü olsun.</p></div></div><section class="dkd-section"><h2>SEKTÖRÜNÜZÜ SEÇİN</h2><div class="dkd-chips" style="margin-top:12px"><span class="dkd-chip dkd-selected"><i class="fa-solid fa-utensils"></i> Restoran</span><span class="dkd-chip"><i class="fa-solid fa-mug-hot"></i> Kafe</span><span class="dkd-chip"><i class="fa-solid fa-wand-magic-sparkles"></i> Güzellik</span><span class="dkd-chip"><i class="fa-solid fa-bag-shopping"></i> Butik</span><span class="dkd-chip"><i class="fa-solid fa-cart-shopping"></i> E-Ticaret</span><span class="dkd-chip"><i class="fa-solid fa-hotel"></i> Otel</span><span class="dkd-chip"><i class="fa-solid fa-gamepad"></i> App / Game</span></div></section><section class="dkd-section"><div class="dkd-pack-grid"><article class="dkd-pack"><h2>REKLAM MİNİ</h2><div class="dkd-price">₺2.499</div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>1 kısa video</li><li><i class="fa-solid fa-check"></i>1 görsel</li><li><i class="fa-solid fa-check"></i>3 hashtag</li></ul></article><article class="dkd-pack dkd-highlight"><h2>REKLAM STANDART</h2><div class="dkd-price">₺4.999</div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>1 video</li><li><i class="fa-solid fa-check"></i>3 görsel</li><li><i class="fa-solid fa-check"></i>Revizyon</li></ul></article><article class="dkd-pack"><h2>REKLAM PRO</h2><div class="dkd-price">₺9.999</div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>60 sn video</li><li><i class="fa-solid fa-check"></i>5 görsel</li><li><i class="fa-solid fa-check"></i>Hedef kitle</li></ul></article></div><article class="dkd-pack dkd-gold" style="margin-top:12px"><span class="dkd-tag dkd-tag-gold">EN POPÜLER</span><h2>ANYELA MARKA YÜZÜ</h2><div class="dkd-price">₺19.999 <small>/ay</small></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Ayda 4 video</li><li><i class="fa-solid fa-check"></i>8+ görsel</li><li><i class="fa-solid fa-check"></i>Strateji & danışmanlık</li></ul></article></section><section class="dkd-section"><h2>TESLİMAT KAPSAMI</h2><div class="dkd-business-grid" style="margin-top:12px"><div class="dkd-mini-card"><i class="fa-solid fa-circle-play"></i><b>Video</b></div><div class="dkd-mini-card"><i class="fa-regular fa-image"></i><b>Görsel</b></div><div class="dkd-mini-card"><i class="fa-solid fa-pen-nib"></i><b>Açıklama</b></div><div class="dkd-mini-card"><i class="fa-solid fa-hashtag"></i><b>Hashtag</b></div></div><button class="dkd-btn dkd-btn-blue" style="width:100%;margin-top:16px"><i class="fa-solid fa-gem"></i> ÜCRETSİZ DEMO İSTE <i class="fa-solid fa-arrow-right"></i></button></section>
+    <section id="dkd_payment" class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Ödeme ve dekont yükleme">
+      <div class="dkd_payment_grid">
+        <div>
+          <p class="dkd_section_kicker">IBAN + dekont</p>
+          <h2 class="dkd_section_title">Ödeme altyapısı beklemeden satışa başlama akışı</h2>
+          <p class="dkd_section_text">İlk sürümde ödeme manuel onaylıdır. Kullanıcı açıklamaya <strong>ANYELA - Kullanıcı Adı - Paket Adı</strong> yazar, dekontu yükler, admin onayından sonra özel oda açılır.</p>
+          <div class="dkd_hero_action_row"><a class="dkd_button_primary" href="#dkd_room"><i data-lucide="door-open" class="dkd_icon"></i>Oda Önizle</a><a class="dkd_button_secondary" href="#dkd_admin"><i data-lucide="layout-dashboard" class="dkd_icon"></i>Admin Önizle</a></div>
+        </div>
+        <div class="dkd_payment_box">
+          <h3>Dekont Yükleme Alanı</h3>
+          <p>Bu form v1 görsel mockup alanıdır; sonraki adımda Supabase Storage ve admin onay sistemi bağlanır.</p>
+          <div class="dkd_fake_form">
+            <div class="dkd_input_like"><i data-lucide="user-round" class="dkd_icon"></i>Ad Soyad / Kullanıcı adı</div>
+            <div class="dkd_input_like"><i data-lucide="mail" class="dkd_icon"></i>E-posta veya Instagram/TikTok kullanıcı adı</div>
+            <div class="dkd_input_like"><i data-lucide="package" class="dkd_icon"></i>Seçilen paket</div>
+            <div class="dkd_upload_box"><div><i data-lucide="upload-cloud" class="dkd_large_icon"></i><br>Dekont görselini veya PDF dosyasını buraya yükle</div></div>
+            <a class="dkd_button_primary" href="#dkd_room"><i data-lucide="send" class="dkd_icon"></i>Onay Beklemeye Gönder</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="payment">
-      <header class="dkd-header"><button class="dkd-back" data-go="packages"><i class="fa-solid fa-chevron-left"></i></button><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><span class="dkd-pill"><i class="fa-solid fa-lock"></i> GÜVENLİ ÖDEME</span></header><h1>ÖDEME & DEKONT YÜKLEME</h1><p class="dkd-small">Paketini seçtin, şimdi ödemenı tamamla.</p><section class="dkd-payment-card"><div><b>SEÇİLEN PAKET</b><div class="dkd-price">₺499 <small>/ay</small></div></div><ul class="dkd-list"><li><i class="fa-solid fa-check"></i>Tüm Silver avantajları</li><li><i class="fa-solid fa-check"></i>Özel görsel/video siparişleri</li><li><i class="fa-solid fa-check"></i>Aylık 1’e 1 özel sohbet</li></ul><span class="dkd-tag dkd-tag-silver">SEÇİLDİ</span></section><section class="dkd-section"><h2>ÖDEME BİLGİLERİ</h2><div class="dkd-filter"><button class="dkd-selected">IBAN Tavsiye Edilir</button><button>FAST</button><button>EFT</button></div><div class="dkd-copy-row"><span>Banka</span><b>Türkiye İş Bankası A.Ş.</b><i class="fa-regular fa-copy"></i></div><div class="dkd-copy-row"><span>IBAN</span><b>TR12 0006 4000 0011 1234 5678 90</b><i class="fa-regular fa-copy"></i></div><div class="dkd-copy-row"><span>Alıcı</span><b>ANYELA BORN CLUB</b><i class="fa-regular fa-copy"></i></div><div class="dkd-alert"><i class="fa-solid fa-circle-info"></i><div><b>Açıklama Çok Önemli</b><br>ANYELA - kullanıcı adı - paket adı<br><span class="dkd-small">Örnek: ANYELA - anyela07 - Silver</span></div></div></section><section class="dkd-section"><h2>DEKONT YÜKLE</h2><div class="dkd-upload" style="margin-top:12px"><div><i class="fa-solid fa-cloud-arrow-up"></i><b>Dekont yüklemek için dokun</b><br><span class="dkd-small">JPG, PNG, PDF maks. 10MB</span></div></div></section><section class="dkd-section"><h2>ÖDEME DURUMU</h2><div class="dkd-timeline" style="margin-top:12px"><div class="dkd-time-node dkd-current"><i class="fa-solid fa-wallet"></i><b>Ödeme Bekleniyor</b></div><div class="dkd-time-node"><i class="fa-regular fa-clock"></i><b>Kontrol Ediliyor</b></div><div class="dkd-time-node"><i class="fa-solid fa-shield"></i><b>Onay Bekliyor</b></div><div class="dkd-time-node"><i class="fa-solid fa-lock-open"></i><b>Oda Açıldı</b></div></div><button class="dkd-btn dkd-btn-blue" style="width:100%;margin-top:18px"><i class="fa-regular fa-paper-plane"></i> DEKONTU GÖNDER</button></section>
+    <section id="dkd_room" class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Özel chat odası">
+      <div class="dkd_section_header"><div><p class="dkd_section_kicker">Özel chat odası</p><h2 class="dkd_section_title">Yazı, ses, görsel, video ve teslim alanı</h2></div></div>
+      <div class="dkd_chat_room_mockup">
+        <aside class="dkd_room_sidebar">
+          <div class="dkd_icon_box"><i data-lucide="badge-check" class="dkd_large_icon"></i></div>
+          <h3>Aktif Paket</h3>
+          <p>Anyela Voice Intro + Style Concept</p>
+          <div class="dkd_room_user_card"><strong>Durum</strong><p>Admin onayladı · oda aktif</p></div>
+          <div class="dkd_room_user_card"><strong>Teslimler</strong><p>1 sesli cevap bekleniyor · 2 görsel hazırlanıyor</p></div>
+          <div class="dkd_room_user_card"><strong>Ekstra</strong><p>Photo Set veya Talking Video upsell alanı.</p></div>
+        </aside>
+        <div class="dkd_room_main">
+          <h3>Anyela Born</h3>
+          <p>Miami Club özel oda</p>
+          <div class="dkd_room_message dkd_room_message_dark">Ödeme onaylandı. Referans görselini ve istediğin konsepti gönderebilirsin.</div>
+          <div class="dkd_room_message dkd_room_message_light">Miami rooftop, aqua neon ışıklar ve siyah şık kıyafet istiyorum.</div>
+          <div class="dkd_room_message dkd_room_message_dark">Harika. Konsept notunu aldım. Sesli cevap ve görsel teslimini bu odadan paylaşacağım.</div>
+          <div class="dkd_room_composer">
+            <div class="dkd_room_composer_bar">Mesaj yaz...</div>
+            <div class="dkd_room_icon_button"><i data-lucide="mic" class="dkd_icon"></i></div>
+            <div class="dkd_room_icon_button"><i data-lucide="image" class="dkd_icon"></i></div>
+            <div class="dkd_room_icon_button"><i data-lucide="video" class="dkd_icon"></i></div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="chat">
-      <header class="dkd-header"><button class="dkd-back" data-go="home"><i class="fa-solid fa-chevron-left"></i></button><div style="text-align:center"><h2 style="margin:0">Özel Chat Odası</h2><span class="dkd-link"><i class="fa-solid fa-lock"></i> Güvenli & Özel</span></div><button class="dkd-icon-btn"><i class="fa-solid fa-ellipsis-vertical"></i></button></header><section class="dkd-section"><div class="dkd-chat-head"><div class="dkd-avatar"><img src="assets/img/dkd_anyela_yacht_silver_07.jpg"><span class="dkd-online" style="position:absolute;right:2px;bottom:10px"></span></div><div><h1 style="margin:0">Anyela <i class="fa-solid fa-certificate" style="color:var(--dkd-blue);font-size:19px"></i></h1><p><span class="dkd-online"></span> Şu an çevrimiçi</p><span class="dkd-pill"><i class="fa-solid fa-star" style="color:var(--dkd-gold)"></i> GOLD PAKET</span></div><div><div class="dkd-pack" style="min-height:auto;padding:14px"><span class="dkd-small">Kalan Süre</span><h2 style="color:var(--dkd-blue);margin:4px 0">02:47:19</h2></div><button class="dkd-btn dkd-btn-dark" style="width:100%;margin-top:10px"><i class="fa-solid fa-gem"></i> Paketi Yönet</button></div></div></section><div class="dkd-chat-list"><div class="dkd-msg"><div class="dkd-bubble">Merhaba güzelim 💙<br>Bugün nasılsın?</div></div><div class="dkd-msg dkd-me"><div class="dkd-bubble">Merhaba Anyela 💙<br>Seninle konuşmak harika!</div></div><div class="dkd-msg"><div class="dkd-bubble" style="min-width:260px"><i class="fa-solid fa-circle-play" style="font-size:28px;color:var(--dkd-blue)"></i><div class="dkd-wave"></div>0:21</div></div><div class="dkd-msg"><div class="dkd-media"><img src="assets/img/dkd_anyela_yacht_blue_04.jpg"></div></div><div class="dkd-msg"><div class="dkd-media"><img src="assets/img/dkd_anyela_yacht_gold_03.jpg"><div class="dkd-play"><span><i class="fa-solid fa-play"></i></span></div></div></div><div class="dkd-msg dkd-me"><div class="dkd-bubble">Bu video harika... 🔥<br>Daha fazlasını görmek istiyorum.</div></div></div><div class="dkd-compose"><div class="dkd-input"><input placeholder="Mesajını yaz..."/><button><i class="fa-solid fa-paper-plane"></i></button></div><div class="dkd-chat-actions"><button><i class="fa-solid fa-keyboard"></i> Yazı</button><button><i class="fa-solid fa-microphone"></i> Ses Kaydı</button><button><i class="fa-regular fa-image"></i> Görsel Yükle</button><button><i class="fa-solid fa-video"></i> Video Yükle</button></div></div><section class="dkd-drawer"><h2>Daha fazlasını mı istiyorsun?</h2><p class="dkd-small">Özel içerikler ve ayrıcalıklarla deneyimini zirveye taşı.</p><div class="dkd-two"><button class="dkd-btn dkd-btn-dark"><i class="fa-solid fa-wave-square"></i> Voice Pack Al</button><button class="dkd-btn dkd-btn-dark"><i class="fa-solid fa-video"></i> Özel Video İste</button></div><button class="dkd-btn dkd-btn-blue" style="width:100%;margin-top:10px" data-go="packages"><i class="fa-solid fa-gem"></i> Tüm Paketleri Gör</button></section>
+    <section id="dkd_admin" class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Admin panel önizleme">
+      <div class="dkd_section_header"><div><p class="dkd_section_kicker">Admin kontrol</p><h2 class="dkd_section_title">v1 manuel yönetim paneli mantığı</h2><p class="dkd_section_text">İlk sürüm otomatik AI cevap göndermez. Admin dekontu onaylar, mesajları okur, cevap/dosya teslimi yapar ve siparişi tamamlandı olarak işaretler.</p></div></div>
+      <div class="dkd_admin_grid">
+        <article class="dkd_admin_card"><div class="dkd_icon_box"><i data-lucide="receipt-text" class="dkd_large_icon"></i></div><h3>Bekleyen Dekont</h3><p>Ödeme görseli, kullanıcı adı ve paket adı tek kartta görünür.</p></article>
+        <article class="dkd_admin_card"><div class="dkd_icon_box"><i data-lucide="message-square-more" class="dkd_large_icon"></i></div><h3>Aktif Chatler</h3><p>Kullanıcı mesajları, ses kayıtları ve referans dosyaları listelenir.</p></article>
+        <article class="dkd_admin_card"><div class="dkd_icon_box"><i data-lucide="file-up" class="dkd_large_icon"></i></div><h3>Teslim Yükleme</h3><p>Ses dosyası, özel görsel veya video aynı odaya yüklenir.</p></article>
+        <article class="dkd_admin_card"><div class="dkd_icon_box"><i data-lucide="list-checks" class="dkd_large_icon"></i></div><h3>Sipariş Durumu</h3><p>Beklemede, aktif, teslim edildi veya tamamlandı durumları.</p></article>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="account">
-      <header class="dkd-header"><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn"><i class="fa-solid fa-bars"></i></button></header><h1>Hesabım / <span style="color:var(--dkd-blue)">Siparişlerim</span></h1><section class="dkd-section"><div class="dkd-profile-head"><div class="dkd-avatar"><img src="assets/img/dkd_anyela_yacht_aqua_06.jpg"></div><div><h2>Anyela Born <i class="fa-solid fa-certificate" style="color:var(--dkd-blue)"></i></h2><p class="dkd-small">anyelabornclub@gmail.com</p><p><i class="fa-solid fa-crown" style="color:var(--dkd-gold)"></i> GOLD ÜYE</p></div><button class="dkd-btn dkd-btn-dark"><i class="fa-solid fa-pen"></i> Profili Düzenle</button></div></section><section class="dkd-section"><div class="dkd-section-head"><h2>AKTİF SİPARİŞLERİM</h2><a class="dkd-link">Tümünü Gör</a></div><div class="dkd-order"><img src="assets/img/dkd_anyela_yacht_blue_04.jpg"><div><h3>GOLD Paketi</h3><p class="dkd-small">Sipariş No: #AB12345</p><p>Ödeme Alındı → Onaylandı → <b>Hazırlanıyor</b></p></div><button class="dkd-btn dkd-btn-dark">Siparişi İncele</button></div></section><section class="dkd-section"><h2>ONAY BEKLEYEN SİPARİŞ</h2><div class="dkd-order"><img src="assets/img/dkd_anyela_yacht_silver_07.jpg"><div><h3>SILVER Paketi</h3><p class="dkd-small">Ödeme onayı bekleniyor.</p></div><button class="dkd-btn dkd-btn-dark"><i class="fa-solid fa-upload"></i> Dekont Yükle</button></div></section><section class="dkd-section"><h2>TAMAMLANAN TESLİMATLARIM</h2><div class="dkd-order"><img src="assets/img/dkd_anyela_car_orange_01.jpg"><div><h3>BRONZ Paketi</h3><p class="dkd-small">08 Mayıs 2025</p></div><span class="dkd-status"><i class="fa-solid fa-check"></i> Teslim Edildi</span></div><div class="dkd-order"><img src="assets/img/dkd_anyela_car_red_02.jpg"><div><h3>SILVER Paketi</h3><p class="dkd-small">03 Mayıs 2025</p></div><span class="dkd-status"><i class="fa-solid fa-check"></i> Teslim Edildi</span></div></section><section class="dkd-section"><h2>HIZLI İŞLEMLER</h2><div class="dkd-chat-actions" style="margin-top:12px"><button data-go="packages"><i class="fa-solid fa-gem"></i> Yeni Paket Al</button><button data-go="payment"><i class="fa-regular fa-file-lines"></i> Dekont Durumu</button><button><i class="fa-regular fa-folder"></i> Dosyalarım</button><button><i class="fa-solid fa-headset"></i> Destek</button></div></section>
+    <section id="dkd_rules" class="dkd_section dkd_glass_panel dkd_section_panel" aria-label="Kurallar ve güvenlik">
+      <div class="dkd_section_header"><div><p class="dkd_section_kicker">Güven ve kurallar</p><h2 class="dkd_section_title">Satış havasını bozmadan şeffaflık</h2></div></div>
+      <div class="dkd_rule_grid">
+        <article class="dkd_rule_card"><div class="dkd_icon_box"><i data-lucide="badge-alert" class="dkd_large_icon"></i></div><h3>18+ özel sohbet</h3><p>Özel sohbet ve kişisel siparişlerde yaş sınırı ve uygunsuz içerik yasağı açıkça belirtilir.</p></article>
+        <article class="dkd_rule_card"><div class="dkd_icon_box"><i data-lucide="copyright" class="dkd_large_icon"></i></div><h3>Telif ve marka sınırı</h3><p>Marka/ünlü/üçüncü kişi içerikleri birebir kopyalanmaz; benzer tarz ve konsept dili kullanılır.</p></article>
+        <article class="dkd_rule_card"><div class="dkd_icon_box"><i data-lucide="trash-2" class="dkd_large_icon"></i></div><h3>Veri silme talebi</h3><p>Kullanıcı yüklediği verilerin silinmesini talep edebilir; admin panelde takip edilir.</p></article>
+        <article class="dkd_rule_card"><div class="dkd_icon_box"><i data-lucide="handshake" class="dkd_large_icon"></i></div><h3>Reklam etiketi</h3><p>Anyela hesabında marka paylaşımı yapılırsa reklam/iş birliği etiketi kullanılır.</p></article>
+      </div>
     </section>
 
-    <section class="dkd-screen" data-page="admin">
-      <header class="dkd-header"><div class="dkd-logo"><div class="dkd-logo-mark">AB</div><div class="dkd-logo-text"><strong>ANYELA BORN</strong><span>CLUB</span></div></div><button class="dkd-icon-btn"><i class="fa-regular fa-bell"></i></button></header><div class="dkd-hero" style="min-height:330px"><img class="dkd-hero-img" src="assets/img/dkd_anyela_yacht_green_05.jpg"><span class="dkd-neon-ring"></span><div class="dkd-hero-content"><span class="dkd-link">ADMIN PANEL</span><h1 class="dkd-title">Hoş Geldin, Admin <i class="fa-solid fa-certificate" style="font-size:25px;color:var(--dkd-blue)"></i></h1><p class="dkd-lead">Sistemdeki tüm işlemleri buradan yönetebilirsin.</p></div></div><section class="dkd-section"><div class="dkd-admin-stats"><div class="dkd-admin-stat"><i class="fa-regular fa-clock"></i><span>Bekleyen Ödemeler</span><b>12</b><p class="dkd-small">Toplam ₺24.870</p></div><div class="dkd-admin-stat"><i class="fa-regular fa-comments"></i><span>Aktif Chatler</span><b>18</b><p class="dkd-small">Şu an çevrimiçi</p></div><div class="dkd-admin-stat"><i class="fa-regular fa-envelope"></i><span>Yeni Mesajlar</span><b>27</b><p class="dkd-small">Son 24 saat</p></div><div class="dkd-admin-stat"><i class="fa-solid fa-bag-shopping"></i><span>Teslim Bekleyen</span><b>9</b><p class="dkd-small">Toplam ₺15.430</p></div></div></section><section class="dkd-section"><div class="dkd-section-head"><h2>DEKONT ONAY TALEPLERİ</h2><a class="dkd-link">TÜMÜNÜ GÖR</a></div><div class="dkd-approval"><img src="assets/img/dkd_anyela_car_red_02.jpg"><div><h3>Emre Y.</h3><p class="dkd-small">₺1.499 • SILVER Paket</p></div><div class="dkd-receipt"><i class="fa-regular fa-file-lines"></i></div><button class="dkd-approve"><i class="fa-solid fa-check"></i> Onayla</button><button class="dkd-reject"><i class="fa-solid fa-xmark"></i> Reddet</button></div><div class="dkd-approval"><img src="assets/img/dkd_anyela_yacht_gold_03.jpg"><div><h3>Merve D.</h3><p class="dkd-small">₺999 • BRONZ Paket</p></div><div class="dkd-receipt"><i class="fa-regular fa-file-lines"></i></div><button class="dkd-approve"><i class="fa-solid fa-check"></i> Onayla</button><button class="dkd-reject"><i class="fa-solid fa-xmark"></i> Reddet</button></div></section><section class="dkd-section"><h2>HIZLI İŞLEMLER</h2><div class="dkd-chat-actions"><button><i class="fa-regular fa-comment-dots"></i> Cevap Yaz</button><button><i class="fa-solid fa-microphone"></i> Ses Yükle</button><button><i class="fa-regular fa-image"></i> Görsel Teslim Et</button><button><i class="fa-solid fa-bullhorn"></i> Toplu Duyuru</button></div></section>
-    </section>
-
-    <nav class="dkd-bottom-nav"><div class="dkd-bottom-inner"><button class="dkd-nav-btn dkd-active" data-go="home"><i class="fa-solid fa-house"></i><span>Ana Sayfa</span></button><button class="dkd-nav-btn" data-go="packages"><i class="fa-solid fa-gem"></i><span>Paketler</span></button><button class="dkd-nav-btn" data-go="chat"><i class="fa-solid fa-lock"></i><span>Özel Oda</span></button><button class="dkd-nav-btn" data-go="account"><i class="fa-regular fa-user"></i><span>Hesabım</span></button><button class="dkd-nav-btn" data-go="admin"><i class="fa-solid fa-table-cells-large"></i><span>Admin</span></button></div></nav>
+    <footer class="dkd_footer">
+      <div>
+        <strong>Anyela Born Club · Miami Premium Experience</strong><br>
+        <small>Anyela Born dijital karakter deneyimidir. İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır. Ödeme, chat ve teslim sistemi v1’de manuel admin kontrolüyle ilerler.</small>
+      </div>
+      <a class="dkd_button_primary" href="#dkd_packages"><i data-lucide="sparkles" class="dkd_icon"></i>Paketi Seç</a>
+    </footer>
   </main>
 
+  <div class="dkd_mobile_sticky_cta" aria-label="Mobil hızlı işlem">
+    <a class="dkd_button_secondary" href="#dkd_payment"><i data-lucide="receipt-text" class="dkd_icon"></i>Dekont</a>
+    <a class="dkd_button_primary" href="#dkd_packages"><i data-lucide="crown" class="dkd_icon"></i>Paket Seç</a>
+  </div>
+
   <script>
-    (function(){
-      const dkd_buttons = document.querySelectorAll('[data-go]');
-      const dkd_screens = document.querySelectorAll('.dkd-screen');
-      const dkd_nav = document.querySelectorAll('.dkd-nav-btn');
-      function dkd_open(dkd_page){
-        dkd_screens.forEach(function(dkd_screen){dkd_screen.classList.toggle('dkd-active', dkd_screen.dataset.page === dkd_page);});
-        dkd_nav.forEach(function(dkd_item){dkd_item.classList.toggle('dkd-active', dkd_item.dataset.go === dkd_page);});
-        window.scrollTo({top:0,behavior:'smooth'});
+    window.addEventListener('DOMContentLoaded', function dkd_initialize_anyela_born_page(){
+      if(window.lucide && typeof window.lucide.createIcons === 'function'){
+        window.lucide.createIcons();
       }
-      dkd_buttons.forEach(function(dkd_button){
-        dkd_button.addEventListener('click',function(){dkd_open(dkd_button.dataset.go);});
-      });
-      window.dkd_open_anyela_page = dkd_open;
-    })();
+    });
   </script>
 </body>
 </html>
