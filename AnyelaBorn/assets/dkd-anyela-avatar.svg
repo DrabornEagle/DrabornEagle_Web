@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 880" role="img" aria-label="Anyela avatar placeholder">
+  <defs>
+    <radialGradient id="dkdAura" cx="50%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#18f5ff" stop-opacity="0.72"/>
+      <stop offset="44%" stop-color="#8b5cf6" stop-opacity="0.58"/>
+      <stop offset="100%" stop-color="#07111f"/>
+    </radialGradient>
+    <linearGradient id="dkdSkin" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#ffcf9f"/>
+      <stop offset="100%" stop-color="#b76e4b"/>
+    </linearGradient>
+    <linearGradient id="dkdDress" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="50%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#ff6ea7"/>
+    </linearGradient>
+    <filter id="dkdSoft" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+  <rect width="720" height="880" rx="72" fill="url(#dkdAura)"/>
+  <circle cx="170" cy="170" r="80" fill="#18f5ff" opacity="0.15" filter="url(#dkdSoft)"/>
+  <circle cx="590" cy="250" r="120" fill="#ff6ea7" opacity="0.16" filter="url(#dkdSoft)"/>
+  <path d="M206 804c12-184 96-278 160-278 82 0 150 120 168 278H206Z" fill="url(#dkdDress)"/>
+  <path d="M236 282c10-102 74-172 142-172 82 0 144 76 150 174 7 112-58 210-150 210-88 0-154-95-142-212Z" fill="#1f1327"/>
+  <ellipse cx="369" cy="300" rx="106" ry="135" fill="url(#dkdSkin)"/>
+  <path d="M268 278c24-91 94-128 156-116 55 11 92 58 104 120-58-18-122-38-260-4Z" fill="#201025"/>
+  <path d="M300 356c35 28 93 30 133 0" stroke="#5a2a35" stroke-width="11" stroke-linecap="round" fill="none" opacity="0.65"/>
+  <circle cx="326" cy="310" r="9" fill="#101827"/>
+  <circle cx="415" cy="310" r="9" fill="#101827"/>
+  <path d="M340 410c22 16 47 16 70 0" stroke="#7c2d3a" stroke-width="8" stroke-linecap="round" fill="none"/>
+  <text x="360" y="112" text-anchor="middle" font-family="Inter, Arial" font-size="42" font-weight="800" fill="#fff">ANYELA</text>
+  <text x="360" y="160" text-anchor="middle" font-family="Inter, Arial" font-size="22" font-weight="700" fill="#b7f9ff">AI CHARACTER</text>
+</svg>

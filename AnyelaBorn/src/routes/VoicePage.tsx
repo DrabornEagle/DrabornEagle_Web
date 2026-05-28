@@ -1,0 +1,3 @@
+import { dkdPackages } from '../data/dkdAnyelaData';
+import { DkdPageHero, DkdPackageCard } from '../components/DkdShared';
+export function DkdVoicePage() { const dkdVoicePackages = dkdPackages.filter((dkdPackage) => ['voice-message','voice-chat-private'].includes(dkdPackage.dkdSlug)); return <><DkdPageHero dkdKicker="Voice" dkdTitle="Yazmak istemeyen kullanıcı için sesli mesaj." dkdText="Canlı arama yerine güvenli ve kontrollü sesli mesajlaşma modeli." /><section className="dkd-section"><div className="dkd-container dkd-grid-2">{dkdVoicePackages.map((dkdPackage) => <DkdPackageCard key={dkdPackage.dkdSlug} dkdPackage={dkdPackage} />)}</div></section></>; }

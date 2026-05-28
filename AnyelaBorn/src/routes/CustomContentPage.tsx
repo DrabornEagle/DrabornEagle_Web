@@ -1,0 +1,3 @@
+import { dkdPackages } from '../data/dkdAnyelaData';
+import { DkdPageHero, DkdPackageCard } from '../components/DkdShared';
+export function DkdCustomContentPage() { const dkdCustomPackages = dkdPackages.filter((dkdPackage) => dkdPackage.dkdGroup === 'custom'); return <><DkdPageHero dkdKicker="Özel içerik" dkdTitle="Kıyafet, tema veya fikir gönder." dkdText="Anyela için özel görsel ve video konsepti hazırlansın." /><section className="dkd-section"><div className="dkd-container dkd-grid-4">{dkdCustomPackages.map((dkdPackage) => <DkdPackageCard key={dkdPackage.dkdSlug} dkdPackage={dkdPackage} />)}</div></section></>; }
