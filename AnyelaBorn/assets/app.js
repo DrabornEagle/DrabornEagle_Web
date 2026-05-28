@@ -1,423 +1,434 @@
 
-(() => {
-  const h = React.createElement;
-  const IMG = '/AnyelaBorn/assets/images/';
+(function () {
+  const dkd_create_element = React.createElement;
+  const dkd_image_base = '/AnyelaBorn/assets/images/';
 
   const dkd_images = {
-    hero: IMG + 'dkd_anyela_yacht_gold_close.jpg',
-    yachtFull: IMG + 'dkd_anyela_yacht_gold_full.jpg',
-    yachtGreen: IMG + 'dkd_anyela_yacht_green.jpg',
-    yachtNavy: IMG + 'dkd_anyela_yacht_navy.jpg',
-    carBurgundy: IMG + 'dkd_anyela_car_burgundy.jpg',
-    lamboBlack: IMG + 'dkd_anyela_lambo_black.jpg',
-    poolWhite: IMG + 'dkd_anyela_pool_white.jpg',
-    gallery: IMG + 'dkd_anyela_yacht_gallery.jpg',
+    hero: dkd_image_base + 'dkd_anyela_yacht_gold_close.jpg',
+    yachtFull: dkd_image_base + 'dkd_anyela_yacht_gold_full.jpg',
+    yachtGreen: dkd_image_base + 'dkd_anyela_yacht_green.jpg',
+    yachtNavy: dkd_image_base + 'dkd_anyela_yacht_navy.jpg',
+    carBurgundy: dkd_image_base + 'dkd_anyela_car_burgundy.jpg',
+    lamboBlack: dkd_image_base + 'dkd_anyela_lambo_black.jpg',
+    poolWhite: dkd_image_base + 'dkd_anyela_pool_white.jpg',
+    gallery: dkd_image_base + 'dkd_anyela_yacht_gallery.jpg'
+  };
+
+  const dkd_icon_map = {
+    home: '⌂', chat: '◌', gift: '▣', ad: '◒', rocket: '➤', menu: '☰', user: '◎', back: '‹',
+    sparkle: '✦', shield: '◆', lock: '▣', check: '✓', bot: '◈', adult: '18+', card: '▰', file: '▤',
+    upload: '⇧', mic: '◉', wave: '▥', play: '▶', camera: '▢', video: '▻', hanger: '♢', phone: '☎',
+    crown: '♛', star: '★', bag: '▣', mail: '✉', heart: '♡', copy: '⧉', target: '◎', chart: '↗', help: '?',
+    whatsapp: '☘', instagram: '◍', image: '▧', magic: '✦', cake: '✹', palette: '◐', theme: '◈', brand: 'B'
   };
 
   const dkd_routes = [
-    { key: 'home', href: '/AnyelaBorn/', label: 'Ana Sayfa', icon: 'fa-house' },
-    { key: 'chat', href: '/AnyelaBorn/chat/', label: 'Sohbet', icon: 'fa-comments' },
-    { key: 'packages', href: '/AnyelaBorn/packages/', label: 'Paketler', icon: 'fa-gift' },
-    { key: 'ads', href: '/AnyelaBorn/ads/', label: 'Reklam', icon: 'fa-bullhorn' },
-    { key: 'payment', href: '/AnyelaBorn/payment/', label: 'Başla', icon: 'fa-rocket' },
+    { key: 'home', href: '/AnyelaBorn/', label: 'Ana Sayfa', icon: 'home' },
+    { key: 'chat', href: '/AnyelaBorn/chat/', label: 'Sohbet', icon: 'chat' },
+    { key: 'packages', href: '/AnyelaBorn/packages/', label: 'Paketler', icon: 'gift' },
+    { key: 'ads', href: '/AnyelaBorn/ads/', label: 'Reklam', icon: 'ad' },
+    { key: 'payment', href: '/AnyelaBorn/payment/', label: 'Başla', icon: 'rocket' }
   ];
 
-  const dkd_fanPackages = [
-    { title: 'Anyela Intro', detail: 'Kısa tanışma ve kişisel video selamı.', price: '₺299', icon: 'fa-comment-dots', tone: 'violet' },
-    { title: 'Private Chat', detail: '30 dakika boyunca özel yazılı sohbet.', price: '₺1.199', icon: 'fa-comments', tone: 'rose', badge: 'En Popüler' },
-    { title: 'Voice Message', detail: 'Kişiye özel sesli mesajın Anyela’dan.', price: '₺399', icon: 'fa-wave-square', tone: 'blue' },
-    { title: 'Voice Chat Private', detail: '15 dakika özel sesli mesajlaşma.', price: '₺1.699', icon: 'fa-phone', tone: 'teal' },
-    { title: 'Style Try-On', detail: 'Anyela senin için kıyafet konsepti denesin.', price: '₺799', icon: 'fa-shirt', tone: 'orange' },
-    { title: 'Photo Set', detail: '5 adet kişiye özel fotoğraf seti.', price: '₺649', icon: 'fa-image', tone: 'violet' },
-    { title: 'Talking Video', detail: 'Kişiye özel kısa konuşma videosu.', price: '₺849', icon: 'fa-video', tone: 'blue' },
+  const dkd_fan_packages = [
+    { title: 'Anyela Intro', detail: 'Kısa tanışma ve kişisel video selamı.', price: '₺299', icon: 'chat', tone: 'violet' },
+    { title: 'Private Chat', detail: '30 dakika boyunca özel yazılı sohbet.', price: '₺1.199', icon: 'lock', tone: 'rose', badge: 'En Popüler' },
+    { title: 'Voice Message', detail: 'Kişiye özel sesli mesajın Anyela’dan.', price: '₺399', icon: 'wave', tone: 'blue' },
+    { title: 'Voice Chat Private', detail: '15 dakika özel sesli görüşme.', price: '₺1.699', icon: 'phone', tone: 'teal' },
+    { title: 'Style Try-On', detail: 'Anyela senin için kıyafet konsepti denesin.', price: '₺799', icon: 'hanger', tone: 'orange' },
+    { title: 'Photo Set', detail: '5 adet kişiye özel fotoğraf seti.', price: '₺649', icon: 'image', tone: 'violet' },
+    { title: 'Talking Video', detail: 'Kişiye özel 1 dakikalık konuşma videosu.', price: '₺849', icon: 'video', tone: 'blue' }
   ];
 
-  const dkd_brandPackages = [
-    { title: 'Reklam Mini', detail: 'Story paylaşımı ve hızlı görünürlük.', price: '₺4.999 /ay', icon: 'fa-bullhorn', tone: 'violet' },
-    { title: 'Reklam Standart', detail: 'Story + Feed paylaşımı ve rapor.', price: '₺9.999 /ay', icon: 'fa-bullhorn', tone: 'blue' },
-    { title: 'Reklam Pro', detail: 'Story + Feed + Reels kampanyası.', price: '₺19.999 /ay', icon: 'fa-crown', tone: 'gold' },
+  const dkd_brand_packages = [
+    { title: 'Reklam Mini', detail: 'Story paylaşımı ve hızlı görünürlük.', price: '₺4.999 /ay', icon: 'ad', tone: 'violet' },
+    { title: 'Reklam Standart', detail: 'Story + Feed paylaşımı ve rapor.', price: '₺9.999 /ay', icon: 'ad', tone: 'blue' },
+    { title: 'Reklam Pro', detail: 'Story + Feed + Reels kampanyası.', price: '₺19.999 /ay', icon: 'crown', tone: 'gold' }
   ];
 
-  function DkdIcon({ name, className = '' }) {
-    return h('i', { className: `fa-solid ${name} ${className}`, 'aria-hidden': 'true' });
+  const dkd_ad_packages = [
+    { title: 'Reklam Mini', icon: 'mail', tone: 'violet', detail: 'Hızlı görünürlük için ideal paket.', points: ['1 içerik (fotoğraf veya video)', '1 platform paylaşım', 'AI destekli içerik', '7 gün kullanım hakkı'] },
+    { title: 'Reklam Standart', icon: 'target', tone: 'rose', badge: 'Popüler', detail: 'Dengeli içerik ve daha fazla etki.', points: ['2 içerik', '1–2 platform paylaşım', '14 gün kullanım hakkı', 'Performans raporu'] },
+    { title: 'Reklam Pro', icon: 'image', tone: 'blue', detail: 'Geniş kapsamlı içerik ve maksimum etki.', points: ['3–4 içerik', 'Tüm platformlarda paylaşım', '30 gün kullanım hakkı', 'Reels desteği'] },
+    { title: 'Marka Yüzü', icon: 'crown', tone: 'green', detail: 'Uzun vadeli iş birliği ve marka temsilciliği.', points: ['Aylık içerik planı', 'Sürekli paylaşım desteği', 'Kampanya & çekim', 'Aylık rapor'] }
+  ];
+
+  function DkdIcon(dkd_props) {
+    const dkd_name = dkd_props && dkd_props.name ? dkd_props.name : 'sparkle';
+    const dkd_class_name = dkd_props && dkd_props.className ? dkd_props.className : '';
+    return dkd_create_element('span', { className: 'dkd-icon ' + dkd_class_name, 'aria-hidden': 'true' }, dkd_icon_map[dkd_name] || '✦');
   }
 
   function DkdBrand() {
-    return h('a', { className: 'dkd-brand', href: '/AnyelaBorn/' },
-      h('span', { className: 'dkd-brand-mark' }, 'AB'),
-      h('span', { className: 'dkd-brand-text' }, 'Anyela Born Club')
+    return dkd_create_element('a', { className: 'dkd-brand', href: '/AnyelaBorn/' },
+      dkd_create_element('span', { className: 'dkd-brand-mark' }, 'AB'),
+      dkd_create_element('span', { className: 'dkd-brand-text' }, 'Anyela Born Club')
     );
   }
 
-  function DkdHeader({ back = false }) {
-    return h('header', { className: 'dkd-header' },
-      h('div', { className: 'dkd-header-inner' },
-        back ? h('a', { className: 'dkd-back', href: '/AnyelaBorn/' }, DkdIcon({ name: 'fa-chevron-left' })) : null,
+  function DkdHeader(dkd_props) {
+    const dkd_back = dkd_props && dkd_props.back;
+    return dkd_create_element('header', { className: 'dkd-header' },
+      dkd_create_element('div', { className: 'dkd-header-inner' },
+        dkd_back ? dkd_create_element('a', { className: 'dkd-back', href: '/AnyelaBorn/', 'aria-label': 'Geri' }, DkdIcon({ name: 'back' })) : null,
         DkdBrand(),
-        h('div', { className: 'dkd-header-actions' },
-          h('button', { className: 'dkd-menu', 'aria-label': 'Menü' }, DkdIcon({ name: 'fa-bars' })),
-          h('a', { className: 'dkd-login', href: '/AnyelaBorn/payment/' }, 'Giriş Yap')
+        dkd_create_element('div', { className: 'dkd-header-actions' },
+          dkd_create_element('button', { className: 'dkd-menu', 'aria-label': 'Menü' }, DkdIcon({ name: 'menu' })),
+          dkd_create_element('a', { className: 'dkd-login', href: '/AnyelaBorn/payment/' }, 'Giriş Yap')
         )
       )
     );
   }
 
-  function DkdBottomNav({ active }) {
-    return h('nav', { className: 'dkd-bottom-nav', 'aria-label': 'Mobil menü' },
-      dkd_routes.map(route => h('a', { key: route.key, href: route.href, className: `dkd-bottom-item ${active === route.key ? 'dkd-active' : ''}` },
-        DkdIcon({ name: route.icon }),
-        h('span', null, route.label)
-      ))
+  function DkdBottomNav(dkd_props) {
+    const dkd_active = dkd_props.active;
+    return dkd_create_element('nav', { className: 'dkd-bottom-nav', 'aria-label': 'Mobil menü' },
+      dkd_routes.map(function (dkd_route) {
+        return dkd_create_element('a', { key: dkd_route.key, href: dkd_route.href, className: 'dkd-bottom-item ' + (dkd_active === dkd_route.key ? 'dkd-active' : '') },
+          DkdIcon({ name: dkd_route.icon }), dkd_create_element('span', null, dkd_route.label)
+        );
+      })
     );
   }
 
-  function DkdPage({ active, children, back = false }) {
-    return h(React.Fragment, null,
-      DkdHeader({ back }),
-      h('main', { className: 'dkd-main' }, children),
-      DkdBottomNav({ active })
+  function DkdPage(dkd_props) {
+    return dkd_create_element(React.Fragment, null,
+      DkdHeader({ back: dkd_props.back }),
+      dkd_create_element('main', { className: 'dkd-main' }, dkd_props.children),
+      DkdBottomNav({ active: dkd_props.active })
     );
   }
 
-  function DkdPill({ icon, children, tone = '' }) {
-    return h('span', { className: `dkd-pill ${tone}` }, icon ? DkdIcon({ name: icon }) : null, children);
+  function DkdPill(dkd_props) {
+    return dkd_create_element('span', { className: 'dkd-pill ' + (dkd_props.tone || '') },
+      dkd_props.icon ? DkdIcon({ name: dkd_props.icon }) : null,
+      dkd_props.children
+    );
   }
 
-  function DkdHeroPortrait({ image = dkd_images.hero, mode = 'default' }) {
-    return h('div', { className: `dkd-portrait dkd-portrait-${mode}` },
-      h('div', { className: 'dkd-portrait-ring' }),
-      h('img', { src: image, alt: 'Anyela Born Club karakter görseli', loading: 'eager' }),
-      h('div', { className: 'dkd-portrait-badge' },
-        DkdIcon({ name: 'fa-shield-heart' }),
-        h('strong', null, '%100 Gizlilik'),
-        h('span', null, 'Güvenli ve özel süreç')
+  function DkdPortrait(dkd_props) {
+    const dkd_image = dkd_props.image || dkd_images.hero;
+    const dkd_mode = dkd_props.mode || 'hero';
+    return dkd_create_element('div', { className: 'dkd-portrait dkd-portrait-' + dkd_mode },
+      dkd_create_element('div', { className: 'dkd-portrait-orbit dkd-orbit-one' }),
+      dkd_create_element('div', { className: 'dkd-portrait-orbit dkd-orbit-two' }),
+      dkd_create_element('img', { src: dkd_image, alt: 'Anyela Born görseli', loading: 'eager' }),
+      dkd_props.badge === false ? null : dkd_create_element('div', { className: 'dkd-portrait-badge' },
+        DkdIcon({ name: 'shield' }),
+        dkd_create_element('strong', null, '%100 Gizlilik'),
+        dkd_create_element('span', null, 'Güvenli ve özel süreç')
       )
     );
   }
 
-  function DkdSectionTitle({ icon, title, sub }) {
-    return h('div', { className: 'dkd-section-title' },
-      h('h2', null, icon ? DkdIcon({ name: icon }) : null, title),
-      sub ? h('p', null, sub) : null
+  function DkdSectionTitle(dkd_props) {
+    return dkd_create_element('div', { className: 'dkd-section-title' },
+      dkd_create_element('h2', null, dkd_props.icon ? DkdIcon({ name: dkd_props.icon }) : null, dkd_props.title),
+      dkd_props.sub ? dkd_create_element('p', null, dkd_props.sub) : null
     );
   }
 
-  function DkdStepCard({ no, icon, title, text, tone }) {
-    return h('article', { className: `dkd-step-card ${tone || ''}` },
-      h('div', { className: 'dkd-step-icon' }, DkdIcon({ name: icon })),
-      h('b', { className: 'dkd-step-no' }, no),
-      h('h3', null, title),
-      h('p', null, text)
+  function DkdStepCard(dkd_props) {
+    return dkd_create_element('article', { className: 'dkd-step-card ' + (dkd_props.tone || '') },
+      dkd_create_element('span', { className: 'dkd-step-no' }, dkd_props.no),
+      dkd_create_element('div', { className: 'dkd-step-icon' }, DkdIcon({ name: dkd_props.icon })),
+      dkd_create_element('h3', null, dkd_props.title),
+      dkd_create_element('p', null, dkd_props.text)
     );
   }
 
   function DkdTrustRibbon() {
-    const items = [
-      ['fa-robot', 'AI karakter', 'Gerçekçi etkileşim'],
-      ['fa-circle-18-plus', '18+ içerik', 'Yalnızca yetişkinler'],
-      ['fa-lock', 'Gizli süreç', 'Tam gizlilik garantisi'],
-      ['fa-shield-check', 'Manuel ödeme onayı', 'Her ödeme kontrol edilir'],
+    const dkd_items = [
+      ['bot', 'AI karakter', 'Gerçekçi etkileşim'],
+      ['adult', '18+ içerik', 'Yalnızca yetişkinler'],
+      ['lock', 'Gizli süreç', 'Tam gizlilik garantisi'],
+      ['shield', 'Manuel ödeme onayı', 'Her ödeme kontrol edilir']
     ];
-    return h('section', { className: 'dkd-trust-ribbon' },
-      items.map((it, idx) => h('div', { key: it[1], className: 'dkd-trust-item' },
-        h('span', { className: `dkd-trust-icon dkd-trust-${idx}` }, DkdIcon({ name: it[0] })),
-        h('span', null, h('strong', null, it[1]), h('small', null, it[2]))
-      ))
+    return dkd_create_element('section', { className: 'dkd-trust-ribbon' }, dkd_items.map(function (dkd_item, dkd_index) {
+      return dkd_create_element('div', { key: dkd_item[1], className: 'dkd-trust-item dkd-trust-' + dkd_index },
+        dkd_create_element('span', { className: 'dkd-trust-icon' }, DkdIcon({ name: dkd_item[0] })),
+        dkd_create_element('span', null, dkd_create_element('strong', null, dkd_item[1]), dkd_create_element('small', null, dkd_item[2]))
+      );
+    }));
+  }
+
+  function DkdFeatureCard(dkd_props) {
+    return dkd_create_element('article', { className: 'dkd-feature-card ' + (dkd_props.tone || '') },
+      dkd_create_element('div', { className: 'dkd-feature-image' },
+        dkd_create_element('img', { src: dkd_props.image, alt: dkd_props.title, loading: 'lazy' }),
+        dkd_create_element('span', { className: 'dkd-feature-icon' }, DkdIcon({ name: dkd_props.icon }))
+      ),
+      dkd_create_element('h3', null, dkd_props.title),
+      dkd_create_element('p', null, dkd_props.text),
+      dkd_props.link ? dkd_create_element('a', { href: dkd_props.link }, 'Detayları Gör ', DkdIcon({ name: 'rocket' })) : null
     );
   }
 
-  function DkdFeatureCard({ image, icon, title, text, tone }) {
-    return h('article', { className: `dkd-feature-card ${tone || ''}` },
-      h('div', { className: 'dkd-feature-image' },
-        h('img', { src: image, alt: title, loading: 'lazy' }),
-        h('span', { className: 'dkd-feature-icon' }, DkdIcon({ name: icon }))
-      ),
-      h('h3', null, title),
-      h('p', null, text)
+  function DkdPackageCard(dkd_props) {
+    const dkd_item = dkd_props.item;
+    return dkd_create_element('article', { className: 'dkd-package-card ' + dkd_item.tone + ' ' + (dkd_item.badge ? 'dkd-popular' : '') },
+      dkd_item.badge ? dkd_create_element('span', { className: 'dkd-badge' }, DkdIcon({ name: 'star' }), dkd_item.badge) : null,
+      dkd_create_element('div', { className: 'dkd-package-icon' }, DkdIcon({ name: dkd_item.icon })),
+      dkd_create_element('h3', null, dkd_item.title),
+      dkd_create_element('p', null, dkd_item.detail),
+      dkd_create_element('strong', { className: 'dkd-price' }, dkd_item.price),
+      dkd_create_element('a', { className: 'dkd-package-btn', href: '/AnyelaBorn/payment/' }, 'Paketi Seç')
+    );
+  }
+
+  function DkdMiniTrust(dkd_props) {
+    return dkd_create_element('div', { className: 'dkd-mini-trust ' + (dkd_props.tone || '') },
+      DkdIcon({ name: dkd_props.icon || 'shield' }),
+      dkd_create_element('strong', null, dkd_props.title),
+      dkd_create_element('span', null, dkd_props.text)
     );
   }
 
   function DkdHomePage() {
-    const steps = [
-      ['1', 'fa-bag-shopping', 'Paket seç', 'İhtiyacına uygun paketi seç.', 'violet'],
-      ['2', 'fa-credit-card', 'Ödeme yap', 'Banka havalesi ile ödemeni yap.', 'rose'],
-      ['3', 'fa-file-arrow-up', 'Dekont gönder', 'Dekontunu sistem üzerinden ilet.', 'blue'],
-      ['4', 'fa-rocket', 'Deneyimi başlat', 'Onay sonrası Anyela sadece seninle.', 'green'],
+    const dkd_steps = [
+      ['1', 'bag', 'Paket seç', 'İhtiyacına uygun paketi seç.', 'violet'],
+      ['2', 'card', 'Ödeme yap', 'Banka havalesi ile ödemeni yap.', 'rose'],
+      ['3', 'file', 'Dekont gönder', 'Dekontunu sistem üzerinden ilet.', 'blue'],
+      ['4', 'rocket', 'Deneyimi başlat', 'Onay sonrası Anyela sadece seninle.', 'green']
     ];
-    return DkdPage({ active: 'home', children: h(React.Fragment, null,
-      h('section', { className: 'dkd-hero' },
-        h('div', { className: 'dkd-hero-copy' },
-          DkdPill({ icon: 'fa-sparkles', children: 'Anyela Born • AI Influencer' }),
-          h('h1', null, 'Anyela Born ile ', h('span', null, 'özel AI karakter'), ' deneyimine katıl'),
-          h('p', null, 'Anyela, sizinle sohbet eden, sesli mesajlar gönderen, size özel görsel ve videolar hazırlayan sanal AI influencer’dır. Markanız için güçlü bir tanıtım yüzüdür.'),
-          h('div', { className: 'dkd-hero-actions' },
-            h('a', { className: 'dkd-btn dkd-btn-primary', href: '/AnyelaBorn/chat/' }, DkdIcon({ name: 'fa-comment-dots' }), h('span', null, 'Sohbete Başla', h('small', null, 'Hemen konuşmaya başla'))),
-            h('a', { className: 'dkd-btn dkd-btn-secondary', href: '/AnyelaBorn/packages/' }, DkdIcon({ name: 'fa-gift' }), h('span', null, 'Paketleri Gör', h('small', null, 'Tüm paketleri incele')))
+    return DkdPage({ active: 'home', children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-hero dkd-wide-hero' },
+        dkd_create_element('div', { className: 'dkd-hero-copy' },
+          DkdPill({ icon: 'sparkle', children: 'Anyela Born • AI Influencer' }),
+          dkd_create_element('h1', null, 'Anyela Born ile ', dkd_create_element('span', null, 'özel AI karakter'), ' deneyimine katıl'),
+          dkd_create_element('p', null, 'Anyela, sizinle sohbet eden, sesli mesajlar gönderen, size özel görsel ve videolar hazırlayan sanal AI influencer’dır. Markanız için güçlü bir tanıtım yüzüdür.'),
+          dkd_create_element('div', { className: 'dkd-hero-actions' },
+            dkd_create_element('a', { className: 'dkd-btn dkd-btn-primary', href: '/AnyelaBorn/chat/' }, DkdIcon({ name: 'chat' }), dkd_create_element('span', null, 'Sohbete Başla', dkd_create_element('small', null, 'Hemen konuşmaya başla'))),
+            dkd_create_element('a', { className: 'dkd-btn dkd-btn-secondary', href: '/AnyelaBorn/packages/' }, DkdIcon({ name: 'gift' }), dkd_create_element('span', null, 'Paketleri Gör', dkd_create_element('small', null, 'Tüm paketleri incele')))
           )
         ),
-        DkdHeroPortrait({ image: dkd_images.yachtGold || dkd_images.hero })
+        DkdPortrait({ image: dkd_images.hero })
       ),
       DkdTrustRibbon(),
-      DkdSectionTitle({ icon: 'fa-wand-magic-sparkles', title: 'Nasıl Çalışır?' }),
-      h('section', { className: 'dkd-steps-grid' }, steps.map(step => DkdStepCard({ no: step[0], icon: step[1], title: step[2], text: step[3], tone: step[4] }))),
-      DkdSectionTitle({ icon: 'fa-star', title: 'Öne Çıkan Deneyimler' }),
-      h('section', { className: 'dkd-feature-grid' },
-        DkdFeatureCard({ image: dkd_images.carBurgundy, icon: 'fa-comment-dots', title: 'Yazılı Sohbet', text: 'Anyela ile dilediğin zaman yazış, kendini özel hisset.', tone: 'violet' }),
-        DkdFeatureCard({ image: dkd_images.lamboBlack, icon: 'fa-volume-high', title: 'Sesli Mesaj', text: 'Kişiye özel sesli mesajlar al, sesini her yerde hisset.', tone: 'rose' }),
-        DkdFeatureCard({ image: dkd_images.yachtGreen, icon: 'fa-camera', title: 'Özel Görsel / Video', text: 'Sana özel görsel ve videolarla unutulmaz anlar yaşa.', tone: 'blue' }),
-        DkdFeatureCard({ image: dkd_images.yachtNavy, icon: 'fa-bullhorn', title: 'Anyela Reklam Yüzünüz Olsun', text: 'Markanızı Anyela’nın gücüyle binlere ulaştırın.', tone: 'green' })
+      DkdSectionTitle({ icon: 'sparkle', title: 'Nasıl Çalışır?' }),
+      dkd_create_element('section', { className: 'dkd-steps-grid dkd-four-grid' }, dkd_steps.map(function (dkd_step) {
+        return DkdStepCard({ key: dkd_step[0], no: dkd_step[0], icon: dkd_step[1], title: dkd_step[2], text: dkd_step[3], tone: dkd_step[4] });
+      })),
+      DkdSectionTitle({ icon: 'star', title: 'Öne Çıkan Deneyimler' }),
+      dkd_create_element('section', { className: 'dkd-feature-grid dkd-four-grid' },
+        DkdFeatureCard({ image: dkd_images.carBurgundy, icon: 'chat', title: 'Yazılı Sohbet', text: 'Anyela ile dilediğin zaman yazış, kendini özel hisset.', tone: 'violet', link: '/AnyelaBorn/chat/' }),
+        DkdFeatureCard({ image: dkd_images.lamboBlack, icon: 'wave', title: 'Sesli Mesaj', text: 'Kişiye özel sesli mesajlar al, sesini her yerde hisset.', tone: 'rose', link: '/AnyelaBorn/voice/' }),
+        DkdFeatureCard({ image: dkd_images.yachtGreen, icon: 'camera', title: 'Özel Görsel / Video', text: 'Sana özel görsel ve videolarla unutulmaz anlar yaşa.', tone: 'blue', link: '/AnyelaBorn/custom/' }),
+        DkdFeatureCard({ image: dkd_images.yachtNavy, icon: 'ad', title: 'Anyela Reklam Yüzünüz Olsun', text: 'Markanızı Anyela’nın gücüyle binlere ulaştırın.', tone: 'green', link: '/AnyelaBorn/ads/' })
       ),
-      h('section', { className: 'dkd-testimonial' },
-        h('div', { className: 'dkd-quote' }, '“'),
-        h('img', { src: dkd_images.poolWhite, alt: 'Anyela Born örnek görsel' }),
-        h('div', null,
-          h('div', { className: 'dkd-stars' }, '★★★★★'),
-          h('p', null, 'Anyela deneyimi düzenli, net ve premium hissettiriyor. Paketler anlaşılır, süreç güvenli, teslimler kişiye özel.'),
-          h('strong', null, 'Doğrulanmış Kullanıcı')
+      dkd_create_element('section', { className: 'dkd-testimonial' },
+        dkd_create_element('div', { className: 'dkd-quote' }, '“'),
+        dkd_create_element('img', { src: dkd_images.poolWhite, alt: 'Kullanıcı görseli' }),
+        dkd_create_element('div', { className: 'dkd-testimonial-copy' },
+          dkd_create_element('div', { className: 'dkd-stars' }, '★★★★★'),
+          dkd_create_element('p', null, 'Anyela ile tanıştığımdan beri her günüm daha özel. İlgisi, enerjisi ve mesajları müthiş.'),
+          dkd_create_element('strong', null, 'Doğrulanmış Kullanıcı')
         ),
-        h('aside', null, h('b', null, '4.9/5'), h('span', null, 'Kullanıcı Puanı'))
+        dkd_create_element('aside', null, dkd_create_element('b', null, '4.9/5'), dkd_create_element('span', null, 'Kullanıcı Puanı'))
       )
     ) });
-  }
-
-  function DkdPackageCard({ item, size = 'normal' }) {
-    return h('article', { className: `dkd-package-card ${item.tone || ''} ${item.badge ? 'dkd-popular' : ''} ${size}` },
-      item.badge ? h('span', { className: 'dkd-badge' }, DkdIcon({ name: 'fa-star' }), item.badge) : null,
-      h('div', { className: 'dkd-package-icon' }, DkdIcon({ name: item.icon })),
-      h('h3', null, item.title),
-      h('p', null, item.detail),
-      h('strong', { className: 'dkd-price' }, item.price),
-      h('a', { className: 'dkd-package-btn', href: '/AnyelaBorn/payment/' }, 'Paketi Seç')
-    );
   }
 
   function DkdPackagesPage() {
-    return DkdPage({ active: 'packages', back: true, children: h(React.Fragment, null,
-      h('section', { className: 'dkd-page-hero dkd-simple' },
-        h('div', null, h('h1', null, 'Paketler'), h('p', null, 'Sana en uygun Anyela deneyimini seç. Her paket net, anlaşılır ve manuel onaylıdır.')),
-        h('div', { className: 'dkd-mini-trust' }, DkdIcon({ name: 'fa-shield-check' }), h('strong', null, '%100 Gizlilik'), h('span', null, 'Güvenli ve özel süreç'))
+    return DkdPage({ active: 'packages', back: true, children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-page-title-row' },
+        dkd_create_element('div', null, dkd_create_element('h1', null, 'Paketler'), dkd_create_element('p', null, 'Sana en uygun Anyela deneyimini seç')),
+        DkdMiniTrust({ icon: 'shield', title: '%100 Gizlilik', text: 'Güvenli ve özel süreç' })
       ),
-      h('section', { className: 'dkd-tabs' },
-        h('a', { className: 'dkd-tab dkd-tab-active', href: '#fan' }, DkdIcon({ name: 'fa-heart' }), 'Fan Paketleri'),
-        h('a', { className: 'dkd-tab', href: '#content' }, DkdIcon({ name: 'fa-clapperboard' }), 'Özel İçerik'),
-        h('a', { className: 'dkd-tab', href: '#brand' }, DkdIcon({ name: 'fa-bullhorn' }), 'Marka Paketleri')
+      dkd_create_element('section', { className: 'dkd-tabs' },
+        dkd_create_element('a', { className: 'dkd-tab dkd-active', href: '#fan' }, DkdIcon({ name: 'heart' }), 'Fan Paketleri'),
+        dkd_create_element('a', { className: 'dkd-tab', href: '#custom' }, DkdIcon({ name: 'video' }), 'Özel İçerik'),
+        dkd_create_element('a', { className: 'dkd-tab', href: '#brand' }, DkdIcon({ name: 'ad' }), 'Marka Paketleri')
       ),
-      DkdSectionTitle({ icon: 'fa-sparkles', title: 'Fan Paketleri', sub: 'Anyela ile daha yakın ve özel deneyimler' }),
-      h('section', { id: 'fan', className: 'dkd-packages-grid' }, dkd_fanPackages.map(pkg => DkdPackageCard({ item: pkg }))),
-      DkdSectionTitle({ icon: 'fa-bullhorn', title: 'Marka Paketleri', sub: 'Markanızı Anyela ile binlere ulaştırın' }),
-      h('section', { id: 'brand', className: 'dkd-brand-package-grid' }, dkd_brandPackages.map(pkg => DkdPackageCard({ item: pkg, size: 'brand' }))),
-      h('section', { className: 'dkd-benefit-strip' },
-        [['fa-shield-halved','Güvenli Ödeme','Manuel kontrol'], ['fa-shield-check','%100 Gizlilik','Gizli süreç'], ['fa-headset','7/24 Destek','Hızlı dönüş'], ['fa-bolt','Hızlı Teslimat','Net süreç']].map(row => h('div', { key: row[1] }, DkdIcon({ name: row[0] }), h('strong', null, row[1]), h('span', null, row[2])))
+      DkdSectionTitle({ icon: 'sparkle', title: 'Fan Paketleri', sub: 'Anyela ile daha yakın ve özel deneyimler' }),
+      dkd_create_element('section', { id: 'fan', className: 'dkd-package-grid dkd-fan-grid' }, dkd_fan_packages.map(function (dkd_item) { return DkdPackageCard({ key: dkd_item.title, item: dkd_item }); })),
+      DkdSectionTitle({ icon: 'ad', title: 'Marka Paketleri', sub: 'Markanızı Anyela ile binlere ulaştırın' }),
+      dkd_create_element('section', { id: 'brand', className: 'dkd-package-grid dkd-brand-grid' }, dkd_brand_packages.map(function (dkd_item) { return DkdPackageCard({ key: dkd_item.title, item: dkd_item }); })),
+      dkd_create_element('section', { className: 'dkd-info-strip' },
+        DkdMiniTrust({ icon: 'shield', title: 'Güvenli Ödeme', text: 'Manuel onaylı süreç' }),
+        DkdMiniTrust({ icon: 'check', title: '%100 Gizlilik', text: 'Tüm süreç gizlidir' }),
+        DkdMiniTrust({ icon: 'chat', title: '7/24 Destek', text: 'Soruların için buradayız' }),
+        DkdMiniTrust({ icon: 'rocket', title: 'Hızlı Teslimat', text: 'En kısa sürede teslim' })
       )
-    ) });
+    ), back: true });
   }
 
-  function DkdChatBubble({ from = 'user', children, time }) {
-    return h('div', { className: `dkd-chat-row ${from}` },
-      from === 'anyela' ? h('img', { className: 'dkd-chat-avatar', src: dkd_images.carBurgundy, alt: 'Anyela avatar' }) : null,
-      h('div', { className: 'dkd-bubble' }, children, h('small', null, time, from === 'user' ? ' ✓✓' : ''))
+  function DkdChatBubble(dkd_props) {
+    return dkd_create_element('div', { className: 'dkd-chat-row ' + (dkd_props.user ? 'dkd-user' : 'dkd-anyela') },
+      dkd_props.user ? null : dkd_create_element('img', { src: dkd_images.hero, alt: 'Anyela' }),
+      dkd_create_element('div', { className: 'dkd-message' }, dkd_create_element('p', null, dkd_props.text), dkd_create_element('small', null, dkd_props.time || '14:32'))
     );
   }
 
   function DkdChatPage() {
-    return DkdPage({ active: 'chat', children: h(React.Fragment, null,
-      h('section', { className: 'dkd-page-hero dkd-with-portrait' },
-        h('div', null, DkdPill({ icon: 'fa-comments', children: 'Anyela Born • Sohbet' }), h('h1', null, 'Sohbet'), h('p', null, 'Anyela ile özel yazılı sohbet deneyimi')),
-        DkdHeroPortrait({ image: dkd_images.hero, mode: 'small' })
+    return DkdPage({ active: 'chat', children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-page-hero dkd-chat-hero' },
+        dkd_create_element('div', null, DkdPill({ icon: 'chat', children: 'Anyela Born • Sohbet' }), dkd_create_element('h1', null, 'Sohbet'), dkd_create_element('p', null, 'Anyela ile özel yazılı sohbet deneyimi')),
+        DkdPortrait({ image: dkd_images.hero, badge: false })
       ),
-      h('section', { className: 'dkd-chat-panel' },
-        h('div', { className: 'dkd-chat-head' },
-          h('img', { src: dkd_images.carBurgundy, alt: 'Anyela avatar' }),
-          h('div', null, h('h3', null, 'Anyela ', h('span', null, '✓')), h('p', null, '● Aktif')),
-          h('span', { className: 'dkd-session' }, DkdIcon({ name: 'fa-clock' }), '30 Dk. Oturum')
+      dkd_create_element('section', { className: 'dkd-chat-panel' },
+        dkd_create_element('header', null,
+          dkd_create_element('div', { className: 'dkd-chat-person' }, dkd_create_element('img', { src: dkd_images.hero, alt: 'Anyela' }), dkd_create_element('span', null, dkd_create_element('strong', null, 'Anyela'), dkd_create_element('small', null, '● Aktif'))),
+          dkd_create_element('span', { className: 'dkd-session' }, DkdIcon({ name: 'card' }), '30 Dk. Oturum')
         ),
-        h('div', { className: 'dkd-date' }, 'Bugün'),
-        DkdChatBubble({ from: 'anyela', time: '14:32', children: h(React.Fragment, null, 'Merhaba ✨', h('br'), 'Bugün nasılsın?') }),
-        DkdChatBubble({ from: 'user', time: '14:33', children: 'Merhaba Anyela! Harikayım, ya sen?' }),
-        DkdChatBubble({ from: 'anyela', time: '14:33', children: 'Ben de iyiyim, seninle sohbet etmek hep güzel oluyor 😊' }),
-        DkdChatBubble({ from: 'user', time: '14:34', children: 'Sana bugün ne giymeliyim sence? 😉' }),
-        DkdChatBubble({ from: 'anyela', time: '14:34', children: 'Siyah dantel mi, yoksa kırmızı daha mı iyi olur? Seçim senin...' }),
-        DkdChatBubble({ from: 'user', time: '14:35', children: 'Kırmızı olsun o zaman 😍' }),
-        h('div', { className: 'dkd-message-box' }, DkdIcon({ name: 'fa-face-smile' }), h('span', null, 'Mesajını yaz...'), h('button', null, DkdIcon({ name: 'fa-paper-plane' })))
+        dkd_create_element('div', { className: 'dkd-day-pill' }, 'Bugün'),
+        DkdChatBubble({ text: 'Merhaba ✨ Bugün nasılsın?', time: '14:32' }),
+        DkdChatBubble({ user: true, text: 'Merhaba Anyela! Harikayım, ya sen?', time: '14:33' }),
+        DkdChatBubble({ text: 'Ben de iyiyim, seninle sohbet etmek hep güzel oluyor 😊', time: '14:33' }),
+        DkdChatBubble({ user: true, text: 'Sana bugün ne giymeliyim sence? 😉', time: '14:34' }),
+        DkdChatBubble({ text: 'Siyah dantel mi, yoksa kırmızı daha mı iyi olur? Seçim senin...', time: '14:34' }),
+        DkdChatBubble({ user: true, text: 'Kırmızı olsun o zaman 😍', time: '14:35' }),
+        dkd_create_element('form', { className: 'dkd-chat-input' }, dkd_create_element('span', null, '☺'), dkd_create_element('input', { placeholder: 'Mesajını yaz...', readOnly: true }), dkd_create_element('button', { type: 'button' }, DkdIcon({ name: 'rocket' })))
       ),
-      h('section', { className: 'dkd-action-grid' },
-        DkdActionCard({ icon: 'fa-microphone', title: 'Sesli Mesaj Gönder', text: 'Anyela’ya sesli mesajınla sürpriz yap.', tone: 'violet' }),
-        DkdActionCard({ icon: 'fa-shirt', title: 'Kıyafet Yükle', text: 'Anyela’nın senin için özel seçim yapmasını sağla.', tone: 'blue' }),
-        DkdActionCard({ icon: 'fa-video', title: 'Özel Video İste', text: 'Kişiye özel kısa video isteğinde bulun.', tone: 'green' })
+      dkd_create_element('section', { className: 'dkd-action-grid' },
+        DkdMiniTrust({ icon: 'mic', title: 'Sesli Mesaj Gönder', text: 'Anyela’ya sesli mesajınla sürpriz yap.', tone: 'violet' }),
+        DkdMiniTrust({ icon: 'hanger', title: 'Kıyafet Yükle', text: 'Anyela’nın özel seçim yapmasını sağla.', tone: 'blue' }),
+        DkdMiniTrust({ icon: 'video', title: 'Özel Video İste', text: 'Kişiye özel kısa video iste.', tone: 'green' })
       ),
-      h('section', { className: 'dkd-wide-cta' },
-        h('div', { className: 'dkd-time-orb' }, h('b', null, '30'), h('span', null, 'Dakika')),
-        h('div', null, h('h2', null, 'Sohbete Başlamak İçin Paket Seç'), h('p', null, '30 dakikalık özel yazılı sohbetin keyfini çıkar.')),
-        h('a', { href: '/AnyelaBorn/packages/', className: 'dkd-btn dkd-btn-primary' }, DkdIcon({ name: 'fa-gift' }), 'Paketleri Gör')
+      dkd_create_element('section', { className: 'dkd-cta-band' },
+        dkd_create_element('div', { className: 'dkd-time-orb' }, '30', dkd_create_element('small', null, 'Dakika')),
+        dkd_create_element('div', null, dkd_create_element('h2', null, 'Sohbete Başlamak İçin Paket Seç'), dkd_create_element('p', null, '30 dakikalık özel yazılı sohbetin keyfini çıkar.')), 
+        dkd_create_element('a', { href: '/AnyelaBorn/packages/', className: 'dkd-btn dkd-btn-primary' }, DkdIcon({ name: 'gift' }), 'Paketleri Gör')
       )
     ) });
   }
 
-  function DkdActionCard({ icon, title, text, tone }) {
-    return h('article', { className: `dkd-action-card ${tone || ''}` },
-      h('span', null, DkdIcon({ name: icon })),
-      h('h3', null, title),
-      h('p', null, text),
-      DkdIcon({ name: 'fa-chevron-right' })
-    );
-  }
-
   function DkdVoicePage() {
-    const packages = [
-      { title: 'Voice Intro', price: '199 TL', time: '1 dakika', tone: 'violet', features: ['Kişisel sesli yanıt', '24–48 saat içinde', 'Standart öncelik'] },
-      { title: 'Voice Chat Private', price: '399 TL', time: '3 dakika', tone: 'rose', badge: 'Popüler', features: ['Daha uzun sesli yanıt', '24 saat içinde', 'Öncelikli yanıt'] },
-      { title: 'Voice VIP', price: '699 TL', time: '5 dakika', tone: 'green', badge: 'VIP', features: ['En uzun kişisel yanıt', '12–24 saat içinde', 'VIP öncelik & özel ilgi'] },
+    const dkd_voice_packages = [
+      { title: 'Voice Intro', price: '199 TL', detail: '1 dakika', tone: 'violet', icon: 'wave' },
+      { title: 'Voice Chat Private', price: '399 TL', detail: '3 dakika', tone: 'rose', icon: 'wave', badge: 'Popüler' },
+      { title: 'Voice VIP', price: '699 TL', detail: '5 dakika', tone: 'green', icon: 'wave', badge: 'VIP' }
     ];
-    return DkdPage({ active: 'home', children: h(React.Fragment, null,
-      h('section', { className: 'dkd-page-hero dkd-with-portrait' },
-        h('div', null, DkdPill({ icon: 'fa-sparkles', children: 'Anyela Born • Sesli Mesaj' }), h('h1', { className: 'dkd-gradient-title' }, 'Sesli Mesaj'), h('p', null, 'Sesli mesajını gönder, Anyela’dan sana özel kişisel bir sesli yanıt al.'),
-          h('div', { className: 'dkd-small-badges' }, DkdPill({ icon: 'fa-shield-check', children: '%100 Kişisel' }), DkdPill({ icon: 'fa-lock', children: 'Gizli & Güvenli' }), DkdPill({ icon: 'fa-bolt', children: 'Hızlı Yanıt' }))
+    return DkdPage({ active: 'home', children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-page-hero dkd-voice-hero' },
+        dkd_create_element('div', null,
+          DkdPill({ icon: 'sparkle', children: 'Anyela Born • Sesli Mesaj' }),
+          dkd_create_element('h1', null, 'Sesli Mesaj'),
+          dkd_create_element('p', null, 'Sesli mesajını gönder, Anyela’dan sana özel kişisel bir sesli yanıt al.'),
+          dkd_create_element('div', { className: 'dkd-mini-chip-row' }, DkdPill({ icon: 'shield', children: '%100 Kişisel' }), DkdPill({ icon: 'lock', children: 'Gizli & Güvenli' }), DkdPill({ icon: 'rocket', children: 'Hızlı Yanıt' }))
         ),
-        DkdHeroPortrait({ image: dkd_images.yachtNavy, mode: 'small' })
+        DkdPortrait({ image: dkd_images.hero, badge: false })
       ),
-      DkdSectionTitle({ icon: 'fa-wand-magic-sparkles', title: 'Nasıl Çalışır?' }),
-      h('section', { className: 'dkd-steps-grid' },
-        DkdStepCard({ no: '1', icon: 'fa-bag-shopping', title: 'Paket seç', text: 'Sana uygun paketi seç ve ödemeni yap.', tone: 'violet' }),
-        DkdStepCard({ no: '2', icon: 'fa-microphone', title: 'Sesli mesaj gönder', text: 'Kalbinden geçenleri kaydet ve gönder.', tone: 'rose' }),
-        DkdStepCard({ no: '3', icon: 'fa-sparkles', title: 'Anyela cevabı hazırlasın', text: 'Mesajın dinlensin ve sana özel yanıt hazırlansın.', tone: 'blue' }),
-        DkdStepCard({ no: '4', icon: 'fa-play', title: 'Sesli yanıtını al', text: 'Kişisel sesli yanıtını dinle.', tone: 'green' })
+      DkdSectionTitle({ icon: 'sparkle', title: 'Nasıl Çalışır?' }),
+      dkd_create_element('section', { className: 'dkd-steps-grid dkd-four-grid' },
+        DkdStepCard({ no: '1', icon: 'bag', title: 'Paket seç', text: 'Sana uygun paketi seç ve ödemeni yap.', tone: 'violet' }),
+        DkdStepCard({ no: '2', icon: 'mic', title: 'Sesli mesaj gönder', text: 'Kalbinden geçenleri kaydet ve gönder.', tone: 'rose' }),
+        DkdStepCard({ no: '3', icon: 'sparkle', title: 'Anyela cevabı hazırlasın', text: 'Mesajın dinlensin ve özel yanıt hazırlansın.', tone: 'blue' }),
+        DkdStepCard({ no: '4', icon: 'play', title: 'Sesli yanıtını al', text: 'Kişisel sesli yanıtını dinle.', tone: 'green' })
       ),
-      DkdSectionTitle({ icon: 'fa-gift', title: 'Paketlerini Seç', sub: 'Her paket farklı süre ve ayrıcalık sunar.' }),
-      h('section', { className: 'dkd-voice-packages' }, packages.map(p => h('article', { key: p.title, className: `dkd-voice-card ${p.tone}` },
-        p.badge ? h('b', { className: 'dkd-mini-badge' }, p.badge) : null,
-        h('div', { className: 'dkd-package-icon' }, DkdIcon({ name: 'fa-wave-square' })),
-        h('h3', null, p.title), h('strong', null, p.price), h('span', null, p.time),
-        h('ul', null, p.features.map(f => h('li', { key: f }, DkdIcon({ name: 'fa-check' }), f))),
-        h('a', { href: '/AnyelaBorn/payment/' }, 'Paketi Seç')
-      ))),
-      h('section', { className: 'dkd-recorder' },
-        h('h2', null, DkdIcon({ name: 'fa-microphone' }), 'Sesli Mesajını Kaydet'),
-        h('div', { className: 'dkd-wave' }, Array.from({ length: 64 }).map((_, idx) => h('i', { key: idx, style: { '--dkd-h': `${18 + (idx * 13 % 54)}px` } }))),
-        h('div', { className: 'dkd-record-row' }, h('span', null, '00:00 / 02:00'), h('button', null, DkdIcon({ name: 'fa-microphone' })), h('a', { href: '/AnyelaBorn/payment/' }, DkdIcon({ name: 'fa-paper-plane' }), 'Gönder')),
-        h('p', null, 'Maksimum kayıt süresi 2 dakikadır.')
+      DkdSectionTitle({ icon: 'gift', title: 'Paketlerini Seç', sub: 'Her paket, farklı süre ve ayrıcalıklar sunar.' }),
+      dkd_create_element('section', { className: 'dkd-package-grid dkd-three-grid' }, dkd_voice_packages.map(function (dkd_item) { return DkdPackageCard({ key: dkd_item.title, item: dkd_item }); })),
+      dkd_create_element('section', { className: 'dkd-recorder' },
+        dkd_create_element('h2', null, DkdIcon({ name: 'mic' }), 'Sesli Mesajını Kaydet'),
+        dkd_create_element('div', { className: 'dkd-waveform' }, Array.from({ length: 70 }).map(function (_, dkd_index) { return dkd_create_element('i', { key: dkd_index, style: { height: (10 + (dkd_index % 9) * 4) + 'px' } }); })),
+        dkd_create_element('div', { className: 'dkd-recorder-actions' }, dkd_create_element('span', null, '00:00 / 02:00'), dkd_create_element('button', null, DkdIcon({ name: 'mic' })), dkd_create_element('a', { href: '/AnyelaBorn/payment/' }, DkdIcon({ name: 'rocket' }), 'Gönder')),
+        dkd_create_element('small', null, 'Maksimum kayıt süresi 2 dakikadır.')
       ),
-      h('section', { className: 'dkd-audio-sample' },
-        h('img', { src: dkd_images.yachtGreen, alt: 'Anyela sesli yanıt' }),
-        h('button', null, DkdIcon({ name: 'fa-play' })),
-        h('div', null, h('h3', null, 'Anyela’dan sana özel yanıt'), h('div', { className: 'dkd-mini-wave' }), h('small', null, '01:23')),
-        h('a', { href: '/AnyelaBorn/payment/' }, 'Dinle')
+      dkd_create_element('section', { className: 'dkd-audio-reply' },
+        dkd_create_element('img', { src: dkd_images.hero, alt: 'Anyela sesli yanıt' }),
+        dkd_create_element('button', null, DkdIcon({ name: 'play' })),
+        dkd_create_element('div', null, dkd_create_element('strong', null, 'Anyela’dan sana özel yanıt'), dkd_create_element('div', { className: 'dkd-mini-wave' })),
+        dkd_create_element('a', { href: '/AnyelaBorn/payment/' }, 'Dinle')
       )
     ) });
   }
 
   function DkdCustomPage() {
-    const customCards = [
-      ['fa-shirt', 'Style Try-On', 'Gönderdiğin kıyafetle Anyela’nın sana özel çarpıcı tarzı.', dkd_images.lamboBlack, 'violet'],
-      ['fa-camera', 'Photo Set', 'Sana özel konseptlerle profesyonel fotoğraf setleri.', dkd_images.poolWhite, 'rose'],
-      ['fa-video', 'Talking Video', 'Adınla hitap edilen, sana özel konuşma videoları.', dkd_images.yachtNavy, 'blue'],
-      ['fa-gift', 'Doğum Günü / Özel Mesaj Videosu', 'Özel anların için kişisel kutlama videoları.', dkd_images.yachtFull, 'green'],
+    const dkd_options = [
+      ['Style Try-On', 'Gönderdiğin kıyafetle Anyela’nın sana özel çarpıcı tarzı.', 'hanger', dkd_images.lamboBlack, 'violet'],
+      ['Photo Set', 'Sana özel konseptlerle profesyonel fotoğraf setleri.', 'camera', dkd_images.poolWhite, 'rose'],
+      ['Talking Video', 'Adınla hitap edilen, sana özel konuşma videoları.', 'video', dkd_images.carBurgundy, 'blue'],
+      ['Doğum Günü / Özel Mesaj Videosu', 'Özel anların için kişisel kutlama videosu.', 'gift', dkd_images.yachtGreen, 'green']
     ];
-    return DkdPage({ active: 'payment', children: h(React.Fragment, null,
-      h('section', { className: 'dkd-page-hero dkd-with-portrait' },
-        h('div', null, DkdPill({ icon: 'fa-sparkles', children: 'Ana Sayfa › Özel İçerik' }), h('h1', null, 'Özel İçerik'), h('p', null, 'Kıyafet, fikir veya tema gönder — sana özel Anyela konsepti hazırlansın.')),
-        DkdHeroPortrait({ image: dkd_images.yachtGreen, mode: 'small' })
+    return DkdPage({ active: 'payment', children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-page-hero dkd-custom-hero' },
+        dkd_create_element('div', null, DkdPill({ icon: 'sparkle', children: 'Ana Sayfa › Özel İçerik' }), dkd_create_element('h1', null, 'Özel İçerik'), dkd_create_element('p', null, 'Kıyafet, fikir veya tema gönder — sana özel Anyela konsepti hazırlansın.')),
+        DkdPortrait({ image: dkd_images.hero, badge: false })
       ),
-      DkdSectionTitle({ icon: 'fa-sparkles', title: 'Özel İçerik Seçenekleri' }),
-      h('section', { className: 'dkd-custom-card-grid' }, customCards.map(c => h('article', { className: `dkd-custom-card ${c[4]}`, key: c[1] },
-        h('img', { src: c[3], alt: c[1], loading: 'lazy' }), h('span', null, DkdIcon({ name: c[0] })), h('h3', null, c[1]), h('p', null, c[2]), h('a', { href: '/AnyelaBorn/payment/' }, 'Detayları Gör', DkdIcon({ name: 'fa-arrow-right' }))
-      ))),
-      DkdSectionTitle({ icon: 'fa-sparkles', title: 'Konseptini Oluştur' }),
-      h('section', { className: 'dkd-builder-grid' },
-        h('article', null, h('b', null, '1'), h('h3', null, 'Kıyafet Yükle'), h('p', null, 'İlham kaynağın olan kıyafet fotoğrafını yükle.'), h('div', { className: 'dkd-upload-box' }, DkdIcon({ name: 'fa-cloud-arrow-up' }), 'Dosya Seç veya Sürükle', h('small', null, 'PNG, JPG (Maks. 10MB)'))),
-        h('article', null, h('b', null, '2'), h('h3', null, 'Tema Seç'), h('p', null, 'Hayalindeki konsepti seç veya fikrini yaz.'), h('div', { className: 'dkd-chips' }, ['Romantik', 'Glamour', 'Siyah & Deri', 'Beach', 'Night Vibes', 'Özel Fikrim Var'].map(t => h('span', { key: t }, t)))),
-        h('article', null, h('b', null, '3'), h('h3', null, 'Teslim Türü'), h('p', null, 'İçeriğinin nasıl teslim edileceğini seç.'), h('div', { className: 'dkd-choice-list' }, ['Fotoğraf Seti', 'Video (Kısa)', 'Video (Uzun)'].map(t => h('span', { key: t }, DkdIcon({ name: 'fa-circle-dot' }), t))))
+      DkdSectionTitle({ icon: 'sparkle', title: 'Özel İçerik Seçenekleri' }),
+      dkd_create_element('section', { className: 'dkd-feature-grid dkd-four-grid' }, dkd_options.map(function (dkd_option) { return DkdFeatureCard({ key: dkd_option[0], title: dkd_option[0], text: dkd_option[1], icon: dkd_option[2], image: dkd_option[3], tone: dkd_option[4], link: '/AnyelaBorn/payment/' }); })),
+      DkdSectionTitle({ icon: 'sparkle', title: 'Konseptini Oluştur' }),
+      dkd_create_element('section', { className: 'dkd-concept-builder' },
+        dkd_create_element('article', null, dkd_create_element('b', null, '1'), dkd_create_element('h3', null, 'Kıyafet Yükle'), dkd_create_element('p', null, 'İlham kaynağın olan kıyafet fotoğrafını yükle.'), dkd_create_element('div', { className: 'dkd-upload-box' }, DkdIcon({ name: 'upload' }), 'Dosya Seç veya Sürükle', dkd_create_element('small', null, 'PNG, JPG (Maks. 10MB)'))),
+        dkd_create_element('article', null, dkd_create_element('b', null, '2'), dkd_create_element('h3', null, 'Tema Seç'), dkd_create_element('p', null, 'Hayalindeki konsepti seç veya fikrini yaz.'), dkd_create_element('div', { className: 'dkd-theme-tags' }, ['Romantik','Glamour','Siyah & Deri','Beach','Night Vibes','Özel Fikrim Var'].map(function (dkd_tag) { return dkd_create_element('span', { key: dkd_tag }, dkd_tag); }))),
+        dkd_create_element('article', null, dkd_create_element('b', null, '3'), dkd_create_element('h3', null, 'Teslim Türü'), dkd_create_element('p', null, 'İçeriğinin nasıl teslim edileceğini seç.'), dkd_create_element('div', { className: 'dkd-delivery-list' }, ['Fotoğraf Seti','Video (Kısa)','Video (Uzun)'].map(function (dkd_delivery) { return dkd_create_element('span', { key: dkd_delivery }, DkdIcon({ name: 'camera' }), dkd_delivery); })))
       ),
-      DkdSectionTitle({ icon: 'fa-sparkles', title: 'İlham Al: Örnek Konseptler' }),
-      h('section', { className: 'dkd-preview-strip' }, [dkd_images.carBurgundy, dkd_images.poolWhite, dkd_images.lamboBlack, dkd_images.hero, dkd_images.yachtNavy, dkd_images.gallery].map((img, idx) => h('img', { key: idx, src: img, alt: 'Anyela örnek konsept' }))),
-      h('section', { className: 'dkd-wide-cta custom' }, h('div', { className: 'dkd-time-orb' }, DkdIcon({ name: 'fa-gift' })), h('div', null, h('h2', null, 'Kendi Konseptini Başlat'), h('p', null, 'Hayalini gönder, Anyela sana özel hazırlansın.')), h('a', { href: '/AnyelaBorn/payment/', className: 'dkd-btn dkd-btn-primary' }, 'Konseptini Başlat', DkdIcon({ name: 'fa-arrow-right' })))
+      DkdSectionTitle({ icon: 'sparkle', title: 'İlham Al: Örnek Konseptler' }),
+      dkd_create_element('section', { className: 'dkd-gallery-row' }, [dkd_images.carBurgundy, dkd_images.poolWhite, dkd_images.lamboBlack, dkd_images.yachtGold, dkd_images.yachtGreen, dkd_images.yachtNavy].map(function (dkd_image, dkd_index) { return dkd_create_element('img', { key: dkd_index, src: dkd_image, alt: 'Örnek konsept ' + (dkd_index + 1) }); })),
+      dkd_create_element('section', { className: 'dkd-cta-band dkd-custom-cta' }, DkdIcon({ name: 'gift' }), dkd_create_element('div', null, dkd_create_element('h2', null, 'Kendi Konseptini Başlat'), dkd_create_element('p', null, 'Hayalini gönder, Anyela sana özel hazırlasın.')), dkd_create_element('a', { href: '/AnyelaBorn/payment/', className: 'dkd-btn dkd-btn-primary' }, 'Konseptini Başlat'))
     ) });
   }
 
   function DkdAdsPage() {
-    const sectors = [['fa-bag-shopping','E-ticaret Markaları'], ['fa-bottle-droplet','Güzellik & Kozmetik'], ['fa-shirt','Moda & Aksesuar'], ['fa-mobile-screen','Uygulama & Teknoloji']];
-    const packages = [
-      ['fa-envelope-open-text','Reklam Mini','Hızlı görünürlük için ideal paket.','1 içerik • 1 platform • 7 gün kullanım','violet'],
-      ['fa-bullseye','Reklam Standart','Dengeli içerik ve daha fazla etki.','2 içerik • 1-2 platform • performans raporu','rose'],
-      ['fa-clapperboard','Reklam Pro','Geniş kapsamlı içerik ve maksimum etki.','3-4 içerik • tüm platformlar • detaylı rapor','blue'],
-      ['fa-crown','Marka Yüzü','Uzun vadeli iş birliği ve temsilcilik.','Aylık plan • sürekli destek • marka temsilciliği','green'],
-    ];
-    return DkdPage({ active: 'ads', children: h(React.Fragment, null,
-      h('section', { className: 'dkd-page-hero dkd-with-portrait' },
-        h('div', null, DkdPill({ icon: 'fa-sparkles', children: 'Markanız için AI destekli reklam çözümleri' }), h('h1', null, 'Anyela Reklam ', h('span', null, 'Yüzünüz Olsun')), h('p', null, 'Markanız için AI destekli reklam içerikleri oluşturun.'), h('div', { className: 'dkd-small-badges' }, DkdPill({ icon: 'fa-shield-heart', children: 'AI Destekli İçerik' }), DkdPill({ icon: 'fa-handshake', children: 'Güvenilir İş Birliği' }), DkdPill({ icon: 'fa-chart-line', children: 'Ölçülebilir Sonuçlar' })) ),
-        DkdHeroPortrait({ image: dkd_images.yachtNavy, mode: 'small' })
+    return DkdPage({ active: 'ads', children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-page-hero dkd-ads-hero' },
+        dkd_create_element('div', null,
+          DkdPill({ icon: 'sparkle', children: 'Markanız için AI destekli reklam çözümleri' }),
+          dkd_create_element('h1', null, 'Anyela Reklam ', dkd_create_element('span', null, 'Yüzünüz Olsun')),
+          dkd_create_element('p', null, 'Markanız için AI destekli reklam içerikleri oluşturun.'),
+          dkd_create_element('div', { className: 'dkd-mini-chip-row' }, DkdPill({ icon: 'magic', children: 'AI Destekli İçerik' }), DkdPill({ icon: 'shield', children: 'Güvenilir İş Birliği' }), DkdPill({ icon: 'chart', children: 'Ölçülebilir Sonuçlar' }))
+        ),
+        DkdPortrait({ image: dkd_images.lamboBlack, badge: false })
       ),
-      DkdSectionTitle({ icon: 'fa-users', title: 'Kimler İçin?', sub: 'Güvenilir, estetik ve etkili içeriklerle markasını büyütmek isteyen markalar.' }),
-      h('section', { className: 'dkd-sector-grid' }, sectors.map(s => h('article', { key: s[1] }, DkdIcon({ name: s[0] }), h('h3', null, s[1])))),
-      DkdSectionTitle({ icon: 'fa-sparkles', title: 'Nasıl Çalışır?' }),
-      h('section', { className: 'dkd-steps-grid' },
-        DkdStepCard({ no: '1', icon: 'fa-pen-to-square', title: 'İhtiyacını Paylaş', text: 'Markanızı ve hedefinizi bizimle paylaşın.', tone: 'violet' }),
-        DkdStepCard({ no: '2', icon: 'fa-bullseye', title: 'Strateji Oluştur', text: 'AI destekli içerik ve yayın planı hazırlanır.', tone: 'rose' }),
-        DkdStepCard({ no: '3', icon: 'fa-clapperboard', title: 'İçerik Üret & Yayımla', text: 'Anyela ile özgün içerikler üretilir.', tone: 'blue' }),
-        DkdStepCard({ no: '4', icon: 'fa-chart-line', title: 'Sonuçları Ölç', text: 'Performans raporları ile büyütürüz.', tone: 'green' })
+      DkdSectionTitle({ icon: 'user', title: 'Kimler İçin?', sub: 'Güvenilir, estetik ve etkili içeriklerle markasını büyütmek isteyen markalar.' }),
+      dkd_create_element('section', { className: 'dkd-sector-grid dkd-four-grid' }, ['E-ticaret Markaları','Güzellik & Kozmetik Markaları','Moda & Aksesuar Markaları','Uygulama & Teknoloji Markaları'].map(function (dkd_sector, dkd_index) { return DkdMiniTrust({ key: dkd_sector, icon: ['bag','palette','hanger','phone'][dkd_index], title: dkd_sector, text: '' }); })),
+      DkdSectionTitle({ icon: 'sparkle', title: 'Nasıl Çalışır?' }),
+      dkd_create_element('section', { className: 'dkd-steps-grid dkd-four-grid' },
+        DkdStepCard({ no: '1', icon: 'file', title: 'İhtiyacını Paylaş', text: 'Markanızı ve hedefinizi paylaşın.', tone: 'violet' }),
+        DkdStepCard({ no: '2', icon: 'target', title: 'Strateji Oluştur', text: 'AI destekli içerik planı hazırlanır.', tone: 'rose' }),
+        DkdStepCard({ no: '3', icon: 'video', title: 'İçerik Üret & Yayınla', text: 'Özgün içerikler üretilir ve paylaşılır.', tone: 'blue' }),
+        DkdStepCard({ no: '4', icon: 'chart', title: 'Sonuçları Ölç', text: 'Performans raporları ile büyütürüz.', tone: 'green' })
       ),
-      DkdSectionTitle({ icon: 'fa-star', title: 'Paketler' }),
-      h('section', { className: 'dkd-ads-grid' }, packages.map(p => h('article', { key: p[1], className: `dkd-ads-card ${p[4]}` }, DkdIcon({ name: p[0] }), h('h3', null, p[1]), h('p', null, p[2]), h('ul', null, p[3].split(' • ').map(x => h('li', { key: x }, DkdIcon({ name: 'fa-check' }), x))), h('a', { href: '/AnyelaBorn/payment/' }, 'Detayları Gör')))),
-      h('section', { className: 'dkd-compliance-strip' },
-        h('div', null, DkdIcon({ name: 'fa-shield' }), h('strong', null, 'İş Birliği / Reklam etiketi'), h('p', null, 'Tüm iş birlikleri şeffaf şekilde #reklam etiketi ile paylaşılır.')),
-        h('div', null, DkdIcon({ name: 'fa-award' }), h('strong', null, 'Profesyonel teslim süreci'), h('p', null, 'Planlama, çekim, düzenleme ve yayınlama süreci profesyonelce yönetilir.')),
-        h('div', null, DkdIcon({ name: 'fa-lock' }), h('strong', null, 'Güvenli & yasal'), h('p', null, 'Sözleşmeli çalışma ve KVKK uyumlu veri güvenliği.'))
-      ),
-      h('section', { className: 'dkd-lead-form' },
-        h('div', null, DkdIcon({ name: 'fa-envelope' }), h('h2', null, 'Markanız İçin Teklif Alın'), h('p', null, 'Kısa bilgilerinizi bırakın, ekibimiz sizinle iletişime geçsin.')),
-        h('form', null, ['Marka Adı','Sektör','Hedef','E-posta','Telefon'].map(x => h('input', { key: x, placeholder: x })), h('button', { type: 'button' }, 'Teklif Al', DkdIcon({ name: 'fa-arrow-right' })))
-      )
+      DkdSectionTitle({ icon: 'star', title: 'Paketler' }),
+      dkd_create_element('section', { className: 'dkd-ad-package-grid dkd-four-grid' }, dkd_ad_packages.map(function (dkd_item) { return dkd_create_element('article', { key: dkd_item.title, className: 'dkd-ad-card ' + dkd_item.tone }, dkd_item.badge ? dkd_create_element('span', { className: 'dkd-badge' }, dkd_item.badge) : null, dkd_create_element('div', { className: 'dkd-package-icon' }, DkdIcon({ name: dkd_item.icon })), dkd_create_element('h3', null, dkd_item.title), dkd_create_element('p', null, dkd_item.detail), dkd_create_element('ul', null, dkd_item.points.map(function (dkd_point) { return dkd_create_element('li', { key: dkd_point }, DkdIcon({ name: 'check' }), dkd_point); })), dkd_create_element('a', { href: '/AnyelaBorn/payment/' }, 'Detayları Gör')); })),
+      dkd_create_element('section', { className: 'dkd-info-strip' }, DkdMiniTrust({ icon: 'shield', title: 'İş Birliği / Reklam etiketi', text: 'Tüm iş birlikleri #reklam etiketi ile paylaşılır.' }), DkdMiniTrust({ icon: 'star', title: 'Profesyonel teslim süreci', text: 'Planlama, çekim ve yayınlama profesyonelce yönetilir.' }), DkdMiniTrust({ icon: 'lock', title: 'Güvenli & yasal', text: 'KVKK uyumlu veri güvenliği.' })),
+      dkd_create_element('section', { className: 'dkd-lead-form' }, dkd_create_element('div', null, DkdIcon({ name: 'mail' }), dkd_create_element('h2', null, 'Markanız İçin Teklif Alın'), dkd_create_element('p', null, 'Kısa bilgilerinizi bırakın, ekibimiz sizinle iletişime geçsin.')), dkd_create_element('div', null, ['Marka Adı','Sektör','Hedef','E-posta','Telefon (İsteğe bağlı)'].map(function (dkd_field) { return dkd_create_element('input', { key: dkd_field, placeholder: dkd_field, readOnly: true }); })), dkd_create_element('a', { href: '/AnyelaBorn/payment/' }, 'Teklif Al'))
     ) });
   }
 
   function DkdPaymentPage() {
-    return DkdPage({ active: 'payment', children: h(React.Fragment, null,
-      h('section', { className: 'dkd-page-hero dkd-payment-hero' },
-        h('div', null, h('h1', null, 'Ödeme ve Başlangıç'), h('p', null, 'Paketi seç, ödemeni yap, dekontunu gönder')),
-        DkdHeroPortrait({ image: dkd_images.hero, mode: 'small' })
+    return DkdPage({ active: 'payment', children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-page-hero dkd-payment-hero' },
+        dkd_create_element('div', null, dkd_create_element('h1', null, 'Ödeme ve Başlangıç'), dkd_create_element('p', null, 'Paketi seç, ödemeni yap, dekontunu gönder')),
+        DkdPortrait({ image: dkd_images.hero, badge: false })
       ),
-      h('section', { className: 'dkd-payment-steps' }, ['Ödeme','Dekont','Onay','Başlangıç'].map((s, idx) => h('div', { className: idx===0?'dkd-active':'', key:s }, DkdIcon({ name: ['fa-credit-card','fa-file-lines','fa-shield-check','fa-rocket'][idx] }), h('span', null, s)))),
-      h('section', { className: 'dkd-payment-card dkd-selected' }, DkdIcon({ name: 'fa-gift' }), h('div', null, h('h2', null, 'Seçilen Paket'), h('p', null, 'Paket seçildikten sonra buraya yansır.')), h('strong', null, '₺ —')),
-      h('section', { className: 'dkd-payment-card' }, h('h2', null, DkdIcon({ name: 'fa-building-columns' }), 'IBAN ile Ödeme'), h('p', null, 'Gerçek IBAN bilgilerinizi eklemeden satışa açmayın.'), h('div', { className: 'dkd-bank-box' }, h('span', null, 'Banka', h('b', null, 'Banka adı eklenecek')), h('span', null, 'IBAN', h('b', null, 'TR__ ____ ____ ____ ____ ____ __')), h('span', null, 'Alıcı', h('b', null, 'Anyela Born Club')), h('button', null, DkdIcon({ name: 'fa-copy' }), 'Kopyala'))),
-      h('section', { className: 'dkd-payment-card dkd-code' }, h('div', null, h('h2', null, DkdIcon({ name: 'fa-arrows-rotate' }), 'Açıklama Kodu'), h('strong', null, 'ABC 7294')), h('p', null, 'Ödeme açıklama kısmına bu kodu yazmanız gerekir.'), h('button', null, DkdIcon({ name: 'fa-copy' }), 'Kopyala')),
-      h('section', { className: 'dkd-payment-card dkd-upload' }, h('div', null, h('h2', null, DkdIcon({ name: 'fa-cloud-arrow-up' }), 'Dekont Yükle'), h('p', null, 'PDF, JPG veya PNG • Maks. 10MB')), h('button', null, DkdIcon({ name: 'fa-upload' }), 'Dosya Seç')),
-      h('section', { className: 'dkd-secure-panel' }, DkdIcon({ name: 'fa-shield-check' }), h('div', null, h('h2', null, 'Güvenli, Hızlı ve Şeffaf Süreç'), h('p', null, 'Dekontunuz ulaştıktan sonra ödeme kontrol edilir. Onay sonrası sohbet veya sipariş süreciniz başlatılır.')), h('ul', null, ['%100 gizlilik','Güvenli ödeme','Hızlı onay','7/24 destek'].map(x => h('li', { key: x }, DkdIcon({ name: 'fa-check' }), x)))),
-      h('a', { href: '/AnyelaBorn/faq/', className: 'dkd-submit-btn' }, DkdIcon({ name: 'fa-paper-plane' }), 'Dekont Gönder')
+      dkd_create_element('section', { className: 'dkd-payment-steps' }, ['Ödeme','Dekont','Onay','Başlangıç'].map(function (dkd_label, dkd_index) { return dkd_create_element('span', { key: dkd_label, className: dkd_index === 0 ? 'dkd-active' : '' }, DkdIcon({ name: ['card','file','shield','rocket'][dkd_index] }), dkd_label); })),
+      dkd_create_element('section', { className: 'dkd-selected-package' }, DkdIcon({ name: 'gift' }), dkd_create_element('div', null, dkd_create_element('h2', null, 'Seçilen Paket'), dkd_create_element('p', null, '%100 Gizlilik Paketi'), dkd_create_element('small', null, 'Güvenli ve özel süreç')), dkd_create_element('strong', null, '₺1.999', dkd_create_element('small', null, 'Tek seferlik ödeme'))),
+      dkd_create_element('section', { className: 'dkd-payment-card' }, dkd_create_element('h2', null, DkdIcon({ name: 'card' }), 'IBAN ile Ödeme'), dkd_create_element('p', null, 'Aşağıdaki hesaba ödemenizi yapınız.'), dkd_create_element('div', { className: 'dkd-bank-table' }, dkd_create_element('span', null, 'Banka'), dkd_create_element('b', null, 'Garanti BBVA'), dkd_create_element('span', null, 'IBAN'), dkd_create_element('b', null, 'TR23 0006 2000 1230 0006 2958 01'), dkd_create_element('span', null, 'Alıcı'), dkd_create_element('b', null, 'Anyela Born Club')), dkd_create_element('button', null, DkdIcon({ name: 'copy' }), 'Kopyala'), dkd_create_element('small', null, 'Ödemelerinizi yalnızca yukarıdaki IBAN’a yapınız.')),
+      dkd_create_element('section', { className: 'dkd-code-card' }, dkd_create_element('div', null, dkd_create_element('h2', null, 'Açıklama Kodu'), dkd_create_element('strong', null, 'ABC 7294')), dkd_create_element('p', null, 'Ödemenizi yaparken açıklama kısmına bu kodu yazmanız gerekmektedir.'), dkd_create_element('button', null, DkdIcon({ name: 'copy' }), 'Kopyala')),
+      dkd_create_element('section', { className: 'dkd-upload-payment' }, dkd_create_element('div', null, dkd_create_element('h2', null, DkdIcon({ name: 'upload' }), 'Dekont Yükle'), dkd_create_element('p', null, 'PDF, JPG veya PNG • Maks. 10MB')), dkd_create_element('button', null, DkdIcon({ name: 'file' }), 'Dosya Seç')),
+      dkd_create_element('section', { className: 'dkd-safe-panel' }, DkdIcon({ name: 'shield' }), dkd_create_element('div', null, dkd_create_element('h2', null, 'Güvenli, Hızlı ve Şeffaf Süreç'), dkd_create_element('p', null, 'Onay sonrası sohbet veya sipariş sürecin başlatılır.')), dkd_create_element('ul', null, ['%100 gizlilik','Güvenli ödeme','Hızlı onay','7/24 destek'].map(function (dkd_item) { return dkd_create_element('li', { key: dkd_item }, DkdIcon({ name: 'check' }), dkd_item); }))),
+      dkd_create_element('a', { href: '/AnyelaBorn/faq/', className: 'dkd-submit-wide' }, DkdIcon({ name: 'rocket' }), 'Dekont Gönder')
     ) });
   }
 
   function DkdFaqPage() {
-    const faqs = [
-      ['fa-circle-question','Anyela gerçek kişi mi?'], ['fa-wallet','Ödeme nasıl yapılıyor?'], ['fa-message','Sohbet nasıl başlıyor?'], ['fa-microphone','Sesli mesaj nasıl geliyor?'], ['fa-rotate-left','İade var mı?'], ['fa-shield-halved','Gönderdiğim içerikler gizli mi?']
-    ];
-    return DkdPage({ active: 'payment', children: h(React.Fragment, null,
-      h('section', { className: 'dkd-page-hero dkd-faq-hero' },
-        h('div', null, DkdPill({ icon: 'fa-sparkles', children: 'Anyela Born • AI Influencer' }), h('h1', null, 'SSS & Yardım'), h('p', null, 'Merak ettiğin her şeyi burada bulabilirsin. Sorularına hızlı, net ve güvenilir cevaplar.')),
-        h('div', { className: 'dkd-help-icon' }, DkdIcon({ name: 'fa-comments' }), h('b', null, '?'))
+    const dkd_faq = ['Anyela gerçek kişi mi?', 'Ödeme nasıl yapılıyor?', 'Sohbet nasıl başlıyor?', 'Sesli mesaj nasıl geliyor?', 'İade var mı?', 'Gönderdiğim içerikler gizli mi?'];
+    return DkdPage({ active: 'payment', children: dkd_create_element(React.Fragment, null,
+      dkd_create_element('section', { className: 'dkd-page-hero dkd-faq-hero' },
+        dkd_create_element('div', null, DkdPill({ icon: 'sparkle', children: 'Anyela Born • AI Influencer' }), dkd_create_element('h1', null, 'SSS & Yardım'), dkd_create_element('p', null, 'Merak ettiğin her şeyi burada bulabilirsin. Sorularına hızlı, net ve güvenilir cevaplar.')),
+        dkd_create_element('div', { className: 'dkd-help-illustration' }, DkdIcon({ name: 'help' }))
       ),
-      h('section', { className: 'dkd-faq-trust' }, DkdIcon({ name: 'fa-shield-check' }), h('div', null, h('h2', null, 'Anyela gerçekte sanal bir AI influencer karakteridir.'), h('p', null, 'Anyela, gelişmiş yapay zeka ile oluşturulmuş sanal bir karakterdir. Tüm sohbetler, sesli mesajlar, görseller ve videolar eğlence ve kişisel kullanım amacıyla sunulur.'))),
-      DkdSectionTitle({ icon: 'fa-sparkles', title: 'Sık Sorulan Sorular' }),
-      h('section', { className: 'dkd-faq-list' }, faqs.map(f => h('details', { key: f[1] }, h('summary', null, DkdIcon({ name: f[0] }), f[1], DkdIcon({ name: 'fa-chevron-down' })), h('p', null, 'Bu bölüm v1.5’te bilgilendirme amaçlıdır. Canlı ödeme ve teslim süreci başlamadan önce net kurallar ayrıca güncellenecektir.')))),
-      DkdSectionTitle({ icon: 'fa-headset', title: 'Destek Ekibimiz Sizinle', sub: 'Soruların veya yardıma ihtiyacın mı var? Biz buradayız!' }),
-      h('section', { className: 'dkd-support-grid' },
-        DkdActionCard({ icon: 'fa-brands fa-whatsapp', title: 'WhatsApp Destek', text: 'Hemen yaz, hızlıca yardımcı olalım.', tone: 'green' }),
-        DkdActionCard({ icon: 'fa-brands fa-instagram', title: 'Instagram DM', text: 'Bize DM at, en kısa sürede dönelim.', tone: 'rose' }),
-        DkdActionCard({ icon: 'fa-envelope', title: 'E-posta', text: 'Mail gönder, ekibimiz ilgilensin.', tone: 'blue' })
-      ),
-      h('section', { className: 'dkd-wide-note' }, h('strong', null, 'Senin memnuniyetin bizim için her şeyden önemli.'), h('p', null, 'Güvenle sor, gönül rahatlığıyla keyfini çıkar.'), DkdIcon({ name: 'fa-heart' }))
+      dkd_create_element('section', { className: 'dkd-faq-trust-card' }, DkdIcon({ name: 'shield' }), dkd_create_element('div', null, dkd_create_element('h2', null, 'Anyela gerçekte sanal bir AI influencer karakteridir.'), dkd_create_element('p', null, 'Tüm sohbetler, sesli mesajlar, görseller ve videolar eğlence ve kişisel kullanım amacıyla sunulur. Sipariş ettiğiniz özel içerikler size özel olarak hazırlanır.')), dkd_create_element('footer', null, DkdMiniTrust({ icon: 'lock', title: '%100 Gizlilik', text: 'Güvenli süreç' }), DkdMiniTrust({ icon: 'user', title: 'Sanal Karakter', text: 'Gerçek kişi değildir' }), DkdMiniTrust({ icon: 'star', title: 'Eğlence Amaçlı', text: 'Kişisel kullanım' }))),
+      DkdSectionTitle({ icon: 'sparkle', title: 'Sık Sorulan Sorular' }),
+      dkd_create_element('section', { className: 'dkd-accordion' }, dkd_faq.map(function (dkd_question, dkd_index) { return dkd_create_element('details', { key: dkd_question }, dkd_create_element('summary', null, DkdIcon({ name: ['help','card','chat','mic','rocket','lock'][dkd_index] }), dkd_question), dkd_create_element('p', null, 'Bu süreç manuel onaylı, gizlilik odaklı ve Anyela Born Club deneyimine özel hazırlanır.')) })),
+      DkdSectionTitle({ icon: 'phone', title: 'Destek Ekibimiz Sizinle', sub: 'Soruların veya yardıma ihtiyacın mı var? Biz buradayız!' }),
+      dkd_create_element('section', { className: 'dkd-support-grid' }, DkdMiniTrust({ icon: 'whatsapp', title: 'WhatsApp Destek', text: '7/24 aktif', tone: 'green' }), DkdMiniTrust({ icon: 'instagram', title: 'Instagram DM', text: '7/24 aktif', tone: 'rose' }), DkdMiniTrust({ icon: 'mail', title: 'E-posta', text: '24 saat içinde yanıt', tone: 'blue' })),
+      dkd_create_element('section', { className: 'dkd-satisfaction' }, dkd_create_element('strong', null, 'Senin memnuniyetin bizim için her şeyden önemli.'), dkd_create_element('span', null, 'Güvenle sor, gönül rahatlığıyla keyfini çıkar.'), DkdIcon({ name: 'heart' }))
     ) });
   }
 
   function DkdApp() {
-    const path = window.location.pathname.replace(/\/+$/, '/') || '/AnyelaBorn/';
-    if (path.includes('/packages/')) return DkdPackagesPage();
-    if (path.includes('/chat/')) return DkdChatPage();
-    if (path.includes('/voice/')) return DkdVoicePage();
-    if (path.includes('/custom/')) return DkdCustomPage();
-    if (path.includes('/ads/')) return DkdAdsPage();
-    if (path.includes('/payment/')) return DkdPaymentPage();
-    if (path.includes('/faq/')) return DkdFaqPage();
+    const dkd_path = window.location.pathname.replace(/\/$/, '');
+    if (dkd_path.endsWith('/packages')) return DkdPackagesPage();
+    if (dkd_path.endsWith('/chat')) return DkdChatPage();
+    if (dkd_path.endsWith('/voice')) return DkdVoicePage();
+    if (dkd_path.endsWith('/custom')) return DkdCustomPage();
+    if (dkd_path.endsWith('/ads')) return DkdAdsPage();
+    if (dkd_path.endsWith('/payment')) return DkdPaymentPage();
+    if (dkd_path.endsWith('/faq')) return DkdFaqPage();
     return DkdHomePage();
   }
 
-  ReactDOM.createRoot(document.getElementById('dkd-root')).render(h(DkdApp));
+  ReactDOM.createRoot(document.getElementById('dkd-root')).render(DkdApp());
 })();

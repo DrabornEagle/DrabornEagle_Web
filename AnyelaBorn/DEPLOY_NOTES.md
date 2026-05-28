@@ -1,8 +1,6 @@
-# DKD AnyelaBorn Mobile React v1.5
+# AnyelaBorn Mobile React v1.6
 
-Bu paket `www.draborneagle.com/AnyelaBorn/` için mobil öncelikli React tabanlı statik deploy sürümüdür.
-
-- Canlı uygulama: `assets/app.js` içinde React ile render edilir.
-- İkonlar: manuel SVG yok; Font Awesome ikon kütüphanesi kullanılır.
-- Görseller: kullanıcının yüklediği Anyela görselleri `assets/images/` klasöründedir.
-- Build gerekmez; Termux'ta npm/vite hatası yaşamamak için hazır statik dosyalar push edilir.
+- React UMD runtime + local React component app.
+- No FontAwesome CDN dependency. Icons are local React-rendered symbols, so they do not disappear.
+- Mobile UI rebuilt to match the detailed mockup direction with wider cards, richer sections and supplied Anyela images.
+- Termux deploy does not run npm build.

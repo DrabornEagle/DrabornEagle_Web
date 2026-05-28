@@ -1,6 +1,5 @@
-// DKD Anyela Born Club React + TypeScript source placeholder
-// Canlı deploy dosyaları assets/app.js ve assets/styles.css içinde hazırdır.
-// Bu kaynak yapı ileride Vite build ile componentlere ayrılabilir.
+// DKD AnyelaBorn Mobile React v1.6 source mirror
+// Runtime file: assets/app.js
 export default function DkdAnyelaBornApp() {
   return null;
 }

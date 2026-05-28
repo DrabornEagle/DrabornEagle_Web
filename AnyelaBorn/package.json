@@ -1,15 +1,11 @@
 {
   "scripts": {
-    "dev": "vite --host 0.0.0.0",
-    "build": "vite build"
+    "build": "echo Static React build is precompiled"
   },
   "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "typescript": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "@fortawesome/fontawesome-free": "latest"
+    "@fortawesome/fontawesome-free": "not-required-local-icons",
+    "react": "18.x",
+    "react-dom": "18.x"
   },
   "devDependencies": {}
 }
