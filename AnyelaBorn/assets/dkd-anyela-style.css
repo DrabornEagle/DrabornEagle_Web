@@ -516,3 +516,206 @@ img { max-width: 100%; display: block; }
 @media (min-width: 761px) {
   .dkd-shell { border-left: 1px solid rgba(255,255,255,.05); border-right: 1px solid rgba(255,255,255,.05); }
 }
+
+/* DKD v1.8 - Mobile Mockup Wide/Detailed Mode
+   Keeps the 9:16 mockup composition dense on real phones instead of stacking everything vertically. */
+@media (max-width: 760px) {
+  .dkd-shell {
+    width: 100%;
+    max-width: 430px;
+    padding-bottom: 86px;
+    overflow-x: hidden;
+  }
+  .dkd-page-body { padding: 0 14px 16px; }
+  .dkd-header {
+    height: 70px;
+    padding: 8px 16px 8px 14px;
+    position: sticky;
+    top: 0;
+  }
+  .dkd-logo-wrap { gap: 10px; min-width: 0; }
+  .dkd-logo-mark { width: 52px; height: 48px; font-size: 30px; }
+  .dkd-logo-crown { top: -6px; left: 13px; font-size: 15px; }
+  .dkd-logo-text {
+    font-size: 20px;
+    line-height: 0.98;
+    max-width: 190px;
+  }
+  .dkd-icon-button { width: 44px; height: 44px; }
+  .dkd-icon-button svg { width: 28px; height: 28px; }
+
+  .dkd-hero {
+    grid-template-columns: 1.05fr .95fr;
+    gap: 12px;
+    align-items: center;
+    padding: 22px 0 12px;
+  }
+  .dkd-hero-copy { order: 0; min-width: 0; }
+  .dkd-hero-media {
+    order: 0;
+    min-height: 250px;
+    height: 250px;
+    border-radius: 24px;
+    transform: rotate(2.5deg);
+    margin: 0 4px 0 0;
+  }
+  .dkd-hero-media img {
+    min-height: 250px;
+    height: 250px;
+    object-position: 50% 18%;
+  }
+  .dkd-neon-sign {
+    font-size: 22px;
+    right: 10px;
+    bottom: 16px;
+  }
+  .dkd-mini-spark { font-size: 19px; margin-bottom: 2px; }
+  .dkd-hero h1, .dkd-page-title h1 {
+    font-size: 31px;
+    line-height: 1.02;
+    letter-spacing: -0.85px;
+  }
+  .dkd-hero p, .dkd-page-title p {
+    font-size: 12.5px;
+    line-height: 1.46;
+    margin: 12px 0 14px;
+    max-width: 210px;
+  }
+  .dkd-hero-actions { gap: 8px; flex-wrap: nowrap; }
+  .dkd-primary-btn, .dkd-ghost-btn {
+    min-height: 44px;
+    height: 44px;
+    padding: 0 12px;
+    border-radius: 13px;
+    font-size: 12.5px;
+    gap: 6px;
+    white-space: nowrap;
+  }
+  .dkd-primary-btn svg, .dkd-ghost-btn svg { width: 15px; height: 15px; }
+  .dkd-text-link {
+    font-size: 13px;
+    margin-top: 11px;
+    gap: 5px;
+  }
+  .dkd-text-link svg { width: 15px; height: 15px; }
+
+  .dkd-trust-row {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin: 8px 0 13px;
+  }
+  .dkd-trust-pill {
+    min-height: 52px;
+    padding: 8px 7px;
+    gap: 5px;
+    border-radius: 12px;
+    justify-content: center;
+  }
+  .dkd-trust-pill svg { width: 17px; height: 17px; flex: 0 0 auto; }
+  .dkd-trust-pill strong {
+    font-size: 10.5px;
+    line-height: 1.1;
+    white-space: normal;
+  }
+  .dkd-trust-pill small { display:none; }
+
+  .dkd-how {
+    padding: 14px 12px 13px;
+    border-radius: 22px;
+    margin-bottom: 13px;
+  }
+  .dkd-how h2 {
+    font-size: 21px;
+    margin: 0 0 12px;
+  }
+  .dkd-step-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .dkd-step {
+    min-height: 126px;
+    padding: 17px 7px 8px;
+    border-radius: 16px;
+  }
+  .dkd-step b {
+    width: 25px;
+    height: 25px;
+    font-size: 13px;
+    top: 10px;
+    left: 10px;
+  }
+  .dkd-step svg { width: 29px; height: 29px; margin: 13px auto 9px; }
+  .dkd-step h3 { font-size: 13px; line-height: 1.15; margin: 0 0 6px; }
+  .dkd-step p { font-size: 10.2px; line-height: 1.25; margin: 0; }
+
+  .dkd-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin-top: 0;
+  }
+  .dkd-service-card {
+    min-height: 84px;
+    grid-template-columns: 48px 1fr 25px;
+    gap: 8px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+  .dkd-service-icon {
+    width: 46px;
+    height: 46px;
+    border-radius: 14px;
+  }
+  .dkd-service-icon svg { width: 30px; height: 30px; }
+  .dkd-service-text strong { font-size: 14px; line-height: 1.1; }
+  .dkd-service-text small { font-size: 10.7px; line-height: 1.25; margin-top: 4px; }
+  .dkd-round-arrow { width: 27px; height: 27px; }
+  .dkd-round-arrow svg { width: 15px; height: 15px; }
+
+  .dkd-cta-band {
+    grid-template-columns: 36px 1fr auto;
+    gap: 10px;
+    padding: 12px;
+    border-radius: 17px;
+    margin-top: 13px;
+  }
+  .dkd-cta-band > svg { width: 28px; height: 28px; }
+  .dkd-cta-band h2 { font-size: 14px; line-height: 1.15; margin: 0; }
+  .dkd-cta-band p { font-size: 10.5px; margin: 4px 0 0; line-height: 1.3; }
+  .dkd-cta-band .dkd-primary-btn {
+    grid-column: auto;
+    width: auto;
+    min-height: 42px;
+    height: 42px;
+    font-size: 12.5px;
+    padding: 0 13px;
+  }
+
+  .dkd-bottom-nav {
+    width: calc(100vw - 6px);
+    max-width: 424px;
+    height: 76px;
+    border-radius: 28px 28px 0 0;
+    padding: 8px 10px calc(8px + env(safe-area-inset-bottom));
+    gap: 2px;
+  }
+  .dkd-nav-item {
+    border-radius: 20px;
+    font-size: 11px;
+    gap: 3px;
+  }
+  .dkd-nav-item svg { width: 22px; height: 22px; }
+  .dkd-nav-item.dkd-active { min-width: 72px; }
+
+  /* Keep internal pages dense too */
+  .dkd-page-title { padding-top: 20px; }
+  .dkd-page-title h1, .dkd-voice-title h1, .dkd-faq-title h1 { font-size: 38px; }
+  .dkd-package-grid, .dkd-ad-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+  .dkd-package-section { padding: 12px; border-radius: 22px; }
+  .dkd-package-section h2 { font-size: 18px; }
+  .dkd-package-card, .dkd-ad-card { min-height: 178px; padding: 12px 8px; border-radius: 15px; }
+  .dkd-package-card svg, .dkd-ad-card svg { width: 30px; height: 30px; }
+  .dkd-package-card h3, .dkd-ad-card h3 { font-size: 13.2px; line-height: 1.1; margin: 8px 0 6px; }
+  .dkd-package-card p, .dkd-ad-card p { font-size: 10.2px; line-height: 1.25; }
+  .dkd-price, .dkd-ad-card strong { font-size: 17px; }
+  .dkd-package-card button, .dkd-ad-card button { height: 34px; font-size: 11px; border-radius: 10px; }
+}

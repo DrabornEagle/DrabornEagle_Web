@@ -1,9 +1,9 @@
-# DKD AnyelaBorn Pixel Mobile v1.7
+# DKD AnyelaBorn v1.8 Compact Mockup Mobile
 
-Bu sürüm React ESM + lucide-react ikon kütüphanesi ile hazırlanmıştır.
-Statik GitHub Pages deploy için npm build gerekmez.
-
-- Canlı uygulama: /AnyelaBorn/index.html + /AnyelaBorn/assets/dkd-anyela-app.js
-- İkonlar: lucide-react ESM import
-- Görseller: kullanıcı tarafından sağlanan Anyela görselleri
-- Sayfalar: /packages /chat /voice /custom /ads /payment /faq
+Bu sürüm gerçek telefonda mockup ekranındaki geniş/detaylı kompozisyona daha yakın görünmesi için mobil breakpoint'i yeniden sıkıştırır:
+- Hero 2 sütun kalır.
+- Trust rozetleri 4 sütun kalır.
+- Nasıl Çalışır 4 adım tek satır kalır.
+- Hizmet kartları 2 sütun kalır.
+- Header ve bottom nav kompakt hale getirildi.
+- npm build çalıştırmaz; hazır statik React dosyaları push edilir.
