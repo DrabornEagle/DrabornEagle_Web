@@ -1,0 +1,259 @@
+:root {
+  --dkd_anyela_miami_navy: #061044;
+  --dkd_anyela_miami_deep: #080324;
+  --dkd_anyela_miami_aqua: #18f7ff;
+  --dkd_anyela_miami_pink: #ff36c7;
+  --dkd_anyela_miami_orange: #ff8a35;
+  --dkd_anyela_miami_yellow: #ffe66d;
+  --dkd_anyela_miami_purple: #6f5cff;
+  --dkd_anyela_miami_ink: #ffffff;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  min-height: 100%;
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--dkd_anyela_miami_ink);
+  background:
+    radial-gradient(circle at 18% 0%, rgba(24, 247, 255, 0.26), transparent 24rem),
+    radial-gradient(circle at 88% 12%, rgba(255, 54, 199, 0.34), transparent 24rem),
+    radial-gradient(circle at 50% 110%, rgba(255, 138, 53, 0.30), transparent 26rem),
+    linear-gradient(180deg, #061044 0%, #170142 52%, #05031d 100%);
+}
+
+a, button { -webkit-tap-highlight-color: transparent; }
+a { color: inherit; text-decoration: none; }
+
+.dkd_anyela_miami_page {
+  width: 100%;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
+}
+
+.dkd_anyela_miami_shell {
+  width: min(100vw, 480px);
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  padding: 18px 16px 104px;
+  background:
+    linear-gradient(180deg, rgba(6, 16, 68, 0.92), rgba(22, 2, 66, 0.94)),
+    radial-gradient(circle at 20% 10%, rgba(24, 247, 255, 0.24), transparent 18rem);
+  box-shadow: 0 32px 90px rgba(0, 0, 0, 0.46);
+}
+
+.dkd_anyela_miami_shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    linear-gradient(115deg, transparent 0 34%, rgba(255, 255, 255, 0.06) 42%, transparent 58% 100%),
+    radial-gradient(circle at 86% 8%, rgba(255, 230, 109, 0.14), transparent 10rem);
+}
+
+.dkd_anyela_miami_topbar {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.dkd_anyela_miami_back,
+.dkd_anyela_miami_icon_button {
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.20);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 12px 24px rgba(0, 0, 0, 0.22);
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.dkd_anyela_miami_brand {
+  flex: 1;
+  min-width: 0;
+}
+
+.dkd_anyela_miami_brand strong {
+  display: block;
+  font-size: clamp(22px, 6vw, 32px);
+  letter-spacing: -0.04em;
+}
+
+.dkd_anyela_miami_brand span {
+  display: inline-flex;
+  margin-top: 4px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: linear-gradient(100deg, rgba(24, 247, 255, 0.22), rgba(255, 54, 199, 0.20));
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.dkd_anyela_miami_hero,
+.dkd_anyela_miami_card,
+.dkd_anyela_miami_panel {
+  position: relative;
+  z-index: 1;
+  border-radius: 28px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background:
+    radial-gradient(circle at 12% 12%, rgba(24, 247, 255, 0.20), transparent 30%),
+    radial-gradient(circle at 90% 8%, rgba(255, 54, 199, 0.22), transparent 26%),
+    rgba(255, 255, 255, 0.10);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+}
+
+.dkd_anyela_miami_hero { padding: 22px; margin-bottom: 18px; }
+.dkd_anyela_miami_hero h1 { margin: 0; font-size: clamp(30px, 8vw, 44px); line-height: 0.98; letter-spacing: -0.06em; }
+.dkd_anyela_miami_hero p { margin: 12px 0 0; color: rgba(255, 255, 255, 0.78); font-size: 15px; line-height: 1.55; }
+
+.dkd_anyela_miami_gradient_text {
+  background: linear-gradient(100deg, var(--dkd_anyela_miami_aqua), #ffffff 38%, var(--dkd_anyela_miami_pink) 72%, var(--dkd_anyela_miami_orange));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dkd_anyela_miami_grid { position: relative; z-index: 1; display: grid; gap: 14px; }
+.dkd_anyela_miami_grid_two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.dkd_anyela_miami_card { padding: 16px; overflow: hidden; }
+.dkd_anyela_miami_card::after {
+  content: "";
+  position: absolute;
+  inset: auto -20% -45% 18%;
+  height: 90px;
+  background: radial-gradient(circle, rgba(255, 138, 53, 0.34), transparent 62%);
+  pointer-events: none;
+}
+
+.dkd_anyela_miami_card_icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--dkd_anyela_miami_aqua), var(--dkd_anyela_miami_pink));
+  box-shadow: 0 12px 24px rgba(255, 54, 199, 0.28), inset 0 1px 0 rgba(255,255,255,.32);
+  font-size: 26px;
+}
+
+.dkd_anyela_miami_card h2,
+.dkd_anyela_miami_card h3 { margin: 12px 0 6px; line-height: 1.05; }
+.dkd_anyela_miami_card h2 { font-size: 24px; }
+.dkd_anyela_miami_card h3 { font-size: 19px; }
+.dkd_anyela_miami_card p { margin: 0; color: rgba(255, 255, 255, 0.74); font-size: 13px; line-height: 1.45; }
+
+.dkd_anyela_miami_price {
+  display: block;
+  margin-top: 12px;
+  font-size: 28px;
+  font-weight: 1000;
+  letter-spacing: -0.05em;
+}
+
+.dkd_anyela_miami_badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.dkd_anyela_miami_cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 14px;
+  border-radius: 18px;
+  background: linear-gradient(100deg, var(--dkd_anyela_miami_aqua), var(--dkd_anyela_miami_purple) 38%, var(--dkd_anyela_miami_pink) 68%, var(--dkd_anyela_miami_orange));
+  color: #ffffff;
+  font-weight: 1000;
+  letter-spacing: 0.02em;
+  box-shadow: 0 14px 28px rgba(255, 54, 199, 0.32), 0 0 24px rgba(24, 247, 255, 0.24);
+}
+
+.dkd_anyela_miami_panel { padding: 16px; margin-top: 14px; }
+.dkd_anyela_miami_panel h2 { margin: 0 0 12px; font-size: 22px; }
+.dkd_anyela_miami_panel p { margin: 0; color: rgba(255,255,255,.76); line-height: 1.55; font-size: 14px; }
+
+.dkd_anyela_miami_input,
+.dkd_anyela_miami_textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 18px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.10);
+  color: #ffffff;
+  outline: none;
+  font: inherit;
+}
+.dkd_anyela_miami_textarea { min-height: 104px; resize: vertical; }
+.dkd_anyela_miami_input::placeholder,
+.dkd_anyela_miami_textarea::placeholder { color: rgba(255, 255, 255, 0.50); }
+
+.dkd_anyela_miami_stack { display: grid; gap: 12px; }
+
+.dkd_anyela_miami_bottom_nav {
+  position: fixed;
+  left: 50%;
+  bottom: max(10px, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  width: min(calc(100vw - 18px), 462px);
+  z-index: 9;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 6px;
+  padding: 9px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #62516c;
+  box-shadow: 0 -16px 40px rgba(0, 0, 0, 0.24);
+}
+
+.dkd_anyela_miami_bottom_nav a {
+  min-height: 58px;
+  display: grid;
+  place-items: center;
+  gap: 2px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 850;
+}
+
+.dkd_anyela_miami_bottom_nav strong { font-size: 23px; line-height: 1; }
+.dkd_anyela_miami_bottom_nav .dkd_anyela_miami_active {
+  color: var(--dkd_anyela_miami_pink);
+  background: linear-gradient(180deg, rgba(255, 54, 199, 0.12), rgba(24, 247, 255, 0.08));
+}
+
+@media (min-width: 820px) {
+  .dkd_anyela_miami_page { align-items: center; padding: 32px 0; }
+  .dkd_anyela_miami_shell { min-height: auto; border-radius: 38px; border: 1px solid rgba(255,255,255,.16); }
+}
