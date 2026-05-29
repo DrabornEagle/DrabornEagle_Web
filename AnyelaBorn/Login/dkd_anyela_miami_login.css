@@ -61,6 +61,11 @@ svg {
   stroke-linejoin: round;
 }
 
+.dkd_anyela_brand_svg,
+.dkd_anyela_brand_svg path {
+  stroke: none;
+}
+
 .dkd_anyela_page {
   min-height: 100svh;
   display: flex;
@@ -72,7 +77,7 @@ svg {
 
 .dkd_anyela_phone_shell {
   position: relative;
-  width: min(100vw, 560px);
+  width: min(100vw, 590px);
   min-height: 100svh;
   background:
     linear-gradient(180deg, rgba(6, 12, 48, 0.14) 0%, rgba(6, 8, 35, 0.98) 43%, #060822 100%);
@@ -118,44 +123,27 @@ svg {
   overflow: hidden;
 }
 
-.dkd_anyela_hero::before {
-  content: "";
-  position: absolute;
-  z-index: 1;
-  left: 5.5%;
-  top: 45.4%;
-  width: 42.5%;
-  height: 8.6%;
-  border-radius: 14px;
-  background:
-    linear-gradient(100deg, rgba(20, 16, 58, 0.84), rgba(15, 13, 53, 0.56) 63%, transparent 100%),
-    radial-gradient(circle at 18% 50%, rgba(19, 22, 70, 0.84), rgba(19, 22, 70, 0.25) 62%, transparent 100%);
-  filter: blur(0.2px);
-  pointer-events: none;
-}
-
 .dkd_anyela_hero::after {
   content: "";
   position: absolute;
-  z-index: 2;
   inset: auto 0 0;
-  height: 96px;
+  height: 104px;
   background: linear-gradient(180deg, transparent 0%, rgba(8, 9, 40, 0.48) 52%, rgba(8, 9, 40, 0.97) 100%);
 }
 
 .dkd_anyela_login_card {
   position: relative;
-  z-index: 3;
-  width: calc(100% - clamp(20px, 5.1vw, 30px));
-  margin: -5px auto 18px;
-  padding: clamp(18px, 4.7vw, 28px) clamp(17px, 4.6vw, 26px) clamp(18px, 4.6vw, 26px);
-  border: 1px solid rgba(255, 92, 211, 0.44);
+  z-index: 2;
+  width: auto;
+  margin: -5px clamp(8px, 2.8vw, 18px) 18px;
+  padding: clamp(18px, 4.7vw, 29px) clamp(16px, 4vw, 26px) clamp(18px, 4.6vw, 27px);
+  border: 1px solid rgba(255, 92, 211, 0.43);
   border-radius: var(--dkd_anyela_radius_large) var(--dkd_anyela_radius_large) 22px 22px;
   background:
-    linear-gradient(180deg, rgba(21, 18, 67, 0.95) 0%, rgba(8, 12, 48, 0.97) 48%, rgba(9, 11, 39, 0.985) 100%),
-    radial-gradient(circle at 11% 12%, rgba(255, 74, 199, 0.25), transparent 31%);
+    linear-gradient(180deg, rgba(21, 18, 67, 0.94) 0%, rgba(8, 12, 48, 0.96) 48%, rgba(9, 11, 39, 0.98) 100%),
+    radial-gradient(circle at 11% 12%, rgba(255, 74, 199, 0.22), transparent 31%);
   box-shadow:
-    0 -16px 42px rgba(255, 57, 204, 0.22),
+    0 -16px 42px rgba(255, 57, 204, 0.2),
     0 28px 60px rgba(0, 0, 0, 0.46),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(18px);
@@ -216,9 +204,9 @@ svg {
   display: grid;
   grid-template-columns: 46px 1fr auto;
   align-items: center;
-  border: 1px solid rgba(152, 142, 255, 0.58);
-  border-radius: 17px;
-  background: linear-gradient(90deg, rgba(87, 45, 118, 0.74), rgba(22, 24, 74, 0.7));
+  border: 1px solid rgba(152, 142, 255, 0.55);
+  border-radius: 18px;
+  background: linear-gradient(90deg, rgba(87, 45, 118, 0.72), rgba(22, 24, 74, 0.68));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
     0 0 0 1px rgba(255, 88, 213, 0.08);
@@ -327,7 +315,7 @@ svg {
   justify-content: center;
   align-items: center;
   gap: 18px;
-  border-radius: 15px;
+  border-radius: 16px;
   color: white;
   background: linear-gradient(100deg, #ff983b 0%, #ff5b69 41%, #f700b9 100%);
   box-shadow:
@@ -379,76 +367,82 @@ svg {
 .dkd_anyela_social_grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 10px;
+  gap: clamp(8px, 2.2vw, 13px);
 }
 
 .dkd_anyela_social_button {
-  min-height: clamp(55px, 12.6vw, 70px);
+  min-height: clamp(56px, 12.8vw, 72px);
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(6px, 1.8vw, 11px);
-  padding: 0 8px;
-  border: 1px solid rgba(169, 145, 255, 0.58);
-  border-radius: 17px;
+  gap: clamp(6px, 1.8vw, 10px);
+  padding: 0 clamp(6px, 2vw, 12px);
+  border: 1px solid rgba(168, 142, 255, 0.58);
+  border-radius: 18px;
   color: rgba(255, 255, 255, 0.84);
   background:
-    linear-gradient(180deg, rgba(74, 50, 132, 0.83), rgba(18, 22, 74, 0.82)),
-    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.12), transparent 44%);
+    linear-gradient(180deg, rgba(85, 57, 139, 0.82), rgba(18, 22, 74, 0.84)),
+    radial-gradient(circle at 20% 12%, rgba(255, 255, 255, 0.14), transparent 34%);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.1),
-    0 8px 22px rgba(0, 0, 0, 0.22);
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 11px 22px rgba(0, 0, 0, 0.22),
+    0 0 18px rgba(126, 94, 255, 0.14);
   font-size: clamp(12px, 3.3vw, 17px);
-  font-weight: 760;
+  font-weight: 800;
+  transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.dkd_anyela_social_button:hover,
+.dkd_anyela_social_button:focus-visible {
+  border-color: rgba(255, 92, 211, 0.76);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 12px 24px rgba(0, 0, 0, 0.24),
+    0 0 22px rgba(255, 72, 204, 0.18);
 }
 
 .dkd_anyela_social_icon {
-  width: clamp(31px, 8vw, 41px);
-  height: clamp(31px, 8vw, 41px);
+  width: clamp(34px, 8vw, 44px);
+  height: clamp(34px, 8vw, 44px);
   display: grid;
   place-items: center;
   flex: 0 0 auto;
   border-radius: 14px;
-  background: rgba(255, 255, 255, 0.96);
   box-shadow:
-    0 0 16px rgba(255, 80, 209, 0.16),
-    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 0 18px rgba(255, 72, 204, 0.22);
+  overflow: hidden;
 }
 
 .dkd_anyela_social_icon svg {
-  width: 72%;
-  height: 72%;
-  stroke-width: 0;
-}
-
-.dkd_anyela_google_mark svg path,
-.dkd_anyela_apple_mark svg path {
-  stroke: none;
-}
-
-.dkd_anyela_google_blue { fill: #4285f4; }
-.dkd_anyela_google_green { fill: #34a853; }
-.dkd_anyela_google_yellow { fill: #fbbc05; }
-.dkd_anyela_google_red { fill: #ea4335; }
-
-.dkd_anyela_apple_mark {
-  background: linear-gradient(180deg, #ffffff, #e9e8ff);
-}
-
-.dkd_anyela_apple_mark svg path {
-  fill: #080a21;
-}
-
-.dkd_anyela_instagram_mark {
-  background: radial-gradient(circle at 28% 92%, #ffd86a, #ff625d 36%, #f000b9 61%, #5b52ff 100%);
-}
-
-.dkd_anyela_instagram_mark svg {
   width: 70%;
   height: 70%;
+}
+
+.dkd_anyela_google_icon {
+  background: rgba(255, 255, 255, 0.96);
+}
+
+.dkd_anyela_apple_icon {
   color: white;
-  stroke: currentColor;
-  stroke-width: 3;
+  background: linear-gradient(180deg, #ffffff 0%, #d7dcff 100%);
+}
+
+.dkd_anyela_apple_icon svg {
+  width: 73%;
+  height: 73%;
+  color: #08091f;
+}
+
+.dkd_anyela_instagram_icon {
+  color: white;
+  background: radial-gradient(circle at 27% 92%, #ffd86a, #ff625d 36%, #f000b9 61%, #5b52ff 100%);
+}
+
+.dkd_anyela_instagram_icon svg {
+  width: 68%;
+  height: 68%;
+  stroke-width: 1.9;
 }
 
 .dkd_anyela_join_big {
@@ -460,7 +454,7 @@ svg {
   align-items: center;
   gap: 18px;
   border: 1px solid rgba(255, 76, 203, 0.92);
-  border-radius: 16px;
+  border-radius: 17px;
   color: #ff5bd1;
   background: linear-gradient(180deg, rgba(21, 22, 70, 0.82), rgba(11, 13, 49, 0.88));
   box-shadow:
@@ -561,8 +555,8 @@ svg {
 
 @media (max-width: 390px) {
   .dkd_anyela_login_card {
-    width: calc(100% - 18px);
-    padding-inline: 14px;
+    margin-inline: 7px;
+    padding-inline: 13px;
   }
 
   .dkd_anyela_social_grid {
@@ -571,15 +565,15 @@ svg {
 
   .dkd_anyela_social_button {
     padding-inline: 5px;
+    gap: 5px;
+  }
+
+  .dkd_anyela_social_button > span:last-child {
+    font-size: 11px;
   }
 
   .dkd_anyela_city_line {
     display: none;
-  }
-
-  .dkd_anyela_hero::before {
-    left: 4.8%;
-    width: 44%;
   }
 }
 
@@ -597,6 +591,6 @@ svg {
   }
 
   .dkd_anyela_hero {
-    min-height: 404px;
+    min-height: 430px;
   }
 }
