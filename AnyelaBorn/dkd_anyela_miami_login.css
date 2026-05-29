@@ -72,7 +72,7 @@ svg {
 
 .dkd_anyela_phone_shell {
   position: relative;
-  width: min(100vw, 620px);
+  width: min(100vw, 540px);
   min-height: 100svh;
   background:
     linear-gradient(180deg, rgba(6, 12, 48, 0.14) 0%, rgba(6, 8, 35, 0.98) 43%, #060822 100%);
@@ -111,11 +111,9 @@ svg {
   position: relative;
   width: 100%;
   aspect-ratio: 864 / 650;
-  min-height: clamp(300px, 83vw, 468px);
-  background-color: #07103a;
+  min-height: 360px;
   background-image: url("./assets/dkd_anyela_miami_hero.jpg");
-  background-size: 100% auto;
-  background-repeat: no-repeat;
+  background-size: cover;
   background-position: top center;
   overflow: hidden;
 }
@@ -126,42 +124,6 @@ svg {
   inset: auto 0 0;
   height: 96px;
   background: linear-gradient(180deg, transparent 0%, rgba(8, 9, 40, 0.48) 52%, rgba(8, 9, 40, 0.97) 100%);
-}
-
-.dkd_anyela_hero_welcome {
-  position: absolute;
-  left: 9.3%;
-  top: 47.5%;
-  z-index: 1;
-  display: inline-flex;
-  align-items: center;
-  gap: clamp(6px, 1.6vw, 12px);
-  color: #ff55d2;
-  font-family: "Brush Script MT", "Segoe Script", "Snell Roundhand", cursive;
-  font-size: clamp(50px, 15vw, 92px);
-  font-weight: 400;
-  line-height: 0.86;
-  letter-spacing: -0.055em;
-  text-shadow:
-    0 0 6px rgba(255, 71, 205, 0.68),
-    0 0 18px rgba(255, 71, 205, 0.48),
-    0 2px 8px rgba(0, 0, 0, 0.45);
-  transform: rotate(-2deg);
-  pointer-events: none;
-  white-space: nowrap;
-}
-
-.dkd_anyela_hero_welcome em {
-  color: #ff9b55;
-  font-family: Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.72em;
-  font-style: normal;
-  font-weight: 800;
-  letter-spacing: -0.12em;
-  transform: translateY(-0.16em) rotate(7deg);
-  text-shadow:
-    0 0 8px rgba(255, 143, 79, 0.76),
-    0 0 19px rgba(255, 71, 205, 0.5);
 }
 
 .dkd_anyela_login_card {
@@ -411,57 +373,44 @@ svg {
   padding: 0 8px;
   border: 1px solid rgba(151, 128, 255, 0.52);
   border-radius: 15px;
-  color: rgba(255, 255, 255, 0.82);
-  background:
-    linear-gradient(180deg, rgba(80, 48, 137, 0.72), rgba(18, 22, 74, 0.82)),
-    radial-gradient(circle at 22% 0%, rgba(255, 255, 255, 0.16), transparent 45%);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.08),
-    0 8px 22px rgba(0, 0, 0, 0.18);
+  color: rgba(255, 255, 255, 0.77);
+  background: linear-gradient(180deg, rgba(62, 41, 113, 0.77), rgba(18, 22, 74, 0.78));
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
   font-size: clamp(12px, 3.3vw, 17px);
   font-weight: 700;
 }
 
-.dkd_anyela_social_icon {
-  width: clamp(30px, 7.6vw, 40px);
-  height: clamp(30px, 7.6vw, 40px);
+.dkd_anyela_google_mark,
+.dkd_anyela_apple_mark,
+.dkd_anyela_instagram_mark {
+  width: clamp(28px, 7.4vw, 38px);
+  height: clamp(28px, 7.4vw, 38px);
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow:
-    0 0 18px rgba(255, 79, 197, 0.16),
-    inset 0 1px 0 rgba(255, 255, 255, 0.72);
-  overflow: hidden;
+  border-radius: 10px;
+  font-weight: 900;
 }
 
-.dkd_anyela_social_icon svg {
-  width: 76%;
-  height: 76%;
-  stroke: none;
-}
-
-.dkd_anyela_google_icon svg path,
-.dkd_anyela_apple_icon svg path {
-  stroke: none;
-}
-
-.dkd_anyela_apple_icon {
-  color: #11121f;
-}
-
-.dkd_anyela_instagram_icon {
-  background: radial-gradient(circle at 32% 94%, #ffd86a, #ff625d 35%, #f000b9 62%, #5b52ff 100%);
-}
-
-.dkd_anyela_instagram_icon svg {
-  width: 69%;
-  height: 69%;
+.dkd_anyela_google_mark {
+  font-size: clamp(22px, 6vw, 30px);
   color: #fff;
-  stroke: currentColor;
-  stroke-width: 3.2;
-  fill: none;
+  background: conic-gradient(from -40deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+}
+
+.dkd_anyela_apple_mark {
+  color: white;
+  font-size: 22px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.45));
+  box-shadow: inset 0 0 0 14px #ffffff;
+}
+
+.dkd_anyela_instagram_mark {
+  color: white;
+  font-size: clamp(20px, 6vw, 28px);
+  background: radial-gradient(circle at 28% 92%, #ffd86a, #ff625d 36%, #f000b9 61%, #5b52ff 100%);
 }
 
 .dkd_anyela_join_big {
@@ -605,6 +554,6 @@ svg {
   }
 
   .dkd_anyela_hero {
-    min-height: 466px;
+    min-height: 404px;
   }
 }
