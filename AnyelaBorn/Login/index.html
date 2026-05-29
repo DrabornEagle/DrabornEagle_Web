@@ -6,36 +6,29 @@
     <meta name="theme-color" content="#061044" />
     <meta
       name="description"
-      content="Anyela Born Club Login — Miami temalı giriş ekranı, özel sohbet, sesli mesaj, fotoğraf & video ve reklam paketleri."
+      content="Anyela Born Club Login — Miami temalı giriş ekranı, misafir girişi, özel sohbet, sesli mesaj, fotoğraf & video ve reklam paketleri."
     />
-    <meta property="og:title" content="Anyela Born Club" />
+    <meta property="og:title" content="Anyela Born Club Login" />
     <meta
       property="og:description"
-      content="Anyela Born Club dünyasına hoş geldin. Giriş yap, paketleri keşfet ve Anyela ile bağlantı kur."
+      content="Anyela Born Club dünyasına hoş geldin. Misafir olarak devam et, giriş yap, paketleri keşfet ve Anyela ile bağlantı kur."
     />
-    <meta property="og:image" content="./assets/dkd_anyela_miami_home_reference.png" />
+    <meta property="og:image" content="../assets/dkd_anyela_miami_home_reference.png" />
     <title>Anyela Born Club Login</title>
     <link rel="stylesheet" href="../dkd_anyela_home.css" />
   </head>
   <body>
     <main class="dkd_anyela_home_page" id="dkd_anyela_home_root">
-      <section class="dkd_anyela_home_shell" aria-label="Anyela Born Club ana sayfa">
+      <section class="dkd_anyela_home_shell" aria-label="Anyela Born Club Login sayfası">
         <div class="dkd_anyela_home_phone">
           <img
             class="dkd_anyela_home_mockup"
             src="../assets/dkd_anyela_miami_home_reference.png"
-            alt="Anyela Born Club Miami temalı ana sayfa"
+            alt="Anyela Born Club Miami temalı giriş sayfası"
             width="864"
             height="1536"
             loading="eager"
           />
-
-          <div class="dkd_anyela_home_removed_menu_patch" aria-hidden="true"></div>
-          <div class="dkd_anyela_home_removed_bell_patch" aria-hidden="true"></div>
-          <div class="dkd_anyela_home_guest_label" aria-hidden="true">
-            <strong>Misafir Girişi</strong>
-            <span>Anyela ile bağlantı kur</span>
-          </div>
 
           <section class="dkd_anyela_home_login_panel" aria-label="Anyela Born Club giriş penceresi">
             <div class="dkd_anyela_home_login_tabs" role="tablist" aria-label="Giriş seçenekleri">
@@ -100,6 +93,13 @@
                 <a class="dkd_anyela_home_forgot" href="./">Şifremi Unuttum?</a>
               </div>
 
+              <a class="dkd_anyela_home_guest_button" href="./?dkd_anyela_guest=1" aria-label="Misafir girişi ile devam et">
+                <span class="dkd_anyela_home_guest_icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3.8a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2Z"/><path d="M4.8 20.2c.9-3.7 3.4-5.6 7.2-5.6s6.3 1.9 7.2 5.6"/><path d="M19.7 4.9l1.5 1.5-3.3 3.3"/></svg>
+                </span>
+                Misafir Girişi
+              </a>
+
               <button class="dkd_anyela_home_submit" type="submit">
                 Giriş Yap
                 <span aria-hidden="true">›</span>
@@ -136,12 +136,12 @@
           </section>
 
           <nav class="dkd_anyela_home_hotspots" aria-label="Anyela Born Club hızlı bağlantılar">
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_start" href="./" aria-label="Misafir girişi ve giriş sayfasına git"></a>
+            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_start" href="./?dkd_anyela_guest=1" aria-label="Misafir girişi ile devam et"></a>
             <a class="dkd_anyela_hotspot dkd_anyela_hotspot_chat_card" href="#dkd_anyela_home_chat" aria-label="Sohbet paketleri"></a>
             <a class="dkd_anyela_hotspot dkd_anyela_hotspot_voice_card" href="#dkd_anyela_home_voice" aria-label="Voice Chat paketleri"></a>
             <a class="dkd_anyela_hotspot dkd_anyela_hotspot_photo_card" href="#dkd_anyela_home_photo" aria-label="Fotoğraf ve video paketleri"></a>
             <a class="dkd_anyela_hotspot dkd_anyela_hotspot_ads_card" href="#dkd_anyela_home_ads" aria-label="Reklam paketleri"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_home" href="../" aria-label="Ana sayfa"></a>
+            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_home" href="./" aria-label="Login ana alanı"></a>
             <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_packages" href="#dkd_anyela_home_packages" aria-label="Paketler"></a>
             <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_chat" href="./" aria-label="Chat"></a>
             <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_orders" href="#dkd_anyela_home_orders" aria-label="Siparişler"></a>
@@ -150,11 +150,12 @@
         </div>
 
         <section class="dkd_anyela_home_text_fallback" aria-label="Sayfa özeti">
-          <h1>Anyela Born Club</h1>
+          <h1>Anyela Born Club Login</h1>
           <p>
-            Anyela Born Club Login sayfası.
-            Giriş yap, paketleri keşfet ve Anyela ile bağlantı kur.
+            Anyela Born Club ana sayfası geçici olarak Login rotasına taşındı.
+            Misafir olarak devam et, giriş yap, paketleri keşfet ve Anyela ile bağlantı kur.
           </p>
+          <a class="dkd_anyela_home_fallback_button" href="./?dkd_anyela_guest=1">Misafir Girişi</a>
           <a class="dkd_anyela_home_fallback_button" href="./">Giriş Yap</a>
         </section>
       </section>
