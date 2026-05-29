@@ -6,14 +6,14 @@
     <meta name="theme-color" content="#05002b" />
     <meta
       name="description"
-      content="Anyela Born Club ana sayfası — Miami Vibes özel tanışma ekranı."
+      content="Anyela Born Club ana sayfası — Miami Vibes özel tanışma ve video ekranı."
     />
     <meta property="og:title" content="Anyela Born Club" />
     <meta
       property="og:description"
-      content="Anyela Born Club dünyasına giriş yap. Devam etmek için ekrana dokun."
+      content="Anyela Born Club dünyasına giriş yap. Play butonuna basınca video başlar."
     />
-    <meta property="og:image" content="./assets/dkd_anyela_root_9910_20260529.png" />
+    <meta property="og:image" content="./assets/dkd_anyela_root_9920_20260529.png" />
     <title>Anyela Born Club</title>
     <style>
       :root {
@@ -37,8 +37,15 @@
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
-      a {
+      a,
+      button {
         -webkit-tap-highlight-color: transparent;
+      }
+
+      button {
+        border: 0;
+        padding: 0;
+        font: inherit;
       }
 
       .dkd_anyela_root_page {
@@ -72,17 +79,55 @@
       .dkd_anyela_root_full_link {
         position: absolute;
         inset: 0;
-        z-index: 100;
+        z-index: 40;
         display: block;
         cursor: pointer;
         outline: none;
         text-decoration: none;
       }
 
+      .dkd_anyela_root_video {
+        position: absolute;
+        left: 3.55%;
+        top: 65.65%;
+        width: 92.90%;
+        height: 21.90%;
+        z-index: 70;
+        display: block;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 24px;
+        opacity: 0;
+        pointer-events: none;
+        background: #000000;
+        box-shadow: 0 0 24px rgba(255, 35, 188, 0.22);
+        transition: opacity 180ms ease;
+      }
+
+      .dkd_anyela_root_video[data-dkd-anyela-video-active="true"] {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .dkd_anyela_root_play_button {
+        position: absolute;
+        left: 41.8%;
+        top: 73.0%;
+        width: 16.5%;
+        height: 10.0%;
+        z-index: 90;
+        display: block;
+        border-radius: 999px;
+        background: transparent;
+        cursor: pointer;
+        outline: none;
+      }
+
+      .dkd_anyela_root_play_button:focus-visible,
       .dkd_anyela_root_full_link:focus-visible {
         box-shadow:
-          inset 0 0 0 4px rgba(255, 255, 255, 0.92),
-          inset 0 0 0 9px rgba(255, 35, 188, 0.72),
+          0 0 0 4px rgba(255, 255, 255, 0.92),
+          0 0 0 9px rgba(255, 35, 188, 0.72),
           0 0 34px rgba(24, 247, 255, 0.72);
       }
 
@@ -126,7 +171,7 @@
       <section class="dkd_anyela_root_mobile_shell" id="dkd_anyela_root_home">
         <img
           class="dkd_anyela_root_mockup"
-          src="./assets/dkd_anyela_root_9910_20260529.png"
+          src="./assets/dkd_anyela_root_9920_20260529.png"
           alt="Anyela Born Club Miami Vibes özel tanışma mobil ana sayfası"
           width="864"
           height="1536"
@@ -135,17 +180,70 @@
 
         <a class="dkd_anyela_root_full_link" href="./Login/" aria-label="Anyela Born Login sayfasına git"></a>
 
+        <video
+          class="dkd_anyela_root_video"
+          id="dkd_anyela_root_video"
+          src="./assets/dkd_anyela_root_video_20260529.mp4"
+          preload="metadata"
+          playsinline
+          webkit-playsinline
+          controls
+          controlslist="nodownload noplaybackrate"
+        ></video>
+
+        <button
+          class="dkd_anyela_root_play_button"
+          id="dkd_anyela_root_play_button"
+          type="button"
+          aria-label="Anyela video oynat"
+        ></button>
+
         <section class="dkd_anyela_root_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Club</h1>
-          <p>Bu sayfada herhangi bir yere dokununca Login sayfası açılır.</p>
+          <p>Play butonuna basınca video, görseldeki video alanında oynar. Diğer alanlara dokununca Login sayfası açılır.</p>
         </section>
       </section>
     </main>
     <script>
-      (function dkdAnyelaRootClickRoute() {
+      (function dkdAnyelaRootVideoRoute() {
         "use strict";
+
+        const dkdAnyelaRootVideo = document.getElementById("dkd_anyela_root_video");
+        const dkdAnyelaRootPlayButton = document.getElementById("dkd_anyela_root_play_button");
+
+        function dkdAnyelaRootPlayVideo(dkdAnyelaRootEvent) {
+          dkdAnyelaRootEvent.preventDefault();
+          dkdAnyelaRootEvent.stopPropagation();
+
+          if (!dkdAnyelaRootVideo) {
+            return;
+          }
+
+          dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active", "true");
+          dkdAnyelaRootVideo.muted = false;
+
+          const dkdAnyelaRootPlayResult = dkdAnyelaRootVideo.play();
+          if (dkdAnyelaRootPlayResult && typeof dkdAnyelaRootPlayResult.catch === "function") {
+            dkdAnyelaRootPlayResult.catch(function dkdAnyelaRootMuteFallback() {
+              dkdAnyelaRootVideo.muted = true;
+              dkdAnyelaRootVideo.play();
+            });
+          }
+        }
+
+        if (dkdAnyelaRootPlayButton) {
+          dkdAnyelaRootPlayButton.addEventListener("click", dkdAnyelaRootPlayVideo);
+          dkdAnyelaRootPlayButton.addEventListener("touchend", dkdAnyelaRootPlayVideo);
+        }
+
+        if (dkdAnyelaRootVideo) {
+          dkdAnyelaRootVideo.addEventListener("click", function dkdAnyelaRootStopVideoClick(dkdAnyelaRootEvent) {
+            dkdAnyelaRootEvent.stopPropagation();
+          });
+        }
+
         document.addEventListener("click", function dkdAnyelaRootOpenLogin(dkdAnyelaRootEvent) {
-          const dkdAnyelaRootAnchor = dkdAnyelaRootEvent.target.closest("a");
+          const dkdAnyelaRootAnchor = dkdAnyelaRootEvent.target.closest("a, button, video");
           if (dkdAnyelaRootAnchor) {
             return;
           }
