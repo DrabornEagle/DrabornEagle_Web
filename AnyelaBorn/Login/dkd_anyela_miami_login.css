@@ -12,15 +12,13 @@
   --dkd_anyela_text: #fff8ff;
   --dkd_anyela_mute: rgba(255, 246, 255, 0.68);
   --dkd_anyela_dim: rgba(255, 255, 255, 0.46);
-  --dkd_anyela_radius_large: 28px;
+  --dkd_anyela_radius_large: 30px;
   --dkd_anyela_radius_mid: 18px;
   --dkd_anyela_shadow: 0 24px 70px rgba(0, 0, 0, 0.52);
   color-scheme: dark;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 html {
   min-height: 100%;
@@ -40,9 +38,7 @@ body {
 }
 
 button,
-input {
-  font: inherit;
-}
+input { font: inherit; }
 
 button {
   border: 0;
@@ -72,10 +68,9 @@ svg {
 
 .dkd_anyela_phone_shell {
   position: relative;
-  width: min(100vw, 540px);
+  width: min(100vw, 620px);
   min-height: 100svh;
-  background:
-    linear-gradient(180deg, rgba(6, 12, 48, 0.14) 0%, rgba(6, 8, 35, 0.98) 43%, #060822 100%);
+  background: linear-gradient(180deg, rgba(6, 12, 48, 0.14) 0%, rgba(6, 8, 35, 0.98) 43%, #060822 100%);
   box-shadow: var(--dkd_anyela_shadow);
   isolation: isolate;
 }
@@ -112,7 +107,7 @@ svg {
   width: 100%;
   aspect-ratio: 864 / 650;
   min-height: 360px;
-  background-image: url("./assets/dkd_anyela_miami_hero.jpg");
+  background-image: url("../assets/dkd_anyela_miami_hero.jpg");
   background-size: cover;
   background-position: top center;
   overflow: hidden;
@@ -122,19 +117,20 @@ svg {
   content: "";
   position: absolute;
   inset: auto 0 0;
-  height: 96px;
-  background: linear-gradient(180deg, transparent 0%, rgba(8, 9, 40, 0.48) 52%, rgba(8, 9, 40, 0.97) 100%);
+  height: 112px;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 9, 40, 0.48) 52%, rgba(8, 9, 40, 0.98) 100%);
 }
 
 .dkd_anyela_login_card {
   position: relative;
   z-index: 2;
-  margin: -5px clamp(16px, 7vw, 34px) 18px;
-  padding: clamp(18px, 4.7vw, 28px) clamp(15px, 4vw, 24px) clamp(18px, 4.6vw, 26px);
-  border: 1px solid rgba(255, 92, 211, 0.36);
+  width: auto;
+  margin: -5px clamp(6px, 2.4vw, 16px) 18px;
+  padding: clamp(19px, 4.9vw, 29px) clamp(18px, 4.5vw, 30px) clamp(19px, 4.8vw, 27px);
+  border: 1px solid rgba(255, 92, 211, 0.42);
   border-radius: var(--dkd_anyela_radius_large) var(--dkd_anyela_radius_large) 22px 22px;
   background:
-    linear-gradient(180deg, rgba(21, 18, 67, 0.94) 0%, rgba(8, 12, 48, 0.96) 48%, rgba(9, 11, 39, 0.98) 100%),
+    linear-gradient(180deg, rgba(21, 18, 67, 0.95) 0%, rgba(8, 12, 48, 0.96) 48%, rgba(9, 11, 39, 0.98) 100%),
     radial-gradient(circle at 11% 12%, rgba(255, 74, 199, 0.22), transparent 31%);
   box-shadow:
     0 -16px 42px rgba(255, 57, 204, 0.2),
@@ -147,7 +143,7 @@ svg {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  margin: -3px 0 19px;
+  margin: -3px 0 20px;
 }
 
 .dkd_anyela_tab {
@@ -156,7 +152,7 @@ svg {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  min-height: 50px;
+  min-height: 52px;
   color: rgba(255, 255, 255, 0.61);
   background: transparent;
   font-size: clamp(14px, 3.4vw, 20px);
@@ -194,12 +190,12 @@ svg {
 }
 
 .dkd_anyela_field {
-  min-height: clamp(55px, 12.5vw, 70px);
+  min-height: clamp(57px, 12.5vw, 72px);
   display: grid;
-  grid-template-columns: 46px 1fr auto;
+  grid-template-columns: 47px 1fr auto;
   align-items: center;
   border: 1px solid rgba(152, 142, 255, 0.55);
-  border-radius: 17px;
+  border-radius: 18px;
   background: linear-gradient(90deg, rgba(87, 45, 118, 0.72), rgba(22, 24, 74, 0.68));
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.08),
@@ -233,9 +229,7 @@ svg {
   font-weight: 500;
 }
 
-.dkd_anyela_field input::placeholder {
-  color: rgba(255, 243, 255, 0.46);
-}
+.dkd_anyela_field input::placeholder { color: rgba(255, 243, 255, 0.46); }
 
 .dkd_anyela_eye_button {
   width: 46px;
@@ -303,13 +297,13 @@ svg {
 }
 
 .dkd_anyela_primary_button {
-  min-height: clamp(58px, 13.2vw, 74px);
+  min-height: clamp(60px, 13.2vw, 76px);
   margin-top: 3px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 18px;
-  border-radius: 15px;
+  border-radius: 16px;
   color: white;
   background: linear-gradient(100deg, #ff983b 0%, #ff5b69 41%, #f700b9 100%);
   box-shadow:
@@ -323,9 +317,7 @@ svg {
 
 .dkd_anyela_primary_button:active,
 .dkd_anyela_join_big:active,
-.dkd_anyela_social_button:active {
-  transform: scale(0.985);
-}
+.dkd_anyela_social_button:active { transform: scale(0.985); }
 
 .dkd_anyela_button_arrow {
   margin-top: -3px;
@@ -339,90 +331,70 @@ svg {
   grid-template-columns: 1fr auto 1fr;
   gap: 13px;
   align-items: center;
-  margin: 20px 2px 14px;
+  margin: 21px 2px 15px;
   color: rgba(255, 255, 255, 0.64);
 }
 
-.dkd_anyela_separator span {
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.36));
-}
-
-.dkd_anyela_separator span:last-child {
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.36), transparent);
-}
-
-.dkd_anyela_separator p {
-  margin: 0;
-  font-size: clamp(12px, 3.2vw, 17px);
-  white-space: nowrap;
-}
+.dkd_anyela_separator span { height: 1px; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.36)); }
+.dkd_anyela_separator span:last-child { background: linear-gradient(90deg, rgba(255, 255, 255, 0.36), transparent); }
+.dkd_anyela_separator p { margin: 0; font-size: clamp(12px, 3.2vw, 17px); white-space: nowrap; }
 
 .dkd_anyela_social_grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 9px;
+  gap: clamp(8px, 2.1vw, 12px);
 }
 
 .dkd_anyela_social_button {
-  min-height: clamp(52px, 12vw, 67px);
+  min-height: clamp(55px, 12.5vw, 70px);
   display: flex;
   align-items: center;
   justify-content: center;
   gap: clamp(6px, 1.8vw, 11px);
-  padding: 0 8px;
-  border: 1px solid rgba(151, 128, 255, 0.52);
-  border-radius: 15px;
-  color: rgba(255, 255, 255, 0.77);
-  background: linear-gradient(180deg, rgba(62, 41, 113, 0.77), rgba(18, 22, 74, 0.78));
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
-  font-size: clamp(12px, 3.3vw, 17px);
-  font-weight: 700;
+  padding: 0 clamp(6px, 1.9vw, 12px);
+  border: 1px solid rgba(164, 137, 255, 0.52);
+  border-radius: 18px;
+  color: rgba(255, 255, 255, 0.84);
+  background:
+    linear-gradient(180deg, rgba(75, 47, 129, 0.82), rgba(18, 22, 74, 0.82)),
+    radial-gradient(circle at 30% 0%, rgba(255, 255, 255, 0.12), transparent 54%);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 10px 22px rgba(0, 0, 0, 0.16);
+  font-size: clamp(12px, 3.25vw, 17px);
+  font-weight: 800;
 }
 
-.dkd_anyela_google_mark,
-.dkd_anyela_apple_mark,
-.dkd_anyela_instagram_mark {
-  width: clamp(28px, 7.4vw, 38px);
-  height: clamp(28px, 7.4vw, 38px);
+.dkd_anyela_social_icon {
+  width: clamp(31px, 7.8vw, 41px);
+  height: clamp(31px, 7.8vw, 41px);
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  border-radius: 10px;
-  font-weight: 900;
+  border-radius: 13px;
+  overflow: hidden;
+  filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.24));
 }
 
-.dkd_anyela_google_mark {
-  font-size: clamp(22px, 6vw, 30px);
-  color: #fff;
-  background: conic-gradient(from -40deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-}
-
-.dkd_anyela_apple_mark {
-  color: white;
-  font-size: 22px;
-  border-radius: 999px;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.45));
-  box-shadow: inset 0 0 0 14px #ffffff;
-}
-
-.dkd_anyela_instagram_mark {
-  color: white;
-  font-size: clamp(20px, 6vw, 28px);
-  background: radial-gradient(circle at 28% 92%, #ffd86a, #ff625d 36%, #f000b9 61%, #5b52ff 100%);
-}
+.dkd_anyela_social_icon svg { width: 72%; height: 72%; stroke-width: 1.8; }
+.dkd_anyela_google_icon { background: rgba(255, 255, 255, 0.97); }
+.dkd_anyela_google_icon svg { width: 78%; height: 78%; }
+.dkd_anyela_google_icon path { stroke: none; }
+.dkd_anyela_apple_icon { color: #0d102d; background: linear-gradient(180deg, #ffffff, #e7e8ff); }
+.dkd_anyela_apple_icon svg { width: 74%; height: 74%; fill: currentColor; stroke: none; }
+.dkd_anyela_instagram_icon { color: white; background: radial-gradient(circle at 30% 105%, #ffd86a 0 18%, #ff625d 38%, #f000b9 64%, #5b52ff 100%); }
+.dkd_anyela_instagram_icon svg { width: 68%; height: 68%; stroke: currentColor; }
 
 .dkd_anyela_join_big {
   width: 100%;
-  min-height: clamp(60px, 13.5vw, 78px);
-  margin-top: 20px;
+  min-height: clamp(61px, 13.5vw, 78px);
+  margin-top: 21px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 18px;
   border: 1px solid rgba(255, 76, 203, 0.92);
-  border-radius: 16px;
+  border-radius: 17px;
   color: #ff5bd1;
   background: linear-gradient(180deg, rgba(21, 22, 70, 0.82), rgba(11, 13, 49, 0.88));
   box-shadow:
@@ -462,11 +434,7 @@ svg {
   box-shadow: 0 0 27px rgba(255, 72, 204, 0.35);
 }
 
-.dkd_anyela_shield svg {
-  width: 67%;
-  height: 67%;
-  stroke-width: 1.65;
-}
+.dkd_anyela_shield svg { width: 67%; height: 67%; stroke-width: 1.65; }
 
 .dkd_anyela_security_copy {
   min-width: 0;
@@ -481,10 +449,7 @@ svg {
   text-shadow: 0 0 16px rgba(255, 72, 204, 0.44);
 }
 
-.dkd_anyela_security_copy span {
-  font-size: clamp(12px, 3.35vw, 17px);
-  line-height: 1.25;
-}
+.dkd_anyela_security_copy span { font-size: clamp(12px, 3.35vw, 17px); line-height: 1.25; }
 
 .dkd_anyela_city_line {
   width: clamp(80px, 20vw, 118px);
@@ -493,9 +458,7 @@ svg {
   filter: drop-shadow(0 0 12px rgba(255, 69, 203, 0.52));
 }
 
-.dkd_anyela_city_line svg {
-  stroke-width: 2.4;
-}
+.dkd_anyela_city_line svg { stroke-width: 2.4; }
 
 .dkd_anyela_toast {
   position: fixed;
@@ -516,28 +479,22 @@ svg {
   transition: transform 220ms ease, opacity 220ms ease;
 }
 
-.dkd_anyela_toast_active {
-  transform: translate(-50%, 0);
-  opacity: 1;
-}
+.dkd_anyela_toast_active { transform: translate(-50%, 0); opacity: 1; }
 
 @media (max-width: 390px) {
   .dkd_anyela_login_card {
-    margin-inline: 12px;
-    padding-inline: 13px;
+    margin-inline: 5px;
+    padding-inline: 15px;
   }
 
-  .dkd_anyela_social_grid {
-    gap: 7px;
-  }
+  .dkd_anyela_social_grid { gap: 7px; }
+  .dkd_anyela_social_button { padding-inline: 5px; }
+  .dkd_anyela_city_line { display: none; }
+}
 
-  .dkd_anyela_social_button {
-    padding-inline: 5px;
-  }
-
-  .dkd_anyela_city_line {
-    display: none;
-  }
+@media (max-width: 352px) {
+  .dkd_anyela_social_button span:last-child { display: none; }
+  .dkd_anyela_social_button { padding-inline: 4px; }
 }
 
 @media (min-width: 760px) {
@@ -553,7 +510,5 @@ svg {
     overflow: hidden;
   }
 
-  .dkd_anyela_hero {
-    min-height: 404px;
-  }
+  .dkd_anyela_hero { min-height: 430px; }
 }

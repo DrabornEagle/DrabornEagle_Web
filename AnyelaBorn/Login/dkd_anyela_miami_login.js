@@ -63,12 +63,12 @@
       return;
     }
 
-    dkd_show_toast(dkd_active_mode === "join" ? "Üyelik akışı hazır. Backend bağlantısı eklenince aktif olacak." : "Giriş arayüzü hazır. Backend bağlantısı eklenince aktif olacak.");
+    dkd_show_toast(dkd_active_mode === "join" ? "Üyelik arayüzü hazır. Backend bağlantısı eklenince aktif olacak." : "Login arayüzü hazır. Backend bağlantısı eklenince aktif olacak.");
   }
 
   function dkd_handle_social_click(dkd_click_event) {
     const dkd_provider_name = dkd_click_event.currentTarget.getAttribute("data-dkd-provider") || "Sosyal giriş";
-    dkd_show_toast(dkd_provider_name + " bağlantısı için hazır buton eklendi.");
+    dkd_show_toast(dkd_provider_name + " bağlantısı için modern buton hazırlandı.");
   }
 
   dkd_login_tab_button.addEventListener("click", dkd_handle_tab_click);
