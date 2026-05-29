@@ -1,18 +1,31 @@
-# Anyela Born Club - Miami Login Mockup Uygulaması
+# Anyela Born Club Login Page
 
-Bu klasör `www.draborneagle.com/AnyelaBorn` yolu için hazırlanmış statik React sayfasıdır.
+Klasör yolu hedefi:
 
-## İçerik
+```text
+/AnyelaBorn/index.html
+```
 
-- `index.html`
-- `styles.css`
-- `app.js`
-- `assets/anyela-born-yacht.jpg`
+Yayın adresi:
 
-## Yapı
+```text
+https://www.draborneagle.com/AnyelaBorn
+```
 
-Vite/build kullanılmaz. React CDN üzerinden çalışır. Bu yüzden repo içine `AnyelaBorn` klasörünü koyup doğrudan yayınlamak yeterlidir.
+Bu sürüm statik HTML/CSS/JS olarak hazırlandı. Vite/build süreci gerektirmez.
+
+## Dosyalar
+
+```text
+AnyelaBorn/
+  index.html
+  styles.css
+  app.js
+  assets/
+    anyela-born-cutout.png
+    anyela-born-original.jpg
+```
 
 ## Not
 
-Giriş/üyelik butonları şu an görsel/front-end akışıdır. Supabase/Auth bağlantısı sonraki adımda eklenebilir.
+Giriş ve üyelik butonları şu an tasarım/mockup akışıdır. Supabase/Auth bağlantısı sonraki aşamada eklenebilir.

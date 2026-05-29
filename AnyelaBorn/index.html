@@ -1,24 +1,110 @@
 <!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#050927" />
-  <meta name="description" content="Anyela Born Club giriş sayfası - premium üyelik, özel sohbet ve yaratıcı içerik deneyimi." />
-  <title>Anyela Born Club | Giriş</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#070a2b" />
+    <title>Anyela Born Club</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="dkd-anyela-page" aria-label="Anyela Born Club giriş sayfası">
+      <section class="dkd-hero" aria-label="Anyela Born Club karşılama alanı">
+        <div class="dkd-skyline" aria-hidden="true">
+          <span class="dkd-palm dkd-palm-left">⌁</span>
+          <span class="dkd-palm dkd-palm-right">⌁</span>
+          <div class="dkd-buildings">
+            <i style="--dkd-building-height: 88px"></i>
+            <i style="--dkd-building-height: 126px"></i>
+            <i style="--dkd-building-height: 104px"></i>
+            <i style="--dkd-building-height: 146px"></i>
+            <i style="--dkd-building-height: 112px"></i>
+            <i style="--dkd-building-height: 82px"></i>
+          </div>
+        </div>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <noscript>Anyela Born Club sayfasını görüntülemek için JavaScript etkin olmalıdır.</noscript>
-  <main id="dkd_anyela_born_root"></main>
+        <div class="dkd-logo-block">
+          <div class="dkd-logo-script">Anyela<span>♡</span></div>
+          <div class="dkd-logo-subtitle">BORN CLUB</div>
+        </div>
 
-  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-  <script src="./app.js"></script>
-</body>
+        <div class="dkd-portrait-frame" aria-hidden="true">
+          <div class="dkd-portrait-glow"></div>
+          <img src="./assets/anyela-born-cutout.png" alt="" class="dkd-anyela-cutout" />
+        </div>
+
+        <div class="dkd-welcome-copy">
+          <h1>Anyela Born Club’a</h1>
+          <p class="dkd-welcome-script">Hoş Geldin<span>♡</span></p>
+          <p class="dkd-welcome-text">Özel içerikler, sınırsız sohbet ve benzersiz anlar seni bekliyor.</p>
+        </div>
+
+        <article class="dkd-premium-card" aria-label="Premium üyelik">
+          <div class="dkd-premium-icon">◇</div>
+          <div>
+            <strong>PREMIUM ÜYELİK</strong>
+            <span>Sadece üyeler için özel ayrıcalıklar</span>
+          </div>
+        </article>
+      </section>
+
+      <section class="dkd-login-panel" aria-label="Giriş ve üyelik paneli">
+        <div class="dkd-tabs" role="tablist" aria-label="Giriş seçenekleri">
+          <button class="dkd-tab dkd-tab-active" type="button" data-dkd-tab="login" role="tab" aria-selected="true">
+            <span class="dkd-line-icon">♙</span>
+            <span>GİRİŞ YAP</span>
+          </button>
+          <button class="dkd-tab" type="button" data-dkd-tab="signup" role="tab" aria-selected="false">
+            <span class="dkd-line-icon">♙+</span>
+            <span>ÜYE OL</span>
+          </button>
+        </div>
+
+        <form class="dkd-auth-form" action="#" method="post">
+          <label class="dkd-field" aria-label="E-posta veya kullanıcı adı">
+            <span class="dkd-field-icon">♙</span>
+            <input type="text" name="dkd_user_name" autocomplete="username" placeholder="E-posta veya kullanıcı adı" />
+          </label>
+
+          <label class="dkd-field" aria-label="Şifre">
+            <span class="dkd-field-icon">▣</span>
+            <input id="dkd-password" type="password" name="dkd_user_password" autocomplete="current-password" placeholder="Şifre" />
+            <button class="dkd-eye" type="button" id="dkd-eye" aria-label="Şifreyi göster veya gizle">◉</button>
+          </label>
+
+          <div class="dkd-row">
+            <label class="dkd-remember">
+              <input type="checkbox" name="dkd_remember" checked />
+              <span class="dkd-checkmark">✓</span>
+              <span>Beni Hatırla</span>
+            </label>
+            <a href="#" class="dkd-forgot">Şifremi Unuttum?</a>
+          </div>
+
+          <button class="dkd-primary-button" type="submit">GİRİŞ YAP <span>›</span></button>
+        </form>
+
+        <div class="dkd-separator"><span>Veya şununla devam et</span></div>
+
+        <div class="dkd-socials" aria-label="Sosyal giriş seçenekleri">
+          <button type="button"><b class="dkd-google">G</b><span>Google</span></button>
+          <button type="button"><b class="dkd-apple">●</b><span>Apple</span></button>
+          <button type="button"><b class="dkd-instagram">◎</b><span>Instagram</span></button>
+        </div>
+
+        <button class="dkd-outline-button" type="button">ÜYE OL <span>♙+</span></button>
+
+        <article class="dkd-safe-card">
+          <div class="dkd-shield">⌾</div>
+          <div>
+            <strong>%100 Güvenli &amp; Özel</strong>
+            <span>Tüm bilgileriniz gizli tutulur. Sadece üyeler için özel bir dünya.</span>
+          </div>
+          <div class="dkd-mini-city" aria-hidden="true"><i></i><i></i><i></i></div>
+        </article>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
 </html>
