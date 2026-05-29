@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#061044" />
     <title>Anyela Born Club Siparişler</title>
     <link rel="stylesheet" href="../dkd_anyela_miami_pages.css" />
   </head>
@@ -10,35 +11,64 @@
     <main class="dkd_anyela_miami_page">
       <section class="dkd_anyela_miami_shell">
         <header class="dkd_anyela_miami_topbar">
-          <a class="dkd_anyela_miami_back" href="../Home/">‹</a>
+          <a class="dkd_anyela_miami_back" href="../Home/" aria-label="Home sayfasına dön">‹</a>
           <div class="dkd_anyela_miami_brand">
             <strong>Siparişler</strong>
             <span>IBAN • Dekont • Onay</span>
           </div>
-          <a class="dkd_anyela_miami_icon_button" href="../Packages/">＋</a>
+          <a class="dkd_anyela_miami_icon_button" href="../Packages/" aria-label="Paketler">＋</a>
         </header>
 
         <section class="dkd_anyela_miami_hero">
           <span class="dkd_anyela_miami_badge">🌅 Miami ödeme akışı</span>
           <h1><span class="dkd_anyela_miami_gradient_text">Paketini seç</span><br />dekontunu yükle</h1>
-          <p>İlk sürümde ödeme IBAN/EFT/FAST ve manuel admin onayıyla ilerler. Onaydan sonra özel chat odan aktif edilir.</p>
+          <p>Ödeme akışı IBAN/EFT/FAST ve admin onayı ile ilerler. Onaydan sonra özel oda açılır.</p>
         </section>
 
+        <section class="dkd_anyela_miami_story_strip" aria-label="Sipariş akışı">
+          <a class="dkd_anyela_miami_story" href="../Packages/"><strong>①</strong>Paket</a>
+          <a class="dkd_anyela_miami_story" href="./"><strong>②</strong>IBAN</a>
+          <a class="dkd_anyela_miami_story" href="./"><strong>③</strong>Dekont</a>
+          <a class="dkd_anyela_miami_story" href="../Chat/"><strong>④</strong>Chat</a>
+        </section>
+
+        <h2 class="dkd_anyela_miami_section_title">Yeni Sipariş</h2>
         <section class="dkd_anyela_miami_panel dkd_anyela_miami_stack">
-          <h2>Yeni Sipariş</h2>
-          <input class="dkd_anyela_miami_input" type="text" placeholder="Paket adı: Private Chat / Voice Intro / Photo Set" />
-          <input class="dkd_anyela_miami_input" type="text" placeholder="Dekont açıklaması: ANYELA - kullanıcı adı - paket" />
+          <span class="dkd_anyela_miami_badge">ANYELA - kullanıcı adı - paket</span>
+          <h2>Dekont yükleme</h2>
+          <p>Açıklama alanına paket adını ekle. Dekont onaylandıktan sonra chat odan aktif edilir.</p>
+          <input class="dkd_anyela_miami_input" type="text" placeholder="Paket adı" />
+          <input class="dkd_anyela_miami_input" type="text" placeholder="Dekont açıklaması" />
           <input class="dkd_anyela_miami_input" type="file" />
-          <a class="dkd_anyela_miami_cta" href="../Chat/">Dekontu yükle ve bekle</a>
+          <a class="dkd_anyela_miami_cta" href="../Chat/">Dekontu gönder</a>
         </section>
 
-        <section class="dkd_anyela_miami_grid">
-          <article class="dkd_anyela_miami_card"><span class="dkd_anyela_miami_badge">Beklemede</span><h3>Ödeme onayı</h3><p>Dekont admin panelde kontrol edilir. Eksik ödeme varsa not gönderilir.</p></article>
-          <article class="dkd_anyela_miami_card"><span class="dkd_anyela_miami_badge">Onaylandı</span><h3>Chat odası açılır</h3><p>Yazılı, sesli, görsel ve video referansları paketine göre aktif olur.</p></article>
+        <h2 class="dkd_anyela_miami_section_title">Durumlar</h2>
+        <section class="dkd_anyela_miami_grid dkd_anyela_miami_grid_two">
+          <article class="dkd_anyela_miami_card">
+            <span class="dkd_anyela_miami_badge">Beklemede</span>
+            <div class="dkd_anyela_miami_card_icon">⏳</div>
+            <h3>Ödeme onayı</h3>
+            <p>Dekont kontrol edilir, eksik bilgi varsa not düşülür.</p>
+          </article>
+          <article class="dkd_anyela_miami_card">
+            <span class="dkd_anyela_miami_badge">Onaylandı</span>
+            <div class="dkd_anyela_miami_card_icon">✅</div>
+            <h3>Oda açılır</h3>
+            <p>Paketine göre mesaj, ses, görsel veya video alanı aktifleşir.</p>
+          </article>
+        </section>
+
+        <section class="dkd_anyela_miami_panel">
+          <span class="dkd_anyela_miami_badge">Destek</span>
+          <h2>Sipariş geçmişi</h2>
+          <p>Sonraki sürümde aktif, tamamlanan ve bekleyen siparişler burada listelenecek.</p>
+          <a class="dkd_anyela_miami_cta" href="../Packages/">Yeni paket seç</a>
         </section>
       </section>
     </main>
-    <nav class="dkd_anyela_miami_bottom_nav">
+
+    <nav class="dkd_anyela_miami_bottom_nav" aria-label="Anyela Born Club alt menü">
       <a href="../Home/"><strong>⌂</strong>Ana Sayfa</a>
       <a href="../Packages/"><strong>▢</strong>Paketler</a>
       <a href="../Chat/"><strong>◌</strong>Chat</a>
