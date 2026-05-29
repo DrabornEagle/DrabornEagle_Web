@@ -24,10 +24,31 @@
     const dkdAnyelaHomeStyle = document.createElement("style");
     dkdAnyelaHomeStyle.id = "dkd_anyela_guest_button_animation_style";
     dkdAnyelaHomeStyle.textContent = `
+      .dkd_anyela_home_login_panel {
+        z-index: 80 !important;
+        pointer-events: auto !important;
+      }
+
+      .dkd_anyela_home_hotspots {
+        z-index: 8 !important;
+        pointer-events: none !important;
+      }
+
+      .dkd_anyela_hotspot {
+        pointer-events: auto !important;
+      }
+
+      .dkd_anyela_hotspot_start {
+        z-index: 9 !important;
+      }
+
       .dkd_anyela_home_guest_button {
         position: relative;
+        z-index: 120 !important;
         isolation: isolate;
         overflow: hidden;
+        pointer-events: auto !important;
+        cursor: pointer;
         border: 1.8px solid rgba(255, 255, 255, 0.72) !important;
         background:
           linear-gradient(105deg, #18f7ff 0%, #6f5cff 21%, #ff36c7 43%, #ff8a35 64%, #ffe66d 82%, #18f7ff 100%) !important;
@@ -136,6 +157,19 @@
     });
   }
 
+  function dkdAnyelaHomeOpenGuestHome(dkdAnyelaHomeEvent) {
+    dkdAnyelaHomeEvent.preventDefault();
+    dkdAnyelaHomeEvent.stopPropagation();
+    window.location.href = "../Home/";
+  }
+
+  function dkdAnyelaHomeBindGuestClicks() {
+    dkdAnyelaHomeGuestLinks.forEach(function dkdAnyelaHomeBindGuestLink(dkdAnyelaHomeGuestAnchor) {
+      dkdAnyelaHomeGuestAnchor.addEventListener("click", dkdAnyelaHomeOpenGuestHome);
+      dkdAnyelaHomeGuestAnchor.addEventListener("touchend", dkdAnyelaHomeOpenGuestHome);
+    });
+  }
+
   function dkdAnyelaHomeHandleAnchorClick(dkdAnyelaHomeEvent) {
     const dkdAnyelaHomeTarget = dkdAnyelaHomeEvent.currentTarget;
     const dkdAnyelaHomeHref = dkdAnyelaHomeTarget.getAttribute("href");
@@ -173,6 +207,7 @@
 
   dkdAnyelaHomeInjectGuestAnimationStyles();
   dkdAnyelaHomeRouteGuestLinks();
+  dkdAnyelaHomeBindGuestClicks();
 
   dkdAnyelaHomeHotspots.forEach(function dkdAnyelaHomeBindHotspot(dkdAnyelaHomeHotspot) {
     dkdAnyelaHomeHotspot.addEventListener("click", dkdAnyelaHomeHandleAnchorClick);
