@@ -1,0 +1,817 @@
+.dkdPageShell {
+  min-height: 100svh;
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(circle at 18% 18%, rgba(255, 91, 184, 0.35), transparent 28%),
+    radial-gradient(circle at 86% 12%, rgba(255, 157, 70, 0.32), transparent 28%),
+    radial-gradient(circle at 52% 96%, rgba(92, 113, 255, 0.26), transparent 34%),
+    linear-gradient(155deg, #06082c 0%, #0a0f46 32%, #12062e 72%, #040518 100%);
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.dkdPageShell *,
+.dkdPageShell *::before,
+.dkdPageShell *::after {
+  box-sizing: border-box;
+}
+
+.dkdBackgroundGlow {
+  position: absolute;
+  inset: -20%;
+  pointer-events: none;
+  background:
+    linear-gradient(110deg, transparent 0 18%, rgba(255, 71, 183, 0.16) 28%, transparent 42%),
+    radial-gradient(circle at 72% 28%, rgba(244, 64, 195, 0.28), transparent 24%);
+  filter: blur(18px);
+  animation: dkdGlowDrift 9s ease-in-out infinite alternate;
+}
+
+.dkdExperienceShell {
+  width: min(100%, 1180px);
+  min-height: 100svh;
+  margin: 0 auto;
+  padding: clamp(14px, 2.4vw, 34px);
+  position: relative;
+  display: grid;
+  align-items: center;
+  gap: 0;
+}
+
+.dkdHeroPanel {
+  position: relative;
+  min-height: 505px;
+  border-radius: 0 0 36px 36px;
+  overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(9, 20, 75, 0.25), rgba(15, 7, 50, 0.94)),
+    radial-gradient(circle at 28% 56%, rgba(255, 68, 190, 0.28), transparent 35%),
+    linear-gradient(130deg, rgba(16, 32, 94, 0.78), rgba(88, 37, 110, 0.56) 48%, rgba(252, 125, 74, 0.28));
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.48);
+}
+
+.dkdHeroPanel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(4, 8, 43, 0.28) 0%, rgba(5, 7, 35, 0.76) 100%),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.025) 0 1px, transparent 1px 58px);
+  pointer-events: none;
+}
+
+.dkdHeroPanel::after {
+  content: "";
+  position: absolute;
+  inset: 18px 15px 18px auto;
+  width: min(45%, 420px);
+  border: 2px solid rgba(255, 87, 203, 0.78);
+  border-left: 0;
+  border-radius: 0 30px 30px 0;
+  box-shadow: 0 0 28px rgba(255, 54, 202, 0.42), inset 0 0 28px rgba(255, 54, 202, 0.16);
+  pointer-events: none;
+}
+
+.dkdSkylineLayer,
+.dkdSkylineLayer span {
+  position: absolute;
+  pointer-events: none;
+}
+
+.dkdSkylineLayer {
+  inset: 0;
+  opacity: 0.85;
+}
+
+.dkdSkylineLayer span:not(.dkdPalmOne):not(.dkdPalmTwo) {
+  bottom: 91px;
+  width: 32px;
+  border-radius: 8px 8px 0 0;
+  background: linear-gradient(180deg, rgba(255, 67, 184, 0.45), rgba(5, 10, 39, 0.86));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 -7px 22px rgba(255, 44, 190, 0.2);
+}
+
+.dkdTowerOne { left: 8%; height: 88px; }
+.dkdTowerTwo { left: 15%; height: 128px; width: 42px !important; }
+.dkdTowerThree { left: 26%; height: 104px; }
+.dkdTowerFour { left: 34%; height: 150px; width: 48px !important; }
+
+.dkdPalmOne,
+.dkdPalmTwo {
+  width: 130px;
+  height: 170px;
+  bottom: 56px;
+  border-radius: 50%;
+  opacity: 0.3;
+  background: radial-gradient(ellipse at center, transparent 0 38%, rgba(2, 6, 28, 0.92) 39% 40%, transparent 41%);
+  filter: blur(0.4px);
+}
+
+.dkdPalmOne { left: -54px; transform: rotate(-18deg); }
+.dkdPalmTwo { right: -38px; transform: rotate(16deg) scale(0.92); }
+
+.dkdHeroContent {
+  position: relative;
+  z-index: 2;
+  width: min(58%, 560px);
+  padding: clamp(28px, 5vw, 58px) clamp(22px, 5vw, 64px) 28px;
+}
+
+.dkdLogoScript {
+  margin: 0;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(58px, 13vw, 112px);
+  line-height: 0.78;
+  letter-spacing: 0.01em;
+  background: linear-gradient(90deg, #ff8b49 0%, #ff5cc8 50%, #ff8e5c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 18px rgba(255, 85, 203, 0.58));
+}
+
+.dkdLogoSub {
+  margin: 8px 0 0 148px;
+  font-size: clamp(16px, 3.5vw, 24px);
+  font-weight: 800;
+  letter-spacing: 0.38em;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 0 14px rgba(84, 196, 255, 0.3);
+}
+
+.dkdHeroCopy {
+  margin-top: clamp(66px, 12vw, 112px);
+}
+
+.dkdHeroCopy h1 {
+  margin: 0;
+  max-width: 510px;
+  font-size: clamp(30px, 4.8vw, 50px);
+  line-height: 1.02;
+  letter-spacing: -0.055em;
+  text-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.dkdHeroCopy h1 span {
+  display: block;
+  margin-top: 10px;
+  font-family: "Brush Script MT", "Segoe Script", cursive;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: clamp(52px, 9.8vw, 82px);
+  color: #ff66df;
+  text-shadow: 0 0 20px rgba(255, 70, 211, 0.72);
+}
+
+.dkdHeroCopy p {
+  width: min(92%, 455px);
+  margin: 18px 0 0;
+  font-size: clamp(15px, 2.6vw, 20px);
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.84);
+}
+
+.dkdPremiumCard {
+  margin-top: 24px;
+  width: min(100%, 305px);
+  min-height: 108px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  padding: 18px 22px;
+  border-radius: 26px;
+  background: linear-gradient(135deg, rgba(58, 26, 92, 0.74), rgba(21, 25, 77, 0.62));
+  border: 1px solid rgba(255, 91, 213, 0.42);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.3), inset 0 0 28px rgba(255, 70, 206, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+.dkdPremiumCard strong,
+.dkdTrustCard strong {
+  display: block;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+}
+
+.dkdPremiumCard span,
+.dkdTrustCard span {
+  display: block;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.66);
+  line-height: 1.38;
+}
+
+.dkdHeroImageFrame {
+  position: absolute;
+  z-index: 1;
+  right: clamp(14px, 4vw, 46px);
+  bottom: 0;
+  width: min(44%, 470px);
+  height: 91%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 32px;
+  mask-image: linear-gradient(180deg, #000 0 88%, transparent 100%);
+}
+
+.dkdHeroImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+  filter: saturate(1.08) contrast(1.03) drop-shadow(0 26px 42px rgba(0, 0, 0, 0.35));
+}
+
+.dkdAuthPanel {
+  position: relative;
+  z-index: 4;
+  width: min(100%, 760px);
+  margin: -4px auto 0;
+  padding: clamp(22px, 4vw, 34px);
+  border-radius: 32px;
+  background: linear-gradient(180deg, rgba(10, 13, 58, 0.91), rgba(9, 9, 38, 0.84));
+  border: 1px solid rgba(123, 138, 255, 0.18);
+  box-shadow:
+    0 -18px 46px rgba(252, 58, 204, 0.18),
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
+  backdrop-filter: blur(28px);
+}
+
+.dkdAuthTabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.dkdAuthTab {
+  min-height: 54px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.64);
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  transition: color 180ms ease, background 180ms ease, transform 180ms ease;
+}
+
+.dkdAuthTab::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: -3px;
+  height: 3px;
+  border-radius: 999px;
+  background: transparent;
+  box-shadow: none;
+  transition: background 180ms ease, box-shadow 180ms ease;
+}
+
+.dkdAuthTabActive {
+  color: #ff65d4;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.dkdAuthTabActive::after {
+  background: #ff65d4;
+  box-shadow: 0 0 18px rgba(255, 88, 213, 0.9);
+}
+
+.dkdLoginForm {
+  display: grid;
+  gap: 14px;
+}
+
+.dkdInputWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 78px;
+  padding: 0 58px 0 72px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(76, 48, 113, 0.66), rgba(17, 28, 78, 0.62));
+  border: 1px solid rgba(169, 121, 255, 0.54);
+  box-shadow: inset 0 0 22px rgba(255, 107, 218, 0.06);
+}
+
+.dkdInputWrap:focus-within {
+  border-color: rgba(255, 98, 214, 0.84);
+  box-shadow: 0 0 0 3px rgba(255, 81, 203, 0.12), inset 0 0 28px rgba(255, 107, 218, 0.12);
+}
+
+.dkdInputWrap input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #fff;
+  font: inherit;
+  font-size: clamp(16px, 3vw, 22px);
+}
+
+.dkdInputWrap input::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.dkdInputIcon,
+.dkdPasswordToggle {
+  position: absolute;
+  display: grid;
+  place-items: center;
+}
+
+.dkdInputIcon {
+  left: 24px;
+  color: #ff6edb;
+}
+
+.dkdPasswordToggle {
+  right: 20px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 50%;
+  color: rgba(255, 255, 255, 0.84);
+  background: transparent;
+  cursor: pointer;
+}
+
+.dkdSvgIcon {
+  width: 29px;
+  height: 29px;
+  fill: currentColor;
+}
+
+.dkdEyeIcon {
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
+}
+
+.dkdDiamondIcon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 auto;
+  fill: #ff61d6;
+  filter: drop-shadow(0 0 14px rgba(255, 79, 215, 0.8));
+}
+
+.dkdShieldIcon {
+  width: 64px;
+  height: 64px;
+  flex: 0 0 auto;
+  fill: #ff58d0;
+  filter: drop-shadow(0 0 16px rgba(255, 88, 208, 0.62));
+}
+
+.dkdFormMetaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.dkdRememberWrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dkdRememberWrap input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dkdCheckboxVisual {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff7b64, #f817ca);
+  box-shadow: 0 0 18px rgba(255, 75, 200, 0.65);
+}
+
+.dkdRememberWrap input:not(:checked) + .dkdCheckboxVisual {
+  color: transparent;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+.dkdForgotButton {
+  border: 0;
+  background: transparent;
+  color: #ff65d4;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.dkdPrimaryButton,
+.dkdRegisterButton,
+.dkdSocialButton {
+  min-height: 72px;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.dkdPrimaryButton {
+  margin-top: 4px;
+  border-radius: 20px;
+  color: #fff;
+  background: linear-gradient(100deg, #ff914b 0%, #ff4fae 52%, #f20fd0 100%);
+  box-shadow: 0 16px 30px rgba(255, 48, 181, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.36);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  font-size: clamp(20px, 4vw, 30px);
+  font-weight: 950;
+  letter-spacing: 0.16em;
+  transition: transform 180ms ease, box-shadow 180ms ease, filter 180ms ease;
+}
+
+.dkdPrimaryButton:hover,
+.dkdRegisterButton:hover,
+.dkdSocialButton:hover,
+.dkdAuthTab:hover {
+  transform: translateY(-2px);
+}
+
+.dkdPrimaryButton:active,
+.dkdRegisterButton:active,
+.dkdSocialButton:active,
+.dkdAuthTab:active {
+  transform: translateY(0);
+}
+
+.dkdPrimaryButton strong {
+  font-size: 42px;
+  line-height: 0;
+  margin-top: -3px;
+}
+
+.dkdDividerRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  margin: 24px 0 18px;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+.dkdDividerRow span {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.24));
+}
+
+.dkdDividerRow span:last-child {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.24), transparent);
+}
+
+.dkdDividerRow p {
+  margin: 0;
+  white-space: nowrap;
+}
+
+.dkdSocialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.dkdSocialButton {
+  border-radius: 17px;
+  color: rgba(255, 255, 255, 0.78);
+  background: linear-gradient(135deg, rgba(75, 45, 112, 0.72), rgba(23, 32, 90, 0.68));
+  border: 1px solid rgba(158, 111, 255, 0.44);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: clamp(14px, 2.8vw, 20px);
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.dkdGoogleMark,
+.dkdAppleMark,
+.dkdInstagramMark {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  flex: 0 0 auto;
+  font-weight: 950;
+}
+
+.dkdGoogleMark {
+  color: #fff;
+  background: conic-gradient(from -30deg, #4285f4, #34a853, #fbbc05, #ea4335, #4285f4);
+}
+
+.dkdAppleMark {
+  font-size: 34px;
+  color: #fff;
+}
+
+.dkdInstagramMark {
+  color: #fff;
+  background: radial-gradient(circle at 30% 110%, #ffdc80 0 12%, #fcaf45 19%, #f77737 31%, #f56040 42%, #fd1d1d 54%, #c13584 68%, #833ab4 84%, #405de6 100%);
+}
+
+.dkdRegisterButton {
+  width: 100%;
+  margin-top: 20px;
+  border-radius: 20px;
+  color: #ff65dc;
+  background: rgba(255, 255, 255, 0.015);
+  border: 2px solid rgba(255, 82, 210, 0.78);
+  box-shadow: inset 0 0 28px rgba(255, 81, 214, 0.06), 0 0 20px rgba(255, 57, 198, 0.14);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 22px;
+  font-size: clamp(20px, 4vw, 28px);
+  font-weight: 950;
+  letter-spacing: 0.12em;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.dkdTrustCard {
+  margin-top: 22px;
+  min-height: 118px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, rgba(66, 36, 101, 0.64), rgba(12, 24, 77, 0.58));
+  border: 1px solid rgba(121, 122, 255, 0.23);
+  box-shadow: inset 0 0 30px rgba(255, 80, 206, 0.06);
+}
+
+.dkdMiniMiamiIcon {
+  width: 104px;
+  height: 78px;
+  position: relative;
+  opacity: 0.85;
+}
+
+.dkdMiniMiamiIcon span,
+.dkdMiniMiamiIcon i,
+.dkdMiniMiamiIcon b {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  border: 2px solid rgba(255, 93, 218, 0.72);
+  box-shadow: 0 0 14px rgba(255, 78, 210, 0.42);
+}
+
+.dkdMiniMiamiIcon span {
+  left: 4px;
+  width: 46px;
+  height: 46px;
+  border-width: 0 0 2px 2px;
+  border-radius: 50%;
+  transform: rotate(30deg);
+}
+
+.dkdMiniMiamiIcon i {
+  right: 26px;
+  width: 20px;
+  height: 64px;
+  border-radius: 5px 5px 0 0;
+}
+
+.dkdMiniMiamiIcon b {
+  right: 0;
+  width: 24px;
+  height: 44px;
+  border-radius: 5px 5px 0 0;
+}
+
+@media (min-width: 960px) {
+  .dkdExperienceShell {
+    grid-template-columns: minmax(0, 1.08fr) minmax(390px, 0.82fr);
+    gap: 28px;
+  }
+
+  .dkdHeroPanel {
+    min-height: min(900px, calc(100svh - 68px));
+    border-radius: 44px;
+  }
+
+  .dkdAuthPanel {
+    margin: 0;
+    width: 100%;
+    border-radius: 34px;
+  }
+
+  .dkdHeroContent {
+    width: 66%;
+    padding-left: 48px;
+  }
+
+  .dkdLogoSub {
+    margin-left: 112px;
+  }
+
+  .dkdHeroCopy {
+    margin-top: 112px;
+  }
+
+  .dkdHeroImageFrame {
+    width: 47%;
+    right: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .dkdExperienceShell {
+    padding: 0;
+    align-items: start;
+  }
+
+  .dkdHeroPanel {
+    min-height: 650px;
+    border-radius: 0 0 24px 24px;
+  }
+
+  .dkdHeroPanel::after {
+    width: 50%;
+    inset: 18px 12px 120px auto;
+    border-radius: 0 24px 24px 0;
+  }
+
+  .dkdHeroContent {
+    width: 65%;
+    padding: 34px 18px 26px 28px;
+  }
+
+  .dkdLogoSub {
+    margin-left: 116px;
+    letter-spacing: 0.28em;
+  }
+
+  .dkdHeroCopy {
+    margin-top: 92px;
+  }
+
+  .dkdHeroImageFrame {
+    right: -8px;
+    width: 49%;
+    height: 80%;
+  }
+
+  .dkdPremiumCard {
+    width: 290px;
+  }
+
+  .dkdAuthPanel {
+    width: calc(100% - 28px);
+    margin-top: -4px;
+    border-radius: 28px;
+  }
+
+  .dkdSocialGrid {
+    gap: 10px;
+  }
+
+  .dkdSocialButton {
+    flex-direction: column;
+    gap: 4px;
+    min-height: 78px;
+  }
+
+  .dkdTrustCard {
+    grid-template-columns: auto 1fr;
+  }
+
+  .dkdMiniMiamiIcon {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .dkdHeroPanel {
+    min-height: 640px;
+  }
+
+  .dkdHeroContent {
+    width: 70%;
+    padding-left: 22px;
+  }
+
+  .dkdHeroImageFrame {
+    width: 52%;
+    height: 76%;
+    right: -28px;
+  }
+
+  .dkdHeroCopy {
+    margin-top: 96px;
+  }
+
+  .dkdPremiumCard {
+    width: min(100vw - 44px, 300px);
+    min-height: 96px;
+    padding: 16px 18px;
+  }
+
+  .dkdInputWrap {
+    min-height: 70px;
+    padding-left: 60px;
+    padding-right: 54px;
+    border-radius: 18px;
+  }
+
+  .dkdInputIcon {
+    left: 20px;
+  }
+
+  .dkdFormMetaRow {
+    font-size: 14px;
+  }
+
+  .dkdDividerRow {
+    gap: 10px;
+    font-size: 14px;
+  }
+
+  .dkdAuthPanel {
+    padding: 22px 20px 24px;
+  }
+
+  .dkdGoogleMark,
+  .dkdAppleMark,
+  .dkdInstagramMark {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 390px) {
+  .dkdHeroPanel {
+    min-height: 610px;
+  }
+
+  .dkdLogoScript {
+    font-size: 54px;
+  }
+
+  .dkdLogoSub {
+    margin-left: 92px;
+    font-size: 13px;
+  }
+
+  .dkdHeroCopy h1 {
+    font-size: 26px;
+  }
+
+  .dkdHeroCopy h1 span {
+    font-size: 46px;
+  }
+
+  .dkdHeroCopy p {
+    font-size: 14px;
+  }
+
+  .dkdPremiumCard {
+    gap: 14px;
+  }
+
+  .dkdDiamondIcon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .dkdSocialButton strong {
+    font-size: 12px;
+  }
+}
+
+@keyframes dkdGlowDrift {
+  from { transform: translate3d(-1.5%, -1%, 0) scale(1); }
+  to { transform: translate3d(1.5%, 1%, 0) scale(1.04); }
+}
