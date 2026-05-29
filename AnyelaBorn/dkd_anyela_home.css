@@ -2,7 +2,10 @@
   --dkd_anyela_home_bg: #07113b;
   --dkd_anyela_home_bg_deep: #030824;
   --dkd_anyela_home_pink: #ff4fb8;
+  --dkd_anyela_home_hot_pink: #ff149f;
   --dkd_anyela_home_aqua: #21d9dd;
+  --dkd_anyela_home_orange: #ff9548;
+  --dkd_anyela_home_violet: #7b4eff;
   --dkd_anyela_home_card_shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
   color-scheme: dark;
 }
@@ -33,6 +36,15 @@ body {
 button,
 a {
   -webkit-tap-highlight-color: transparent;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+svg {
+  display: block;
 }
 
 .dkd_anyela_home_page {
@@ -69,9 +81,294 @@ a {
   -webkit-user-drag: none;
 }
 
+.dkd_anyela_home_login_panel {
+  position: absolute;
+  z-index: 6;
+  left: 3.35%;
+  right: 3.35%;
+  top: 44.35%;
+  padding: clamp(13px, 3.2vw, 18px);
+  border: 1px solid rgba(255, 79, 184, 0.82);
+  border-radius: clamp(24px, 7vw, 36px);
+  background:
+    radial-gradient(circle at 16% 8%, rgba(255, 79, 184, 0.24), transparent 26%),
+    radial-gradient(circle at 86% 4%, rgba(33, 217, 221, 0.16), transparent 24%),
+    linear-gradient(180deg, rgba(24, 16, 78, 0.94) 0%, rgba(9, 9, 48, 0.96) 100%);
+  box-shadow:
+    0 22px 60px rgba(2, 3, 28, 0.62),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    0 0 28px rgba(255, 79, 184, 0.30);
+  backdrop-filter: blur(10px);
+}
+
+.dkd_anyela_home_login_tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 0 0 12px;
+}
+
+.dkd_anyela_home_login_tab {
+  position: relative;
+  min-height: 38px;
+  border: 0;
+  border-radius: 18px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.72);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+}
+
+.dkd_anyela_home_login_tab_active {
+  color: #ff5dc0;
+  text-shadow: 0 0 16px rgba(255, 79, 184, 0.72);
+}
+
+.dkd_anyela_home_login_tab_active::after {
+  content: "";
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: -5px;
+  height: 3px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #ff5bc2, transparent);
+  box-shadow: 0 0 18px rgba(255, 79, 184, 0.95);
+}
+
+.dkd_anyela_home_login_icon,
+.dkd_anyela_home_input_icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.dkd_anyela_home_login_icon svg,
+.dkd_anyela_home_input_icon svg,
+.dkd_anyela_home_eye_button svg {
+  width: 22px;
+  height: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.1;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.dkd_anyela_home_login_form {
+  display: grid;
+  gap: 10px;
+}
+
+.dkd_anyela_home_input_wrap {
+  position: relative;
+  min-height: 54px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 12px 0 15px;
+  border: 1.4px solid rgba(255, 92, 196, 0.68);
+  border-radius: 18px;
+  background: linear-gradient(135deg, rgba(124, 61, 160, 0.34), rgba(21, 24, 87, 0.72));
+  box-shadow:
+    inset 0 0 18px rgba(255, 255, 255, 0.045),
+    0 0 12px rgba(255, 79, 184, 0.18);
+  color: #ff6cc6;
+}
+
+.dkd_anyela_home_input_wrap:focus-within {
+  border-color: rgba(255, 117, 210, 0.98);
+  box-shadow:
+    inset 0 0 18px rgba(255, 255, 255, 0.06),
+    0 0 22px rgba(255, 79, 184, 0.38);
+}
+
+.dkd_anyela_home_input {
+  width: 100%;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: clamp(15px, 4.2vw, 20px);
+}
+
+.dkd_anyela_home_input::placeholder {
+  color: rgba(255, 255, 255, 0.57);
+  font-weight: 600;
+}
+
+.dkd_anyela_home_eye_button {
+  width: 40px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.78);
+  background: transparent;
+  cursor: pointer;
+}
+
+.dkd_anyela_home_login_options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 38px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(12px, 3.4vw, 16px);
+  font-weight: 700;
+}
+
+.dkd_anyela_home_remember {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.dkd_anyela_home_remember input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.dkd_anyela_home_checkmark {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9px;
+  background: linear-gradient(135deg, #ff8b50 0%, #ff33a9 55%, #ff59cf 100%);
+  box-shadow: 0 0 18px rgba(255, 79, 184, 0.58);
+  color: #ffffff;
+  font-weight: 900;
+}
+
+.dkd_anyela_home_forgot {
+  color: #ff72ca;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.dkd_anyela_home_submit {
+  width: 100%;
+  min-height: 58px;
+  border: 0;
+  border-radius: 18px;
+  background: linear-gradient(100deg, var(--dkd_anyela_home_orange) 0%, #ff4f88 48%, var(--dkd_anyela_home_hot_pink) 100%);
+  box-shadow:
+    0 16px 30px rgba(255, 28, 148, 0.32),
+    inset 0 1px 0 rgba(255, 255, 255, 0.34);
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: clamp(18px, 5vw, 26px);
+  font-weight: 950;
+  cursor: pointer;
+}
+
+.dkd_anyela_home_submit span {
+  display: inline-block;
+  margin-left: 14px;
+  font-size: 1.28em;
+  line-height: 0;
+}
+
+.dkd_anyela_home_social_divider {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 10px;
+  margin: 11px 2px 9px;
+  color: rgba(255, 255, 255, 0.64);
+}
+
+.dkd_anyela_home_social_divider span {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.34), transparent);
+}
+
+.dkd_anyela_home_social_divider strong {
+  font-size: clamp(11px, 3.2vw, 15px);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dkd_anyela_home_social_grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.dkd_anyela_home_social_button {
+  min-height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid rgba(154, 123, 255, 0.62);
+  border-radius: 16px;
+  background:
+    linear-gradient(180deg, rgba(101, 64, 176, 0.78), rgba(30, 23, 85, 0.88));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    0 10px 20px rgba(0, 0, 0, 0.24);
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+  font-weight: 850;
+  font-size: clamp(11px, 3.4vw, 16px);
+  overflow: hidden;
+}
+
+.dkd_anyela_home_social_button svg {
+  width: 24px;
+  height: 24px;
+  flex: 0 0 auto;
+}
+
+.dkd_anyela_home_social_button:not(:first-child) svg {
+  fill: #ffffff;
+}
+
+.dkd_anyela_home_instagram_icon {
+  width: 25px;
+  height: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background:
+    radial-gradient(circle at 30% 105%, #ffd86a 0 22%, transparent 23%),
+    radial-gradient(circle at 25% 25%, #7e3cff 0 14%, transparent 15%),
+    linear-gradient(135deg, #7b3cff 0%, #ff2ca7 48%, #ff8a35 100%);
+}
+
+.dkd_anyela_home_instagram_icon svg {
+  width: 18px;
+  height: 18px;
+  fill: none !important;
+  stroke: #ffffff;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .dkd_anyela_home_hotspots {
   position: absolute;
   inset: 0;
+  z-index: 8;
   pointer-events: none;
 }
 
@@ -83,14 +380,18 @@ a {
   outline: none;
 }
 
-.dkd_anyela_hotspot:focus-visible {
+.dkd_anyela_hotspot:focus-visible,
+.dkd_anyela_home_social_button:focus-visible,
+.dkd_anyela_home_submit:focus-visible,
+.dkd_anyela_home_login_tab:focus-visible,
+.dkd_anyela_home_eye_button:focus-visible,
+.dkd_anyela_home_forgot:focus-visible {
+  outline: none;
   box-shadow:
     0 0 0 3px rgba(255, 255, 255, 0.85),
     0 0 0 7px rgba(255, 79, 184, 0.65);
-  background: rgba(255, 255, 255, 0.08);
 }
 
-/* Konumlar yüklenen 864x1536 ana sayfa görseline göre yüzdelik olarak ayarlandı. */
 .dkd_anyela_hotspot_menu {
   left: 2.5%;
   top: 2.5%;
@@ -200,6 +501,72 @@ a {
   color: #ffffff;
 }
 
+@media (max-width: 420px) {
+  .dkd_anyela_home_login_panel {
+    left: 2.8%;
+    right: 2.8%;
+    top: 43.9%;
+    padding: 12px;
+    border-radius: 25px;
+  }
+
+  .dkd_anyela_home_input_wrap {
+    min-height: 50px;
+    border-radius: 17px;
+  }
+
+  .dkd_anyela_home_submit {
+    min-height: 54px;
+    border-radius: 17px;
+  }
+
+  .dkd_anyela_home_social_button {
+    min-height: 43px;
+    gap: 5px;
+  }
+
+  .dkd_anyela_home_login_options {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  .dkd_anyela_home_login_panel {
+    top: 43.4%;
+    padding: 10px;
+  }
+
+  .dkd_anyela_home_login_tabs {
+    margin-bottom: 9px;
+  }
+
+  .dkd_anyela_home_login_form {
+    gap: 8px;
+  }
+
+  .dkd_anyela_home_input_wrap {
+    min-height: 47px;
+  }
+
+  .dkd_anyela_home_submit {
+    min-height: 50px;
+  }
+
+  .dkd_anyela_home_social_divider {
+    margin: 8px 2px 7px;
+  }
+
+  .dkd_anyela_home_social_button {
+    min-height: 40px;
+    border-radius: 14px;
+  }
+
+  .dkd_anyela_home_social_button svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
 @media (min-width: 820px) {
   .dkd_anyela_home_page {
     align-items: center;
@@ -222,9 +589,29 @@ a {
   }
 }
 
-@media (max-width: 380px) {
-  .dkd_anyela_home_phone {
-    width: 100vw;
+@media (max-height: 760px) and (max-width: 480px) {
+  .dkd_anyela_home_login_panel {
+    top: 41.8%;
+    transform: scale(0.91);
+    transform-origin: top center;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .dkd_anyela_home_login_panel {
+    animation: dkd_anyela_home_login_float 520ms ease-out both;
+  }
+
+  @keyframes dkd_anyela_home_login_float {
+    from {
+      opacity: 0;
+      transform: translateY(16px) scale(0.98);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
   }
 }
 
