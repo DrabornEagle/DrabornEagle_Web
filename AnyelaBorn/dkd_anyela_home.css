@@ -1,0 +1,236 @@
+:root {
+  --dkd_anyela_home_bg: #07113b;
+  --dkd_anyela_home_bg_deep: #030824;
+  --dkd_anyela_home_pink: #ff4fb8;
+  --dkd_anyela_home_aqua: #21d9dd;
+  --dkd_anyela_home_card_shadow: 0 24px 70px rgba(0, 0, 0, 0.42);
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: var(--dkd_anyela_home_bg_deep);
+}
+
+body {
+  min-height: 100%;
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(33, 217, 221, 0.32), transparent 24rem),
+    radial-gradient(circle at 88% 22%, rgba(255, 79, 184, 0.32), transparent 22rem),
+    radial-gradient(circle at 50% 110%, rgba(255, 157, 65, 0.24), transparent 24rem),
+    linear-gradient(180deg, #04123f 0%, #070526 55%, #030517 100%);
+  overflow-x: hidden;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dkd_anyela_home_page {
+  min-height: 100svh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
+}
+
+.dkd_anyela_home_shell {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dkd_anyela_home_phone {
+  position: relative;
+  width: min(100vw, 480px);
+  min-height: 100svh;
+  overflow: hidden;
+  background: #07113b;
+  box-shadow: var(--dkd_anyela_home_card_shadow);
+}
+
+.dkd_anyela_home_mockup {
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 100svh;
+  object-fit: cover;
+  object-position: center top;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.dkd_anyela_home_hotspots {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.dkd_anyela_hotspot {
+  position: absolute;
+  display: block;
+  border-radius: 999px;
+  pointer-events: auto;
+  outline: none;
+}
+
+.dkd_anyela_hotspot:focus-visible {
+  box-shadow:
+    0 0 0 3px rgba(255, 255, 255, 0.85),
+    0 0 0 7px rgba(255, 79, 184, 0.65);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Konumlar yüklenen 864x1536 ana sayfa görseline göre yüzdelik olarak ayarlandı. */
+.dkd_anyela_hotspot_menu {
+  left: 2.5%;
+  top: 2.5%;
+  width: 10.2%;
+  height: 5.8%;
+}
+
+.dkd_anyela_hotspot_notifications {
+  right: 3.3%;
+  top: 2.5%;
+  width: 10.2%;
+  height: 5.8%;
+}
+
+.dkd_anyela_hotspot_start {
+  left: 4.2%;
+  top: 36.1%;
+  width: 41.4%;
+  height: 6.6%;
+}
+
+.dkd_anyela_hotspot_chat_card {
+  left: 3.2%;
+  top: 61.6%;
+  width: 22.5%;
+  height: 23.3%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_voice_card {
+  left: 27.2%;
+  top: 61.6%;
+  width: 22.5%;
+  height: 23.3%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_photo_card {
+  left: 51.0%;
+  top: 61.6%;
+  width: 22.5%;
+  height: 23.3%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_ads_card {
+  left: 74.8%;
+  top: 61.6%;
+  width: 22.5%;
+  height: 23.3%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_nav_home {
+  left: 3.4%;
+  bottom: 1.2%;
+  width: 17.3%;
+  height: 9.8%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_nav_packages {
+  left: 21.2%;
+  bottom: 1.2%;
+  width: 18.0%;
+  height: 9.8%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_nav_chat {
+  left: 40.2%;
+  bottom: 1.2%;
+  width: 18.0%;
+  height: 9.8%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_nav_orders {
+  left: 59.4%;
+  bottom: 1.2%;
+  width: 18.0%;
+  height: 9.8%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_hotspot_nav_profile {
+  left: 78.4%;
+  bottom: 1.2%;
+  width: 18.2%;
+  height: 9.8%;
+  border-radius: 22px;
+}
+
+.dkd_anyela_home_text_fallback {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.dkd_anyela_home_fallback_button {
+  color: #ffffff;
+}
+
+@media (min-width: 820px) {
+  .dkd_anyela_home_page {
+    align-items: center;
+    padding: 32px 0;
+  }
+
+  .dkd_anyela_home_phone {
+    width: min(44vw, 480px);
+    min-height: auto;
+    border-radius: 38px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow:
+      0 42px 110px rgba(0, 0, 0, 0.52),
+      0 0 90px rgba(255, 79, 184, 0.22),
+      0 0 120px rgba(33, 217, 221, 0.18);
+  }
+
+  .dkd_anyela_home_mockup {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 380px) {
+  .dkd_anyela_home_phone {
+    width: 100vw;
+  }
+}
+
+@supports (height: 100dvh) {
+  .dkd_anyela_home_page,
+  .dkd_anyela_home_phone {
+    min-height: 100dvh;
+  }
+}
