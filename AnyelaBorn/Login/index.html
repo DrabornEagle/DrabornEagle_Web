@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#07103a" />
+    <meta name="description" content="Anyela Born Club premium üyelik, giriş ve üye ol sayfası." />
+    <title>Anyela Born Club | Giriş</title>
+    <link rel="preload" href="./assets/dkd_anyela_miami_hero.jpg" as="image" />
+    <link rel="stylesheet" href="./dkd_anyela_miami_login.css" />
+  </head>
+  <body>
+    <main class="dkd_anyela_page" aria-label="Anyela Born Club giriş sayfası">
+      <section class="dkd_anyela_phone_shell" aria-label="Anyela Born Club Miami temalı mobil giriş ekranı">
+        <div class="dkd_anyela_hero" role="img" aria-label="Anyela Born Club Miami temalı karşılama görseli">
+          <div class="dkd_anyela_hero_welcome" aria-hidden="true">
+            <span>Hoş Geldin</span>
+            <em>♡</em>
+          </div>
+        </div>
+
+        <section class="dkd_anyela_login_card" aria-label="Giriş ve üye ol formu">
+          <div class="dkd_anyela_tabs" role="tablist" aria-label="Giriş seçenekleri">
+            <button class="dkd_anyela_tab dkd_anyela_tab_active" id="dkd_anyela_login_tab" type="button" role="tab" aria-selected="true" data-dkd-mode="login">
+              <span class="dkd_anyela_icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 12.2a4.1 4.1 0 1 0 0-8.2 4.1 4.1 0 0 0 0 8.2Z"/><path d="M4.7 21a7.3 7.3 0 0 1 14.6 0"/></svg>
+              </span>
+              <span>GİRİŞ YAP</span>
+            </button>
+            <button class="dkd_anyela_tab" id="dkd_anyela_join_tab" type="button" role="tab" aria-selected="false" data-dkd-mode="join">
+              <span class="dkd_anyela_icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M10.8 11.4a3.8 3.8 0 1 0 0-7.6 3.8 3.8 0 0 0 0 7.6Z"/><path d="M3.9 20.6a6.9 6.9 0 0 1 13.8 0"/><path d="M18.6 7.6v5.2"/><path d="M16 10.2h5.2"/></svg>
+              </span>
+              <span>ÜYE OL</span>
+            </button>
+          </div>
+
+          <form class="dkd_anyela_form" id="dkd_anyela_login_form">
+            <label class="dkd_anyela_field" for="dkd_anyela_identity_input">
+              <span class="dkd_anyela_field_icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 12.2a4.1 4.1 0 1 0 0-8.2 4.1 4.1 0 0 0 0 8.2Z"/><path d="M4.7 21a7.3 7.3 0 0 1 14.6 0"/></svg>
+              </span>
+              <input id="dkd_anyela_identity_input" name="dkd_anyela_identity" type="text" autocomplete="username" placeholder="E-posta veya kullanıcı adı" />
+            </label>
+
+            <label class="dkd_anyela_field" for="dkd_anyela_password_input">
+              <span class="dkd_anyela_field_icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M6.8 10.8h10.4v8.8H6.8z"/><path d="M8.9 10.8V8a3.1 3.1 0 0 1 6.2 0v2.8"/></svg>
+              </span>
+              <input id="dkd_anyela_password_input" name="dkd_anyela_password" type="password" autocomplete="current-password" placeholder="Şifre" />
+              <button class="dkd_anyela_eye_button" id="dkd_anyela_password_toggle" type="button" aria-label="Şifreyi göster veya gizle">
+                <svg viewBox="0 0 24 24"><path d="M2.8 12s3.5-6 9.2-6 9.2 6 9.2 6-3.5 6-9.2 6-9.2-6-9.2-6Z"/><path d="M12 15.1a3.1 3.1 0 1 0 0-6.2 3.1 3.1 0 0 0 0 6.2Z"/></svg>
+              </button>
+            </label>
+
+            <div class="dkd_anyela_form_row">
+              <label class="dkd_anyela_remember">
+                <input id="dkd_anyela_remember_input" type="checkbox" checked />
+                <span class="dkd_anyela_checkmark" aria-hidden="true">✓</span>
+                <span>Beni Hatırla</span>
+              </label>
+              <button class="dkd_anyela_forgot" type="button">Şifremi Unuttum?</button>
+            </div>
+
+            <button class="dkd_anyela_primary_button" id="dkd_anyela_primary_submit" type="submit">
+              <span>GİRİŞ YAP</span>
+              <span class="dkd_anyela_button_arrow" aria-hidden="true">›</span>
+            </button>
+          </form>
+
+          <div class="dkd_anyela_separator" aria-hidden="true">
+            <span></span>
+            <p>Veya şununla devam et</p>
+            <span></span>
+          </div>
+
+          <div class="dkd_anyela_social_grid" aria-label="Sosyal giriş seçenekleri">
+            <button class="dkd_anyela_social_button" type="button" data-dkd-provider="Google">
+              <span class="dkd_anyela_social_icon dkd_anyela_google_icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path fill="#4285F4" d="M44.5 20H24v8.5h11.8C34.6 34.3 29.7 38 24 38c-7.7 0-14-6.3-14-14s6.3-14 14-14c3.5 0 6.7 1.3 9.1 3.5l6-6C35.2 4 29.9 2 24 2 11.8 2 2 11.8 2 24s9.8 22 22 22c11 0 21-8 21-22 0-1.4-.2-2.7-.5-4Z"/>
+                  <path fill="#34A853" d="M5.3 14.4 12.3 19.5C14.2 13.9 18.7 10 24 10c3.5 0 6.7 1.3 9.1 3.5l6-6C35.2 4 29.9 2 24 2 15.5 2 8.1 6.9 5.3 14.4Z"/>
+                  <path fill="#FBBC05" d="M24 46c5.8 0 10.8-1.9 14.5-5.2l-6.7-5.5C29.8 36.9 27 38 24 38c-5.7 0-10.5-3.7-12.3-8.8l-7 5.4C8.1 41.3 15.4 46 24 46Z"/>
+                  <path fill="#EA4335" d="M11.7 29.2A14 14 0 0 1 11 24c0-1.8.3-3.6 1.3-5.2l-7-5.4A21.8 21.8 0 0 0 2 24c0 3.6.9 7.1 2.7 10.2l7-5Z"/>
+                </svg>
+              </span>
+              <span>Google</span>
+            </button>
+            <button class="dkd_anyela_social_button" type="button" data-dkd-provider="Apple">
+              <span class="dkd_anyela_social_icon dkd_anyela_apple_icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <path fill="currentColor" d="M31.7 7.1c1.7-2.1 2.9-5 2.5-7.1-2.5.2-5.4 1.7-7.1 3.8-1.6 1.8-3 4.7-2.6 6.8 2.8.2 5.5-1.4 7.2-3.5ZM39.2 33.3c-.8 1.9-1.2 2.8-2.2 4.5-1.4 2.4-3.5 5.4-6 5.4-2.2 0-2.8-1.6-5.9-1.6-3 0-3.7 1.6-5.9 1.7-2.5.1-4.5-3.3-6-5.7-4.2-6.9-4.6-15-.2-19.3 1.6-1.6 3.7-2.5 5.9-2.5 2.3 0 4.4 1.6 5.9 1.6 1.4 0 4.1-2 7-1.7 1.2.1 4.6.5 6.7 3.6-5.9 3.2-4.9 11.5.7 14Z"/>
+                </svg>
+              </span>
+              <span>Apple</span>
+            </button>
+            <button class="dkd_anyela_social_button" type="button" data-dkd-provider="Instagram">
+              <span class="dkd_anyela_social_icon dkd_anyela_instagram_icon" aria-hidden="true">
+                <svg viewBox="0 0 48 48">
+                  <rect x="8" y="8" width="32" height="32" rx="10" />
+                  <circle cx="24" cy="24" r="8" />
+                  <circle cx="34" cy="14" r="2.4" />
+                </svg>
+              </span>
+              <span>Instagram</span>
+            </button>
+          </div>
+
+          <button class="dkd_anyela_join_big" id="dkd_anyela_join_big" type="button">
+            <span>ÜYE OL</span>
+            <span class="dkd_anyela_icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M10.8 11.4a3.8 3.8 0 1 0 0-7.6 3.8 3.8 0 0 0 0 7.6Z"/><path d="M3.9 20.6a6.9 6.9 0 0 1 13.8 0"/><path d="M18.6 7.6v5.2"/><path d="M16 10.2h5.2"/></svg>
+            </span>
+          </button>
+
+          <aside class="dkd_anyela_security_card" aria-label="Güvenlik bilgisi">
+            <div class="dkd_anyela_shield" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2.8 20 6v5.7c0 5-3.3 8.8-8 10.1-4.7-1.3-8-5.1-8-10.1V6z"/><path d="m8.7 12.3 2.1 2.1 4.8-5"/></svg>
+            </div>
+            <div class="dkd_anyela_security_copy">
+              <strong>%100 Güvenli &amp; Özel</strong>
+              <span>Tüm bilgileriniz gizli tutulur.</span>
+              <span>Sadece üyeler için özel bir dünya.</span>
+            </div>
+            <div class="dkd_anyela_city_line" aria-hidden="true">
+              <svg viewBox="0 0 180 88">
+                <path d="M9 75h162"/>
+                <path d="M34 75V51h14v24M61 75V38h16v37M94 75V30h18v45M130 75V21h21v54"/>
+                <path d="M18 62c10-21 25-25 45-18"/>
+                <path d="M28 58c1-16 9-28 22-36"/>
+                <path d="M46 42c-7-6-15-8-24-5M47 42c6-7 15-10 25-8M47 42c-2-9-7-16-16-20"/>
+              </svg>
+            </div>
+          </aside>
+        </section>
+      </section>
+      <div class="dkd_anyela_toast" id="dkd_anyela_toast" role="status" aria-live="polite"></div>
+    </main>
+    <script src="./dkd_anyela_miami_login.js"></script>
+  </body>
+</html>
