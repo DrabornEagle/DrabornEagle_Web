@@ -86,9 +86,9 @@ svg {
   z-index: 6;
   left: -2.35%;
   right: -2.35%;
-  top: 43.55%;
-  bottom: -5.2%;
-  padding: clamp(17px, 4.1vw, 24px) clamp(17px, 4.35vw, 24px) clamp(32px, 7.2vw, 48px);
+  top: 43.25%;
+  bottom: -12.5%;
+  padding: clamp(18px, 4.25vw, 25px) clamp(17px, 4.35vw, 24px) clamp(54px, 11.5vw, 78px);
   border: 1px solid rgba(255, 79, 184, 0.82);
   border-radius: clamp(24px, 7vw, 36px);
   background:
@@ -168,7 +168,7 @@ svg {
 
 .dkd_anyela_home_login_form {
   display: grid;
-  gap: 12px;
+  gap: 13px;
 }
 
 .dkd_anyela_home_input_wrap {
@@ -295,7 +295,7 @@ svg {
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
   gap: 10px;
-  margin: 11px 2px 9px;
+  margin: 13px 2px 10px;
   color: rgba(255, 255, 255, 0.64);
 }
 
