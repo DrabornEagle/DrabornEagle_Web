@@ -121,43 +121,16 @@ svg {
 .dkd_anyela_hero::after {
   content: "";
   position: absolute;
-  z-index: 4;
   inset: auto 0 0;
   height: 96px;
   background: linear-gradient(180deg, transparent 0%, rgba(8, 9, 40, 0.48) 52%, rgba(8, 9, 40, 0.97) 100%);
-}
-
-.dkd_anyela_hero_text_cover {
-  position: absolute;
-  z-index: 2;
-  left: 6.8%;
-  top: 44.2%;
-  width: 41.4%;
-  height: 21.4%;
-  border-radius: 26px;
-  background:
-    radial-gradient(circle at 18% 42%, rgba(41, 20, 79, 0.99), rgba(8, 11, 46, 0.98) 58%, rgba(8, 11, 46, 0.96) 100%);
-  box-shadow: 0 0 18px rgba(8, 11, 46, 0.78);
-  filter: none;
-  pointer-events: none;
-}
-
-.dkd_anyela_welcome_overlay {
-  position: absolute;
-  z-index: 3;
-  left: 6.4%;
-  top: 47.2%;
-  width: 45.2%;
-  height: auto;
-  pointer-events: none;
-  user-select: none;
 }
 
 .dkd_anyela_login_card {
   position: relative;
   z-index: 2;
   margin: -5px clamp(8px, 3vw, 18px) 18px;
-  padding: clamp(18px, 4.7vw, 28px) clamp(15px, 4vw, 24px) clamp(18px, 4.6vw, 26px);
+  padding: clamp(18px, 4.7vw, 28px) clamp(16px, 4vw, 24px) clamp(18px, 4.6vw, 26px);
   border: 1px solid rgba(255, 92, 211, 0.36);
   border-radius: var(--dkd_anyela_radius_large) var(--dkd_anyela_radius_large) 22px 22px;
   background:
@@ -413,39 +386,37 @@ svg {
   display: grid;
   place-items: center;
   flex: 0 0 auto;
-  border-radius: 13px;
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow:
-    0 8px 18px rgba(0, 0, 0, 0.22),
-    inset 0 1px 0 rgba(255, 255, 255, 0.74);
+  border-radius: 12px;
   overflow: hidden;
+  box-shadow:
+    0 0 18px rgba(255, 84, 206, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.22);
 }
 
 .dkd_anyela_social_mark svg {
-  width: 72%;
-  height: 72%;
-  stroke: none;
+  width: 70%;
+  height: 70%;
+  stroke-width: 0;
+  fill: currentColor;
+}
+
+.dkd_anyela_google_mark {
+  color: #fff;
+  background: conic-gradient(from -42deg, #4285f4 0 25%, #34a853 0 48%, #fbbc05 0 72%, #ea4335 0 100%);
 }
 
 .dkd_anyela_apple_mark {
-  color: #0b0b14;
-}
-
-.dkd_anyela_apple_mark svg {
-  width: 68%;
-  height: 68%;
+  color: #050927;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #ffffff 0%, #dfe4ff 100%);
 }
 
 .dkd_anyela_instagram_mark {
-  background: radial-gradient(circle at 28% 92%, #ffd86a 0%, #ff625d 35%, #f000b9 62%, #5b52ff 100%);
-}
-
-.dkd_anyela_instagram_mark svg {
-  width: 70%;
-  height: 70%;
-  stroke: #fff;
-  stroke-width: 1.9;
-  fill: none;
+  color: white;
+  background:
+    radial-gradient(circle at 30% 92%, #ffd86a 0 18%, transparent 32%),
+    radial-gradient(circle at 72% 16%, #7b5cff 0 18%, transparent 34%),
+    linear-gradient(135deg, #ff7a38 0%, #fa2a93 45%, #764bff 100%);
 }
 
 .dkd_anyela_join_big {
@@ -559,7 +530,7 @@ svg {
 @media (max-width: 390px) {
   .dkd_anyela_login_card {
     margin-inline: 8px;
-    padding-inline: 13px;
+    padding-inline: 12px;
   }
 
   .dkd_anyela_social_grid {
