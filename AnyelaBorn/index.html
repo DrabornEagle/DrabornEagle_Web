@@ -1,110 +1,113 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#070a2b" />
-    <title>Anyela Born Club</title>
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <main class="dkd-anyela-page" aria-label="Anyela Born Club giriş sayfası">
-      <section class="dkd-hero" aria-label="Anyela Born Club karşılama alanı">
-        <div class="dkd-skyline" aria-hidden="true">
-          <span class="dkd-palm dkd-palm-left">⌁</span>
-          <span class="dkd-palm dkd-palm-right">⌁</span>
-          <div class="dkd-buildings">
-            <i style="--dkd-building-height: 88px"></i>
-            <i style="--dkd-building-height: 126px"></i>
-            <i style="--dkd-building-height: 104px"></i>
-            <i style="--dkd-building-height: 146px"></i>
-            <i style="--dkd-building-height: 112px"></i>
-            <i style="--dkd-building-height: 82px"></i>
-          </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#070a2d" />
+  <title>Anyela Born Club</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css?v=3" />
+</head>
+<body>
+  <main class="dkd_anyela_page" aria-label="Anyela Born Club giriş sayfası">
+    <section class="dkd_hero" aria-label="Anyela Born Club karşılama alanı">
+      <div class="dkd_hero_backdrop" aria-hidden="true"></div>
+      <div class="dkd_neon_orb dkd_neon_orb_one" aria-hidden="true"></div>
+      <div class="dkd_neon_orb dkd_neon_orb_two" aria-hidden="true"></div>
+      <div class="dkd_neon_frame" aria-hidden="true"></div>
+      <div class="dkd_city" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+      <header class="dkd_brand">
+        <div class="dkd_logo_script">Anyela<span>♡</span></div>
+        <div class="dkd_logo_subtitle">BORN CLUB</div>
+      </header>
+
+      <img class="dkd_anyela_cutout" src="./assets/anyela-born-cutout.png?v=3" alt="Anyela Born" />
+
+      <div class="dkd_hero_copy">
+        <h1>Anyela Born Club’a</h1>
+        <p class="dkd_welcome_script">Hoş Geldin<span>♡</span></p>
+        <p class="dkd_hero_text">Özel içerikler, sınırsız sohbet ve benzersiz anlar seni bekliyor.</p>
+      </div>
+
+      <article class="dkd_premium_card" aria-label="Premium üyelik avantajı">
+        <div class="dkd_premium_icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" role="img"><path d="M10 22 21 10h22l11 12-22 32L10 22Zm10.5 2 11.5 17 11.5-17h-23Zm4.2-8-5.1 6h24.8l-5.1-6H24.7Z"/></svg>
         </div>
-
-        <div class="dkd-logo-block">
-          <div class="dkd-logo-script">Anyela<span>♡</span></div>
-          <div class="dkd-logo-subtitle">BORN CLUB</div>
+        <div>
+          <strong>PREMIUM ÜYELİK</strong>
+          <span>Sadece üyeler için özel ayrıcalıklar</span>
         </div>
+      </article>
+    </section>
 
-        <div class="dkd-portrait-frame" aria-hidden="true">
-          <div class="dkd-portrait-glow"></div>
-          <img src="./assets/anyela-born-cutout.png" alt="" class="dkd-anyela-cutout" />
-        </div>
+    <section class="dkd_auth_panel" aria-label="Giriş ve üyelik paneli">
+      <div class="dkd_tabs" role="tablist" aria-label="Giriş ve üyelik seçimi">
+        <button class="dkd_tab dkd_tab_active" type="button" data-dkd-tab="login" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.42 0-8 2.2-8 5v1h16v-1c0-2.8-3.58-5-8-5Z"/></svg>
+          <span>GİRİŞ YAP</span>
+        </button>
+        <button class="dkd_tab" type="button" data-dkd-tab="signup" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 12a4 4 0 1 0-8 0 4 4 0 0 0 8 0ZM3 21c0-3.32 3.58-6 8-6 1.42 0 2.76.28 3.92.78A6.4 6.4 0 0 0 14 19.2V21H3Zm16-6v3h3v2h-3v3h-2v-3h-3v-2h3v-3h2Z"/></svg>
+          <span>ÜYE OL</span>
+        </button>
+      </div>
 
-        <div class="dkd-welcome-copy">
-          <h1>Anyela Born Club’a</h1>
-          <p class="dkd-welcome-script">Hoş Geldin<span>♡</span></p>
-          <p class="dkd-welcome-text">Özel içerikler, sınırsız sohbet ve benzersiz anlar seni bekliyor.</p>
-        </div>
+      <form class="dkd_auth_form" autocomplete="on">
+        <label class="dkd_input_row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm0 2c-4.42 0-8 2.2-8 5v1h16v-1c0-2.8-3.58-5-8-5Z"/></svg>
+          <input type="text" name="dkd_anyela_login" placeholder="E-posta veya kullanıcı adı" />
+        </label>
 
-        <article class="dkd-premium-card" aria-label="Premium üyelik">
-          <div class="dkd-premium-icon">◇</div>
-          <div>
-            <strong>PREMIUM ÜYELİK</strong>
-            <span>Sadece üyeler için özel ayrıcalıklar</span>
-          </div>
-        </article>
-      </section>
-
-      <section class="dkd-login-panel" aria-label="Giriş ve üyelik paneli">
-        <div class="dkd-tabs" role="tablist" aria-label="Giriş seçenekleri">
-          <button class="dkd-tab dkd-tab-active" type="button" data-dkd-tab="login" role="tab" aria-selected="true">
-            <span class="dkd-line-icon">♙</span>
-            <span>GİRİŞ YAP</span>
+        <label class="dkd_input_row">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17 9h-1V7a4 4 0 0 0-8 0v2H7a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2Zm-7-2a2 2 0 1 1 4 0v2h-4V7Z"/></svg>
+          <input id="dkd_anyela_password" type="password" name="dkd_anyela_password" placeholder="Şifre" />
+          <button class="dkd_password_button" type="button" aria-label="Şifreyi göster veya gizle">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5c5 0 8.5 4.2 10 7-1.5 2.8-5 7-10 7S3.5 14.8 2 12c1.5-2.8 5-7 10-7Zm0 3.2a3.8 3.8 0 1 0 0 7.6 3.8 3.8 0 0 0 0-7.6Zm0 2a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6Z"/></svg>
           </button>
-          <button class="dkd-tab" type="button" data-dkd-tab="signup" role="tab" aria-selected="false">
-            <span class="dkd-line-icon">♙+</span>
-            <span>ÜYE OL</span>
-          </button>
+        </label>
+
+        <div class="dkd_form_tools">
+          <label class="dkd_remember">
+            <input type="checkbox" checked />
+            <span aria-hidden="true">✓</span>
+            <em>Beni Hatırla</em>
+          </label>
+          <a href="#">Şifremi Unuttum?</a>
         </div>
 
-        <form class="dkd-auth-form" action="#" method="post">
-          <label class="dkd-field" aria-label="E-posta veya kullanıcı adı">
-            <span class="dkd-field-icon">♙</span>
-            <input type="text" name="dkd_user_name" autocomplete="username" placeholder="E-posta veya kullanıcı adı" />
-          </label>
+        <button class="dkd_primary_button" type="button">GİRİŞ YAP <span>›</span></button>
+      </form>
 
-          <label class="dkd-field" aria-label="Şifre">
-            <span class="dkd-field-icon">▣</span>
-            <input id="dkd-password" type="password" name="dkd_user_password" autocomplete="current-password" placeholder="Şifre" />
-            <button class="dkd-eye" type="button" id="dkd-eye" aria-label="Şifreyi göster veya gizle">◉</button>
-          </label>
+      <div class="dkd_divider"><span></span><p>Veya şununla devam et</p><span></span></div>
 
-          <div class="dkd-row">
-            <label class="dkd-remember">
-              <input type="checkbox" name="dkd_remember" checked />
-              <span class="dkd-checkmark">✓</span>
-              <span>Beni Hatırla</span>
-            </label>
-            <a href="#" class="dkd-forgot">Şifremi Unuttum?</a>
-          </div>
+      <div class="dkd_social_grid" aria-label="Sosyal hesaplarla devam et">
+        <button type="button" class="dkd_social_button dkd_google"><strong>G</strong><span>Google</span></button>
+        <button type="button" class="dkd_social_button dkd_apple"><strong>●</strong><span>Apple</span></button>
+        <button type="button" class="dkd_social_button dkd_instagram"><strong>◎</strong><span>Instagram</span></button>
+      </div>
 
-          <button class="dkd-primary-button" type="submit">GİRİŞ YAP <span>›</span></button>
-        </form>
+      <button class="dkd_outline_button" type="button">
+        <span>ÜYE OL</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 12a4 4 0 1 0-8 0 4 4 0 0 0 8 0ZM3 21c0-3.32 3.58-6 8-6 1.42 0 2.76.28 3.92.78A6.4 6.4 0 0 0 14 19.2V21H3Zm16-6v3h3v2h-3v3h-2v-3h-3v-2h3v-3h2Z"/></svg>
+      </button>
 
-        <div class="dkd-separator"><span>Veya şununla devam et</span></div>
-
-        <div class="dkd-socials" aria-label="Sosyal giriş seçenekleri">
-          <button type="button"><b class="dkd-google">G</b><span>Google</span></button>
-          <button type="button"><b class="dkd-apple">●</b><span>Apple</span></button>
-          <button type="button"><b class="dkd-instagram">◎</b><span>Instagram</span></button>
+      <aside class="dkd_security_card" aria-label="Güvenlik bilgisi">
+        <div class="dkd_security_badge">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 9.7 8 11 4.6-1.3 8-6 8-11V5l-8-3Zm-1 13.2-3-3 1.4-1.4 1.6 1.58 4.6-4.58L17 9.2l-6 6Z"/></svg>
         </div>
-
-        <button class="dkd-outline-button" type="button">ÜYE OL <span>♙+</span></button>
-
-        <article class="dkd-safe-card">
-          <div class="dkd-shield">⌾</div>
-          <div>
-            <strong>%100 Güvenli &amp; Özel</strong>
-            <span>Tüm bilgileriniz gizli tutulur. Sadece üyeler için özel bir dünya.</span>
-          </div>
-          <div class="dkd-mini-city" aria-hidden="true"><i></i><i></i><i></i></div>
-        </article>
-      </section>
-    </main>
-
-    <script src="./app.js"></script>
-  </body>
+        <div>
+          <strong>%100 Güvenli &amp; Özel</strong>
+          <span>Tüm bilgileriniz gizli tutulur. Sadece üyeler için özel bir dünya.</span>
+        </div>
+        <div class="dkd_palm_city" aria-hidden="true"></div>
+      </aside>
+    </section>
+  </main>
+  <script src="./app.js?v=3"></script>
+</body>
 </html>

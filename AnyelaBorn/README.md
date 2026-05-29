@@ -1,31 +1,11 @@
-# Anyela Born Club Login Page
+# Anyela Born Club Login Page v3
 
-Klasör yolu hedefi:
+Statik HTML/CSS/JS dosyasıdır. Vite veya build sistemi gerektirmez.
 
-```text
-/AnyelaBorn/index.html
-```
-
-Yayın adresi:
+Yayın yolu önerisi:
 
 ```text
 https://www.draborneagle.com/AnyelaBorn
 ```
 
-Bu sürüm statik HTML/CSS/JS olarak hazırlandı. Vite/build süreci gerektirmez.
-
-## Dosyalar
-
-```text
-AnyelaBorn/
-  index.html
-  styles.css
-  app.js
-  assets/
-    anyela-born-cutout.png
-    anyela-born-original.jpg
-```
-
-## Not
-
-Giriş ve üyelik butonları şu an tasarım/mockup akışıdır. Supabase/Auth bağlantısı sonraki aşamada eklenebilir.
+Bu sürümde Anyela görseli `assets/anyela-born-cutout.png` olarak transparan kesilmiş şekilde kullanılır.
