@@ -621,3 +621,42 @@ svg {
     min-height: 100dvh;
   }
 }
+
+
+/* DKD Anyela Login Downward Expansion */
+.dkd_anyela_login_page .dkd_anyela_home_login_panel {
+  min-height: clamp(352px, 82vw, 430px);
+  padding-bottom: clamp(22px, 6vw, 34px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.dkd_anyela_login_page .dkd_anyela_home_login_form {
+  gap: 12px;
+}
+
+.dkd_anyela_login_page .dkd_anyela_home_social_divider {
+  margin-top: auto;
+  padding-top: 12px;
+}
+
+@media (max-width: 420px) {
+  .dkd_anyela_login_page .dkd_anyela_home_login_panel {
+    min-height: 354px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .dkd_anyela_login_page .dkd_anyela_home_login_panel {
+    min-height: 338px;
+    padding-bottom: 18px;
+  }
+}
+
+@media (max-height: 760px) and (max-width: 480px) {
+  .dkd_anyela_login_page .dkd_anyela_home_login_panel {
+    min-height: 360px;
+  }
+}
