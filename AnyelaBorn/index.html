@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#061044" />
+    <meta
+      name="description"
+      content="Anyela Born Club ana sayfası — Miami temalı özel sohbet, sesli mesaj, özel içerik ve paket tanıtım ekranı."
+    />
+    <meta property="og:title" content="Anyela Born Club" />
+    <meta
+      property="og:description"
+      content="Anyela ile premium fan deneyimini keşfet. Paket seç, özel chat odanı aç ve kişisel içeriklerini teslim al."
+    />
+    <meta property="og:image" content="./assets/dkd_anyela_miami_home_reference.png" />
+    <title>Anyela Born Club</title>
+    <style>
+      :root {
+        --dkd_anyela_root_bg: #070526;
+        --dkd_anyela_root_shadow: 0 28px 90px rgba(0, 0, 0, 0.48);
+        color-scheme: dark;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+        background:
+          radial-gradient(circle at 20% 0%, rgba(33, 217, 221, 0.22), transparent 28rem),
+          radial-gradient(circle at 84% 12%, rgba(255, 79, 184, 0.24), transparent 24rem),
+          linear-gradient(180deg, #061044 0%, var(--dkd_anyela_root_bg) 100%);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .dkd_anyela_root_page {
+        width: 100%;
+        min-height: 100svh;
+        display: flex;
+        justify-content: center;
+        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
+      }
+
+      .dkd_anyela_root_mobile_shell {
+        position: relative;
+        width: min(100vw, 480px);
+        min-height: 100svh;
+        overflow: hidden;
+        background: #ffffff;
+        box-shadow: var(--dkd_anyela_root_shadow);
+      }
+
+      .dkd_anyela_root_mockup {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 100svh;
+        object-fit: cover;
+        object-position: center top;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+
+      .dkd_anyela_root_hotspot {
+        position: absolute;
+        display: block;
+        z-index: 3;
+        border-radius: 999px;
+        text-decoration: none;
+        outline: none;
+      }
+
+      .dkd_anyela_root_hotspot:focus-visible {
+        box-shadow:
+          0 0 0 3px rgba(255, 255, 255, 0.92),
+          0 0 0 8px rgba(33, 217, 221, 0.72),
+          0 0 28px rgba(255, 79, 184, 0.72);
+      }
+
+      .dkd_anyela_root_menu {
+        left: 91.7%;
+        top: 1.55%;
+        width: 7.2%;
+        height: 3.95%;
+      }
+
+      .dkd_anyela_root_packages_button {
+        left: 3.9%;
+        top: 29.55%;
+        width: 34.5%;
+        height: 3.75%;
+      }
+
+      .dkd_anyela_root_chat_button {
+        left: 3.9%;
+        top: 33.95%;
+        width: 34.5%;
+        height: 3.75%;
+      }
+
+      .dkd_anyela_root_package_intro {
+        left: 3.5%;
+        top: 51.35%;
+        width: 30.4%;
+        height: 17.55%;
+        border-radius: 26px;
+      }
+
+      .dkd_anyela_root_package_private {
+        left: 34.8%;
+        top: 51.35%;
+        width: 30.4%;
+        height: 17.55%;
+        border-radius: 26px;
+      }
+
+      .dkd_anyela_root_package_voice {
+        left: 66.1%;
+        top: 51.35%;
+        width: 30.4%;
+        height: 17.55%;
+        border-radius: 26px;
+      }
+
+      .dkd_anyela_root_photo_set {
+        left: 3.6%;
+        top: 73.08%;
+        width: 45.2%;
+        height: 7.55%;
+        border-radius: 20px;
+      }
+
+      .dkd_anyela_root_talking_video {
+        left: 51.3%;
+        top: 73.08%;
+        width: 45.2%;
+        height: 7.55%;
+        border-radius: 20px;
+      }
+
+      .dkd_anyela_root_brand_area {
+        left: 3.6%;
+        top: 88.7%;
+        width: 92.9%;
+        height: 6.7%;
+        border-radius: 24px;
+      }
+
+      .dkd_anyela_root_nav_home {
+        left: 7.7%;
+        bottom: 0.2%;
+        width: 13.2%;
+        height: 5.4%;
+        border-radius: 18px;
+      }
+
+      .dkd_anyela_root_nav_packages {
+        left: 30.0%;
+        bottom: 0.2%;
+        width: 17.6%;
+        height: 5.4%;
+        border-radius: 18px;
+      }
+
+      .dkd_anyela_root_nav_chat {
+        left: 56.9%;
+        bottom: 0.2%;
+        width: 13.7%;
+        height: 5.4%;
+        border-radius: 18px;
+      }
+
+      .dkd_anyela_root_nav_profile {
+        left: 82.1%;
+        bottom: 0.2%;
+        width: 13.7%;
+        height: 5.4%;
+        border-radius: 18px;
+      }
+
+      .dkd_anyela_root_screen_reader {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        border: 0;
+        white-space: nowrap;
+      }
+
+      @media (min-width: 820px) {
+        .dkd_anyela_root_page {
+          align-items: center;
+          padding: 32px 0;
+        }
+
+        .dkd_anyela_root_mobile_shell {
+          width: min(44vw, 480px);
+          min-height: auto;
+          border-radius: 38px;
+          border: 1px solid rgba(255, 255, 255, 0.16);
+          box-shadow:
+            0 42px 110px rgba(0, 0, 0, 0.55),
+            0 0 90px rgba(255, 79, 184, 0.23),
+            0 0 120px rgba(33, 217, 221, 0.18);
+        }
+
+        .dkd_anyela_root_mockup {
+          min-height: auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="dkd_anyela_root_page" aria-label="Anyela Born Club ana sayfa">
+      <section class="dkd_anyela_root_mobile_shell" id="dkd_anyela_root_home">
+        <img
+          class="dkd_anyela_root_mockup"
+          src="./assets/dkd_anyela_miami_home_reference.png"
+          alt="Anyela Born Club Miami Style Club mobil ana sayfa tasarımı"
+          width="864"
+          height="1536"
+          loading="eager"
+        />
+
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_menu" href="./Login/" aria-label="Menüyü ve giriş sayfasını aç"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_packages_button" href="#dkd_anyela_root_packages" aria-label="Paketleri incele"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_chat_button" href="./Login/" aria-label="Özel sohbet başlat"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_package_intro" id="dkd_anyela_root_packages" href="./Login/?dkd_anyela_package=intro" aria-label="Anyela Intro paketini seç"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_package_private" href="./Login/?dkd_anyela_package=private-chat" aria-label="Private Chat paketini seç"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_package_voice" href="./Login/?dkd_anyela_package=voice-intro" aria-label="Voice Intro paketini seç"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_photo_set" href="./Login/?dkd_anyela_package=photo-set" aria-label="Photo Set özel içerik paketini seç"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_talking_video" href="./Login/?dkd_anyela_package=talking-video" aria-label="Talking Video özel içerik paketini seç"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_brand_area" href="./Login/?dkd_anyela_package=brand-face" aria-label="Markan için Anyela reklam alanını aç"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_nav_home" href="./" aria-label="Ana Sayfa"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_nav_packages" href="#dkd_anyela_root_packages" aria-label="Paketler"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_nav_chat" href="./Login/" aria-label="Chat"></a>
+        <a class="dkd_anyela_root_hotspot dkd_anyela_root_nav_profile" href="./Login/" aria-label="Profil"></a>
+
+        <section class="dkd_anyela_root_screen_reader" aria-label="Sayfa özeti">
+          <h1>Anyela Born Club</h1>
+          <p>Özel sohbet, sesli mesaj ve sana özel içerikler. Paket seç, özel chat odanı aç ve kişisel içeriklerini teslim al.</p>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
