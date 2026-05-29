@@ -131,7 +131,7 @@
 
   function dkdAnyelaHomeRouteGuestLinks() {
     dkdAnyelaHomeGuestLinks.forEach(function dkdAnyelaHomeGuestLink(dkdAnyelaHomeGuestAnchor) {
-      dkdAnyelaHomeGuestAnchor.setAttribute("href", "../Home/");
+      dkdAnyelaHomeGuestAnchor.setAttribute("href", "/AnyelaBorn/Home/");
       dkdAnyelaHomeGuestAnchor.setAttribute("aria-label", "Misafir girişi ile Home sayfasına devam et");
     });
   }
