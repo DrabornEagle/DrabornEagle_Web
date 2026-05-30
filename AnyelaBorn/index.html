@@ -11,7 +11,7 @@
     <meta property="og:title" content="Anyela Born Club" />
     <meta
       property="og:description"
-      content="Anyela Born Club dünyasına giriş yap. Play butonuna basınca video başlar."
+      content="Anyela Born Club dünyasına giriş yap. Hemen Tanışmaya Başla butonuna basınca video başlar."
     />
     <meta property="og:image" content="./assets/dkd_anyela_root_9950_20260530.png" />
     <title>Anyela Born Club</title>
@@ -111,12 +111,9 @@
         pointer-events: auto;
       }
 
+      .dkd_anyela_root_start_button,
       .dkd_anyela_root_play_button {
         position: absolute;
-        left: 40.75%;
-        top: 67.35%;
-        width: 18.65%;
-        height: 10.8%;
         z-index: 90;
         display: block;
         border-radius: 999px;
@@ -125,6 +122,22 @@
         outline: none;
       }
 
+      .dkd_anyela_root_start_button {
+        left: 3.30%;
+        top: 31.65%;
+        width: 93.40%;
+        height: 11.80%;
+        border-radius: 34px;
+      }
+
+      .dkd_anyela_root_play_button {
+        left: 40.75%;
+        top: 67.35%;
+        width: 18.65%;
+        height: 10.8%;
+      }
+
+      .dkd_anyela_root_start_button:focus-visible,
       .dkd_anyela_root_play_button:focus-visible,
       .dkd_anyela_root_full_link:focus-visible {
         box-shadow:
@@ -194,6 +207,13 @@
         ></video>
 
         <button
+          class="dkd_anyela_root_start_button"
+          id="dkd_anyela_root_start_button"
+          type="button"
+          aria-label="Anyela ile hemen tanışmaya başla"
+        ></button>
+
+        <button
           class="dkd_anyela_root_play_button"
           id="dkd_anyela_root_play_button"
           type="button"
@@ -202,7 +222,7 @@
 
         <section class="dkd_anyela_root_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Club</h1>
-          <p>Play butonuna basınca video, görseldeki video alanında oynar. Diğer alanlara dokununca Login sayfası açılır.</p>
+          <p>Hemen Tanışmaya Başla veya Play butonuna basınca video oynar. Video bitince Login sayfasına otomatik yönlendirir.</p>
         </section>
       </section>
     </main>
@@ -212,6 +232,11 @@
 
         const dkdAnyelaRootVideo = document.getElementById("dkd_anyela_root_video");
         const dkdAnyelaRootPlayButton = document.getElementById("dkd_anyela_root_play_button");
+        const dkdAnyelaRootStartButton = document.getElementById("dkd_anyela_root_start_button");
+
+        function dkdAnyelaRootOpenLogin() {
+          window.location.href = "./Login/";
+        }
 
         function dkdAnyelaRootPlayVideo(dkdAnyelaRootEvent) {
           dkdAnyelaRootEvent.preventDefault();
@@ -222,6 +247,7 @@
           }
 
           dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active", "true");
+          dkdAnyelaRootVideo.currentTime = 0;
           dkdAnyelaRootVideo.muted = false;
 
           const dkdAnyelaRootPlayResult = dkdAnyelaRootVideo.play();
@@ -233,10 +259,14 @@
           }
         }
 
-        if (dkdAnyelaRootPlayButton) {
-          dkdAnyelaRootPlayButton.addEventListener("click", dkdAnyelaRootPlayVideo);
-          dkdAnyelaRootPlayButton.addEventListener("touchend", dkdAnyelaRootPlayVideo);
-        }
+        [dkdAnyelaRootStartButton, dkdAnyelaRootPlayButton].forEach(function dkdAnyelaRootBindPlayButton(dkdAnyelaRootButton) {
+          if (!dkdAnyelaRootButton) {
+            return;
+          }
+
+          dkdAnyelaRootButton.addEventListener("click", dkdAnyelaRootPlayVideo);
+          dkdAnyelaRootButton.addEventListener("touchend", dkdAnyelaRootPlayVideo);
+        });
 
         if (dkdAnyelaRootVideo) {
           dkdAnyelaRootVideo.addEventListener("click", function dkdAnyelaRootStopVideoClick(dkdAnyelaRootEvent) {
@@ -246,14 +276,16 @@
           dkdAnyelaRootVideo.addEventListener("play", function dkdAnyelaRootKeepVideoVisible() {
             dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active", "true");
           });
+
+          dkdAnyelaRootVideo.addEventListener("ended", dkdAnyelaRootOpenLogin);
         }
 
-        document.addEventListener("click", function dkdAnyelaRootOpenLogin(dkdAnyelaRootEvent) {
+        document.addEventListener("click", function dkdAnyelaRootHandleOutsideClick(dkdAnyelaRootEvent) {
           const dkdAnyelaRootInteractive = dkdAnyelaRootEvent.target.closest("a, button, video");
           if (dkdAnyelaRootInteractive) {
             return;
           }
-          window.location.href = "./Login/";
+          dkdAnyelaRootOpenLogin();
         });
       })();
     </script>
