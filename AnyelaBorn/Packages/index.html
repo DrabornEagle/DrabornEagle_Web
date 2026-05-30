@@ -1,181 +1,148 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#05002b" />
-    <meta name="description" content="Anyela Born Club Packages — Miami Style Club paketler sayfası." />
-    <meta property="og:title" content="Anyela Born Club Packages" />
-    <meta property="og:description" content="Anyela Born paketlerini incele: mini sohbet, sesli mesaj, VIP özel içerik ve full premium paket." />
-    <meta property="og:image" content="../assets/dkd_anyela_packages_9970_20260530.png" />
-    <title>Anyela Born Club Packages</title>
-    <style>
-      :root {
-        --dkd_anyela_packages_bg: #05002b;
-        --dkd_anyela_packages_shadow: 0 28px 90px rgba(0, 0, 0, 0.54);
-        color-scheme: dark;
-      }
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#120020" />
+  <meta name="description" content="Anyela Born Miami Style Club paketleri, özel teklif oluşturma ve dekont yükleme ödeme ekranı." />
+  <title>Anyela Born Club | Paketler</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Pacifico&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/dkd_anyela_packages.css" />
+</head>
+<body>
+  <main class="dkd-page-shell" id="dkd_page_shell">
+    <section class="dkd-screen dkd-screen-active" id="dkd_packages_screen" aria-label="Anyela Born paket listesi">
+      <header class="dkd-hero">
+        <div class="dkd-hero-topbar">
+          <a class="dkd-back-button" href="/AnyelaBorn/" aria-label="Anyela Born ana sayfasına dön">‹</a>
+          <div class="dkd-brand-lockup">
+            <p class="dkd-script-title">🌴 Anyela Born 🌴</p>
+            <p class="dkd-club-subtitle">Miami Style Club</p>
+          </div>
+          <button class="dkd-mini-help" type="button" data-dkd-scroll-target="dkd_rules_card" aria-label="Kuralları görüntüle">?</button>
+        </div>
 
-      * {
-        box-sizing: border-box;
-      }
+        <div class="dkd-offer-panel">
+          <div class="dkd-avatar-ring" aria-hidden="true">
+            <img src="./assets/dkd_anyela_avatar.jpg" alt="Anyela Born profil görseli" />
+          </div>
+          <div class="dkd-offer-copy">
+            <button class="dkd-primary-neon-button" id="dkd_open_offer_button" type="button">
+              <span class="dkd-button-icon">📝</span>
+              <span>Teklif Oluştur</span>
+            </button>
+            <p>Kendi isteklerini belirle, teklifini ver!</p>
+          </div>
+        </div>
+      </header>
 
-      html,
-      body {
-        min-height: 100%;
-        margin: 0;
-        background:
-          radial-gradient(circle at 18% 0%, rgba(255, 35, 188, 0.24), transparent 24rem),
-          radial-gradient(circle at 88% 10%, rgba(24, 247, 255, 0.18), transparent 25rem),
-          linear-gradient(180deg, #090044 0%, var(--dkd_anyela_packages_bg) 100%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      a {
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .dkd_anyela_packages_page {
-        width: 100%;
-        min-height: 100svh;
-        display: flex;
-        justify-content: center;
-        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
-      }
-
-      .dkd_anyela_packages_mobile_shell {
-        position: relative;
-        width: min(100vw, 480px);
-        min-height: 100svh;
-        overflow: hidden;
-        background: #05002b;
-        box-shadow: var(--dkd_anyela_packages_shadow);
-      }
-
-      .dkd_anyela_packages_mockup {
-        display: block;
-        width: 100%;
-        height: auto;
-        min-height: 100svh;
-        object-fit: cover;
-        object-position: center top;
-        user-select: none;
-        -webkit-user-drag: none;
-      }
-
-      .dkd_anyela_packages_hotspot {
-        position: absolute;
-        z-index: 5;
-        display: block;
-        border-radius: 999px;
-        outline: none;
-        text-decoration: none;
-      }
-
-      .dkd_anyela_packages_hotspot:focus-visible {
-        box-shadow:
-          0 0 0 3px rgba(255, 255, 255, 0.94),
-          0 0 0 8px rgba(255, 35, 188, 0.72),
-          0 0 32px rgba(24, 247, 255, 0.72);
-      }
-
-      .dkd_anyela_packages_back {
-        left: 3.6%;
-        top: 1.8%;
-        width: 8.8%;
-        height: 5.4%;
-      }
-
-      .dkd_anyela_packages_mini_chat {
-        left: 6.6%;
-        top: 34.8%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_voice {
-        left: 6.6%;
-        top: 51.2%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_vip {
-        left: 6.6%;
-        top: 67.6%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_full {
-        left: 6.6%;
-        top: 84.1%;
-        width: 86.8%;
-        height: 13.3%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_screen_reader {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip-path: inset(50%);
-        border: 0;
-        white-space: nowrap;
-      }
-
-      @media (min-width: 820px) {
-        .dkd_anyela_packages_page {
-          align-items: center;
-          padding: 32px 0;
-        }
-
-        .dkd_anyela_packages_mobile_shell {
-          width: min(44vw, 480px);
-          min-height: auto;
-          border-radius: 38px;
-          border: 1px solid rgba(255, 255, 255, 0.16);
-          box-shadow:
-            0 42px 110px rgba(0, 0, 0, 0.58),
-            0 0 90px rgba(255, 35, 188, 0.25),
-            0 0 120px rgba(24, 247, 255, 0.18);
-        }
-
-        .dkd_anyela_packages_mockup {
-          min-height: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="dkd_anyela_packages_page" aria-label="Anyela Born Club Packages sayfası">
-      <section class="dkd_anyela_packages_mobile_shell" id="dkd_anyela_packages_root">
-        <img
-          class="dkd_anyela_packages_mockup"
-          src="../assets/dkd_anyela_packages_9970_20260530.png"
-          alt="Anyela Born Club Miami Style Club paketler mobil sayfası"
-          width="864"
-          height="1536"
-          loading="eager"
-        />
-
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_back" href="../Login/" aria-label="Login sayfasına dön"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_mini_chat" href="../Login/?dkd_anyela_package=mini-sohbet" aria-label="Mini Sohbet Paketi seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_voice" href="../Login/?dkd_anyela_package=sesli-mesaj" aria-label="Sesli Mesaj Paketi seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_vip" href="../Login/?dkd_anyela_package=vip-ozel-icerik" aria-label="VIP Özel İçerik seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_full" href="../Login/?dkd_anyela_package=full-premium" aria-label="Full Premium Paket seç"></a>
-
-        <section class="dkd_anyela_packages_screen_reader" aria-label="Sayfa özeti">
-          <h1>Anyela Born Club Paketler</h1>
-          <p>Mini Sohbet Paketi, Sesli Mesaj Paketi, VIP Özel İçerik ve Full Premium Paket seçenekleri.</p>
-        </section>
+      <section class="dkd-section-heading" aria-labelledby="dkd_packages_title">
+        <span class="dkd-palm-line">🌴</span>
+        <h1 id="dkd_packages_title">Paketler</h1>
+        <span class="dkd-palm-line">🌴</span>
       </section>
-    </main>
-  </body>
+
+      <section class="dkd-package-grid" id="dkd_package_grid" aria-label="Tıklanabilir paket kartları"></section>
+
+      <section class="dkd-info-card dkd-how-it-works" aria-labelledby="dkd_flow_title">
+        <p class="dkd-kicker">Nasıl çalışır?</p>
+        <h2 id="dkd_flow_title">Paketini seç, dekontunu yükle, onaydan sonra özel alanın açılsın.</h2>
+        <div class="dkd-flow-steps">
+          <div><b>1</b><span>Paket veya özel teklif seç</span></div>
+          <div><b>2</b><span>IBAN ile ödeme yap</span></div>
+          <div><b>3</b><span>Dekont yükle</span></div>
+          <div><b>4</b><span>Onay sonrası özel deneyim başlar</span></div>
+        </div>
+      </section>
+
+      <section class="dkd-info-card dkd-rules-card" id="dkd_rules_card" aria-labelledby="dkd_rules_title">
+        <p class="dkd-kicker">Güvenli deneyim</p>
+        <h2 id="dkd_rules_title">Anyela Born dijital karakter deneyimidir.</h2>
+        <p>İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır. 18 yaş altı özel sohbet alamaz. Uygunsuz, açık cinsel, tehdit, taciz, şantaj, nefret veya yasa dışı içerikler kabul edilmez.</p>
+      </section>
+    </section>
+
+    <section class="dkd-screen" id="dkd_detail_screen" aria-label="Seçilen paket detay ekranı">
+      <header class="dkd-detail-header">
+        <button class="dkd-back-button" id="dkd_back_to_packages_button" type="button" aria-label="Paket listesine dön">‹</button>
+        <div>
+          <p class="dkd-kicker">Seçilen paket</p>
+          <h1 id="dkd_detail_title">Paket Detayı</h1>
+        </div>
+      </header>
+      <section class="dkd-detail-card" id="dkd_detail_card"></section>
+    </section>
+
+    <section class="dkd-screen" id="dkd_offer_screen" aria-label="Özel teklif oluşturma ekranı">
+      <header class="dkd-detail-header">
+        <button class="dkd-back-button" id="dkd_back_from_offer_button" type="button" aria-label="Paket listesine dön">‹</button>
+        <div>
+          <p class="dkd-kicker">Miami özel teklif</p>
+          <h1>Teklif Oluştur</h1>
+        </div>
+      </header>
+
+      <section class="dkd-offer-builder">
+        <div class="dkd-builder-intro">
+          <p class="dkd-kicker">Kendi paketini kur</p>
+          <h2>Dakika, sesli mesaj, video mesaj ve özel görsel adetini seç.</h2>
+          <p>Seçimlerine göre toplam ücret canlı hesaplanır. Ödeme sonrası dekont onayı kısa süre içerisinde yapılır.</p>
+        </div>
+
+        <form class="dkd-builder-form" id="dkd_offer_builder_form">
+          <label class="dkd-range-control">
+            <span>Yazılı sohbet dakikası</span>
+            <strong id="dkd_minutes_value">30 dk</strong>
+            <input id="dkd_minutes_input" type="range" min="10" max="120" step="5" value="30" />
+          </label>
+
+          <label class="dkd-number-control">
+            <span>Sesli mesaj adeti</span>
+            <input id="dkd_voice_count_input" type="number" min="0" max="20" value="2" inputmode="numeric" />
+          </label>
+
+          <label class="dkd-number-control">
+            <span>Video mesaj adeti</span>
+            <input id="dkd_video_count_input" type="number" min="0" max="10" value="1" inputmode="numeric" />
+          </label>
+
+          <label class="dkd-number-control">
+            <span>Özel görsel adeti</span>
+            <input id="dkd_photo_count_input" type="number" min="0" max="20" value="3" inputmode="numeric" />
+          </label>
+
+          <label class="dkd-select-control">
+            <span>Teslim önceliği</span>
+            <select id="dkd_priority_input">
+              <option value="normal">Normal onay</option>
+              <option value="priority">Öncelikli teslim +%18</option>
+            </select>
+          </label>
+
+          <label class="dkd-select-control">
+            <span>Kullanım amacı</span>
+            <select id="dkd_usage_input">
+              <option value="fan">Fan / kişisel deneyim</option>
+              <option value="brand">Marka / işletme tanıtımı +1.500 TL</option>
+            </select>
+          </label>
+        </form>
+
+        <section class="dkd-total-card" aria-live="polite">
+          <div>
+            <p class="dkd-kicker">Canlı hesaplama</p>
+            <h2 id="dkd_offer_total">0 TL</h2>
+          </div>
+          <div class="dkd-breakdown" id="dkd_offer_breakdown"></div>
+        </section>
+
+        <section class="dkd-payment-card" id="dkd_offer_payment_panel"></section>
+      </section>
+    </section>
+  </main>
+
+  <script src="./assets/dkd_anyela_packages.js"></script>
+</body>
 </html>
