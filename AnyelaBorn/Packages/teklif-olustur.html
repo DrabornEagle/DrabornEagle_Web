@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a021b">
+  <title>Teklif Oluştur | Anyela Born Miami Style Club</title>
+  <meta name="description" content="Anyela Born özel teklif oluşturma, dakika, sesli mesaj, video mesaj ve özel görsel adetlerine göre gelişmiş fiyat hesaplama.">
+  <link rel="stylesheet" href="assets/dkd_anyela_miami.css">
+</head>
+<body>
+
+<header class="dkd-topbar dkd-shell">
+  <a class="dkd-brand" href="index.html" aria-label="Anyela Born paketler ana sayfa">
+    <span class="dkd-brand-badge">🌴</span>
+    <span>
+      <span class="dkd-brand-title">Anyela Born</span>
+      <span class="dkd-brand-subtitle">Miami Style Club</span>
+    </span>
+  </a>
+  <nav class="dkd-nav-actions" aria-label="Ana menü">
+    <a class="dkd-pill-link" href="index.html">Paketler</a>
+    <a class="dkd-primary-link" href="teklif-olustur.html">Teklif Oluştur</a>
+  </nav>
+</header>
+
+<main class="dkd-shell">
+  <section class="dkd-page-hero">
+    <article class="dkd-panel">
+      <span class="dkd-kicker">✨ Kendi isteklerini belirle, teklifini ver</span>
+      <h1 class="dkd-section-title"><span class="dkd-gradient-text">Teklif Oluştur</span></h1>
+      <p class="dkd-lead">Dakika, sesli cevap, video mesaj ve özel görsel adetlerini seç. Sistem seçime göre anlık tahmini ücret hesaplar. Dekont onayından sonra kısa süre içerisinde değerlendirilir.</p>
+    </article>
+  </section>
+
+  <section class="dkd-offer-layout">
+    <article class="dkd-offer-panel">
+      <h2>Gelişmiş ücret hesaplama</h2>
+      <p class="dkd-lead">Başlangıç bedeli 249 TL. Seçimlerin arttıkça ücret otomatik güncellenir.</p>
+
+      <div class="dkd-form-grid">
+        <div class="dkd-input-group">
+          <label for="dkdOfferCategory">Teklif türü</label>
+          <select class="dkd-select" id="dkdOfferCategory" data-dkd-offer-control>
+            <option>Fan özel sohbet</option>
+            <option>Sesli mesaj ağırlıklı paket</option>
+            <option>Özel görsel / video içerik</option>
+            <option>İşletme reklam konsepti</option>
+          </select>
+        </div>
+
+        <div class="dkd-input-group">
+          <label for="dkdOfferTextMinutes">Yazılı sohbet dakikası</label>
+          <div class="dkd-range-row">
+            <input id="dkdOfferTextMinutes" type="range" min="0" max="120" step="5" value="30" data-dkd-offer-control>
+            <span class="dkd-range-value"><span data-dkd-range-output="dkdOfferTextMinutes">30</span> dk</span>
+          </div>
+        </div>
+
+        <div class="dkd-input-group">
+          <label for="dkdOfferVoiceCount">Anyela sesli cevap adeti</label>
+          <div class="dkd-range-row">
+            <input id="dkdOfferVoiceCount" type="range" min="0" max="20" step="1" value="3" data-dkd-offer-control>
+            <span class="dkd-range-value"><span data-dkd-range-output="dkdOfferVoiceCount">3</span> adet</span>
+          </div>
+        </div>
+
+        <div class="dkd-input-group">
+          <label for="dkdOfferVideoCount">Video mesaj adeti</label>
+          <div class="dkd-range-row">
+            <input id="dkdOfferVideoCount" type="range" min="0" max="10" step="1" value="1" data-dkd-offer-control>
+            <span class="dkd-range-value"><span data-dkd-range-output="dkdOfferVideoCount">1</span> adet</span>
+          </div>
+        </div>
+
+        <div class="dkd-input-group">
+          <label for="dkdOfferPhotoCount">Özel görsel adeti</label>
+          <div class="dkd-range-row">
+            <input id="dkdOfferPhotoCount" type="range" min="0" max="20" step="1" value="3" data-dkd-offer-control>
+            <span class="dkd-range-value"><span data-dkd-range-output="dkdOfferPhotoCount">3</span> adet</span>
+          </div>
+        </div>
+
+        <label class="dkd-toggle-row" for="dkdOfferBusiness">
+          <input id="dkdOfferBusiness" type="checkbox" data-dkd-offer-control>
+          <span><strong>İşletme / reklam kullanım hakkı ekle</strong><br>Ürün, marka, kafe, restoran, butik veya sosyal medya reklamı için kullanım.</span>
+        </label>
+
+        <label class="dkd-toggle-row" for="dkdOfferPriority">
+          <input id="dkdOfferPriority" type="checkbox" data-dkd-offer-control checked>
+          <span><strong>Öncelikli teslim ekle</strong><br>Sırada daha hızlı değerlendirme ve premium planlama.</span>
+        </label>
+
+        <label class="dkd-toggle-row" for="dkdOfferDetailed">
+          <input id="dkdOfferDetailed" type="checkbox" data-dkd-offer-control>
+          <span><strong>Detaylı konsept planı ekle</strong><br>Kıyafet, mekan, kamera açısı, açıklama metni ve teslim planı hazırlanır.</span>
+        </label>
+
+        <div class="dkd-input-group">
+          <label for="dkdOfferNote">Özel istek notu</label>
+          <textarea class="dkd-textarea" id="dkdOfferNote" placeholder="Örn: Miami temalı 3 görsel, 1 kısa video mesaj, 5 sesli cevap, sıcak ve premium tarz..."></textarea>
+        </div>
+      </div>
+    </article>
+
+    <aside class="dkd-summary-card">
+      <h2>Tahmini toplam</h2>
+      <div class="dkd-total-box">
+        <div class="dkd-total-label">Seçimlere göre hesaplanan teklif</div>
+        <div class="dkd-total-price" data-dkd-offer-total>0 TL</div>
+      </div>
+      <div class="dkd-breakdown" data-dkd-offer-breakdown></div>
+      <p class="dkd-mini-warning">Bu tutar teklif ön değerlendirmesidir. Dekont ve istek notu incelendikten sonra kısa süre içerisinde onaylanacaktır.</p>
+      <div data-dkd-offer-payment></div>
+    </aside>
+  </section>
+</main>
+<footer class="dkd-footer dkd-shell">
+  Anyela Born dijital karakter deneyimidir. İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır.
+</footer>
+<script src="assets/dkd_anyela_miami.js"></script>
+</body>
+</html>
