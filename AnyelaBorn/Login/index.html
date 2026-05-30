@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#041b41" />
+  <meta name="description" content="Anyela Born Club Login — Miami temalı giriş yap ve kayıt ol ekranı." />
+  <meta property="og:title" content="Anyela Born Club Login" />
+  <meta property="og:description" content="Miami temalı giriş yap, kayıt ol ve misafir girişi ekranı." />
+  <meta property="og:image" content="../assets/dkd_anyela_login_miami_20260530.jpg" />
+  <title>Anyela Born Club Login</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --dkd_anyela_login_pink: #ff2fa4;
+      --dkd_anyela_login_cyan: #20e7f1;
+      --dkd_anyela_login_orange: #ff9a2d;
+    }
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(32,231,241,.25), transparent 28rem),
+        radial-gradient(circle at 85% 15%, rgba(255,47,164,.25), transparent 28rem),
+        linear-gradient(180deg, #05284f 0%, #06112d 100%);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #fff;
+    }
+    a, button { -webkit-tap-highlight-color: transparent; }
+    button, input { font: inherit; }
+    .dkd_anyela_login_page {
+      min-height: 100svh;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
+    }
+    .dkd_anyela_login_phone {
+      position: relative;
+      width: min(100vw, 480px);
+      min-height: 100svh;
+      overflow: hidden;
+      background: #041b41;
+      box-shadow: 0 28px 90px rgba(0,0,0,.54);
+    }
+    .dkd_anyela_login_bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .dkd_anyela_login_overlay {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(4,18,40,.02) 0%, rgba(4,18,40,.04) 45%, rgba(4,8,24,.62) 100%),
+        radial-gradient(circle at 16% 78%, rgba(32,231,241,.20), transparent 34%),
+        radial-gradient(circle at 84% 80%, rgba(255,47,164,.26), transparent 32%);
+    }
+    .dkd_anyela_login_panel {
+      position: absolute;
+      z-index: 5;
+      left: 4.2%;
+      right: 4.2%;
+      bottom: max(3.5%, env(safe-area-inset-bottom));
+      padding: clamp(14px, 4vw, 20px);
+      border-radius: clamp(28px, 8vw, 40px);
+      border: 1px solid rgba(255,255,255,.38);
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.82), rgba(255,255,255,.66)),
+        radial-gradient(circle at 16% 0%, rgba(32,231,241,.24), transparent 32%),
+        radial-gradient(circle at 88% 0%, rgba(255,47,164,.24), transparent 30%);
+      color: #103b45;
+      box-shadow:
+        0 24px 70px rgba(0,0,0,.35),
+        inset 0 1px 0 rgba(255,255,255,.68),
+        0 0 34px rgba(255,47,164,.24);
+      backdrop-filter: blur(18px);
+    }
+    .dkd_anyela_login_tabs {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      padding: 5px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.56);
+    }
+    .dkd_anyela_login_tab {
+      min-height: 46px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(12,55,68,.72);
+      font-weight: 950;
+      cursor: pointer;
+    }
+    .dkd_anyela_login_tab_active {
+      color: #fff;
+      background: linear-gradient(105deg, #18f7ff 0%, #ff35ad 50%, #ff9a2d 100%);
+      box-shadow: 0 14px 26px rgba(255,47,164,.28), inset 0 1px 0 rgba(255,255,255,.42);
+      text-shadow: 0 2px 10px rgba(0,0,0,.30);
+    }
+    .dkd_anyela_login_title { margin: 13px 2px 10px; display: grid; gap: 4px; }
+    .dkd_anyela_login_title strong {
+      font-size: clamp(22px, 6vw, 32px);
+      line-height: 1.05;
+      color: #063a47;
+    }
+    .dkd_anyela_login_title span {
+      color: rgba(14,61,72,.70);
+      font-size: clamp(13px, 3.6vw, 16px);
+      font-weight: 750;
+    }
+    .dkd_anyela_login_form { display: grid; gap: 10px; }
+    .dkd_anyela_login_input {
+      min-height: 54px;
+      width: 100%;
+      border: 1px solid rgba(20,170,190,.34);
+      border-radius: 18px;
+      outline: 0;
+      padding: 0 15px;
+      background: linear-gradient(180deg, rgba(255,255,255,.88), rgba(255,255,255,.70));
+      color: #093a45;
+      font-size: clamp(15px, 4vw, 19px);
+      font-weight: 800;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.76), 0 10px 20px rgba(20,78,90,.10);
+    }
+    .dkd_anyela_login_input::placeholder { color: rgba(9,58,69,.52); }
+    .dkd_anyela_login_options {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      color: rgba(8,55,66,.72);
+      font-size: clamp(12px, 3.2vw, 15px);
+      font-weight: 800;
+    }
+    .dkd_anyela_login_options a { color: #e92b93; text-decoration: none; }
+    .dkd_anyela_login_action,
+    .dkd_anyela_login_guest {
+      min-height: 56px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 1000;
+      letter-spacing: .06em;
+      cursor: pointer;
+      box-shadow: 0 15px 26px rgba(255,47,164,.30), 0 0 24px rgba(32,231,241,.26), inset 0 1px 0 rgba(255,255,255,.44);
+    }
+    .dkd_anyela_login_action {
+      border: 0;
+      background: linear-gradient(105deg, #18f7ff 0%, #ff35ad 43%, #ff8f27 78%, #ffe36a 100%);
+      background-size: 220% 100%;
+      animation: dkd_anyela_login_gradient 3.2s linear infinite;
+      text-transform: uppercase;
+      font-size: clamp(17px, 4.8vw, 24px);
+    }
+    .dkd_anyela_login_guest {
+      min-height: 50px;
+      background: linear-gradient(105deg, rgba(255,47,164,.88), rgba(32,231,241,.82));
+    }
+    .dkd_anyela_login_note {
+      margin: 4px 2px 0;
+      text-align: center;
+      color: rgba(9,58,69,.60);
+      font-size: clamp(11px, 3.1vw, 13px);
+      font-weight: 750;
+    }
+    @keyframes dkd_anyela_login_gradient {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 220% 50%; }
+    }
+    @media (max-height: 760px) and (max-width: 480px) {
+      .dkd_anyela_login_panel { transform: scale(.92); transform-origin: bottom center; }
+    }
+    @media (min-width: 820px) {
+      .dkd_anyela_login_page { align-items: center; padding: 32px 0; }
+      .dkd_anyela_login_phone {
+        width: min(44vw, 480px);
+        min-height: 853px;
+        border-radius: 38px;
+        border: 1px solid rgba(255,255,255,.16);
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="dkd_anyela_login_page" aria-label="Anyela Born Club Login sayfası">
+    <section class="dkd_anyela_login_phone">
+      <img class="dkd_anyela_login_bg" src="../assets/dkd_anyela_login_miami_20260530.jpg" alt="Anyela Born Club Miami temalı login arka planı" loading="eager" />
+      <div class="dkd_anyela_login_overlay" aria-hidden="true"></div>
+
+      <section class="dkd_anyela_login_panel" aria-label="Giriş yap ve kayıt ol paneli">
+        <div class="dkd_anyela_login_tabs" role="tablist" aria-label="Giriş seçenekleri">
+          <button class="dkd_anyela_login_tab dkd_anyela_login_tab_active" type="button" aria-selected="true" data-dkd-anyela-login-mode="login">Giriş Yap</button>
+          <button class="dkd_anyela_login_tab" type="button" aria-selected="false" data-dkd-anyela-login-mode="register">Kayıt Ol</button>
+        </div>
+
+        <div class="dkd_anyela_login_title">
+          <strong id="dkd_anyela_login_heading">Anyela’ya Hoş Geldin</strong>
+          <span id="dkd_anyela_login_subtitle">Devam etmek için bilgilerini gir veya misafir olarak bağlan.</span>
+        </div>
+
+        <form class="dkd_anyela_login_form" action="../Home/" method="get">
+          <input class="dkd_anyela_login_input" type="text" name="dkd_anyela_login_name" autocomplete="username" placeholder="E-posta veya kullanıcı adı" aria-label="E-posta veya kullanıcı adı" />
+          <input class="dkd_anyela_login_input" id="dkd_anyela_login_password" type="password" name="dkd_anyela_login_password" autocomplete="current-password" placeholder="Şifre" aria-label="Şifre" />
+
+          <div class="dkd_anyela_login_options">
+            <label><input type="checkbox" checked /> Beni hatırla</label>
+            <a href="../Home/">Şifremi unuttum?</a>
+          </div>
+
+          <button class="dkd_anyela_login_action" id="dkd_anyela_login_action" type="submit">Giriş Yap ›</button>
+          <a class="dkd_anyela_login_guest" href="../Home/" aria-label="Misafir girişi ile Home sayfasına devam et">Misafir Girişi</a>
+
+          <p class="dkd_anyela_login_note">Premium Miami deneyimi · Güvenli giriş · Özel içeriklere hızlı erişim</p>
+        </form>
+      </section>
+    </section>
+  </main>
+
+  <script>
+    (function dkdAnyelaLoginScope() {
+      "use strict";
+      const dkdAnyelaLoginTabs = Array.from(document.querySelectorAll(".dkd_anyela_login_tab"));
+      const dkdAnyelaLoginHeading = document.getElementById("dkd_anyela_login_heading");
+      const dkdAnyelaLoginSubtitle = document.getElementById("dkd_anyela_login_subtitle");
+      const dkdAnyelaLoginAction = document.getElementById("dkd_anyela_login_action");
+      const dkdAnyelaLoginPassword = document.getElementById("dkd_anyela_login_password");
+
+      function dkdAnyelaLoginSetMode(dkdAnyelaLoginMode) {
+        const dkdAnyelaLoginIsRegister = dkdAnyelaLoginMode === "register";
+        dkdAnyelaLoginTabs.forEach(function dkdAnyelaLoginUpdateTab(dkdAnyelaLoginTab) {
+          const dkdAnyelaLoginSelected = dkdAnyelaLoginTab.dataset.dkdAnyelaLoginMode === dkdAnyelaLoginMode;
+          dkdAnyelaLoginTab.classList.toggle("dkd_anyela_login_tab_active", dkdAnyelaLoginSelected);
+          dkdAnyelaLoginTab.setAttribute("aria-selected", String(dkdAnyelaLoginSelected));
+        });
+        dkdAnyelaLoginHeading.textContent = dkdAnyelaLoginIsRegister ? "Anyela Club’a Katıl" : "Anyela’ya Hoş Geldin";
+        dkdAnyelaLoginSubtitle.textContent = dkdAnyelaLoginIsRegister
+          ? "Profilini oluştur, paketleri keşfet ve özel deneyime başla."
+          : "Devam etmek için bilgilerini gir veya misafir olarak bağlan.";
+        dkdAnyelaLoginAction.textContent = dkdAnyelaLoginIsRegister ? "Kayıt Ol ›" : "Giriş Yap ›";
+        dkdAnyelaLoginPassword.setAttribute("autocomplete", dkdAnyelaLoginIsRegister ? "new-password" : "current-password");
+      }
+
+      dkdAnyelaLoginTabs.forEach(function dkdAnyelaLoginBindTab(dkdAnyelaLoginTab) {
+        dkdAnyelaLoginTab.addEventListener("click", function dkdAnyelaLoginHandleTab() {
+          dkdAnyelaLoginSetMode(dkdAnyelaLoginTab.dataset.dkdAnyelaLoginMode);
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
