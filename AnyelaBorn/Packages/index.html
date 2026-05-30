@@ -4,177 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#05002b" />
-    <meta name="description" content="Anyela Born Club Packages — Miami Style Club paketler sayfası." />
-    <meta property="og:title" content="Anyela Born Club Packages" />
-    <meta property="og:description" content="Anyela Born paketlerini incele: mini sohbet, sesli mesaj, VIP özel içerik ve full premium paket." />
-    <meta property="og:image" content="../assets/dkd_anyela_packages_9970_20260530.png" />
-    <title>Anyela Born Club Packages</title>
-    <style>
-      :root {
-        --dkd_anyela_packages_bg: #05002b;
-        --dkd_anyela_packages_shadow: 0 28px 90px rgba(0, 0, 0, 0.54);
-        color-scheme: dark;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        min-height: 100%;
-        margin: 0;
-        background:
-          radial-gradient(circle at 18% 0%, rgba(255, 35, 188, 0.24), transparent 24rem),
-          radial-gradient(circle at 88% 10%, rgba(24, 247, 255, 0.18), transparent 25rem),
-          linear-gradient(180deg, #090044 0%, var(--dkd_anyela_packages_bg) 100%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      a {
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .dkd_anyela_packages_page {
-        width: 100%;
-        min-height: 100svh;
-        display: flex;
-        justify-content: center;
-        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
-      }
-
-      .dkd_anyela_packages_mobile_shell {
-        position: relative;
-        width: min(100vw, 480px);
-        min-height: 100svh;
-        overflow: hidden;
-        background: #05002b;
-        box-shadow: var(--dkd_anyela_packages_shadow);
-      }
-
-      .dkd_anyela_packages_mockup {
-        display: block;
-        width: 100%;
-        height: auto;
-        min-height: 100svh;
-        object-fit: cover;
-        object-position: center top;
-        user-select: none;
-        -webkit-user-drag: none;
-      }
-
-      .dkd_anyela_packages_hotspot {
-        position: absolute;
-        z-index: 5;
-        display: block;
-        border-radius: 999px;
-        outline: none;
-        text-decoration: none;
-      }
-
-      .dkd_anyela_packages_hotspot:focus-visible {
-        box-shadow:
-          0 0 0 3px rgba(255, 255, 255, 0.94),
-          0 0 0 8px rgba(255, 35, 188, 0.72),
-          0 0 32px rgba(24, 247, 255, 0.72);
-      }
-
-      .dkd_anyela_packages_back {
-        left: 3.6%;
-        top: 1.8%;
-        width: 8.8%;
-        height: 5.4%;
-      }
-
-      .dkd_anyela_packages_mini_chat {
-        left: 6.6%;
-        top: 34.8%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_voice {
-        left: 6.6%;
-        top: 51.2%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_vip {
-        left: 6.6%;
-        top: 67.6%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_full {
-        left: 6.6%;
-        top: 84.1%;
-        width: 86.8%;
-        height: 13.3%;
-        border-radius: 24px;
-      }
-
-      .dkd_anyela_packages_screen_reader {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip-path: inset(50%);
-        border: 0;
-        white-space: nowrap;
-      }
-
-      @media (min-width: 820px) {
-        .dkd_anyela_packages_page {
-          align-items: center;
-          padding: 32px 0;
-        }
-
-        .dkd_anyela_packages_mobile_shell {
-          width: min(44vw, 480px);
-          min-height: auto;
-          border-radius: 38px;
-          border: 1px solid rgba(255, 255, 255, 0.16);
-          box-shadow:
-            0 42px 110px rgba(0, 0, 0, 0.58),
-            0 0 90px rgba(255, 35, 188, 0.25),
-            0 0 120px rgba(24, 247, 255, 0.18);
-        }
-
-        .dkd_anyela_packages_mockup {
-          min-height: auto;
-        }
-      }
-    </style>
+    <meta name="description" content="Anyela Born Packages — Miami Style Club paketleri ve teklif ekranı." />
+    <meta property="og:title" content="Anyela Born Paketler" />
+    <meta property="og:image" content="./assets/dkd_anyela_packages_offer_20260530.jpg" />
+    <title>Anyela Born Paketler</title>
+    <link rel="stylesheet" href="./dkd_anyela_packages.css" />
   </head>
   <body>
-    <main class="dkd_anyela_packages_page" aria-label="Anyela Born Club Packages sayfası">
-      <section class="dkd_anyela_packages_mobile_shell" id="dkd_anyela_packages_root">
-        <img
-          class="dkd_anyela_packages_mockup"
-          src="../assets/dkd_anyela_packages_9970_20260530.png"
-          alt="Anyela Born Club Miami Style Club paketler mobil sayfası"
-          width="864"
-          height="1536"
-          loading="eager"
-        />
-
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_back" href="../Login/" aria-label="Login sayfasına dön"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_mini_chat" href="../Login/?dkd_anyela_package=mini-sohbet" aria-label="Mini Sohbet Paketi seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_voice" href="../Login/?dkd_anyela_package=sesli-mesaj" aria-label="Sesli Mesaj Paketi seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_vip" href="../Login/?dkd_anyela_package=vip-ozel-icerik" aria-label="VIP Özel İçerik seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_full" href="../Login/?dkd_anyela_package=full-premium" aria-label="Full Premium Paket seç"></a>
-
-        <section class="dkd_anyela_packages_screen_reader" aria-label="Sayfa özeti">
-          <h1>Anyela Born Club Paketler</h1>
-          <p>Mini Sohbet Paketi, Sesli Mesaj Paketi, VIP Özel İçerik ve Full Premium Paket seçenekleri.</p>
-        </section>
+    <main class="dkd_anyela_packages_page" aria-label="Anyela Born Paketler">
+      <section class="dkd_anyela_packages_mobile_shell">
+        <img class="dkd_anyela_packages_mockup" src="./assets/dkd_anyela_packages_offer_20260530.jpg" width="864" height="1536" alt="Anyela Born Miami Style Club paketler sayfası" loading="eager" />
+        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_back" href="../Login/" aria-label="Geri dön"></a>
+        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_offer" href="./teklif-olustur/" aria-label="Teklif oluştur"></a>
+        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_mini" href="./mini-sohbet/" aria-label="Mini Sohbet Paketini seç"></a>
+        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_voice" href="./sesli-mesaj/" aria-label="Sesli Mesaj Paketini seç"></a>
+        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_vip" href="./vip-ozel-icerik/" aria-label="VIP Özel İçerik Paketini seç"></a>
+        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_full" href="./full-premium/" aria-label="Full Premium Paketini seç"></a>
       </section>
     </main>
   </body>
