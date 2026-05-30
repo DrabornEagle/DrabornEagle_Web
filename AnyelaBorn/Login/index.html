@@ -11,7 +11,7 @@
     <meta property="og:title" content="Anyela Born Club Login" />
     <meta
       property="og:description"
-      content="Anyela Born Club giriş ekranı. Giriş yap, kayıt ol veya misafir girişi ile devam et."
+      content="Anyela Born Club giriş ekranı. Giriş yap, kayıt ol veya paketleri incele."
     />
     <meta property="og:image" content="./assets/dkd_anyela_login_9935_20260529.png" />
     <title>Anyela Born Club Login</title>
@@ -136,17 +136,31 @@
         top: 71.61%;
       }
 
+      .dkd_anyela_login_package_link,
       .dkd_anyela_login_tap_button {
         position: absolute;
-        z-index: 24;
         display: block;
         border: 0;
         outline: 0;
         background: transparent;
         cursor: pointer;
         border-radius: 999px;
+        text-decoration: none;
       }
 
+      .dkd_anyela_login_package_link {
+        z-index: 26;
+        left: 3.6%;
+        top: 38.4%;
+        width: 44.8%;
+        height: 5.9%;
+      }
+
+      .dkd_anyela_login_tap_button {
+        z-index: 24;
+      }
+
+      .dkd_anyela_login_package_link:focus-visible,
       .dkd_anyela_login_tap_button:focus-visible {
         box-shadow:
           0 0 0 3px rgba(255, 255, 255, 0.92),
@@ -326,6 +340,8 @@
           loading="eager"
         />
 
+        <a class="dkd_anyela_login_package_link" href="../Packages/" aria-label="Paketleri İncele"></a>
+
         <form class="dkd_anyela_login_form" autocomplete="on">
           <label class="dkd_anyela_login_screen_reader" for="dkd_anyela_login_email">Email</label>
           <input
@@ -372,7 +388,7 @@
 
         <section class="dkd_anyela_login_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Club Login</h1>
-          <p>Email ve şifre alanları yazılabilir. Giriş, kayıt ve misafir butonları Miami temalı seçim penceresini açar.</p>
+          <p>Email ve şifre alanları yazılabilir. Paketleri İncele butonu Packages sayfasına gider.</p>
         </section>
       </section>
     </main>
@@ -433,14 +449,14 @@
           const dkdAnyelaLoginChoice = dkdAnyelaLoginEvent.currentTarget.getAttribute("data-dkd-anyela-popup-choice");
 
           if (dkdAnyelaLoginChoice === "guest") {
-            window.location.href = "../Home/";
+            window.location.href = "../Packages/";
             return;
           }
 
           if (dkdAnyelaLoginPopupNote) {
             dkdAnyelaLoginPopupNote.textContent = dkdAnyelaLoginChoice === "login"
-              ? "Giriş yap özelliği bir sonraki aşamada aktif edilecek. Şimdilik Misafir Girişi kullanılabilir."
-              : "Kayıt ol özelliği bir sonraki aşamada aktif edilecek. Şimdilik Misafir Girişi kullanılabilir.";
+              ? "Giriş yap özelliği bir sonraki aşamada aktif edilecek. Şimdilik paketleri inceleyebilirsin."
+              : "Kayıt ol özelliği bir sonraki aşamada aktif edilecek. Şimdilik paketleri inceleyebilirsin.";
           }
 
           if (dkdAnyelaLoginEmail) {
