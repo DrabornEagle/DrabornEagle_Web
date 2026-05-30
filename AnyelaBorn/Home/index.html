@@ -4,16 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#05002b" />
-    <meta
-      name="description"
-      content="Anyela Born Club Home — Miami özel içerikler mobil ekranı."
-    />
+    <meta name="description" content="Anyela Born Club Home sayfası. Görsel kalitesi korunarak yeni Miami özel içerikler tasarımı kullanıldı." />
     <meta property="og:title" content="Anyela Born Club Home" />
-    <meta
-      property="og:description"
-      content="Anyela Born Club Home sayfası. Paketleri görmek için ekrana dokun."
-    />
-    <meta property="og:image" content="../assets/dkd_anyela_home_9925_20260529.png" />
+    <meta property="og:description" content="Anyela Born Club Home sayfası. Görsel kalitesi korunarak yeni Miami özel içerikler tasarımı kullanıldı." />
+    <meta property="og:image" content="../assets/dkd_anyela_home_9927_20260530.png" />
     <title>Anyela Born Club Home</title>
     <style>
       :root {
@@ -72,17 +66,27 @@
       .dkd_anyela_home_full_link {
         position: absolute;
         inset: 0;
-        z-index: 100;
+        z-index: 40;
         display: block;
         cursor: pointer;
         outline: none;
         text-decoration: none;
       }
 
-      .dkd_anyela_home_full_link:focus-visible {
+      .dkd_anyela_home_hotspot {
+        position: absolute;
+        display: block;
+        z-index: 80;
+        border-radius: 999px;
+        text-decoration: none;
+        outline: none;
+      }
+
+      .dkd_anyela_home_full_link:focus-visible,
+      .dkd_anyela_home_hotspot:focus-visible {
         box-shadow:
-          inset 0 0 0 4px rgba(255, 255, 255, 0.92),
-          inset 0 0 0 9px rgba(255, 35, 188, 0.72),
+          0 0 0 4px rgba(255, 255, 255, 0.92),
+          0 0 0 9px rgba(255, 35, 188, 0.72),
           0 0 34px rgba(24, 247, 255, 0.72);
       }
 
@@ -97,6 +101,8 @@
         border: 0;
         white-space: nowrap;
       }
+
+      
 
       @media (min-width: 820px) {
         .dkd_anyela_home_page {
@@ -126,32 +132,24 @@
       <section class="dkd_anyela_home_mobile_shell" id="dkd_anyela_home_root">
         <img
           class="dkd_anyela_home_mockup"
-          src="../assets/dkd_anyela_home_9925_20260529.png"
-          alt="Anyela Born Club Miami özel içerikler mobil Home sayfası"
+          src="../assets/dkd_anyela_home_9927_20260530.png"
+          alt="Anyela Born Miami özel içerikler mobil Home tasarımı"
           width="864"
           height="1536"
           loading="eager"
         />
 
         <a class="dkd_anyela_home_full_link" href="../Packages/" aria-label="Anyela Born Packages sayfasına git"></a>
+        
+        
+        
+        
 
         <section class="dkd_anyela_home_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Club Home</h1>
-          <p>Bu sayfada herhangi bir yere dokununca Packages sayfası açılır.</p>
+          <p>Anyela Born Club Home sayfası. Görsel kalitesi korunarak yeni Miami özel içerikler tasarımı kullanıldı.</p>
         </section>
       </section>
     </main>
-    <script>
-      (function dkdAnyelaHomeClickRoute() {
-        "use strict";
-        document.addEventListener("click", function dkdAnyelaHomeOpenPackages(dkdAnyelaHomeEvent) {
-          const dkdAnyelaHomeAnchor = dkdAnyelaHomeEvent.target.closest("a");
-          if (dkdAnyelaHomeAnchor) {
-            return;
-          }
-          window.location.href = "../Packages/";
-        });
-      })();
-    </script>
   </body>
 </html>

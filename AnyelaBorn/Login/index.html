@@ -3,164 +3,195 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#061044" />
-    <meta
-      name="description"
-      content="Anyela Born Club Login — Miami temalı giriş ekranı, misafir girişi, özel sohbet, sesli mesaj, fotoğraf & video ve reklam paketleri."
-    />
+    <meta name="theme-color" content="#f7fbff" />
+    <meta name="description" content="Anyela Born Club Login sayfası. Görsel kalitesi korunarak yeni mobil giriş tasarımı kullanıldı." />
     <meta property="og:title" content="Anyela Born Club Login" />
-    <meta
-      property="og:description"
-      content="Anyela Born Club dünyasına hoş geldin. Misafir olarak devam et, giriş yap, paketleri keşfet ve Anyela ile bağlantı kur."
-    />
-    <meta property="og:image" content="../assets/dkd_anyela_miami_home_reference.png" />
+    <meta property="og:description" content="Anyela Born Club giriş ekranı. Hemen Başla alanına dokunarak Home sayfasına geç." />
+    <meta property="og:image" content="../assets/dkd_anyela_login_9928_20260530.png" />
     <title>Anyela Born Club Login</title>
-    <link rel="stylesheet" href="../dkd_anyela_home.css" />
+    <style>
+      :root {
+        --dkd_anyela_login_bg: #f7fbff;
+        --dkd_anyela_login_shadow: 0 28px 90px rgba(0, 0, 0, 0.34);
+        color-scheme: light;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        min-height: 100%;
+        margin: 0;
+        background:
+          radial-gradient(circle at 15% 0%, rgba(255, 86, 176, 0.20), transparent 24rem),
+          radial-gradient(circle at 90% 10%, rgba(0, 205, 220, 0.20), transparent 26rem),
+          linear-gradient(180deg, #ecfbff 0%, #fff4fb 100%);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      .dkd_anyela_login_page {
+        width: 100%;
+        min-height: 100svh;
+        display: flex;
+        justify-content: center;
+        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
+      }
+
+      .dkd_anyela_login_mobile_shell {
+        position: relative;
+        width: min(100vw, 480px);
+        min-height: 100svh;
+        overflow: hidden;
+        background: #f7fbff;
+        box-shadow: var(--dkd_anyela_login_shadow);
+      }
+
+      .dkd_anyela_login_mockup {
+        display: block;
+        width: 100%;
+        height: auto;
+        min-height: 100svh;
+        object-fit: cover;
+        object-position: center top;
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+
+      .dkd_anyela_login_full_link {
+        position: absolute;
+        inset: 0;
+        z-index: 35;
+        display: block;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none;
+      }
+
+      .dkd_anyela_login_hotspot {
+        position: absolute;
+        display: block;
+        z-index: 80;
+        border-radius: 999px;
+        text-decoration: none;
+        outline: none;
+      }
+
+      .dkd_anyela_login_full_link:focus-visible,
+      .dkd_anyela_login_hotspot:focus-visible {
+        box-shadow:
+          0 0 0 4px rgba(255, 255, 255, 0.94),
+          0 0 0 9px rgba(255, 65, 170, 0.72),
+          0 0 34px rgba(0, 205, 220, 0.72);
+      }
+
+      .dkd_anyela_login_start_hotspot {
+        left: 4.5%;
+        top: 36.6%;
+        width: 44.5%;
+        height: 8.2%;
+      }
+
+      .dkd_anyela_login_nav_home {
+        left: 6.0%;
+        bottom: 1.2%;
+        width: 13.5%;
+        height: 5.2%;
+      }
+
+      .dkd_anyela_login_nav_packages {
+        left: 25.6%;
+        bottom: 1.2%;
+        width: 14.0%;
+        height: 5.2%;
+      }
+
+      .dkd_anyela_login_nav_chat {
+        left: 45.4%;
+        bottom: 1.2%;
+        width: 13.8%;
+        height: 5.2%;
+      }
+
+      .dkd_anyela_login_nav_orders {
+        left: 64.2%;
+        bottom: 1.2%;
+        width: 14.5%;
+        height: 5.2%;
+      }
+
+      .dkd_anyela_login_nav_profile {
+        left: 83.0%;
+        bottom: 1.2%;
+        width: 14.0%;
+        height: 5.2%;
+      }
+
+      .dkd_anyela_login_screen_reader {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        overflow: hidden;
+        clip-path: inset(50%);
+        border: 0;
+        white-space: nowrap;
+      }
+
+      @media (min-width: 820px) {
+        .dkd_anyela_login_page {
+          align-items: center;
+          padding: 32px 0;
+        }
+
+        .dkd_anyela_login_mobile_shell {
+          width: min(44vw, 480px);
+          min-height: auto;
+          border-radius: 38px;
+          border: 1px solid rgba(255, 255, 255, 0.60);
+          box-shadow:
+            0 42px 110px rgba(0, 0, 0, 0.30),
+            0 0 90px rgba(255, 65, 170, 0.18),
+            0 0 120px rgba(0, 205, 220, 0.14);
+        }
+
+        .dkd_anyela_login_mockup {
+          min-height: auto;
+        }
+      }
+    </style>
   </head>
   <body>
-    <main class="dkd_anyela_home_page" id="dkd_anyela_home_root">
-      <section class="dkd_anyela_home_shell" aria-label="Anyela Born Club Login sayfası">
-        <div class="dkd_anyela_home_phone">
-          <img
-            class="dkd_anyela_home_mockup"
-            src="../assets/dkd_anyela_miami_home_reference.png"
-            alt="Anyela Born Club Miami temalı giriş sayfası"
-            width="864"
-            height="1536"
-            loading="eager"
-          />
+    <main class="dkd_anyela_login_page" aria-label="Anyela Born Club Login sayfası">
+      <section class="dkd_anyela_login_mobile_shell" id="dkd_anyela_login_root">
+        <img
+          class="dkd_anyela_login_mockup"
+          src="../assets/dkd_anyela_login_9928_20260530.png"
+          alt="Anyela Born Club mobil Login tasarımı"
+          width="864"
+          height="1536"
+          loading="eager"
+        />
 
-          <section class="dkd_anyela_home_login_panel" aria-label="Anyela Born Club giriş penceresi">
-            <div class="dkd_anyela_home_login_tabs" role="tablist" aria-label="Giriş seçenekleri">
-              <button class="dkd_anyela_home_login_tab dkd_anyela_home_login_tab_active" type="button" aria-selected="true">
-                <span class="dkd_anyela_home_login_icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 12.5a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/><path d="M4.7 21a7.3 7.3 0 0 1 14.6 0"/></svg>
-                </span>
-                Giriş Yap
-              </button>
-              <button class="dkd_anyela_home_login_tab" type="button" aria-selected="false">
-                <span class="dkd_anyela_home_login_icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M10.8 12.2a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path d="M3.7 21a7 7 0 0 1 11.8-5"/><path d="M18 10.4v7.2"/><path d="M14.4 14h7.2"/></svg>
-                </span>
-                Üye Ol
-              </button>
-            </div>
+        <a class="dkd_anyela_login_full_link" href="../Home/" aria-label="Anyela Born Home sayfasına git"></a>
+        <a class="dkd_anyela_login_hotspot dkd_anyela_login_start_hotspot" href="../Home/" aria-label="Hemen Başla ve Home sayfasına git"></a>
+        <a class="dkd_anyela_login_hotspot dkd_anyela_login_nav_home" href="../Home/" aria-label="Ana Sayfa"></a>
+        <a class="dkd_anyela_login_hotspot dkd_anyela_login_nav_packages" href="../Packages/" aria-label="Paketler"></a>
+        <a class="dkd_anyela_login_hotspot dkd_anyela_login_nav_chat" href="./" aria-label="Chat"></a>
+        <a class="dkd_anyela_login_hotspot dkd_anyela_login_nav_orders" href="./" aria-label="Siparişler"></a>
+        <a class="dkd_anyela_login_hotspot dkd_anyela_login_nav_profile" href="./" aria-label="Profil"></a>
 
-            <form class="dkd_anyela_home_login_form" action="./" method="get">
-              <label class="dkd_anyela_home_input_wrap">
-                <span class="dkd_anyela_home_input_icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 12.5a4.2 4.2 0 1 0 0-8.4 4.2 4.2 0 0 0 0 8.4Z"/><path d="M4.7 21a7.3 7.3 0 0 1 14.6 0"/></svg>
-                </span>
-                <input
-                  class="dkd_anyela_home_input"
-                  type="text"
-                  name="dkd_anyela_login_name"
-                  autocomplete="username"
-                  placeholder="E-posta veya kullanıcı adı"
-                  aria-label="E-posta veya kullanıcı adı"
-                />
-              </label>
-
-              <label class="dkd_anyela_home_input_wrap">
-                <span class="dkd_anyela_home_input_icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M7.2 10.7V8.4a4.8 4.8 0 0 1 9.6 0v2.3"/><path d="M6 10.7h12v9.4H6z"/><path d="M12 14.4v2.2"/></svg>
-                </span>
-                <input
-                  class="dkd_anyela_home_input"
-                  id="dkd_anyela_home_password"
-                  type="password"
-                  name="dkd_anyela_login_password"
-                  autocomplete="current-password"
-                  placeholder="Şifre"
-                  aria-label="Şifre"
-                />
-                <button
-                  class="dkd_anyela_home_eye_button"
-                  id="dkd_anyela_home_password_toggle"
-                  type="button"
-                  aria-label="Şifreyi göster veya gizle"
-                >
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.8 12s3.3-5.8 9.2-5.8S21.2 12 21.2 12 17.9 17.8 12 17.8 2.8 12 2.8 12Z"/><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4Z"/></svg>
-                </button>
-              </label>
-
-              <div class="dkd_anyela_home_login_options">
-                <label class="dkd_anyela_home_remember">
-                  <input type="checkbox" checked />
-                  <span class="dkd_anyela_home_checkmark" aria-hidden="true">✓</span>
-                  Beni Hatırla
-                </label>
-                <a class="dkd_anyela_home_forgot" href="./">Şifremi Unuttum?</a>
-              </div>
-
-              <a class="dkd_anyela_home_guest_button" href="../Home/" aria-label="Misafir girişi ile Home sayfasına devam et">
-                <span class="dkd_anyela_home_guest_icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M12 3.8a4.1 4.1 0 1 0 0 8.2 4.1 4.1 0 0 0 0-8.2Z"/><path d="M4.8 20.2c.9-3.7 3.4-5.6 7.2-5.6s6.3 1.9 7.2 5.6"/><path d="M19.7 4.9l1.5 1.5-3.3 3.3"/></svg>
-                </span>
-                Misafir Girişi
-              </a>
-
-              <button class="dkd_anyela_home_submit" type="submit">
-                Giriş Yap
-                <span aria-hidden="true">›</span>
-              </button>
-            </form>
-
-            <div class="dkd_anyela_home_social_divider" aria-hidden="true">
-              <span></span>
-              <strong>Veya şununla devam et</strong>
-              <span></span>
-            </div>
-
-            <div class="dkd_anyela_home_social_grid" aria-label="Sosyal giriş seçenekleri">
-              <a class="dkd_anyela_home_social_button" href="./" aria-label="Google ile devam et">
-                <svg class="dkd_anyela_home_social_google" viewBox="0 0 48 48" aria-hidden="true">
-                  <path d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.3 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.1 6 29.3 4 24 4 13 4 4 13 4 24s9 20 20 20 19.5-8 19.5-20c0-1.2-.1-2.3-.3-3.5Z" fill="#FFC107"/>
-                  <path d="M6.3 14.7 12.9 19.5C14.7 15.1 19 12 24 12c3.1 0 5.9 1.2 8 3.1l5.7-5.7C34.1 6 29.3 4 24 4 16.2 4 9.5 8.5 6.3 14.7Z" fill="#FF3D00"/>
-                  <path d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-7.8L6.2 33.2C9.4 39.6 16.1 44 24 44Z" fill="#4CAF50"/>
-                  <path d="M43.6 20.5H42V20H24v8h11.3c-.8 2.3-2.3 4.2-4.1 5.6l6.2 5.2C36.9 39.3 44 34 44 24c0-1.2-.1-2.3-.4-3.5Z" fill="#1976D2"/>
-                </svg>
-                Google
-              </a>
-              <a class="dkd_anyela_home_social_button" href="./" aria-label="Apple ile devam et">
-                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.2 2.1c.1 1.1-.3 2.2-1 3-.8.9-2 1.5-3.1 1.4-.1-1.1.4-2.2 1.1-3 .8-.9 2.1-1.5 3-1.4Z"/><path d="M20.3 17.5c-.5 1.1-.8 1.6-1.4 2.6-.9 1.4-2.2 3.1-3.8 3.1-1.4 0-1.8-.9-3.7-.9-1.9 0-2.3.9-3.7.9-1.6 0-2.8-1.6-3.7-3-2.6-4.1-2.9-9-.1-11.6 1-1 2.4-1.5 3.7-1.5 1.5 0 2.9 1 3.7 1 .8 0 2.4-1.2 4-1 1.1.1 4.1.4 6 3.2-5.2 2.9-4.3 10.3-.9 7.2Z"/></svg>
-                Apple
-              </a>
-              <a class="dkd_anyela_home_social_button" href="./" aria-label="Instagram ile devam et">
-                <span class="dkd_anyela_home_instagram_icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24"><path d="M7.4 2.8h9.2a4.6 4.6 0 0 1 4.6 4.6v9.2a4.6 4.6 0 0 1-4.6 4.6H7.4a4.6 4.6 0 0 1-4.6-4.6V7.4a4.6 4.6 0 0 1 4.6-4.6Z"/><path d="M8.7 12a3.3 3.3 0 1 0 6.6 0 3.3 3.3 0 0 0-6.6 0Z"/><path d="M17.2 6.8h.1"/></svg>
-                </span>
-                Instagram
-              </a>
-            </div>
-          </section>
-
-          <nav class="dkd_anyela_home_hotspots" aria-label="Anyela Born Club hızlı bağlantılar">
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_start" href="../Home/" aria-label="Misafir girişi ile Home sayfasına devam et"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_chat_card" href="#dkd_anyela_home_chat" aria-label="Sohbet paketleri"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_voice_card" href="#dkd_anyela_home_voice" aria-label="Voice Chat paketleri"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_photo_card" href="#dkd_anyela_home_photo" aria-label="Fotoğraf ve video paketleri"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_ads_card" href="#dkd_anyela_home_ads" aria-label="Reklam paketleri"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_home" href="../Home/" aria-label="Home sayfası"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_packages" href="#dkd_anyela_home_packages" aria-label="Paketler"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_chat" href="./" aria-label="Chat"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_orders" href="#dkd_anyela_home_orders" aria-label="Siparişler"></a>
-            <a class="dkd_anyela_hotspot dkd_anyela_hotspot_nav_profile" href="./" aria-label="Profil"></a>
-          </nav>
-        </div>
-
-        <section class="dkd_anyela_home_text_fallback" aria-label="Sayfa özeti">
+        <section class="dkd_anyela_login_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Club Login</h1>
-          <p>
-            Anyela Born Club Login sayfası. Misafir girişi Home sayfasına yönlendirir.
-            Giriş yap, paketleri keşfet ve Anyela ile bağlantı kur.
-          </p>
-          <a class="dkd_anyela_home_fallback_button" href="../Home/">Misafir Girişi</a>
-          <a class="dkd_anyela_home_fallback_button" href="./">Giriş Yap</a>
+          <p>Bu sayfada Hemen Başla alanına dokununca Home sayfası açılır.</p>
         </section>
       </section>
     </main>
-
-    <script src="../dkd_anyela_home.js"></script>
   </body>
 </html>
