@@ -1,181 +1,1338 @@
 <!doctype html>
 <html lang="tr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <meta name="theme-color" content="#05002b" />
-    <meta name="description" content="Anyela Born Club Packages — Miami Style Club paketler sayfası." />
-    <meta property="og:title" content="Anyela Born Club Packages" />
-    <meta property="og:description" content="Anyela Born paketlerini incele: mini sohbet, sesli mesaj, VIP özel içerik ve full premium paket." />
-    <meta property="og:image" content="../assets/dkd_anyela_packages_9970_20260530.png" />
-    <title>Anyela Born Club Packages</title>
-    <style>
-      :root {
-        --dkd_anyela_packages_bg: #05002b;
-        --dkd_anyela_packages_shadow: 0 28px 90px rgba(0, 0, 0, 0.54);
-        color-scheme: dark;
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#12002d" />
+  <meta name="description" content="Anyela Born Miami Style Club paketleri, özel teklif oluşturma, IBAN ödeme ve dekont yükleme ekranı." />
+  <title>Anyela Born | Miami Style Club Paketler</title>
+  <script src="./assets/dkd_anyela_config.js"></script>
+  <style>
+    :root {
+      --dkd_bg_dark: #050014;
+      --dkd_bg_deep: #10002e;
+      --dkd_panel: rgba(16, 8, 54, 0.82);
+      --dkd_panel_strong: rgba(7, 3, 31, 0.95);
+      --dkd_text: #fff8ff;
+      --dkd_muted: rgba(255, 255, 255, 0.76);
+      --dkd_pink: #ff2fd2;
+      --dkd_hot: #ff4f9a;
+      --dkd_blue: #27d6ff;
+      --dkd_gold: #ffd25a;
+      --dkd_orange: #ff884d;
+      --dkd_green: #45ffbf;
+      --dkd_radius: 28px;
+      --dkd_shadow: 0 26px 70px rgba(255, 47, 210, 0.23);
+      --dkd_ring: 0 0 0 1px rgba(255, 255, 255, 0.16), 0 0 30px rgba(255, 47, 210, 0.34), inset 0 0 20px rgba(39, 214, 255, 0.10);
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      background:
+        radial-gradient(circle at 20% 5%, rgba(255, 47, 210, 0.30), transparent 30%),
+        radial-gradient(circle at 88% 18%, rgba(39, 214, 255, 0.22), transparent 28%),
+        radial-gradient(circle at 45% 82%, rgba(255, 126, 72, 0.16), transparent 34%),
+        linear-gradient(145deg, #04000d 0%, #0d0031 45%, #160028 100%);
+      color: var(--dkd_text);
+      overflow-x: hidden;
+    }
+
+    body::before,
+    body::after {
+      content: "";
+      position: fixed;
+      inset: auto -10vw 0 -10vw;
+      height: 52vh;
+      pointer-events: none;
+      z-index: -2;
+      background:
+        linear-gradient(to top, rgba(5, 0, 20, 0.92), rgba(5, 0, 20, 0.1)),
+        radial-gradient(ellipse at 50% 100%, rgba(255, 47, 210, 0.17), transparent 55%);
+    }
+
+    body::after {
+      inset: 0;
+      height: auto;
+      z-index: -3;
+      opacity: 0.32;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.035) 1px, transparent 1px);
+      background-size: 42px 42px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent 82%);
+    }
+
+    a { color: inherit; }
+
+    button,
+    input,
+    select,
+    textarea { font: inherit; }
+
+    button { cursor: pointer; }
+
+    .dkd_page_shell {
+      width: min(1180px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 22px 0 86px;
+    }
+
+    .dkd_topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .dkd_back_button,
+    .dkd_text_link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      background: rgba(255, 255, 255, 0.07);
+      color: var(--dkd_text);
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 11px 14px;
+      box-shadow: var(--dkd_ring);
+      backdrop-filter: blur(18px);
+    }
+
+    .dkd_brand {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 2px;
+      flex: 1;
+    }
+
+    .dkd_brand_name {
+      font-size: clamp(2.2rem, 8vw, 5.2rem);
+      line-height: 0.92;
+      letter-spacing: 0.035em;
+      font-family: "Brush Script MT", "Segoe Script", cursive;
+      text-shadow: 0 0 18px rgba(255, 47, 210, 0.85), 0 0 35px rgba(39, 214, 255, 0.42);
+    }
+
+    .dkd_brand_subtitle {
+      color: var(--dkd_muted);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: clamp(0.75rem, 2vw, 1rem);
+    }
+
+    .dkd_hero_grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.96fr) minmax(320px, 1.1fr);
+      gap: 22px;
+      align-items: stretch;
+      margin-top: 18px;
+    }
+
+    .dkd_original_card,
+    .dkd_offer_card,
+    .dkd_package_card,
+    .dkd_payment_panel,
+    .dkd_rules_panel {
+      position: relative;
+      overflow: hidden;
+      border-radius: var(--dkd_radius);
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      background: linear-gradient(145deg, rgba(18, 3, 61, 0.84), rgba(5, 0, 22, 0.82));
+      box-shadow: var(--dkd_shadow), var(--dkd_ring);
+      backdrop-filter: blur(20px);
+    }
+
+    .dkd_original_card {
+      padding: 14px;
+    }
+
+    .dkd_original_badge {
+      position: absolute;
+      top: 18px;
+      left: 18px;
+      z-index: 2;
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 8px 11px;
+      border-radius: 999px;
+      background: rgba(5, 0, 22, 0.66);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: rgba(255, 255, 255, 0.88);
+      font-size: 0.76rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .dkd_original_image {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 864px;
+      border-radius: 22px;
+      image-rendering: auto;
+      filter: saturate(1.03);
+    }
+
+    .dkd_offer_card {
+      padding: clamp(22px, 4vw, 36px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 100%;
+    }
+
+    .dkd_offer_card::before,
+    .dkd_package_card::before,
+    .dkd_payment_panel::before,
+    .dkd_rules_panel::before {
+      content: "";
+      position: absolute;
+      inset: -2px;
+      background:
+        radial-gradient(circle at 0% 0%, rgba(255, 47, 210, 0.20), transparent 32%),
+        radial-gradient(circle at 100% 10%, rgba(39, 214, 255, 0.19), transparent 26%);
+      pointer-events: none;
+    }
+
+    .dkd_kicker {
+      position: relative;
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      color: var(--dkd_gold);
+      border: 1px solid rgba(255, 210, 90, 0.30);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: rgba(255, 210, 90, 0.08);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 0.78rem;
+    }
+
+    .dkd_offer_title {
+      position: relative;
+      margin: 20px 0 12px;
+      font-size: clamp(2.4rem, 8vw, 5.6rem);
+      line-height: 0.9;
+      letter-spacing: -0.055em;
+      text-shadow: 0 0 22px rgba(255, 47, 210, 0.62);
+    }
+
+    .dkd_gradient_text {
+      background: linear-gradient(90deg, #fff 0%, #ff57da 34%, #28d7ff 72%, #ffd25a 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .dkd_offer_copy {
+      position: relative;
+      color: var(--dkd_muted);
+      font-size: clamp(1rem, 2.2vw, 1.16rem);
+      line-height: 1.65;
+      max-width: 62ch;
+      margin: 0 0 20px;
+    }
+
+    .dkd_hero_actions {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 22px 0;
+    }
+
+    .dkd_primary_button,
+    .dkd_secondary_button,
+    .dkd_package_button,
+    .dkd_submit_button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      border: 0;
+      min-height: 48px;
+      border-radius: 999px;
+      padding: 13px 18px;
+      color: #ffffff;
+      font-weight: 900;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      background: linear-gradient(120deg, var(--dkd_pink), #9c3cff 48%, var(--dkd_blue));
+      box-shadow: 0 0 22px rgba(255, 47, 210, 0.60), 0 0 34px rgba(39, 214, 255, 0.28);
+      transition: transform 180ms ease, filter 180ms ease, box-shadow 180ms ease;
+    }
+
+    .dkd_primary_button:hover,
+    .dkd_secondary_button:hover,
+    .dkd_package_button:hover,
+    .dkd_submit_button:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.12);
+      box-shadow: 0 0 30px rgba(255, 47, 210, 0.76), 0 0 48px rgba(39, 214, 255, 0.44);
+    }
+
+    .dkd_secondary_button {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: var(--dkd_ring);
+    }
+
+    .dkd_stats_row {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 20px;
+    }
+
+    .dkd_stat_tile {
+      min-height: 86px;
+      border-radius: 22px;
+      padding: 13px;
+      background: rgba(255, 255, 255, 0.075);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .dkd_stat_value {
+      display: block;
+      color: #ffffff;
+      font-size: 1.18rem;
+      font-weight: 1000;
+    }
+
+    .dkd_stat_label {
+      display: block;
+      color: var(--dkd_muted);
+      font-size: 0.78rem;
+      line-height: 1.35;
+      margin-top: 5px;
+    }
+
+    .dkd_section_header {
+      margin: 50px 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 18px;
+    }
+
+    .dkd_section_title {
+      margin: 0;
+      font-size: clamp(2.2rem, 6vw, 5rem);
+      line-height: 0.96;
+      letter-spacing: -0.055em;
+      text-shadow: 0 0 22px rgba(39, 214, 255, 0.25);
+    }
+
+    .dkd_section_note {
+      margin: 10px 0 0;
+      color: var(--dkd_muted);
+      max-width: 62ch;
+      line-height: 1.58;
+    }
+
+    .dkd_packages_grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .dkd_package_card {
+      padding: 20px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 18px;
+      align-items: center;
+      min-height: 210px;
+    }
+
+    .dkd_package_card > * { position: relative; }
+
+    .dkd_package_card[data-dkd-featured="true"] {
+      border-color: rgba(255, 210, 90, 0.62);
+      box-shadow: 0 0 0 1px rgba(255, 210, 90, 0.26), 0 24px 70px rgba(255, 136, 77, 0.25), var(--dkd_ring);
+    }
+
+    .dkd_popular_ribbon {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      z-index: 3;
+      color: #211000;
+      background: linear-gradient(90deg, var(--dkd_gold), var(--dkd_orange));
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-weight: 1000;
+      font-size: 0.76rem;
+      box-shadow: 0 0 18px rgba(255, 210, 90, 0.54);
+    }
+
+    .dkd_package_icon {
+      width: 94px;
+      height: 94px;
+      display: grid;
+      place-items: center;
+      border-radius: 28px;
+      background: linear-gradient(145deg, rgba(255, 47, 210, 0.24), rgba(39, 214, 255, 0.14));
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: inset 0 0 24px rgba(255, 47, 210, 0.18), 0 0 24px rgba(39, 214, 255, 0.22);
+      font-size: 2.6rem;
+      flex: 0 0 auto;
+    }
+
+    .dkd_package_title {
+      margin: 0 0 7px;
+      font-size: clamp(1.34rem, 3vw, 1.9rem);
+      line-height: 1.04;
+    }
+
+    .dkd_package_desc {
+      margin: 0;
+      color: var(--dkd_muted);
+      line-height: 1.45;
+    }
+
+    .dkd_package_meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    .dkd_meta_chip {
+      color: rgba(255,255,255,0.9);
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+      padding: 7px 9px;
+      border-radius: 999px;
+      font-weight: 750;
+      font-size: 0.82rem;
+    }
+
+    .dkd_package_bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .dkd_price {
+      color: var(--dkd_pink);
+      font-size: clamp(1.7rem, 4vw, 2.35rem);
+      line-height: 1;
+      font-weight: 1000;
+      text-shadow: 0 0 16px rgba(255, 47, 210, 0.8);
+      white-space: nowrap;
+    }
+
+    .dkd_package_button {
+      min-height: 44px;
+      padding: 11px 15px;
+      white-space: nowrap;
+    }
+
+    .dkd_builder_grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 1fr) minmax(280px, 0.86fr);
+      gap: 18px;
+      margin-top: 16px;
+    }
+
+    .dkd_payment_panel,
+    .dkd_rules_panel {
+      padding: clamp(18px, 4vw, 30px);
+    }
+
+    .dkd_form_grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .dkd_field {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .dkd_field.dkd_full { grid-column: 1 / -1; }
+
+    .dkd_field label {
+      color: rgba(255,255,255,0.82);
+      font-weight: 850;
+      font-size: 0.86rem;
+    }
+
+    .dkd_field input,
+    .dkd_field select,
+    .dkd_field textarea {
+      width: 100%;
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 18px;
+      color: #fff;
+      background: rgba(255,255,255,0.075);
+      padding: 13px 14px;
+      outline: none;
+      min-height: 48px;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02);
+    }
+
+    .dkd_field textarea { min-height: 102px; resize: vertical; }
+
+    .dkd_field input:focus,
+    .dkd_field select:focus,
+    .dkd_field textarea:focus {
+      border-color: rgba(39, 214, 255, 0.86);
+      box-shadow: 0 0 0 4px rgba(39, 214, 255, 0.12), inset 0 0 20px rgba(39, 214, 255, 0.06);
+    }
+
+    .dkd_summary_box {
+      position: sticky;
+      top: 16px;
+      border-radius: var(--dkd_radius);
+      background:
+        linear-gradient(160deg, rgba(255,47,210,0.15), rgba(39,214,255,0.10)),
+        rgba(3, 0, 18, 0.76);
+      border: 1px solid rgba(255,255,255,0.18);
+      padding: 20px;
+      box-shadow: var(--dkd_ring);
+    }
+
+    .dkd_summary_title {
+      margin: 0 0 10px;
+      font-size: 1.45rem;
+    }
+
+    .dkd_summary_list {
+      display: grid;
+      gap: 8px;
+      margin: 16px 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .dkd_summary_list li {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.10);
+      padding-bottom: 8px;
+      color: var(--dkd_muted);
+    }
+
+    .dkd_total_price {
+      margin: 8px 0 4px;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      font-weight: 1000;
+      color: var(--dkd_gold);
+      text-shadow: 0 0 20px rgba(255,210,90,0.48);
+    }
+
+    .dkd_iban_box {
+      position: relative;
+      display: grid;
+      gap: 10px;
+      margin-top: 18px;
+      border-radius: 22px;
+      padding: 16px;
+      background: rgba(255,255,255,0.075);
+      border: 1px solid rgba(255,255,255,0.16);
+    }
+
+    .dkd_copy_row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+
+    .dkd_copy_value {
+      font-weight: 950;
+      letter-spacing: 0.025em;
+      word-break: break-word;
+    }
+
+    .dkd_mini_button {
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.09);
+      color: #fff;
+      border-radius: 999px;
+      padding: 8px 11px;
+      font-weight: 850;
+    }
+
+    .dkd_receipt_drop {
+      position: relative;
+      display: grid;
+      place-items: center;
+      gap: 8px;
+      min-height: 132px;
+      border: 1.5px dashed rgba(39,214,255,0.62);
+      border-radius: 22px;
+      background: rgba(39,214,255,0.06);
+      text-align: center;
+      padding: 18px;
+    }
+
+    .dkd_receipt_drop input {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .dkd_receipt_name {
+      color: var(--dkd_green);
+      font-weight: 900;
+      min-height: 22px;
+    }
+
+    .dkd_status_message {
+      display: none;
+      position: relative;
+      margin-top: 14px;
+      padding: 14px;
+      border-radius: 18px;
+      border: 1px solid rgba(69,255,191,0.30);
+      background: rgba(69,255,191,0.08);
+      color: rgba(230,255,247,0.96);
+      line-height: 1.45;
+    }
+
+    .dkd_status_message.dkd_show { display: block; }
+
+    .dkd_rules_grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .dkd_rule_tile {
+      border-radius: 20px;
+      padding: 14px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: var(--dkd_muted);
+      line-height: 1.48;
+    }
+
+    .dkd_rule_tile strong { color: #fff; }
+
+    .dkd_modal_layer {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      display: none;
+      place-items: center;
+      padding: 18px;
+      background: rgba(2, 0, 12, 0.72);
+      backdrop-filter: blur(14px);
+    }
+
+    .dkd_modal_layer.dkd_open { display: grid; }
+
+    .dkd_modal {
+      width: min(920px, 100%);
+      max-height: min(92vh, 980px);
+      overflow: auto;
+      border-radius: 30px;
+      border: 1px solid rgba(255,255,255,0.20);
+      background:
+        linear-gradient(150deg, rgba(17, 4, 62, 0.98), rgba(5, 0, 22, 0.98));
+      box-shadow: 0 35px 95px rgba(0,0,0,0.55), var(--dkd_ring);
+    }
+
+    .dkd_modal_head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 22px 22px 0;
+    }
+
+    .dkd_modal_body { padding: 18px 22px 24px; }
+
+    .dkd_close_button {
+      border: 1px solid rgba(255,255,255,0.18);
+      background: rgba(255,255,255,0.09);
+      color: #fff;
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      font-size: 1.3rem;
+      flex: 0 0 auto;
+    }
+
+    .dkd_modal_title {
+      margin: 0 0 6px;
+      font-size: clamp(1.7rem, 5vw, 3rem);
+      line-height: 1;
+    }
+
+    .dkd_modal_desc {
+      margin: 0;
+      color: var(--dkd_muted);
+      line-height: 1.55;
+    }
+
+    .dkd_detail_grid {
+      display: grid;
+      grid-template-columns: 1fr 0.86fr;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .dkd_detail_panel {
+      border-radius: 24px;
+      padding: 18px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .dkd_detail_panel h3 {
+      margin: 0 0 12px;
+      font-size: 1.12rem;
+    }
+
+    .dkd_check_list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      color: var(--dkd_muted);
+    }
+
+    .dkd_check_list li {
+      display: flex;
+      gap: 9px;
+      align-items: flex-start;
+      line-height: 1.45;
+    }
+
+    .dkd_check_list li::before {
+      content: "✦";
+      color: var(--dkd_gold);
+      flex: 0 0 auto;
+    }
+
+    .dkd_footer_note {
+      text-align: center;
+      margin: 40px auto 0;
+      max-width: 850px;
+      color: rgba(255,255,255,0.64);
+      line-height: 1.55;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 920px) {
+      .dkd_hero_grid,
+      .dkd_builder_grid,
+      .dkd_detail_grid {
+        grid-template-columns: 1fr;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      .dkd_original_card { order: 2; }
+      .dkd_offer_card { order: 1; }
+      .dkd_summary_box { position: relative; top: auto; }
+      .dkd_rules_grid { grid-template-columns: 1fr; }
+    }
 
-      html,
-      body {
-        min-height: 100%;
-        margin: 0;
-        background:
-          radial-gradient(circle at 18% 0%, rgba(255, 35, 188, 0.24), transparent 24rem),
-          radial-gradient(circle at 88% 10%, rgba(24, 247, 255, 0.18), transparent 25rem),
-          linear-gradient(180deg, #090044 0%, var(--dkd_anyela_packages_bg) 100%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
+    @media (max-width: 720px) {
+      .dkd_page_shell { width: min(100% - 18px, 560px); padding-top: 12px; }
+      .dkd_topbar { align-items: center; }
+      .dkd_text_link { display: none; }
+      .dkd_back_button { width: 44px; height: 44px; justify-content: center; padding: 0; }
+      .dkd_back_button span { display: none; }
+      .dkd_packages_grid { grid-template-columns: 1fr; }
+      .dkd_package_card { grid-template-columns: 76px 1fr; min-height: auto; padding: 16px; }
+      .dkd_package_icon { width: 76px; height: 76px; border-radius: 22px; font-size: 2.1rem; }
+      .dkd_package_bottom { flex-direction: column; align-items: flex-start; }
+      .dkd_package_button { width: 100%; }
+      .dkd_form_grid { grid-template-columns: 1fr; }
+      .dkd_stats_row { grid-template-columns: 1fr; }
+      .dkd_section_header { flex-direction: column; align-items: flex-start; }
+      .dkd_modal_layer { padding: 9px; }
+      .dkd_modal_head { padding: 18px 18px 0; }
+      .dkd_modal_body { padding: 14px 18px 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="dkd_page_shell">
+    <header class="dkd_topbar">
+      <a class="dkd_back_button" href="/AnyelaBorn/" aria-label="Anyela Born ana sayfasına dön">‹ <span>Geri</span></a>
+      <div class="dkd_brand" aria-label="Anyela Born Miami Style Club">
+        <div class="dkd_brand_name">🌴 Anyela Born 🌴</div>
+        <div class="dkd_brand_subtitle">Miami Style Club</div>
+      </div>
+      <a class="dkd_text_link" href="#dkd_payment_builder">Teklif oluştur</a>
+    </header>
 
-      a {
-        -webkit-tap-highlight-color: transparent;
-      }
+    <section class="dkd_hero_grid">
+      <article class="dkd_original_card" aria-label="Yüklenen orijinal paket görseli">
+        <div class="dkd_original_badge">✓ Orijinal görsel · 864 × 1536 · sıkıştırma yok</div>
+        <img class="dkd_original_image" src="./assets/anyela-born-packages-original.jpg" width="864" height="1536" alt="Anyela Born Miami Style Club paket listesi orijinal mockup görseli" loading="eager" decoding="async" />
+      </article>
 
-      .dkd_anyela_packages_page {
-        width: 100%;
-        min-height: 100svh;
-        display: flex;
-        justify-content: center;
-        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
-      }
+      <article class="dkd_offer_card">
+        <div>
+          <span class="dkd_kicker">🌊 Miami neon satış ekranı</span>
+          <h1 class="dkd_offer_title"><span class="dkd_gradient_text">Paketini seç,</span><br />özel odan açılsın.</h1>
+          <p class="dkd_offer_copy">Anyela Born ile yazılı sohbet, sesli mesaj, VIP özel içerik ve Full Premium deneyim için paketini seç. IBAN’a ödeme yaptıktan sonra dekontunu yükle; onaydan sonra kısa süre içinde bilgilendirme yapılır.</p>
+          <div class="dkd_hero_actions">
+            <a class="dkd_primary_button" href="#dkd_packages">Paketleri İncele →</a>
+            <a class="dkd_secondary_button" href="#dkd_payment_builder">Teklif Oluştur ✨</a>
+          </div>
+        </div>
+        <div class="dkd_stats_row" aria-label="Hizmet özeti">
+          <div class="dkd_stat_tile"><span class="dkd_stat_value">20-60 dk</span><span class="dkd_stat_label">pakete göre sohbet / mesajlaşma süresi</span></div>
+          <div class="dkd_stat_tile"><span class="dkd_stat_value">IBAN</span><span class="dkd_stat_label">FAST / EFT / havale ve dekont onayı</span></div>
+          <div class="dkd_stat_tile"><span class="dkd_stat_value">Miami</span><span class="dkd_stat_label">neon, premium, mobil uyumlu ekran</span></div>
+        </div>
+      </article>
+    </section>
 
-      .dkd_anyela_packages_mobile_shell {
-        position: relative;
-        width: min(100vw, 480px);
-        min-height: 100svh;
-        overflow: hidden;
-        background: #05002b;
-        box-shadow: var(--dkd_anyela_packages_shadow);
-      }
+    <section id="dkd_packages" aria-labelledby="dkd_packages_title">
+      <div class="dkd_section_header">
+        <div>
+          <h2 id="dkd_packages_title" class="dkd_section_title"><span class="dkd_gradient_text">Tıklanabilir</span> Paketler</h2>
+          <p class="dkd_section_note">Görseldeki dört ana paket modern kartlara dönüştürüldü. Her kart ödeme, dekont yükleme ve seçilen pakete özel detay ekranı açar.</p>
+        </div>
+        <a class="dkd_text_link" href="./assets/anyela-born-packages-original.jpg" target="_blank" rel="noopener">Orijinal görseli aç</a>
+      </div>
 
-      .dkd_anyela_packages_mockup {
-        display: block;
-        width: 100%;
-        height: auto;
-        min-height: 100svh;
-        object-fit: cover;
-        object-position: center top;
-        user-select: none;
-        -webkit-user-drag: none;
-      }
+      <div class="dkd_packages_grid" id="dkd_package_catalog" aria-live="polite"></div>
+    </section>
 
-      .dkd_anyela_packages_hotspot {
-        position: absolute;
-        z-index: 5;
-        display: block;
-        border-radius: 999px;
-        outline: none;
-        text-decoration: none;
-      }
+    <section id="dkd_payment_builder" aria-labelledby="dkd_builder_title">
+      <div class="dkd_section_header">
+        <div>
+          <h2 id="dkd_builder_title" class="dkd_section_title">Teklif <span class="dkd_gradient_text">Oluştur</span></h2>
+          <p class="dkd_section_note">Dakika, sesli mesaj, video mesaj ve özel görsel adedini seç. Sistem tahmini ücreti otomatik hesaplar ve ödeme/dekont ekranını hazırlar.</p>
+        </div>
+      </div>
 
-      .dkd_anyela_packages_hotspot:focus-visible {
-        box-shadow:
-          0 0 0 3px rgba(255, 255, 255, 0.94),
-          0 0 0 8px rgba(255, 35, 188, 0.72),
-          0 0 32px rgba(24, 247, 255, 0.72);
-      }
+      <div class="dkd_builder_grid">
+        <form class="dkd_payment_panel" id="dkd_offer_form">
+          <span class="dkd_kicker">🧾 özel teklif hesaplayıcı</span>
+          <div class="dkd_form_grid">
+            <div class="dkd_field">
+              <label for="dkd_offer_minutes">Sohbet dakikası</label>
+              <select id="dkd_offer_minutes" name="dkd_offer_minutes">
+                <option value="10">10 dakika</option>
+                <option value="20">20 dakika</option>
+                <option value="30" selected>30 dakika</option>
+                <option value="45">45 dakika</option>
+                <option value="60">60 dakika</option>
+                <option value="90">90 dakika</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_voice_count">Sesli mesaj adedi</label>
+              <select id="dkd_offer_voice_count" name="dkd_offer_voice_count">
+                <option value="0">Yok</option>
+                <option value="1">1 adet</option>
+                <option value="3">3 adet</option>
+                <option value="5" selected>5 adet</option>
+                <option value="10">10 adet</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_video_count">Video mesaj adedi</label>
+              <select id="dkd_offer_video_count" name="dkd_offer_video_count">
+                <option value="0" selected>Yok</option>
+                <option value="1">1 adet</option>
+                <option value="2">2 adet</option>
+                <option value="3">3 adet</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_visual_count">Özel görsel adedi</label>
+              <select id="dkd_offer_visual_count" name="dkd_offer_visual_count">
+                <option value="0">Yok</option>
+                <option value="2">2 görsel</option>
+                <option value="5" selected>5 görsel</option>
+                <option value="10">10 görsel</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_priority">Teslim önceliği</label>
+              <select id="dkd_offer_priority" name="dkd_offer_priority">
+                <option value="normal" selected>Normal onay sırası</option>
+                <option value="priority">Öncelikli teslim +300 TL</option>
+                <option value="vip">VIP hızlı teslim +650 TL</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_category">Teklif türü</label>
+              <select id="dkd_offer_category" name="dkd_offer_category">
+                <option value="fan" selected>Fan / özel deneyim</option>
+                <option value="brand">İşletme / reklam konsepti</option>
+              </select>
+            </div>
+            <div class="dkd_field dkd_full">
+              <label for="dkd_offer_note">İsteklerini yaz</label>
+              <textarea id="dkd_offer_note" name="dkd_offer_note" placeholder="Örn: Miami tarzı, kısa sesli cevaplar, 2 video mesaj, referans görsel göndereceğim..."></textarea>
+            </div>
+          </div>
+        </form>
 
-      .dkd_anyela_packages_back {
-        left: 3.6%;
-        top: 1.8%;
-        width: 8.8%;
-        height: 5.4%;
-      }
+        <aside class="dkd_summary_box" aria-label="Teklif özeti">
+          <span class="dkd_kicker">⚡ canlı ücret</span>
+          <h3 class="dkd_summary_title">Özel teklif özeti</h3>
+          <ul class="dkd_summary_list">
+            <li><span>Sohbet</span><strong id="dkd_summary_minutes">30 dk</strong></li>
+            <li><span>Sesli mesaj</span><strong id="dkd_summary_voice">5 adet</strong></li>
+            <li><span>Video mesaj</span><strong id="dkd_summary_video">0 adet</strong></li>
+            <li><span>Özel görsel</span><strong id="dkd_summary_visual">5 adet</strong></li>
+            <li><span>Öncelik</span><strong id="dkd_summary_priority">Normal</strong></li>
+          </ul>
+          <div class="dkd_total_price" id="dkd_custom_total">1.999 TL</div>
+          <button class="dkd_submit_button" type="button" id="dkd_open_custom_payment">Bu Teklifle Ödeme Ekranını Aç</button>
+        </aside>
+      </div>
+    </section>
 
-      .dkd_anyela_packages_mini_chat {
-        left: 6.6%;
-        top: 34.8%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
+    <section class="dkd_rules_panel" aria-labelledby="dkd_rules_title">
+      <span class="dkd_kicker">🔐 güvenli kullanım</span>
+      <h2 id="dkd_rules_title" class="dkd_section_title">Ödeme ve Kurallar</h2>
+      <div class="dkd_rules_grid">
+        <div class="dkd_rule_tile"><strong>Dekont onayı:</strong> Ödeme sonrası dekont yüklenir. Dekont onayından sonra kısa süre içerisinde onaylanacaktır bilgisi kullanıcıya gösterilir.</div>
+        <div class="dkd_rule_tile"><strong>Açıklama:</strong> Havale/EFT açıklamasına <strong>ANYELA - Ad Soyad - Paket Adı</strong> yazılması önerilir.</div>
+        <div class="dkd_rule_tile"><strong>Şeffaf not:</strong> Anyela Born dijital karakter deneyimidir. İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır.</div>
+      </div>
+    </section>
 
-      .dkd_anyela_packages_voice {
-        left: 6.6%;
-        top: 51.2%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
+    <p class="dkd_footer_note">Bu sayfa ilk sürüm MVP ekranıdır. Dekont dosyasını gerçek sunucuya kaydetmek için <strong>assets/dkd_anyela_config.js</strong> içindeki <strong>dkd_webhook_url</strong> alanına kendi güvenli backend / Supabase Edge Function adresini ekleyebilirsin; boş kalırsa form kullanıcı ekranında onay bekliyor akışı gösterir.</p>
+  </main>
 
-      .dkd_anyela_packages_vip {
-        left: 6.6%;
-        top: 67.6%;
-        width: 86.8%;
-        height: 14.8%;
-        border-radius: 24px;
-      }
+  <div class="dkd_modal_layer" id="dkd_payment_modal" role="dialog" aria-modal="true" aria-labelledby="dkd_modal_title">
+    <div class="dkd_modal">
+      <div class="dkd_modal_head">
+        <div>
+          <span class="dkd_kicker" id="dkd_modal_badge">paket ödeme ekranı</span>
+          <h2 class="dkd_modal_title" id="dkd_modal_title">Paket Detayı</h2>
+          <p class="dkd_modal_desc" id="dkd_modal_desc">Seçilen paketin detayları ve ödeme alanı.</p>
+        </div>
+        <button class="dkd_close_button" id="dkd_close_modal" type="button" aria-label="Ödeme ekranını kapat">×</button>
+      </div>
+      <div class="dkd_modal_body">
+        <div class="dkd_detail_grid">
+          <section class="dkd_detail_panel">
+            <h3>Pakete dahil olanlar</h3>
+            <ul class="dkd_check_list" id="dkd_modal_features"></ul>
+          </section>
+          <section class="dkd_detail_panel">
+            <h3>Ödeme bilgileri</h3>
+            <div class="dkd_total_price" id="dkd_modal_price">499 TL</div>
+            <div class="dkd_iban_box">
+              <div class="dkd_copy_row"><span>IBAN</span><span class="dkd_copy_value" id="dkd_iban_value">TR53 0011 1000 0000 0151 1527 14</span><button class="dkd_mini_button" type="button" data-dkd-copy="iban">Kopyala</button></div>
+              <div class="dkd_copy_row"><span>Ad Soyad</span><span class="dkd_copy_value" id="dkd_holder_value">Doğancan Kartal</span><button class="dkd_mini_button" type="button" data-dkd-copy="holder">Kopyala</button></div>
+              <div class="dkd_copy_row"><span>Açıklama</span><span class="dkd_copy_value" id="dkd_reference_value">ANYELA - Ad Soyad - Paket</span><button class="dkd_mini_button" type="button" data-dkd-copy="reference">Kopyala</button></div>
+            </div>
+          </section>
+        </div>
 
-      .dkd_anyela_packages_full {
-        left: 6.6%;
-        top: 84.1%;
-        width: 86.8%;
-        height: 13.3%;
-        border-radius: 24px;
-      }
+        <form class="dkd_payment_panel" id="dkd_payment_form" style="margin-top:16px;">
+          <span class="dkd_kicker">🧾 dekont yükleme</span>
+          <div class="dkd_form_grid">
+            <div class="dkd_field">
+              <label for="dkd_customer_name">Ad Soyad</label>
+              <input id="dkd_customer_name" name="dkd_customer_name" type="text" autocomplete="name" placeholder="Adınız Soyadınız" required />
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_customer_contact">E-posta / Instagram kullanıcı adı</label>
+              <input id="dkd_customer_contact" name="dkd_customer_contact" type="text" autocomplete="email" placeholder="ornek@mail.com veya @kullanici" required />
+            </div>
+            <div class="dkd_field dkd_full">
+              <label for="dkd_customer_message">Ek bilgi</label>
+              <textarea id="dkd_customer_message" name="dkd_customer_message" placeholder="Paketle ilgili özel isteğini veya dekont açıklamanı yazabilirsin."></textarea>
+            </div>
+            <div class="dkd_field dkd_full">
+              <label>Dekont dosyası</label>
+              <div class="dkd_receipt_drop">
+                <input id="dkd_receipt_file" name="dkd_receipt_file" type="file" accept="image/*,application/pdf" required />
+                <strong>Dekontu buraya yükle</strong>
+                <span>JPG, PNG veya PDF dosyası seçebilirsin.</span>
+                <span class="dkd_receipt_name" id="dkd_receipt_name"></span>
+              </div>
+            </div>
+          </div>
+          <button class="dkd_submit_button" type="submit" style="margin-top:14px;width:100%;">Dekontu Yükle ve Onay Bekle</button>
+          <div class="dkd_status_message" id="dkd_payment_status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
 
-      .dkd_anyela_packages_screen_reader {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip-path: inset(50%);
-        border: 0;
-        white-space: nowrap;
-      }
+  <script>
+    (function dkd_initialize_anyela_packages() {
+      "use strict";
 
-      @media (min-width: 820px) {
-        .dkd_anyela_packages_page {
-          align-items: center;
-          padding: 32px 0;
+      const dkd_payment_config = window.dkd_anyela_payment_config || {};
+      const dkd_package_catalog = [
+        {
+          dkd_code: "MINI_SOHBET",
+          dkd_icon: "💬",
+          dkd_title: "Mini Sohbet Paketi",
+          dkd_description: "Günlük kısa mesajlaşma ve özel yanıtlar.",
+          dkd_price: 499,
+          dkd_minutes: 20,
+          dkd_voice_count: 0,
+          dkd_video_count: 0,
+          dkd_visual_count: 0,
+          dkd_featured: false,
+          dkd_badge: "Başlangıç",
+          dkd_features: [
+            "20 dakika yazılı sohbet deneyimi",
+            "Site içi özel konuşma / talep akışı",
+            "Kısa tanışma ve günlük sohbet mesajları",
+            "Dekont onayından sonra kısa süre içinde bilgilendirme"
+          ]
+        },
+        {
+          dkd_code: "SESLI_MESAJ",
+          dkd_icon: "🎙️",
+          dkd_title: "Sesli Mesaj Paketi",
+          dkd_description: "Özel sesli mesajlar ve daha yakın iletişim.",
+          dkd_price: 999,
+          dkd_minutes: 30,
+          dkd_voice_count: 5,
+          dkd_video_count: 0,
+          dkd_visual_count: 0,
+          dkd_featured: false,
+          dkd_badge: "Voice",
+          dkd_features: [
+            "30 dakika sesli mesajlaşma akışı",
+            "5 adet kişiye özel sesli cevap hakkı",
+            "Kullanıcı sesli mesaj / not gönderebilir",
+            "Sesli cevaplar onaydan sonra özel odada paylaşılır"
+          ]
+        },
+        {
+          dkd_code: "VIP_OZEL_ICERIK",
+          dkd_icon: "💎",
+          dkd_title: "VIP Özel İçerik",
+          dkd_description: "Kişiye özel premium fotoğraf ve içerikler.",
+          dkd_price: 1499,
+          dkd_minutes: 45,
+          dkd_voice_count: 3,
+          dkd_video_count: 0,
+          dkd_visual_count: 5,
+          dkd_featured: false,
+          dkd_badge: "VIP",
+          dkd_features: [
+            "45 dakika premium yazılı sohbet akışı",
+            "3 adet kişiye özel sesli cevap hakkı",
+            "5 adet özel Anyela görsel konsepti",
+            "Kıyafet, mekan veya konsept notu gönderebilme"
+          ]
+        },
+        {
+          dkd_code: "FULL_PREMIUM",
+          dkd_icon: "👑",
+          dkd_title: "Full Premium Paket",
+          dkd_description: "Sohbet, sesli mesaj ve özel içeriklerin tamamı.",
+          dkd_price: 1999,
+          dkd_minutes: 60,
+          dkd_voice_count: 5,
+          dkd_video_count: 1,
+          dkd_visual_count: 5,
+          dkd_featured: true,
+          dkd_badge: "En Popüler",
+          dkd_features: [
+            "60 dakika premium yazılı sohbet akışı",
+            "5 adet kişiye özel sesli cevap hakkı",
+            "1 adet kısa video mesaj / konsept talebi",
+            "5 adet özel Anyela görsel konsepti",
+            "VIP öncelikli değerlendirme ve bilgilendirme"
+          ]
+        }
+      ];
+
+      const dkd_format_currency = function dkd_format_currency(dkd_amount) {
+        return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 0 }).format(dkd_amount) + " TL";
+      };
+
+      const dkd_get_element = function dkd_get_element(dkd_element_id) {
+        return document.getElementById(dkd_element_id);
+      };
+
+      const dkd_escape_text = function dkd_escape_text(dkd_value) {
+        return String(dkd_value).replace(/[&<>'"]/g, function dkd_replace_unsafe_character(dkd_character) {
+          const dkd_character_map = {
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            "'": "&#39;",
+            "\"": "&quot;"
+          };
+          return dkd_character_map[dkd_character];
+        });
+      };
+
+      const dkd_render_packages = function dkd_render_packages() {
+        const dkd_catalog_node = dkd_get_element("dkd_package_catalog");
+        dkd_catalog_node.innerHTML = dkd_package_catalog.map(function dkd_map_package(dkd_package_item) {
+          const dkd_badge_html = dkd_package_item.dkd_featured ? "<div class=\"dkd_popular_ribbon\">★ En Çok Tercih Edilen</div>" : "";
+          return "<article class=\"dkd_package_card\" data-dkd-featured=\"" + dkd_package_item.dkd_featured + "\">" +
+            dkd_badge_html +
+            "<div class=\"dkd_package_icon\" aria-hidden=\"true\">" + dkd_package_item.dkd_icon + "</div>" +
+            "<div>" +
+              "<h3 class=\"dkd_package_title\">" + dkd_escape_text(dkd_package_item.dkd_title) + "</h3>" +
+              "<p class=\"dkd_package_desc\">" + dkd_escape_text(dkd_package_item.dkd_description) + "</p>" +
+              "<div class=\"dkd_package_meta\">" +
+                "<span class=\"dkd_meta_chip\">" + dkd_package_item.dkd_minutes + " dk</span>" +
+                "<span class=\"dkd_meta_chip\">" + dkd_package_item.dkd_voice_count + " sesli</span>" +
+                "<span class=\"dkd_meta_chip\">" + dkd_package_item.dkd_visual_count + " görsel</span>" +
+              "</div>" +
+              "<div class=\"dkd_package_bottom\">" +
+                "<strong class=\"dkd_price\">" + dkd_format_currency(dkd_package_item.dkd_price) + "</strong>" +
+                "<button class=\"dkd_package_button\" type=\"button\" data-dkd-package-code=\"" + dkd_package_item.dkd_code + "\">Paketi Seç →</button>" +
+              "</div>" +
+            "</div>" +
+          "</article>";
+        }).join("");
+      };
+
+      const dkd_calculate_custom_offer = function dkd_calculate_custom_offer() {
+        const dkd_minutes_value = Number(dkd_get_element("dkd_offer_minutes").value || 0);
+        const dkd_voice_value = Number(dkd_get_element("dkd_offer_voice_count").value || 0);
+        const dkd_video_value = Number(dkd_get_element("dkd_offer_video_count").value || 0);
+        const dkd_visual_value = Number(dkd_get_element("dkd_offer_visual_count").value || 0);
+        const dkd_priority_value = dkd_get_element("dkd_offer_priority").value;
+        const dkd_category_value = dkd_get_element("dkd_offer_category").value;
+        const dkd_base_amount = dkd_category_value === "brand" ? 900 : 299;
+        const dkd_minutes_amount = dkd_minutes_value * 12;
+        const dkd_voice_amount = dkd_voice_value * 120;
+        const dkd_video_amount = dkd_video_value * 420;
+        const dkd_visual_amount = dkd_visual_value * 165;
+        const dkd_priority_amount = dkd_priority_value === "vip" ? 650 : dkd_priority_value === "priority" ? 300 : 0;
+        const dkd_brand_amount = dkd_category_value === "brand" ? 750 : 0;
+        const dkd_total_amount = dkd_base_amount + dkd_minutes_amount + dkd_voice_amount + dkd_video_amount + dkd_visual_amount + dkd_priority_amount + dkd_brand_amount;
+
+        dkd_get_element("dkd_summary_minutes").textContent = dkd_minutes_value + " dk";
+        dkd_get_element("dkd_summary_voice").textContent = dkd_voice_value + " adet";
+        dkd_get_element("dkd_summary_video").textContent = dkd_video_value + " adet";
+        dkd_get_element("dkd_summary_visual").textContent = dkd_visual_value + " adet";
+        dkd_get_element("dkd_summary_priority").textContent = dkd_priority_value === "vip" ? "VIP" : dkd_priority_value === "priority" ? "Öncelikli" : "Normal";
+        dkd_get_element("dkd_custom_total").textContent = dkd_format_currency(dkd_total_amount);
+
+        return {
+          dkd_code: "OZEL_TEKLIF",
+          dkd_icon: "✨",
+          dkd_title: "Özel Teklif",
+          dkd_description: "Seçtiğin dakika, sesli mesaj, video mesaj ve özel görsel adedine göre hazırlanmış teklif.",
+          dkd_price: dkd_total_amount,
+          dkd_minutes: dkd_minutes_value,
+          dkd_voice_count: dkd_voice_value,
+          dkd_video_count: dkd_video_value,
+          dkd_visual_count: dkd_visual_value,
+          dkd_badge: "Teklif Oluştur",
+          dkd_features: [
+            dkd_minutes_value + " dakika sohbet / mesajlaşma alanı",
+            dkd_voice_value + " adet sesli mesaj hakkı",
+            dkd_video_value + " adet video mesaj / konsept hakkı",
+            dkd_visual_value + " adet özel görsel konsepti",
+            "Seçilen öncelik: " + dkd_get_element("dkd_summary_priority").textContent,
+            "Dekont onayından sonra kısa süre içerisinde onaylanacaktır"
+          ]
+        };
+      };
+
+      let dkd_selected_package = null;
+
+      const dkd_build_reference = function dkd_build_reference(dkd_package_item) {
+        return (dkd_payment_config.dkd_payment_reference_prefix || "ANYELA") + " - Ad Soyad - " + dkd_package_item.dkd_code;
+      };
+
+      const dkd_open_payment_modal = function dkd_open_payment_modal(dkd_package_item) {
+        dkd_selected_package = dkd_package_item;
+        dkd_get_element("dkd_modal_badge").textContent = dkd_package_item.dkd_badge || "paket ödeme ekranı";
+        dkd_get_element("dkd_modal_title").textContent = dkd_package_item.dkd_title;
+        dkd_get_element("dkd_modal_desc").textContent = dkd_package_item.dkd_description;
+        dkd_get_element("dkd_modal_price").textContent = dkd_format_currency(dkd_package_item.dkd_price);
+        dkd_get_element("dkd_iban_value").textContent = dkd_payment_config.dkd_bank_iban || "TR53 0011 1000 0000 0151 1527 14";
+        dkd_get_element("dkd_holder_value").textContent = dkd_payment_config.dkd_account_holder || "Doğancan Kartal";
+        dkd_get_element("dkd_reference_value").textContent = dkd_build_reference(dkd_package_item);
+        dkd_get_element("dkd_modal_features").innerHTML = dkd_package_item.dkd_features.map(function dkd_map_feature(dkd_feature_text) {
+          return "<li>" + dkd_escape_text(dkd_feature_text) + "</li>";
+        }).join("");
+        dkd_get_element("dkd_payment_status").classList.remove("dkd_show");
+        dkd_get_element("dkd_payment_form").reset();
+        dkd_get_element("dkd_receipt_name").textContent = "";
+        dkd_get_element("dkd_payment_modal").classList.add("dkd_open");
+      };
+
+      const dkd_close_payment_modal = function dkd_close_payment_modal() {
+        dkd_get_element("dkd_payment_modal").classList.remove("dkd_open");
+      };
+
+      const dkd_handle_catalog_click = function dkd_handle_catalog_click(dkd_click_event) {
+        const dkd_button_node = dkd_click_event.target.closest("[data-dkd-package-code]");
+        if (!dkd_button_node) {
+          return;
+        }
+        const dkd_package_code = dkd_button_node.getAttribute("data-dkd-package-code");
+        const dkd_package_item = dkd_package_catalog.find(function dkd_find_package(dkd_catalog_item) {
+          return dkd_catalog_item.dkd_code === dkd_package_code;
+        });
+        if (dkd_package_item) {
+          dkd_open_payment_modal(dkd_package_item);
+        }
+      };
+
+      const dkd_handle_receipt_change = function dkd_handle_receipt_change(dkd_change_event) {
+        const dkd_file_item = dkd_change_event.target.files && dkd_change_event.target.files[0];
+        dkd_get_element("dkd_receipt_name").textContent = dkd_file_item ? "Seçildi: " + dkd_file_item.name : "";
+      };
+
+      const dkd_copy_text = async function dkd_copy_text(dkd_text_value) {
+        try {
+          await navigator.clipboard.writeText(dkd_text_value);
+        } catch (dkd_clipboard_error) {
+          const dkd_helper_input = document.createElement("input");
+          dkd_helper_input.value = dkd_text_value;
+          document.body.appendChild(dkd_helper_input);
+          dkd_helper_input.select();
+          document.execCommand("copy");
+          dkd_helper_input.remove();
+        }
+      };
+
+      const dkd_handle_copy_click = function dkd_handle_copy_click(dkd_click_event) {
+        const dkd_copy_button = dkd_click_event.target.closest("[data-dkd-copy]");
+        if (!dkd_copy_button) {
+          return;
+        }
+        const dkd_copy_type = dkd_copy_button.getAttribute("data-dkd-copy");
+        const dkd_copy_source_map = {
+          iban: "dkd_iban_value",
+          holder: "dkd_holder_value",
+          reference: "dkd_reference_value"
+        };
+        const dkd_source_node = dkd_get_element(dkd_copy_source_map[dkd_copy_type]);
+        if (dkd_source_node) {
+          dkd_copy_text(dkd_source_node.textContent.trim());
+          dkd_copy_button.textContent = "Kopyalandı";
+          window.setTimeout(function dkd_restore_copy_label() {
+            dkd_copy_button.textContent = "Kopyala";
+          }, 1200);
+        }
+      };
+
+      const dkd_build_payment_payload = function dkd_build_payment_payload() {
+        const dkd_receipt_node = dkd_get_element("dkd_receipt_file");
+        const dkd_payload = new FormData();
+        dkd_payload.append("dkd_package_code", dkd_selected_package.dkd_code);
+        dkd_payload.append("dkd_package_title", dkd_selected_package.dkd_title);
+        dkd_payload.append("dkd_price", String(dkd_selected_package.dkd_price));
+        dkd_payload.append("dkd_customer_name", dkd_get_element("dkd_customer_name").value.trim());
+        dkd_payload.append("dkd_customer_contact", dkd_get_element("dkd_customer_contact").value.trim());
+        dkd_payload.append("dkd_customer_message", dkd_get_element("dkd_customer_message").value.trim());
+        dkd_payload.append("dkd_payment_reference", dkd_get_element("dkd_reference_value").textContent.trim());
+        if (dkd_receipt_node.files && dkd_receipt_node.files[0]) {
+          dkd_payload.append("dkd_receipt_file", dkd_receipt_node.files[0]);
+        }
+        return dkd_payload;
+      };
+
+      const dkd_handle_payment_submit = async function dkd_handle_payment_submit(dkd_submit_event) {
+        dkd_submit_event.preventDefault();
+        const dkd_status_node = dkd_get_element("dkd_payment_status");
+        if (!dkd_selected_package) {
+          return;
+        }
+        dkd_status_node.classList.add("dkd_show");
+        dkd_status_node.textContent = "Dekont hazırlanıyor...";
+
+        const dkd_payload = dkd_build_payment_payload();
+        const dkd_webhook_url = String(dkd_payment_config.dkd_webhook_url || "").trim();
+
+        if (dkd_webhook_url) {
+          try {
+            const dkd_response = await fetch(dkd_webhook_url, {
+              method: "POST",
+              body: dkd_payload
+            });
+            if (!dkd_response.ok) {
+              throw new Error("Dekont gönderimi başarısız oldu.");
+            }
+            dkd_status_node.textContent = "Dekont alındı. Onaydan sonra kısa süre içerisinde bilgilendirme yapılacaktır.";
+            dkd_get_element("dkd_payment_form").reset();
+            dkd_get_element("dkd_receipt_name").textContent = "";
+          } catch (dkd_request_error) {
+            dkd_status_node.textContent = "Dekont gönderilemedi. Lütfen daha sonra tekrar dene veya yöneticiye ödeme referansını ilet: " + dkd_get_element("dkd_reference_value").textContent.trim();
+          }
+          return;
         }
 
-        .dkd_anyela_packages_mobile_shell {
-          width: min(44vw, 480px);
-          min-height: auto;
-          border-radius: 38px;
-          border: 1px solid rgba(255, 255, 255, 0.16);
-          box-shadow:
-            0 42px 110px rgba(0, 0, 0, 0.58),
-            0 0 90px rgba(255, 35, 188, 0.25),
-            0 0 120px rgba(24, 247, 255, 0.18);
-        }
+        const dkd_local_order = {
+          dkd_created_at: new Date().toISOString(),
+          dkd_package_code: dkd_selected_package.dkd_code,
+          dkd_package_title: dkd_selected_package.dkd_title,
+          dkd_price: dkd_selected_package.dkd_price,
+          dkd_customer_name: dkd_get_element("dkd_customer_name").value.trim(),
+          dkd_customer_contact: dkd_get_element("dkd_customer_contact").value.trim(),
+          dkd_payment_reference: dkd_get_element("dkd_reference_value").textContent.trim(),
+          dkd_status: "dekont_onayi_bekliyor"
+        };
+        const dkd_existing_orders = JSON.parse(localStorage.getItem("dkd_anyela_local_orders") || "[]");
+        dkd_existing_orders.push(dkd_local_order);
+        localStorage.setItem("dkd_anyela_local_orders", JSON.stringify(dkd_existing_orders));
+        dkd_status_node.innerHTML = "Dekont seçim ekranı tamamlandı. <strong>Dekont onayından sonra kısa süre içerisinde onaylanacaktır.</strong><br>Gerçek dosya kaydı için dkd_anyela_config.js içinde güvenli webhook/Supabase adresi eklenmelidir.";
+      };
 
-        .dkd_anyela_packages_mockup {
-          min-height: auto;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <main class="dkd_anyela_packages_page" aria-label="Anyela Born Club Packages sayfası">
-      <section class="dkd_anyela_packages_mobile_shell" id="dkd_anyela_packages_root">
-        <img
-          class="dkd_anyela_packages_mockup"
-          src="../assets/dkd_anyela_packages_9970_20260530.png"
-          alt="Anyela Born Club Miami Style Club paketler mobil sayfası"
-          width="864"
-          height="1536"
-          loading="eager"
-        />
+      const dkd_bind_events = function dkd_bind_events() {
+        dkd_get_element("dkd_package_catalog").addEventListener("click", dkd_handle_catalog_click);
+        dkd_get_element("dkd_close_modal").addEventListener("click", dkd_close_payment_modal);
+        dkd_get_element("dkd_payment_modal").addEventListener("click", function dkd_handle_modal_background(dkd_click_event) {
+          if (dkd_click_event.target === dkd_get_element("dkd_payment_modal")) {
+            dkd_close_payment_modal();
+          }
+        });
+        document.addEventListener("keydown", function dkd_handle_keydown(dkd_key_event) {
+          if (dkd_key_event.key === "Escape") {
+            dkd_close_payment_modal();
+          }
+        });
+        ["dkd_offer_minutes", "dkd_offer_voice_count", "dkd_offer_video_count", "dkd_offer_visual_count", "dkd_offer_priority", "dkd_offer_category"].forEach(function dkd_bind_offer_field(dkd_field_id) {
+          dkd_get_element(dkd_field_id).addEventListener("change", dkd_calculate_custom_offer);
+        });
+        dkd_get_element("dkd_open_custom_payment").addEventListener("click", function dkd_handle_custom_payment() {
+          dkd_open_payment_modal(dkd_calculate_custom_offer());
+        });
+        dkd_get_element("dkd_receipt_file").addEventListener("change", dkd_handle_receipt_change);
+        dkd_get_element("dkd_payment_form").addEventListener("submit", dkd_handle_payment_submit);
+        dkd_get_element("dkd_payment_modal").addEventListener("click", dkd_handle_copy_click);
+      };
 
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_back" href="../Login/" aria-label="Login sayfasına dön"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_mini_chat" href="../Login/?dkd_anyela_package=mini-sohbet" aria-label="Mini Sohbet Paketi seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_voice" href="../Login/?dkd_anyela_package=sesli-mesaj" aria-label="Sesli Mesaj Paketi seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_vip" href="../Login/?dkd_anyela_package=vip-ozel-icerik" aria-label="VIP Özel İçerik seç"></a>
-        <a class="dkd_anyela_packages_hotspot dkd_anyela_packages_full" href="../Login/?dkd_anyela_package=full-premium" aria-label="Full Premium Paket seç"></a>
-
-        <section class="dkd_anyela_packages_screen_reader" aria-label="Sayfa özeti">
-          <h1>Anyela Born Club Paketler</h1>
-          <p>Mini Sohbet Paketi, Sesli Mesaj Paketi, VIP Özel İçerik ve Full Premium Paket seçenekleri.</p>
-        </section>
-      </section>
-    </main>
-  </body>
+      dkd_render_packages();
+      dkd_calculate_custom_offer();
+      dkd_bind_events();
+    })();
+  </script>
+</body>
 </html>
