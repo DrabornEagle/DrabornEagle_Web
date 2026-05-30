@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050014" />
+  <link rel="stylesheet" href="dkd_anyela_styles.css" />
+  <meta name="description" content="Sesli Mesaj Paketi detay, ödeme ve dekont ekranı." />
+  <title>Anyela Born | Sesli Mesaj Paketi</title>
+</head>
+<body>
+  <main class="dkd_page" aria-label="Sesli Mesaj Paketi">
+    <nav class="dkd_nav_bar" aria-label="Sayfa menüsü">
+      <a class="dkd_back_link" href="index.html">‹ Paketlere Dön</a>
+      <span><strong>Voice premium</strong> — ayrı paket ekranı</span>
+    </nav>
+
+    <section class="dkd_detail_hero">
+      <div class="dkd_panel dkd_hero_card">
+        <span class="dkd_badge">🎙️ Voice premium</span>
+        <h1>Sesli Mesaj Paketi</h1>
+        <p>Yazışmak yerine Anyela’dan sesli cevap almak isteyenler için hazırlanmış premium sesli deneyim ekranıdır.</p>
+        <div class="dkd_hero_meta">
+          <div class="dkd_meta_box"><span>Ücret</span><strong>999 TL</strong></div>
+          <div class="dkd_meta_box"><span>Süre</span><strong>30 dk</strong></div>
+          <div class="dkd_meta_box"><span>İçerik</span><strong>30 dk sesli mesaj deneyimi + 5 sesli cevap</strong></div>
+          <div class="dkd_meta_box"><span>Onay</span><strong>Kısa süre içinde</strong></div>
+        </div>
+        <div class="dkd_cta_row">
+          <a class="dkd_btn" href="#dkd_payment_panel">Ödeme ve Dekont Alanına Git</a>
+          <a class="dkd_btn dkd_btn_secondary" href="teklif-olustur.html">Özel Teklif Oluştur</a>
+        </div>
+      </div>
+      <aside class="dkd_panel dkd_mini_preview">
+        <img src="anyela-born-packages-original.jpg" width="864" height="1536" alt="Anyela Born paket görseli" loading="lazy" />
+      </aside>
+    </section>
+
+    <section class="dkd_content_grid">
+      <section class="dkd_panel">
+        <div class="dkd_detail_body">
+          <div class="dkd_section_title">
+            <div>
+              <span class="dkd_badge">✨ Paket Detayı</span>
+              <h2>Neler dahil?</h2>
+            </div>
+          </div>
+          <p>Özel sesli mesajlar, daha yakın ve premium iletişim.</p>
+          <ul class="dkd_feature_list"><li>30 dakika sesli mesajlaşma akışı</li><li>5 adet kişiye özel Anyela sesli cevabı</li><li>Kullanıcı sesli mesaj veya yazılı not gönderebilir</li><li>Sesli cevaplar chat odasında dinlenebilir</li></ul>
+          <div class="dkd_info_note" style="margin-top: 14px;">
+            <strong>Önemli:</strong> Ödemeyi yaptıktan sonra dekontunu bu ekrandan seç. Dekont onayından sonra kısa süre içerisinde onaylanacaktır ve paket süreci başlatılacaktır.
+          </div>
+        </div>
+      </section>
+      <section class="dkd_panel dkd_payment_panel" id="dkd_payment_panel" aria-label="Ödeme ve dekont yükleme ekranı">
+        <div class="dkd_panel_inner">
+          <div class="dkd_section_title">
+            <div>
+              <span class="dkd_badge">💳 Ödeme Bilgileri</span>
+              <h2>Ödeme & Dekont</h2>
+            </div>
+          </div>
+
+          <div class="dkd_summary_box">
+            <div class="dkd_summary_line"><span>Seçim</span><strong id="dkd_order_name">Sesli Mesaj Paketi</strong></div>
+            <div class="dkd_summary_line"><span>Detay</span><strong id="dkd_order_detail">30 dk sesli mesaj deneyimi + 5 sesli cevap</strong></div>
+            <div class="dkd_summary_line"><span>Ödenecek tutar</span><strong id="dkd_order_amount">999 TL</strong></div>
+          </div>
+
+          <div class="dkd_iban_box" style="margin-top: 12px;">
+            <div class="dkd_iban_value">
+              <small>IBAN</small>
+              <span id="dkd_iban_text">TR53 0011 1000 0000 0151 1527 14</span>
+            </div>
+            <div class="dkd_iban_value">
+              <small>Ad Soyad</small>
+              <span>Doğancan Kartal</span>
+            </div>
+            <button class="dkd_btn" type="button" id="dkd_copy_iban_btn">IBAN Kopyala</button>
+          </div>
+
+          <div class="dkd_form_grid" style="margin-top: 12px;">
+            <div class="dkd_field">
+              <label for="dkd_customer_name">Ad Soyad</label>
+              <input id="dkd_customer_name" type="text" autocomplete="name" placeholder="Ad Soyad" />
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_customer_contact">Telefon / E-posta</label>
+              <input id="dkd_customer_contact" type="text" autocomplete="email" placeholder="Telefon veya e-posta" />
+            </div>
+            <div class="dkd_field dkd_full_width">
+              <label for="dkd_customer_note">Ödeme açıklaması</label>
+              <input id="dkd_customer_note" type="text" value="ANYELA - Ad Soyad - Sesli Mesaj Paketi" data-dkd-package-name="Sesli Mesaj Paketi" />
+            </div>
+          </div>
+
+          <label class="dkd_upload_box" style="margin-top: 12px;" for="dkd_receipt_file">
+            <input id="dkd_receipt_file" type="file" accept="image/*,.pdf" />
+            <strong>📎 Dekont Yükle</strong>
+            <span id="dkd_receipt_status">JPG, PNG veya PDF dekont seç. Dekont onayından sonra kısa süre içerisinde onaylanacaktır.</span>
+          </label>
+
+          <div class="dkd_info_note" style="margin-top: 12px;">
+            <strong>Bilgilendirme:</strong> Dekont onayından sonra kısa süre içerisinde onaylanacaktır. Onay sonrası seçilen paket için özel sohbet/teslimat süreci başlatılır.
+          </div>
+
+          <div class="dkd_cta_row">
+            <button class="dkd_btn" type="button" id="dkd_submit_receipt_btn">Dekontu Onaya Gönder</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="dkd_disclaimer" aria-label="Kullanım notu">
+      Anyela Born dijital karakter deneyimidir. İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır. Özel görsel/video taleplerinde telifli marka, üçüncü kişi veya uygunsuz içerik birebir kopyalanmaz; benzer tarz ve konsept üzerinden ilerlenir.
+    </section>
+  </main>
+  <div class="dkd_toast" id="dkd_toast" role="status" aria-live="polite"></div>
+  <script src="dkd_anyela_common.js"></script>
+</body>
+</html>

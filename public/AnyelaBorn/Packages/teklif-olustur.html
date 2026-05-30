@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#050014" />
+  <link rel="stylesheet" href="dkd_anyela_styles.css" />
+  <meta name="description" content="Anyela Born özel teklif oluşturma, otomatik ücret hesaplama, ödeme ve dekont ekranı." />
+  <title>Anyela Born | Teklif Oluştur</title>
+</head>
+<body>
+  <main class="dkd_page" aria-label="Anyela Born teklif oluştur">
+    <nav class="dkd_nav_bar" aria-label="Sayfa menüsü">
+      <a class="dkd_back_link" href="index.html">‹ Paketlere Dön</a>
+      <span><strong>Teklif Oluştur</strong> — süre, ses, video ve görsel seç</span>
+    </nav>
+
+    <section class="dkd_offer_grid">
+      <section class="dkd_panel">
+        <div class="dkd_panel_inner">
+          <div class="dkd_section_title">
+            <div>
+              <span class="dkd_badge">🌴 Miami özel teklif</span>
+              <h1>Teklif Oluştur</h1>
+            </div>
+          </div>
+          <p style="color: var(--dkd_soft); line-height: 1.55; margin-top: -4px;">Dakika, sesli mesaj, video mesaj ve özel görsel adetlerini seç. Sistem tahmini ücreti otomatik hesaplar; dekont onayından sonra kısa süre içerisinde onaylanacaktır.</p>
+
+          <form class="dkd_form_grid" id="dkd_offer_form" onsubmit="return false;">
+            <div class="dkd_field">
+              <label for="dkd_offer_minutes">Yazılı sohbet dakikası</label>
+              <select id="dkd_offer_minutes">
+                <option value="0">İstemiyorum</option>
+                <option value="15">15 dakika</option>
+                <option value="30" selected>30 dakika</option>
+                <option value="45">45 dakika</option>
+                <option value="60">60 dakika</option>
+                <option value="90">90 dakika</option>
+                <option value="120">120 dakika</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_voice_count">Sesli mesaj cevabı</label>
+              <select id="dkd_offer_voice_count">
+                <option value="0">İstemiyorum</option>
+                <option value="1">1 adet</option>
+                <option value="3">3 adet</option>
+                <option value="5" selected>5 adet</option>
+                <option value="10">10 adet</option>
+                <option value="15">15 adet</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_video_count">Video mesaj adeti</label>
+              <select id="dkd_offer_video_count">
+                <option value="0" selected>İstemiyorum</option>
+                <option value="1">1 kısa video</option>
+                <option value="2">2 kısa video</option>
+                <option value="3">3 kısa video</option>
+                <option value="5">5 kısa video</option>
+              </select>
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_offer_photo_count">Özel görsel adeti</label>
+              <select id="dkd_offer_photo_count">
+                <option value="0">İstemiyorum</option>
+                <option value="2">2 görsel</option>
+                <option value="5" selected>5 görsel</option>
+                <option value="10">10 görsel</option>
+                <option value="15">15 görsel</option>
+              </select>
+            </div>
+            <div class="dkd_field dkd_full_width">
+              <label for="dkd_offer_priority">Teslim önceliği</label>
+              <select id="dkd_offer_priority">
+                <option value="0" selected>Normal onay / normal sıra</option>
+                <option value="250">Hızlı değerlendirme +250 TL</option>
+                <option value="600">VIP öncelik +600 TL</option>
+              </select>
+            </div>
+            <div class="dkd_field dkd_full_width">
+              <label for="dkd_offer_note">Özel istek notu</label>
+              <textarea id="dkd_offer_note" placeholder="Örn: Miami temalı, pembe/mavi neon renkler, 30 dk sohbet, 5 sesli cevap, 1 video mesaj..."></textarea>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <aside class="dkd_panel dkd_payment_panel">
+        <div class="dkd_panel_inner">
+          <div class="dkd_offer_total">
+            <span>Tahmini özel teklif ücreti</span>
+            <strong id="dkd_offer_total_text">0 TL</strong>
+            <div class="dkd_breakdown">
+              <div class="dkd_breakdown_item"><span>Başlangıç</span><strong id="dkd_breakdown_base">0 TL</strong></div>
+              <div class="dkd_breakdown_item"><span>Sohbet dakikası</span><strong id="dkd_breakdown_minutes">0 TL</strong></div>
+              <div class="dkd_breakdown_item"><span>Sesli mesaj</span><strong id="dkd_breakdown_voice">0 TL</strong></div>
+              <div class="dkd_breakdown_item"><span>Video mesaj</span><strong id="dkd_breakdown_video">0 TL</strong></div>
+              <div class="dkd_breakdown_item"><span>Özel görsel</span><strong id="dkd_breakdown_photo">0 TL</strong></div>
+              <div class="dkd_breakdown_item"><span>Öncelik</span><strong id="dkd_breakdown_priority">0 TL</strong></div>
+            </div>
+          </div>
+          <div class="dkd_cta_row">
+            <button class="dkd_btn" type="button" id="dkd_prepare_offer_payment_btn">Ödeme Ekranını Hazırla</button>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="dkd_content_grid" style="margin-top: 18px;">
+      <section class="dkd_panel">
+        <div class="dkd_detail_body">
+          <div class="dkd_section_title">
+            <div>
+              <span class="dkd_badge">✨ Teklif Bilgisi</span>
+              <h2>Nasıl çalışır?</h2>
+            </div>
+          </div>
+          <ul class="dkd_feature_list">
+            <li>Seçtiğin dakika, sesli cevap, video ve görsel adedine göre fiyat otomatik hesaplanır.</li>
+            <li>Ödeme açıklamasına ANYELA - Ad Soyad - Özel Teklif yazılır.</li>
+            <li>Dekont onayından sonra kısa süre içerisinde onaylanacaktır.</li>
+            <li>Özel istekler uygunluk kontrolünden sonra teslim sürecine alınır.</li>
+          </ul>
+        </div>
+      </section>
+      <section class="dkd_panel dkd_payment_panel" id="dkd_payment_panel" aria-label="Ödeme ve dekont yükleme ekranı">
+        <div class="dkd_panel_inner">
+          <div class="dkd_section_title">
+            <div>
+              <span class="dkd_badge">💳 Ödeme Bilgileri</span>
+              <h2>Ödeme & Dekont</h2>
+            </div>
+          </div>
+
+          <div class="dkd_summary_box">
+            <div class="dkd_summary_line"><span>Seçim</span><strong id="dkd_order_name">Özel Teklif</strong></div>
+            <div class="dkd_summary_line"><span>Detay</span><strong id="dkd_order_detail">30 dk sohbet + 5 sesli cevap + 0 video mesaj + 5 özel görsel</strong></div>
+            <div class="dkd_summary_line"><span>Ödenecek tutar</span><strong id="dkd_order_amount">0 TL</strong></div>
+          </div>
+
+          <div class="dkd_iban_box" style="margin-top: 12px;">
+            <div class="dkd_iban_value">
+              <small>IBAN</small>
+              <span id="dkd_iban_text">TR53 0011 1000 0000 0151 1527 14</span>
+            </div>
+            <div class="dkd_iban_value">
+              <small>Ad Soyad</small>
+              <span>Doğancan Kartal</span>
+            </div>
+            <button class="dkd_btn" type="button" id="dkd_copy_iban_btn">IBAN Kopyala</button>
+          </div>
+
+          <div class="dkd_form_grid" style="margin-top: 12px;">
+            <div class="dkd_field">
+              <label for="dkd_customer_name">Ad Soyad</label>
+              <input id="dkd_customer_name" type="text" autocomplete="name" placeholder="Ad Soyad" />
+            </div>
+            <div class="dkd_field">
+              <label for="dkd_customer_contact">Telefon / E-posta</label>
+              <input id="dkd_customer_contact" type="text" autocomplete="email" placeholder="Telefon veya e-posta" />
+            </div>
+            <div class="dkd_field dkd_full_width">
+              <label for="dkd_customer_note">Ödeme açıklaması</label>
+              <input id="dkd_customer_note" type="text" value="ANYELA - Ad Soyad - Özel Teklif" data-dkd-package-name="Özel Teklif" />
+            </div>
+          </div>
+
+          <label class="dkd_upload_box" style="margin-top: 12px;" for="dkd_receipt_file">
+            <input id="dkd_receipt_file" type="file" accept="image/*,.pdf" />
+            <strong>📎 Dekont Yükle</strong>
+            <span id="dkd_receipt_status">JPG, PNG veya PDF dekont seç. Dekont onayından sonra kısa süre içerisinde onaylanacaktır.</span>
+          </label>
+
+          <div class="dkd_info_note" style="margin-top: 12px;">
+            <strong>Bilgilendirme:</strong> Dekont onayından sonra kısa süre içerisinde onaylanacaktır. Onay sonrası seçilen paket için özel sohbet/teslimat süreci başlatılır.
+          </div>
+
+          <div class="dkd_cta_row">
+            <button class="dkd_btn" type="button" id="dkd_submit_receipt_btn">Dekontu Onaya Gönder</button>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="dkd_disclaimer" aria-label="Kullanım notu">
+      Anyela Born dijital karakter deneyimidir. İçerikler eğlence, sosyal etkileşim ve yaratıcı konsept üretimi amaçlıdır. Özel görsel/video taleplerinde telifli marka, üçüncü kişi veya uygunsuz içerik birebir kopyalanmaz; benzer tarz ve konsept üzerinden ilerlenir.
+    </section>
+  </main>
+  <div class="dkd_toast" id="dkd_toast" role="status" aria-live="polite"></div>
+  <script src="dkd_anyela_common.js"></script>
+</body>
+</html>
