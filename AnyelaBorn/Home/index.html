@@ -24,9 +24,7 @@
         color-scheme: dark;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       html,
       body {
@@ -40,9 +38,7 @@
       }
 
       a,
-      button {
-        -webkit-tap-highlight-color: transparent;
-      }
+      button { -webkit-tap-highlight-color: transparent; }
 
       .dkd_anyela_home_page {
         width: 100%;
@@ -78,15 +74,18 @@
       .dkd_anyela_home_hotspot {
         position: absolute;
         z-index: 20;
-        left: 3.8%;
-        width: 92.4%;
-        height: 11.25%;
         display: block;
-        border-radius: 34px;
         outline: none;
         text-decoration: none;
         cursor: pointer;
         background: rgba(255, 255, 255, 0.001);
+      }
+
+      .dkd_anyela_home_button_hotspot {
+        left: 3.8%;
+        width: 92.4%;
+        height: 11.25%;
+        border-radius: 34px;
       }
 
       .dkd_anyela_home_hotspot:focus-visible {
@@ -96,22 +95,18 @@
           0 0 34px rgba(24, 247, 255, 0.72);
       }
 
-      .dkd_anyela_home_hotspot_profile {
-        top: 47.15%;
+      .dkd_anyela_home_hotspot_diamond {
+        top: 2.2%;
+        right: 3.3%;
+        width: 15.6%;
+        height: 8.2%;
+        border-radius: 999px;
       }
 
-      .dkd_anyela_home_hotspot_chat {
-        top: 59.42%;
-      }
-
-      .dkd_anyela_home_hotspot_packages {
-        top: 71.78%;
-      }
-
-      .dkd_anyela_home_hotspot_brand {
-        top: 84.16%;
-        height: 11.18%;
-      }
+      .dkd_anyela_home_hotspot_profile { top: 47.15%; }
+      .dkd_anyela_home_hotspot_chat { top: 59.42%; }
+      .dkd_anyela_home_hotspot_packages { top: 71.78%; }
+      .dkd_anyela_home_hotspot_brand { top: 84.16%; height: 11.18%; }
 
       .dkd_anyela_home_screen_reader {
         position: absolute;
@@ -126,21 +121,14 @@
       }
 
       @media (min-width: 820px) {
-        .dkd_anyela_home_page {
-          align-items: center;
-          padding: 32px 0;
-        }
-
+        .dkd_anyela_home_page { align-items: center; padding: 32px 0; }
         .dkd_anyela_home_shell {
           width: min(44vw, 480px);
           min-height: auto;
           border-radius: 38px;
           border: 1px solid rgba(255, 255, 255, 0.16);
         }
-
-        .dkd_anyela_home_reference {
-          min-height: auto;
-        }
+        .dkd_anyela_home_reference { min-height: auto; }
       }
     </style>
     <script src="../assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="protected"></script>
@@ -159,25 +147,31 @@
         />
 
         <a
-          class="dkd_anyela_home_hotspot dkd_anyela_home_hotspot_profile"
+          class="dkd_anyela_home_hotspot dkd_anyela_home_hotspot_diamond"
+          href="../Packages/"
+          aria-label="Sağ üst elmas ikonundan Paketler sayfasını aç"
+        ></a>
+
+        <a
+          class="dkd_anyela_home_hotspot dkd_anyela_home_button_hotspot dkd_anyela_home_hotspot_profile"
           href="../Profile/"
           aria-label="Profilim ekranını aç"
         ></a>
 
         <a
-          class="dkd_anyela_home_hotspot dkd_anyela_home_hotspot_chat"
+          class="dkd_anyela_home_hotspot dkd_anyela_home_button_hotspot dkd_anyela_home_hotspot_chat"
           href="../ChatRoom/"
           aria-label="Sohbet Odası ekranını aç"
         ></a>
 
         <a
-          class="dkd_anyela_home_hotspot dkd_anyela_home_hotspot_packages"
+          class="dkd_anyela_home_hotspot dkd_anyela_home_button_hotspot dkd_anyela_home_hotspot_packages"
           href="../Packages/"
           aria-label="Paketler sayfasını aç"
         ></a>
 
         <a
-          class="dkd_anyela_home_hotspot dkd_anyela_home_hotspot_brand"
+          class="dkd_anyela_home_hotspot dkd_anyela_home_button_hotspot dkd_anyela_home_hotspot_brand"
           href="#markan-icin-anyela-yakinda"
           aria-label="Markan için Anyela alanı yakında aktif olacak"
           data-dkd-anyela-brand-disabled="true"
@@ -185,7 +179,7 @@
 
         <section class="dkd_anyela_home_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Miami Style Club</h1>
-          <p>Profilim, Sohbet Odası ve Paketler butonları aktiftir. Markan için Anyela alanı şimdilik pasiftir.</p>
+          <p>Profilim, Sohbet Odası, Paketler ve sağ üst elmas ikonundan Paketler sayfasına giriş aktiftir.</p>
         </section>
       </section>
     </main>
