@@ -243,6 +243,20 @@
         border-color: rgba(24, 247, 255, 0.45);
       }
 
+      .dkd_anyela_profile_readonly {
+        cursor: default;
+        color: rgba(255, 255, 255, 0.92);
+        background:
+          linear-gradient(135deg, rgba(255, 43, 214, 0.11), rgba(24, 247, 255, 0.09)),
+          rgba(6, 0, 27, 0.72);
+      }
+
+      .dkd_anyela_profile_admin_note {
+        color: rgba(255, 255, 255, 0.62);
+        font-size: 11px;
+        line-height: 1.42;
+      }
+
       .dkd_anyela_profile_progress {
         height: 13px;
         overflow: hidden;
@@ -339,13 +353,8 @@
             <div class="dkd_anyela_profile_avatar" aria-hidden="true">AB</div>
             <div>
               <h2 class="dkd_anyela_profile_name">Anyela Born</h2>
-              <p class="dkd_anyela_profile_status">Miami Vibes üyesi · Profil kontrol merkezi</p>
+              <p class="dkd_anyela_profile_status">Anyela Born Hayranı</p>
             </div>
-          </div>
-          <div class="dkd_anyela_profile_badges" aria-label="Profil rozetleri">
-            <span class="dkd_anyela_profile_badge">Premium görünüm</span>
-            <span class="dkd_anyela_profile_badge">Miami tema</span>
-            <span class="dkd_anyela_profile_badge">Sohbet hazır</span>
           </div>
         </section>
 
@@ -376,15 +385,24 @@
             </label>
             <label class="dkd_anyela_profile_field">
               <span class="dkd_anyela_profile_label">E-posta</span>
-              <input class="dkd_anyela_profile_input" placeholder="mail adresini ekle" aria-label="E-posta" />
+              <input
+                class="dkd_anyela_profile_input dkd_anyela_profile_readonly"
+                id="dkd_anyela_profile_account_email"
+                value="Açılan hesap e-postası"
+                aria-label="E-posta"
+                readonly
+              />
             </label>
             <label class="dkd_anyela_profile_field">
               <span class="dkd_anyela_profile_label">Üyelik tipi</span>
-              <select class="dkd_anyela_profile_select" aria-label="Üyelik tipi">
-                <option>Miami Free</option>
-                <option>Miami VIP</option>
-                <option>Anyela Full Paket</option>
-              </select>
+              <input
+                class="dkd_anyela_profile_input dkd_anyela_profile_readonly"
+                id="dkd_anyela_profile_membership_type"
+                value="Admin tarafından belirlenecek"
+                aria-label="Üyelik tipi"
+                readonly
+              />
+              <span class="dkd_anyela_profile_admin_note">Üyelik tipi kullanıcı tarafından değiştirilemez. Admin panelinden yazılan değer burada gösterilir.</span>
             </label>
           </div>
         </section>
@@ -438,5 +456,46 @@
         </section>
       </section>
     </main>
+
+    <script>
+      (function dkdAnyelaProfileHydrateReadonlyFields() {
+        "use strict";
+
+        const dkdAnyelaProfileEmailInput = document.getElementById("dkd_anyela_profile_account_email");
+        const dkdAnyelaProfileMembershipInput = document.getElementById("dkd_anyela_profile_membership_type");
+        const dkdAnyelaProfileEmailKeys = [
+          "dkd_anyela_account_email",
+          "dkd_anyela_user_email",
+          "anyela_account_email",
+          "anyela_user_email"
+        ];
+        const dkdAnyelaProfileMembershipKeys = [
+          "dkd_anyela_admin_membership_type",
+          "dkd_anyela_membership_type",
+          "anyela_membership_type"
+        ];
+
+        function dkdAnyelaProfileReadStoredValue(dkdAnyelaProfileKeys) {
+          for (const dkdAnyelaProfileKey of dkdAnyelaProfileKeys) {
+            const dkdAnyelaProfileStoredValue = window.localStorage.getItem(dkdAnyelaProfileKey);
+            if (dkdAnyelaProfileStoredValue && dkdAnyelaProfileStoredValue.trim().length > 0) {
+              return dkdAnyelaProfileStoredValue.trim();
+            }
+          }
+
+          return "";
+        }
+
+        const dkdAnyelaProfileStoredEmail = dkdAnyelaProfileReadStoredValue(dkdAnyelaProfileEmailKeys);
+        if (dkdAnyelaProfileEmailInput && dkdAnyelaProfileStoredEmail) {
+          dkdAnyelaProfileEmailInput.value = dkdAnyelaProfileStoredEmail;
+        }
+
+        const dkdAnyelaProfileStoredMembership = dkdAnyelaProfileReadStoredValue(dkdAnyelaProfileMembershipKeys);
+        if (dkdAnyelaProfileMembershipInput && dkdAnyelaProfileStoredMembership) {
+          dkdAnyelaProfileMembershipInput.value = dkdAnyelaProfileStoredMembership;
+        }
+      })();
+    </script>
   </body>
 </html>
