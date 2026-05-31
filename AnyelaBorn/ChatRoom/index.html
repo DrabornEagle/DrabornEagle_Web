@@ -1,58 +1,383 @@
 <!doctype html>
 <html lang="tr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="theme-color" content="#070024" />
-  <meta name="description" content="Anyela Born Miami temalı medya destekli sohbet odası." />
-  <title>Anyela Born | Sohbet Odası</title>
-  <style>
-    :root{--dkd_anyela_chat_bg:#070024;--dkd_anyela_chat_panel:rgba(14,2,55,.80);--dkd_anyela_chat_soft:rgba(255,255,255,.085);--dkd_anyela_chat_pink:#ff2bd6;--dkd_anyela_chat_cyan:#18f7ff;--dkd_anyela_chat_gold:#ffd05f;--dkd_anyela_chat_text:#fff;--dkd_anyela_chat_muted:rgba(255,255,255,.74);color-scheme:dark}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 12% 0%,rgba(255,43,214,.27),transparent 26rem),radial-gradient(circle at 90% 10%,rgba(24,247,255,.20),transparent 27rem),linear-gradient(180deg,#09002d 0%,#030011 100%);color:var(--dkd_anyela_chat_text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a,button,input{-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button,input{font:inherit}button{border:0;cursor:pointer}.dkd_anyela_chat_page{min-height:100svh;display:flex;justify-content:center;padding:max(0px,env(safe-area-inset-top)) 0 max(0px,env(safe-area-inset-bottom))}.dkd_anyela_chat_shell{width:min(100vw,480px);min-height:100svh;padding:18px 16px 26px;background:linear-gradient(180deg,rgba(24,247,255,.1),transparent 28%),var(--dkd_anyela_chat_bg);box-shadow:0 28px 90px rgba(0,0,0,.58);overflow:hidden}.dkd_anyela_chat_topbar{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;margin-bottom:16px}.dkd_anyela_chat_icon_button{width:46px;height:46px;display:grid;place-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:#fff;box-shadow:0 0 24px rgba(24,247,255,.2);font-size:26px}.dkd_anyela_chat_brand{display:flex;align-items:center;justify-content:center;gap:10px;min-width:0}.dkd_anyela_chat_avatar{width:50px;height:50px;flex:0 0 auto;border-radius:18px;padding:2px;background:linear-gradient(135deg,var(--dkd_anyela_chat_pink),var(--dkd_anyela_chat_cyan),var(--dkd_anyela_chat_gold));box-shadow:0 0 30px rgba(255,43,214,.32);animation:dkd_anyela_chat_float 3.8s ease-in-out infinite}.dkd_anyela_chat_avatar img{width:100%;height:100%;display:block;border-radius:16px;object-fit:cover;background:rgba(255,255,255,.08)}.dkd_anyela_chat_title_group{min-width:0}.dkd_anyela_chat_kicker{margin:0 0 2px;color:var(--dkd_anyela_chat_pink);font-size:10px;font-weight:900;letter-spacing:.18em;text-transform:uppercase}.dkd_anyela_chat_title{margin:0;font-size:24px;line-height:1.04;text-shadow:0 0 24px rgba(24,247,255,.52);white-space:nowrap}.dkd_anyela_chat_hero,.dkd_anyela_chat_section{border:1px solid rgba(255,255,255,.14);box-shadow:0 18px 54px rgba(0,0,0,.34),inset 0 0 32px rgba(255,255,255,.04)}.dkd_anyela_chat_hero{padding:20px;border-radius:30px;background:radial-gradient(circle at 16% 16%,rgba(24,247,255,.28),transparent 14rem),radial-gradient(circle at 86% 22%,rgba(255,43,214,.34),transparent 14rem),linear-gradient(145deg,rgba(22,4,75,.96),rgba(12,39,92,.76))}.dkd_anyela_chat_live_row{display:flex;align-items:center;justify-content:space-between;gap:12px}.dkd_anyela_chat_live_badge{display:inline-flex;align-items:center;gap:8px;padding:8px 11px;border-radius:999px;background:rgba(24,247,255,.12);color:var(--dkd_anyela_chat_cyan);border:1px solid rgba(24,247,255,.26);font-size:12px;font-weight:950}.dkd_anyela_chat_live_dot{width:8px;height:8px;border-radius:999px;background:var(--dkd_anyela_chat_cyan);box-shadow:0 0 16px var(--dkd_anyela_chat_cyan)}.dkd_anyela_chat_hero_title{margin:14px 0 7px;font-size:27px;line-height:1.08}.dkd_anyela_chat_hero_text,.dkd_anyela_chat_section_hint{margin:0;color:var(--dkd_anyela_chat_muted);line-height:1.5;font-size:13px}.dkd_anyela_chat_tabs{display:flex;gap:9px;margin:16px 0;overflow-x:auto;scrollbar-width:none}.dkd_anyela_chat_tabs::-webkit-scrollbar{display:none}.dkd_anyela_chat_tab{flex:0 0 auto;padding:11px 13px;border-radius:999px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.82);border:1px solid rgba(255,255,255,.12);font-size:13px;font-weight:900}.dkd_anyela_chat_tab_active{color:#fff;background:linear-gradient(135deg,rgba(255,43,214,.78),rgba(24,247,255,.46));box-shadow:0 0 24px rgba(255,43,214,.24)}.dkd_anyela_chat_section{margin-top:16px;padding:18px;border-radius:26px;background:var(--dkd_anyela_chat_panel)}.dkd_anyela_chat_section_title{margin:0 0 5px;font-size:19px}.dkd_anyela_chat_room_grid,.dkd_anyela_chat_window,.dkd_anyela_chat_media_grid,.dkd_anyela_chat_rules{display:grid;gap:10px}.dkd_anyela_chat_room{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;padding:13px;border-radius:20px;background:var(--dkd_anyela_chat_soft);border:1px solid rgba(255,255,255,.1)}.dkd_anyela_chat_room_icon{width:46px;height:46px;display:grid;place-items:center;border-radius:17px;background:rgba(255,43,214,.18);box-shadow:0 0 24px rgba(255,43,214,.22)}.dkd_anyela_chat_room_title{margin:0;font-size:15px}.dkd_anyela_chat_room_text{margin:3px 0 0;color:var(--dkd_anyela_chat_muted);font-size:12px;line-height:1.35}.dkd_anyela_chat_room_count{color:var(--dkd_anyela_chat_cyan);font-weight:950;font-size:12px}.dkd_anyela_chat_bubble{max-width:86%;padding:12px 13px;border-radius:20px;line-height:1.45;font-size:14px;border:1px solid rgba(255,255,255,.12)}.dkd_anyela_chat_bubble_anyela{justify-self:start;background:rgba(255,43,214,.15)}.dkd_anyela_chat_bubble_member{justify-self:end;background:rgba(24,247,255,.14)}.dkd_anyela_chat_bubble strong{display:block;margin-bottom:4px;color:#fff}.dkd_anyela_chat_composer{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:13px}.dkd_anyela_chat_input{width:100%;min-height:48px;border:1px solid rgba(255,255,255,.15);outline:none;border-radius:18px;background:rgba(6,0,27,.72);color:#fff;padding:12px 13px}.dkd_anyela_chat_send,.dkd_anyela_chat_media_button{color:#fff;font-weight:950;background:linear-gradient(135deg,var(--dkd_anyela_chat_pink),var(--dkd_anyela_chat_cyan));box-shadow:0 0 24px rgba(24,247,255,.24)}.dkd_anyela_chat_send{min-width:56px;border-radius:18px}.dkd_anyela_chat_media_grid{grid-template-columns:repeat(3,1fr);margin-top:12px}.dkd_anyela_chat_media_button{min-height:84px;border-radius:22px;padding:10px 8px;display:grid;place-items:center;gap:6px;position:relative;overflow:hidden;isolation:isolate}.dkd_anyela_chat_media_button:before{content:"";position:absolute;inset:-50%;background:conic-gradient(from 120deg,transparent,rgba(255,255,255,.22),transparent);animation:dkd_anyela_chat_spin 4.5s linear infinite;z-index:-1}.dkd_anyela_chat_media_button span{font-size:25px}.dkd_anyela_chat_media_button small{font-size:11px;line-height:1.15}.dkd_anyela_chat_recording{margin-top:10px;padding:12px 13px;border-radius:20px;background:rgba(255,43,214,.13);border:1px solid rgba(255,43,214,.25);color:#fff;font-size:12px;display:none}.dkd_anyela_chat_recording_active{display:block;animation:dkd_anyela_chat_pulse 1.2s ease-in-out infinite}.dkd_anyela_chat_rule{padding:12px 13px;border-radius:18px;background:rgba(255,255,255,.08);color:rgba(255,255,255,.84);border:1px solid rgba(255,255,255,.1);font-size:13px;line-height:1.45}@keyframes dkd_anyela_chat_float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}@keyframes dkd_anyela_chat_spin{to{transform:rotate(360deg)}}@keyframes dkd_anyela_chat_pulse{0%,100%{box-shadow:0 0 0 rgba(255,43,214,0)}50%{box-shadow:0 0 26px rgba(255,43,214,.3)}}@media (min-width:820px){.dkd_anyela_chat_page{align-items:center;padding:32px 0}.dkd_anyela_chat_shell{min-height:auto;border-radius:38px;border:1px solid rgba(255,255,255,.14)}}
-  </style>
-  <script src="../assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="protected"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-</head>
-<body>
-  <main class="dkd_anyela_chat_page" aria-label="Anyela Born sohbet odası">
-    <section class="dkd_anyela_chat_shell">
-      <header class="dkd_anyela_chat_topbar">
-        <a class="dkd_anyela_chat_icon_button" href="../Home/" aria-label="Ana sayfaya dön">‹</a>
-        <div class="dkd_anyela_chat_brand">
-          <div class="dkd_anyela_chat_avatar" aria-label="Anyela Born profil resmi"><img alt="Anyela Born" src="../assets/dkd_anyela_chat_avatar.svg" /></div>
-          <div class="dkd_anyela_chat_title_group"><p class="dkd_anyela_chat_kicker">Miami Neon Chat</p><h1 class="dkd_anyela_chat_title">Anyela Born</h1></div>
-        </div>
-        <a class="dkd_anyela_chat_icon_button" href="../Profile/" aria-label="Profil ekranını aç">◎</a>
-      </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#070024" />
+    <meta name="description" content="Anyela Born Miami temalı detaylı sohbet odası ekranı." />
+    <title>Anyela Born | Sohbet Odası</title>
+    <style>
+      :root {
+        --dkd_anyela_chat_bg: #070024;
+        --dkd_anyela_chat_panel: rgba(14, 2, 55, 0.78);
+        --dkd_anyela_chat_soft: rgba(255, 255, 255, 0.085);
+        --dkd_anyela_chat_pink: #ff2bd6;
+        --dkd_anyela_chat_cyan: #18f7ff;
+        --dkd_anyela_chat_gold: #ffd05f;
+        --dkd_anyela_chat_text: #ffffff;
+        --dkd_anyela_chat_muted: rgba(255, 255, 255, 0.74);
+        color-scheme: dark;
+      }
 
-      <section class="dkd_anyela_chat_hero" aria-label="Sohbet tanıtımı"><div class="dkd_anyela_chat_live_row"><span class="dkd_anyela_chat_live_badge"><span class="dkd_anyela_chat_live_dot"></span>Canlı oda taslağı</span><span class="dkd_anyela_chat_live_badge">Miami</span></div><h2 class="dkd_anyela_chat_hero_title">Fotoğraf, ses ve video ile daha canlı sohbet.</h2><p class="dkd_anyela_chat_hero_text">Miami temalı modern medya paneli; fotoğraf seçme, ses kaydı alıp gönderme ve video yükleme akışını hazırlar.</p></section>
+      * { box-sizing: border-box; }
 
-      <nav class="dkd_anyela_chat_tabs" aria-label="Sohbet kategorileri"><span class="dkd_anyela_chat_tab dkd_anyela_chat_tab_active">Genel</span><span class="dkd_anyela_chat_tab">VIP</span><span class="dkd_anyela_chat_tab">Paket Destek</span><span class="dkd_anyela_chat_tab">Miami Live</span></nav>
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background:
+          radial-gradient(circle at 12% 0%, rgba(255, 43, 214, 0.26), transparent 26rem),
+          radial-gradient(circle at 90% 10%, rgba(24, 247, 255, 0.18), transparent 27rem),
+          linear-gradient(180deg, #09002d 0%, #030011 100%);
+        color: var(--dkd_anyela_chat_text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
 
-      <section class="dkd_anyela_chat_section" aria-label="Medya gönderme paneli"><h2 class="dkd_anyela_chat_section_title">Medya Gönder</h2><p class="dkd_anyela_chat_section_hint">Fotoğraf, ses kaydı ve video butonları mobilde net görünür; seçilen medya Supabase Storage alanına gönderilecek şekilde bağlandı.</p><div class="dkd_anyela_chat_media_grid"><button class="dkd_anyela_chat_media_button" id="dkd_anyela_photo_button" type="button"><span>📷</span><small>Fotoğraf<br>Gönder</small></button><button class="dkd_anyela_chat_media_button" id="dkd_anyela_audio_button" type="button"><span>🎙️</span><small>Ses Kaydı<br>Gönder</small></button><button class="dkd_anyela_chat_media_button" id="dkd_anyela_video_button" type="button"><span>🎬</span><small>Video<br>Gönder</small></button></div><div id="dkd_anyela_recording_status" class="dkd_anyela_chat_recording">Ses kaydı alınıyor... Tekrar dokununca gönderime hazırlanır.</div><input id="dkd_anyela_photo_input" type="file" accept="image/*" hidden><input id="dkd_anyela_video_input" type="file" accept="video/*" hidden></section>
+      a,
+      button,
+      input {
+        -webkit-tap-highlight-color: transparent;
+      }
 
-      <section class="dkd_anyela_chat_section" aria-label="Sohbet odaları"><h2 class="dkd_anyela_chat_section_title">Oda Seçimi</h2><p class="dkd_anyela_chat_section_hint">Kullanıcı hangi alana gireceğini tek bakışta anlasın diye odalar sade ve açıklamalı tasarlandı.</p><div class="dkd_anyela_chat_room_grid"><article class="dkd_anyela_chat_room"><div class="dkd_anyela_chat_room_icon">💬</div><div><h3 class="dkd_anyela_chat_room_title">Genel Sohbet</h3><p class="dkd_anyela_chat_room_text">Tanışma, günlük mesajlar ve Miami vibe konuşmaları.</p></div><span class="dkd_anyela_chat_room_count">128</span></article><article class="dkd_anyela_chat_room"><div class="dkd_anyela_chat_room_icon">💎</div><div><h3 class="dkd_anyela_chat_room_title">VIP Paket Odası</h3><p class="dkd_anyela_chat_room_text">Özel paket kullanıcıları için daha seçkin sohbet alanı.</p></div><span class="dkd_anyela_chat_room_count">32</span></article><article class="dkd_anyela_chat_room"><div class="dkd_anyela_chat_room_icon">🌴</div><div><h3 class="dkd_anyela_chat_room_title">Miami Live Plan</h3><p class="dkd_anyela_chat_room_text">Canlı yayın, içerik planı ve etkinlik duyuruları.</p></div><span class="dkd_anyela_chat_room_count">18</span></article></div></section>
+      a { color: inherit; text-decoration: none; }
+      button,
+      input { font: inherit; }
+      button { border: 0; }
 
-      <section class="dkd_anyela_chat_section" aria-label="Sohbet önizlemesi"><h2 class="dkd_anyela_chat_section_title">Sohbet Önizlemesi</h2><p class="dkd_anyela_chat_section_hint">Gerçek mesaj sistemi bağlanana kadar kullanıcıya nasıl çalışacağını gösteren anlaşılır örnek akış.</p><div class="dkd_anyela_chat_window" id="dkd_anyela_chat_window"><div class="dkd_anyela_chat_bubble dkd_anyela_chat_bubble_anyela"><strong>Anyela</strong>Miami gecesine hoş geldin. Bugün hangi vibe ile başlayalım?</div><div class="dkd_anyela_chat_bubble dkd_anyela_chat_bubble_member"><strong>Üye</strong>Paketleri ve VIP sohbet avantajlarını görmek istiyorum.</div><div class="dkd_anyela_chat_bubble dkd_anyela_chat_bubble_anyela"><strong>Anyela</strong>Fotoğraf, ses veya video gönderebilirsin. Miami enerjisi burada.</div></div><div class="dkd_anyela_chat_composer"><input id="dkd_anyela_message_input" class="dkd_anyela_chat_input" placeholder="Mesaj yaz..." aria-label="Mesaj yaz" /><button id="dkd_anyela_send_button" class="dkd_anyela_chat_send" type="button">Gönder</button></div></section>
+      .dkd_anyela_chat_page {
+        min-height: 100svh;
+        display: flex;
+        justify-content: center;
+        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
+      }
 
-      <section class="dkd_anyela_chat_section" aria-label="Sohbet kuralları"><h2 class="dkd_anyela_chat_section_title">Kullanıcıya Açık Kurallar</h2><div class="dkd_anyela_chat_rules"><div class="dkd_anyela_chat_rule">Saygılı konuşma ve güvenli iletişim önceliklidir.</div><div class="dkd_anyela_chat_rule">Fotoğraf, ses ve video gönderimleri üyelik güvenliğiyle kayıt altına alınır.</div><div class="dkd_anyela_chat_rule">Paket, ödeme ve üyelik soruları Paket Destek odasından takip edilir.</div></div></section>
-    </section>
-  </main>
-  <script>
-  (function(){
-    const dkd_anyela_supabase_url="https://ztxlcfcwuwerxrhwfmte.supabase.co";
-    const dkd_anyela_supabase_key="sb_publishable_GSd5xFBwG9pioOY8N6MRQw_C2n7RLYa";
-    const dkd_anyela_client=window.supabase?window.supabase.createClient(dkd_anyela_supabase_url,dkd_anyela_supabase_key):null;
-    const dkd_anyela_bucket="dkd-anyela-chat-media";
-    const dkd_anyela_window=document.getElementById("dkd_anyela_chat_window");
-    const dkd_anyela_input=document.getElementById("dkd_anyela_message_input");
-    const dkd_anyela_status=document.getElementById("dkd_anyela_recording_status");
-    let dkd_anyela_recorder=null;let dkd_anyela_audio_chunks=[];
-    function dkd_anyela_add_bubble(dkd_anyela_label,dkd_anyela_text){const dkd_anyela_node=document.createElement("div");dkd_anyela_node.className="dkd_anyela_chat_bubble dkd_anyela_chat_bubble_member";dkd_anyela_node.innerHTML="<strong>"+dkd_anyela_label+"</strong>"+dkd_anyela_text;dkd_anyela_window.appendChild(dkd_anyela_node);dkd_anyela_node.scrollIntoView({behavior:"smooth",block:"nearest"});}
-    async function dkd_anyela_upload_file(dkd_anyela_file,dkd_anyela_type){if(!dkd_anyela_client){dkd_anyela_add_bubble("Sistem","Supabase bağlantısı yüklenemedi.");return;}const dkd_anyela_user_result=await dkd_anyela_client.auth.getUser();const dkd_anyela_user_id=dkd_anyela_user_result.data&&dkd_anyela_user_result.data.user?dkd_anyela_user_result.data.user.id:"dkd_guest";const dkd_anyela_safe_name=dkd_anyela_file.name.replace(/[^a-zA-Z0-9._-]/g,"-");const dkd_anyela_path=dkd_anyela_user_id+"/"+Date.now()+"-"+dkd_anyela_safe_name;const dkd_anyela_upload_result=await dkd_anyela_client.storage.from(dkd_anyela_bucket).upload(dkd_anyela_path,dkd_anyela_file,{upsert:false});if(dkd_anyela_upload_result.error){dkd_anyela_add_bubble("Sistem","Medya gönderilemedi: "+dkd_anyela_upload_result.error.message);return;}const dkd_anyela_public_url=dkd_anyela_client.storage.from(dkd_anyela_bucket).getPublicUrl(dkd_anyela_path).data.publicUrl;await dkd_anyela_client.from("dkd_anyela_chat_messages").insert({dkd_user_id:dkd_anyela_user_id==="dkd_guest"?null:dkd_anyela_user_id,dkd_message_type:dkd_anyela_type,dkd_media_url:dkd_anyela_public_url,dkd_media_path:dkd_anyela_path,dkd_media_mime:dkd_anyela_file.type});dkd_anyela_add_bubble("Üye",dkd_anyela_type==="photo"?"📷 Fotoğraf gönderildi.":dkd_anyela_type==="audio"?"🎙️ Ses kaydı gönderildi.":"🎬 Video gönderildi.");}
-    document.getElementById("dkd_anyela_send_button").addEventListener("click",function(){const dkd_anyela_text=dkd_anyela_input.value.trim();if(!dkd_anyela_text)return;dkd_anyela_add_bubble("Üye",dkd_anyela_text);dkd_anyela_input.value="";});
-    document.getElementById("dkd_anyela_photo_button").addEventListener("click",()=>document.getElementById("dkd_anyela_photo_input").click());document.getElementById("dkd_anyela_video_button").addEventListener("click",()=>document.getElementById("dkd_anyela_video_input").click());document.getElementById("dkd_anyela_photo_input").addEventListener("change",dkd_anyela_event=>dkd_anyela_event.target.files[0]&&dkd_anyela_upload_file(dkd_anyela_event.target.files[0],"photo"));document.getElementById("dkd_anyela_video_input").addEventListener("change",dkd_anyela_event=>dkd_anyela_event.target.files[0]&&dkd_anyela_upload_file(dkd_anyela_event.target.files[0],"video"));
-    document.getElementById("dkd_anyela_audio_button").addEventListener("click",async function(){if(dkd_anyela_recorder&&dkd_anyela_recorder.state==="recording"){dkd_anyela_recorder.stop();return;}try{const dkd_anyela_stream=await navigator.mediaDevices.getUserMedia({audio:true});dkd_anyela_audio_chunks=[];dkd_anyela_recorder=new MediaRecorder(dkd_anyela_stream);dkd_anyela_recorder.ondataavailable=dkd_anyela_event=>dkd_anyela_audio_chunks.push(dkd_anyela_event.data);dkd_anyela_recorder.onstop=function(){dkd_anyela_status.classList.remove("dkd_anyela_chat_recording_active");const dkd_anyela_blob=new Blob(dkd_anyela_audio_chunks,{type:"audio/webm"});const dkd_anyela_file=new File([dkd_anyela_blob],"dkd-anyela-voice.webm",{type:"audio/webm"});dkd_anyela_upload_file(dkd_anyela_file,"audio");dkd_anyela_stream.getTracks().forEach(dkd_anyela_track=>dkd_anyela_track.stop());};dkd_anyela_recorder.start();dkd_anyela_status.classList.add("dkd_anyela_chat_recording_active");}catch(dkd_anyela_error){dkd_anyela_add_bubble("Sistem","Mikrofon izni alınamadı.");}});
-  })();
-  </script>
-</body>
+      .dkd_anyela_chat_shell {
+        width: min(100vw, 480px);
+        min-height: 100svh;
+        padding: 18px 16px 26px;
+        background:
+          linear-gradient(180deg, rgba(24, 247, 255, 0.1), transparent 28%),
+          var(--dkd_anyela_chat_bg);
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
+        overflow: hidden;
+      }
+
+      .dkd_anyela_chat_topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 16px;
+      }
+
+      .dkd_anyela_chat_icon_button {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--dkd_anyela_chat_text);
+        box-shadow: 0 0 24px rgba(24, 247, 255, 0.2);
+      }
+
+      .dkd_anyela_chat_title_group { text-align: center; }
+      .dkd_anyela_chat_kicker {
+        margin: 0 0 2px;
+        color: var(--dkd_anyela_chat_pink);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .dkd_anyela_chat_title {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.06;
+        text-shadow: 0 0 24px rgba(24, 247, 255, 0.52);
+      }
+
+      .dkd_anyela_chat_hero {
+        padding: 20px;
+        border-radius: 30px;
+        background:
+          radial-gradient(circle at 16% 16%, rgba(24, 247, 255, 0.28), transparent 14rem),
+          radial-gradient(circle at 86% 22%, rgba(255, 43, 214, 0.34), transparent 14rem),
+          linear-gradient(145deg, rgba(22, 4, 75, 0.96), rgba(12, 39, 92, 0.76));
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.42),
+          inset 0 0 32px rgba(255, 255, 255, 0.05);
+      }
+
+      .dkd_anyela_chat_live_row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+      }
+
+      .dkd_anyela_chat_live_badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 11px;
+        border-radius: 999px;
+        background: rgba(24, 247, 255, 0.12);
+        color: var(--dkd_anyela_chat_cyan);
+        border: 1px solid rgba(24, 247, 255, 0.26);
+        font-size: 12px;
+        font-weight: 950;
+      }
+
+      .dkd_anyela_chat_live_dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 999px;
+        background: var(--dkd_anyela_chat_cyan);
+        box-shadow: 0 0 16px var(--dkd_anyela_chat_cyan);
+      }
+
+      .dkd_anyela_chat_hero_title { margin: 14px 0 7px; font-size: 27px; line-height: 1.08; }
+      .dkd_anyela_chat_hero_text { margin: 0; color: var(--dkd_anyela_chat_muted); line-height: 1.55; font-size: 14px; }
+
+      .dkd_anyela_chat_tabs {
+        display: flex;
+        gap: 9px;
+        margin: 16px 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+      }
+
+      .dkd_anyela_chat_tabs::-webkit-scrollbar { display: none; }
+
+      .dkd_anyela_chat_tab {
+        flex: 0 0 auto;
+        padding: 11px 13px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.82);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        font-size: 13px;
+        font-weight: 900;
+      }
+
+      .dkd_anyela_chat_tab_active {
+        color: #ffffff;
+        background: linear-gradient(135deg, rgba(255, 43, 214, 0.78), rgba(24, 247, 255, 0.46));
+        box-shadow: 0 0 24px rgba(255, 43, 214, 0.24);
+      }
+
+      .dkd_anyela_chat_section {
+        margin-top: 16px;
+        padding: 18px;
+        border-radius: 26px;
+        background: var(--dkd_anyela_chat_panel);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 16px 46px rgba(0, 0, 0, 0.31);
+      }
+
+      .dkd_anyela_chat_section_title { margin: 0 0 5px; font-size: 19px; }
+      .dkd_anyela_chat_section_hint { margin: 0 0 14px; color: var(--dkd_anyela_chat_muted); font-size: 13px; line-height: 1.45; }
+
+      .dkd_anyela_chat_room_grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .dkd_anyela_chat_room {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        align-items: center;
+        gap: 12px;
+        padding: 13px;
+        border-radius: 20px;
+        background: var(--dkd_anyela_chat_soft);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .dkd_anyela_chat_room_icon {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 17px;
+        background: rgba(255, 43, 214, 0.18);
+        box-shadow: 0 0 24px rgba(255, 43, 214, 0.22);
+      }
+
+      .dkd_anyela_chat_room_title { margin: 0; font-size: 15px; }
+      .dkd_anyela_chat_room_text { margin: 3px 0 0; color: var(--dkd_anyela_chat_muted); font-size: 12px; line-height: 1.35; }
+      .dkd_anyela_chat_room_count { color: var(--dkd_anyela_chat_cyan); font-weight: 950; font-size: 12px; }
+
+      .dkd_anyela_chat_window {
+        display: grid;
+        gap: 10px;
+      }
+
+      .dkd_anyela_chat_bubble {
+        max-width: 86%;
+        padding: 12px 13px;
+        border-radius: 20px;
+        line-height: 1.45;
+        font-size: 14px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+      }
+
+      .dkd_anyela_chat_bubble_anyela {
+        justify-self: start;
+        background: rgba(255, 43, 214, 0.15);
+      }
+
+      .dkd_anyela_chat_bubble_member {
+        justify-self: end;
+        background: rgba(24, 247, 255, 0.14);
+      }
+
+      .dkd_anyela_chat_bubble strong {
+        display: block;
+        margin-bottom: 4px;
+        color: #ffffff;
+      }
+
+      .dkd_anyela_chat_composer {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px;
+        margin-top: 13px;
+      }
+
+      .dkd_anyela_chat_input {
+        width: 100%;
+        min-height: 48px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        outline: none;
+        border-radius: 18px;
+        background: rgba(6, 0, 27, 0.72);
+        color: var(--dkd_anyela_chat_text);
+        padding: 12px 13px;
+      }
+
+      .dkd_anyela_chat_send {
+        min-width: 56px;
+        border-radius: 18px;
+        color: #ffffff;
+        font-weight: 950;
+        background: linear-gradient(135deg, var(--dkd_anyela_chat_pink), var(--dkd_anyela_chat_cyan));
+        box-shadow: 0 0 24px rgba(24, 247, 255, 0.24);
+      }
+
+      .dkd_anyela_chat_rules {
+        display: grid;
+        gap: 9px;
+      }
+
+      .dkd_anyela_chat_rule {
+        padding: 12px 13px;
+        border-radius: 18px;
+        background: rgba(255, 255, 255, 0.08);
+        color: rgba(255, 255, 255, 0.84);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      @media (min-width: 820px) {
+        .dkd_anyela_chat_page { align-items: center; padding: 32px 0; }
+        .dkd_anyela_chat_shell {
+          min-height: auto;
+          border-radius: 38px;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+      }
+    </style>
+    <script src="../assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="protected"></script>
+  </head>
+  <body>
+    <main class="dkd_anyela_chat_page" aria-label="Anyela Born sohbet odası">
+      <section class="dkd_anyela_chat_shell">
+        <header class="dkd_anyela_chat_topbar">
+          <a class="dkd_anyela_chat_icon_button" href="../Home/" aria-label="Ana sayfaya dön">‹</a>
+          <div class="dkd_anyela_chat_title_group">
+            <p class="dkd_anyela_chat_kicker">Miami Neon Chat</p>
+            <h1 class="dkd_anyela_chat_title">Sohbet Odası</h1>
+          </div>
+          <a class="dkd_anyela_chat_icon_button" href="../Profile/" aria-label="Profil ekranını aç">◎</a>
+        </header>
+
+        <section class="dkd_anyela_chat_hero" aria-label="Sohbet tanıtımı">
+          <div class="dkd_anyela_chat_live_row">
+            <span class="dkd_anyela_chat_live_badge"><span class="dkd_anyela_chat_live_dot"></span>Canlı oda taslağı</span>
+            <span class="dkd_anyela_chat_live_badge">Miami</span>
+          </div>
+          <h2 class="dkd_anyela_chat_hero_title">Anyela ile net, hızlı ve eğlenceli sohbet alanı.</h2>
+          <p class="dkd_anyela_chat_hero_text">Bu ekran; genel sohbet, VIP oda, paket destekleri ve marka görüşmeleri için anlaşılır bir merkez olarak hazırlandı.</p>
+        </section>
+
+        <nav class="dkd_anyela_chat_tabs" aria-label="Sohbet kategorileri">
+          <span class="dkd_anyela_chat_tab dkd_anyela_chat_tab_active">Genel</span>
+          <span class="dkd_anyela_chat_tab">VIP</span>
+          <span class="dkd_anyela_chat_tab">Paket Destek</span>
+          <span class="dkd_anyela_chat_tab">Miami Live</span>
+        </nav>
+
+        <section class="dkd_anyela_chat_section" aria-label="Sohbet odaları">
+          <h2 class="dkd_anyela_chat_section_title">Oda Seçimi</h2>
+          <p class="dkd_anyela_chat_section_hint">Kullanıcı hangi alana gireceğini tek bakışta anlasın diye odalar sade ve açıklamalı tasarlandı.</p>
+          <div class="dkd_anyela_chat_room_grid">
+            <article class="dkd_anyela_chat_room">
+              <div class="dkd_anyela_chat_room_icon">💬</div>
+              <div>
+                <h3 class="dkd_anyela_chat_room_title">Genel Sohbet</h3>
+                <p class="dkd_anyela_chat_room_text">Tanışma, günlük mesajlar ve Miami vibe konuşmaları.</p>
+              </div>
+              <span class="dkd_anyela_chat_room_count">128</span>
+            </article>
+            <article class="dkd_anyela_chat_room">
+              <div class="dkd_anyela_chat_room_icon">💎</div>
+              <div>
+                <h3 class="dkd_anyela_chat_room_title">VIP Paket Odası</h3>
+                <p class="dkd_anyela_chat_room_text">Özel paket kullanıcıları için daha seçkin sohbet alanı.</p>
+              </div>
+              <span class="dkd_anyela_chat_room_count">32</span>
+            </article>
+            <article class="dkd_anyela_chat_room">
+              <div class="dkd_anyela_chat_room_icon">🌴</div>
+              <div>
+                <h3 class="dkd_anyela_chat_room_title">Miami Live Plan</h3>
+                <p class="dkd_anyela_chat_room_text">Canlı yayın, içerik planı ve etkinlik duyuruları.</p>
+              </div>
+              <span class="dkd_anyela_chat_room_count">18</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="dkd_anyela_chat_section" aria-label="Sohbet önizlemesi">
+          <h2 class="dkd_anyela_chat_section_title">Sohbet Önizlemesi</h2>
+          <p class="dkd_anyela_chat_section_hint">Gerçek mesaj sistemi bağlanana kadar kullanıcıya nasıl çalışacağını gösteren anlaşılır örnek akış.</p>
+          <div class="dkd_anyela_chat_window">
+            <div class="dkd_anyela_chat_bubble dkd_anyela_chat_bubble_anyela"><strong>Anyela</strong>Miami gecesine hoş geldin. Bugün hangi vibe ile başlayalım?</div>
+            <div class="dkd_anyela_chat_bubble dkd_anyela_chat_bubble_member"><strong>Üye</strong>Paketleri ve VIP sohbet avantajlarını görmek istiyorum.</div>
+            <div class="dkd_anyela_chat_bubble dkd_anyela_chat_bubble_anyela"><strong>Anyela</strong>Paketler ekranından tüm avantajları açabilirsin. İstersen buradan da yönlendireyim.</div>
+          </div>
+          <div class="dkd_anyela_chat_composer">
+            <input class="dkd_anyela_chat_input" placeholder="Mesaj yaz..." aria-label="Mesaj yaz" />
+            <button class="dkd_anyela_chat_send" type="button">Gönder</button>
+          </div>
+        </section>
+
+        <section class="dkd_anyela_chat_section" aria-label="Sohbet kuralları">
+          <h2 class="dkd_anyela_chat_section_title">Kullanıcıya Açık Kurallar</h2>
+          <p class="dkd_anyela_chat_section_hint">Sohbet odası daha profesyonel görünsün diye kısa ve anlaşılır güvenlik notları eklendi.</p>
+          <div class="dkd_anyela_chat_rules">
+            <div class="dkd_anyela_chat_rule">Saygılı konuşma ve güvenli iletişim önceliklidir.</div>
+            <div class="dkd_anyela_chat_rule">Paket, ödeme ve üyelik soruları Paket Destek odasından takip edilir.</div>
+            <div class="dkd_anyela_chat_rule">Marka iş birlikleri için ayrı başvuru ekranı daha sonra eklenecek.</div>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
 </html>
