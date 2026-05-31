@@ -352,6 +352,7 @@
             inputmode="email"
             autocomplete="email"
             aria-label="Email"
+            autofocus
           />
 
           <label class="dkd_anyela_login_screen_reader" for="dkd_anyela_login_password">Şifre</label>
@@ -419,6 +420,17 @@
         const dkdAnyelaLoginButtons = Array.from(document.querySelectorAll("[data-dkd-anyela-login-action]"));
         const dkdAnyelaLoginChoices = Array.from(document.querySelectorAll("[data-dkd-anyela-popup-choice]"));
         const dkdAnyelaLoginEmail = document.getElementById("dkd_anyela_login_email");
+
+        function dkdAnyelaLoginFocusEmail() {
+          if (!dkdAnyelaLoginEmail) {
+            return;
+          }
+
+          window.setTimeout(function dkdAnyelaLoginDelayedFocus() {
+            dkdAnyelaLoginEmail.focus({ preventScroll: true });
+            dkdAnyelaLoginEmail.select();
+          }, 120);
+        }
 
         function dkdAnyelaLoginOpenPopup(dkdAnyelaLoginEvent) {
           dkdAnyelaLoginEvent.preventDefault();
@@ -489,6 +501,9 @@
             dkdAnyelaLoginClosePopup();
           }
         });
+
+        window.addEventListener("load", dkdAnyelaLoginFocusEmail);
+        dkdAnyelaLoginFocusEmail();
       })();
     </script>
   </body>
