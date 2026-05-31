@@ -97,19 +97,19 @@
           0 0 26px rgba(255, 208, 95, 0.75);
       }
       .dkd_anyela_offer_hotspot::before {
-        content: "👆";
-        right: -7%;
-        top: -42%;
-        font-size: clamp(30px, 9vw, 46px);
+        content: "👇";
+        right: -5.5%;
+        bottom: -25%;
+        font-size: clamp(28px, 8.5vw, 44px);
         animation: dkdAnyelaOfferTap 1.05s ease-in-out infinite;
       }
       .dkd_anyela_offer_hotspot::after {
-        content: "Teklif için tıkla";
-        right: -2%;
-        top: -12%;
-        padding: 7px 10px;
+        content: "Tıkla";
+        right: 4%;
+        bottom: -5%;
+        padding: 7px 12px;
         border-radius: 999px;
-        background: linear-gradient(105deg, rgba(24, 247, 255, 0.86), rgba(255, 43, 214, 0.92));
+        background: linear-gradient(105deg, rgba(24, 247, 255, 0.88), rgba(255, 43, 214, 0.94));
         font-size: 12px;
         font-weight: 950;
         white-space: nowrap;
@@ -118,7 +118,7 @@
       }
       @keyframes dkdAnyelaOfferTap {
         0%, 100% { transform: translate(0, 0) scale(1); }
-        50% { transform: translate(-11px, 10px) scale(1.12); }
+        50% { transform: translate(-6px, -7px) scale(1.13); }
       }
       @keyframes dkdAnyelaOfferBubble {
         0%, 100% { opacity: 0.78; transform: translateY(0); }
@@ -456,8 +456,8 @@
             <h2 class="dkd_anyela_section_title" data-dkd-hidden-title="true">Ücret Hesaplama</h2>
             <div class="dkd_anyela_calc_controls">
               <div class="dkd_anyela_control">
-                <label>Sohbet dakikası <strong><span id="dkd_offer_minutes_value">5</span> dk</strong></label>
-                <input type="range" min="5" max="120" step="5" value="5" id="dkd_offer_minutes" />
+                <label>Sohbet dakikası <strong><span id="dkd_offer_minutes_value">10</span> dk</strong></label>
+                <input type="range" min="5" max="120" step="5" value="10" id="dkd_offer_minutes" />
               </div>
               <div class="dkd_anyela_select_row">
                 <div class="dkd_anyela_control">
@@ -522,11 +522,11 @@
             title: "Mini Sohbet Paketi",
             badge: "",
             price: 499,
-            minutes: "15 dk öncelikli sohbet penceresi",
+            minutes: "15 Dakika Özel Sohbet",
             description: "Günlük kısa mesajlaşma, sıcak karşılama ve kişiye özel yanıt akışı için giriş paketi. Daha hafif ve hızlı bir tanışma deneyimi isteyenler için hazırlandı.",
             features: [
               ["💬", "Mesajlaşma", "Günlük kısa mesajlaşma ve özel yanıtlar"],
-              ["⏱️", "15 dakika", "Öncelikli sohbet penceresi"],
+              ["⏱️", "15 Dakika", "Özel Sohbet"],
               ["🌴", "Miami ton", "Sıcak, samimi ve premium iletişim"],
               ["📎", "Dekont", "Banka dekontu ile manuel onay"]
             ]
@@ -549,7 +549,7 @@
             badge: "",
             price: 1499,
             minutes: "5 özel görsel + 20 dk içerik planı",
-            description: "Kişiye özel premium fotoğraf ve VIP içerik seçkisi. Daha renkli, daha özel ve koleksiyon hissi veren bir paket deneyimi.",
+            description: "Kişiye özel premium Fotoğraf ve VIP içerik seçme imkanı. Daha renkli, daha özel uygun tarzda kıyafet görseli gönder, Anyelayı kendi tarzında gör.",
             features: [
               ["💎", "VIP içerik", "Premium fotoğraf ve özel içerik seti"],
               ["🖼️", "5 görsel", "Seçilen konsepte göre hazırlanır"],
@@ -613,7 +613,7 @@
         };
 
         const dkdResetOfferDefaults = function dkdResetOfferDefaults() {
-          document.getElementById("dkd_offer_minutes").value = "5";
+          document.getElementById("dkd_offer_minutes").value = "10";
           document.getElementById("dkd_offer_voice").value = "0";
           document.getElementById("dkd_offer_video").value = "0";
           document.getElementById("dkd_offer_photo").value = "0";
