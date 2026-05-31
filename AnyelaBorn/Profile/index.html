@@ -82,6 +82,7 @@
         background: rgba(255, 255, 255, 0.07);
         color: var(--dkd_anyela_profile_text);
         box-shadow: 0 0 24px rgba(255, 43, 214, 0.2);
+        cursor: pointer;
       }
 
       .dkd_anyela_profile_title_group { text-align: center; }
@@ -150,29 +151,11 @@
           0 0 30px rgba(255, 43, 214, 0.35),
           0 0 26px rgba(24, 247, 255, 0.19);
         font-size: 34px;
+        font-weight: 950;
       }
 
       .dkd_anyela_profile_name { margin: 0; font-size: 27px; line-height: 1.06; }
       .dkd_anyela_profile_status { margin: 6px 0 0; color: var(--dkd_anyela_profile_muted); font-size: 14px; }
-
-      .dkd_anyela_profile_badges {
-        position: relative;
-        z-index: 1;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-top: 16px;
-      }
-
-      .dkd_anyela_profile_badge {
-        padding: 8px 11px;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        color: rgba(255, 255, 255, 0.88);
-        font-size: 12px;
-        font-weight: 800;
-      }
 
       .dkd_anyela_profile_section {
         margin-top: 16px;
@@ -227,8 +210,9 @@
       }
 
       .dkd_anyela_profile_input,
-      .dkd_anyela_profile_select {
+      .dkd_anyela_profile_readonly {
         width: 100%;
+        min-height: 47px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         outline: none;
         border-radius: 15px;
@@ -237,8 +221,13 @@
         padding: 12px 13px;
       }
 
-      .dkd_anyela_profile_input:focus,
-      .dkd_anyela_profile_select:focus {
+      .dkd_anyela_profile_readonly {
+        display: flex;
+        align-items: center;
+        color: rgba(255, 255, 255, 0.88);
+      }
+
+      .dkd_anyela_profile_input:focus {
         box-shadow: 0 0 0 3px rgba(255, 43, 214, 0.26), 0 0 24px rgba(24, 247, 255, 0.18);
         border-color: rgba(24, 247, 255, 0.45);
       }
@@ -298,6 +287,7 @@
         border-radius: 17px;
         font-weight: 950;
         text-align: center;
+        cursor: pointer;
       }
 
       .dkd_anyela_profile_action_primary {
@@ -310,6 +300,23 @@
         background: rgba(24, 247, 255, 0.12);
         color: var(--dkd_anyela_profile_cyan);
         border: 1px solid rgba(24, 247, 255, 0.25);
+      }
+
+      .dkd_anyela_profile_action_danger {
+        width: 100%;
+        margin-top: 10px;
+        background: linear-gradient(135deg, rgba(255, 61, 135, 0.94), rgba(255, 207, 88, 0.78));
+        color: #ffffff;
+        box-shadow: 0 0 26px rgba(255, 43, 214, 0.24);
+      }
+
+      .dkd_anyela_profile_note {
+        min-height: 20px;
+        margin: 12px 0 0;
+        color: var(--dkd_anyela_profile_muted);
+        font-size: 13px;
+        line-height: 1.45;
+        text-align: center;
       }
 
       @media (min-width: 820px) {
@@ -332,7 +339,7 @@
             <p class="dkd_anyela_profile_kicker">Miami Style Club</p>
             <h1 class="dkd_anyela_profile_title">Profilim</h1>
           </div>
-          <a class="dkd_anyela_profile_icon_button" href="../Packages/" aria-label="Paketleri aç">◇</a>
+          <button class="dkd_anyela_profile_icon_button" id="dkd_anyela_profile_logout_top" type="button" aria-label="Çıkış Yap">↪</button>
         </header>
 
         <section class="dkd_anyela_profile_hero" aria-label="Profil kimliği">
@@ -340,13 +347,8 @@
             <div class="dkd_anyela_profile_avatar" aria-hidden="true">AB</div>
             <div>
               <h2 class="dkd_anyela_profile_name">Anyela Born</h2>
-              <p class="dkd_anyela_profile_status">Miami Vibes üyesi · Profil kontrol merkezi</p>
+              <p class="dkd_anyela_profile_status">Anyela Born Hayranı</p>
             </div>
-          </div>
-          <div class="dkd_anyela_profile_badges" aria-label="Profil rozetleri">
-            <span class="dkd_anyela_profile_badge">Premium görünüm</span>
-            <span class="dkd_anyela_profile_badge">Miami tema</span>
-            <span class="dkd_anyela_profile_badge">Sohbet hazır</span>
           </div>
         </section>
 
@@ -354,7 +356,7 @@
           <div class="dkd_anyela_profile_section_head">
             <div>
               <h2 class="dkd_anyela_profile_section_title">Profil Durumu</h2>
-              <p class="dkd_anyela_profile_section_hint">Hesap bilgilerini, tercihlerini ve bildirim ayarlarını tek ekrandan takip et.</p>
+              <p class="dkd_anyela_profile_section_hint">Hesap bilgilerini ve Anyela Born üyelik durumunu tek ekrandan takip et.</p>
             </div>
             <span class="dkd_anyela_profile_pill">%82 hazır</span>
           </div>
@@ -367,26 +369,22 @@
           <div class="dkd_anyela_profile_section_head">
             <div>
               <h2 class="dkd_anyela_profile_section_title">Hesap Bilgileri</h2>
-              <p class="dkd_anyela_profile_section_hint">Bu alan ileride gerçek üyelik sistemiyle bağlanacak şekilde hazırlandı.</p>
+              <p class="dkd_anyela_profile_section_hint">E-posta hesabından otomatik alınır. Üyelik tipi sadece admin panelinden belirlenir.</p>
             </div>
           </div>
           <div class="dkd_anyela_profile_field_grid">
             <label class="dkd_anyela_profile_field">
               <span class="dkd_anyela_profile_label">Kullanıcı adı</span>
-              <input class="dkd_anyela_profile_input" value="Anyela Born" aria-label="Kullanıcı adı" />
+              <input class="dkd_anyela_profile_input" id="dkd_anyela_profile_display_name" value="Anyela Born" aria-label="Kullanıcı adı" />
             </label>
-            <label class="dkd_anyela_profile_field">
+            <div class="dkd_anyela_profile_field">
               <span class="dkd_anyela_profile_label">E-posta</span>
-              <input class="dkd_anyela_profile_input" placeholder="mail adresini ekle" aria-label="E-posta" />
-            </label>
-            <label class="dkd_anyela_profile_field">
+              <div class="dkd_anyela_profile_readonly" id="dkd_anyela_profile_email">Hesap bilgisi yükleniyor...</div>
+            </div>
+            <div class="dkd_anyela_profile_field">
               <span class="dkd_anyela_profile_label">Üyelik tipi</span>
-              <select class="dkd_anyela_profile_select" aria-label="Üyelik tipi">
-                <option>Miami Free</option>
-                <option>Miami VIP</option>
-                <option>Anyela Full Paket</option>
-              </select>
-            </label>
+              <div class="dkd_anyela_profile_readonly" id="dkd_anyela_profile_membership">Admin tarafından belirlenir</div>
+            </div>
           </div>
         </section>
 
@@ -400,19 +398,11 @@
           <div class="dkd_anyela_profile_field_grid">
             <label class="dkd_anyela_profile_field">
               <span class="dkd_anyela_profile_label">Sohbet dili</span>
-              <select class="dkd_anyela_profile_select" aria-label="Sohbet dili">
-                <option>Türkçe</option>
-                <option>English</option>
-                <option>Türkçe + English</option>
-              </select>
+              <input class="dkd_anyela_profile_input" value="Türkçe + English" aria-label="Sohbet dili" />
             </label>
             <label class="dkd_anyela_profile_field">
               <span class="dkd_anyela_profile_label">Bildirim modu</span>
-              <select class="dkd_anyela_profile_select" aria-label="Bildirim modu">
-                <option>Öne çıkan duyurular</option>
-                <option>Sohbet ve paket fırsatları</option>
-                <option>Sessiz mod</option>
-              </select>
+              <input class="dkd_anyela_profile_input" value="Sohbet ve paket fırsatları" aria-label="Bildirim modu" />
             </label>
           </div>
         </section>
@@ -421,7 +411,7 @@
           <div class="dkd_anyela_profile_section_head">
             <div>
               <h2 class="dkd_anyela_profile_section_title">Aktivite Özeti</h2>
-              <p class="dkd_anyela_profile_section_hint">Sohbet, paket ve profil durumunu hızlıca gör.</p>
+              <p class="dkd_anyela_profile_section_hint">Sohbet, paket ve bildirim durumunu hızlıca gör.</p>
             </div>
           </div>
           <div class="dkd_anyela_profile_stats">
@@ -436,8 +426,140 @@
             <a class="dkd_anyela_profile_action dkd_anyela_profile_action_primary" href="../ChatRoom/">Sohbete Başla</a>
             <a class="dkd_anyela_profile_action dkd_anyela_profile_action_secondary" href="../Packages/">Paketleri Aç</a>
           </div>
+          <button class="dkd_anyela_profile_action dkd_anyela_profile_action_danger" id="dkd_anyela_profile_logout_bottom" type="button">Çıkış Yap</button>
+          <p class="dkd_anyela_profile_note" id="dkd_anyela_profile_note"></p>
         </section>
       </section>
     </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+      (function dkdAnyelaProfileScope() {
+        "use strict";
+
+        const dkdAnyelaProfileSupabaseUrl = "https://ztxlcfcwuwerxrhwfmte.supabase.co";
+        const dkdAnyelaProfileSupabasePublishableKey = "sb_publishable_GSd5xFBwG9pioOY8N6MRQw_C2n7RLYa";
+        const dkdAnyelaProfileLoginPath = "/AnyelaBorn/Login/";
+        const dkdAnyelaProfileEmailNode = document.getElementById("dkd_anyela_profile_email");
+        const dkdAnyelaProfileMembershipNode = document.getElementById("dkd_anyela_profile_membership");
+        const dkdAnyelaProfileDisplayNameInput = document.getElementById("dkd_anyela_profile_display_name");
+        const dkdAnyelaProfileNoteNode = document.getElementById("dkd_anyela_profile_note");
+        const dkdAnyelaProfileLogoutButtons = [
+          document.getElementById("dkd_anyela_profile_logout_top"),
+          document.getElementById("dkd_anyela_profile_logout_bottom")
+        ];
+        const dkdAnyelaProfileSupabaseClient = window.supabase && window.supabase.createClient
+          ? window.supabase.createClient(dkdAnyelaProfileSupabaseUrl, dkdAnyelaProfileSupabasePublishableKey, {
+              auth: {
+                persistSession: true,
+                autoRefreshToken: true,
+                detectSessionInUrl: true,
+                storageKey: "dkd_anyela_auth_session"
+              }
+            })
+          : null;
+
+        function dkdAnyelaProfileSetNodeText(dkdAnyelaProfileNode, dkdAnyelaProfileText) {
+          if (!dkdAnyelaProfileNode) {
+            return;
+          }
+          dkdAnyelaProfileNode.textContent = dkdAnyelaProfileText;
+        }
+
+        function dkdAnyelaProfileReadStorage(dkdAnyelaProfileKey) {
+          try {
+            return window.localStorage.getItem(dkdAnyelaProfileKey);
+          } catch (dkdAnyelaProfileStorageError) {
+            return null;
+          }
+        }
+
+        function dkdAnyelaProfileRemoveStorage(dkdAnyelaProfileKey) {
+          try {
+            window.localStorage.removeItem(dkdAnyelaProfileKey);
+          } catch (dkdAnyelaProfileStorageError) {
+            return;
+          }
+        }
+
+        function dkdAnyelaProfileFallbackEmail() {
+          const dkdAnyelaProfileGuestActive = dkdAnyelaProfileReadStorage("dkd_anyela_guest_login_active") === "true";
+          return dkdAnyelaProfileGuestActive ? "Misafir kullanıcı" : "E-posta bulunamadı";
+        }
+
+        async function dkdAnyelaProfileLoadAccount() {
+          if (!dkdAnyelaProfileSupabaseClient) {
+            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileEmailNode, dkdAnyelaProfileFallbackEmail());
+            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, "Anyela Born Hayranı");
+            return;
+          }
+
+          const dkdAnyelaProfileSessionResult = await dkdAnyelaProfileSupabaseClient.auth.getSession();
+          const dkdAnyelaProfileSession = dkdAnyelaProfileSessionResult && dkdAnyelaProfileSessionResult.data
+            ? dkdAnyelaProfileSessionResult.data.session
+            : null;
+          const dkdAnyelaProfileUser = dkdAnyelaProfileSession && dkdAnyelaProfileSession.user
+            ? dkdAnyelaProfileSession.user
+            : null;
+
+          if (!dkdAnyelaProfileUser) {
+            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileEmailNode, dkdAnyelaProfileFallbackEmail());
+            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, "Anyela Born Hayranı");
+            return;
+          }
+
+          const dkdAnyelaProfileEmail = dkdAnyelaProfileUser.email || "E-posta bulunamadı";
+          dkdAnyelaProfileSetNodeText(dkdAnyelaProfileEmailNode, dkdAnyelaProfileEmail);
+
+          if (dkdAnyelaProfileDisplayNameInput && dkdAnyelaProfileUser.email) {
+            dkdAnyelaProfileDisplayNameInput.value = dkdAnyelaProfileUser.email.split("@")[0];
+          }
+
+          const dkdAnyelaProfileResult = await dkdAnyelaProfileSupabaseClient
+            .from("dkd_anyela_profiles")
+            .select("dkd_display_name, dkd_role")
+            .eq("dkd_id", dkdAnyelaProfileUser.id)
+            .maybeSingle();
+
+          if (dkdAnyelaProfileResult && dkdAnyelaProfileResult.data) {
+            if (dkdAnyelaProfileDisplayNameInput && dkdAnyelaProfileResult.data.dkd_display_name) {
+              dkdAnyelaProfileDisplayNameInput.value = dkdAnyelaProfileResult.data.dkd_display_name;
+            }
+            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, dkdAnyelaProfileResult.data.dkd_role || "Anyela Born Hayranı");
+            return;
+          }
+
+          dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, "Anyela Born Hayranı");
+        }
+
+        async function dkdAnyelaProfileLogout() {
+          dkdAnyelaProfileSetNodeText(dkdAnyelaProfileNoteNode, "Çıkış yapılıyor...");
+
+          if (dkdAnyelaProfileSupabaseClient) {
+            await dkdAnyelaProfileSupabaseClient.auth.signOut();
+          }
+
+          [
+            "dkd_anyela_auth_access",
+            "dkd_anyela_account_login_once",
+            "dkd_anyela_guest_login_active",
+            "dkd_anyela_auth_session"
+          ].forEach(dkdAnyelaProfileRemoveStorage);
+
+          window.setTimeout(function dkdAnyelaProfileRedirectAfterLogout() {
+            window.location.replace(dkdAnyelaProfileLoginPath);
+          }, 320);
+        }
+
+        dkdAnyelaProfileLogoutButtons.forEach(function dkdAnyelaProfileBindLogout(dkdAnyelaProfileLogoutButton) {
+          if (!dkdAnyelaProfileLogoutButton) {
+            return;
+          }
+          dkdAnyelaProfileLogoutButton.addEventListener("click", dkdAnyelaProfileLogout);
+        });
+
+        dkdAnyelaProfileLoadAccount();
+      })();
+    </script>
   </body>
 </html>
