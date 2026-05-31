@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#070024" />
+    <meta name="description" content="Anyela Born Miami temalı detaylı profil ekranı." />
+    <title>Anyela Born | Profilim</title>
+    <style>
+      :root {
+        --dkd_anyela_profile_bg: #070024;
+        --dkd_anyela_profile_panel: rgba(14, 2, 55, 0.78);
+        --dkd_anyela_profile_panel_soft: rgba(255, 255, 255, 0.085);
+        --dkd_anyela_profile_pink: #ff2bd6;
+        --dkd_anyela_profile_cyan: #18f7ff;
+        --dkd_anyela_profile_gold: #ffd05f;
+        --dkd_anyela_profile_text: #ffffff;
+        --dkd_anyela_profile_muted: rgba(255, 255, 255, 0.74);
+        color-scheme: dark;
+      }
+
+      * { box-sizing: border-box; }
+
+      html,
+      body {
+        margin: 0;
+        min-height: 100%;
+        background:
+          radial-gradient(circle at 14% 0%, rgba(255, 43, 214, 0.25), transparent 25rem),
+          radial-gradient(circle at 92% 12%, rgba(24, 247, 255, 0.18), transparent 27rem),
+          linear-gradient(180deg, #08002e 0%, #030011 100%);
+        color: var(--dkd_anyela_profile_text);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      a,
+      button,
+      input,
+      select {
+        -webkit-tap-highlight-color: transparent;
+      }
+
+      a { color: inherit; text-decoration: none; }
+      button,
+      input,
+      select { font: inherit; }
+      button { border: 0; }
+
+      .dkd_anyela_profile_page {
+        min-height: 100svh;
+        display: flex;
+        justify-content: center;
+        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
+      }
+
+      .dkd_anyela_profile_shell {
+        width: min(100vw, 480px);
+        min-height: 100svh;
+        padding: 18px 16px 26px;
+        background:
+          linear-gradient(180deg, rgba(255, 43, 214, 0.1), transparent 26%),
+          var(--dkd_anyela_profile_bg);
+        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
+        overflow: hidden;
+      }
+
+      .dkd_anyela_profile_topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 18px;
+      }
+
+      .dkd_anyela_profile_icon_button {
+        width: 46px;
+        height: 46px;
+        display: grid;
+        place-items: center;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        background: rgba(255, 255, 255, 0.07);
+        color: var(--dkd_anyela_profile_text);
+        box-shadow: 0 0 24px rgba(255, 43, 214, 0.2);
+      }
+
+      .dkd_anyela_profile_title_group { text-align: center; }
+      .dkd_anyela_profile_kicker {
+        margin: 0 0 2px;
+        color: var(--dkd_anyela_profile_cyan);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+      }
+
+      .dkd_anyela_profile_title {
+        margin: 0;
+        font-size: 26px;
+        line-height: 1.06;
+        text-shadow: 0 0 24px rgba(255, 43, 214, 0.52);
+      }
+
+      .dkd_anyela_profile_hero {
+        position: relative;
+        padding: 20px;
+        border-radius: 30px;
+        background:
+          radial-gradient(circle at 18% 18%, rgba(255, 43, 214, 0.38), transparent 14rem),
+          radial-gradient(circle at 86% 12%, rgba(24, 247, 255, 0.22), transparent 13rem),
+          linear-gradient(145deg, rgba(22, 4, 75, 0.96), rgba(77, 8, 92, 0.76));
+        border: 1px solid rgba(255, 255, 255, 0.16);
+        box-shadow:
+          0 20px 60px rgba(0, 0, 0, 0.42),
+          inset 0 0 32px rgba(255, 255, 255, 0.05);
+        overflow: hidden;
+      }
+
+      .dkd_anyela_profile_hero::after {
+        content: "";
+        position: absolute;
+        inset: auto -20px -40px -20px;
+        height: 96px;
+        background:
+          linear-gradient(90deg, transparent, rgba(24, 247, 255, 0.35), transparent),
+          linear-gradient(180deg, transparent, rgba(255, 43, 214, 0.15));
+        filter: blur(8px);
+      }
+
+      .dkd_anyela_profile_identity {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 14px;
+        align-items: center;
+      }
+
+      .dkd_anyela_profile_avatar {
+        width: 82px;
+        height: 82px;
+        display: grid;
+        place-items: center;
+        border-radius: 28px;
+        background:
+          linear-gradient(135deg, rgba(255, 43, 214, 0.34), rgba(24, 247, 255, 0.22)),
+          rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow:
+          0 0 30px rgba(255, 43, 214, 0.35),
+          0 0 26px rgba(24, 247, 255, 0.19);
+        font-size: 34px;
+      }
+
+      .dkd_anyela_profile_name { margin: 0; font-size: 27px; line-height: 1.06; }
+      .dkd_anyela_profile_status { margin: 6px 0 0; color: var(--dkd_anyela_profile_muted); font-size: 14px; }
+
+      .dkd_anyela_profile_badges {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+
+      .dkd_anyela_profile_badge {
+        padding: 8px 11px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        color: rgba(255, 255, 255, 0.88);
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .dkd_anyela_profile_section {
+        margin-top: 16px;
+        padding: 18px;
+        border-radius: 26px;
+        background: var(--dkd_anyela_profile_panel);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        box-shadow: 0 16px 46px rgba(0, 0, 0, 0.31);
+      }
+
+      .dkd_anyela_profile_section_head {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 14px;
+        margin-bottom: 14px;
+      }
+
+      .dkd_anyela_profile_section_title { margin: 0; font-size: 19px; }
+      .dkd_anyela_profile_section_hint { margin: 4px 0 0; color: var(--dkd_anyela_profile_muted); font-size: 13px; line-height: 1.45; }
+
+      .dkd_anyela_profile_pill {
+        white-space: nowrap;
+        padding: 8px 10px;
+        border-radius: 999px;
+        background: rgba(24, 247, 255, 0.12);
+        color: var(--dkd_anyela_profile_cyan);
+        border: 1px solid rgba(24, 247, 255, 0.26);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .dkd_anyela_profile_field_grid {
+        display: grid;
+        gap: 10px;
+      }
+
+      .dkd_anyela_profile_field {
+        display: grid;
+        gap: 7px;
+        padding: 13px;
+        border-radius: 18px;
+        background: var(--dkd_anyela_profile_panel_soft);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .dkd_anyela_profile_label {
+        color: rgba(255, 255, 255, 0.66);
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+      }
+
+      .dkd_anyela_profile_input,
+      .dkd_anyela_profile_select {
+        width: 100%;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        outline: none;
+        border-radius: 15px;
+        background: rgba(6, 0, 27, 0.72);
+        color: var(--dkd_anyela_profile_text);
+        padding: 12px 13px;
+      }
+
+      .dkd_anyela_profile_input:focus,
+      .dkd_anyela_profile_select:focus {
+        box-shadow: 0 0 0 3px rgba(255, 43, 214, 0.26), 0 0 24px rgba(24, 247, 255, 0.18);
+        border-color: rgba(24, 247, 255, 0.45);
+      }
+
+      .dkd_anyela_profile_progress {
+        height: 13px;
+        overflow: hidden;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.11);
+      }
+
+      .dkd_anyela_profile_progress_bar {
+        width: 82%;
+        height: 100%;
+        border-radius: inherit;
+        background: linear-gradient(90deg, var(--dkd_anyela_profile_pink), var(--dkd_anyela_profile_cyan));
+        box-shadow: 0 0 20px rgba(255, 43, 214, 0.38);
+      }
+
+      .dkd_anyela_profile_stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 9px;
+      }
+
+      .dkd_anyela_profile_stat {
+        padding: 13px 9px;
+        border-radius: 18px;
+        text-align: center;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .dkd_anyela_profile_stat strong {
+        display: block;
+        font-size: 19px;
+      }
+
+      .dkd_anyela_profile_stat span {
+        display: block;
+        margin-top: 4px;
+        color: var(--dkd_anyela_profile_muted);
+        font-size: 11px;
+      }
+
+      .dkd_anyela_profile_action_grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+      }
+
+      .dkd_anyela_profile_action {
+        min-height: 50px;
+        display: grid;
+        place-items: center;
+        border-radius: 17px;
+        font-weight: 950;
+        text-align: center;
+      }
+
+      .dkd_anyela_profile_action_primary {
+        background: linear-gradient(135deg, var(--dkd_anyela_profile_pink), #7f2bff);
+        color: #fff;
+        box-shadow: 0 0 28px rgba(255, 43, 214, 0.32);
+      }
+
+      .dkd_anyela_profile_action_secondary {
+        background: rgba(24, 247, 255, 0.12);
+        color: var(--dkd_anyela_profile_cyan);
+        border: 1px solid rgba(24, 247, 255, 0.25);
+      }
+
+      @media (min-width: 820px) {
+        .dkd_anyela_profile_page { align-items: center; padding: 32px 0; }
+        .dkd_anyela_profile_shell {
+          min-height: auto;
+          border-radius: 38px;
+          border: 1px solid rgba(255, 255, 255, 0.14);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="dkd_anyela_profile_page" aria-label="Anyela Born profil ekranı">
+      <section class="dkd_anyela_profile_shell">
+        <header class="dkd_anyela_profile_topbar">
+          <a class="dkd_anyela_profile_icon_button" href="../Home/" aria-label="Ana sayfaya dön">‹</a>
+          <div class="dkd_anyela_profile_title_group">
+            <p class="dkd_anyela_profile_kicker">Miami Style Club</p>
+            <h1 class="dkd_anyela_profile_title">Profilim</h1>
+          </div>
+          <a class="dkd_anyela_profile_icon_button" href="../Packages/" aria-label="Paketleri aç">◇</a>
+        </header>
+
+        <section class="dkd_anyela_profile_hero" aria-label="Profil kimliği">
+          <div class="dkd_anyela_profile_identity">
+            <div class="dkd_anyela_profile_avatar" aria-hidden="true">AB</div>
+            <div>
+              <h2 class="dkd_anyela_profile_name">Anyela Born</h2>
+              <p class="dkd_anyela_profile_status">Miami Vibes üyesi · Profil kontrol merkezi</p>
+            </div>
+          </div>
+          <div class="dkd_anyela_profile_badges" aria-label="Profil rozetleri">
+            <span class="dkd_anyela_profile_badge">Premium görünüm</span>
+            <span class="dkd_anyela_profile_badge">Miami tema</span>
+            <span class="dkd_anyela_profile_badge">Sohbet hazır</span>
+          </div>
+        </section>
+
+        <section class="dkd_anyela_profile_section" aria-label="Profil tamamlama">
+          <div class="dkd_anyela_profile_section_head">
+            <div>
+              <h2 class="dkd_anyela_profile_section_title">Profil Durumu</h2>
+              <p class="dkd_anyela_profile_section_hint">Hesap bilgilerini, tercihlerini ve bildirim ayarlarını tek ekrandan takip et.</p>
+            </div>
+            <span class="dkd_anyela_profile_pill">%82 hazır</span>
+          </div>
+          <div class="dkd_anyela_profile_progress" aria-label="Profil tamamlama yüzdesi">
+            <div class="dkd_anyela_profile_progress_bar"></div>
+          </div>
+        </section>
+
+        <section class="dkd_anyela_profile_section" aria-label="Hesap bilgileri">
+          <div class="dkd_anyela_profile_section_head">
+            <div>
+              <h2 class="dkd_anyela_profile_section_title">Hesap Bilgileri</h2>
+              <p class="dkd_anyela_profile_section_hint">Bu alan ileride gerçek üyelik sistemiyle bağlanacak şekilde hazırlandı.</p>
+            </div>
+          </div>
+          <div class="dkd_anyela_profile_field_grid">
+            <label class="dkd_anyela_profile_field">
+              <span class="dkd_anyela_profile_label">Kullanıcı adı</span>
+              <input class="dkd_anyela_profile_input" value="Anyela Born" aria-label="Kullanıcı adı" />
+            </label>
+            <label class="dkd_anyela_profile_field">
+              <span class="dkd_anyela_profile_label">E-posta</span>
+              <input class="dkd_anyela_profile_input" placeholder="mail adresini ekle" aria-label="E-posta" />
+            </label>
+            <label class="dkd_anyela_profile_field">
+              <span class="dkd_anyela_profile_label">Üyelik tipi</span>
+              <select class="dkd_anyela_profile_select" aria-label="Üyelik tipi">
+                <option>Miami Free</option>
+                <option>Miami VIP</option>
+                <option>Anyela Full Paket</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="dkd_anyela_profile_section" aria-label="Tercihler">
+          <div class="dkd_anyela_profile_section_head">
+            <div>
+              <h2 class="dkd_anyela_profile_section_title">Tercihler</h2>
+              <p class="dkd_anyela_profile_section_hint">Sohbet dili, bildirim yoğunluğu ve ilgi alanları burada düzenlenir.</p>
+            </div>
+          </div>
+          <div class="dkd_anyela_profile_field_grid">
+            <label class="dkd_anyela_profile_field">
+              <span class="dkd_anyela_profile_label">Sohbet dili</span>
+              <select class="dkd_anyela_profile_select" aria-label="Sohbet dili">
+                <option>Türkçe</option>
+                <option>English</option>
+                <option>Türkçe + English</option>
+              </select>
+            </label>
+            <label class="dkd_anyela_profile_field">
+              <span class="dkd_anyela_profile_label">Bildirim modu</span>
+              <select class="dkd_anyela_profile_select" aria-label="Bildirim modu">
+                <option>Öne çıkan duyurular</option>
+                <option>Sohbet ve paket fırsatları</option>
+                <option>Sessiz mod</option>
+              </select>
+            </label>
+          </div>
+        </section>
+
+        <section class="dkd_anyela_profile_section" aria-label="Aktivite özeti">
+          <div class="dkd_anyela_profile_section_head">
+            <div>
+              <h2 class="dkd_anyela_profile_section_title">Aktivite Özeti</h2>
+              <p class="dkd_anyela_profile_section_hint">Sohbet, paket ve profil durumunu hızlıca gör.</p>
+            </div>
+          </div>
+          <div class="dkd_anyela_profile_stats">
+            <div class="dkd_anyela_profile_stat"><strong>12</strong><span>Sohbet</span></div>
+            <div class="dkd_anyela_profile_stat"><strong>3</strong><span>Paket</span></div>
+            <div class="dkd_anyela_profile_stat"><strong>24</strong><span>Bildirim</span></div>
+          </div>
+        </section>
+
+        <section class="dkd_anyela_profile_section" aria-label="Hızlı işlemler">
+          <div class="dkd_anyela_profile_action_grid">
+            <a class="dkd_anyela_profile_action dkd_anyela_profile_action_primary" href="../ChatRoom/">Sohbete Başla</a>
+            <a class="dkd_anyela_profile_action dkd_anyela_profile_action_secondary" href="../Packages/">Paketleri Aç</a>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
