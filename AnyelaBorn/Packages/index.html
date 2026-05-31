@@ -87,7 +87,7 @@
 
       .dkd_anyela_offer_hotspot {
         left: 37.0%;
-        top: 13.55%;
+        top: 14.05%;
         width: 47.2%;
         height: 8.2%;
         border-radius: 24px;
@@ -582,6 +582,15 @@
           history.replaceState(null, "", "./");
         };
 
+        const dkdGoPreviousPage = function dkdGoPreviousPage() {
+          const dkdAnyelaFallbackRoute = "../Login/";
+          if (window.history.length > 1) {
+            window.history.back();
+            return;
+          }
+          window.location.href = document.referrer || dkdAnyelaFallbackRoute;
+        };
+
         const dkdRenderPackage = function dkdRenderPackage(dkdKey) {
           const dkdPackage = dkdPackages[dkdKey];
           if (!dkdPackage) { return; }
@@ -645,8 +654,11 @@
         });
 
         document.querySelector("[data-dkd-offer]").addEventListener("click", dkdShowOffer);
-        document.querySelectorAll("[data-dkd-show-landing], [data-dkd-back]").forEach(function dkdBindBack(dkdButton) {
+        document.querySelectorAll("[data-dkd-show-landing]").forEach(function dkdBindBackToLanding(dkdButton) {
           dkdButton.addEventListener("click", dkdShowLanding);
+        });
+        document.querySelectorAll("[data-dkd-back]").forEach(function dkdBindPreviousPage(dkdButton) {
+          dkdButton.addEventListener("click", dkdGoPreviousPage);
         });
 
         document.querySelectorAll("[data-dkd-file-input]").forEach(function dkdBindFile(dkdInput) {
