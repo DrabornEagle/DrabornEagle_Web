@@ -278,7 +278,6 @@
         .dkd_anyela_login_mockup { min-height: auto; }
       }
     </style>
-    <script src="../assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="login"></script>
   </head>
   <body>
     <main class="dkd_anyela_login_page" aria-label="Anyela Born Club Login sayfası">
@@ -292,7 +291,7 @@
           loading="eager"
         />
 
-        <a class="dkd_anyela_login_package_link" href="#" aria-label="Paketleri İncele" data-dkd-anyela-package-check="true"></a>
+        <a class="dkd_anyela_login_package_link" href="../Packages/" aria-label="Paketleri İncele"></a>
 
         <form class="dkd_anyela_login_form" autocomplete="on">
           <label class="dkd_anyela_login_screen_reader" for="dkd_anyela_login_email">Email</label>
@@ -324,7 +323,7 @@
 
         <section class="dkd_anyela_login_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Club Login</h1>
-          <p>Email ve şifre alanları Supabase Auth ile çalışır. Paketleri İncele butonu giriş yapılmadan popup bilgi verir.</p>
+          <p>Email ve şifre alanları Supabase Auth ile çalışır. Paketleri İncele butonu Packages sayfasına gider.</p>
         </section>
       </section>
     </main>
@@ -352,13 +351,10 @@
 
         const dkdAnyelaSupabaseUrl = "https://ztxlcfcwuwerxrhwfmte.supabase.co";
         const dkdAnyelaSupabasePublishableKey = "sb_publishable_GSd5xFBwG9pioOY8N6MRQw_C2n7RLYa";
-        const dkdAnyelaHomeRoute = "../Home/";
+        const dkdAnyelaPackagesRoute = "../Packages/";
         const dkdAnyelaLoginPopup = document.getElementById("dkd_anyela_login_popup");
-        const dkdAnyelaLoginPopupTitle = document.getElementById("dkd_anyela_login_popup_title");
-        const dkdAnyelaLoginPopupSubtitle = document.querySelector(".dkd_anyela_login_popup_subtitle");
         const dkdAnyelaLoginPopupNote = document.getElementById("dkd_anyela_login_popup_note");
         const dkdAnyelaLoginPopupClose = document.getElementById("dkd_anyela_login_popup_close");
-        const dkdAnyelaLoginPackageLink = document.querySelector("[data-dkd-anyela-package-check]");
         const dkdAnyelaLoginButtons = Array.from(document.querySelectorAll("[data-dkd-anyela-login-action]"));
         const dkdAnyelaLoginChoices = Array.from(document.querySelectorAll("[data-dkd-anyela-popup-choice]"));
         const dkdAnyelaLoginEmail = document.getElementById("dkd_anyela_login_email");
@@ -375,19 +371,9 @@
           : null;
 
         function dkdAnyelaLoginSetBusy(dkdAnyelaIsBusy) {
-          dkdAnyelaLoginChoices.forEach(function dkdAnyelaLoginChoiceButton(dkdAnyelaLoginChoiceItem) {
-            dkdAnyelaLoginChoiceItem.disabled = dkdAnyelaIsBusy;
+          dkdAnyelaLoginChoices.forEach(function dkdAnyelaLoginChoiceButton() {
+            arguments[0].disabled = dkdAnyelaIsBusy;
           });
-        }
-
-        function dkdAnyelaLoginSetPopupText(dkdAnyelaTitle, dkdAnyelaSubtitle) {
-          if (dkdAnyelaLoginPopupTitle) {
-            dkdAnyelaLoginPopupTitle.textContent = dkdAnyelaTitle;
-          }
-
-          if (dkdAnyelaLoginPopupSubtitle) {
-            dkdAnyelaLoginPopupSubtitle.textContent = dkdAnyelaSubtitle;
-          }
         }
 
         function dkdAnyelaLoginSetNote(dkdAnyelaMessage, dkdAnyelaStatus) {
@@ -424,7 +410,6 @@
 
           dkdAnyelaLoginPopup.setAttribute("data-dkd-anyela-popup-open", "true");
           dkdAnyelaLoginPopup.setAttribute("aria-hidden", "false");
-          dkdAnyelaLoginSetPopupText("Miami Giriş Seçimi", "Email ve şifreni yaz; giriş yap, kayıt ol veya misafir olarak devam et.");
           dkdAnyelaLoginSetNote("Email ve şifreni yazdıysan seçim yapabilirsin.", "success");
         }
 
@@ -435,37 +420,6 @@
 
           dkdAnyelaLoginPopup.removeAttribute("data-dkd-anyela-popup-open");
           dkdAnyelaLoginPopup.setAttribute("aria-hidden", "true");
-        }
-
-        function dkdAnyelaLoginSaveAccess(dkdAnyelaLoginMode) {
-          try {
-            window.localStorage.setItem("dkd_anyela_auth_access", "allowed");
-            window.localStorage.setItem("dkd_anyela_auth_mode", dkdAnyelaLoginMode);
-            window.localStorage.setItem("dkd_anyela_auth_at", String(Date.now()));
-
-            if (dkdAnyelaLoginMode === "member") {
-              window.localStorage.setItem("dkd_anyela_account_login_once", "true");
-            }
-
-            if (dkdAnyelaLoginMode === "guest") {
-              window.localStorage.setItem("dkd_anyela_guest_login_active", "true");
-            }
-          } catch (dkdAnyelaLoginStorageError) {
-          }
-        }
-
-        function dkdAnyelaLoginShowPackageWarning(dkdAnyelaLoginEvent) {
-          dkdAnyelaLoginEvent.preventDefault();
-          dkdAnyelaLoginEvent.stopPropagation();
-
-          if (!dkdAnyelaLoginPopup) {
-            return;
-          }
-
-          dkdAnyelaLoginSetPopupText("Lütfen Önce Giriş yapın", "Paketleri incelemek için hesabınla giriş yapabilir veya misafir olarak devam edebilirsin.");
-          dkdAnyelaLoginPopup.setAttribute("data-dkd-anyela-popup-open", "true");
-          dkdAnyelaLoginPopup.setAttribute("aria-hidden", "false");
-          dkdAnyelaLoginSetNote("Lütfen Önce Giriş yapın", "error");
         }
 
         function dkdAnyelaLoginValidateFields() {
@@ -517,10 +471,9 @@
             return;
           }
 
-          dkdAnyelaLoginSaveAccess("member");
-          dkdAnyelaLoginSetNote("Giriş başarılı. Home sayfasına yönlendiriliyorsun...", "success");
+          dkdAnyelaLoginSetNote("Giriş başarılı. Paketler sayfasına yönlendiriliyorsun...", "success");
           window.setTimeout(function dkdAnyelaLoginRedirectAfterSignIn() {
-            window.location.href = dkdAnyelaHomeRoute;
+            window.location.href = dkdAnyelaPackagesRoute;
           }, 650);
         }
 
@@ -557,10 +510,9 @@
           }
 
           if (dkdAnyelaSignUpResult.data && dkdAnyelaSignUpResult.data.session) {
-            dkdAnyelaLoginSaveAccess("member");
-            dkdAnyelaLoginSetNote("Kayıt tamamlandı. Home sayfasına yönlendiriliyorsun...", "success");
+            dkdAnyelaLoginSetNote("Kayıt tamamlandı. Paketler sayfasına yönlendiriliyorsun...", "success");
             window.setTimeout(function dkdAnyelaLoginRedirectAfterSignUp() {
-              window.location.href = dkdAnyelaHomeRoute;
+              window.location.href = dkdAnyelaPackagesRoute;
             }, 650);
             return;
           }
@@ -572,8 +524,7 @@
           const dkdAnyelaLoginChoice = dkdAnyelaLoginEvent.currentTarget.getAttribute("data-dkd-anyela-popup-choice");
 
           if (dkdAnyelaLoginChoice === "guest") {
-            dkdAnyelaLoginSaveAccess("guest");
-            window.location.href = dkdAnyelaHomeRoute;
+            window.location.href = dkdAnyelaPackagesRoute;
             return;
           }
 
@@ -585,10 +536,6 @@
           if (dkdAnyelaLoginChoice === "register") {
             await dkdAnyelaLoginSignUp();
           }
-        }
-
-        if (dkdAnyelaLoginPackageLink) {
-          dkdAnyelaLoginPackageLink.addEventListener("click", dkdAnyelaLoginShowPackageWarning);
         }
 
         dkdAnyelaLoginButtons.forEach(function dkdAnyelaLoginBindButton(dkdAnyelaLoginButton) {
