@@ -23,8 +23,9 @@
   function dkdAnyelaAuthHasSavedAccountAccess() {
     const dkdAnyelaAuthAccessFlag = dkdAnyelaAuthReadStorage("dkd_anyela_auth_access");
     const dkdAnyelaAuthAccountOnceFlag = dkdAnyelaAuthReadStorage("dkd_anyela_account_login_once");
+    const dkdAnyelaAuthModeFlag = dkdAnyelaAuthReadStorage("dkd_anyela_auth_mode");
 
-    return dkdAnyelaAuthAccessFlag === "allowed" || dkdAnyelaAuthAccountOnceFlag === "true";
+    return dkdAnyelaAuthAccountOnceFlag === "true" || (dkdAnyelaAuthAccessFlag === "allowed" && dkdAnyelaAuthModeFlag === "member");
   }
 
   function dkdAnyelaAuthHasSupabaseSession() {
@@ -70,14 +71,14 @@
   const dkdAnyelaAuthAccessGranted = dkdAnyelaAuthHasAccess();
 
   if (dkdAnyelaAuthMode === "login") {
-    if (dkdAnyelaAuthAccessGranted) {
+    if (dkdAnyelaAuthAccountGranted) {
       dkdAnyelaAuthRedirect(dkdAnyelaAuthHomePath);
     }
     return;
   }
 
   if (dkdAnyelaAuthMode === "entry") {
-    dkdAnyelaAuthRedirect(dkdAnyelaAuthAccessGranted ? dkdAnyelaAuthHomePath : dkdAnyelaAuthLoginPath);
+    dkdAnyelaAuthRedirect(dkdAnyelaAuthAccountGranted ? dkdAnyelaAuthHomePath : dkdAnyelaAuthLoginPath);
     return;
   }
 
