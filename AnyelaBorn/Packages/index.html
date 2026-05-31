@@ -18,7 +18,6 @@
         --dkd_purple: #812bff;
         --dkd_gold: #ffd05f;
         --dkd_bg: #070024;
-        --dkd_card: rgba(15, 4, 55, 0.84);
         --dkd_text: #ffffff;
         --dkd_muted: rgba(255, 255, 255, 0.74);
         color-scheme: dark;
@@ -56,7 +55,6 @@
       }
 
       .dkd_anyela_packages_landing { position: relative; min-height: 100svh; }
-
       .dkd_anyela_packages_reference {
         display: block;
         width: 100%;
@@ -86,6 +84,38 @@
       }
 
       .dkd_anyela_offer_hotspot { left: 37.0%; top: 12.5%; width: 47.2%; height: 8.2%; border-radius: 24px; }
+      .dkd_anyela_offer_hotspot::before,
+      .dkd_anyela_offer_hotspot::after {
+        content: "";
+        position: absolute;
+        inset: -8px;
+        border-radius: 28px;
+        pointer-events: none;
+      }
+      .dkd_anyela_offer_hotspot::before {
+        border: 2px solid rgba(24, 247, 255, 0.86);
+        box-shadow:
+          0 0 20px rgba(24, 247, 255, 0.74),
+          0 0 34px rgba(255, 43, 214, 0.60),
+          inset 0 0 18px rgba(255, 43, 214, 0.42);
+        animation: dkdAnyelaOfferPulse 1.35s ease-in-out infinite;
+      }
+      .dkd_anyela_offer_hotspot::after {
+        background: linear-gradient(115deg, transparent 0 34%, rgba(255,255,255,0.62) 47%, transparent 60% 100%);
+        transform: translateX(-90%) rotate(6deg);
+        animation: dkdAnyelaOfferSweep 2.25s ease-in-out infinite;
+        mix-blend-mode: screen;
+      }
+      @keyframes dkdAnyelaOfferPulse {
+        0%, 100% { transform: scale(1); opacity: 0.72; }
+        50% { transform: scale(1.045); opacity: 1; }
+      }
+      @keyframes dkdAnyelaOfferSweep {
+        0% { transform: translateX(-105%) rotate(6deg); opacity: 0; }
+        24%, 65% { opacity: 0.85; }
+        100% { transform: translateX(105%) rotate(6deg); opacity: 0; }
+      }
+
       .dkd_anyela_mini_hotspot { left: 6.0%; top: 38.2%; width: 88.0%; height: 14.6%; }
       .dkd_anyela_voice_hotspot { left: 6.0%; top: 54.3%; width: 88.0%; height: 14.6%; }
       .dkd_anyela_vip_hotspot { left: 6.0%; top: 70.3%; width: 88.0%; height: 14.6%; }
@@ -97,152 +127,93 @@
         min-height: 100svh;
         padding: 18px;
         background:
-          radial-gradient(circle at 20% 4%, rgba(255, 43, 214, 0.24), transparent 21rem),
-          radial-gradient(circle at 88% 10%, rgba(24, 247, 255, 0.18), transparent 24rem),
+          radial-gradient(circle at 16% 4%, rgba(255, 43, 214, 0.28), transparent 20rem),
+          radial-gradient(circle at 92% 8%, rgba(24, 247, 255, 0.20), transparent 23rem),
+          radial-gradient(circle at 50% 95%, rgba(129, 43, 255, 0.23), transparent 26rem),
           linear-gradient(180deg, #090032 0%, #040012 100%);
         color: var(--dkd_text);
+        animation: dkdAnyelaScreenRise 260ms ease both;
       }
-
       body[data-dkd-screen="detail"] .dkd_anyela_packages_landing,
       body[data-dkd-screen="offer"] .dkd_anyela_packages_landing { display: none; }
       body[data-dkd-screen="detail"] #dkd_anyela_detail_screen,
       body[data-dkd-screen="offer"] #dkd_anyela_offer_screen { display: block; }
-
-      .dkd_anyela_topbar {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        margin-bottom: 16px;
+      @keyframes dkdAnyelaScreenRise {
+        from { opacity: 0; transform: translateY(18px) scale(0.985); filter: blur(6px); }
+        to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
       }
 
+      .dkd_anyela_topbar { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
       .dkd_anyela_icon_button {
         width: 46px;
         height: 46px;
         border-radius: 999px;
         color: #fff;
         background: rgba(255, 255, 255, 0.08);
-        box-shadow:
-          inset 0 0 0 1px rgba(255, 255, 255, 0.18),
-          0 0 22px rgba(255, 43, 214, 0.26);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.18), 0 0 22px rgba(255,43,214,0.26);
         cursor: pointer;
         font-size: 28px;
         line-height: 1;
       }
-
       .dkd_anyela_brand { flex: 1; min-width: 0; }
-      .dkd_anyela_brand small {
-        display: block;
-        color: var(--dkd_cyan);
-        font-size: 12px;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        font-weight: 900;
-      }
-      .dkd_anyela_brand strong {
-        display: block;
-        font-size: clamp(24px, 7vw, 36px);
-        line-height: 1.05;
-        text-shadow: 0 0 20px rgba(255, 43, 214, 0.62);
-      }
+      .dkd_anyela_brand small { display:block; color: var(--dkd_cyan); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 900; }
+      .dkd_anyela_brand strong { display:block; font-size: clamp(24px, 7vw, 36px); line-height: 1.05; text-shadow: 0 0 20px rgba(255,43,214,0.62); }
 
       .dkd_anyela_hero_card,
       .dkd_anyela_payment_card,
       .dkd_anyela_calc_card,
       .dkd_anyela_summary_card {
+        position: relative;
         border: 1.4px solid rgba(255, 255, 255, 0.18);
         border-radius: 28px;
         background:
-          radial-gradient(circle at 8% 0%, rgba(24, 247, 255, 0.18), transparent 30%),
-          radial-gradient(circle at 92% 0%, rgba(255, 43, 214, 0.25), transparent 34%),
-          rgba(10, 2, 42, 0.84);
+          linear-gradient(145deg, rgba(13, 3, 50, 0.92), rgba(32, 4, 72, 0.82)),
+          radial-gradient(circle at 8% 0%, rgba(24,247,255,0.18), transparent 30%),
+          radial-gradient(circle at 92% 0%, rgba(255,43,214,0.25), transparent 34%);
         box-shadow:
           0 18px 42px rgba(0, 0, 0, 0.38),
           0 0 38px rgba(255, 43, 214, 0.16),
           inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        overflow: hidden;
       }
-
-      .dkd_anyela_hero_card { padding: 20px; overflow: hidden; position: relative; }
-      .dkd_anyela_hero_card::before {
+      .dkd_anyela_hero_card::before,
+      .dkd_anyela_payment_card::before,
+      .dkd_anyela_calc_card::before {
         content: "";
         position: absolute;
-        inset: -2px;
+        inset: 0;
         pointer-events: none;
-        background: linear-gradient(120deg, transparent, rgba(255,255,255,0.20), transparent);
-        transform: translateX(-80%);
-        animation: dkdAnyelaShine 3.8s ease-in-out infinite;
+        background: linear-gradient(115deg, transparent, rgba(255,255,255,0.16), transparent);
+        transform: translateX(-92%);
+        animation: dkdAnyelaModernSweep 4.2s ease-in-out infinite;
       }
-      @keyframes dkdAnyelaShine {
-        0% { transform: translateX(-90%); opacity: 0; }
-        28% { opacity: 1; }
-        66% { opacity: 1; }
-        100% { transform: translateX(90%); opacity: 0; }
+      @keyframes dkdAnyelaModernSweep {
+        0% { transform: translateX(-92%); opacity: 0; }
+        26%, 58% { opacity: 1; }
+        100% { transform: translateX(92%); opacity: 0; }
       }
+      .dkd_anyela_hero_card { padding: 20px; }
+      .dkd_anyela_title { margin: 0 0 8px; font-size: clamp(30px, 8vw, 44px); line-height: 1.04; letter-spacing: -0.03em; text-shadow: 0 0 22px rgba(255,43,214,0.54); }
+      .dkd_anyela_description { margin: 0; color: var(--dkd_muted); font-size: 15px; line-height: 1.55; }
+      .dkd_anyela_price_row { display: grid; grid-template-columns: 1fr; gap: 8px; margin-top: 18px; }
+      .dkd_anyela_price { display:flex; align-items:flex-end; gap: 8px; font-size: clamp(34px, 10vw, 52px); line-height: 1; font-weight: 950; color: #fff; text-shadow: 0 0 22px rgba(255,43,214,0.74); }
+      .dkd_anyela_price small { font-size: 0.46em; line-height: 1.08; margin-bottom: 4px; color: var(--dkd_cyan); }
+      .dkd_anyela_minutes { color: var(--dkd_gold); font-weight: 950; font-size: 16px; }
 
-      .dkd_anyela_badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        border-radius: 999px;
-        padding: 8px 12px;
-        background: linear-gradient(100deg, rgba(24, 247, 255, 0.22), rgba(255, 43, 214, 0.24));
-        color: #fff;
-        font-size: 13px;
-        font-weight: 900;
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
-      }
-
-      .dkd_anyela_title {
-        margin: 14px 0 8px;
-        font-size: clamp(30px, 8vw, 44px);
-        line-height: 1.04;
-        letter-spacing: -0.03em;
-        text-shadow: 0 0 22px rgba(255, 43, 214, 0.54);
-      }
-
-      .dkd_anyela_description {
-        margin: 0;
-        color: var(--dkd_muted);
-        font-size: 15px;
-        line-height: 1.55;
-      }
-
-      .dkd_anyela_price_row {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 12px;
-        align-items: end;
-        margin-top: 18px;
-      }
-
-      .dkd_anyela_price {
-        font-size: clamp(34px, 10vw, 52px);
-        line-height: 1;
-        font-weight: 950;
-        color: #fff;
-        text-shadow: 0 0 22px rgba(255, 43, 214, 0.74);
-      }
-
-      .dkd_anyela_minutes {
-        color: var(--dkd_gold);
-        font-weight: 950;
-        font-size: 16px;
-        text-align: right;
-      }
-
-      .dkd_anyela_feature_grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 10px;
-        margin: 14px 0;
-      }
-
+      .dkd_anyela_feature_grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 14px 0; }
       .dkd_anyela_feature {
         min-height: 92px;
         padding: 14px;
         border-radius: 20px;
-        background: rgba(255, 255, 255, 0.07);
-        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.10);
+        background: linear-gradient(145deg, rgba(255,255,255,0.08), rgba(24,247,255,0.055));
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10), 0 12px 26px rgba(0,0,0,0.18);
+        transform: translateY(0);
+        animation: dkdAnyelaFeaturePop 360ms ease both;
       }
+      .dkd_anyela_feature:nth-child(2) { animation-delay: 45ms; }
+      .dkd_anyela_feature:nth-child(3) { animation-delay: 90ms; }
+      .dkd_anyela_feature:nth-child(4) { animation-delay: 135ms; }
+      @keyframes dkdAnyelaFeaturePop { from { opacity:0; transform: translateY(14px) scale(0.96); } to { opacity:1; transform: translateY(0) scale(1); } }
       .dkd_anyela_feature span { display:block; font-size: 22px; margin-bottom: 6px; }
       .dkd_anyela_feature strong { display:block; font-size: 14px; }
       .dkd_anyela_feature small { color: var(--dkd_muted); line-height: 1.4; }
@@ -250,113 +221,32 @@
       .dkd_anyela_payment_card,
       .dkd_anyela_calc_card,
       .dkd_anyela_summary_card { padding: 18px; margin-top: 14px; }
-      .dkd_anyela_section_title {
-        margin: 0 0 12px;
-        font-size: 21px;
-        text-shadow: 0 0 16px rgba(24, 247, 255, 0.42);
-      }
-
-      .dkd_anyela_iban {
-        padding: 14px;
-        border-radius: 18px;
-        background: rgba(0, 0, 0, 0.24);
-        border: 1px solid rgba(24, 247, 255, 0.22);
-        line-height: 1.6;
-        font-size: 14px;
-      }
+      .dkd_anyela_section_title { margin: 0 0 12px; font-size: 21px; text-shadow: 0 0 16px rgba(24,247,255,0.42); }
+      .dkd_anyela_iban { padding: 14px; border-radius: 18px; background: rgba(0,0,0,0.24); border: 1px solid rgba(24,247,255,0.22); line-height: 1.6; font-size: 14px; }
       .dkd_anyela_iban strong { color: var(--dkd_cyan); }
+      .dkd_anyela_upload_area { display: grid; gap: 10px; margin-top: 14px; }
+      .dkd_anyela_file_label { display:grid; place-items:center; min-height:72px; padding:14px; border:1.5px dashed rgba(24,247,255,0.58); border-radius:20px; color:#fff; background: rgba(24,247,255,0.08); font-weight:900; text-align:center; cursor:pointer; }
+      .dkd_anyela_file_label input { display:none; }
+      .dkd_anyela_file_name { color: var(--dkd_muted); font-size: 13px; line-height: 1.45; }
+      .dkd_anyela_notice { margin-top: 14px; padding: 13px; border-radius: 17px; background: rgba(255,43,214,0.12); color: rgba(255,255,255,0.86); font-size: 13px; line-height: 1.45; }
+      .dkd_anyela_primary_button { width: 100%; min-height: 56px; margin-top: 14px; border-radius: 999px; color: #fff; font-weight: 950; font-size: 17px; cursor: pointer; background: linear-gradient(105deg, #10e8ff 0%, #6548ff 28%, #ff2bd6 68%, #ffbb42 100%); box-shadow: 0 16px 30px rgba(255,43,214,0.26), 0 0 26px rgba(24,247,255,0.20), inset 0 1px 0 rgba(255,255,255,0.32); }
 
-      .dkd_anyela_upload_area {
-        display: grid;
-        gap: 10px;
-        margin-top: 14px;
-      }
-      .dkd_anyela_file_label {
-        display: grid;
-        place-items: center;
-        min-height: 72px;
-        padding: 14px;
-        border: 1.5px dashed rgba(24, 247, 255, 0.58);
-        border-radius: 20px;
-        color: #fff;
-        background: rgba(24, 247, 255, 0.08);
-        font-weight: 900;
-        text-align: center;
-        cursor: pointer;
-      }
-      .dkd_anyela_file_label input { display: none; }
-      .dkd_anyela_file_name { color: var(--dkd_muted); font-size: 13px; line-height: 1.4; }
-      .dkd_anyela_notice {
-        margin-top: 12px;
-        padding: 13px;
-        border-radius: 17px;
-        background: rgba(255, 43, 214, 0.12);
-        color: rgba(255, 255, 255, 0.86);
-        font-size: 13px;
-        line-height: 1.45;
-      }
-
-      .dkd_anyela_primary_button {
-        width: 100%;
-        min-height: 56px;
-        margin-top: 14px;
-        border-radius: 999px;
-        color: #fff;
-        font-weight: 950;
-        font-size: 17px;
-        cursor: pointer;
-        background: linear-gradient(105deg, #10e8ff 0%, #6548ff 28%, #ff2bd6 68%, #ffbb42 100%);
-        box-shadow:
-          0 16px 30px rgba(255, 43, 214, 0.26),
-          0 0 26px rgba(24, 247, 255, 0.20),
-          inset 0 1px 0 rgba(255, 255, 255, 0.32);
-      }
-
-      .dkd_anyela_calc_controls { display:grid; gap: 13px; }
-      .dkd_anyela_control {
-        padding: 13px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.07);
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10);
-      }
-      .dkd_anyela_control label { display:flex; justify-content:space-between; gap:10px; font-size: 14px; color: var(--dkd_muted); font-weight: 800; }
+      .dkd_anyela_calc_controls { display:grid; gap:13px; }
+      .dkd_anyela_control { padding:13px; border-radius:18px; background: rgba(255,255,255,0.07); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.10); }
+      .dkd_anyela_control label { display:flex; justify-content:space-between; gap:10px; font-size:14px; color: var(--dkd_muted); font-weight:800; }
       .dkd_anyela_control strong { color:#fff; }
-      .dkd_anyela_control input[type="range"] { width: 100%; accent-color: var(--dkd_pink); margin-top: 10px; }
-      .dkd_anyela_select_row { display:grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-      .dkd_anyela_select {
-        width: 100%;
-        margin-top: 10px;
-        border: 1px solid rgba(24, 247, 255, 0.24);
-        border-radius: 14px;
-        padding: 11px 12px;
-        color: #fff;
-        background: rgba(0,0,0,0.25);
-        outline: none;
-      }
-      .dkd_anyela_total {
-        display:flex;
-        justify-content: space-between;
-        gap: 14px;
-        align-items: center;
-        padding: 16px;
-        border-radius: 22px;
-        background: linear-gradient(110deg, rgba(24,247,255,0.18), rgba(255,43,214,0.20));
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
-      }
+      .dkd_anyela_control input[type="range"] { width:100%; accent-color: var(--dkd_pink); margin-top:10px; }
+      .dkd_anyela_select_row { display:grid; grid-template-columns: 1fr 1fr; gap:10px; }
+      .dkd_anyela_select { width:100%; margin-top:10px; border:1px solid rgba(24,247,255,0.24); border-radius:14px; padding:11px 12px; color:#fff; background:rgba(0,0,0,0.25); outline:none; }
+      .dkd_anyela_total { display:flex; justify-content:space-between; gap:14px; align-items:center; padding:16px; border-radius:22px; background:linear-gradient(110deg, rgba(24,247,255,0.18), rgba(255,43,214,0.20)); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12); }
       .dkd_anyela_total span { color: var(--dkd_muted); font-weight: 800; }
-      .dkd_anyela_total strong { font-size: 30px; text-shadow: 0 0 18px rgba(255,43,214,0.58); }
+      .dkd_anyela_total strong { font-size:30px; text-shadow: 0 0 18px rgba(255,43,214,0.58); }
       .dkd_anyela_detail_list { margin: 12px 0 0; padding-left: 19px; color: var(--dkd_muted); line-height: 1.55; }
       .dkd_anyela_detail_list strong { color:#fff; }
 
       @media (min-width: 820px) {
         .dkd_anyela_packages_page { align-items: center; padding: 32px 0; }
-        .dkd_anyela_packages_shell {
-          width: min(44vw, 480px);
-          min-height: auto;
-          border-radius: 38px;
-          border: 1px solid rgba(255,255,255,0.16);
-          box-shadow: 0 42px 110px rgba(0,0,0,0.58), 0 0 90px rgba(255,43,214,0.23), 0 0 120px rgba(24,247,255,0.16);
-        }
+        .dkd_anyela_packages_shell { width: min(44vw, 480px); min-height: auto; border-radius: 38px; border: 1px solid rgba(255,255,255,0.16); box-shadow: 0 42px 110px rgba(0,0,0,0.58), 0 0 90px rgba(255,43,214,0.23), 0 0 120px rgba(24,247,255,0.16); }
         .dkd_anyela_packages_reference { min-height: auto; }
       }
     </style>
@@ -381,11 +271,10 @@
           </div>
 
           <article class="dkd_anyela_hero_card">
-            <span class="dkd_anyela_badge" id="dkd_detail_badge">🌴 Anyela Born</span>
             <h1 class="dkd_anyela_title" id="dkd_detail_heading">Paket</h1>
             <p class="dkd_anyela_description" id="dkd_detail_description"></p>
             <div class="dkd_anyela_price_row">
-              <div class="dkd_anyela_price" id="dkd_detail_price">0 TL</div>
+              <div class="dkd_anyela_price" id="dkd_detail_price">0 <small>TL</small></div>
               <div class="dkd_anyela_minutes" id="dkd_detail_minutes"></div>
             </div>
           </article>
@@ -397,7 +286,7 @@
             <div class="dkd_anyela_iban">
               <div><strong>IBAN:</strong> TR53 0011 1000 0000 0151 1527 14</div>
               <div><strong>Ad Soyad:</strong> Doğancan Kartal</div>
-              <div><strong>Açıklama:</strong> Paket adı + Instagram/TikTok kullanıcı adın</div>
+              <div><strong>Açıklama:</strong> Açıklama alanını Boş Bırakın</div>
             </div>
             <div class="dkd_anyela_upload_area">
               <label class="dkd_anyela_file_label">
@@ -418,29 +307,28 @@
           </div>
 
           <article class="dkd_anyela_hero_card">
-            <span class="dkd_anyela_badge">✨ Kendi isteklerini belirle</span>
             <h1 class="dkd_anyela_title">Özel Miami Teklifi</h1>
-            <p class="dkd_anyela_description">Dakika, sesli mesaj, video mesaj ve özel görsel adetini seç. Sistem seçimine göre otomatik gelişmiş ücret hesaplaması yapar.</p>
+            <p class="dkd_anyela_description">Dakika, sesli mesaj, video mesaj ve özel görsel adetini seç. Sistem seçimine göre otomatik ücret hesabı yapar.</p>
           </article>
 
           <section class="dkd_anyela_calc_card">
-            <h2 class="dkd_anyela_section_title">Gelişmiş Ücret Hesaplama</h2>
+            <h2 class="dkd_anyela_section_title">Ücret Özeti</h2>
             <div class="dkd_anyela_calc_controls">
               <div class="dkd_anyela_control">
-                <label>Sohbet dakikası <strong><span id="dkd_offer_minutes_value">20</span> dk</strong></label>
-                <input type="range" min="0" max="120" step="5" value="20" id="dkd_offer_minutes" />
+                <label>Sohbet dakikası <strong><span id="dkd_offer_minutes_value">5</span> dk</strong></label>
+                <input type="range" min="5" max="120" step="5" value="5" id="dkd_offer_minutes" />
               </div>
               <div class="dkd_anyela_select_row">
                 <div class="dkd_anyela_control">
                   <label>Sesli mesaj</label>
                   <select class="dkd_anyela_select" id="dkd_offer_voice">
-                    <option value="0">0 adet</option><option value="1">1 adet</option><option value="2" selected>2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option><option value="8">8 adet</option>
+                    <option value="0" selected>0 adet</option><option value="1">1 adet</option><option value="2">2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option><option value="8">8 adet</option>
                   </select>
                 </div>
                 <div class="dkd_anyela_control">
                   <label>Video mesaj</label>
                   <select class="dkd_anyela_select" id="dkd_offer_video">
-                    <option value="0">0 adet</option><option value="1" selected>1 adet</option><option value="2">2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option>
+                    <option value="0" selected>0 adet</option><option value="1">1 adet</option><option value="2">2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option>
                   </select>
                 </div>
               </div>
@@ -448,13 +336,13 @@
                 <div class="dkd_anyela_control">
                   <label>Özel görsel</label>
                   <select class="dkd_anyela_select" id="dkd_offer_photo">
-                    <option value="0">0 adet</option><option value="3">3 adet</option><option value="5" selected>5 adet</option><option value="10">10 adet</option><option value="15">15 adet</option>
+                    <option value="0" selected>0 adet</option><option value="3">3 adet</option><option value="5">5 adet</option><option value="10">10 adet</option><option value="15">15 adet</option>
                   </select>
                 </div>
                 <div class="dkd_anyela_control">
                   <label>Teslim hızı</label>
                   <select class="dkd_anyela_select" id="dkd_offer_speed">
-                    <option value="0">Standart</option><option value="250">Hızlı +250 TL</option><option value="500">VIP öncelik +500 TL</option>
+                    <option value="0" selected>Standart</option><option value="250">Hızlı +250 TL</option><option value="500">VIP öncelik +500 TL</option>
                   </select>
                 </div>
               </div>
@@ -468,7 +356,7 @@
             <div class="dkd_anyela_iban">
               <div><strong>IBAN:</strong> TR53 0011 1000 0000 0151 1527 14</div>
               <div><strong>Ad Soyad:</strong> Doğancan Kartal</div>
-              <div><strong>Açıklama:</strong> Özel Teklif + kullanıcı adın</div>
+              <div><strong>Açıklama:</strong> Açıklama alanını Boş Bırakın</div>
             </div>
             <div class="dkd_anyela_upload_area">
               <label class="dkd_anyela_file_label">
@@ -491,60 +379,60 @@
         const dkdPackages = {
           mini: {
             title: "Mini Sohbet Paketi",
-            badge: "💬 Günlük kısa mesajlaşma",
             price: 499,
-            minutes: "15 dk öncelikli sohbet penceresi",
+            minutes: "30 Dakika mesajlaşma dahil",
             description: "Günlük kısa mesajlaşma, sıcak karşılama ve kişiye özel yanıt akışı için giriş paketi. Daha hafif ve hızlı bir tanışma deneyimi isteyenler için hazırlandı.",
             features: [
-              ["💬", "Mesajlaşma", "Günlük kısa mesajlaşma ve özel yanıtlar"],
-              ["⏱️", "15 dakika", "Öncelikli sohbet penceresi"],
+              ["💬", "Mesajlaşma", "30 Dakika mesajlaşma dahil"],
+              ["⏱️", "30 dakika", "Öncelikli sohbet penceresi"],
               ["🌴", "Miami ton", "Sıcak, samimi ve premium iletişim"],
               ["📎", "Dekont", "Banka dekontu ile manuel onay"]
             ]
           },
           voice: {
             title: "Sesli Mesaj Paketi",
-            badge: "🎙️ Daha yakın iletişim",
             price: 999,
             minutes: "3 sesli mesaj / toplam 6 dk",
             description: "Kişiye özel sesli mesajlar, daha yakın hissettiren iletişim ve özel karşılama içerikleri için modern Miami ses paketi.",
             features: [
               ["🎙️", "3 sesli mesaj", "Her biri yaklaşık 1-2 dakika"],
-              ["💬", "Mini sohbet", "Kısa mesajlaşma desteği dahil"],
+              ["💬", "Mini sohbet", "30 Dakika mesajlaşma dahil"],
               ["⚡", "Öncelik", "Standart paketlere göre daha hızlı sıra"],
               ["📎", "Dekont", "Onay sonrası teslim süreci başlar"]
             ]
           },
           vip: {
             title: "VIP Özel İçerik",
-            badge: "💎 Premium fotoğraf ve içerikler",
             price: 1499,
-            minutes: "5-8 özel görsel + 20 dk içerik planı",
+            minutes: "5 özel görsel + 20 dk içerik planı",
             description: "Kişiye özel premium fotoğraf ve VIP içerik seçkisi. Daha renkli, daha özel ve koleksiyon hissi veren bir paket deneyimi.",
             features: [
               ["💎", "VIP içerik", "Premium fotoğraf ve özel içerik seti"],
-              ["🖼️", "5-8 görsel", "Seçilen konsepte göre hazırlanır"],
+              ["🖼️", "5 görsel", "Seçilen konsepte göre hazırlanır"],
               ["📝", "İçerik planı", "Yaklaşık 20 dk planlama/uyum süreci"],
               ["⭐", "VIP rozet", "Öncelikli kontrol ve onay akışı"]
             ]
           },
           full: {
             title: "Full Premium Paket",
-            badge: "👑 En çok tercih edilen",
             price: 1999,
-            minutes: "30 dk sohbet + 3 sesli + 1 video + VIP içerik",
+            minutes: "24 saat erişim + 3 sesli + 1 video + VIP içerik",
             description: "Sohbet, sesli mesaj, özel içerik ve kısa video deneyimini tek pakette birleştiren kapsamlı Miami premium paketi.",
             features: [
               ["👑", "Full içerik", "Sohbet, sesli mesaj ve özel içerikler"],
-              ["⏱️", "30 dakika", "Öncelikli sohbet/yanıt süresi"],
+              ["⏱️", "24 saat", "Öncelikli sohbet/yanıt süresi"],
               ["🎙️", "3 sesli", "Kişiye özel sesli cevaplar"],
               ["▶️", "1 kısa video", "Kişiye özel kısa video mesaj"]
             ]
           }
         };
 
+        const dkdFormatNumber = function dkdFormatNumber(dkdAmount) {
+          return new Intl.NumberFormat("tr-TR").format(dkdAmount);
+        };
+
         const dkdFormatPrice = function dkdFormatPrice(dkdAmount) {
-          return new Intl.NumberFormat("tr-TR").format(dkdAmount) + " TL";
+          return dkdFormatNumber(dkdAmount) + " TL";
         };
 
         const dkdShowLanding = function dkdShowLanding() {
@@ -558,9 +446,8 @@
 
           document.getElementById("dkd_detail_title").textContent = dkdPackage.title;
           document.getElementById("dkd_detail_heading").textContent = dkdPackage.title;
-          document.getElementById("dkd_detail_badge").textContent = dkdPackage.badge;
           document.getElementById("dkd_detail_description").textContent = dkdPackage.description;
-          document.getElementById("dkd_detail_price").textContent = dkdFormatPrice(dkdPackage.price);
+          document.getElementById("dkd_detail_price").innerHTML = dkdFormatNumber(dkdPackage.price) + " <small>TL</small>";
           document.getElementById("dkd_detail_minutes").textContent = dkdPackage.minutes;
           document.getElementById("dkd_detail_features").innerHTML = dkdPackage.features.map(function dkdFeatureItem(dkdFeature) {
             return '<article class="dkd_anyela_feature"><span>' + dkdFeature[0] + '</span><strong>' + dkdFeature[1] + '</strong><small>' + dkdFeature[2] + '</small></article>';
@@ -594,7 +481,7 @@
             '<li><strong>Sesli mesaj:</strong> ' + dkdVoice + ' adet</li>',
             '<li><strong>Video mesaj:</strong> ' + dkdVideo + ' adet</li>',
             '<li><strong>Özel görsel:</strong> ' + dkdPhoto + ' adet</li>',
-            '<li><strong>Hesaplama:</strong> 199 TL başlangıç + dakika/adet bazlı içerik ücretleri</li>'
+            '<li><strong>Teslim:</strong> ' + document.getElementById("dkd_offer_speed").selectedOptions[0].textContent + '</li>'
           ].join("");
         };
 
