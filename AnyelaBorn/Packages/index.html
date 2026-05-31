@@ -86,6 +86,45 @@
       }
 
       .dkd_anyela_offer_hotspot { left: 37.0%; top: 12.5%; width: 47.2%; height: 8.2%; border-radius: 24px; }
+      .dkd_anyela_offer_hotspot::before,
+      .dkd_anyela_offer_hotspot::after {
+        position: absolute;
+        pointer-events: none;
+        color: #fff;
+        text-shadow:
+          0 0 10px rgba(255, 43, 214, 0.95),
+          0 0 18px rgba(24, 247, 255, 0.85),
+          0 0 26px rgba(255, 208, 95, 0.75);
+      }
+      .dkd_anyela_offer_hotspot::before {
+        content: "👆";
+        right: -7%;
+        top: -42%;
+        font-size: clamp(30px, 9vw, 46px);
+        animation: dkdAnyelaOfferTap 1.05s ease-in-out infinite;
+      }
+      .dkd_anyela_offer_hotspot::after {
+        content: "Teklif için tıkla";
+        right: -2%;
+        top: -12%;
+        padding: 7px 10px;
+        border-radius: 999px;
+        background: linear-gradient(105deg, rgba(24, 247, 255, 0.86), rgba(255, 43, 214, 0.92));
+        font-size: 12px;
+        font-weight: 950;
+        white-space: nowrap;
+        box-shadow: 0 0 22px rgba(255, 43, 214, 0.46);
+        animation: dkdAnyelaOfferBubble 1.45s ease-in-out infinite;
+      }
+      @keyframes dkdAnyelaOfferTap {
+        0%, 100% { transform: translate(0, 0) scale(1); }
+        50% { transform: translate(-11px, 10px) scale(1.12); }
+      }
+      @keyframes dkdAnyelaOfferBubble {
+        0%, 100% { opacity: 0.78; transform: translateY(0); }
+        50% { opacity: 1; transform: translateY(-4px); }
+      }
+
       .dkd_anyela_mini_hotspot { left: 6.0%; top: 38.2%; width: 88.0%; height: 14.6%; }
       .dkd_anyela_voice_hotspot { left: 6.0%; top: 54.3%; width: 88.0%; height: 14.6%; }
       .dkd_anyela_vip_hotspot { left: 6.0%; top: 70.3%; width: 88.0%; height: 14.6%; }
@@ -162,21 +201,7 @@
       }
 
       .dkd_anyela_hero_card { padding: 20px; overflow: hidden; position: relative; }
-      .dkd_anyela_hero_card::before {
-        content: "";
-        position: absolute;
-        inset: -2px;
-        pointer-events: none;
-        background: linear-gradient(120deg, transparent, rgba(255,255,255,0.20), transparent);
-        transform: translateX(-80%);
-        animation: dkdAnyelaShine 3.8s ease-in-out infinite;
-      }
-      @keyframes dkdAnyelaShine {
-        0% { transform: translateX(-90%); opacity: 0; }
-        28% { opacity: 1; }
-        66% { opacity: 1; }
-        100% { transform: translateX(90%); opacity: 0; }
-      }
+      #dkd_anyela_detail_screen .dkd_anyela_hero_card::before { display: none; content: none; animation: none; }
 
       .dkd_anyela_badge {
         display: inline-flex;
@@ -190,6 +215,7 @@
         font-weight: 900;
         box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.14);
       }
+      #dkd_detail_badge { display: none; }
 
       .dkd_anyela_title {
         margin: 14px 0 8px;
@@ -220,7 +246,9 @@
         font-weight: 950;
         color: #fff;
         text-shadow: 0 0 22px rgba(255, 43, 214, 0.74);
+        white-space: nowrap;
       }
+      .dkd_anyela_price_unit { font-size: 0.48em; margin-left: 6px; vertical-align: baseline; color: rgba(255,255,255,0.92); }
 
       .dkd_anyela_minutes {
         color: var(--dkd_gold);
@@ -255,6 +283,7 @@
         font-size: 21px;
         text-shadow: 0 0 16px rgba(24, 247, 255, 0.42);
       }
+      .dkd_anyela_section_title[data-dkd-hidden-title="true"] { display: none; }
 
       .dkd_anyela_iban {
         padding: 14px;
@@ -285,7 +314,7 @@
         cursor: pointer;
       }
       .dkd_anyela_file_label input { display: none; }
-      .dkd_anyela_file_name { color: var(--dkd_muted); font-size: 13px; line-height: 1.4; }
+      .dkd_anyela_file_name { color: var(--dkd_muted); font-size: 13px; line-height: 1.45; }
       .dkd_anyela_notice {
         margin-top: 12px;
         padding: 13px;
@@ -381,11 +410,11 @@
           </div>
 
           <article class="dkd_anyela_hero_card">
-            <span class="dkd_anyela_badge" id="dkd_detail_badge">🌴 Anyela Born</span>
+            <span class="dkd_anyela_badge" id="dkd_detail_badge" aria-hidden="true"></span>
             <h1 class="dkd_anyela_title" id="dkd_detail_heading">Paket</h1>
             <p class="dkd_anyela_description" id="dkd_detail_description"></p>
             <div class="dkd_anyela_price_row">
-              <div class="dkd_anyela_price" id="dkd_detail_price">0 TL</div>
+              <div class="dkd_anyela_price" id="dkd_detail_price">0<span class="dkd_anyela_price_unit">TL</span></div>
               <div class="dkd_anyela_minutes" id="dkd_detail_minutes"></div>
             </div>
           </article>
@@ -397,7 +426,7 @@
             <div class="dkd_anyela_iban">
               <div><strong>IBAN:</strong> TR53 0011 1000 0000 0151 1527 14</div>
               <div><strong>Ad Soyad:</strong> Doğancan Kartal</div>
-              <div><strong>Açıklama:</strong> Paket adı + Instagram/TikTok kullanıcı adın</div>
+              <div><strong>Açıklama:</strong> Açıklama alanını Boş Bırakın</div>
             </div>
             <div class="dkd_anyela_upload_area">
               <label class="dkd_anyela_file_label">
@@ -420,27 +449,27 @@
           <article class="dkd_anyela_hero_card">
             <span class="dkd_anyela_badge">✨ Kendi isteklerini belirle</span>
             <h1 class="dkd_anyela_title">Özel Miami Teklifi</h1>
-            <p class="dkd_anyela_description">Dakika, sesli mesaj, video mesaj ve özel görsel adetini seç. Sistem seçimine göre otomatik gelişmiş ücret hesaplaması yapar.</p>
+            <p class="dkd_anyela_description">Dakika, sesli mesaj, video mesaj ve özel görsel adetini seç. Sistem seçimine göre otomatik ücret hesaplaması yapar.</p>
           </article>
 
           <section class="dkd_anyela_calc_card">
-            <h2 class="dkd_anyela_section_title">Gelişmiş Ücret Hesaplama</h2>
+            <h2 class="dkd_anyela_section_title" data-dkd-hidden-title="true">Ücret Hesaplama</h2>
             <div class="dkd_anyela_calc_controls">
               <div class="dkd_anyela_control">
-                <label>Sohbet dakikası <strong><span id="dkd_offer_minutes_value">20</span> dk</strong></label>
-                <input type="range" min="0" max="120" step="5" value="20" id="dkd_offer_minutes" />
+                <label>Sohbet dakikası <strong><span id="dkd_offer_minutes_value">5</span> dk</strong></label>
+                <input type="range" min="5" max="120" step="5" value="5" id="dkd_offer_minutes" />
               </div>
               <div class="dkd_anyela_select_row">
                 <div class="dkd_anyela_control">
                   <label>Sesli mesaj</label>
                   <select class="dkd_anyela_select" id="dkd_offer_voice">
-                    <option value="0">0 adet</option><option value="1">1 adet</option><option value="2" selected>2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option><option value="8">8 adet</option>
+                    <option value="0" selected>0 adet</option><option value="1">1 adet</option><option value="2">2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option><option value="8">8 adet</option>
                   </select>
                 </div>
                 <div class="dkd_anyela_control">
                   <label>Video mesaj</label>
                   <select class="dkd_anyela_select" id="dkd_offer_video">
-                    <option value="0">0 adet</option><option value="1" selected>1 adet</option><option value="2">2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option>
+                    <option value="0" selected>0 adet</option><option value="1">1 adet</option><option value="2">2 adet</option><option value="3">3 adet</option><option value="5">5 adet</option>
                   </select>
                 </div>
               </div>
@@ -448,13 +477,13 @@
                 <div class="dkd_anyela_control">
                   <label>Özel görsel</label>
                   <select class="dkd_anyela_select" id="dkd_offer_photo">
-                    <option value="0">0 adet</option><option value="3">3 adet</option><option value="5" selected>5 adet</option><option value="10">10 adet</option><option value="15">15 adet</option>
+                    <option value="0" selected>0 adet</option><option value="3">3 adet</option><option value="5">5 adet</option><option value="10">10 adet</option><option value="15">15 adet</option>
                   </select>
                 </div>
                 <div class="dkd_anyela_control">
                   <label>Teslim hızı</label>
                   <select class="dkd_anyela_select" id="dkd_offer_speed">
-                    <option value="0">Standart</option><option value="250">Hızlı +250 TL</option><option value="500">VIP öncelik +500 TL</option>
+                    <option value="0" selected>Standart</option><option value="250">Hızlı +250 TL</option><option value="500">VIP öncelik +500 TL</option>
                   </select>
                 </div>
               </div>
@@ -468,7 +497,7 @@
             <div class="dkd_anyela_iban">
               <div><strong>IBAN:</strong> TR53 0011 1000 0000 0151 1527 14</div>
               <div><strong>Ad Soyad:</strong> Doğancan Kartal</div>
-              <div><strong>Açıklama:</strong> Özel Teklif + kullanıcı adın</div>
+              <div><strong>Açıklama:</strong> Açıklama alanını Boş Bırakın</div>
             </div>
             <div class="dkd_anyela_upload_area">
               <label class="dkd_anyela_file_label">
@@ -491,7 +520,7 @@
         const dkdPackages = {
           mini: {
             title: "Mini Sohbet Paketi",
-            badge: "💬 Günlük kısa mesajlaşma",
+            badge: "",
             price: 499,
             minutes: "15 dk öncelikli sohbet penceresi",
             description: "Günlük kısa mesajlaşma, sıcak karşılama ve kişiye özel yanıt akışı için giriş paketi. Daha hafif ve hızlı bir tanışma deneyimi isteyenler için hazırlandı.",
@@ -504,39 +533,39 @@
           },
           voice: {
             title: "Sesli Mesaj Paketi",
-            badge: "🎙️ Daha yakın iletişim",
+            badge: "",
             price: 999,
             minutes: "3 sesli mesaj / toplam 6 dk",
             description: "Kişiye özel sesli mesajlar, daha yakın hissettiren iletişim ve özel karşılama içerikleri için modern Miami ses paketi.",
             features: [
               ["🎙️", "3 sesli mesaj", "Her biri yaklaşık 1-2 dakika"],
-              ["💬", "Mini sohbet", "Kısa mesajlaşma desteği dahil"],
+              ["💬", "Mini sohbet", "30 Dakika mesajlaşma dahil"],
               ["⚡", "Öncelik", "Standart paketlere göre daha hızlı sıra"],
               ["📎", "Dekont", "Onay sonrası teslim süreci başlar"]
             ]
           },
           vip: {
             title: "VIP Özel İçerik",
-            badge: "💎 Premium fotoğraf ve içerikler",
+            badge: "",
             price: 1499,
-            minutes: "5-8 özel görsel + 20 dk içerik planı",
+            minutes: "5 özel görsel + 20 dk içerik planı",
             description: "Kişiye özel premium fotoğraf ve VIP içerik seçkisi. Daha renkli, daha özel ve koleksiyon hissi veren bir paket deneyimi.",
             features: [
               ["💎", "VIP içerik", "Premium fotoğraf ve özel içerik seti"],
-              ["🖼️", "5-8 görsel", "Seçilen konsepte göre hazırlanır"],
+              ["🖼️", "5 görsel", "Seçilen konsepte göre hazırlanır"],
               ["📝", "İçerik planı", "Yaklaşık 20 dk planlama/uyum süreci"],
               ["⭐", "VIP rozet", "Öncelikli kontrol ve onay akışı"]
             ]
           },
           full: {
             title: "Full Premium Paket",
-            badge: "👑 En çok tercih edilen",
+            badge: "",
             price: 1999,
-            minutes: "30 dk sohbet + 3 sesli + 1 video + VIP içerik",
+            minutes: "24 saat erişim + 3 sesli + 1 video + VIP içerik",
             description: "Sohbet, sesli mesaj, özel içerik ve kısa video deneyimini tek pakette birleştiren kapsamlı Miami premium paketi.",
             features: [
               ["👑", "Full içerik", "Sohbet, sesli mesaj ve özel içerikler"],
-              ["⏱️", "30 dakika", "Öncelikli sohbet/yanıt süresi"],
+              ["⏱️", "24 saat", "Öncelikli sohbet/yanıt süresi"],
               ["🎙️", "3 sesli", "Kişiye özel sesli cevaplar"],
               ["▶️", "1 kısa video", "Kişiye özel kısa video mesaj"]
             ]
@@ -544,7 +573,11 @@
         };
 
         const dkdFormatPrice = function dkdFormatPrice(dkdAmount) {
-          return new Intl.NumberFormat("tr-TR").format(dkdAmount) + " TL";
+          return new Intl.NumberFormat("tr-TR").format(dkdAmount);
+        };
+
+        const dkdFormatPriceWithUnit = function dkdFormatPriceWithUnit(dkdAmount) {
+          return dkdFormatPrice(dkdAmount) + " TL";
         };
 
         const dkdShowLanding = function dkdShowLanding() {
@@ -560,7 +593,7 @@
           document.getElementById("dkd_detail_heading").textContent = dkdPackage.title;
           document.getElementById("dkd_detail_badge").textContent = dkdPackage.badge;
           document.getElementById("dkd_detail_description").textContent = dkdPackage.description;
-          document.getElementById("dkd_detail_price").textContent = dkdFormatPrice(dkdPackage.price);
+          document.getElementById("dkd_detail_price").innerHTML = dkdFormatPrice(dkdPackage.price) + '<span class="dkd_anyela_price_unit">TL</span>';
           document.getElementById("dkd_detail_minutes").textContent = dkdPackage.minutes;
           document.getElementById("dkd_detail_features").innerHTML = dkdPackage.features.map(function dkdFeatureItem(dkdFeature) {
             return '<article class="dkd_anyela_feature"><span>' + dkdFeature[0] + '</span><strong>' + dkdFeature[1] + '</strong><small>' + dkdFeature[2] + '</small></article>';
@@ -574,8 +607,17 @@
         const dkdShowOffer = function dkdShowOffer() {
           document.body.setAttribute("data-dkd-screen", "offer");
           history.replaceState(null, "", "#teklif");
+          dkdResetOfferDefaults();
           dkdUpdateOfferTotal();
           window.scrollTo({ top: 0, behavior: "smooth" });
+        };
+
+        const dkdResetOfferDefaults = function dkdResetOfferDefaults() {
+          document.getElementById("dkd_offer_minutes").value = "5";
+          document.getElementById("dkd_offer_voice").value = "0";
+          document.getElementById("dkd_offer_video").value = "0";
+          document.getElementById("dkd_offer_photo").value = "0";
+          document.getElementById("dkd_offer_speed").value = "0";
         };
 
         const dkdUpdateOfferTotal = function dkdUpdateOfferTotal() {
@@ -586,15 +628,16 @@
           const dkdSpeed = Number(document.getElementById("dkd_offer_speed").value || 0);
           const dkdBase = 199;
           const dkdTotal = dkdBase + (dkdMinutes * 18) + (dkdVoice * 149) + (dkdVideo * 399) + (dkdPhoto * 89) + dkdSpeed;
+          const dkdSpeedLabel = dkdSpeed === 0 ? "Standart" : (dkdSpeed === 250 ? "Hızlı +250 TL" : "VIP öncelik +500 TL");
 
           document.getElementById("dkd_offer_minutes_value").textContent = String(dkdMinutes);
-          document.getElementById("dkd_offer_total").textContent = dkdFormatPrice(dkdTotal);
+          document.getElementById("dkd_offer_total").textContent = dkdFormatPriceWithUnit(dkdTotal);
           document.getElementById("dkd_offer_summary").innerHTML = [
-            '<li><strong>Sohbet:</strong> ' + dkdMinutes + ' dakika</li>',
-            '<li><strong>Sesli mesaj:</strong> ' + dkdVoice + ' adet</li>',
-            '<li><strong>Video mesaj:</strong> ' + dkdVideo + ' adet</li>',
-            '<li><strong>Özel görsel:</strong> ' + dkdPhoto + ' adet</li>',
-            '<li><strong>Hesaplama:</strong> 199 TL başlangıç + dakika/adet bazlı içerik ücretleri</li>'
+            '<li><strong>Sohbet Dakikası:</strong> ' + dkdMinutes + ' Dakika</li>',
+            '<li><strong>Sesli Mesaj:</strong> ' + dkdVoice + ' adet</li>',
+            '<li><strong>Video Mesaj:</strong> ' + dkdVideo + ' adet</li>',
+            '<li><strong>Özel Görsel:</strong> ' + dkdPhoto + ' adet</li>',
+            '<li><strong>Teslim hızı:</strong> ' + dkdSpeedLabel + '</li>'
           ].join("");
         };
 
@@ -637,6 +680,7 @@
         } else if (dkdPackages[dkdInitialHash]) {
           dkdRenderPackage(dkdInitialHash);
         } else {
+          dkdResetOfferDefaults();
           dkdUpdateOfferTotal();
         }
       })();
