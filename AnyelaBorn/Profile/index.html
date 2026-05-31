@@ -7,558 +7,85 @@
     <meta name="description" content="Anyela Born Miami temalı detaylı profil ekranı." />
     <title>Anyela Born | Profilim</title>
     <style>
-      :root {
-        --dkd_anyela_profile_bg: #070024;
-        --dkd_anyela_profile_panel: rgba(14, 2, 55, 0.78);
-        --dkd_anyela_profile_panel_soft: rgba(255, 255, 255, 0.085);
-        --dkd_anyela_profile_pink: #ff2bd6;
-        --dkd_anyela_profile_cyan: #18f7ff;
-        --dkd_anyela_profile_gold: #ffd05f;
-        --dkd_anyela_profile_text: #ffffff;
-        --dkd_anyela_profile_muted: rgba(255, 255, 255, 0.74);
-        color-scheme: dark;
-      }
-
-      * { box-sizing: border-box; }
-
-      html,
-      body {
-        margin: 0;
-        min-height: 100%;
-        background:
-          radial-gradient(circle at 14% 0%, rgba(255, 43, 214, 0.25), transparent 25rem),
-          radial-gradient(circle at 92% 12%, rgba(24, 247, 255, 0.18), transparent 27rem),
-          linear-gradient(180deg, #08002e 0%, #030011 100%);
-        color: var(--dkd_anyela_profile_text);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      a,
-      button,
-      input,
-      select {
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      a { color: inherit; text-decoration: none; }
-      button,
-      input,
-      select { font: inherit; }
-      button { border: 0; }
-
-      .dkd_anyela_profile_page {
-        min-height: 100svh;
-        display: flex;
-        justify-content: center;
-        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
-      }
-
-      .dkd_anyela_profile_shell {
-        width: min(100vw, 480px);
-        min-height: 100svh;
-        padding: 18px 16px 26px;
-        background:
-          linear-gradient(180deg, rgba(255, 43, 214, 0.1), transparent 26%),
-          var(--dkd_anyela_profile_bg);
-        box-shadow: 0 28px 90px rgba(0, 0, 0, 0.58);
-        overflow: hidden;
-      }
-
-      .dkd_anyela_profile_topbar {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 12px;
-        margin-bottom: 18px;
-      }
-
-      .dkd_anyela_profile_icon_button {
-        width: 46px;
-        height: 46px;
-        display: grid;
-        place-items: center;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        background: rgba(255, 255, 255, 0.07);
-        color: var(--dkd_anyela_profile_text);
-        box-shadow: 0 0 24px rgba(255, 43, 214, 0.2);
-        cursor: pointer;
-      }
-
-      .dkd_anyela_profile_title_group { text-align: center; }
-      .dkd_anyela_profile_kicker {
-        margin: 0 0 2px;
-        color: var(--dkd_anyela_profile_cyan);
-        font-size: 11px;
-        font-weight: 900;
-        letter-spacing: 0.22em;
-        text-transform: uppercase;
-      }
-
-      .dkd_anyela_profile_title {
-        margin: 0;
-        font-size: 26px;
-        line-height: 1.06;
-        text-shadow: 0 0 24px rgba(255, 43, 214, 0.52);
-      }
-
-      .dkd_anyela_profile_hero {
-        position: relative;
-        padding: 20px;
-        border-radius: 30px;
-        background:
-          radial-gradient(circle at 18% 18%, rgba(255, 43, 214, 0.38), transparent 14rem),
-          radial-gradient(circle at 86% 12%, rgba(24, 247, 255, 0.22), transparent 13rem),
-          linear-gradient(145deg, rgba(22, 4, 75, 0.96), rgba(77, 8, 92, 0.76));
-        border: 1px solid rgba(255, 255, 255, 0.16);
-        box-shadow:
-          0 20px 60px rgba(0, 0, 0, 0.42),
-          inset 0 0 32px rgba(255, 255, 255, 0.05);
-        overflow: hidden;
-      }
-
-      .dkd_anyela_profile_hero::after {
-        content: "";
-        position: absolute;
-        inset: auto -20px -40px -20px;
-        height: 96px;
-        background:
-          linear-gradient(90deg, transparent, rgba(24, 247, 255, 0.35), transparent),
-          linear-gradient(180deg, transparent, rgba(255, 43, 214, 0.15));
-        filter: blur(8px);
-      }
-
-      .dkd_anyela_profile_identity {
-        position: relative;
-        z-index: 1;
-        display: grid;
-        grid-template-columns: auto 1fr;
-        gap: 14px;
-        align-items: center;
-      }
-
-      .dkd_anyela_profile_avatar {
-        width: 82px;
-        height: 82px;
-        display: grid;
-        place-items: center;
-        border-radius: 28px;
-        background:
-          linear-gradient(135deg, rgba(255, 43, 214, 0.34), rgba(24, 247, 255, 0.22)),
-          rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.18);
-        box-shadow:
-          0 0 30px rgba(255, 43, 214, 0.35),
-          0 0 26px rgba(24, 247, 255, 0.19);
-        font-size: 34px;
-        font-weight: 950;
-      }
-
-      .dkd_anyela_profile_name { margin: 0; font-size: 27px; line-height: 1.06; }
-      .dkd_anyela_profile_status { margin: 6px 0 0; color: var(--dkd_anyela_profile_muted); font-size: 14px; }
-
-      .dkd_anyela_profile_section {
-        margin-top: 16px;
-        padding: 18px;
-        border-radius: 26px;
-        background: var(--dkd_anyela_profile_panel);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        box-shadow: 0 16px 46px rgba(0, 0, 0, 0.31);
-      }
-
-      .dkd_anyela_profile_section_head {
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
-        gap: 14px;
-        margin-bottom: 14px;
-      }
-
-      .dkd_anyela_profile_section_title { margin: 0; font-size: 19px; }
-      .dkd_anyela_profile_section_hint { margin: 4px 0 0; color: var(--dkd_anyela_profile_muted); font-size: 13px; line-height: 1.45; }
-
-      .dkd_anyela_profile_pill {
-        white-space: nowrap;
-        padding: 8px 10px;
-        border-radius: 999px;
-        background: rgba(24, 247, 255, 0.12);
-        color: var(--dkd_anyela_profile_cyan);
-        border: 1px solid rgba(24, 247, 255, 0.26);
-        font-size: 12px;
-        font-weight: 900;
-      }
-
-      .dkd_anyela_profile_field_grid {
-        display: grid;
-        gap: 10px;
-      }
-
-      .dkd_anyela_profile_field {
-        display: grid;
-        gap: 7px;
-        padding: 13px;
-        border-radius: 18px;
-        background: var(--dkd_anyela_profile_panel_soft);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .dkd_anyela_profile_label {
-        color: rgba(255, 255, 255, 0.66);
-        font-size: 12px;
-        font-weight: 800;
-        letter-spacing: 0.04em;
-      }
-
-      .dkd_anyela_profile_input,
-      .dkd_anyela_profile_readonly {
-        width: 100%;
-        min-height: 47px;
-        border: 1px solid rgba(255, 255, 255, 0.15);
-        outline: none;
-        border-radius: 15px;
-        background: rgba(6, 0, 27, 0.72);
-        color: var(--dkd_anyela_profile_text);
-        padding: 12px 13px;
-      }
-
-      .dkd_anyela_profile_readonly {
-        display: flex;
-        align-items: center;
-        color: rgba(255, 255, 255, 0.88);
-      }
-
-      .dkd_anyela_profile_input:focus {
-        box-shadow: 0 0 0 3px rgba(255, 43, 214, 0.26), 0 0 24px rgba(24, 247, 255, 0.18);
-        border-color: rgba(24, 247, 255, 0.45);
-      }
-
-      .dkd_anyela_profile_progress {
-        height: 13px;
-        overflow: hidden;
-        border-radius: 999px;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.11);
-      }
-
-      .dkd_anyela_profile_progress_bar {
-        width: 82%;
-        height: 100%;
-        border-radius: inherit;
-        background: linear-gradient(90deg, var(--dkd_anyela_profile_pink), var(--dkd_anyela_profile_cyan));
-        box-shadow: 0 0 20px rgba(255, 43, 214, 0.38);
-      }
-
-      .dkd_anyela_profile_stats {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 9px;
-      }
-
-      .dkd_anyela_profile_stat {
-        padding: 13px 9px;
-        border-radius: 18px;
-        text-align: center;
-        background: rgba(255, 255, 255, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .dkd_anyela_profile_stat strong {
-        display: block;
-        font-size: 19px;
-      }
-
-      .dkd_anyela_profile_stat span {
-        display: block;
-        margin-top: 4px;
-        color: var(--dkd_anyela_profile_muted);
-        font-size: 11px;
-      }
-
-      .dkd_anyela_profile_action_grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-      }
-
-      .dkd_anyela_profile_action {
-        min-height: 50px;
-        display: grid;
-        place-items: center;
-        border-radius: 17px;
-        font-weight: 950;
-        text-align: center;
-        cursor: pointer;
-      }
-
-      .dkd_anyela_profile_action_primary {
-        background: linear-gradient(135deg, var(--dkd_anyela_profile_pink), #7f2bff);
-        color: #fff;
-        box-shadow: 0 0 28px rgba(255, 43, 214, 0.32);
-      }
-
-      .dkd_anyela_profile_action_secondary {
-        background: rgba(24, 247, 255, 0.12);
-        color: var(--dkd_anyela_profile_cyan);
-        border: 1px solid rgba(24, 247, 255, 0.25);
-      }
-
-      .dkd_anyela_profile_action_danger {
-        width: 100%;
-        margin-top: 10px;
-        background: linear-gradient(135deg, rgba(255, 61, 135, 0.94), rgba(255, 207, 88, 0.78));
-        color: #ffffff;
-        box-shadow: 0 0 26px rgba(255, 43, 214, 0.24);
-      }
-
-      .dkd_anyela_profile_note {
-        min-height: 20px;
-        margin: 12px 0 0;
-        color: var(--dkd_anyela_profile_muted);
-        font-size: 13px;
-        line-height: 1.45;
-        text-align: center;
-      }
-
-      @media (min-width: 820px) {
-        .dkd_anyela_profile_page { align-items: center; padding: 32px 0; }
-        .dkd_anyela_profile_shell {
-          min-height: auto;
-          border-radius: 38px;
-          border: 1px solid rgba(255, 255, 255, 0.14);
-        }
-      }
+      :root{--dkd_anyela_profile_bg:#070024;--dkd_anyela_profile_panel:rgba(14,2,55,.82);--dkd_anyela_profile_panel_soft:rgba(255,255,255,.085);--dkd_anyela_profile_pink:#ff2bd6;--dkd_anyela_profile_cyan:#18f7ff;--dkd_anyela_profile_gold:#ffd05f;--dkd_anyela_profile_text:#fff;--dkd_anyela_profile_muted:rgba(255,255,255,.74);color-scheme:dark}*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:radial-gradient(circle at 14% 0%,rgba(255,43,214,.25),transparent 25rem),radial-gradient(circle at 92% 12%,rgba(24,247,255,.18),transparent 27rem),linear-gradient(180deg,#08002e 0%,#030011 100%);color:var(--dkd_anyela_profile_text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}a,button,input{font:inherit;-webkit-tap-highlight-color:transparent}a{color:inherit;text-decoration:none}button{border:0}.dkd_anyela_profile_page{min-height:100svh;display:flex;justify-content:center;padding:max(0px,env(safe-area-inset-top)) 0 max(0px,env(safe-area-inset-bottom))}.dkd_anyela_profile_shell{width:min(100vw,480px);min-height:100svh;padding:18px 16px 26px;background:linear-gradient(180deg,rgba(255,43,214,.1),transparent 26%),var(--dkd_anyela_profile_bg);box-shadow:0 28px 90px rgba(0,0,0,.58);overflow:hidden}.dkd_anyela_profile_topbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px}.dkd_anyela_profile_icon_button{width:46px;height:46px;display:grid;place-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.07);color:var(--dkd_anyela_profile_text);box-shadow:0 0 24px rgba(255,43,214,.2);cursor:pointer}.dkd_anyela_profile_title_group{text-align:center}.dkd_anyela_profile_kicker{margin:0 0 2px;color:var(--dkd_anyela_profile_cyan);font-size:11px;font-weight:900;letter-spacing:.22em;text-transform:uppercase}.dkd_anyela_profile_title{margin:0;font-size:26px;line-height:1.06;text-shadow:0 0 24px rgba(255,43,214,.52)}.dkd_anyela_profile_hero{position:relative;padding:20px;border-radius:30px;background:radial-gradient(circle at 18% 18%,rgba(255,43,214,.38),transparent 14rem),radial-gradient(circle at 86% 12%,rgba(24,247,255,.22),transparent 13rem),linear-gradient(145deg,rgba(22,4,75,.96),rgba(77,8,92,.76));border:1px solid rgba(255,255,255,.16);box-shadow:0 20px 60px rgba(0,0,0,.42),inset 0 0 32px rgba(255,255,255,.05);overflow:hidden}.dkd_anyela_profile_hero::after{content:"";position:absolute;inset:auto -20px -40px -20px;height:96px;background:linear-gradient(90deg,transparent,rgba(24,247,255,.35),transparent),linear-gradient(180deg,transparent,rgba(255,43,214,.15));filter:blur(8px)}.dkd_anyela_profile_identity{position:relative;z-index:1;display:grid;grid-template-columns:auto 1fr;gap:14px;align-items:center}.dkd_anyela_profile_avatar_wrap{display:grid;gap:9px;justify-items:center}.dkd_anyela_profile_avatar{width:86px;height:86px;display:grid;place-items:center;border-radius:30px;background:linear-gradient(135deg,rgba(255,43,214,.34),rgba(24,247,255,.22)),rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);box-shadow:0 0 30px rgba(255,43,214,.35),0 0 26px rgba(24,247,255,.19);font-size:34px;font-weight:950;overflow:hidden}.dkd_anyela_profile_avatar img{width:100%;height:100%;object-fit:cover}.dkd_anyela_profile_avatar_change{padding:8px 10px;border-radius:999px;background:linear-gradient(90deg,rgba(24,247,255,.22),rgba(255,43,214,.22));border:1px solid rgba(255,255,255,.16);font-size:11px;font-weight:900;cursor:pointer}.dkd_anyela_profile_file{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none}.dkd_anyela_profile_name{margin:0;font-size:27px;line-height:1.06}.dkd_anyela_profile_status{margin:6px 0 0;color:var(--dkd_anyela_profile_muted);font-size:14px}.dkd_anyela_profile_section{margin-top:16px;padding:18px;border-radius:26px;background:var(--dkd_anyela_profile_panel);border:1px solid rgba(255,255,255,.14);box-shadow:0 16px 46px rgba(0,0,0,.31)}.dkd_anyela_profile_section_head{display:flex;align-items:flex-start;justify-content:space-between;gap:14px;margin-bottom:14px}.dkd_anyela_profile_section_title{margin:0;font-size:19px}.dkd_anyela_profile_section_hint{margin:4px 0 0;color:var(--dkd_anyela_profile_muted);font-size:13px;line-height:1.45}.dkd_anyela_profile_pill{white-space:nowrap;padding:8px 10px;border-radius:999px;background:rgba(24,247,255,.12);color:var(--dkd_anyela_profile_cyan);border:1px solid rgba(24,247,255,.26);font-size:12px;font-weight:900}.dkd_anyela_profile_field_grid{display:grid;gap:12px}.dkd_anyela_profile_user_card{display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:center;padding:14px;border-radius:22px;background:linear-gradient(135deg,rgba(255,43,214,.14),rgba(24,247,255,.1)),rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);box-shadow:inset 0 1px 0 rgba(255,255,255,.12)}.dkd_anyela_profile_user_icon{width:42px;height:42px;display:grid;place-items:center;border-radius:16px;background:rgba(24,247,255,.16);border:1px solid rgba(24,247,255,.25)}.dkd_anyela_profile_label{display:block;margin-bottom:7px;color:rgba(255,255,255,.66);font-size:12px;font-weight:900;letter-spacing:.04em}.dkd_anyela_profile_input,.dkd_anyela_profile_readonly{width:100%;min-height:47px;border:1px solid rgba(255,255,255,.15);outline:none;border-radius:15px;background:rgba(6,0,27,.72);color:var(--dkd_anyela_profile_text);padding:12px 13px}.dkd_anyela_profile_readonly{display:flex;align-items:center;color:rgba(255,255,255,.88)}.dkd_anyela_profile_input:focus{box-shadow:0 0 0 3px rgba(255,43,214,.26),0 0 24px rgba(24,247,255,.18);border-color:rgba(24,247,255,.45)}.dkd_anyela_profile_save{width:100%;min-height:50px;margin-top:12px;border-radius:18px;background:linear-gradient(105deg,#08d8ff,#6b52ff 34%,#ff2ec7 72%,#ffcf58);color:#fff;font-weight:950;box-shadow:0 0 28px rgba(255,43,214,.28);cursor:pointer}.dkd_anyela_profile_progress{height:13px;overflow:hidden;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.11)}.dkd_anyela_profile_progress_bar{width:82%;height:100%;border-radius:inherit;background:linear-gradient(90deg,var(--dkd_anyela_profile_pink),var(--dkd_anyela_profile_cyan));box-shadow:0 0 20px rgba(255,43,214,.38)}.dkd_anyela_profile_stats{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.dkd_anyela_profile_stat{padding:13px 9px;border-radius:18px;text-align:center;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.1)}.dkd_anyela_profile_stat strong{display:block;font-size:19px}.dkd_anyela_profile_stat span{display:block;margin-top:4px;color:var(--dkd_anyela_profile_muted);font-size:11px}.dkd_anyela_profile_action_grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.dkd_anyela_profile_action{min-height:50px;display:grid;place-items:center;border-radius:17px;font-weight:950;text-align:center;cursor:pointer}.dkd_anyela_profile_action_primary{background:linear-gradient(135deg,var(--dkd_anyela_profile_pink),#7f2bff);color:#fff;box-shadow:0 0 28px rgba(255,43,214,.32)}.dkd_anyela_profile_action_secondary{background:rgba(24,247,255,.12);color:var(--dkd_anyela_profile_cyan);border:1px solid rgba(24,247,255,.25)}.dkd_anyela_profile_action_danger{width:100%;margin-top:10px;background:linear-gradient(135deg,rgba(255,61,135,.94),rgba(255,207,88,.78));color:#fff;box-shadow:0 0 26px rgba(255,43,214,.24)}.dkd_anyela_profile_note{min-height:20px;margin:12px 0 0;color:var(--dkd_anyela_profile_muted);font-size:13px;line-height:1.45;text-align:center}.dkd_anyela_profile_note[data-dkd-status="success"]{color:#8efff7}.dkd_anyela_profile_note[data-dkd-status="error"]{color:#ffb1df}@media (min-width:820px){.dkd_anyela_profile_page{align-items:center;padding:32px 0}.dkd_anyela_profile_shell{min-height:auto;border-radius:38px;border:1px solid rgba(255,255,255,.14)}}
     </style>
-    <script src="../assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="protected"></script>
+    <script src="../assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="account"></script>
   </head>
   <body>
     <main class="dkd_anyela_profile_page" aria-label="Anyela Born profil ekranı">
       <section class="dkd_anyela_profile_shell">
         <header class="dkd_anyela_profile_topbar">
           <a class="dkd_anyela_profile_icon_button" href="../Home/" aria-label="Ana sayfaya dön">‹</a>
-          <div class="dkd_anyela_profile_title_group">
-            <p class="dkd_anyela_profile_kicker">Miami Style Club</p>
-            <h1 class="dkd_anyela_profile_title">Profilim</h1>
-          </div>
+          <div class="dkd_anyela_profile_title_group"><p class="dkd_anyela_profile_kicker">Miami Style Club</p><h1 class="dkd_anyela_profile_title">Profilim</h1></div>
           <button class="dkd_anyela_profile_icon_button" id="dkd_anyela_profile_logout_top" type="button" aria-label="Çıkış Yap">↪</button>
         </header>
 
         <section class="dkd_anyela_profile_hero" aria-label="Profil kimliği">
           <div class="dkd_anyela_profile_identity">
-            <div class="dkd_anyela_profile_avatar" aria-hidden="true">AB</div>
-            <div>
-              <h2 class="dkd_anyela_profile_name">Anyela Born</h2>
-              <p class="dkd_anyela_profile_status">Anyela Born Hayranı</p>
+            <div class="dkd_anyela_profile_avatar_wrap">
+              <div class="dkd_anyela_profile_avatar" id="dkd_anyela_profile_avatar" aria-hidden="true">AB</div>
+              <label class="dkd_anyela_profile_avatar_change" for="dkd_anyela_profile_avatar_file">Profil resmi değiştir</label>
+              <input class="dkd_anyela_profile_file" id="dkd_anyela_profile_avatar_file" type="file" accept="image/*" />
             </div>
+            <div><h2 class="dkd_anyela_profile_name" id="dkd_anyela_profile_name_title">Anyela Born</h2><p class="dkd_anyela_profile_status">Anyela Born Hayranı</p></div>
           </div>
         </section>
 
         <section class="dkd_anyela_profile_section" aria-label="Profil tamamlama">
-          <div class="dkd_anyela_profile_section_head">
-            <div>
-              <h2 class="dkd_anyela_profile_section_title">Profil Durumu</h2>
-              <p class="dkd_anyela_profile_section_hint">Hesap bilgilerini ve Anyela Born üyelik durumunu tek ekrandan takip et.</p>
-            </div>
-            <span class="dkd_anyela_profile_pill">%82 hazır</span>
-          </div>
-          <div class="dkd_anyela_profile_progress" aria-label="Profil tamamlama yüzdesi">
-            <div class="dkd_anyela_profile_progress_bar"></div>
-          </div>
+          <div class="dkd_anyela_profile_section_head"><div><h2 class="dkd_anyela_profile_section_title">Profil Durumu</h2><p class="dkd_anyela_profile_section_hint">Hesap bilgilerini ve Anyela Born üyelik durumunu tek ekrandan takip et.</p></div><span class="dkd_anyela_profile_pill">%82 hazır</span></div>
+          <div class="dkd_anyela_profile_progress" aria-label="Profil tamamlama yüzdesi"><div class="dkd_anyela_profile_progress_bar"></div></div>
         </section>
 
         <section class="dkd_anyela_profile_section" aria-label="Hesap bilgileri">
-          <div class="dkd_anyela_profile_section_head">
-            <div>
-              <h2 class="dkd_anyela_profile_section_title">Hesap Bilgileri</h2>
-              <p class="dkd_anyela_profile_section_hint">E-posta hesabından otomatik alınır. Üyelik tipi sadece admin panelinden belirlenir.</p>
-            </div>
-          </div>
+          <div class="dkd_anyela_profile_section_head"><div><h2 class="dkd_anyela_profile_section_title">Hesap Bilgileri</h2><p class="dkd_anyela_profile_section_hint">Kullanıcı adını kaydedebilirsin. E-posta hesabından otomatik alınır, üyelik tipi sadece admin panelinden belirlenir.</p></div></div>
           <div class="dkd_anyela_profile_field_grid">
-            <label class="dkd_anyela_profile_field">
-              <span class="dkd_anyela_profile_label">Kullanıcı adı</span>
-              <input class="dkd_anyela_profile_input" id="dkd_anyela_profile_display_name" value="Anyela Born" aria-label="Kullanıcı adı" />
-            </label>
-            <div class="dkd_anyela_profile_field">
-              <span class="dkd_anyela_profile_label">E-posta</span>
-              <div class="dkd_anyela_profile_readonly" id="dkd_anyela_profile_email">Hesap bilgisi yükleniyor...</div>
-            </div>
-            <div class="dkd_anyela_profile_field">
-              <span class="dkd_anyela_profile_label">Üyelik tipi</span>
-              <div class="dkd_anyela_profile_readonly" id="dkd_anyela_profile_membership">Admin tarafından belirlenir</div>
-            </div>
+            <div class="dkd_anyela_profile_user_card"><div class="dkd_anyela_profile_user_icon">✦</div><label><span class="dkd_anyela_profile_label">Kullanıcı adı</span><input class="dkd_anyela_profile_input" id="dkd_anyela_profile_display_name" value="Anyela Born" aria-label="Kullanıcı adı" /></label></div>
+            <button class="dkd_anyela_profile_save" id="dkd_anyela_profile_save" type="button">Kaydet</button>
+            <div><span class="dkd_anyela_profile_label">E-posta</span><div class="dkd_anyela_profile_readonly" id="dkd_anyela_profile_email">Hesap bilgisi yükleniyor...</div></div>
+            <div><span class="dkd_anyela_profile_label">Üyelik tipi</span><div class="dkd_anyela_profile_readonly" id="dkd_anyela_profile_membership">Admin tarafından belirlenir</div></div>
           </div>
-        </section>
-
-        <section class="dkd_anyela_profile_section" aria-label="Tercihler">
-          <div class="dkd_anyela_profile_section_head">
-            <div>
-              <h2 class="dkd_anyela_profile_section_title">Tercihler</h2>
-              <p class="dkd_anyela_profile_section_hint">Sohbet dili, bildirim yoğunluğu ve ilgi alanları burada düzenlenir.</p>
-            </div>
-          </div>
-          <div class="dkd_anyela_profile_field_grid">
-            <label class="dkd_anyela_profile_field">
-              <span class="dkd_anyela_profile_label">Sohbet dili</span>
-              <input class="dkd_anyela_profile_input" value="Türkçe + English" aria-label="Sohbet dili" />
-            </label>
-            <label class="dkd_anyela_profile_field">
-              <span class="dkd_anyela_profile_label">Bildirim modu</span>
-              <input class="dkd_anyela_profile_input" value="Sohbet ve paket fırsatları" aria-label="Bildirim modu" />
-            </label>
-          </div>
+          <p class="dkd_anyela_profile_note" id="dkd_anyela_profile_note"></p>
         </section>
 
         <section class="dkd_anyela_profile_section" aria-label="Aktivite özeti">
-          <div class="dkd_anyela_profile_section_head">
-            <div>
-              <h2 class="dkd_anyela_profile_section_title">Aktivite Özeti</h2>
-              <p class="dkd_anyela_profile_section_hint">Sohbet, paket ve bildirim durumunu hızlıca gör.</p>
-            </div>
-          </div>
-          <div class="dkd_anyela_profile_stats">
-            <div class="dkd_anyela_profile_stat"><strong>12</strong><span>Sohbet</span></div>
-            <div class="dkd_anyela_profile_stat"><strong>3</strong><span>Paket</span></div>
-            <div class="dkd_anyela_profile_stat"><strong>24</strong><span>Bildirim</span></div>
-          </div>
+          <div class="dkd_anyela_profile_section_head"><div><h2 class="dkd_anyela_profile_section_title">Aktivite Özeti</h2><p class="dkd_anyela_profile_section_hint">Sohbet, paket ve bildirim durumunu hızlıca gör.</p></div></div>
+          <div class="dkd_anyela_profile_stats"><div class="dkd_anyela_profile_stat"><strong>12</strong><span>Sohbet</span></div><div class="dkd_anyela_profile_stat"><strong>3</strong><span>Paket</span></div><div class="dkd_anyela_profile_stat"><strong>24</strong><span>Bildirim</span></div></div>
         </section>
 
         <section class="dkd_anyela_profile_section" aria-label="Hızlı işlemler">
-          <div class="dkd_anyela_profile_action_grid">
-            <a class="dkd_anyela_profile_action dkd_anyela_profile_action_primary" href="../ChatRoom/">Sohbete Başla</a>
-            <a class="dkd_anyela_profile_action dkd_anyela_profile_action_secondary" href="../Packages/">Paketleri Aç</a>
-          </div>
+          <div class="dkd_anyela_profile_action_grid"><a class="dkd_anyela_profile_action dkd_anyela_profile_action_primary" href="../ChatRoom/">Sohbete Başla</a><a class="dkd_anyela_profile_action dkd_anyela_profile_action_secondary" href="../Packages/">Paketleri Aç</a></div>
           <button class="dkd_anyela_profile_action dkd_anyela_profile_action_danger" id="dkd_anyela_profile_logout_bottom" type="button">Çıkış Yap</button>
-          <p class="dkd_anyela_profile_note" id="dkd_anyela_profile_note"></p>
         </section>
       </section>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
-      (function dkdAnyelaProfileScope() {
+      (function dkdAnyelaProfileScope(){
         "use strict";
-
-        const dkdAnyelaProfileSupabaseUrl = "https://ztxlcfcwuwerxrhwfmte.supabase.co";
-        const dkdAnyelaProfileSupabasePublishableKey = "sb_publishable_GSd5xFBwG9pioOY8N6MRQw_C2n7RLYa";
-        const dkdAnyelaProfileLoginPath = "/AnyelaBorn/Login/";
-        const dkdAnyelaProfileEmailNode = document.getElementById("dkd_anyela_profile_email");
-        const dkdAnyelaProfileMembershipNode = document.getElementById("dkd_anyela_profile_membership");
-        const dkdAnyelaProfileDisplayNameInput = document.getElementById("dkd_anyela_profile_display_name");
-        const dkdAnyelaProfileNoteNode = document.getElementById("dkd_anyela_profile_note");
-        const dkdAnyelaProfileLogoutButtons = [
-          document.getElementById("dkd_anyela_profile_logout_top"),
-          document.getElementById("dkd_anyela_profile_logout_bottom")
-        ];
-        const dkdAnyelaProfileSupabaseClient = window.supabase && window.supabase.createClient
-          ? window.supabase.createClient(dkdAnyelaProfileSupabaseUrl, dkdAnyelaProfileSupabasePublishableKey, {
-              auth: {
-                persistSession: true,
-                autoRefreshToken: true,
-                detectSessionInUrl: true,
-                storageKey: "dkd_anyela_auth_session"
-              }
-            })
-          : null;
-
-        function dkdAnyelaProfileSetNodeText(dkdAnyelaProfileNode, dkdAnyelaProfileText) {
-          if (!dkdAnyelaProfileNode) {
-            return;
-          }
-          dkdAnyelaProfileNode.textContent = dkdAnyelaProfileText;
-        }
-
-        function dkdAnyelaProfileReadStorage(dkdAnyelaProfileKey) {
-          try {
-            return window.localStorage.getItem(dkdAnyelaProfileKey);
-          } catch (dkdAnyelaProfileStorageError) {
-            return null;
-          }
-        }
-
-        function dkdAnyelaProfileRemoveStorage(dkdAnyelaProfileKey) {
-          try {
-            window.localStorage.removeItem(dkdAnyelaProfileKey);
-          } catch (dkdAnyelaProfileStorageError) {
-            return;
-          }
-        }
-
-        function dkdAnyelaProfileFallbackEmail() {
-          const dkdAnyelaProfileGuestActive = dkdAnyelaProfileReadStorage("dkd_anyela_guest_login_active") === "true";
-          return dkdAnyelaProfileGuestActive ? "Misafir kullanıcı" : "E-posta bulunamadı";
-        }
-
-        async function dkdAnyelaProfileLoadAccount() {
-          if (!dkdAnyelaProfileSupabaseClient) {
-            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileEmailNode, dkdAnyelaProfileFallbackEmail());
-            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, "Anyela Born Hayranı");
-            return;
-          }
-
-          const dkdAnyelaProfileSessionResult = await dkdAnyelaProfileSupabaseClient.auth.getSession();
-          const dkdAnyelaProfileSession = dkdAnyelaProfileSessionResult && dkdAnyelaProfileSessionResult.data
-            ? dkdAnyelaProfileSessionResult.data.session
-            : null;
-          const dkdAnyelaProfileUser = dkdAnyelaProfileSession && dkdAnyelaProfileSession.user
-            ? dkdAnyelaProfileSession.user
-            : null;
-
-          if (!dkdAnyelaProfileUser) {
-            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileEmailNode, dkdAnyelaProfileFallbackEmail());
-            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, "Anyela Born Hayranı");
-            return;
-          }
-
-          const dkdAnyelaProfileEmail = dkdAnyelaProfileUser.email || "E-posta bulunamadı";
-          dkdAnyelaProfileSetNodeText(dkdAnyelaProfileEmailNode, dkdAnyelaProfileEmail);
-
-          if (dkdAnyelaProfileDisplayNameInput && dkdAnyelaProfileUser.email) {
-            dkdAnyelaProfileDisplayNameInput.value = dkdAnyelaProfileUser.email.split("@")[0];
-          }
-
-          const dkdAnyelaProfileResult = await dkdAnyelaProfileSupabaseClient
-            .from("dkd_anyela_profiles")
-            .select("dkd_display_name, dkd_role")
-            .eq("dkd_id", dkdAnyelaProfileUser.id)
-            .maybeSingle();
-
-          if (dkdAnyelaProfileResult && dkdAnyelaProfileResult.data) {
-            if (dkdAnyelaProfileDisplayNameInput && dkdAnyelaProfileResult.data.dkd_display_name) {
-              dkdAnyelaProfileDisplayNameInput.value = dkdAnyelaProfileResult.data.dkd_display_name;
-            }
-            dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, dkdAnyelaProfileResult.data.dkd_role || "Anyela Born Hayranı");
-            return;
-          }
-
-          dkdAnyelaProfileSetNodeText(dkdAnyelaProfileMembershipNode, "Anyela Born Hayranı");
-        }
-
-        async function dkdAnyelaProfileLogout() {
-          dkdAnyelaProfileSetNodeText(dkdAnyelaProfileNoteNode, "Çıkış yapılıyor...");
-
-          if (dkdAnyelaProfileSupabaseClient) {
-            await dkdAnyelaProfileSupabaseClient.auth.signOut();
-          }
-
-          [
-            "dkd_anyela_auth_access",
-            "dkd_anyela_account_login_once",
-            "dkd_anyela_guest_login_active",
-            "dkd_anyela_auth_session"
-          ].forEach(dkdAnyelaProfileRemoveStorage);
-
-          window.setTimeout(function dkdAnyelaProfileRedirectAfterLogout() {
-            window.location.replace(dkdAnyelaProfileLoginPath);
-          }, 320);
-        }
-
-        dkdAnyelaProfileLogoutButtons.forEach(function dkdAnyelaProfileBindLogout(dkdAnyelaProfileLogoutButton) {
-          if (!dkdAnyelaProfileLogoutButton) {
-            return;
-          }
-          dkdAnyelaProfileLogoutButton.addEventListener("click", dkdAnyelaProfileLogout);
-        });
-
-        dkdAnyelaProfileLoadAccount();
+        const dkdAnyelaProfileSupabaseUrl="https://ztxlcfcwuwerxrhwfmte.supabase.co";
+        const dkdAnyelaProfileSupabasePublishableKey="sb_publishable_GSd5xFBwG9pioOY8N6MRQw_C2n7RLYa";
+        const dkdAnyelaProfileLoginPath="/AnyelaBorn/Login/";
+        const dkdAnyelaProfileEmailNode=document.getElementById("dkd_anyela_profile_email");
+        const dkdAnyelaProfileMembershipNode=document.getElementById("dkd_anyela_profile_membership");
+        const dkdAnyelaProfileDisplayNameInput=document.getElementById("dkd_anyela_profile_display_name");
+        const dkdAnyelaProfileNameTitle=document.getElementById("dkd_anyela_profile_name_title");
+        const dkdAnyelaProfileAvatarNode=document.getElementById("dkd_anyela_profile_avatar");
+        const dkdAnyelaProfileAvatarFile=document.getElementById("dkd_anyela_profile_avatar_file");
+        const dkdAnyelaProfileNoteNode=document.getElementById("dkd_anyela_profile_note");
+        const dkdAnyelaProfileSaveButton=document.getElementById("dkd_anyela_profile_save");
+        const dkdAnyelaProfileLogoutButtons=[document.getElementById("dkd_anyela_profile_logout_top"),document.getElementById("dkd_anyela_profile_logout_bottom")];
+        const dkdAnyelaProfileSupabaseClient=window.supabase&&window.supabase.createClient?window.supabase.createClient(dkdAnyelaProfileSupabaseUrl,dkdAnyelaProfileSupabasePublishableKey,{auth:{persistSession:true,autoRefreshToken:true,detectSessionInUrl:true,storageKey:"dkd_anyela_auth_session"}}):null;
+        let dkdAnyelaProfileUserId=null;
+        let dkdAnyelaProfileAvatarDataUrl="";
+        function dkdAnyelaProfileSetText(dkdAnyelaProfileNode,dkdAnyelaProfileText){if(dkdAnyelaProfileNode){dkdAnyelaProfileNode.textContent=dkdAnyelaProfileText;}}
+        function dkdAnyelaProfileSetNote(dkdAnyelaProfileText,dkdAnyelaProfileStatus){dkdAnyelaProfileSetText(dkdAnyelaProfileNoteNode,dkdAnyelaProfileText||"");if(!dkdAnyelaProfileNoteNode){return;}if(dkdAnyelaProfileStatus){dkdAnyelaProfileNoteNode.setAttribute("data-dkd-status",dkdAnyelaProfileStatus);}else{dkdAnyelaProfileNoteNode.removeAttribute("data-dkd-status");}}
+        function dkdAnyelaProfileRenderAvatar(dkdAnyelaProfileDataUrl){dkdAnyelaProfileAvatarDataUrl=dkdAnyelaProfileDataUrl||"";if(!dkdAnyelaProfileAvatarNode){return;}if(dkdAnyelaProfileAvatarDataUrl){dkdAnyelaProfileAvatarNode.innerHTML='<img src="'+dkdAnyelaProfileAvatarDataUrl+'" alt="Profil resmi" />';}else{dkdAnyelaProfileAvatarNode.textContent="AB";}}
+        async function dkdAnyelaProfileLoadAccount(){if(!dkdAnyelaProfileSupabaseClient){window.location.replace(dkdAnyelaProfileLoginPath);return;}const dkdAnyelaProfileSessionResult=await dkdAnyelaProfileSupabaseClient.auth.getSession();const dkdAnyelaProfileSession=dkdAnyelaProfileSessionResult&&dkdAnyelaProfileSessionResult.data?dkdAnyelaProfileSessionResult.data.session:null;const dkdAnyelaProfileUser=dkdAnyelaProfileSession&&dkdAnyelaProfileSession.user?dkdAnyelaProfileSession.user:null;if(!dkdAnyelaProfileUser){window.location.replace(dkdAnyelaProfileLoginPath);return;}dkdAnyelaProfileUserId=dkdAnyelaProfileUser.id;dkdAnyelaProfileSetText(dkdAnyelaProfileEmailNode,dkdAnyelaProfileUser.email||"E-posta bulunamadı");if(dkdAnyelaProfileDisplayNameInput&&dkdAnyelaProfileUser.email){dkdAnyelaProfileDisplayNameInput.value=dkdAnyelaProfileUser.email.split("@")[0];dkdAnyelaProfileSetText(dkdAnyelaProfileNameTitle,dkdAnyelaProfileDisplayNameInput.value);}const dkdAnyelaProfileResult=await dkdAnyelaProfileSupabaseClient.from("dkd_anyela_profiles").select("dkd_display_name, dkd_role, dkd_avatar_data_url").eq("dkd_id",dkdAnyelaProfileUser.id).maybeSingle();if(dkdAnyelaProfileResult&&dkdAnyelaProfileResult.data){if(dkdAnyelaProfileDisplayNameInput&&dkdAnyelaProfileResult.data.dkd_display_name){dkdAnyelaProfileDisplayNameInput.value=dkdAnyelaProfileResult.data.dkd_display_name;dkdAnyelaProfileSetText(dkdAnyelaProfileNameTitle,dkdAnyelaProfileResult.data.dkd_display_name);}dkdAnyelaProfileSetText(dkdAnyelaProfileMembershipNode,dkdAnyelaProfileResult.data.dkd_role||"Anyela Born Hayranı");dkdAnyelaProfileRenderAvatar(dkdAnyelaProfileResult.data.dkd_avatar_data_url||"");return;}dkdAnyelaProfileSetText(dkdAnyelaProfileMembershipNode,"Anyela Born Hayranı");}
+        async function dkdAnyelaProfileSave(){if(!dkdAnyelaProfileSupabaseClient||!dkdAnyelaProfileUserId){dkdAnyelaProfileSetNote("Oturum bulunamadı. Tekrar giriş yapmalısın.","error");return;}const dkdAnyelaProfileDisplayName=(dkdAnyelaProfileDisplayNameInput&&dkdAnyelaProfileDisplayNameInput.value?dkdAnyelaProfileDisplayNameInput.value:"").trim();if(!dkdAnyelaProfileDisplayName){dkdAnyelaProfileSetNote("Kullanıcı adı boş olamaz.","error");return;}dkdAnyelaProfileSaveButton.disabled=true;dkdAnyelaProfileSetNote("Profil kaydediliyor...","success");const dkdAnyelaProfileUpdateResult=await dkdAnyelaProfileSupabaseClient.from("dkd_anyela_profiles").update({dkd_display_name:dkdAnyelaProfileDisplayName,dkd_avatar_data_url:dkdAnyelaProfileAvatarDataUrl,dkd_updated_at:new Date().toISOString()}).eq("dkd_id",dkdAnyelaProfileUserId).select("dkd_display_name, dkd_role, dkd_avatar_data_url").maybeSingle();dkdAnyelaProfileSaveButton.disabled=false;if(dkdAnyelaProfileUpdateResult.error){dkdAnyelaProfileSetNote("Kaydetme başarısız: "+dkdAnyelaProfileUpdateResult.error.message,"error");return;}dkdAnyelaProfileSetText(dkdAnyelaProfileNameTitle,dkdAnyelaProfileDisplayName);dkdAnyelaProfileSetNote("Profil bilgileri kaydedildi.","success");}
+        function dkdAnyelaProfileHandleAvatarFile(dkdAnyelaProfileEvent){const dkdAnyelaProfileFile=dkdAnyelaProfileEvent.target.files&&dkdAnyelaProfileEvent.target.files[0]?dkdAnyelaProfileEvent.target.files[0]:null;if(!dkdAnyelaProfileFile){return;}if(dkdAnyelaProfileFile.size>800000){dkdAnyelaProfileSetNote("Profil resmi çok büyük. Daha küçük bir görsel seç.","error");return;}const dkdAnyelaProfileReader=new FileReader();dkdAnyelaProfileReader.onload=function dkdAnyelaProfileReaderLoaded(){dkdAnyelaProfileRenderAvatar(String(dkdAnyelaProfileReader.result||""));dkdAnyelaProfileSetNote("Profil resmi seçildi. Kaydet butonuna basınca hesaba yazılır.","success");};dkdAnyelaProfileReader.readAsDataURL(dkdAnyelaProfileFile);}
+        async function dkdAnyelaProfileLogout(){dkdAnyelaProfileSetNote("Çıkış yapılıyor...");if(dkdAnyelaProfileSupabaseClient){await dkdAnyelaProfileSupabaseClient.auth.signOut();}["dkd_anyela_auth_access","dkd_anyela_account_login_once","dkd_anyela_guest_login_active","dkd_anyela_auth_session"].forEach(function dkdAnyelaProfileRemoveKey(dkdAnyelaProfileKey){try{window.localStorage.removeItem(dkdAnyelaProfileKey);}catch(dkdAnyelaProfileStorageError){return;}});window.setTimeout(function dkdAnyelaProfileRedirectAfterLogout(){window.location.replace(dkdAnyelaProfileLoginPath);},320);}
+        if(dkdAnyelaProfileSaveButton){dkdAnyelaProfileSaveButton.addEventListener("click",dkdAnyelaProfileSave);}if(dkdAnyelaProfileAvatarFile){dkdAnyelaProfileAvatarFile.addEventListener("change",dkdAnyelaProfileHandleAvatarFile);}dkdAnyelaProfileLogoutButtons.forEach(function dkdAnyelaProfileBindLogout(dkdAnyelaProfileLogoutButton){if(dkdAnyelaProfileLogoutButton){dkdAnyelaProfileLogoutButton.addEventListener("click",dkdAnyelaProfileLogout);}});dkdAnyelaProfileLoadAccount();
       })();
     </script>
   </body>
