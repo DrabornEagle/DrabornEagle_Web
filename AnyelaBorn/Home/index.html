@@ -11,7 +11,7 @@
     <meta property="og:title" content="Anyela Born | Home" />
     <meta
       property="og:description"
-      content="Miami temalı Anyela Born ana sayfası; profil, sohbet odası ve paketler ekranlarına hızlı giriş."
+      content="Miami temalı Anyela Born ana sayfası; profil, sohbet odası, paketler ve marka iş birlikleri ekranlarına hızlı giriş."
     />
     <meta property="og:image" content="./assets/dkd_anyela_home_miami_style_club_20260531.jpg" />
     <title>Anyela Born | Home</title>
@@ -95,6 +95,10 @@
           0 0 34px rgba(24, 247, 255, 0.72);
       }
 
+      .dkd_anyela_home_hotspot_brand {
+        animation: dkd_anyela_home_brand_pulse 1.9s ease-in-out infinite;
+      }
+
       .dkd_anyela_home_hotspot_diamond {
         top: 2.2%;
         right: 3.3%;
@@ -118,6 +122,11 @@
         clip-path: inset(50%);
         border: 0;
         white-space: nowrap;
+      }
+
+      @keyframes dkd_anyela_home_brand_pulse {
+        0%, 100% { box-shadow: 0 0 0 rgba(255,43,214,0); }
+        50% { box-shadow: 0 0 34px rgba(255,43,214,.36), 0 0 24px rgba(24,247,255,.22); }
       }
 
       @media (min-width: 820px) {
@@ -172,31 +181,15 @@
 
         <a
           class="dkd_anyela_home_hotspot dkd_anyela_home_button_hotspot dkd_anyela_home_hotspot_brand"
-          href="#markan-icin-anyela-yakinda"
-          aria-label="Markan için Anyela alanı yakında aktif olacak"
-          data-dkd-anyela-brand-disabled="true"
+          href="../Brand/"
+          aria-label="Markan için Anyela paket görselini aç"
         ></a>
 
         <section class="dkd_anyela_home_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Miami Style Club</h1>
-          <p>Profilim, Sohbet Odası, Paketler ve sağ üst elmas ikonundan Paketler sayfasına giriş aktiftir.</p>
+          <p>Profilim, Sohbet Odası, Paketler, Markan için Anyela ve sağ üst elmas ikonundan Paketler sayfasına giriş aktiftir.</p>
         </section>
       </section>
     </main>
-    <script>
-      (function dkdAnyelaHomeBrandPlaceholder() {
-        "use strict";
-
-        const dkdAnyelaHomeBrandButton = document.querySelector('[data-dkd-anyela-brand-disabled="true"]');
-        if (!dkdAnyelaHomeBrandButton) {
-          return;
-        }
-
-        dkdAnyelaHomeBrandButton.addEventListener("click", function dkdAnyelaHomeStopBrandRoute(dkdAnyelaHomeEvent) {
-          dkdAnyelaHomeEvent.preventDefault();
-          dkdAnyelaHomeEvent.stopPropagation();
-        });
-      })();
-    </script>
   </body>
 </html>
