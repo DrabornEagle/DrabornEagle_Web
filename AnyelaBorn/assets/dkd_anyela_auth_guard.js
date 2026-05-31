@@ -16,14 +16,15 @@
     }
   }
 
-  function dkdAnyelaAuthHasSavedAccess() {
+  function dkdAnyelaAuthHasGuestAccess() {
+    return dkdAnyelaAuthReadStorage("dkd_anyela_guest_login_active") === "true";
+  }
+
+  function dkdAnyelaAuthHasSavedAccountAccess() {
     const dkdAnyelaAuthAccessFlag = dkdAnyelaAuthReadStorage("dkd_anyela_auth_access");
     const dkdAnyelaAuthAccountOnceFlag = dkdAnyelaAuthReadStorage("dkd_anyela_account_login_once");
-    const dkdAnyelaAuthGuestFlag = dkdAnyelaAuthReadStorage("dkd_anyela_guest_login_active");
 
-    return dkdAnyelaAuthAccessFlag === "allowed" ||
-      dkdAnyelaAuthAccountOnceFlag === "true" ||
-      dkdAnyelaAuthGuestFlag === "true";
+    return dkdAnyelaAuthAccessFlag === "allowed" || dkdAnyelaAuthAccountOnceFlag === "true";
   }
 
   function dkdAnyelaAuthHasSupabaseSession() {
@@ -48,8 +49,12 @@
     }
   }
 
+  function dkdAnyelaAuthHasAccountAccess() {
+    return dkdAnyelaAuthHasSavedAccountAccess() || dkdAnyelaAuthHasSupabaseSession();
+  }
+
   function dkdAnyelaAuthHasAccess() {
-    return dkdAnyelaAuthHasSavedAccess() || dkdAnyelaAuthHasSupabaseSession();
+    return dkdAnyelaAuthHasAccountAccess() || dkdAnyelaAuthHasGuestAccess();
   }
 
   function dkdAnyelaAuthRedirect(dkdAnyelaAuthTargetPath) {
@@ -61,6 +66,7 @@
     window.location.replace(dkdAnyelaAuthTargetPath);
   }
 
+  const dkdAnyelaAuthAccountGranted = dkdAnyelaAuthHasAccountAccess();
   const dkdAnyelaAuthAccessGranted = dkdAnyelaAuthHasAccess();
 
   if (dkdAnyelaAuthMode === "login") {
@@ -72,6 +78,13 @@
 
   if (dkdAnyelaAuthMode === "entry") {
     dkdAnyelaAuthRedirect(dkdAnyelaAuthAccessGranted ? dkdAnyelaAuthHomePath : dkdAnyelaAuthLoginPath);
+    return;
+  }
+
+  if (dkdAnyelaAuthMode === "account") {
+    if (!dkdAnyelaAuthAccountGranted) {
+      dkdAnyelaAuthRedirect(dkdAnyelaAuthLoginPath);
+    }
     return;
   }
 
