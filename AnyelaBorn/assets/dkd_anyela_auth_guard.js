@@ -7,6 +7,7 @@
     : "protected";
   const dkdAnyelaAuthHomePath = "/AnyelaBorn/Home/";
   const dkdAnyelaAuthLoginPath = "/AnyelaBorn/Login/";
+  const dkdAnyelaAuthProfilePath = "/AnyelaBorn/Profile/";
 
   function dkdAnyelaAuthReadStorage(dkdAnyelaAuthKey) {
     try {
@@ -70,7 +71,14 @@
     window.location.replace(dkdAnyelaAuthTargetPath);
   }
 
+  const dkdAnyelaAuthCurrentPath = window.location.pathname;
   const dkdAnyelaAuthAccessGranted = dkdAnyelaAuthHasAccess();
+  const dkdAnyelaAuthRealAccountGranted = dkdAnyelaAuthHasRealAccountAccess();
+
+  if (dkdAnyelaAuthCurrentPath.indexOf(dkdAnyelaAuthProfilePath) === 0 && !dkdAnyelaAuthRealAccountGranted) {
+    dkdAnyelaAuthRedirect(dkdAnyelaAuthLoginPath);
+    return;
+  }
 
   if (dkdAnyelaAuthMode === "login") {
     if (dkdAnyelaAuthAccessGranted) {
@@ -85,7 +93,7 @@
   }
 
   if (dkdAnyelaAuthMode === "account") {
-    if (!dkdAnyelaAuthHasRealAccountAccess()) {
+    if (!dkdAnyelaAuthRealAccountGranted) {
       dkdAnyelaAuthRedirect(dkdAnyelaAuthLoginPath);
     }
     return;
