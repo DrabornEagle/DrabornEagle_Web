@@ -3,20 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anyela Born Yönetim Paneli</title>
-<style>
-:root{--p:#ff2bd6;--c:#18f7ff;--g:#ffd05f;--b:#070024;--m:rgba(255,255,255,.72)}*{box-sizing:border-box}body{margin:0;min-height:100svh;background:radial-gradient(circle at 15% 0%,rgba(255,43,214,.28),transparent 24rem),radial-gradient(circle at 90% 10%,rgba(24,247,255,.20),transparent 26rem),linear-gradient(180deg,#090035,#02000f);color:#fff;font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.wrap{width:min(1100px,100%);margin:auto;padding:18px}.hero,.card,.stat{border:1px solid rgba(255,255,255,.16);border-radius:26px;background:rgba(14,4,52,.88);box-shadow:0 20px 55px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.14)}.hero{padding:22px;margin-bottom:14px}h1{margin:0;font-size:clamp(34px,9vw,62px);text-shadow:0 0 28px rgba(255,43,214,.62)}p{color:var(--m);line-height:1.55}.actions{display:flex;gap:10px;flex-wrap:wrap}.btn{border:0;border-radius:999px;padding:12px 16px;color:white;text-decoration:none;font-weight:900;background:linear-gradient(105deg,#10e8ff,#6b52ff 35%,#ff2bd6 72%,#ffcf58);display:inline-flex}.btn2{background:rgba(255,255,255,.1);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:14px 0}.stat{padding:16px}.stat small{color:var(--m);font-weight:800}.stat strong{display:block;font-size:30px;margin-top:6px}.layout{display:grid;grid-template-columns:1.35fr .75fr;gap:14px}.card{padding:18px}.empty{padding:18px;border-radius:18px;background:rgba(255,255,255,.07);color:var(--m)}.row{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;padding:12px;border-bottom:1px solid rgba(255,255,255,.1)}.badge{border-radius:999px;padding:6px 10px;background:rgba(255,208,95,.16);color:var(--g);font-weight:900;font-size:12px}@media(max-width:840px){.grid{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:1fr}}@media(max-width:520px){.grid{grid-template-columns:1fr}.wrap{padding:12px}}
-</style>
+<meta name="theme-color" content="#070024">
+<title>Anyela Born Admin</title>
+<link rel="stylesheet" href="./admin.css">
 </head>
 <body>
-<main class="wrap">
-<section class="hero">
-<h1>Anyela Born Yönetim Paneli</h1>
-<p>Bu ekran dekontlar, kullanıcılar, paket talepleri ve ödeme onayları için hazırlanmıştır. Supabase veri bağlantısı aktif edildi; panel arayüzü modüler şekilde genişletilecek.</p>
-<div class="actions"><a class="btn" href="../Login/">Login Sayfası</a><a class="btn btn2" href="../Packages/">Paketler</a><a class="btn btn2" href="../">AnyelaBorn Ana</a></div>
+<main class="dkd_shell">
+<section class="dkd_hero">
+<p class="dkd_kicker">Miami Style Club</p>
+<h1>Anyela Born Admin</h1>
+<p>Dekontlar, kullanıcılar, paket talepleri, teklif hesapları ve ödeme onayları için canlı Supabase yönetim paneli.</p>
+<div class="dkd_login" id="dkd_login_box">
+<input class="dkd_input" id="dkd_admin_email" type="email" placeholder="Admin email">
+<input class="dkd_input" id="dkd_admin_password" type="password" placeholder="Şifre">
+<button class="dkd_btn" id="dkd_admin_login">Admin Girişi</button>
+</div>
+<div class="dkd_actions">
+<button class="dkd_btn" id="dkd_refresh">Yenile</button>
+<button class="dkd_btn dkd_danger" id="dkd_logout">Çıkış</button>
+<a class="dkd_btn dkd_soft" href="../Login/">Login</a>
+<a class="dkd_btn dkd_soft" href="../Packages/">Paketler</a>
+</div>
+<p class="dkd_note" id="dkd_note">Admin girişi bekleniyor.</p>
 </section>
-<section class="grid"><article class="stat"><small>Toplam Ödeme</small><strong>0</strong></article><article class="stat"><small>Bekleyen Dekont</small><strong>0</strong></article><article class="stat"><small>Onaylanan</small><strong>0 TL</strong></article><article class="stat"><small>Kullanıcı</small><strong>0</strong></article></section>
-<section class="layout"><article class="card"><h2>Dekont ve Ödeme Talepleri</h2><div class="row"><div><strong>Supabase bağlantı altyapısı hazır</strong><p>dkd_anyela_payments tablosu ve dkd-anyela-receipts bucket kuruldu.</p></div><span class="badge">Hazır</span></div><div class="empty">Henüz bu arayüze canlı liste bağlanmadı. Bir sonraki adımda liste, onay ve red butonları eklenecek.</div></article><aside class="card"><h2>Kullanıcılar</h2><div class="empty">Admin rolü için önce Login sayfasından kayıt olun, sonra Supabase içinde dkd_role değerini admin yapın.</div></aside></section>
+<section class="dkd_stats">
+<article><small>Toplam Ödeme</small><strong id="dkd_stat_total">0</strong></article>
+<article><small>Bekleyen Dekont</small><strong id="dkd_stat_pending">0</strong></article>
+<article><small>Onaylanan TL</small><strong id="dkd_stat_approved">0 TL</strong></article>
+<article><small>Kullanıcı</small><strong id="dkd_stat_users">0</strong></article>
+</section>
+<section class="dkd_filters">
+<input class="dkd_input" id="dkd_search" placeholder="Email, paket, takip no ara">
+<select class="dkd_input" id="dkd_status"><option value="all">Tüm durumlar</option><option value="pending">Bekleyen</option><option value="approved">Onaylanan</option><option value="rejected">Reddedilen</option></select>
+<select class="dkd_input" id="dkd_kind"><option value="all">Tüm tipler</option><option value="package">Paket</option><option value="offer">Teklif</option></select>
+</section>
+<section class="dkd_layout">
+<article class="dkd_card"><h2>Ödeme ve Dekont Talepleri</h2><div class="dkd_table_wrap"><table><thead><tr><th>Tarih</th><th>Kullanıcı</th><th>Paket</th><th>Tutar</th><th>Durum</th><th>Dekont</th><th>İşlem</th></tr></thead><tbody id="dkd_payments_body"><tr><td colspan="7">Veri bekleniyor...</td></tr></tbody></table></div></article>
+<aside class="dkd_card"><h2>Kullanıcılar</h2><div id="dkd_users_body" class="dkd_users">Veri bekleniyor...</div><h2>Seçili Kayıt</h2><pre id="dkd_detail_box" class="dkd_detail">Kayıt seçilmedi.</pre></aside>
+</section>
 </main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="./admin.js"></script>
 </body>
 </html>
