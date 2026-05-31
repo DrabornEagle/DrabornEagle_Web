@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#070024">
-<title>Anyela Born Admin</title>
+<title>AnyelaBorn Admin Panel</title>
 <link rel="stylesheet" href="./admin.css">
 </head>
 <body>
 <main class="dkd_shell">
 <section class="dkd_hero">
-<p class="dkd_kicker">Miami Style Club</p>
-<h1>Anyela Born Admin</h1>
+<p class="dkd_kicker">AnyelaBorn Admin Panel</p>
 <div class="dkd_login" id="dkd_login_box">
 <input class="dkd_input" id="dkd_admin_email" type="email" placeholder="Admin email">
 <input class="dkd_input" id="dkd_admin_password" type="password" placeholder="Şifre">
@@ -38,7 +37,21 @@
 </section>
 <section class="dkd_layout">
 <article class="dkd_card"><h2>Ödeme ve Dekont Talepleri</h2><div class="dkd_table_wrap"><table><thead><tr><th>Tarih</th><th>Kullanıcı</th><th>Paket</th><th>Tutar</th><th>Durum</th><th>Dekont</th><th>İşlem</th></tr></thead><tbody id="dkd_payments_body"><tr><td colspan="7">Veri bekleniyor...</td></tr></tbody></table></div></article>
-<aside class="dkd_card"><h2>Kullanıcılar</h2><div id="dkd_users_body" class="dkd_users">Veri bekleniyor...</div><h2>Seçili Kayıt</h2><pre id="dkd_detail_box" class="dkd_detail">Kayıt seçilmedi.</pre></aside>
+<aside class="dkd_card">
+<h2>Kullanıcılar</h2>
+<div id="dkd_users_body" class="dkd_users">Veri bekleniyor...</div>
+<h2>Seçili Kullanıcıya Ek Hak Ekle</h2>
+<div class="dkd_bonus_form">
+<div class="dkd_selected_user" id="dkd_selected_user_box">Önce kullanıcı listesinden bir kullanıcı seç.</div>
+<select class="dkd_input" id="dkd_extra_kind"><option value="chat_minutes">Ekstra Sohbet Dakikası</option><option value="voice_messages">Ekstra Sesli Mesaj</option><option value="video_messages">Ekstra Video Mesaj</option><option value="photo_count">Ekstra Görsel</option><option value="vip_note">VIP Not</option><option value="custom_bonus">Özel Bonus</option></select>
+<input class="dkd_input" id="dkd_extra_amount" type="number" min="0" step="1" value="10" placeholder="Miktar">
+<input class="dkd_input" id="dkd_extra_title" value="Admin bonusu" placeholder="Başlık">
+<textarea class="dkd_input dkd_textarea" id="dkd_extra_note" rows="3" placeholder="Admin notu / açıklama"></textarea>
+<button class="dkd_btn" id="dkd_add_extra">Ek Hak Ekle</button>
+</div>
+<h2>Kullanıcı Ek Hakları</h2>
+<div id="dkd_extras_body" class="dkd_users">Ek hak kaydı bekleniyor...</div>
+<h2>Seçili Kayıt</h2><pre id="dkd_detail_box" class="dkd_detail">Kayıt seçilmedi.</pre></aside>
 </section>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
