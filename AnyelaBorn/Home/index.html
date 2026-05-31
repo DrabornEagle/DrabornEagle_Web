@@ -20,13 +20,12 @@
         --dkd_anyela_home_bg: #070024;
         --dkd_anyela_home_pink: #ff2bd6;
         --dkd_anyela_home_cyan: #18f7ff;
+        --dkd_anyela_home_gold: #ffd05f;
         --dkd_anyela_home_text: #ffffff;
         color-scheme: dark;
       }
 
-      * {
-        box-sizing: border-box;
-      }
+      * { box-sizing: border-box; }
 
       html,
       body {
@@ -40,9 +39,7 @@
       }
 
       a,
-      button {
-        -webkit-tap-highlight-color: transparent;
-      }
+      button { -webkit-tap-highlight-color: transparent; }
 
       .dkd_anyela_home_page {
         width: 100%;
@@ -75,43 +72,74 @@
         -webkit-user-drag: none;
       }
 
-      .dkd_anyela_home_hotspot {
+      .dkd_anyela_home_hotspot,
+      .dkd_anyela_home_diamond_link {
         position: absolute;
-        z-index: 20;
-        left: 3.8%;
-        width: 92.4%;
-        height: 11.25%;
+        z-index: 30;
         display: block;
-        border-radius: 34px;
         outline: none;
         text-decoration: none;
         cursor: pointer;
         background: rgba(255, 255, 255, 0.001);
       }
 
-      .dkd_anyela_home_hotspot:focus-visible {
+      .dkd_anyela_home_hotspot {
+        left: 3.8%;
+        width: 92.4%;
+        height: 11.25%;
+        border-radius: 34px;
+      }
+
+      .dkd_anyela_home_diamond_link {
+        left: 87.1%;
+        top: 2.4%;
+        width: 10.1%;
+        height: 5.6%;
+        border-radius: 999px;
+      }
+
+      .dkd_anyela_home_hotspot:focus-visible,
+      .dkd_anyela_home_diamond_link:focus-visible {
         box-shadow:
           0 0 0 4px rgba(255, 255, 255, 0.94),
           0 0 0 9px rgba(255, 43, 214, 0.72),
           0 0 34px rgba(24, 247, 255, 0.72);
       }
 
-      .dkd_anyela_home_hotspot_profile {
-        top: 47.15%;
+      .dkd_anyela_home_hotspot_profile { top: 47.15%; }
+      .dkd_anyela_home_hotspot_chat { top: 59.42%; }
+      .dkd_anyela_home_hotspot_packages { top: 71.78%; }
+      .dkd_anyela_home_hotspot_brand { top: 84.16%; height: 11.18%; }
+
+      .dkd_anyela_home_neon_icon {
+        position: absolute;
+        z-index: 24;
+        left: 7.55%;
+        width: 15.2%;
+        aspect-ratio: 1;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        color: #fff;
+        font-size: clamp(26px, 7.1vw, 38px);
+        font-weight: 950;
+        pointer-events: none;
+        border: 1.5px solid rgba(255, 255, 255, 0.26);
+        background:
+          radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.16), transparent 34%),
+          linear-gradient(145deg, rgba(8, 216, 255, 0.20), rgba(255, 43, 214, 0.22));
+        box-shadow:
+          0 0 18px rgba(255, 43, 214, 0.48),
+          0 0 26px rgba(24, 247, 255, 0.32),
+          inset 0 0 22px rgba(255, 255, 255, 0.10);
+        text-shadow:
+          0 0 10px rgba(255, 255, 255, 0.92),
+          0 0 20px currentColor;
       }
 
-      .dkd_anyela_home_hotspot_chat {
-        top: 59.42%;
-      }
-
-      .dkd_anyela_home_hotspot_packages {
-        top: 71.78%;
-      }
-
-      .dkd_anyela_home_hotspot_brand {
-        top: 84.16%;
-        height: 11.18%;
-      }
+      .dkd_anyela_home_icon_profile { top: 49.25%; color: var(--dkd_anyela_home_pink); }
+      .dkd_anyela_home_icon_chat { top: 61.55%; color: #d98cff; }
+      .dkd_anyela_home_icon_packages { top: 73.9%; color: var(--dkd_anyela_home_cyan); }
 
       .dkd_anyela_home_screen_reader {
         position: absolute;
@@ -126,21 +154,14 @@
       }
 
       @media (min-width: 820px) {
-        .dkd_anyela_home_page {
-          align-items: center;
-          padding: 32px 0;
-        }
-
+        .dkd_anyela_home_page { align-items: center; padding: 32px 0; }
         .dkd_anyela_home_shell {
           width: min(44vw, 480px);
           min-height: auto;
           border-radius: 38px;
           border: 1px solid rgba(255, 255, 255, 0.16);
         }
-
-        .dkd_anyela_home_reference {
-          min-height: auto;
-        }
+        .dkd_anyela_home_reference { min-height: auto; }
       }
     </style>
     <script src="../assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="protected"></script>
@@ -157,6 +178,12 @@
           loading="eager"
           decoding="sync"
         />
+
+        <a class="dkd_anyela_home_diamond_link" href="../Packages/" aria-label="Paketler sayfasını aç"></a>
+
+        <span class="dkd_anyela_home_neon_icon dkd_anyela_home_icon_profile" aria-hidden="true">◎</span>
+        <span class="dkd_anyela_home_neon_icon dkd_anyela_home_icon_chat" aria-hidden="true">☏</span>
+        <span class="dkd_anyela_home_neon_icon dkd_anyela_home_icon_packages" aria-hidden="true">◇</span>
 
         <a
           class="dkd_anyela_home_hotspot dkd_anyela_home_hotspot_profile"
@@ -185,7 +212,7 @@
 
         <section class="dkd_anyela_home_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Miami Style Club</h1>
-          <p>Profilim, Sohbet Odası ve Paketler butonları aktiftir. Markan için Anyela alanı şimdilik pasiftir.</p>
+          <p>Profilim, Sohbet Odası, Paketler ve sağ üst elmas ikonları aktiftir. Markan için Anyela alanı şimdilik pasiftir.</p>
         </section>
       </section>
     </main>
