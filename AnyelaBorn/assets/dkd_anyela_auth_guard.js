@@ -111,7 +111,7 @@
     if(window.location.pathname.indexOf('/AnyelaBorn/ChatRoom/')===-1||document.getElementById('dkd_anyela_forum_rooms_script')){return;}
     const dkdAnyelaForumScript=document.createElement('script');
     dkdAnyelaForumScript.id='dkd_anyela_forum_rooms_script';
-    dkdAnyelaForumScript.src='/AnyelaBorn/assets/dkd_anyela_forum_rooms.js?v=20260531b';
+    dkdAnyelaForumScript.src='/AnyelaBorn/assets/dkd_anyela_forum_rooms.js?v=20260531c';
     document.body.appendChild(dkdAnyelaForumScript);
   }
 
