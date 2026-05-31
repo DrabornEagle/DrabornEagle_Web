@@ -4,15 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#05002b" />
-    <meta
-      name="description"
-      content="Anyela Born Club Login — Miami neon giriş, kayıt ve misafir girişi ekranı."
-    />
+    <meta name="description" content="Anyela Born Club Login — Supabase Auth bağlantılı Miami neon giriş ekranı." />
     <meta property="og:title" content="Anyela Born Club Login" />
-    <meta
-      property="og:description"
-      content="Anyela Born Club giriş ekranı. Giriş yap, kayıt ol veya paketleri incele."
-    />
+    <meta property="og:description" content="Anyela Born Club giriş ekranı. Giriş yap, kayıt ol veya paketleri incele." />
     <meta property="og:image" content="./assets/dkd_anyela_login_9935_20260529.png" />
     <title>Anyela Born Club Login</title>
     <style>
@@ -25,12 +19,8 @@
         color-scheme: dark;
       }
 
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
+      * { box-sizing: border-box; }
+      html, body {
         min-height: 100%;
         margin: 0;
         background:
@@ -40,16 +30,8 @@
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       }
 
-      button,
-      input {
-        font: inherit;
-      }
-
-      button,
-      a,
-      input {
-        -webkit-tap-highlight-color: transparent;
-      }
+      button, input { font: inherit; }
+      button, a, input { -webkit-tap-highlight-color: transparent; }
 
       .dkd_anyela_login_page {
         width: 100%;
@@ -102,10 +84,7 @@
         filter: none !important;
       }
 
-      .dkd_anyela_login_input::placeholder {
-        color: transparent;
-      }
-
+      .dkd_anyela_login_input::placeholder { color: transparent; }
       .dkd_anyela_login_input:focus,
       .dkd_anyela_login_input:focus-visible,
       .dkd_anyela_login_input:active,
@@ -128,13 +107,8 @@
         transition: background-color 999999s ease-in-out 0s;
       }
 
-      .dkd_anyela_login_email {
-        top: 64.88%;
-      }
-
-      .dkd_anyela_login_password {
-        top: 71.61%;
-      }
+      .dkd_anyela_login_email { top: 64.88%; }
+      .dkd_anyela_login_password { top: 71.61%; }
 
       .dkd_anyela_login_package_link,
       .dkd_anyela_login_tap_button {
@@ -156,10 +130,7 @@
         height: 5.9%;
       }
 
-      .dkd_anyela_login_tap_button {
-        z-index: 24;
-      }
-
+      .dkd_anyela_login_tap_button { z-index: 24; }
       .dkd_anyela_login_package_link:focus-visible,
       .dkd_anyela_login_tap_button:focus-visible {
         box-shadow:
@@ -168,26 +139,9 @@
           0 0 32px rgba(25, 246, 255, 0.72);
       }
 
-      .dkd_anyela_login_submit {
-        left: 22.1%;
-        top: 78.82%;
-        width: 58.0%;
-        height: 5.45%;
-      }
-
-      .dkd_anyela_login_register {
-        left: 22.2%;
-        top: 86.45%;
-        width: 58.0%;
-        height: 4.65%;
-      }
-
-      .dkd_anyela_login_guest {
-        left: 22.2%;
-        top: 92.10%;
-        width: 58.0%;
-        height: 4.65%;
-      }
+      .dkd_anyela_login_submit { left: 22.1%; top: 78.82%; width: 58.0%; height: 5.45%; }
+      .dkd_anyela_login_register { left: 22.2%; top: 86.45%; width: 58.0%; height: 4.65%; }
+      .dkd_anyela_login_guest { left: 22.2%; top: 92.10%; width: 58.0%; height: 4.65%; }
 
       .dkd_anyela_login_popup_backdrop {
         position: fixed;
@@ -204,9 +158,7 @@
         backdrop-filter: blur(12px);
       }
 
-      .dkd_anyela_login_popup_backdrop[data-dkd-anyela-popup-open="true"] {
-        display: flex;
-      }
+      .dkd_anyela_login_popup_backdrop[data-dkd-anyela-popup-open="true"] { display: flex; }
 
       .dkd_anyela_login_popup {
         width: min(92vw, 410px);
@@ -243,10 +195,7 @@
         line-height: 1.45;
       }
 
-      .dkd_anyela_login_popup_grid {
-        display: grid;
-        gap: 11px;
-      }
+      .dkd_anyela_login_popup_grid { display: grid; gap: 11px; }
 
       .dkd_anyela_login_popup_action {
         min-height: 56px;
@@ -261,6 +210,11 @@
         cursor: pointer;
         font-size: 17px;
         font-weight: 900;
+      }
+
+      .dkd_anyela_login_popup_action[disabled] {
+        cursor: wait;
+        opacity: 0.72;
       }
 
       .dkd_anyela_login_popup_guest {
@@ -279,7 +233,11 @@
         color: rgba(255, 255, 255, 0.72);
         font-size: 13px;
         text-align: center;
+        line-height: 1.45;
       }
+
+      .dkd_anyela_login_popup_note[data-dkd-anyela-status="success"] { color: #8efff7; }
+      .dkd_anyela_login_popup_note[data-dkd-anyela-status="error"] { color: #ffb1df; }
 
       .dkd_anyela_login_popup_close {
         width: 100%;
@@ -306,11 +264,7 @@
       }
 
       @media (min-width: 820px) {
-        .dkd_anyela_login_page {
-          align-items: center;
-          padding: 32px 0;
-        }
-
+        .dkd_anyela_login_page { align-items: center; padding: 32px 0; }
         .dkd_anyela_login_mobile_shell {
           width: min(44vw, 480px);
           min-height: auto;
@@ -321,10 +275,7 @@
             0 0 90px rgba(255, 35, 188, 0.25),
             0 0 120px rgba(24, 247, 255, 0.18);
         }
-
-        .dkd_anyela_login_mockup {
-          min-height: auto;
-        }
+        .dkd_anyela_login_mockup { min-height: auto; }
       }
     </style>
   </head>
@@ -365,31 +316,14 @@
             aria-label="Şifre"
           />
 
-          <button
-            class="dkd_anyela_login_tap_button dkd_anyela_login_submit"
-            type="button"
-            data-dkd-anyela-login-action="login"
-            aria-label="Giriş Yap"
-          ></button>
-
-          <button
-            class="dkd_anyela_login_tap_button dkd_anyela_login_register"
-            type="button"
-            data-dkd-anyela-login-action="register"
-            aria-label="Kayıt Ol"
-          ></button>
-
-          <button
-            class="dkd_anyela_login_tap_button dkd_anyela_login_guest"
-            type="button"
-            data-dkd-anyela-login-action="guest"
-            aria-label="Misafir Girişi"
-          ></button>
+          <button class="dkd_anyela_login_tap_button dkd_anyela_login_submit" type="button" data-dkd-anyela-login-action="login" aria-label="Giriş Yap"></button>
+          <button class="dkd_anyela_login_tap_button dkd_anyela_login_register" type="button" data-dkd-anyela-login-action="register" aria-label="Kayıt Ol"></button>
+          <button class="dkd_anyela_login_tap_button dkd_anyela_login_guest" type="button" data-dkd-anyela-login-action="guest" aria-label="Misafir Girişi"></button>
         </form>
 
         <section class="dkd_anyela_login_screen_reader" aria-label="Sayfa özeti">
           <h1>Anyela Born Club Login</h1>
-          <p>Email ve şifre alanları yazılabilir. Paketleri İncele butonu Packages sayfasına gider.</p>
+          <p>Email ve şifre alanları Supabase Auth ile çalışır. Paketleri İncele butonu Packages sayfasına gider.</p>
         </section>
       </section>
     </main>
@@ -397,7 +331,7 @@
     <div class="dkd_anyela_login_popup_backdrop" id="dkd_anyela_login_popup" aria-hidden="true">
       <section class="dkd_anyela_login_popup" role="dialog" aria-modal="true" aria-labelledby="dkd_anyela_login_popup_title">
         <h2 class="dkd_anyela_login_popup_title" id="dkd_anyela_login_popup_title">Miami Giriş Seçimi</h2>
-        <p class="dkd_anyela_login_popup_subtitle">Anyela Born Club deneyimine nasıl devam etmek istiyorsun?</p>
+        <p class="dkd_anyela_login_popup_subtitle">Email ve şifreni yaz; giriş yap, kayıt ol veya misafir olarak devam et.</p>
 
         <div class="dkd_anyela_login_popup_grid">
           <button class="dkd_anyela_login_popup_action" type="button" data-dkd-anyela-popup-choice="login">Giriş Yap</button>
@@ -410,16 +344,50 @@
       </section>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script>
       (function dkdAnyelaLoginScope() {
         "use strict";
 
+        const dkdAnyelaSupabaseUrl = "https://ztxlcfcwuwerxrhwfmte.supabase.co";
+        const dkdAnyelaSupabasePublishableKey = "sb_publishable_GSd5xFBwG9pioOY8N6MRQw_C2n7RLYa";
+        const dkdAnyelaPackagesRoute = "../Packages/";
         const dkdAnyelaLoginPopup = document.getElementById("dkd_anyela_login_popup");
         const dkdAnyelaLoginPopupNote = document.getElementById("dkd_anyela_login_popup_note");
         const dkdAnyelaLoginPopupClose = document.getElementById("dkd_anyela_login_popup_close");
         const dkdAnyelaLoginButtons = Array.from(document.querySelectorAll("[data-dkd-anyela-login-action]"));
         const dkdAnyelaLoginChoices = Array.from(document.querySelectorAll("[data-dkd-anyela-popup-choice]"));
         const dkdAnyelaLoginEmail = document.getElementById("dkd_anyela_login_email");
+        const dkdAnyelaLoginPassword = document.getElementById("dkd_anyela_login_password");
+        const dkdAnyelaSupabaseClient = window.supabase && window.supabase.createClient
+          ? window.supabase.createClient(dkdAnyelaSupabaseUrl, dkdAnyelaSupabasePublishableKey, {
+              auth: {
+                persistSession: true,
+                autoRefreshToken: true,
+                detectSessionInUrl: true,
+                storageKey: "dkd_anyela_auth_session"
+              }
+            })
+          : null;
+
+        function dkdAnyelaLoginSetBusy(dkdAnyelaIsBusy) {
+          dkdAnyelaLoginChoices.forEach(function dkdAnyelaLoginChoiceButton() {
+            arguments[0].disabled = dkdAnyelaIsBusy;
+          });
+        }
+
+        function dkdAnyelaLoginSetNote(dkdAnyelaMessage, dkdAnyelaStatus) {
+          if (!dkdAnyelaLoginPopupNote) {
+            return;
+          }
+
+          dkdAnyelaLoginPopupNote.textContent = dkdAnyelaMessage || "";
+          if (dkdAnyelaStatus) {
+            dkdAnyelaLoginPopupNote.setAttribute("data-dkd-anyela-status", dkdAnyelaStatus);
+          } else {
+            dkdAnyelaLoginPopupNote.removeAttribute("data-dkd-anyela-status");
+          }
+        }
 
         function dkdAnyelaLoginFocusEmail() {
           if (!dkdAnyelaLoginEmail) {
@@ -442,10 +410,7 @@
 
           dkdAnyelaLoginPopup.setAttribute("data-dkd-anyela-popup-open", "true");
           dkdAnyelaLoginPopup.setAttribute("aria-hidden", "false");
-
-          if (dkdAnyelaLoginPopupNote) {
-            dkdAnyelaLoginPopupNote.textContent = "";
-          }
+          dkdAnyelaLoginSetNote("Email ve şifreni yazdıysan seçim yapabilirsin.", "success");
         }
 
         function dkdAnyelaLoginClosePopup() {
@@ -457,22 +422,119 @@
           dkdAnyelaLoginPopup.setAttribute("aria-hidden", "true");
         }
 
-        function dkdAnyelaLoginHandleChoice(dkdAnyelaLoginEvent) {
-          const dkdAnyelaLoginChoice = dkdAnyelaLoginEvent.currentTarget.getAttribute("data-dkd-anyela-popup-choice");
+        function dkdAnyelaLoginValidateFields() {
+          const dkdAnyelaEmailValue = (dkdAnyelaLoginEmail && dkdAnyelaLoginEmail.value ? dkdAnyelaLoginEmail.value : "").trim();
+          const dkdAnyelaPasswordValue = dkdAnyelaLoginPassword && dkdAnyelaLoginPassword.value ? dkdAnyelaLoginPassword.value : "";
 
-          if (dkdAnyelaLoginChoice === "guest") {
-            window.location.href = "../Packages/";
+          if (!dkdAnyelaEmailValue || !dkdAnyelaEmailValue.includes("@")) {
+            dkdAnyelaLoginSetNote("Geçerli bir email adresi yazmalısın.", "error");
+            if (dkdAnyelaLoginEmail) {
+              dkdAnyelaLoginEmail.focus({ preventScroll: true });
+            }
+            return null;
+          }
+
+          if (!dkdAnyelaPasswordValue || dkdAnyelaPasswordValue.length < 6) {
+            dkdAnyelaLoginSetNote("Şifre en az 6 karakter olmalı.", "error");
+            if (dkdAnyelaLoginPassword) {
+              dkdAnyelaLoginPassword.focus({ preventScroll: true });
+            }
+            return null;
+          }
+
+          return { dkd_email: dkdAnyelaEmailValue, dkd_password: dkdAnyelaPasswordValue };
+        }
+
+        async function dkdAnyelaLoginSignIn() {
+          if (!dkdAnyelaSupabaseClient) {
+            dkdAnyelaLoginSetNote("Supabase bağlantısı yüklenemedi. Sayfayı yenileyip tekrar dene.", "error");
             return;
           }
 
-          if (dkdAnyelaLoginPopupNote) {
-            dkdAnyelaLoginPopupNote.textContent = dkdAnyelaLoginChoice === "login"
-              ? "Giriş yap özelliği bir sonraki aşamada aktif edilecek. Şimdilik paketleri inceleyebilirsin."
-              : "Kayıt ol özelliği bir sonraki aşamada aktif edilecek. Şimdilik paketleri inceleyebilirsin.";
+          const dkdAnyelaCredentials = dkdAnyelaLoginValidateFields();
+          if (!dkdAnyelaCredentials) {
+            return;
           }
 
-          if (dkdAnyelaLoginEmail) {
-            dkdAnyelaLoginEmail.focus();
+          dkdAnyelaLoginSetBusy(true);
+          dkdAnyelaLoginSetNote("Giriş kontrol ediliyor...", "success");
+
+          const dkdAnyelaSignInResult = await dkdAnyelaSupabaseClient.auth.signInWithPassword({
+            email: dkdAnyelaCredentials.dkd_email,
+            password: dkdAnyelaCredentials.dkd_password
+          });
+
+          dkdAnyelaLoginSetBusy(false);
+
+          if (dkdAnyelaSignInResult.error) {
+            dkdAnyelaLoginSetNote("Giriş başarısız: " + dkdAnyelaSignInResult.error.message, "error");
+            return;
+          }
+
+          dkdAnyelaLoginSetNote("Giriş başarılı. Paketler sayfasına yönlendiriliyorsun...", "success");
+          window.setTimeout(function dkdAnyelaLoginRedirectAfterSignIn() {
+            window.location.href = dkdAnyelaPackagesRoute;
+          }, 650);
+        }
+
+        async function dkdAnyelaLoginSignUp() {
+          if (!dkdAnyelaSupabaseClient) {
+            dkdAnyelaLoginSetNote("Supabase bağlantısı yüklenemedi. Sayfayı yenileyip tekrar dene.", "error");
+            return;
+          }
+
+          const dkdAnyelaCredentials = dkdAnyelaLoginValidateFields();
+          if (!dkdAnyelaCredentials) {
+            return;
+          }
+
+          dkdAnyelaLoginSetBusy(true);
+          dkdAnyelaLoginSetNote("Kayıt oluşturuluyor...", "success");
+
+          const dkdAnyelaSignUpResult = await dkdAnyelaSupabaseClient.auth.signUp({
+            email: dkdAnyelaCredentials.dkd_email,
+            password: dkdAnyelaCredentials.dkd_password,
+            options: {
+              data: {
+                dkd_display_name: dkdAnyelaCredentials.dkd_email.split("@")[0],
+                dkd_source: "anyelaborn_login"
+              }
+            }
+          });
+
+          dkdAnyelaLoginSetBusy(false);
+
+          if (dkdAnyelaSignUpResult.error) {
+            dkdAnyelaLoginSetNote("Kayıt başarısız: " + dkdAnyelaSignUpResult.error.message, "error");
+            return;
+          }
+
+          if (dkdAnyelaSignUpResult.data && dkdAnyelaSignUpResult.data.session) {
+            dkdAnyelaLoginSetNote("Kayıt tamamlandı. Paketler sayfasına yönlendiriliyorsun...", "success");
+            window.setTimeout(function dkdAnyelaLoginRedirectAfterSignUp() {
+              window.location.href = dkdAnyelaPackagesRoute;
+            }, 650);
+            return;
+          }
+
+          dkdAnyelaLoginSetNote("Kayıt alındı. Supabase email onayı açıksa mail kutunu kontrol etmelisin.", "success");
+        }
+
+        async function dkdAnyelaLoginHandleChoice(dkdAnyelaLoginEvent) {
+          const dkdAnyelaLoginChoice = dkdAnyelaLoginEvent.currentTarget.getAttribute("data-dkd-anyela-popup-choice");
+
+          if (dkdAnyelaLoginChoice === "guest") {
+            window.location.href = dkdAnyelaPackagesRoute;
+            return;
+          }
+
+          if (dkdAnyelaLoginChoice === "login") {
+            await dkdAnyelaLoginSignIn();
+            return;
+          }
+
+          if (dkdAnyelaLoginChoice === "register") {
+            await dkdAnyelaLoginSignUp();
           }
         }
 
