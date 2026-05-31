@@ -17,15 +17,7 @@
   }
 
   function dkdAnyelaAuthHasGuestAccess() {
-    return dkdAnyelaAuthReadStorage("dkd_anyela_guest_login_active") === "true";
-  }
-
-  function dkdAnyelaAuthHasSavedAccountAccess() {
-    const dkdAnyelaAuthAccessFlag = dkdAnyelaAuthReadStorage("dkd_anyela_auth_access");
-    const dkdAnyelaAuthAccountOnceFlag = dkdAnyelaAuthReadStorage("dkd_anyela_account_login_once");
-    const dkdAnyelaAuthModeFlag = dkdAnyelaAuthReadStorage("dkd_anyela_auth_mode");
-
-    return dkdAnyelaAuthAccountOnceFlag === "true" || (dkdAnyelaAuthAccessFlag === "allowed" && dkdAnyelaAuthModeFlag === "member");
+    return dkdAnyelaAuthReadStorage("dkd_anyela_guest_login_active") === "true" || dkdAnyelaAuthReadStorage("dkd_anyela_auth_mode") === "guest";
   }
 
   function dkdAnyelaAuthHasSupabaseSession() {
@@ -50,11 +42,27 @@
     }
   }
 
-  function dkdAnyelaAuthHasAccountAccess() {
-    return dkdAnyelaAuthHasSavedAccountAccess() || dkdAnyelaAuthHasSupabaseSession();
+  function dkdAnyelaAuthHasSavedAccountAccess() {
+    const dkdAnyelaAuthAccessFlag = dkdAnyelaAuthReadStorage("dkd_anyela_auth_access");
+    const dkdAnyelaAuthAccountOnceFlag = dkdAnyelaAuthReadStorage("dkd_anyela_account_login_once");
+    const dkdAnyelaAuthModeFlag = dkdAnyelaAuthReadStorage("dkd_anyela_auth_mode");
+
+    return dkdAnyelaAuthAccountOnceFlag === "true" || (dkdAnyelaAuthAccessFlag === "allowed" && dkdAnyelaAuthModeFlag === "member");
   }
 
-  function dkdAnyelaAuthHasAccess() {
+  function dkdAnyelaAuthHasAccountAccess() {
+    if (dkdAnyelaAuthHasSupabaseSession()) {
+      return true;
+    }
+
+    if (dkdAnyelaAuthHasGuestAccess()) {
+      return false;
+    }
+
+    return dkdAnyelaAuthHasSavedAccountAccess();
+  }
+
+  function dkdAnyelaAuthHasProtectedAccess() {
     return dkdAnyelaAuthHasAccountAccess() || dkdAnyelaAuthHasGuestAccess();
   }
 
@@ -68,7 +76,7 @@
   }
 
   const dkdAnyelaAuthAccountGranted = dkdAnyelaAuthHasAccountAccess();
-  const dkdAnyelaAuthAccessGranted = dkdAnyelaAuthHasAccess();
+  const dkdAnyelaAuthProtectedGranted = dkdAnyelaAuthHasProtectedAccess();
 
   if (dkdAnyelaAuthMode === "login") {
     if (dkdAnyelaAuthAccountGranted) {
@@ -89,7 +97,7 @@
     return;
   }
 
-  if (!dkdAnyelaAuthAccessGranted) {
+  if (!dkdAnyelaAuthProtectedGranted) {
     dkdAnyelaAuthRedirect(dkdAnyelaAuthLoginPath);
   }
 })();
