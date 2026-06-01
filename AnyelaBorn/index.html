@@ -4,290 +4,47 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta name="theme-color" content="#05002b" />
-    <meta
-      name="description"
-      content="Anyela Born Club ana sayfası — Miami Vibes video tanıtım ekranı."
-    />
+    <meta name="description" content="Anyela Born Club ana sayfası — Miami Vibes video tanıtım ekranı." />
     <meta property="og:title" content="Anyela Born Club" />
-    <meta
-      property="og:description"
-      content="Anyela Born Club dünyasına giriş yap. Hemen Tanışmaya Başla butonuna basınca video başlar."
-    />
+    <meta property="og:description" content="Anyela Born Club dünyasına giriş yap. Play butonuna basınca video başlar." />
     <meta property="og:image" content="./assets/dkd_anyela_root_9950_20260530.png" />
     <title>Anyela Born Club</title>
     <style>
-      :root {
-        --dkd_anyela_root_bg: #05002b;
-        --dkd_anyela_root_shadow: 0 28px 90px rgba(0, 0, 0, 0.54);
-        color-scheme: dark;
-      }
-
-      * {
-        box-sizing: border-box;
-      }
-
-      html,
-      body {
-        min-height: 100%;
-        margin: 0;
-        background:
-          radial-gradient(circle at 18% 0%, rgba(255, 35, 188, 0.24), transparent 24rem),
-          radial-gradient(circle at 88% 10%, rgba(24, 247, 255, 0.18), transparent 25rem),
-          linear-gradient(180deg, #090044 0%, var(--dkd_anyela_root_bg) 100%);
-        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      }
-
-      a,
-      button {
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      button {
-        border: 0;
-        padding: 0;
-        font: inherit;
-      }
-
-      .dkd_anyela_root_page {
-        width: 100%;
-        min-height: 100svh;
-        display: flex;
-        justify-content: center;
-        padding: max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom));
-      }
-
-      .dkd_anyela_root_mobile_shell {
-        position: relative;
-        width: min(100vw, 480px);
-        min-height: 100svh;
-        overflow: hidden;
-        background: #05002b;
-        box-shadow: var(--dkd_anyela_root_shadow);
-      }
-
-      .dkd_anyela_root_mockup {
-        display: block;
-        width: 100%;
-        height: auto;
-        min-height: 100svh;
-        object-fit: cover;
-        object-position: center top;
-        user-select: none;
-        -webkit-user-drag: none;
-      }
-
-      .dkd_anyela_root_full_link {
-        position: absolute;
-        inset: 0;
-        z-index: 30;
-        display: block;
-        cursor: pointer;
-        outline: none;
-        text-decoration: none;
-      }
-
-      .dkd_anyela_root_video {
-        position: absolute;
-        left: 3.62%;
-        top: 49.18%;
-        width: 92.76%;
-        height: 39.15%;
-        z-index: 70;
-        display: block;
-        object-fit: cover;
-        object-position: center center;
-        border-radius: 22px;
-        opacity: 0;
-        pointer-events: none;
-        background: #000000;
-        box-shadow:
-          0 0 18px rgba(255, 35, 188, 0.28),
-          0 0 22px rgba(24, 247, 255, 0.18);
-        transition: opacity 180ms ease;
-      }
-
-      .dkd_anyela_root_video[data-dkd-anyela-video-active="true"] {
-        opacity: 1;
-        pointer-events: auto;
-      }
-
-      .dkd_anyela_root_start_button,
-      .dkd_anyela_root_play_button {
-        position: absolute;
-        z-index: 90;
-        display: block;
-        border-radius: 999px;
-        background: transparent;
-        cursor: pointer;
-        outline: none;
-      }
-
-      .dkd_anyela_root_start_button {
-        left: 3.30%;
-        top: 31.65%;
-        width: 93.40%;
-        height: 11.80%;
-        border-radius: 34px;
-      }
-
-      .dkd_anyela_root_play_button {
-        left: 40.75%;
-        top: 67.35%;
-        width: 18.65%;
-        height: 10.8%;
-      }
-
-      .dkd_anyela_root_start_button:focus-visible,
-      .dkd_anyela_root_play_button:focus-visible,
-      .dkd_anyela_root_full_link:focus-visible {
-        box-shadow:
-          0 0 0 4px rgba(255, 255, 255, 0.92),
-          0 0 0 9px rgba(255, 35, 188, 0.72),
-          0 0 34px rgba(24, 247, 255, 0.72);
-      }
-
-      .dkd_anyela_root_screen_reader {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip-path: inset(50%);
-        border: 0;
-        white-space: nowrap;
-      }
-
-      @media (min-width: 820px) {
-        .dkd_anyela_root_page {
-          align-items: center;
-          padding: 32px 0;
-        }
-
-        .dkd_anyela_root_mobile_shell {
-          width: min(44vw, 480px);
-          min-height: auto;
-          border-radius: 38px;
-          border: 1px solid rgba(255, 255, 255, 0.16);
-          box-shadow:
-            0 42px 110px rgba(0, 0, 0, 0.58),
-            0 0 90px rgba(255, 35, 188, 0.25),
-            0 0 120px rgba(24, 247, 255, 0.18);
-        }
-
-        .dkd_anyela_root_mockup {
-          min-height: auto;
-        }
-      }
+      :root { --dkd_anyela_root_bg:#05002b; --dkd_anyela_root_shadow:0 28px 90px rgba(0,0,0,.54); color-scheme:dark; }
+      * { box-sizing:border-box; }
+      html,body { min-height:100%; margin:0; background:radial-gradient(circle at 18% 0%,rgba(255,35,188,.24),transparent 24rem),radial-gradient(circle at 88% 10%,rgba(24,247,255,.18),transparent 25rem),linear-gradient(180deg,#090044 0%,var(--dkd_anyela_root_bg) 100%); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+      button { border:0; padding:0; font:inherit; -webkit-tap-highlight-color:transparent; }
+      .dkd_anyela_root_page { width:100%; min-height:100svh; display:flex; justify-content:center; padding:max(0px, env(safe-area-inset-top)) 0 max(0px, env(safe-area-inset-bottom)); }
+      .dkd_anyela_root_mobile_shell { position:relative; width:min(100vw,480px); min-height:100svh; overflow:hidden; background:#05002b; box-shadow:var(--dkd_anyela_root_shadow); }
+      .dkd_anyela_root_mockup { display:block; width:100%; height:auto; min-height:100svh; object-fit:cover; object-position:center top; user-select:none; -webkit-user-drag:none; }
+      .dkd_anyela_root_video { position:absolute; left:3.62%; top:49.18%; width:92.76%; height:39.15%; z-index:70; display:block; object-fit:contain; object-position:center center; border-radius:22px; opacity:0; pointer-events:none; background:#000; box-shadow:0 0 18px rgba(255,35,188,.28),0 0 22px rgba(24,247,255,.18); transition:opacity 180ms ease; }
+      .dkd_anyela_root_video[data-dkd-anyela-video-active="true"] { opacity:1; pointer-events:auto; }
+      .dkd_anyela_root_start_button,.dkd_anyela_root_play_button { position:absolute; z-index:90; display:block; border-radius:999px; background:transparent; cursor:pointer; outline:none; }
+      .dkd_anyela_root_start_button { left:3.30%; top:31.65%; width:93.40%; height:11.80%; border-radius:34px; }
+      .dkd_anyela_root_play_button { left:40.75%; top:67.35%; width:18.65%; height:10.8%; }
+      .dkd_anyela_root_screen_reader { position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip-path:inset(50%); border:0; white-space:nowrap; }
+      @media (min-width:820px) { .dkd_anyela_root_page { align-items:center; padding:32px 0; } .dkd_anyela_root_mobile_shell { width:min(44vw,480px); min-height:auto; border-radius:38px; border:1px solid rgba(255,255,255,.16); box-shadow:0 42px 110px rgba(0,0,0,.58),0 0 90px rgba(255,35,188,.25),0 0 120px rgba(24,247,255,.18); } .dkd_anyela_root_mockup { min-height:auto; } }
     </style>
-    <script src="./assets/dkd_anyela_auth_guard.js" data-dkd-anyela-auth-mode="entry"></script>
   </head>
   <body>
     <main class="dkd_anyela_root_page" aria-label="Anyela Born Club ana sayfa">
       <section class="dkd_anyela_root_mobile_shell" id="dkd_anyela_root_home">
-        <img
-          class="dkd_anyela_root_mockup"
-          src="./assets/dkd_anyela_root_9950_20260530.png"
-          alt="Anyela Born Club Miami Vibes video tanıtım mobil ana sayfası"
-          width="864"
-          height="1536"
-          loading="eager"
-        />
-
-        <a class="dkd_anyela_root_full_link" href="./Login/" aria-label="Anyela Born Login sayfasına git"></a>
-
-        <video
-          class="dkd_anyela_root_video"
-          id="dkd_anyela_root_video"
-          src="./assets/dkd_anyela_root_video_9950_20260530.mp4"
-          preload="metadata"
-          playsinline
-          webkit-playsinline
-          controls
-          controlslist="nodownload noplaybackrate"
-        ></video>
-
-        <button
-          class="dkd_anyela_root_start_button"
-          id="dkd_anyela_root_start_button"
-          type="button"
-          aria-label="Anyela ile hemen tanışmaya başla"
-        ></button>
-
-        <button
-          class="dkd_anyela_root_play_button"
-          id="dkd_anyela_root_play_button"
-          type="button"
-          aria-label="Anyela video oynat"
-        ></button>
-
-        <section class="dkd_anyela_root_screen_reader" aria-label="Sayfa özeti">
-          <h1>Anyela Born Club</h1>
-          <p>Hemen Tanışmaya Başla veya Play butonuna basınca video oynar. Video bitince Login sayfasına otomatik yönlendirir.</p>
-        </section>
+        <img class="dkd_anyela_root_mockup" src="./assets/dkd_anyela_root_9950_20260530.png" alt="Anyela Born Club Miami Vibes video tanıtım mobil ana sayfası" width="864" height="1536" loading="eager" />
+        <video class="dkd_anyela_root_video" id="dkd_anyela_root_video" src="./assets/dkd_anyela_root_video_9950_20260530.mp4?v=20260601framefix" preload="metadata" playsinline webkit-playsinline controls controlslist="nodownload noplaybackrate"></video>
+        <button class="dkd_anyela_root_start_button" id="dkd_anyela_root_start_button" type="button" aria-label="Anyela ile hemen tanışmaya başla"></button>
+        <button class="dkd_anyela_root_play_button" id="dkd_anyela_root_play_button" type="button" aria-label="Anyela video oynat"></button>
+        <section class="dkd_anyela_root_screen_reader" aria-label="Sayfa özeti"><h1>Anyela Born Club</h1><p>Play butonuna basınca video oynar. Login sayfasına otomatik yönlendirme yoktur.</p></section>
       </section>
     </main>
     <script>
-      (function dkdAnyelaRootVideoRoute() {
+      (function dkdAnyelaRootVideoRoute(){
         "use strict";
-
-        const dkdAnyelaRootVideo = document.getElementById("dkd_anyela_root_video");
-        const dkdAnyelaRootPlayButton = document.getElementById("dkd_anyela_root_play_button");
-        const dkdAnyelaRootStartButton = document.getElementById("dkd_anyela_root_start_button");
-
-        function dkdAnyelaRootOpenLogin() {
-          window.location.href = "./Login/";
-        }
-
-        function dkdAnyelaRootPlayVideo(dkdAnyelaRootEvent) {
-          dkdAnyelaRootEvent.preventDefault();
-          dkdAnyelaRootEvent.stopPropagation();
-
-          if (!dkdAnyelaRootVideo) {
-            return;
-          }
-
-          dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active", "true");
-          dkdAnyelaRootVideo.currentTime = 0;
-          dkdAnyelaRootVideo.muted = false;
-
-          const dkdAnyelaRootPlayResult = dkdAnyelaRootVideo.play();
-          if (dkdAnyelaRootPlayResult && typeof dkdAnyelaRootPlayResult.catch === "function") {
-            dkdAnyelaRootPlayResult.catch(function dkdAnyelaRootMuteFallback() {
-              dkdAnyelaRootVideo.muted = true;
-              dkdAnyelaRootVideo.play();
-            });
-          }
-        }
-
-        [dkdAnyelaRootStartButton, dkdAnyelaRootPlayButton].forEach(function dkdAnyelaRootBindPlayButton(dkdAnyelaRootButton) {
-          if (!dkdAnyelaRootButton) {
-            return;
-          }
-
-          dkdAnyelaRootButton.addEventListener("click", dkdAnyelaRootPlayVideo);
-          dkdAnyelaRootButton.addEventListener("touchend", dkdAnyelaRootPlayVideo);
-        });
-
-        if (dkdAnyelaRootVideo) {
-          dkdAnyelaRootVideo.addEventListener("click", function dkdAnyelaRootStopVideoClick(dkdAnyelaRootEvent) {
-            dkdAnyelaRootEvent.stopPropagation();
-          });
-
-          dkdAnyelaRootVideo.addEventListener("play", function dkdAnyelaRootKeepVideoVisible() {
-            dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active", "true");
-          });
-
-          dkdAnyelaRootVideo.addEventListener("ended", dkdAnyelaRootOpenLogin);
-        }
-
-        document.addEventListener("click", function dkdAnyelaRootHandleOutsideClick(dkdAnyelaRootEvent) {
-          const dkdAnyelaRootInteractive = dkdAnyelaRootEvent.target.closest("a, button, video");
-          if (dkdAnyelaRootInteractive) {
-            return;
-          }
-          dkdAnyelaRootOpenLogin();
-        });
+        const dkdAnyelaRootVideo=document.getElementById("dkd_anyela_root_video");
+        const dkdAnyelaRootPlayButton=document.getElementById("dkd_anyela_root_play_button");
+        const dkdAnyelaRootStartButton=document.getElementById("dkd_anyela_root_start_button");
+        function dkdAnyelaRootPlayVideo(dkdAnyelaRootEvent){dkdAnyelaRootEvent.preventDefault();dkdAnyelaRootEvent.stopPropagation();if(!dkdAnyelaRootVideo){return;}dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active","true");dkdAnyelaRootVideo.currentTime=0;dkdAnyelaRootVideo.muted=false;const dkdAnyelaRootPlayResult=dkdAnyelaRootVideo.play();if(dkdAnyelaRootPlayResult&&typeof dkdAnyelaRootPlayResult.catch==="function"){dkdAnyelaRootPlayResult.catch(function dkdAnyelaRootMuteFallback(){dkdAnyelaRootVideo.muted=true;dkdAnyelaRootVideo.play();});}}
+        [dkdAnyelaRootStartButton,dkdAnyelaRootPlayButton].forEach(function dkdAnyelaRootBindPlayButton(dkdAnyelaRootButton){if(!dkdAnyelaRootButton){return;}dkdAnyelaRootButton.addEventListener("click",dkdAnyelaRootPlayVideo);dkdAnyelaRootButton.addEventListener("touchend",dkdAnyelaRootPlayVideo);});
+        if(dkdAnyelaRootVideo){dkdAnyelaRootVideo.addEventListener("click",function dkdAnyelaRootStopVideoClick(dkdAnyelaRootEvent){dkdAnyelaRootEvent.stopPropagation();});dkdAnyelaRootVideo.addEventListener("play",function dkdAnyelaRootKeepVideoVisible(){dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active","true");});}
       })();
     </script>
   </body>
