@@ -21,7 +21,7 @@
 <button class="dkd_btn dkd_danger" id="dkd_logout">Çıkış</button>
 <a class="dkd_btn dkd_soft" href="../Login/">Login</a>
 <a class="dkd_btn dkd_soft" href="../Packages/">Paketler</a>
-<a class="dkd_btn dkd_soft" href="../ChatRoom/">Canlı Oda</a>
+<a class="dkd_btn dkd_soft" href="../ChatRoom/">Sohbet Odası</a>
 </div>
 <p class="dkd_note" id="dkd_note">Admin girişi bekleniyor.</p>
 </section>
@@ -37,17 +37,10 @@
 <select class="dkd_input" id="dkd_kind"><option value="all">Tüm tipler</option><option value="package">Paket</option><option value="offer">Teklif</option></select>
 </section>
 <section class="dkd_layout">
-<article class="dkd_card"><h2>Ödeme ve Dekont Talepleri</h2><div class="dkd_table_wrap"><table><thead><tr><th>Tarih</th><th>Kullanıcı</th><th>Paket</th><th>Tutar</th><th>Durum</th><th>Dekont</th><th>İşlem</th></tr></thead><tbody id="dkd_payments_body"><tr><td colspan="7">Veri bekleniyor...</td></tr></tbody></table></div></article>
+<article class="dkd_card"><h2>Ödeme ve Dekont Talepleri</h2><div class="dkd_table_wrap"><table><thead><tr><th>Tarih</th><th>Kullanıcı</th><th>Paket/Haklar</th><th>Tutar</th><th>Durum</th><th>Dekont</th><th>İşlem</th></tr></thead><tbody id="dkd_payments_body"><tr><td colspan="7">Veri bekleniyor...</td></tr></tbody></table></div></article>
 <aside class="dkd_card">
 <h2>Kullanıcılar</h2>
 <div id="dkd_users_body" class="dkd_users">Veri bekleniyor...</div>
-<h2>Canlı Sohbet</h2>
-<div class="dkd_selected_user" id="dkd_live_chat_user_box">Önce kullanıcı listesinden bir kullanıcı seç.</div>
-<div class="dkd_live_chat_window" id="dkd_live_chat_body">Canlı mesaj kaydı bekleniyor...</div>
-<div class="dkd_live_chat_form">
-<textarea class="dkd_input dkd_textarea" id="dkd_live_chat_message" rows="3" placeholder="Kullanıcıya canlı mesaj yaz..."></textarea>
-<button class="dkd_btn" id="dkd_send_live_chat">Mesaj Gönder</button>
-</div>
 <h2>Seçili Kullanıcıya Ek Hak Ekle</h2>
 <div class="dkd_bonus_form">
 <div class="dkd_selected_user" id="dkd_selected_user_box">Önce kullanıcı listesinden bir kullanıcı seç.</div>
@@ -63,6 +56,6 @@
 </section>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="./admin.js"></script>
+<script src="./admin.js?v=20260602admin_delete_rights"></script>
 </body>
 </html>
