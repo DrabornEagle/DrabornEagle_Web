@@ -30,10 +30,10 @@
     <main class="dkd_anyela_root_page" aria-label="Anyela Born Club ana sayfa">
       <section class="dkd_anyela_root_mobile_shell" id="dkd_anyela_root_home">
         <img class="dkd_anyela_root_mockup" src="./assets/dkd_anyela_root_9950_20260530.png" alt="Anyela Born Club Miami Vibes video tanıtım mobil ana sayfası" width="864" height="1536" loading="eager" />
-        <video class="dkd_anyela_root_video" id="dkd_anyela_root_video" src="./assets/dkd_anyela_root_video_9950_20260530.mp4?v=20260601video_lower_widthfix" preload="auto" playsinline webkit-playsinline autoplay controls controlslist="nodownload noplaybackrate"></video>
+        <video class="dkd_anyela_root_video" id="dkd_anyela_root_video" src="./assets/dkd_anyela_root_video_9950_20260530.mp4?v=20260602start_login" preload="auto" playsinline webkit-playsinline autoplay controls controlslist="nodownload noplaybackrate"></video>
         <button class="dkd_anyela_root_start_button" id="dkd_anyela_root_start_button" type="button" aria-label="Anyela ile hemen tanışmaya başla"></button>
         <button class="dkd_anyela_root_play_button" id="dkd_anyela_root_play_button" type="button" aria-label="Anyela video oynat"></button>
-        <section class="dkd_anyela_root_screen_reader" aria-label="Sayfa özeti"><h1>Anyela Born Club</h1><p>Video ses açık otomatik başlar. Video bitince Login sayfasına yönlendirir.</p></section>
+        <section class="dkd_anyela_root_screen_reader" aria-label="Sayfa özeti"><h1>Anyela Born Club</h1><p>Hemen tanışmaya başla butonu Login sayfasına yönlendirir. Video bitince de Login sayfasına gider.</p></section>
       </section>
     </main>
     <script>
@@ -44,9 +44,11 @@
         const dkdAnyelaRootPlayButton=document.getElementById("dkd_anyela_root_play_button");
         const dkdAnyelaRootStartButton=document.getElementById("dkd_anyela_root_start_button");
         function dkdAnyelaRootShowVideo(){if(!dkdAnyelaRootVideo){return;}dkdAnyelaRootVideo.setAttribute("data-dkd-anyela-video-active","true");}
+        function dkdAnyelaRootGoLogin(dkdAnyelaRootEvent){if(dkdAnyelaRootEvent){dkdAnyelaRootEvent.preventDefault();dkdAnyelaRootEvent.stopPropagation();}window.location.href=dkdAnyelaRootLoginPath;}
         function dkdAnyelaRootPlayWithSound(dkdAnyelaRootEvent){if(dkdAnyelaRootEvent){dkdAnyelaRootEvent.preventDefault();dkdAnyelaRootEvent.stopPropagation();}if(!dkdAnyelaRootVideo){return;}dkdAnyelaRootShowVideo();dkdAnyelaRootVideo.muted=false;dkdAnyelaRootVideo.defaultMuted=false;dkdAnyelaRootVideo.volume=1;const dkdAnyelaRootPlayResult=dkdAnyelaRootVideo.play();if(dkdAnyelaRootPlayResult&&typeof dkdAnyelaRootPlayResult.catch==="function"){dkdAnyelaRootPlayResult.catch(function(){dkdAnyelaRootShowVideo();});}}
-        [dkdAnyelaRootStartButton,dkdAnyelaRootPlayButton].forEach(function dkdAnyelaRootBind(dkdAnyelaRootButton){if(!dkdAnyelaRootButton){return;}dkdAnyelaRootButton.addEventListener("click",dkdAnyelaRootPlayWithSound);dkdAnyelaRootButton.addEventListener("touchend",dkdAnyelaRootPlayWithSound);});
-        if(dkdAnyelaRootVideo){dkdAnyelaRootVideo.muted=false;dkdAnyelaRootVideo.defaultMuted=false;dkdAnyelaRootVideo.volume=1;dkdAnyelaRootVideo.addEventListener("click",function dkdAnyelaRootStopClick(dkdAnyelaRootEvent){dkdAnyelaRootEvent.stopPropagation();});dkdAnyelaRootVideo.addEventListener("play",dkdAnyelaRootShowVideo);dkdAnyelaRootVideo.addEventListener("ended",function dkdAnyelaRootGoLogin(){window.location.href=dkdAnyelaRootLoginPath;});}
+        if(dkdAnyelaRootStartButton){dkdAnyelaRootStartButton.addEventListener("click",dkdAnyelaRootGoLogin);dkdAnyelaRootStartButton.addEventListener("touchend",dkdAnyelaRootGoLogin);}
+        if(dkdAnyelaRootPlayButton){dkdAnyelaRootPlayButton.addEventListener("click",dkdAnyelaRootPlayWithSound);dkdAnyelaRootPlayButton.addEventListener("touchend",dkdAnyelaRootPlayWithSound);}
+        if(dkdAnyelaRootVideo){dkdAnyelaRootVideo.muted=false;dkdAnyelaRootVideo.defaultMuted=false;dkdAnyelaRootVideo.volume=1;dkdAnyelaRootVideo.addEventListener("click",function dkdAnyelaRootStopClick(dkdAnyelaRootEvent){dkdAnyelaRootEvent.stopPropagation();});dkdAnyelaRootVideo.addEventListener("play",dkdAnyelaRootShowVideo);dkdAnyelaRootVideo.addEventListener("ended",dkdAnyelaRootGoLogin);}
         window.addEventListener("DOMContentLoaded",dkdAnyelaRootPlayWithSound);
         window.addEventListener("load",dkdAnyelaRootPlayWithSound);
         window.setTimeout(dkdAnyelaRootPlayWithSound,600);
