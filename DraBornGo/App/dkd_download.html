@@ -47,6 +47,44 @@
     footer { color: rgba(246,251,255,.52); font-size: 12px; font-weight: 800; margin-top: 22px; text-align: center; }
     @media (max-width: 760px) { .dkd_hero, .dkd_grid { grid-template-columns: 1fr; } .dkd_nav { align-items: flex-start; } .dkd_chip { display: none; } }
   </style>
+
+<style id="dkd_download_page_cleanup_style">
+  header .dkd_brand,
+  header .dkd_logo,
+  header .brand,
+  header .logo,
+  .dkd_header_brand,
+  .dkd_topbar .dkd_brand,
+  .dkd_topbar .dkd_logo {
+    display: none !important;
+  }
+
+  .dkd_support_button {
+    position: fixed;
+    top: calc(14px + env(safe-area-inset-top));
+    right: 14px;
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 16px;
+    border-radius: 999px;
+    border: 1px solid rgba(125, 211, 252, 0.7);
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.92), rgba(30, 64, 175, 0.92));
+    color: #ffffff;
+    font: 800 14px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    box-shadow: 0 0 22px rgba(56, 189, 248, 0.38);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .dkd_support_button:active {
+    transform: scale(0.98);
+  }
+</style>
+
 </head>
 <body>
   <main>
@@ -63,9 +101,9 @@
         <div class="dkd_actions">
           <a class="dkd_button dkd_button_primary" href="https://github.com/DrabornEagle/DrabornEagle_Web/releases/download/dkd_draborngo_v0.0.4/dkd_draborngo_latest.apk">APK İndir</a>
           <a class="dkd_button dkd_button_secondary" href="./dkd_draborngo_release_notes.html">Sürüm Notları</a>
-          <a class="dkd_button dkd_button_secondary" href="./dkd_draborngo_update_manifest.json">Manifest</a>
+          
         </div>
-        <div class="dkd_warning">Kurulum Android onayıyla yapılır. DraBornGo sessiz kurulum yapmaz ve cihazda ekstra paket kurulum izni istemez.</div>
+        <div class="dkd_warning"></div>
       </div>
       <aside class="dkd_side">
         <div class="dkd_stat"><small>Son sürüm</small><strong>0.0.4</strong></div>
@@ -82,5 +120,12 @@
 
     <footer>© DraBornGo • Resmi indirme adresi: draborneagle.com/DraBornGo/App/</footer>
   </main>
+
+<a
+  class="dkd_support_button"
+  href="mailto:support@draborneagle.com?subject=DraBornGo%20Destek%20Talebi&body=Merhaba%20DraBornGo%20destek%20ekibi%2C%0A%0A"
+  aria-label="DraBornGo destek maili gönder"
+>Destek</a>
+
 </body>
 </html>
