@@ -1,0 +1,11 @@
+{
+  "dkd_channel_key_value": "android_apk_stable",
+  "dkd_latest_version_name_value": "0.0.4",
+  "dkd_latest_version_code_value": 4,
+  "dkd_min_supported_version_code_value": 3,
+  "dkd_update_required_value": false,
+  "dkd_apk_url_value": "https://www.draborneagle.com/DraBornGo/App/dkd_draborngo_latest.apk",
+  "dkd_sha256_value": "",
+  "dkd_release_notes_value": "DraBornGo resmi APK indirme ve güncelleme merkezi aktif edildi. Kurulum kullanıcı onayıyla yapılır.",
+  "dkd_updated_at_value": "2026-06-04T00:00:00+03:00"
+}
