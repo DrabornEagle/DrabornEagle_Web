@@ -1,20 +1,10 @@
 {
-  "dkd_channel_key_value": "android_apk_stable",
   "dkd_latest_version_name": "0.0.4",
-  "dkd_latest_version_name_value": "0.0.4",
   "dkd_latest_version_code": 4,
-  "dkd_latest_version_code_value": 4,
   "dkd_min_supported_version_code": 3,
-  "dkd_min_supported_version_code_value": 3,
   "dkd_update_required": false,
-  "dkd_update_required_value": false,
-  "dkd_apk_url": "https://www.draborneagle.com/DraBornGo/App/dkd_draborngo_latest.apk",
-  "dkd_apk_url_value": "https://www.draborneagle.com/DraBornGo/App/dkd_draborngo_latest.apk",
+  "dkd_apk_url": "https://github.com/DrabornEagle/DrabornEagle_Web/releases/download/dkd_draborngo_v0.0.4/dkd_draborngo_latest.apk",
   "dkd_download_page_url": "https://www.draborneagle.com/DraBornGo/App/",
-  "dkd_download_page_url_value": "https://www.draborneagle.com/DraBornGo/App/",
-  "dkd_sha256": "APK_YUKLENDIKTEN_SONRA_SHA256_DEGERINI_BURAYA_YAZ",
-  "dkd_sha256_value": "APK_YUKLENDIKTEN_SONRA_SHA256_DEGERINI_BURAYA_YAZ",
-  "dkd_release_notes": "DraBornGo APK Güncelleme Merkezi eklendi.\nUygulama açılışta yeni sürüm manifestini kontrol eder.\nKurulum güvenlik nedeniyle resmi web sayfasına yönlendirilir.\nGoogle Play riskini artırmamak için REQUEST_INSTALL_PACKAGES izni eklenmedi.",
-  "dkd_release_notes_value": "DraBornGo APK Güncelleme Merkezi eklendi. Uygulama açılışta yeni sürüm manifestini kontrol eder. Kurulum güvenlik nedeniyle resmi web sayfasına yönlendirilir. Google Play riskini artırmamak için REQUEST_INSTALL_PACKAGES izni eklenmedi.",
-  "dkd_updated_at_value": "2026-06-04T21:30:00+03:00"
+  "dkd_sha256": "a8b8124d587cf96ebe50fa5141a46fe3ba4319b0ce860ea4f2b36e811845051b",
+  "dkd_release_notes": "DraBornGo resmi APK indirme sayfası, uygulama içi sürüm kontrolü ve kullanıcı onaylı güncelleme merkezi eklendi."
 }
