@@ -48,40 +48,60 @@
     @media (max-width: 760px) { .dkd_hero, .dkd_grid { grid-template-columns: 1fr; } .dkd_nav { align-items: flex-start; } .dkd_chip { display: none; } }
   </style>
 
-<style id="dkd_download_page_cleanup_style">
-  header .dkd_brand,
-  header .dkd_logo,
-  header .brand,
-  header .logo,
+
+
+
+<style id="dkd_download_support_inside_card_style">
+  body > header,
+  body > .dkd_header,
+  body > .dkd_topbar,
+  body > .dkd_navbar,
   .dkd_header_brand,
-  .dkd_topbar .dkd_brand,
-  .dkd_topbar .dkd_logo {
+  .dkd_top_brand,
+  .dkd_brand,
+  .dkd_logo,
+  .brand,
+  .logo {
     display: none !important;
   }
 
+  .dkd_download_primary_card {
+    position: relative !important;
+  }
+
   .dkd_support_button {
-    position: fixed;
-    top: calc(14px + env(safe-area-inset-top));
-    right: 14px;
-    z-index: 50;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 42px;
-    padding: 10px 16px;
-    border-radius: 999px;
-    border: 1px solid rgba(125, 211, 252, 0.7);
-    background: linear-gradient(135deg, rgba(2, 132, 199, 0.92), rgba(30, 64, 175, 0.92));
-    color: #ffffff;
-    font: 800 14px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-    box-shadow: 0 0 22px rgba(56, 189, 248, 0.38);
-    -webkit-tap-highlight-color: transparent;
+    position: absolute !important;
+    top: 22px !important;
+    right: 22px !important;
+    z-index: 20 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 44px !important;
+    padding: 10px 18px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(125, 211, 252, 0.75) !important;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.96), rgba(37, 99, 235, 0.96)) !important;
+    color: #ffffff !important;
+    font: 900 15px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    letter-spacing: 0.02em !important;
+    text-decoration: none !important;
+    box-shadow: 0 0 24px rgba(56, 189, 248, 0.38) !important;
+    -webkit-tap-highlight-color: transparent !important;
   }
 
   .dkd_support_button:active {
-    transform: scale(0.98);
+    transform: scale(0.98) !important;
+  }
+
+  @media (max-width: 520px) {
+    .dkd_support_button {
+      top: 18px !important;
+      right: 18px !important;
+      min-height: 40px !important;
+      padding: 9px 15px !important;
+      font-size: 14px !important;
+    }
   }
 </style>
 
@@ -126,6 +146,52 @@
   href="mailto:support@draborneagle.com?subject=DraBornGo%20Destek%20Talebi&body=Merhaba%20DraBornGo%20destek%20ekibi%2C%0A%0A"
   aria-label="DraBornGo destek maili gönder"
 >Destek</a>
+
+
+<script id="dkd_download_support_inside_card_script">
+(function () {
+  const dkd_support_button = document.querySelector('.dkd_support_button');
+  if (!dkd_support_button) {
+    return;
+  }
+
+  const dkd_heading_values = Array.from(document.querySelectorAll('h1, h2, h3'));
+  const dkd_download_heading = dkd_heading_values.find(function (dkd_heading_value) {
+    return (dkd_heading_value.textContent || '').trim().includes('DraBornGo APK İndir');
+  });
+
+  if (!dkd_download_heading) {
+    return;
+  }
+
+  let dkd_cursor_value = dkd_download_heading.parentElement;
+  let dkd_primary_card_value = null;
+
+  while (dkd_cursor_value && dkd_cursor_value !== document.body) {
+    const dkd_card_text_value = dkd_cursor_value.textContent || '';
+    const dkd_card_size_value = dkd_cursor_value.getBoundingClientRect();
+
+    if (
+      dkd_card_text_value.includes('DraBornGo APK İndir') &&
+      dkd_card_text_value.includes('APK İndir') &&
+      dkd_card_text_value.includes('Sürüm Notları') &&
+      dkd_card_size_value.height > 220
+    ) {
+      dkd_primary_card_value = dkd_cursor_value;
+      break;
+    }
+
+    dkd_cursor_value = dkd_cursor_value.parentElement;
+  }
+
+  if (!dkd_primary_card_value) {
+    return;
+  }
+
+  dkd_primary_card_value.classList.add('dkd_download_primary_card');
+  dkd_primary_card_value.appendChild(dkd_support_button);
+})();
+</script>
 
 </body>
 </html>
