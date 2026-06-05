@@ -128,6 +128,96 @@
   }
 </style>
 
+
+<style id="dkd_download_layout_fix_style">
+  .dkd_service_network_label {
+    position: absolute;
+    top: 24px;
+    left: 24px;
+    z-index: 60;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 14px;
+    border-radius: 18px;
+    border: 1px solid rgba(125, 211, 252, 0.34);
+    background: rgba(2, 8, 23, 0.38);
+    color: #ffffff;
+    box-shadow: 0 0 22px rgba(56, 189, 248, 0.18);
+    backdrop-filter: blur(10px);
+    pointer-events: none;
+  }
+
+  .dkd_service_network_label span:first-child {
+    color: #7dd3fc;
+    font: 900 11px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .dkd_service_network_label span:last-child {
+    color: #f8fafc;
+    font: 950 17px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    letter-spacing: -0.02em;
+  }
+
+  .dkd_latest_version_card {
+    position: relative !important;
+    padding-right: 190px !important;
+  }
+
+  .dkd_release_notes_inside_version {
+    position: absolute !important;
+    right: 24px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    z-index: 20 !important;
+    min-height: 46px !important;
+    padding: 11px 18px !important;
+    border-radius: 999px !important;
+    border: 1px solid rgba(148, 163, 184, 0.34) !important;
+    background: rgba(15, 23, 42, 0.88) !important;
+    color: #ffffff !important;
+    font: 900 14px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    text-decoration: none !important;
+    box-shadow: none !important;
+    white-space: nowrap !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .dkd_download_orphan_line {
+    display: none !important;
+  }
+
+  @media (max-width: 520px) {
+    .dkd_service_network_label {
+      top: 18px;
+      left: 18px;
+      padding: 8px 12px;
+      border-radius: 16px;
+    }
+
+    .dkd_service_network_label span:first-child {
+      font-size: 10px;
+    }
+
+    .dkd_service_network_label span:last-child {
+      font-size: 15px;
+    }
+
+    .dkd_latest_version_card {
+      padding-right: 150px !important;
+    }
+
+    .dkd_release_notes_inside_version {
+      right: 16px !important;
+      min-height: 40px !important;
+      padding: 9px 13px !important;
+      font-size: 13px !important;
+    }
+  }
+</style>
+
 </head>
 <body>
   <main>
@@ -250,6 +340,85 @@
   }
 
   document.body.appendChild(dkd_join_button);
+})();
+</script>
+
+
+<script id="dkd_download_layout_fix_script">
+(function () {
+  function dkd_get_text_value(dkd_element_value) {
+    return (dkd_element_value && dkd_element_value.textContent ? dkd_element_value.textContent : '').replace(/\s+/g, ' ').trim();
+  }
+
+  function dkd_get_card_value(dkd_required_text_values, dkd_excluded_text_values) {
+    const dkd_candidate_values = Array.from(document.querySelectorAll('section, article, div, main'));
+    return dkd_candidate_values
+      .filter(function (dkd_candidate_value) {
+        const dkd_candidate_text_value = dkd_get_text_value(dkd_candidate_value);
+        const dkd_has_required_value = dkd_required_text_values.every(function (dkd_required_text_value) {
+          return dkd_candidate_text_value.includes(dkd_required_text_value);
+        });
+        const dkd_has_excluded_value = dkd_excluded_text_values.some(function (dkd_excluded_text_value) {
+          return dkd_candidate_text_value.includes(dkd_excluded_text_value);
+        });
+        const dkd_candidate_size_value = dkd_candidate_value.getBoundingClientRect();
+        return dkd_has_required_value && !dkd_has_excluded_value && dkd_candidate_size_value.width > 220 && dkd_candidate_size_value.height > 70;
+      })
+      .sort(function (dkd_first_candidate_value, dkd_second_candidate_value) {
+        const dkd_first_size_value = dkd_first_candidate_value.getBoundingClientRect();
+        const dkd_second_size_value = dkd_second_candidate_value.getBoundingClientRect();
+        return dkd_first_size_value.height - dkd_second_size_value.height;
+      })[0] || null;
+  }
+
+  const dkd_old_label_value = document.querySelector('.dkd_service_network_label');
+  if (dkd_old_label_value) {
+    dkd_old_label_value.remove();
+  }
+
+  const dkd_service_network_label_value = document.createElement('div');
+  dkd_service_network_label_value.className = 'dkd_service_network_label';
+  dkd_service_network_label_value.innerHTML = '<span>Özgün Yaratıcı</span><span>Hizmet Ağı Merkezi</span>';
+  document.body.appendChild(dkd_service_network_label_value);
+
+  const dkd_release_notes_button_value = Array.from(document.querySelectorAll('a, button')).find(function (dkd_button_value) {
+    return dkd_get_text_value(dkd_button_value).includes('Sürüm Notları');
+  });
+
+  const dkd_latest_version_card_value = dkd_get_card_value(['Son sürüm', '0.0.4'], ['Version Code', 'Güncelleme tipi']);
+
+  if (dkd_release_notes_button_value && dkd_latest_version_card_value) {
+    dkd_latest_version_card_value.classList.add('dkd_latest_version_card');
+    dkd_release_notes_button_value.classList.add('dkd_release_notes_inside_version');
+    dkd_latest_version_card_value.appendChild(dkd_release_notes_button_value);
+  }
+
+  const dkd_primary_card_value = dkd_get_card_value(['DraBornGo APK İndir', 'APK İndir', 'Projeye Katıl'], ['Son sürüm']);
+
+  if (dkd_primary_card_value) {
+    const dkd_primary_card_size_value = dkd_primary_card_value.getBoundingClientRect();
+
+    Array.from(dkd_primary_card_value.querySelectorAll('*')).forEach(function (dkd_child_value) {
+      const dkd_child_text_value = dkd_get_text_value(dkd_child_value);
+      const dkd_child_size_value = dkd_child_value.getBoundingClientRect();
+      const dkd_child_style_value = window.getComputedStyle(dkd_child_value);
+
+      const dkd_looks_like_empty_line_value =
+        dkd_child_text_value.length === 0 &&
+        dkd_child_size_value.width > dkd_primary_card_size_value.width * 0.62 &&
+        dkd_child_size_value.height >= 10 &&
+        dkd_child_size_value.height <= 42 &&
+        (
+          dkd_child_style_value.borderTopWidth !== '0px' ||
+          dkd_child_style_value.borderBottomWidth !== '0px' ||
+          dkd_child_style_value.backgroundColor !== 'rgba(0, 0, 0, 0)'
+        );
+
+      if (dkd_looks_like_empty_line_value) {
+        dkd_child_value.classList.add('dkd_download_orphan_line');
+      }
+    });
+  }
 })();
 </script>
 
