@@ -105,6 +105,29 @@
   }
 </style>
 
+
+<style id="dkd_join_button_style">
+  .dkd_join_button {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 50px !important;
+    padding: 13px 18px !important;
+    border-radius: 20px !important;
+    border: 1px solid rgba(250, 204, 21, 0.55) !important;
+    background: linear-gradient(135deg, rgba(250, 204, 21, 0.98), rgba(251, 146, 60, 0.94)) !important;
+    color: #111827 !important;
+    font: 950 15px/1.1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+    letter-spacing: 0.01em !important;
+    text-decoration: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+  }
+
+  .dkd_join_button:active {
+    transform: scale(0.98) !important;
+  }
+</style>
+
 </head>
 <body>
   <main>
@@ -190,6 +213,43 @@
 
   dkd_primary_card_value.classList.add('dkd_download_primary_card');
   dkd_primary_card_value.appendChild(dkd_support_button);
+})();
+</script>
+
+
+<script id="dkd_join_button_script">
+(function () {
+  if (document.querySelector('.dkd_join_button')) {
+    return;
+  }
+
+  const dkd_join_button = document.createElement('a');
+  dkd_join_button.className = 'dkd_join_button';
+  dkd_join_button.href = './dkd_join.html';
+  dkd_join_button.textContent = 'Projeye Katıl';
+  dkd_join_button.setAttribute('aria-label', 'DraBornGo kurye yatırım ortaklık bilgi sayfasını aç');
+
+  const dkd_action_values = Array.from(document.querySelectorAll('a, button'));
+  const dkd_release_button = dkd_action_values.find(function (dkd_action_value) {
+    return (dkd_action_value.textContent || '').trim().includes('Sürüm Notları');
+  });
+
+  if (dkd_release_button && dkd_release_button.parentElement) {
+    dkd_release_button.parentElement.appendChild(dkd_join_button);
+    return;
+  }
+
+  const dkd_heading_values = Array.from(document.querySelectorAll('h1, h2, h3'));
+  const dkd_download_heading = dkd_heading_values.find(function (dkd_heading_value) {
+    return (dkd_heading_value.textContent || '').trim().includes('DraBornGo APK İndir');
+  });
+
+  if (dkd_download_heading && dkd_download_heading.parentElement) {
+    dkd_download_heading.parentElement.appendChild(dkd_join_button);
+    return;
+  }
+
+  document.body.appendChild(dkd_join_button);
 })();
 </script>
 

@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>DraBornGo Katılım ve İş Birliği</title>
+  <meta name="description" content="DraBornGo kurye, yatırımcı, ortaklık ve destek başvuru sayfası." />
+  <style>
+    :root {
+      --dkd_background: #020817;
+      --dkd_card: rgba(15, 23, 42, 0.92);
+      --dkd_card_soft: rgba(15, 23, 42, 0.72);
+      --dkd_border: rgba(125, 211, 252, 0.24);
+      --dkd_text: #f8fafc;
+      --dkd_muted: #cbd5e1;
+      --dkd_cyan: #67e8f9;
+      --dkd_blue: #2563eb;
+      --dkd_gold: #facc15;
+      --dkd_green: #22c55e;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background:
+        radial-gradient(circle at 20% 10%, rgba(14, 165, 233, 0.28), transparent 32%),
+        radial-gradient(circle at 88% 18%, rgba(250, 204, 21, 0.18), transparent 30%),
+        linear-gradient(180deg, #02111f 0%, var(--dkd_background) 54%, #000713 100%);
+      color: var(--dkd_text);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      padding: calc(22px + env(safe-area-inset-top)) 18px calc(28px + env(safe-area-inset-bottom));
+    }
+
+    .dkd_page_shell {
+      width: min(760px, 100%);
+      margin: 0 auto;
+    }
+
+    .dkd_top_actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .dkd_back_link,
+    .dkd_support_link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      border: 1px solid var(--dkd_border);
+      border-radius: 999px;
+      color: var(--dkd_text);
+      background: rgba(15, 23, 42, 0.72);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 14px;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .dkd_support_link {
+      background: linear-gradient(135deg, rgba(14, 165, 233, 0.95), rgba(37, 99, 235, 0.95));
+      border-color: rgba(125, 211, 252, 0.72);
+    }
+
+    .dkd_hero_card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--dkd_border);
+      border-radius: 34px;
+      padding: 28px;
+      background:
+        linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(8, 47, 73, 0.72)),
+        var(--dkd_card);
+    }
+
+    .dkd_badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 13px;
+      border: 1px solid rgba(103, 232, 249, 0.32);
+      border-radius: 999px;
+      color: var(--dkd_cyan);
+      background: rgba(8, 47, 73, 0.58);
+      font-weight: 900;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    .dkd_hero_title {
+      margin: 0 0 14px;
+      font-size: clamp(34px, 9vw, 56px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+    }
+
+    .dkd_hero_text {
+      margin: 0;
+      color: var(--dkd_muted);
+      font-size: clamp(17px, 4.8vw, 22px);
+      line-height: 1.55;
+      font-weight: 720;
+    }
+
+    .dkd_section_title {
+      margin: 30px 2px 14px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .dkd_option_grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .dkd_option_card {
+      border: 1px solid var(--dkd_border);
+      border-radius: 26px;
+      padding: 20px;
+      background: var(--dkd_card_soft);
+    }
+
+    .dkd_option_icon {
+      width: 48px;
+      height: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 18px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(103, 232, 249, 0.28);
+      font-size: 26px;
+      margin-bottom: 12px;
+    }
+
+    .dkd_option_card h2 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+
+    .dkd_option_card p {
+      margin: 0 0 14px;
+      color: var(--dkd_muted);
+      line-height: 1.55;
+      font-weight: 650;
+    }
+
+    .dkd_action_link {
+      display: inline-flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 16px;
+      border-radius: 18px;
+      border: 1px solid rgba(125, 211, 252, 0.42);
+      background: linear-gradient(135deg, rgba(103, 232, 249, 0.96), rgba(37, 99, 235, 0.92));
+      color: #02111f;
+      font-weight: 950;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .dkd_action_link.dkd_gold_link {
+      background: linear-gradient(135deg, rgba(250, 204, 21, 0.98), rgba(251, 146, 60, 0.92));
+    }
+
+    .dkd_action_link.dkd_green_link {
+      background: linear-gradient(135deg, rgba(34, 197, 94, 0.98), rgba(20, 184, 166, 0.92));
+    }
+
+    .dkd_note_card {
+      margin-top: 18px;
+      border: 1px solid rgba(250, 204, 21, 0.24);
+      border-radius: 24px;
+      padding: 18px;
+      background: rgba(24, 24, 27, 0.72);
+      color: #fde68a;
+      line-height: 1.5;
+      font-weight: 720;
+    }
+
+    .dkd_footer_text {
+      margin: 22px auto 0;
+      color: #94a3b8;
+      text-align: center;
+      font-size: 13px;
+      line-height: 1.5;
+      max-width: 620px;
+    }
+
+    @media (min-width: 680px) {
+      .dkd_option_grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="dkd_page_shell">
+    <div class="dkd_top_actions">
+      <a class="dkd_back_link" href="./dkd_download.html">← APK Sayfası</a>
+      <a class="dkd_support_link" href="mailto:support@draborneagle.com?subject=DraBornGo%20Kat%C4%B1l%C4%B1m%20Talebi&body=Merhaba%20DraBornGo%20ekibi%2C%0A%0AProjeye%20kat%C4%B1l%C4%B1m%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0A%0AAd%20Soyad%3A%0A%C5%9Eehir%3A%0AKat%C4%B1lmak%20istedi%C4%9Fim%20alan%3A%20">Destek</a>
+    </div>
+
+    <section class="dkd_hero_card">
+      <div class="dkd_badge">DraBornGo • Katılım ve İş Birliği</div>
+      <h1 class="dkd_hero_title">Bu yolculuğa erken katıl.</h1>
+      <p class="dkd_hero_text">DraBornGo; kurye, gönderi, restoran siparişi ve yerel hizmetleri tek merkezde büyütmeyi hedefleyen mobil hizmet ağıdır. Kurye olmak, projeye destek vermek, yatırım görüşmesi yapmak veya ortaklık konuşmak için bize ulaşabilirsin.</p>
+    </section>
+
+    <h2 class="dkd_section_title">Nasıl dahil olabilirsin?</h2>
+
+    <section class="dkd_option_grid" aria-label="DraBornGo katılım seçenekleri">
+      <article class="dkd_option_card">
+        <div class="dkd_option_icon">🚴</div>
+        <h2>Kurye olarak kazan</h2>
+        <p>Uygulama üzerinden gelen gönderi ve teslimat işlerini alarak gelir elde etmek isteyen kişiler için kurye başvuru görüşmesi yapılır.</p>
+        <a class="dkd_action_link" href="mailto:support@draborneagle.com?subject=DraBornGo%20Kurye%20Ba%C5%9Fvurusu&body=Merhaba%2C%0A%0ADraBornGo%20kurye%20ba%C5%9Fvurusu%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0A%0AAd%20Soyad%3A%0A%C5%9Eehir%3A%0AAra%C3%A7%20Tipi%3A%0ATelefon%3A%0A">Kurye başvurusu yap</a>
+      </article>
+
+      <article class="dkd_option_card">
+        <div class="dkd_option_icon">💼</div>
+        <h2>Yatırım görüşmesi</h2>
+        <p>DraBornGo'nun büyüme planını, şehir hedeflerini ve iş modelini incelemek isteyen kişilerle özel ön görüşme yapılır.</p>
+        <a class="dkd_action_link dkd_gold_link" href="mailto:support@draborneagle.com?subject=DraBornGo%20Yat%C4%B1r%C4%B1m%20G%C3%B6r%C3%BC%C5%9Fmesi&body=Merhaba%2C%0A%0ADraBornGo%20yat%C4%B1r%C4%B1m%20g%C3%B6r%C3%BC%C5%9Fmesi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0A%0AAd%20Soyad%3A%0A%C5%9Eehir%3A%0ATelefon%3A%0A">Yatırım için iletişime geç</a>
+      </article>
+
+      <article class="dkd_option_card">
+        <div class="dkd_option_icon">🤝</div>
+        <h2>Ortaklık ve iş birliği</h2>
+        <p>Operasyon, işletme ağı, kurye ağı, şehir yapılanması veya sermaye desteğiyle ortaklık düşünen kişilerle detaylı görüşülür.</p>
+        <a class="dkd_action_link dkd_green_link" href="mailto:support@draborneagle.com?subject=DraBornGo%20Ortakl%C4%B1k%20G%C3%B6r%C3%BC%C5%9Fmesi&body=Merhaba%2C%0A%0ADraBornGo%20ortakl%C4%B1k%20ve%20i%C5%9F%20birli%C4%9Fi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0A%0AAd%20Soyad%3A%0A%C5%9Eehir%3A%0AKatk%C4%B1%20alan%C4%B1%3A%0ATelefon%3A%0A">Ortaklık görüşmesi iste</a>
+      </article>
+
+      <article class="dkd_option_card">
+        <div class="dkd_option_icon">📢</div>
+        <h2>Tanıtım desteği ver</h2>
+        <p>Çevresinde projeyi duyurmak, işletme ve kullanıcı kazandırmak veya saha tanıtımına destek olmak isteyen kişiler bizimle iletişime geçebilir.</p>
+        <a class="dkd_action_link" href="mailto:support@draborneagle.com?subject=DraBornGo%20Tan%C4%B1t%C4%B1m%20Deste%C4%9Fi&body=Merhaba%2C%0A%0ADraBornGo%20tan%C4%B1t%C4%B1m%20deste%C4%9Fi%20hakk%C4%B1nda%20bilgi%20almak%20istiyorum.%0A%0AAd%20Soyad%3A%0A%C5%9Eehir%3A%0ATelefon%3A%0A">Destek olmak istiyorum</a>
+      </article>
+    </section>
+
+    <section class="dkd_note_card">
+      Bu sayfadaki bilgiler ön tanıtım ve iletişim amaçlıdır. Kurye geliri, yatırım veya ortaklık için kesin kazanç vaadi verilmez; tüm detaylar resmi görüşme ve karşılıklı anlaşma sürecinde değerlendirilir.
+    </section>
+
+    <p class="dkd_footer_text">DraBornGo APK indirme sayfası üzerinden uygulamayı inceleyebilir, ardından katılım seçenekleri için bizimle iletişime geçebilirsin.</p>
+  </main>
+</body>
+</html>
