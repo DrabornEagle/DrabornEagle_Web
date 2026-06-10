@@ -17,7 +17,7 @@
       overscroll-behavior: none;
     }
 
-    .dkd_dubai_link {
+    .dkd_dubai_page {
       position: fixed;
       inset: 0;
       width: 100vw;
@@ -30,7 +30,6 @@
       background: #020817;
       overflow: hidden;
       cursor: pointer;
-      text-decoration: none;
       -webkit-tap-highlight-color: transparent;
     }
 
@@ -48,11 +47,46 @@
       -webkit-user-select: none;
       touch-action: manipulation;
     }
+
+    .dkd_dubai_mobile_app_link {
+      position: absolute;
+      z-index: 2;
+      left: 50%;
+      top: 47.8%;
+      width: 48%;
+      height: 13.9%;
+      display: block;
+      border: 0;
+      background: transparent;
+      text-decoration: none;
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
   </style>
 </head>
 <body>
-  <a class="dkd_dubai_link" href="./Games/" aria-label="DrabornEagle Dubai oyun örnekleri sayfasına geç">
+  <main class="dkd_dubai_page" aria-label="DrabornEagle Dubai hizmetlerimiz görseli">
     <img class="dkd_dubai_image" src="./dkd_dubai_hizmetlerimiz.jpg" alt="DrabornEagle Dubai hizmetlerimiz" draggable="false" />
-  </a>
+    <a class="dkd_dubai_mobile_app_link" href="/DraBornGo/App/" aria-label="DraBornGo mobil uygulama sayfasına geç"></a>
+  </main>
+  <script>
+    const dkd_games_url = "/Dubai/Games/";
+    const dkd_mobile_app_url = "/DraBornGo/App/";
+    const dkd_dubai_page = document.querySelector(".dkd_dubai_page");
+    const dkd_mobile_app_link = document.querySelector(".dkd_dubai_mobile_app_link");
+
+    dkd_dubai_page.addEventListener("click", function dkd_open_games_page(dkd_click_event) {
+      if (dkd_click_event.target.closest(".dkd_dubai_mobile_app_link")) {
+        return;
+      }
+      window.location.href = dkd_games_url;
+    });
+
+    dkd_mobile_app_link.addEventListener("click", function dkd_open_mobile_app_page(dkd_click_event) {
+      dkd_click_event.stopPropagation();
+      window.location.href = dkd_mobile_app_url;
+    });
+  </script>
 </body>
 </html>
