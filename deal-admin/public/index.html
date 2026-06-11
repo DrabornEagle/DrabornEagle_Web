@@ -11,7 +11,7 @@
     <section class="dkd-hero">
       <p class="dkd-kicker">DraBornDeal</p>
       <h1>Fırsat Radarı Admin</h1>
-      <p>Ürün bağlantısı ekle, worker kuyruğunu takip et, kaynakları ve Telegram gönderimlerini kontrol et.</p>
+      <p>Ürün bağlantısını yapıştır, fırsatı çek, Telegram paylaşımını ve kaynakları tek ekrandan yönet.</p>
     </section>
 
     <section class="dkd-card dkd-login" id="dkdLoginCard">
@@ -21,22 +21,58 @@
       <button id="dkdSaveKeyBtn">Giriş Yap</button>
     </section>
 
-    <section class="dkd-grid" id="dkdPanel" hidden>
-      <article class="dkd-card dkd-wide">
-        <div class="dkd-card-head"><h2>Ürün Bağlantısı Ekle</h2><button id="dkdRefreshBtn">Yenile</button></div>
-        <form id="dkdAddLinkForm" class="dkd-form"><input id="dkdProductUrl" type="url" placeholder="Trendyol / Hepsiburada / N11 ürün bağlantısı" required /><button type="submit">Kuyruğa Ekle</button></form>
+    <section class="dkd-panel" id="dkdPanel" hidden>
+      <section class="dkd-card dkd-share-card">
+        <div class="dkd-card-head">
+          <div>
+            <p class="dkd-kicker-small">Hızlı Paylaş</p>
+            <h2>Telegram’da Paylaş</h2>
+          </div>
+          <button id="dkdRefreshBtn" type="button">Yenile</button>
+        </div>
+        <form id="dkdAddLinkForm" class="dkd-form">
+          <input id="dkdProductUrl" type="url" placeholder="Ürün bağlantısını yapıştır" required />
+          <button type="submit">Telegram’da Paylaş</button>
+        </form>
         <pre id="dkdActionResult"></pre>
-      </article>
+      </section>
 
-      <article class="dkd-card"><h2>Sistem</h2><div id="dkdHealth" class="dkd-list"></div></article>
-      <article class="dkd-card"><h2>Telegram</h2><button id="dkdGenerateDraftsBtn">Taslak Üret</button><p class="dkd-muted">Gönderim worker üzerinden yapılır. Panel sadece taslak üretir ve durumu gösterir.</p></article>
+      <details class="dkd-card dkd-section" open>
+        <summary>Sistem Durumu</summary>
+        <div id="dkdHealth" class="dkd-list"></div>
+      </details>
 
-      <article class="dkd-card dkd-wide"><h2>Kaynaklar</h2><p class="dkd-muted">Buradan kaynakların aktiflik, izin, inceleme, öncelik ve kontrol aralığını yönetirsin.</p><div id="dkdSources" class="dkd-list"></div></article>
-      <article class="dkd-card dkd-wide"><h2>Affiliate Kuralları</h2><p class="dkd-muted">Şimdilik kapalı bırakılabilir. Gerçek affiliate bilgisi girilince aktif edilir.</p><div id="dkdAffiliateRules" class="dkd-list"></div></article>
-      <article class="dkd-card dkd-wide"><h2>Bağlantı Kuyruğu</h2><div id="dkdWatchLinks" class="dkd-list"></div></article>
-      <article class="dkd-card dkd-wide"><h2>Ürünler</h2><div id="dkdProducts" class="dkd-list"></div></article>
-      <article class="dkd-card dkd-wide"><h2>Sıcak Fırsat Akışı</h2><div id="dkdHotFeed" class="dkd-list"></div></article>
-      <article class="dkd-card dkd-wide"><h2>Telegram Gönderi Kuyruğu</h2><div id="dkdSocialPosts" class="dkd-list"></div></article>
+      <details class="dkd-card dkd-section">
+        <summary>Kaynaklar</summary>
+        <p class="dkd-muted">Kaynak aktifliği, izin, inceleme, öncelik ve kontrol aralığını buradan yönetirsin.</p>
+        <div id="dkdSources" class="dkd-list"></div>
+      </details>
+
+      <details class="dkd-card dkd-section">
+        <summary>Ürünler</summary>
+        <div id="dkdProducts" class="dkd-list"></div>
+      </details>
+
+      <details class="dkd-card dkd-section">
+        <summary>Sıcak Fırsat Akışı</summary>
+        <div id="dkdHotFeed" class="dkd-list"></div>
+      </details>
+
+      <details class="dkd-card dkd-section">
+        <summary>Telegram Gönderileri</summary>
+        <div id="dkdSocialPosts" class="dkd-list"></div>
+      </details>
+
+      <details class="dkd-card dkd-section">
+        <summary>Bağlantı Geçmişi</summary>
+        <div id="dkdWatchLinks" class="dkd-list"></div>
+      </details>
+
+      <details class="dkd-card dkd-section">
+        <summary>Affiliate Kuralları</summary>
+        <p class="dkd-muted">Şimdilik kapalı bırakılabilir. Gerçek affiliate bilgisi girilince aktif edilir.</p>
+        <div id="dkdAffiliateRules" class="dkd-list"></div>
+      </details>
     </section>
   </main>
   <script src="/app.js"></script>
