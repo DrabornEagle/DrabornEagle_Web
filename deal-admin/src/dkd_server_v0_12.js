@@ -10,6 +10,14 @@ const dkdSupabase = createClient(process.env.DKD_SUPABASE_URL || '', process.env
   auth: { persistSession: false, autoRefreshToken: false }
 });
 const dkdApp = express();
+const dkdHealthKeys = [
+  'dkd_deal_worker_runtime_mode',
+  'dkd_deal_source_admin_version',
+  'dkd_deal_hot_deals_version',
+  'dkd_deal_telegram_caption_format_version',
+  'dkd_deal_affiliate_links_version',
+  'dkd_deal_termux_telegram_live_test'
+];
 
 dkdApp.use(express.json({ limit: '256kb' }));
 dkdApp.use(express.urlencoded({ extended: true }));
@@ -37,7 +45,11 @@ dkdApp.post('/api/dkd-share-link-direct', dkdRequireAdmin, async (req, res) => {
 });
 
 dkdApp.get('/api/dkd-health', dkdRequireAdmin, async (req, res) => {
-  const { data, error } = await dkdSupabase.from('dkd_deal_system_settings').select('dkd_setting_key, dkd_setting_value').order('dkd_setting_key').limit(8);
+  const { data, error } = await dkdSupabase
+    .from('dkd_deal_system_settings')
+    .select('dkd_setting_key, dkd_setting_value')
+    .in('dkd_setting_key', dkdHealthKeys)
+    .order('dkd_setting_key');
   if (error) return res.status(500).json({ dkd_error: dkdErrorText(error) });
   res.json({ dkd_ok: true, dkd_settings: data || [] });
 });
