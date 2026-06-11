@@ -46,7 +46,7 @@ dkdApp.get('/api/dkd-health', dkdRequireAdmin, async (req, res) => {
   const { data, error } = await dkdSupabase
     .from('dkd_deal_system_settings')
     .select('dkd_setting_key, dkd_setting_value')
-    .in('dkd_setting_key', ['dkd_deal_worker_runtime_mode', 'dkd_deal_termux_telegram_live_test', 'dkd_deal_hot_deals_version'])
+    .in('dkd_setting_key', ['dkd_deal_worker_runtime_mode', 'dkd_deal_termux_telegram_live_test', 'dkd_deal_hot_deals_version', 'dkd_deal_affiliate_links_version'])
     .order('dkd_setting_key');
 
   if (error) return res.status(500).json({ dkd_error: dkdSafeError(error) });
@@ -108,6 +108,46 @@ dkdApp.get('/api/dkd-social-posts', dkdRequireAdmin, async (req, res) => {
 
   if (error) return res.status(500).json({ dkd_error: dkdSafeError(error) });
   res.json({ dkd_ok: true, dkd_rows: data || [] });
+});
+
+dkdApp.get('/api/dkd-affiliate-rules', dkdRequireAdmin, async (req, res) => {
+  const { data, error } = await dkdSupabase
+    .from('dkd_deal_affiliate_rules_v0_9')
+    .select('*')
+    .limit(50);
+
+  if (error) return res.status(500).json({ dkd_error: dkdSafeError(error) });
+  res.json({ dkd_ok: true, dkd_rows: data || [] });
+});
+
+dkdApp.post('/api/dkd-affiliate-rules/:dkdRuleId', dkdRequireAdmin, async (req, res) => {
+  const dkdRuleId = String(req.params.dkdRuleId || '').trim();
+  const dkdMode = String(req.body.dkd_affiliate_mode || 'append_query');
+  const dkdParamKey = String(req.body.dkd_param_key || '').trim() || null;
+  const dkdParamValue = String(req.body.dkd_param_value || '').trim() || null;
+  const dkdTemplateUrl = String(req.body.dkd_template_url || '').trim() || null;
+  const dkdIsActive = Boolean(req.body.dkd_is_active);
+
+  if (!dkdRuleId) return res.status(400).json({ dkd_error: 'missing_rule_id' });
+  if (!['append_query', 'template', 'none'].includes(dkdMode)) return res.status(400).json({ dkd_error: 'invalid_affiliate_mode' });
+
+  const { data, error } = await dkdSupabase
+    .from('dkd_deal_affiliate_rules')
+    .update({
+      dkd_is_active: dkdIsActive,
+      dkd_affiliate_mode: dkdMode,
+      dkd_param_key: dkdParamKey,
+      dkd_param_value: dkdParamValue,
+      dkd_template_url: dkdTemplateUrl,
+      dkd_notes: 'Updated from DraBornDeal admin panel v0.9.',
+      dkd_updated_at: new Date().toISOString()
+    })
+    .eq('dkd_id', dkdRuleId)
+    .select('dkd_id')
+    .single();
+
+  if (error) return res.status(500).json({ dkd_error: dkdSafeError(error) });
+  res.json({ dkd_ok: true, dkd_result: data });
 });
 
 dkdApp.post('/api/dkd-generate-drafts', dkdRequireAdmin, async (req, res) => {
