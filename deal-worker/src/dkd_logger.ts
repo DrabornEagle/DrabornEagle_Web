@@ -17,8 +17,24 @@ export function dkdSafeError(dkdError: unknown): Record<string, unknown> {
   if (dkdError instanceof Error) {
     return {
       dkd_error_name: dkdError.name,
-      dkd_error_message: dkdError.message
+      dkd_error_message: dkdError.message,
+      dkd_error_stack: dkdError.stack
     };
   }
+
+  if (dkdError && typeof dkdError === 'object') {
+    try {
+      return {
+        dkd_error_message: JSON.stringify(dkdError),
+        dkd_error_type: 'object'
+      };
+    } catch {
+      return {
+        dkd_error_message: '[unserializable object]',
+        dkd_error_type: 'object'
+      };
+    }
+  }
+
   return { dkd_error_message: String(dkdError) };
 }
