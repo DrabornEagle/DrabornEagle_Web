@@ -1,23 +1,46 @@
+function dkdAdminCurrencyLabel(dkdCurrencyCode) {
+  if (!dkdCurrencyCode || dkdCurrencyCode === 'TRY') return 'TL';
+  return dkdCurrencyCode;
+}
+
+function dkdAdminMoney(dkdValue, dkdCurrencyCode) {
+  if (dkdValue === null || dkdValue === undefined) return null;
+  return `${Number(dkdValue).toLocaleString('tr-TR')} ${dkdAdminCurrencyLabel(dkdCurrencyCode)}`;
+}
+
+function dkdAdminDiscountPercent(dkdProduct) {
+  if (dkdProduct.dkd_discount_percent !== null && dkdProduct.dkd_discount_percent !== undefined) {
+    return Number(dkdProduct.dkd_discount_percent);
+  }
+  const dkdCurrent = Number(dkdProduct.dkd_current_price || 0);
+  const dkdOriginal = Number(dkdProduct.dkd_original_price || 0);
+  if (dkdCurrent > 0 && dkdOriginal > dkdCurrent) {
+    return Math.round(((dkdOriginal - dkdCurrent) / dkdOriginal) * 10000) / 100;
+  }
+  return null;
+}
+
 export function dkdAdminBuildCaption(dkdProduct, dkdUrl) {
-  const dkdPrice = dkdProduct.dkd_current_price
-    ? `${Number(dkdProduct.dkd_current_price).toLocaleString('tr-TR')} ${dkdProduct.dkd_currency_code || 'TRY'}`
-    : 'Fiyat bilgisi yok';
-  const dkdRating = dkdProduct.dkd_rating
-    ? `⭐ ${dkdProduct.dkd_rating}${dkdProduct.dkd_review_count ? ` (${dkdProduct.dkd_review_count} yorum)` : ''}`
-    : '';
+  const dkdCurrentPrice = dkdAdminMoney(dkdProduct.dkd_current_price, dkdProduct.dkd_currency_code) || 'Fiyat bilgisi yok';
+  const dkdOriginalPrice = dkdAdminMoney(dkdProduct.dkd_original_price, dkdProduct.dkd_currency_code);
+  const dkdDiscount = dkdAdminDiscountPercent(dkdProduct);
 
   return [
     '🔥 Fırsat Radarı',
     '',
     dkdProduct.dkd_product_name,
     '',
-    `💸 ${dkdPrice}`,
-    dkdRating,
+    `💰 Yeni Fiyat: ${dkdCurrentPrice}`,
+    dkdOriginalPrice ? `🏷️ Önceki Fiyat: ${dkdOriginalPrice}` : null,
+    dkdDiscount !== null ? `📉 İndirim: %${Number(dkdDiscount).toLocaleString('tr-TR')}` : null,
+    dkdProduct.dkd_rating ? `⭐ Puan: ${Number(dkdProduct.dkd_rating).toLocaleString('tr-TR')}` : null,
+    dkdProduct.dkd_review_count ? `💬 Yorum: ${Number(dkdProduct.dkd_review_count).toLocaleString('tr-TR')}` : null,
     '',
-    `🔗 ${dkdUrl}`,
+    '🔗 Link:',
+    dkdUrl,
     '',
     '#fırsat #indirim #DraBornDeal'
-  ].filter((dkdLine) => dkdLine !== '').join('\n');
+  ].filter((dkdLine) => dkdLine !== null && dkdLine !== undefined).join('\n');
 }
 
 export async function dkdAdminSendTelegram(dkdBotToken, dkdChatId, dkdProduct, dkdCaption) {
