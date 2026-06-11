@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import express from 'express';
 import { createClient } from '@supabase/supabase-js';
-import { dkdAdminDirectShare } from './dkd_admin_direct_share.js';
+import { dkdAdminDirectShareFullUrlOnly } from './dkd_admin_direct_share_full_url_only.js';
 
 const dkdPort = Number(process.env.DKD_ADMIN_PORT || 8787);
 const dkdAdminPanelKey = process.env.DKD_ADMIN_PANEL_KEY || '';
@@ -37,7 +37,7 @@ dkdApp.post('/api/dkd-share-link-direct', dkdRequireAdmin, async (req, res) => {
   try {
     const dkdUrl = String(req.body.dkd_url || '').trim();
     if (!dkdUrl) return res.status(400).json({ dkd_error: 'missing_url' });
-    const dkdResult = await dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl);
+    const dkdResult = await dkdAdminDirectShareFullUrlOnly(dkdSupabase, dkdBotToken, dkdUrl);
     res.json({ dkd_ok: true, dkd_result: dkdResult });
   } catch (error) {
     res.status(500).json({ dkd_error: dkdErrorText(error) });
@@ -103,4 +103,4 @@ dkdApp.get('/api/dkd-affiliate-rules', dkdRequireAdmin, async (req, res) => {
   res.json({ dkd_ok: true, dkd_rows: data || [] });
 });
 
-dkdApp.listen(dkdPort, '0.0.0.0', () => console.log(JSON.stringify({ dkd_message: 'dkd_admin_started', dkd_port: dkdPort, dkd_direct_share: true })));
+dkdApp.listen(dkdPort, '0.0.0.0', () => console.log(JSON.stringify({ dkd_message: 'dkd_admin_started', dkd_port: dkdPort, dkd_direct_share: true, dkd_full_url_only: true })));
