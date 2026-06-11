@@ -1,6 +1,7 @@
 import type { DkdWorkerConfig } from './dkd_config.js';
 import { dkdLog } from './dkd_logger.js';
 import type { DkdSupabase } from './dkd_supabase.js';
+import { dkdGenerateTelegramDrafts } from './dkd_telegram_draft_generator.js';
 import { dkdProcessTelegramDrafts } from './dkd_telegram_sender.js';
 import { dkdProcessWatchLinks } from './dkd_watch_link_runner.js';
 
@@ -38,6 +39,7 @@ export async function dkdRunOnce(dkdSupabase: DkdSupabase, dkdConfig: DkdWorkerC
     dkdLog('info', 'dkd_watch_links_disabled');
   }
 
+  await dkdGenerateTelegramDrafts(dkdSupabase, dkdConfig);
   await dkdProcessTelegramDrafts(dkdSupabase, dkdConfig);
 
   dkdLog('info', 'dkd_worker_run_once_finished');
@@ -69,7 +71,7 @@ async function dkdProcessScrapeJobs(dkdSupabase: DkdSupabase, dkdConfig: DkdWork
       .from('dkd_deal_scrape_jobs')
       .update({
         dkd_status: 'paused',
-        dkd_error_message: 'source discovery parser is not enabled in worker v0.7',
+        dkd_error_message: 'source discovery parser is not enabled in Termux test mode',
         dkd_worker_key: dkdConfig.dkdWorkerKey,
         dkd_updated_at: new Date().toISOString()
       })
