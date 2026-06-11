@@ -11,6 +11,7 @@ export type DkdWorkerConfig = {
   dkdWorkerJobLimit: number;
   dkdEnableSourceDiscovery: boolean;
   dkdEnableWatchLinks: boolean;
+  dkdEnableTelegramDraftGeneration: boolean;
   dkdEnableTelegram: boolean;
   dkdTelegramBotToken: string | null;
   dkdTelegramChatIdTrMain: string | null;
@@ -58,7 +59,7 @@ export function dkdLoadConfig(): DkdWorkerConfig {
   return {
     dkdSupabaseUrl: dkdReadRequiredEnv('DKD_SUPABASE_URL'),
     dkdSupabaseServiceRoleKey: dkdReadRequiredEnv('DKD_SUPABASE_SERVICE_ROLE_KEY'),
-    dkdWorkerKey: process.env.DKD_WORKER_KEY?.trim() || 'dkd-cx33-main-01',
+    dkdWorkerKey: process.env.DKD_WORKER_KEY?.trim() || 'dkd-termux-main-01',
     dkdWorkerCountry: process.env.DKD_WORKER_COUNTRY?.trim().toUpperCase() || 'TR',
     dkdWorkerDryRun: dkdReadBooleanEnv('DKD_WORKER_DRY_RUN', true),
     dkdWorkerLoop: dkdReadBooleanEnv('DKD_WORKER_LOOP', false),
@@ -66,6 +67,7 @@ export function dkdLoadConfig(): DkdWorkerConfig {
     dkdWorkerJobLimit: dkdReadNumberEnv('DKD_WORKER_JOB_LIMIT', 5),
     dkdEnableSourceDiscovery: dkdReadBooleanEnv('DKD_ENABLE_SOURCE_DISCOVERY', false),
     dkdEnableWatchLinks: dkdReadBooleanEnv('DKD_ENABLE_WATCH_LINKS', true),
+    dkdEnableTelegramDraftGeneration: dkdReadBooleanEnv('DKD_ENABLE_TELEGRAM_DRAFT_GENERATION', true),
     dkdEnableTelegram,
     dkdTelegramBotToken,
     dkdTelegramChatIdTrMain,
