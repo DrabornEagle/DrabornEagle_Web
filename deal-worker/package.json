@@ -1,0 +1,25 @@
+{
+  "name": "draborndeal-worker",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "description": "DraBornDeal / Firsat Radari CX33 worker v0.1",
+  "scripts": {
+    "dev": "tsx src/dkd_worker.ts",
+    "build": "tsc",
+    "start": "node dist/dkd_worker.js",
+    "check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
