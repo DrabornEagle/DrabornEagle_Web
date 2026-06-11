@@ -14,14 +14,16 @@ function dkdEscape(dkdValue){return String(dkdValue??'').replace(/[&<>"]/g,(dkdC
 async function dkdLoadAll(){
   try{
     dkdActionResult.textContent='';
-    const [dkdHealth, dkdWatch, dkdProducts, dkdHot, dkdPosts] = await Promise.all([
+    const [dkdHealth, dkdWatch, dkdProducts, dkdHot, dkdPosts, dkdAffiliate] = await Promise.all([
       dkdApi('/api/dkd-health'),
       dkdApi('/api/dkd-watch-links'),
       dkdApi('/api/dkd-products'),
       dkdApi('/api/dkd-hot-feed'),
-      dkdApi('/api/dkd-social-posts')
+      dkdApi('/api/dkd-social-posts'),
+      dkdApi('/api/dkd-affiliate-rules')
     ]);
     dkdRenderHealth(dkdHealth.dkd_settings);
+    dkdRenderAffiliateRules(dkdAffiliate.dkd_rows);
     dkdRenderWatchLinks(dkdWatch.dkd_rows);
     dkdRenderProducts(dkdProducts.dkd_rows);
     dkdRenderHotFeed(dkdHot.dkd_rows);
@@ -32,23 +34,21 @@ async function dkdLoadAll(){
 function dkdHealthView(dkdRow){
   const dkdKey = dkdRow.dkd_setting_key;
   const dkdValue = dkdRow.dkd_setting_value || {};
-  if(dkdKey === 'dkd_deal_hot_deals_version'){
-    return {dkdTitle:'Fırsat skoru sistemi',dkdDescription:`Hot feed aktif. Sürüm ${dkdValue.version || '-'} · Etiketler: ${(dkdValue.labels || []).join(', ')}`,dkdPills:['aktif','hot feed']};
-  }
-  if(dkdKey === 'dkd_deal_termux_telegram_live_test'){
-    return {dkdTitle:'Telegram canlı test',dkdDescription:`Canlı gönderim sonucu: ${dkdValue.status || '-'} · Worker: ${dkdValue.worker || '-'}`,dkdPills:[dkdValue.telegram || 'telegram','test geçti']};
-  }
-  if(dkdKey === 'dkd_deal_worker_runtime_mode'){
-    return {dkdTitle:'Çalışma modu',dkdDescription:`Şu an ${dkdValue.runtime === 'termux_test_first' ? 'Termux test modu' : (dkdValue.runtime || 'bilinmiyor')}. CX33 durumu: ${dkdValue.cx33_status === 'paused_until_user_confirms_purchased' ? 'sen haber verene kadar beklemede' : (dkdValue.cx33_status || '-')}`,dkdPills:['Termux','CX33 sonra']};
-  }
+  if(dkdKey === 'dkd_deal_affiliate_links_version') return {dkdTitle:'Affiliate sistemi',dkdDescription:`Kaynak bazlı affiliate kuralları hazır. Varsayılan: gerçek parametre girilene kadar kapalı.`,dkdPills:['v0.9','hazır']};
+  if(dkdKey === 'dkd_deal_hot_deals_version') return {dkdTitle:'Fırsat skoru sistemi',dkdDescription:`Hot feed aktif. Sürüm ${dkdValue.version || '-'} · Etiketler: ${(dkdValue.labels || []).join(', ')}`,dkdPills:['aktif','hot feed']};
+  if(dkdKey === 'dkd_deal_termux_telegram_live_test') return {dkdTitle:'Telegram canlı test',dkdDescription:`Canlı gönderim sonucu: ${dkdValue.status || '-'} · Worker: ${dkdValue.worker || '-'}`,dkdPills:[dkdValue.telegram || 'telegram','test geçti']};
+  if(dkdKey === 'dkd_deal_worker_runtime_mode') return {dkdTitle:'Çalışma modu',dkdDescription:`Şu an ${dkdValue.runtime === 'termux_test_first' ? 'Termux test modu' : (dkdValue.runtime || 'bilinmiyor')}. CX33 durumu: ${dkdValue.cx33_status === 'paused_until_user_confirms_purchased' ? 'sen haber verene kadar beklemede' : (dkdValue.cx33_status || '-')}`,dkdPills:['Termux','CX33 sonra']};
   return {dkdTitle:dkdKey,dkdDescription:JSON.stringify(dkdValue),dkdPills:['sistem']};
 }
 
 function dkdRenderHealth(dkdRows){dkdSetHtml('dkdHealth',dkdRows.map((dkdRow)=>{const dkdView=dkdHealthView(dkdRow);return `<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdView.dkdTitle)}</div><div class="dkd-meta">${dkdEscape(dkdView.dkdDescription)}</div>${dkdView.dkdPills.map((p)=>dkdPill(p,'hot')).join('')}</div>`;}).join(''));}
+function dkdRenderAffiliateRules(dkdRows){dkdSetHtml('dkdAffiliateRules',dkdRows.map((r)=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_source_name)} — ${r.dkd_is_active?'aktif':'kapalı'}</div><div class="dkd-meta">Mode: ${dkdEscape(r.dkd_affiliate_mode)} · Parametre: ${dkdEscape(r.dkd_param_key||'-')}=${dkdEscape(r.dkd_param_value||'-')}</div>${dkdPill(r.dkd_source_key,r.dkd_is_active?'hot':'warn')}<form class="dkd-affiliate-form" data-rule-id="${dkdEscape(r.dkd_affiliate_rule_id)}"><select name="dkd_affiliate_mode"><option value="append_query" ${r.dkd_affiliate_mode==='append_query'?'selected':''}>append_query</option><option value="template" ${r.dkd_affiliate_mode==='template'?'selected':''}>template</option><option value="none" ${r.dkd_affiliate_mode==='none'?'selected':''}>none</option></select><input name="dkd_param_key" placeholder="Parametre adı örn: aff" value="${dkdEscape(r.dkd_param_key||'')}"><input name="dkd_param_value" placeholder="Affiliate ID/değer" value="${dkdEscape(r.dkd_param_value||'')}"><button type="submit">Kaydet</button><label class="dkd-switch"><input type="checkbox" name="dkd_is_active" ${r.dkd_is_active?'checked':''}> Aktif</label><input name="dkd_template_url" placeholder="Template URL, {url} kullan" value="${dkdEscape(r.dkd_template_url||'')}"></form></div>`).join(''));document.querySelectorAll('.dkd-affiliate-form').forEach((form)=>form.addEventListener('submit',dkdSaveAffiliateRule));}
 function dkdRenderWatchLinks(dkdRows){dkdSetHtml('dkdWatchLinks',dkdRows.map((r)=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_detected_source_key||'unknown')} — ${dkdEscape(r.dkd_status)}</div><div class="dkd-meta">${dkdEscape(r.dkd_submitted_url)}</div>${dkdPill(`priority ${r.dkd_priority}`)}${r.dkd_product_name?dkdPill(r.dkd_product_name,'hot'):''}</div>`).join(''));}
 function dkdRenderProducts(dkdRows){dkdSetHtml('dkdProducts',dkdRows.map((r)=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_product_name)}</div><div class="dkd-meta">${dkdMoney(r.dkd_current_price,r.dkd_currency_code)} · ${dkdEscape(r.dkd_stock_status)} · Puan ${dkdEscape(r.dkd_rating||'-')} · Yorum ${dkdEscape(r.dkd_review_count||'-')}</div>${dkdPill(`deal ${r.dkd_deal_score}`)}${dkdPill(`trend ${r.dkd_trend_score}`)}<div class="dkd-meta">${dkdEscape(r.dkd_product_url)}</div></div>`).join(''));}
 function dkdRenderHotFeed(dkdRows){dkdSetHtml('dkdHotFeed',dkdRows.map((r)=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_product_name)}</div><div class="dkd-meta">${dkdMoney(r.dkd_current_price,r.dkd_currency_code)} · ${dkdEscape(r.dkd_source_key)}</div>${dkdPill(r.dkd_heat_label,r.dkd_heat_label==='super_hot'?'hot':'warn')}${dkdPill(`hot ${r.dkd_hot_score}`)}${dkdPill(`discount %${r.dkd_discount_percent||0}`)}</div>`).join(''));}
 function dkdRenderPosts(dkdRows){dkdSetHtml('dkdSocialPosts',dkdRows.map((r)=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_status)} — ${dkdEscape(r.dkd_channel_key||'-')}</div><div class="dkd-meta">${dkdEscape((r.dkd_caption||'').slice(0,180))}</div>${r.dkd_published_at?dkdPill('published','hot'):''}${r.dkd_status==='failed'?dkdPill('failed','danger'):''}</div>`).join(''));}
+
+async function dkdSaveAffiliateRule(dkdEvent){dkdEvent.preventDefault();const form=dkdEvent.currentTarget;const fd=new FormData(form);try{const result=await dkdApi(`/api/dkd-affiliate-rules/${form.dataset.ruleId}`,{method:'POST',body:JSON.stringify({dkd_affiliate_mode:fd.get('dkd_affiliate_mode'),dkd_param_key:fd.get('dkd_param_key'),dkd_param_value:fd.get('dkd_param_value'),dkd_template_url:fd.get('dkd_template_url'),dkd_is_active:fd.get('dkd_is_active')==='on'})});dkdActionResult.textContent=JSON.stringify(result,null,2);await dkdLoadAll();}catch(e){dkdActionResult.textContent=`Hata: ${e.message}`;}}
 
 document.getElementById('dkdSaveKeyBtn').addEventListener('click',async()=>{dkdState.dkdKey=dkdAdminKey.value.trim();localStorage.setItem('dkd_admin_key',dkdState.dkdKey);dkdLoginCard.hidden=true;dkdPanel.hidden=false;await dkdLoadAll();});
 document.getElementById('dkdRefreshBtn').addEventListener('click',dkdLoadAll);
