@@ -1,6 +1,6 @@
 export function dkdDetectSourceKey(dkdUrl: string): string | null {
   const dkdLowerUrl = dkdUrl.toLowerCase();
-  if (dkdLowerUrl.includes('trendyol.com')) return 'trendyol';
+  if (dkdLowerUrl.includes('trendyol.com') || dkdLowerUrl.includes('ty.gl')) return 'trendyol';
   if (dkdLowerUrl.includes('hepsiburada.com')) return 'hepsiburada';
   if (dkdLowerUrl.includes('n11.com')) return 'n11';
   if (dkdLowerUrl.includes('amazon.com.tr')) return 'amazon_tr';
