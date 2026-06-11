@@ -28,6 +28,8 @@ export async function dkdEnsureTelegramChannels(dkdSupabase: DkdSupabase, dkdCon
   if (!dkdConfig.dkdTelegramChatIdTrMain) return;
 
   const dkdHotChatId = dkdConfig.dkdTelegramChatIdTrHot || dkdConfig.dkdTelegramChatIdTrMain;
+  const dkdSingleChannelMode = dkdConfig.dkdTelegramChatIdTrMain === dkdHotChatId;
+
   const { error: dkdMainError } = await dkdSupabase
     .from('dkd_deal_telegram_channels')
     .update({
@@ -39,19 +41,31 @@ export async function dkdEnsureTelegramChannels(dkdSupabase: DkdSupabase, dkdCon
 
   if (dkdMainError) throw dkdMainError;
 
-  const { error: dkdHotError } = await dkdSupabase
-    .from('dkd_deal_telegram_channels')
-    .update({
-      dkd_chat_id: dkdHotChatId,
-      dkd_is_active: true,
-      dkd_updated_at: new Date().toISOString()
-    })
-    .eq('dkd_channel_key', 'draborndeal_tr_hot');
+  if (dkdSingleChannelMode) {
+    const { error: dkdHotDeactivateError } = await dkdSupabase
+      .from('dkd_deal_telegram_channels')
+      .update({
+        dkd_is_active: false,
+        dkd_updated_at: new Date().toISOString()
+      })
+      .eq('dkd_channel_key', 'draborndeal_tr_hot');
 
-  if (dkdHotError) throw dkdHotError;
+    if (dkdHotDeactivateError) throw dkdHotDeactivateError;
+  } else {
+    const { error: dkdHotError } = await dkdSupabase
+      .from('dkd_deal_telegram_channels')
+      .update({
+        dkd_chat_id: dkdHotChatId,
+        dkd_is_active: true,
+        dkd_updated_at: new Date().toISOString()
+      })
+      .eq('dkd_channel_key', 'draborndeal_tr_hot');
+
+    if (dkdHotError) throw dkdHotError;
+  }
 
   dkdLog('info', 'dkd_telegram_channels_ready', {
-    dkd_single_channel_mode: dkdConfig.dkdTelegramChatIdTrMain === dkdHotChatId
+    dkd_single_channel_mode: dkdSingleChannelMode
   });
 }
 
@@ -130,7 +144,7 @@ async function dkdSendSingleDraft(dkdSupabase: DkdSupabase, dkdConfig: DkdWorker
     if (dkdUpdateError) throw dkdUpdateError;
     dkdLog('info', 'dkd_telegram_draft_published', { dkd_post_id: dkdPost.dkd_id });
   } catch (dkdError) {
-    await dkdMarkPostFailed(dkdSupabase, dkdPost, dkdError instanceof Error ? dkdError.message : String(dkdError));
+    await dkdMarkPostFailed(dkdSupabase, dkdPost, dkdError instanceof Error ? dkdError.message : JSON.stringify(dkdError));
   }
 }
 
