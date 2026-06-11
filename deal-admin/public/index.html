@@ -11,7 +11,7 @@
     <section class="dkd-hero">
       <p class="dkd-kicker">DraBornDeal</p>
       <h1>Fırsat Radarı Admin</h1>
-      <p>Ürün bağlantısı ekle, worker kuyruğunu takip et, sıcak fırsatları ve Telegram gönderimlerini kontrol et.</p>
+      <p>Ürün bağlantısı ekle, worker kuyruğunu takip et, kaynakları ve Telegram gönderimlerini kontrol et.</p>
     </section>
 
     <section class="dkd-card dkd-login" id="dkdLoginCard">
@@ -23,56 +23,22 @@
 
     <section class="dkd-grid" id="dkdPanel" hidden>
       <article class="dkd-card dkd-wide">
-        <div class="dkd-card-head">
-          <h2>Ürün Bağlantısı Ekle</h2>
-          <button id="dkdRefreshBtn">Yenile</button>
-        </div>
-        <form id="dkdAddLinkForm" class="dkd-form">
-          <input id="dkdProductUrl" type="url" placeholder="Trendyol / Hepsiburada / N11 ürün bağlantısı" required />
-          <button type="submit">Kuyruğa Ekle</button>
-        </form>
+        <div class="dkd-card-head"><h2>Ürün Bağlantısı Ekle</h2><button id="dkdRefreshBtn">Yenile</button></div>
+        <form id="dkdAddLinkForm" class="dkd-form"><input id="dkdProductUrl" type="url" placeholder="Trendyol / Hepsiburada / N11 ürün bağlantısı" required /><button type="submit">Kuyruğa Ekle</button></form>
         <pre id="dkdActionResult"></pre>
       </article>
 
-      <article class="dkd-card">
-        <h2>Sistem</h2>
-        <div id="dkdHealth" class="dkd-list"></div>
-      </article>
+      <article class="dkd-card"><h2>Sistem</h2><div id="dkdHealth" class="dkd-list"></div></article>
+      <article class="dkd-card"><h2>Telegram</h2><button id="dkdGenerateDraftsBtn">Taslak Üret</button><p class="dkd-muted">Gönderim worker üzerinden yapılır. Panel sadece taslak üretir ve durumu gösterir.</p></article>
 
-      <article class="dkd-card">
-        <h2>Telegram</h2>
-        <button id="dkdGenerateDraftsBtn">Taslak Üret</button>
-        <p class="dkd-muted">Gönderim worker üzerinden yapılır. Panel sadece taslak üretir ve durumu gösterir.</p>
-      </article>
-
-      <article class="dkd-card dkd-wide">
-        <h2>Affiliate Kuralları</h2>
-        <p class="dkd-muted">Gerçek affiliate bilgisi girilene kadar kapalı kalır. Aktif olunca Telegram’daki ürün bağlantıları affiliate bağlantısına çevrilir.</p>
-        <div id="dkdAffiliateRules" class="dkd-list"></div>
-      </article>
-
-      <article class="dkd-card dkd-wide">
-        <h2>Bağlantı Kuyruğu</h2>
-        <div id="dkdWatchLinks" class="dkd-list"></div>
-      </article>
-
-      <article class="dkd-card dkd-wide">
-        <h2>Ürünler</h2>
-        <div id="dkdProducts" class="dkd-list"></div>
-      </article>
-
-      <article class="dkd-card dkd-wide">
-        <h2>Sıcak Fırsat Akışı</h2>
-        <div id="dkdHotFeed" class="dkd-list"></div>
-      </article>
-
-      <article class="dkd-card dkd-wide">
-        <h2>Telegram Gönderi Kuyruğu</h2>
-        <div id="dkdSocialPosts" class="dkd-list"></div>
-      </article>
+      <article class="dkd-card dkd-wide"><h2>Kaynaklar</h2><p class="dkd-muted">Buradan kaynakların aktiflik, izin, inceleme, öncelik ve kontrol aralığını yönetirsin.</p><div id="dkdSources" class="dkd-list"></div></article>
+      <article class="dkd-card dkd-wide"><h2>Affiliate Kuralları</h2><p class="dkd-muted">Şimdilik kapalı bırakılabilir. Gerçek affiliate bilgisi girilince aktif edilir.</p><div id="dkdAffiliateRules" class="dkd-list"></div></article>
+      <article class="dkd-card dkd-wide"><h2>Bağlantı Kuyruğu</h2><div id="dkdWatchLinks" class="dkd-list"></div></article>
+      <article class="dkd-card dkd-wide"><h2>Ürünler</h2><div id="dkdProducts" class="dkd-list"></div></article>
+      <article class="dkd-card dkd-wide"><h2>Sıcak Fırsat Akışı</h2><div id="dkdHotFeed" class="dkd-list"></div></article>
+      <article class="dkd-card dkd-wide"><h2>Telegram Gönderi Kuyruğu</h2><div id="dkdSocialPosts" class="dkd-list"></div></article>
     </section>
   </main>
-
   <script src="/app.js"></script>
 </body>
 </html>
