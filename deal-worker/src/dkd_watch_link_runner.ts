@@ -33,7 +33,16 @@ export async function dkdProcessWatchLinks(dkdSupabase: DkdSupabase, dkdConfig: 
   dkdLog('info', 'dkd_watch_links_loaded', { dkd_count: dkdRows.length });
 
   for (const dkdLink of dkdRows) {
-    await dkdProcessSingleWatchLink(dkdSupabase, dkdConfig, dkdLink);
+    try {
+      await dkdProcessSingleWatchLink(dkdSupabase, dkdConfig, dkdLink);
+    } catch (dkdError) {
+      const dkdMessage = dkdError instanceof Error ? dkdError.message : JSON.stringify(dkdError);
+      await dkdUpdateWatchLink(dkdSupabase, dkdLink.dkd_id, 'paused', `Parser failed without crashing worker: ${dkdMessage}`);
+      dkdLog('error', 'dkd_watch_link_parser_failed', {
+        dkd_watch_link_id: dkdLink.dkd_id,
+        dkd_error_message: dkdMessage
+      });
+    }
   }
 }
 
