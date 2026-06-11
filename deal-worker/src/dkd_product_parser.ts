@@ -14,11 +14,8 @@ export type DkdParsedProduct = {
 export async function dkdFetchAndParseProduct(dkdUrl: string): Promise<DkdParsedProduct> {
   const dkdResponse = await fetch(dkdUrl, {
     method: 'GET',
-    headers: {
-      'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-      'accept-language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
-      'user-agent': 'DraBornDealBot/0.3 (+https://www.draborneagle.com; manual product watch link parser)'
-    }
+    redirect: 'follow',
+    headers: dkdBuildProductFetchHeaders(dkdUrl)
   });
 
   if (!dkdResponse.ok) {
@@ -26,7 +23,39 @@ export async function dkdFetchAndParseProduct(dkdUrl: string): Promise<DkdParsed
   }
 
   const dkdHtml = await dkdResponse.text();
-  return dkdParseProductHtml(dkdHtml, dkdUrl);
+  return dkdParseProductHtml(dkdHtml, dkdResponse.url || dkdUrl);
+}
+
+function dkdBuildProductFetchHeaders(dkdUrl: string): Record<string, string> {
+  const dkdHost = new URL(dkdUrl).hostname.toLowerCase();
+  const dkdBaseHeaders: Record<string, string> = {
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'accept-language': 'tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7',
+    'cache-control': 'no-cache',
+    'pragma': 'no-cache',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36'
+  };
+
+  if (dkdHost.includes('hepsiburada.com')) {
+    return {
+      ...dkdBaseHeaders,
+      'referer': 'https://www.hepsiburada.com/',
+      'sec-fetch-dest': 'document',
+      'sec-fetch-mode': 'navigate',
+      'sec-fetch-site': 'same-origin',
+      'sec-fetch-user': '?1'
+    };
+  }
+
+  if (dkdHost.includes('trendyol.com') || dkdHost.includes('ty.gl')) {
+    return {
+      ...dkdBaseHeaders,
+      'referer': 'https://www.trendyol.com/'
+    };
+  }
+
+  return dkdBaseHeaders;
 }
 
 export function dkdParseProductHtml(dkdHtml: string, dkdUrl: string): DkdParsedProduct {
@@ -72,7 +101,7 @@ export function dkdParseProductHtml(dkdHtml: string, dkdUrl: string): DkdParsedP
       dkd_json_ld_count: dkdJsonLdList.length,
       dkd_json_ld_product_found: Boolean(dkdProductJsonLd),
       dkd_og_found: Object.keys(dkdOg).length > 0,
-      dkd_parser_version: '0.3'
+      dkd_parser_version: '0.8.3'
     }
   };
 }
