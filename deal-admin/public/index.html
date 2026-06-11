@@ -11,24 +11,24 @@
     <section class="dkd-hero">
       <p class="dkd-kicker">DraBornDeal</p>
       <h1>Fırsat Radarı Admin</h1>
-      <p>Ürün linki ekle, worker kuyruğunu takip et, sıcak fırsatları ve Telegram gönderimlerini kontrol et.</p>
+      <p>Ürün bağlantısı ekle, worker kuyruğunu takip et, sıcak fırsatları ve Telegram gönderimlerini kontrol et.</p>
     </section>
 
     <section class="dkd-card dkd-login" id="dkdLoginCard">
       <h2>Admin Giriş</h2>
       <p>Termux/CX33 .env içindeki <b>DKD_ADMIN_PANEL_KEY</b> değerini gir.</p>
-      <input id="dkdAdminKey" type="password" placeholder="Admin panel key" autocomplete="off" />
+      <input id="dkdAdminKey" type="password" placeholder="Admin panel anahtarı" autocomplete="off" />
       <button id="dkdSaveKeyBtn">Giriş Yap</button>
     </section>
 
     <section class="dkd-grid" id="dkdPanel" hidden>
       <article class="dkd-card dkd-wide">
         <div class="dkd-card-head">
-          <h2>Ürün Linki Ekle</h2>
+          <h2>Ürün Bağlantısı Ekle</h2>
           <button id="dkdRefreshBtn">Yenile</button>
         </div>
         <form id="dkdAddLinkForm" class="dkd-form">
-          <input id="dkdProductUrl" type="url" placeholder="Trendyol / Hepsiburada / N11 ürün linki" required />
+          <input id="dkdProductUrl" type="url" placeholder="Trendyol / Hepsiburada / N11 ürün bağlantısı" required />
           <button type="submit">Kuyruğa Ekle</button>
         </form>
         <pre id="dkdActionResult"></pre>
@@ -41,18 +41,18 @@
 
       <article class="dkd-card">
         <h2>Telegram</h2>
-        <button id="dkdGenerateDraftsBtn">Draft Üret</button>
-        <p class="dkd-muted">Gönderim worker üzerinden yapılır. Panel sadece draft üretir ve durumu gösterir.</p>
+        <button id="dkdGenerateDraftsBtn">Taslak Üret</button>
+        <p class="dkd-muted">Gönderim worker üzerinden yapılır. Panel sadece taslak üretir ve durumu gösterir.</p>
       </article>
 
       <article class="dkd-card dkd-wide">
         <h2>Affiliate Kuralları</h2>
-        <p class="dkd-muted">Gerçek affiliate ID/parametre girilene kadar kapalı kalır. Aktif olunca Telegram linkleri affiliate URL ile üretilir.</p>
+        <p class="dkd-muted">Gerçek affiliate bilgisi girilene kadar kapalı kalır. Aktif olunca Telegram’daki ürün bağlantıları affiliate bağlantısına çevrilir.</p>
         <div id="dkdAffiliateRules" class="dkd-list"></div>
       </article>
 
       <article class="dkd-card dkd-wide">
-        <h2>Watch Link Kuyruğu</h2>
+        <h2>Bağlantı Kuyruğu</h2>
         <div id="dkdWatchLinks" class="dkd-list"></div>
       </article>
 
@@ -62,12 +62,12 @@
       </article>
 
       <article class="dkd-card dkd-wide">
-        <h2>Sıcak Fırsat Feed</h2>
+        <h2>Sıcak Fırsat Akışı</h2>
         <div id="dkdHotFeed" class="dkd-list"></div>
       </article>
 
       <article class="dkd-card dkd-wide">
-        <h2>Telegram Post Kuyruğu</h2>
+        <h2>Telegram Gönderi Kuyruğu</h2>
         <div id="dkdSocialPosts" class="dkd-list"></div>
       </article>
     </section>
