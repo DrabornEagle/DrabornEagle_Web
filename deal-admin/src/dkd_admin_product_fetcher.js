@@ -1,0 +1,138 @@
+function dkdDecode(dkdValue) {
+  return String(dkdValue || '')
+    .replace(/&quot;/g, '"')
+    .replace(/&#34;/g, '"')
+    .replace(/&amp;/g, '&')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&#39;/g, "'");
+}
+
+function dkdClean(dkdValue) {
+  return dkdValue ? String(dkdValue).replace(/\s+/g, ' ').trim() || null : null;
+}
+
+function dkdNumber(dkdValue) {
+  if (dkdValue === null || dkdValue === undefined) return null;
+  const dkdParsed = Number(String(dkdValue).replace(',', '.').replace(/[^0-9.]/g, ''));
+  return Number.isFinite(dkdParsed) ? dkdParsed : null;
+}
+
+function dkdReadString(dkdObject, dkdKey) {
+  return dkdObject && typeof dkdObject[dkdKey] === 'string' ? dkdObject[dkdKey].trim() : null;
+}
+
+function dkdFetchHeaders(dkdUrl) {
+  const dkdHost = new URL(dkdUrl).hostname.toLowerCase();
+  const dkdBase = {
+    accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'accept-language': 'tr-TR,tr;q=0.9,en-US;q=0.8',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; Mobile) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Mobile Safari/537.36'
+  };
+  if (dkdHost.includes('hepsiburada')) return { ...dkdBase, referer: 'https://www.hepsiburada.com/' };
+  if (dkdHost.includes('trendyol') || dkdHost.includes('ty.gl')) return { ...dkdBase, referer: 'https://www.trendyol.com/' };
+  return dkdBase;
+}
+
+function dkdExtractJsonLd(dkdHtml) {
+  const dkdItems = [];
+  const dkdRegex = /<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+  let dkdMatch;
+  while ((dkdMatch = dkdRegex.exec(dkdHtml))) {
+    try {
+      const dkdParsed = JSON.parse(dkdDecode(dkdMatch[1].trim()));
+      Array.isArray(dkdParsed) ? dkdItems.push(...dkdParsed) : dkdItems.push(dkdParsed);
+    } catch {}
+  }
+  return dkdItems;
+}
+
+function dkdFindProduct(dkdItems) {
+  const dkdStack = [...dkdItems];
+  while (dkdStack.length) {
+    const dkdItem = dkdStack.shift();
+    if (!dkdItem || typeof dkdItem !== 'object') continue;
+    const dkdType = dkdItem['@type'];
+    if (dkdType === 'Product' || (Array.isArray(dkdType) && dkdType.includes('Product'))) return dkdItem;
+    for (const dkdChild of Object.values(dkdItem)) {
+      if (Array.isArray(dkdChild)) dkdStack.push(...dkdChild);
+      else if (dkdChild && typeof dkdChild === 'object') dkdStack.push(dkdChild);
+    }
+  }
+  return null;
+}
+
+function dkdExtractOg(dkdHtml) {
+  const dkdOg = {};
+  const dkdRegex = /<meta[^>]+(?:property|name)=["']([^"']+)["'][^>]+content=["']([^"']*)["'][^>]*>/gi;
+  let dkdMatch;
+  while ((dkdMatch = dkdRegex.exec(dkdHtml))) dkdOg[dkdMatch[1]] = dkdDecode(dkdMatch[2]);
+  return dkdOg;
+}
+
+function dkdTitle(dkdHtml) {
+  const dkdMatch = dkdHtml.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  return dkdMatch ? dkdDecode(dkdMatch[1]) : null;
+}
+
+function dkdOffer(dkdProduct) {
+  const dkdOfferValue = dkdProduct?.offers;
+  if (Array.isArray(dkdOfferValue)) return dkdOfferValue[0] || null;
+  return dkdOfferValue && typeof dkdOfferValue === 'object' ? dkdOfferValue : null;
+}
+
+function dkdRating(dkdProduct) {
+  const dkdRatingValue = dkdProduct?.aggregateRating;
+  return dkdRatingValue && typeof dkdRatingValue === 'object' ? dkdRatingValue : null;
+}
+
+function dkdImage(dkdProduct, dkdOg, dkdUrl) {
+  const dkdImageValue = dkdProduct?.image;
+  const dkdPicked = typeof dkdImageValue === 'string' ? dkdImageValue : Array.isArray(dkdImageValue) ? dkdImageValue[0] : dkdImageValue?.url || dkdOg['og:image'] || null;
+  try { return dkdPicked ? new URL(dkdPicked, dkdUrl).toString() : null; } catch { return dkdPicked; }
+}
+
+function dkdPriceFromHtml(dkdHtml) {
+  const dkdPatterns = [/property=["']product:price:amount["'][^>]+content=["']([^"']+)["']/i, /itemprop=["']price["'][^>]+content=["']([^"']+)["']/i, /"price"\s*:\s*"?([0-9.,]+)"?/i];
+  for (const dkdPattern of dkdPatterns) {
+    const dkdMatch = dkdHtml.match(dkdPattern);
+    const dkdParsed = dkdMatch ? dkdNumber(dkdMatch[1]) : null;
+    if (dkdParsed) return dkdParsed;
+  }
+  return null;
+}
+
+function dkdStock(dkdAvailability, dkdHtml) {
+  const dkdText = `${dkdAvailability || ''} ${dkdHtml.slice(0, 50000)}`.toLowerCase();
+  if (dkdText.includes('outofstock') || dkdText.includes('tükendi')) return 'out_of_stock';
+  if (dkdText.includes('lowstock') || dkdText.includes('az stok')) return 'low_stock';
+  if (dkdText.includes('preorder') || dkdText.includes('ön sipariş')) return 'preorder';
+  if (dkdText.includes('instock') || dkdText.includes('stokta')) return 'in_stock';
+  return 'unknown';
+}
+
+export async function dkdAdminFetchProduct(dkdUrl) {
+  const dkdResponse = await fetch(dkdUrl, { redirect: 'follow', headers: dkdFetchHeaders(dkdUrl) });
+  if (!dkdResponse.ok) throw new Error(`Ürün sayfası alınamadı: ${dkdResponse.status}`);
+  const dkdHtml = await dkdResponse.text();
+  const dkdJsonLd = dkdExtractJsonLd(dkdHtml);
+  const dkdProduct = dkdFindProduct(dkdJsonLd);
+  const dkdOg = dkdExtractOg(dkdHtml);
+  const dkdOffer = dkdOffer(dkdProduct);
+  const dkdRating = dkdRating(dkdProduct);
+  const dkdName = dkdClean(dkdReadString(dkdProduct, 'name') || dkdOg['og:title'] || dkdTitle(dkdHtml));
+  if (!dkdName) throw new Error('Ürün adı bulunamadı.');
+  return {
+    dkd_url: dkdResponse.url || dkdUrl,
+    dkd_product_name: dkdName,
+    dkd_brand_name: dkdClean(typeof dkdProduct?.brand === 'string' ? dkdProduct.brand : dkdProduct?.brand?.name),
+    dkd_image_url: dkdImage(dkdProduct, dkdOg, dkdResponse.url || dkdUrl),
+    dkd_currency_code: dkdReadString(dkdOffer, 'priceCurrency') || 'TRY',
+    dkd_current_price: dkdNumber(dkdOffer?.price) || dkdPriceFromHtml(dkdHtml),
+    dkd_original_price: null,
+    dkd_stock_status: dkdStock(dkdReadString(dkdOffer, 'availability'), dkdHtml),
+    dkd_rating: dkdNumber(dkdRating?.ratingValue),
+    dkd_review_count: dkdNumber(dkdRating?.reviewCount || dkdRating?.ratingCount),
+    dkd_raw_payload: { dkd_parser_version: 'admin_direct_v0_12', dkd_json_ld_count: dkdJsonLd.length }
+  };
+}
