@@ -12,6 +12,9 @@ export type DkdWorkerConfig = {
   dkdEnableSourceDiscovery: boolean;
   dkdEnableWatchLinks: boolean;
   dkdEnableTelegram: boolean;
+  dkdTelegramBotToken: string | null;
+  dkdTelegramChatIdTrMain: string | null;
+  dkdTelegramChatIdTrHot: string | null;
 };
 
 function dkdReadRequiredEnv(dkdName: string): string {
@@ -19,6 +22,12 @@ function dkdReadRequiredEnv(dkdName: string): string {
   if (!dkdValue || dkdValue.trim().length === 0 || dkdValue.startsWith('replace_')) {
     throw new Error(`Missing required env: ${dkdName}`);
   }
+  return dkdValue.trim();
+}
+
+function dkdReadOptionalEnv(dkdName: string): string | null {
+  const dkdValue = process.env[dkdName];
+  if (!dkdValue || dkdValue.trim().length === 0 || dkdValue.startsWith('replace_')) return null;
   return dkdValue.trim();
 }
 
@@ -37,6 +46,15 @@ function dkdReadNumberEnv(dkdName: string, dkdDefaultValue: number): number {
 }
 
 export function dkdLoadConfig(): DkdWorkerConfig {
+  const dkdEnableTelegram = dkdReadBooleanEnv('DKD_ENABLE_TELEGRAM', false);
+  const dkdTelegramBotToken = dkdReadOptionalEnv('DKD_TELEGRAM_BOT_TOKEN');
+  const dkdTelegramChatIdTrMain = dkdReadOptionalEnv('DKD_TELEGRAM_CHAT_ID_TR_MAIN');
+  const dkdTelegramChatIdTrHot = dkdReadOptionalEnv('DKD_TELEGRAM_CHAT_ID_TR_HOT') || dkdTelegramChatIdTrMain;
+
+  if (dkdEnableTelegram && (!dkdTelegramBotToken || !dkdTelegramChatIdTrMain)) {
+    throw new Error('Telegram is enabled but DKD_TELEGRAM_BOT_TOKEN or DKD_TELEGRAM_CHAT_ID_TR_MAIN is missing.');
+  }
+
   return {
     dkdSupabaseUrl: dkdReadRequiredEnv('DKD_SUPABASE_URL'),
     dkdSupabaseServiceRoleKey: dkdReadRequiredEnv('DKD_SUPABASE_SERVICE_ROLE_KEY'),
@@ -48,6 +66,9 @@ export function dkdLoadConfig(): DkdWorkerConfig {
     dkdWorkerJobLimit: dkdReadNumberEnv('DKD_WORKER_JOB_LIMIT', 5),
     dkdEnableSourceDiscovery: dkdReadBooleanEnv('DKD_ENABLE_SOURCE_DISCOVERY', false),
     dkdEnableWatchLinks: dkdReadBooleanEnv('DKD_ENABLE_WATCH_LINKS', true),
-    dkdEnableTelegram: dkdReadBooleanEnv('DKD_ENABLE_TELEGRAM', false)
+    dkdEnableTelegram,
+    dkdTelegramBotToken,
+    dkdTelegramChatIdTrMain,
+    dkdTelegramChatIdTrHot
   };
 }
