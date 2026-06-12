@@ -1,4 +1,4 @@
-# DraBornDeal Admin Panel v0.17
+# DraBornDeal Admin Panel v0.18
 
 Termux veya CX33 üzerinde çalışan hafif admin paneldir.
 
@@ -12,6 +12,7 @@ Termux veya CX33 üzerinde çalışan hafif admin paneldir.
 - Telegram gönderi kayıtlarını silme
 - Bağlantı geçmişi kayıtlarını silme
 - Basit istatistik paneli
+- Mobil hızlı arama ve filtre paneli
 - Kaynak bazlı ürün sayımı
 - En sıcak 5 ürün listesi
 - Watch link kuyruğu görüntüleme
@@ -61,6 +62,13 @@ Android tarayıcıdan aç.
 - `İstatistikler` bölümü panel açılınca açık gelir.
 - Toplam ürün, bugün güncellenen ürün, yayınlanan Telegram gönderisi, bugünkü Telegram gönderisi, bekleyen link ve aktif kaynak sayısı gösterilir.
 - Kaynak bazlı ürün dağılımı ve en sıcak 5 ürün listesi aynı bölümde görünür.
+
+## v0.18 mobil filtre akışı
+
+- Panelde `Mobil Filtre` kartı otomatik oluşur.
+- Ürünler, Sıcak Fırsatlar, Telegram gönderileri ve Bağlantı Geçmişi kayıtlarında hızlı arama yapar.
+- `Ürünler`, `Telegram`, `Sıcak`, `Linkler` kısayolları ilgili bölümü açıp ekrana getirir.
+- `Temizle` ile filtre sıfırlanır.
 
 ## Güvenlik
 
