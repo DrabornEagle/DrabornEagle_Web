@@ -18,7 +18,7 @@ function dkdStart(dkdName, dkdArgs) {
 }
 
 console.log(JSON.stringify({ dkd_message: 'dkd_admin_launcher_started', dkd_version: 'v0.23' }));
-dkdStart('admin', ['src/dkd_server_v0_17_1.js']);
+dkdStart('admin', ['src/dkd_server_v0_23.js']);
 dkdStart('worker-control', ['src/dkd_worker_control_server_v0_22.js']);
 
 function dkdShutdown() {
