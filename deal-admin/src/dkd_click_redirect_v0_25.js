@@ -30,7 +30,9 @@ async function dkdFinalUrlForProduct(dkdSupabase, dkdProduct) {
 }
 
 export function dkdBuildTrackedProductUrl(dkdProductId, dkdFallbackUrl) {
+  const dkdEnabled = String(process.env.DKD_CLICK_TRACKING_ENABLED || '').toLowerCase() === 'true';
   const dkdBase = String(process.env.DKD_PUBLIC_BASE_URL || '').replace(/\/+$/g, '');
+  if (!dkdEnabled) return dkdFallbackUrl;
   if (!dkdBase || dkdBase.includes('127.0.0.1') || dkdBase.includes('localhost')) return dkdFallbackUrl;
   return `${dkdBase}/go/product/${encodeURIComponent(dkdProductId)}`;
 }
