@@ -1,12 +1,12 @@
 {
   "name": "draborndeal-admin",
-  "version": "0.22.0",
+  "version": "0.34.0",
   "private": true,
   "type": "module",
-  "description": "DraBornDeal / Firsat Radari lightweight admin panel",
+  "description": "DraBornDeal admin panel",
   "scripts": {
-    "dev": "node src/dkd_admin_launcher_v0_22.js",
-    "start": "node src/dkd_admin_launcher_v0_22.js"
+    "dev": "node src/dkd_admin_launcher_v0_34.js",
+    "start": "node src/dkd_admin_launcher_v0_34.js"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.45.4",
