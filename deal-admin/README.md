@@ -1,4 +1,4 @@
-# DraBornDeal Admin Panel v0.15
+# DraBornDeal Admin Panel v0.16
 
 Termux veya CX33 üzerinde çalışan hafif admin paneldir.
 
@@ -8,6 +8,9 @@ Termux veya CX33 üzerinde çalışan hafif admin paneldir.
 - Telegram mesaj önizleme
 - Önizlemeden sonra Telegram’da paylaşma
 - Kayıtlı ürünleri tekrar paylaşma
+- Hatalı ürün kayıtlarını silme
+- Telegram gönderi kayıtlarını silme
+- Bağlantı geçmişi kayıtlarını silme
 - Watch link kuyruğu görüntüleme
 - Çekilen ürünleri görüntüleme
 - Sıcak fırsat feed görüntüleme
@@ -42,6 +45,13 @@ Android tarayıcıdan aç.
 2. `Önizleme Oluştur` butonuna bas.
 3. Panel ürün görselini, Telegram caption metnini, karakter limitini ve son bağlantıyı gösterir.
 4. Mesaj doğruysa `Telegram’da Paylaş` butonuna bas.
+
+## v0.16 temizlik akışı
+
+- Ürün kartında `Ürünü Sil` butonu ürün kaydını, ona bağlı snapshot kayıtlarını ve sosyal gönderi kayıtlarını temizler.
+- Telegram gönderileri bölümünde `Gönderi Kaydını Sil` sadece veritabanı kaydını siler; kanal içindeki gerçek Telegram mesajı ayrıca Telegram’dan elle silinmelidir.
+- Bağlantı geçmişinde `Link Geçmişini Sil` yanlış/test link kayıtlarını temizler.
+- Her silme işleminden önce tarayıcı onay penceresi çıkar.
 
 ## Güvenlik
 
