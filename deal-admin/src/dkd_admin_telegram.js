@@ -1,3 +1,5 @@
+import { dkdDealDiscountPercent, dkdDealEstimatedInterest } from './dkd_deal_quality_v0_24.js';
+
 function dkdAdminCurrencyLabel(dkdCurrencyCode) {
   if (!dkdCurrencyCode || dkdCurrencyCode === 'TRY') return 'TL';
   return dkdCurrencyCode;
@@ -5,38 +7,63 @@ function dkdAdminCurrencyLabel(dkdCurrencyCode) {
 
 function dkdAdminMoney(dkdValue, dkdCurrencyCode) {
   if (dkdValue === null || dkdValue === undefined) return null;
-  return `${Number(dkdValue).toLocaleString('tr-TR')} ${dkdAdminCurrencyLabel(dkdCurrencyCode)}`;
+  const dkdNumber = Number(dkdValue || 0);
+  if (!Number.isFinite(dkdNumber) || dkdNumber <= 0) return null;
+  return `${dkdNumber.toLocaleString('tr-TR')} ${dkdAdminCurrencyLabel(dkdCurrencyCode)}`;
 }
 
-function dkdAdminDiscountPercent(dkdProduct) {
-  if (dkdProduct.dkd_discount_percent !== null && dkdProduct.dkd_discount_percent !== undefined) {
-    return Number(dkdProduct.dkd_discount_percent);
-  }
+function dkdAdminPriceDiff(dkdProduct) {
   const dkdCurrent = Number(dkdProduct.dkd_current_price || 0);
   const dkdOriginal = Number(dkdProduct.dkd_original_price || 0);
-  if (dkdCurrent > 0 && dkdOriginal > dkdCurrent) {
-    return Math.round(((dkdOriginal - dkdCurrent) / dkdOriginal) * 10000) / 100;
-  }
+  if (dkdCurrent > 0 && dkdOriginal > dkdCurrent) return dkdOriginal - dkdCurrent;
   return null;
+}
+
+function dkdAdminSourceLabel(dkdProduct) {
+  const dkdRaw = String(dkdProduct.dkd_url || dkdProduct.dkd_product_url || '').toLowerCase();
+  if (dkdRaw.includes('trendyol')) return 'Trendyol';
+  if (dkdRaw.includes('hepsiburada')) return 'Hepsiburada';
+  return 'Türkiye';
+}
+
+function dkdAdminStockLabel(dkdProduct) {
+  const dkdStock = String(dkdProduct.dkd_stock_status || '').toLowerCase();
+  if (dkdStock.includes('in_stock') || dkdStock.includes('stock')) return 'Stokta var';
+  if (dkdStock.includes('out')) return 'Stokta yok';
+  return dkdProduct.dkd_stock_status || 'Stok bilgisi belirsiz';
 }
 
 export function dkdAdminBuildCaption(dkdProduct, dkdUrl) {
   const dkdCurrentPrice = dkdAdminMoney(dkdProduct.dkd_current_price, dkdProduct.dkd_currency_code) || 'Fiyat bilgisi yok';
   const dkdOriginalPrice = dkdAdminMoney(dkdProduct.dkd_original_price, dkdProduct.dkd_currency_code);
-  const dkdDiscount = dkdAdminDiscountPercent(dkdProduct);
+  const dkdDiscount = dkdDealDiscountPercent(dkdProduct);
+  const dkdInterest = dkdDealEstimatedInterest(dkdProduct);
+  const dkdPriceDiff = dkdAdminPriceDiff(dkdProduct);
+  const dkdPriceDiffText = dkdPriceDiff ? dkdAdminMoney(dkdPriceDiff, dkdProduct.dkd_currency_code) : null;
+  const dkdRating = Number(dkdProduct.dkd_rating || 0);
+  const dkdReviews = Number(dkdProduct.dkd_review_count || 0);
+  const dkdSourceLabel = dkdAdminSourceLabel(dkdProduct);
+  const dkdStockLabel = dkdAdminStockLabel(dkdProduct);
+  const dkdHeadline = dkdDiscount >= 15 ? '🔥 Fiyatı Düşen Fırsat' : dkdInterest >= 70 ? '🔥 Yoğun İlgi Alan Ürün' : '🔥 Fırsat Radarı';
 
   return [
-    '🔥 Fırsat Radarı',
+    dkdHeadline,
     '',
-    dkdProduct.dkd_product_name,
+    `🛒 ${dkdProduct.dkd_product_name}`,
     '',
-    `💰 Yeni Fiyat: ${dkdCurrentPrice}`,
-    dkdOriginalPrice ? `🏷️ Önceki Fiyat: ${dkdOriginalPrice}` : null,
-    dkdDiscount !== null ? `📉 İndirim: %${Number(dkdDiscount).toLocaleString('tr-TR')}` : null,
-    dkdProduct.dkd_rating ? `⭐ Puan: ${Number(dkdProduct.dkd_rating).toLocaleString('tr-TR')}` : null,
-    dkdProduct.dkd_review_count ? `💬 Yorum: ${Number(dkdProduct.dkd_review_count).toLocaleString('tr-TR')}` : null,
+    `🏬 Kaynak: ${dkdSourceLabel}`,
+    `💰 Güncel Fiyat: ${dkdCurrentPrice}`,
+    dkdOriginalPrice ? `🏷️ Önceki / Liste Fiyatı: ${dkdOriginalPrice}` : null,
+    dkdPriceDiffText ? `📉 Tahmini Kazanç: ${dkdPriceDiffText}` : null,
+    dkdDiscount > 0 ? `📊 İndirim Sinyali: %${Number(dkdDiscount).toLocaleString('tr-TR')}` : '📊 İndirim Sinyali: Liste fiyatı bulunamadı',
+    `📦 Stok: ${dkdStockLabel}`,
+    dkdRating ? `⭐ Puan: ${dkdRating.toLocaleString('tr-TR')}` : '⭐ Puan: veri yok',
+    dkdReviews ? `💬 Yorum: ${dkdReviews.toLocaleString('tr-TR')}` : '💬 Yorum: veri yok',
+    `👀 Tahmini İlgi Skoru: ${dkdInterest}/100`,
     '',
-    '🔗 Link:',
+    '🔎 Not: Platformun gerçek tıklanma/satış adedi herkese açık değil. Bu skor fiyat, yorum, puan, stok ve indirim sinyallerinden hesaplanır.',
+    '',
+    '🔗 Ürün Linki:',
     dkdUrl,
     '',
     '#fırsat #indirim #DraBornDeal'
