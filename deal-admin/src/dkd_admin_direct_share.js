@@ -1,5 +1,6 @@
 import { dkdAdminFetchProduct } from './dkd_admin_product_fetcher.js';
 import { dkdAdminBuildCaption, dkdAdminSendTelegram } from './dkd_admin_telegram.js';
+import { dkdDealQuality } from './dkd_deal_quality_v0_24.js';
 
 export function dkdAdminDetectSourceKey(dkdUrl) {
   const dkdHost = new URL(dkdUrl).hostname.toLowerCase();
@@ -28,6 +29,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
   }
 
   const dkdProduct = await dkdAdminFetchProduct(dkdUrl);
+  const dkdQuality = dkdDealQuality(dkdProduct);
   const dkdPayload = {
     dkd_source_id: dkdSource.dkd_id,
     dkd_country_code: 'TR',
@@ -42,8 +44,10 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_stock_status: dkdProduct.dkd_stock_status,
     dkd_rating: dkdProduct.dkd_rating,
     dkd_review_count: dkdProduct.dkd_review_count,
+    dkd_deal_score: dkdQuality.dkd_interest_score,
+    dkd_trend_score: dkdQuality.dkd_interest_score,
     dkd_last_seen_at: new Date().toISOString(),
-    dkd_raw_last_payload: dkdProduct.dkd_raw_payload
+    dkd_raw_last_payload: { ...(dkdProduct.dkd_raw_payload || {}), dkd_quality: dkdQuality }
   };
 
   const { data: dkdSavedProduct, error: dkdSaveError } = await dkdSupabase
@@ -62,8 +66,12 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_stock_status: dkdProduct.dkd_stock_status,
     dkd_rating: dkdProduct.dkd_rating,
     dkd_review_count: dkdProduct.dkd_review_count,
-    dkd_raw_payload: dkdProduct.dkd_raw_payload
+    dkd_raw_payload: { ...(dkdProduct.dkd_raw_payload || {}), dkd_quality: dkdQuality }
   });
+
+  if (!dkdQuality.dkd_pass) {
+    throw new Error(`Fırsat filtresinden geçmedi: ilgi ${dkdQuality.dkd_interest_score}/100, indirim %${dkdQuality.dkd_discount_percent}, neden ${dkdQuality.dkd_reasons.join(',') || 'zayıf veri'}`);
+  }
 
   const { data: dkdChannel, error: dkdChannelError } = await dkdSupabase
     .from('dkd_deal_telegram_channels')
@@ -78,7 +86,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_source_key: dkdSourceKey
   });
 
-  const dkdCaption = dkdAdminBuildCaption(dkdProduct, dkdFinalUrl || dkdUrl);
+  const dkdCaption = dkdAdminBuildCaption({ ...dkdProduct, dkd_deal_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent }, dkdFinalUrl || dkdUrl);
   const dkdMessageId = await dkdAdminSendTelegram(dkdBotToken, dkdChannel.dkd_chat_id, dkdProduct, dkdCaption);
 
   await dkdSupabase.from('dkd_deal_social_posts').insert({
@@ -91,8 +99,9 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_external_message_id: dkdMessageId,
     dkd_published_at: new Date().toISOString(),
     dkd_metrics: {
-      dkd_created_from: 'admin_direct_share_v0_12',
-      dkd_channel_key: dkdChannel.dkd_channel_key
+      dkd_created_from: 'admin_direct_share_v0_24',
+      dkd_channel_key: dkdChannel.dkd_channel_key,
+      dkd_quality: dkdQuality
     }
   });
 
@@ -101,6 +110,8 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_product_name: dkdProduct.dkd_product_name,
     dkd_price: dkdProduct.dkd_current_price,
     dkd_source_key: dkdSourceKey,
+    dkd_interest_score: dkdQuality.dkd_interest_score,
+    dkd_discount_percent: dkdQuality.dkd_discount_percent,
     dkd_telegram_message_id: dkdMessageId
   };
 }
