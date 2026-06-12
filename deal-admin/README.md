@@ -1,28 +1,18 @@
-# DraBornDeal Admin Panel v0.23
+# DraBornDeal Admin Panel v0.34
 
-Termux veya CX33 üzerinde çalışan hafif admin paneli, otomatik crawler worker ve DraBornBee site adaptörleri sistemidir.
+DraBornDeal genel fırsat radarı projesidir. DraBornBee ise bu projenin worker / veri çekme / crawler motorudur.
 
-## Özellikler
+## İsim standardı
 
-- Ürün linki ekleme
-- Telegram mesaj önizleme
-- Önizlemeden sonra Telegram’da paylaşma
-- Panelden worker başlatma / durdurma
-- Trendyol ve Hepsiburada özel kaynak adaptörleri
-- Robots.txt ve sitemap keşfi
-- Sitemap index ve `.xml.gz` desteği
-- HTML / script / JSON içinden ürün URL çıkarma
-- Ürün detayını çekip Supabase’e kaydetme
-- Fırsatları Telegram’a otomatik gönderme
-- Son 18 saatte paylaşılmış ürünü tekrar paylaşmama
-- Hatalı ürün kayıtlarını silme
-- Telegram gönderi kayıtlarını silme
-- Bağlantı geçmişi kayıtlarını silme
-- Basit istatistik paneli
-- Kaynak bazlı ürün sayımı
-- En sıcak 5 ürün listesi
+- Genel proje adı: DraBornDeal
+- Admin panel: DraBornDeal Admin Panel
+- Telegram sistemi: DraBornDeal Telegram Fırsat Sistemi
+- Tıklanma takibi: DraBornDeal Click Tracking
+- Worker / veri çekme motoru: DraBornBee
+- Hepsiburada modülü: DraBornBee Hepsiburada Adaptörü
+- Trendyol modülü: DraBornBee Trendyol Adaptörü
 
-## Admin panel Termux kurulum
+## Güncel çalışma komutu
 
 ```bash
 cd ~/projects/DrabornEagle_Web
@@ -35,53 +25,40 @@ npm run dev
 Panel adresi:
 
 ```text
-http://127.0.0.1:8787/?v=022
+http://127.0.0.1:8787/?v=034
 ```
 
 Panelde `DraBornBee Worker Kontrol` kartından worker başlatılır.
 
-## v0.23 kaynak adaptörleri
+## Güncel sürüm çizgisi
 
-Panelden `Worker Başlat` dediğinde artık mevcut worker dosyası v0.23 adaptör mantığıyla çalışır.
+- DraBornDeal Admin: v0.34
+- DraBornBee worker motoru: v0.34
+- DraBornDeal click tracking wrapper: v0.34
+- DraBornBee bağımsız servis klasörü: `deal-drabornbee`
 
-Worker şunları yapar:
+## DraBornBee sunucu modülü
 
-1. Trendyol ve Hepsiburada adaptörlerini çalıştırır.
-2. Robots.txt ve sitemap adaylarını dener.
-3. Sitemap index içinden alt sitemapleri takip eder.
-4. `.xml.gz` sitemapleri açmayı dener.
-5. HTML / script / JSON metinleri içinde ürün URL kalıplarını arar.
-6. Ürün URL bulursa mevcut ürün detay fetcher hattına verir.
-7. Supabase’e ürün ve snapshot kaydı atar.
-8. Telegram kanalına otomatik gönderir.
-9. Son 18 saatte paylaşılmış ürünü tekrar paylaşmaz.
-
-Örnek `.env`:
-
-```text
-DKD_GATEWAY_INTERVAL_MINUTES=45
-DKD_GATEWAY_SHARE_LIMIT=5
-DKD_ADAPTER_SITEMAP_LIMIT=25
-DKD_ADAPTER_PRODUCT_LIMIT=120
-DKD_ADAPTER_TIMEOUT_MS=18000
-```
-
-## Manuel worker test komutu
-
-Panel yerine Termux’tan elle test etmek istersen:
+Sunucu alındığında Trendyol gibi Termux üzerinden zorlanan kaynaklar için DraBornBee çalıştırılır:
 
 ```bash
-cd ~/projects/DrabornEagle_Web/deal-admin
-node src/dkd_gateway_worker_v0_21.js
+cd ~/projects/DrabornEagle_Web/deal-drabornbee
+npm install
+npx playwright install chromium
+npm start
 ```
 
-Dosya adı v0_21 olarak kalır ama içindeki worker logu `drabornbee_gateway_v0_23` yazar.
+DraBornDeal admin `.env` bağlantısı:
+
+```text
+DKD_DRABORNBEE_URL=http://127.0.0.1:8790
+DKD_DRABORNBEE_KEY=senin-gizli-keyin
+```
 
 ## Güvenlik
 
 - Supabase service role key tarayıcıya verilmez.
 - Service role key sadece server `.env` içinde kalır.
 - API istekleri `DKD_ADMIN_PANEL_KEY` ile korunur.
-- Crawler worker aynı `.env` değerlerini kullanır.
-- Gateway sistemi rate-limit, timeout ve retry mantığıyla çalışır.
-- CX33'e taşınırken aynı klasör ve `.env` mantığı kullanılabilir.
+- DraBornBee ayrı key ile korunur.
+- Click tracking sunucu yönlendirmesi hazır olana kadar kapalı kalır.
