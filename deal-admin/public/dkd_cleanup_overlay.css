@@ -1,0 +1,1 @@
+.dkd-cleanup-actions{display:grid;grid-template-columns:1fr;gap:8px;margin-top:10px}.dkd-cleanup-delete-btn{background:var(--dkd-danger);color:#1b0404;width:100%;border:0;border-radius:14px;padding:12px 14px;font-weight:900}.dkd-cleanup-delete-btn:disabled{opacity:.65}.dkd-cleanup-delete-btn:active{transform:scale(.98)}
