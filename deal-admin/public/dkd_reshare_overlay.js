@@ -3,6 +3,8 @@
   const dkdAdminKey = () => localStorage.getItem('dkd_admin_key') || '';
 
   function dkdFindUrl(dkdCard) {
+    const dkdDataUrl = dkdCard.dataset?.dkdProductUrl || '';
+    if (dkdDataUrl) return dkdDataUrl;
     const dkdTextItems = Array.from(dkdCard.querySelectorAll('.dkd-meta')).map((dkdNode) => dkdNode.textContent || '');
     const dkdUrlText = dkdTextItems.find((dkdText) => dkdText.includes('http')) || '';
     const dkdMatch = dkdUrlText.match(/https?:\/\/[^\s]+/);
@@ -27,7 +29,7 @@
     }
     const dkdOldText = dkdButton.textContent;
     dkdButton.disabled = true;
-    dkdButton.textContent = 'Paylaşılıyor...';
+    dkdButton.textContent = 'Paylaşılıyor';
     if (dkdBox) dkdBox.textContent = 'Kayıtlı ürün bağlantısı Telegram’da tekrar paylaşılıyor...';
     const dkdResponse = await fetch('/api/dkd-share-link-direct', {
       method: 'POST',
@@ -57,13 +59,13 @@
       const dkdButton = document.createElement('button');
       dkdButton.type = 'button';
       dkdButton.className = 'dkd-reshare-existing-btn';
-      dkdButton.textContent = '↗ Tekrar Paylaş';
+      dkdButton.textContent = 'Paylaş';
       dkdButton.addEventListener('click', async () => {
         try {
           await dkdShareAgain(dkdUrl, dkdButton);
         } catch (dkdError) {
           dkdButton.disabled = false;
-          dkdButton.textContent = '↗ Tekrar Paylaş';
+          dkdButton.textContent = 'Paylaş';
           const dkdBox = dkdResultBox();
           if (dkdBox) dkdBox.textContent = `Hata: ${dkdError.message}`;
         }
