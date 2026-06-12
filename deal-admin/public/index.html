@@ -4,18 +4,18 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DraBornDeal Admin</title>
-  <link rel="stylesheet" href="/styles.css?v=019" />
-  <link rel="stylesheet" href="/dkd_stats.css?v=019" />
-  <link rel="stylesheet" href="/dkd_reshare_overlay.css?v=019" />
-  <link rel="stylesheet" href="/dkd_telegram_preview.css?v=019" />
-  <link rel="stylesheet" href="/dkd_cleanup_overlay.css?v=019" />
+  <link rel="stylesheet" href="/styles.css?v=020" />
+  <link rel="stylesheet" href="/dkd_stats.css?v=020" />
+  <link rel="stylesheet" href="/dkd_reshare_overlay.css?v=020" />
+  <link rel="stylesheet" href="/dkd_telegram_preview.css?v=020" />
+  <link rel="stylesheet" href="/dkd_cleanup_overlay.css?v=020" />
 </head>
 <body>
   <main class="dkd-shell">
     <section class="dkd-hero">
       <p class="dkd-kicker">DraBornDeal</p>
       <h1>Fırsat Radarı Admin</h1>
-      <p>Ürün bağlantısını yapıştır, fırsatı çek, Telegram mesajını önce gör, sonra paylaş. v0.19 ile kayıtlı ürünleri toplu tarayıp Telegram’a gönderebilirsin.</p>
+      <p>Türkiye e-ticaret kaynaklarını crawler worker ile otomatik tara, fırsat verisini çek ve Telegram’a otomatik gönder.</p>
     </section>
 
     <section class="dkd-card dkd-login" id="dkdLoginCard">
@@ -34,7 +34,7 @@
           </div>
           <button id="dkdRefreshBtn" type="button">Yenile</button>
         </div>
-        <p class="dkd-muted">Kısa bağlantı değil, ürünün tam bağlantısını kullan. Önce mesajı kontrol et, sonra Telegram’da paylaş.</p>
+        <p class="dkd-muted">Manuel test için tam ürün bağlantısını kullan. Otomatik crawler ayrı Termux worker olarak çalışır.</p>
         <form id="dkdAddLinkForm" class="dkd-form">
           <input id="dkdProductUrl" type="url" placeholder="Tam ürün bağlantısını yapıştır" required />
           <div class="dkd-form-actions">
@@ -65,7 +65,7 @@
 
       <details class="dkd-card dkd-section">
         <summary>Ürünler</summary>
-        <p class="dkd-muted">Kayıtlı ürünlerde “Önizle” ile Telegram mesajını kontrol edebilir, hatalı ürün kayıtlarını “Sil” ile temizleyebilirsin.</p>
+        <p class="dkd-muted">Crawler tarafından çekilen veya manuel eklenen ürün kayıtları.</p>
         <div id="dkdProducts" class="dkd-list"></div>
       </details>
 
@@ -76,13 +76,13 @@
 
       <details class="dkd-card dkd-section">
         <summary>Telegram Gönderileri</summary>
-        <p class="dkd-muted">Hatalı veya test gönderi kayıtlarını panelden silebilirsin. Telegram kanalındaki gerçek mesaj ayrıca elle silinmelidir.</p>
+        <p class="dkd-muted">Telegram’a gönderilen fırsat kayıtları.</p>
         <div id="dkdSocialPosts" class="dkd-list"></div>
       </details>
 
       <details class="dkd-card dkd-section">
         <summary>Bağlantı Geçmişi</summary>
-        <p class="dkd-muted">Test veya yanlış eklenen ürün bağlantı geçmişini buradan temizleyebilirsin.</p>
+        <p class="dkd-muted">Test veya yanlış eklenen ürün bağlantı geçmişi.</p>
         <div id="dkdWatchLinks" class="dkd-list"></div>
       </details>
 
@@ -93,11 +93,10 @@
       </details>
     </section>
   </main>
-  <script src="/app.js?v=019"></script>
-  <script src="/dkd_safe_loader.js?v=019"></script>
-  <script src="/dkd_batch_share.js?v=019"></script>
-  <script src="/dkd_reshare_overlay.js?v=019"></script>
-  <script src="/dkd_telegram_preview_overlay.js?v=019"></script>
-  <script src="/dkd_cleanup_overlay.js?v=019"></script>
+  <script src="/app.js?v=020"></script>
+  <script src="/dkd_safe_loader.js?v=020"></script>
+  <script src="/dkd_reshare_overlay.js?v=020"></script>
+  <script src="/dkd_telegram_preview_overlay.js?v=020"></script>
+  <script src="/dkd_cleanup_overlay.js?v=020"></script>
 </body>
 </html>
