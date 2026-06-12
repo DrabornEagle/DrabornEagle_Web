@@ -17,9 +17,10 @@ function dkdStart(dkdName, dkdArgs) {
   return dkdChild;
 }
 
-console.log(JSON.stringify({ dkd_message: 'dkd_admin_launcher_started', dkd_version: 'v0.23' }));
+console.log(JSON.stringify({ dkd_message: 'dkd_admin_launcher_started', dkd_version: 'v0.25' }));
 dkdStart('admin', ['src/dkd_server_v0_23.js']);
 dkdStart('worker-control', ['src/dkd_worker_control_server_v0_22.js']);
+dkdStart('click', ['src/dkd_click_server_v0_25.js']);
 
 function dkdShutdown() {
   for (const dkdChild of dkdChildren) {
