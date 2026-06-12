@@ -1,7 +1,7 @@
 import 'dotenv/config';
 import { createClient } from '@supabase/supabase-js';
 import { dkdAdminDirectShareFullUrlOnly } from './dkd_admin_direct_share_full_url_only.js';
-import { dkdGatewayDiscoverProductUrls } from './dkd_fetch_gateway_v0_21.js';
+import { dkdDiscoverProductsWithAdaptersV023 } from './dkd_source_adapters_v0_23.js';
 
 const dkdSupabase = createClient(process.env.DKD_SUPABASE_URL || '', process.env.DKD_SUPABASE_SERVICE_ROLE_KEY || '', {
   auth: { persistSession: false, autoRefreshToken: false }
@@ -12,7 +12,7 @@ const dkdShareLimit = Math.max(1, Math.min(Number(process.env.DKD_GATEWAY_SHARE_
 let dkdRunning = false;
 
 function dkdLog(dkdPayload) {
-  console.log(JSON.stringify({ dkd_worker: 'drabornbee_gateway_v0_21', dkd_time: new Date().toISOString(), ...dkdPayload }));
+  console.log(JSON.stringify({ dkd_worker: 'drabornbee_gateway_v0_23', dkd_time: new Date().toISOString(), ...dkdPayload }));
 }
 
 function dkdText(dkdError) {
@@ -61,21 +61,21 @@ async function dkdRunOnce() {
   let dkdSkippedCount = 0;
 
   try {
-    dkdLog({ dkd_message: 'gateway_discovery_started', dkd_share_limit: dkdShareLimit });
-    const dkdDiscovery = await dkdGatewayDiscoverProductUrls({
-      dkd_sitemap_limit: Number(process.env.DKD_GATEWAY_SITEMAP_LIMIT || 10),
-      dkd_product_limit: Number(process.env.DKD_GATEWAY_PRODUCT_LIMIT || 80)
+    dkdLog({ dkd_message: 'adapter_discovery_started', dkd_share_limit: dkdShareLimit });
+    const dkdDiscovery = await dkdDiscoverProductsWithAdaptersV023({
+      dkd_sitemap_limit: Number(process.env.DKD_ADAPTER_SITEMAP_LIMIT || 25),
+      dkd_product_limit: Number(process.env.DKD_ADAPTER_PRODUCT_LIMIT || 120)
     });
 
     dkdLog({
-      dkd_message: 'gateway_discovery_finished',
+      dkd_message: 'adapter_discovery_finished',
       dkd_source_count: dkdDiscovery.dkd_source_count,
       dkd_product_url_count: dkdDiscovery.dkd_product_url_count,
       dkd_results: dkdDiscovery.dkd_results.map((dkdResult) => ({
-        dkd_home_url: dkdResult.dkd_home_url,
+        dkd_source_key: dkdResult.dkd_source_key,
         dkd_checked_count: dkdResult.dkd_checked_count || 0,
         dkd_product_url_count: dkdResult.dkd_product_url_count || 0,
-        dkd_error: dkdResult.dkd_error || null
+        dkd_logs: (dkdResult.dkd_logs || []).slice(0, 5)
       }))
     });
 
@@ -100,14 +100,14 @@ async function dkdRunOnce() {
       }
     }
 
-    dkdLog({ dkd_message: 'gateway_run_finished', dkd_shared_count: dkdSharedCount, dkd_skipped_count: dkdSkippedCount });
+    dkdLog({ dkd_message: 'adapter_run_finished', dkd_shared_count: dkdSharedCount, dkd_skipped_count: dkdSkippedCount });
   } catch (dkdError) {
-    dkdLog({ dkd_message: 'gateway_run_failed', dkd_error: dkdText(dkdError) });
+    dkdLog({ dkd_message: 'adapter_run_failed', dkd_error: dkdText(dkdError) });
   } finally {
     dkdRunning = false;
   }
 }
 
-dkdLog({ dkd_message: 'gateway_worker_started', dkd_interval_minutes: dkdIntervalMinutes, dkd_share_limit: dkdShareLimit });
+dkdLog({ dkd_message: 'adapter_worker_started', dkd_interval_minutes: dkdIntervalMinutes, dkd_share_limit: dkdShareLimit });
 await dkdRunOnce();
 setInterval(dkdRunOnce, dkdIntervalMinutes * 60 * 1000);
