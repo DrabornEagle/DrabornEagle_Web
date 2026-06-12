@@ -1,14 +1,16 @@
-# DraBornDeal Admin Panel v0.20
+# DraBornDeal Admin Panel v0.21
 
-Termux veya CX33 üzerinde çalışan hafif admin paneli ve otomatik crawler worker sistemidir.
+Termux veya CX33 üzerinde çalışan hafif admin paneli, otomatik crawler worker ve DraBornBee fetch gateway sistemidir.
 
 ## Özellikler
 
 - Ürün linki ekleme
 - Telegram mesaj önizleme
 - Önizlemeden sonra Telegram’da paylaşma
-- Türkiye e-ticaret seed sayfalarını otomatik tarama
-- Trendyol ve Hepsiburada ürün linki çıkarma
+- DraBornBee fetch gateway katmanı
+- Robots.txt ve sitemap keşfi
+- Türkiye e-ticaret kaynaklarından ürün linki çıkarma
+- Trendyol ve Hepsiburada ürün linki normalize etme
 - Ürün detayını çekip Supabase’e kaydetme
 - Fırsatları Telegram’a otomatik gönderme
 - Son 18 saatte paylaşılmış ürünü tekrar paylaşmama
@@ -46,32 +48,47 @@ http://127.0.0.1:8787
 
 Android tarayıcıdan aç.
 
-## v0.20 otomatik crawler worker
+## v0.21 DraBornBee gateway worker
 
-Panelden bağımsız çalışır. Ayrı Termux oturumunda açık kalır.
+Bu worker, ScrapingBee benzeri yerel fetch gateway mantığıdır. Panelden bağımsız çalışır. Ayrı Termux oturumunda açık kalır.
 
 ```bash
 cd ~/projects/DrabornEagle_Web/deal-admin
-node src/dkd_auto_crawler_worker_v0_20.js
+node src/dkd_gateway_worker_v0_21.js
 ```
 
 Worker şunları yapar:
 
-1. `DKD_CRAWL_SEED_URLS` içindeki Türkiye e-ticaret arama/kategori sayfalarını gezer.
-2. Trendyol ve Hepsiburada ürün linklerini çıkarır.
-3. Ürün detayını mevcut ürün fetcher ile çeker.
-4. Supabase’e ürün ve snapshot kaydı atar.
-5. Telegram caption oluşturur.
-6. Telegram kanalına otomatik gönderir.
-7. Son 18 saatte paylaşılmış ürünü tekrar paylaşmaz.
-8. `DKD_AUTO_CRAWL_INTERVAL_MINUTES` süresi dolunca yeniden tarar.
+1. `DKD_GATEWAY_SOURCE_HOMES` içindeki kaynak ana domainlerini alır.
+2. Robots.txt ve sitemap adaylarını dener.
+3. Sitemap içinden ürün URL adaylarını çıkarır.
+4. Trendyol ve Hepsiburada ürün URL’lerini normalize eder.
+5. Ürün detayını mevcut fetcher ile çeker.
+6. Supabase’e ürün ve snapshot kaydı atar.
+7. Telegram caption oluşturur.
+8. Telegram kanalına otomatik gönderir.
+9. Son 18 saatte paylaşılmış ürünü tekrar paylaşmaz.
+10. `DKD_GATEWAY_INTERVAL_MINUTES` süresi dolunca yeniden çalışır.
 
 Örnek `.env`:
 
 ```text
-DKD_AUTO_CRAWL_INTERVAL_MINUTES=30
-DKD_AUTO_CRAWL_SHARE_LIMIT=5
-DKD_CRAWL_SEED_URLS=https://www.trendyol.com/sr?q=telefon,https://www.trendyol.com/sr?q=playstation,https://www.hepsiburada.com/ara?q=telefon,https://www.hepsiburada.com/ara?q=playstation
+DKD_GATEWAY_INTERVAL_MINUTES=45
+DKD_GATEWAY_SHARE_LIMIT=5
+DKD_GATEWAY_SOURCE_HOMES=https://www.trendyol.com,https://www.hepsiburada.com
+DKD_GATEWAY_SITEMAP_LIMIT=10
+DKD_GATEWAY_PRODUCT_LIMIT=80
+DKD_GATEWAY_TIMEOUT_MS=16000
+DKD_GATEWAY_RETRIES=2
+```
+
+## v0.20 eski sayfa crawler worker
+
+Arama/kategori HTML sayfalarını dener. JavaScript ile boş dönen sayfalarda yetersiz kalabilir. v0.21 gateway worker daha doğru başlangıçtır.
+
+```bash
+cd ~/projects/DrabornEagle_Web/deal-admin
+node src/dkd_auto_crawler_worker_v0_20.js
 ```
 
 ## v0.15 Telegram önizleme akışı
@@ -100,4 +117,5 @@ DKD_CRAWL_SEED_URLS=https://www.trendyol.com/sr?q=telefon,https://www.trendyol.c
 - Service role key sadece server `.env` içinde kalır.
 - API istekleri `DKD_ADMIN_PANEL_KEY` ile korunur.
 - Crawler worker aynı `.env` değerlerini kullanır.
+- Gateway sistemi rate-limit, timeout ve retry mantığıyla çalışır.
 - CX33'e taşınırken aynı klasör ve `.env` mantığı kullanılabilir.
