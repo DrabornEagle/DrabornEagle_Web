@@ -10,6 +10,8 @@ let dkdWorkerStartedAt = null;
 let dkdWorkerStoppedAt = null;
 let dkdWorkerLastExit = null;
 const dkdWorkerLogs = [];
+const dkdWorkerFile = 'src/dkd_gateway_worker_v0_21.js';
+const dkdVisibleVersion = 'v0.23';
 
 function dkdPushLog(dkdLine) {
   const dkdText = String(dkdLine || '').trim();
@@ -31,7 +33,8 @@ function dkdState() {
     dkd_started_at: dkdWorkerStartedAt,
     dkd_stopped_at: dkdWorkerStoppedAt,
     dkd_last_exit: dkdWorkerLastExit,
-    dkd_worker_file: 'src/dkd_gateway_worker_v0_21.js',
+    dkd_worker_file: dkdWorkerFile,
+    dkd_worker_version: dkdVisibleVersion,
     dkd_logs: dkdWorkerLogs
   };
 }
@@ -58,13 +61,13 @@ dkdApp.post('/api/dkd-worker-start', dkdRequireAdmin, (req, res) => {
   dkdWorkerStartedAt = new Date().toISOString();
   dkdWorkerStoppedAt = null;
   dkdWorkerLastExit = null;
-  dkdWorkerProcess = spawn(process.execPath, ['src/dkd_gateway_worker_v0_21.js'], {
+  dkdWorkerProcess = spawn(process.execPath, [dkdWorkerFile], {
     cwd: process.cwd(),
     env: process.env,
     stdio: ['ignore', 'pipe', 'pipe']
   });
 
-  dkdPushLog(`worker_started pid=${dkdWorkerProcess.pid}`);
+  dkdPushLog(`worker_started version=${dkdVisibleVersion} pid=${dkdWorkerProcess.pid}`);
   dkdWorkerProcess.stdout.on('data', (dkdChunk) => dkdPushLog(dkdChunk.toString()));
   dkdWorkerProcess.stderr.on('data', (dkdChunk) => dkdPushLog(`ERR ${dkdChunk.toString()}`));
   dkdWorkerProcess.on('exit', (dkdCode, dkdSignal) => {
@@ -88,5 +91,5 @@ dkdApp.post('/api/dkd-worker-stop', dkdRequireAdmin, (req, res) => {
 });
 
 dkdApp.listen(dkdControlPort, '0.0.0.0', () => {
-  console.log(JSON.stringify({ dkd_message: 'dkd_worker_control_started', dkd_port: dkdControlPort, dkd_version: 'v0.22' }));
+  console.log(JSON.stringify({ dkd_message: 'dkd_worker_control_started', dkd_port: dkdControlPort, dkd_version: dkdVisibleVersion }));
 });
