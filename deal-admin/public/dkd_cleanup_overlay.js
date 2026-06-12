@@ -6,7 +6,17 @@
     return (dkdNode?.querySelector('.dkd-title')?.textContent || dkdFallback || '').trim();
   }
 
-  function dkdActionRow(dkdCard) {
+  function dkdActionRow(dkdCard, dkdKind) {
+    if (dkdKind === 'product') {
+      let dkdProductRow = dkdCard.querySelector('.dkd-product-actions');
+      if (!dkdProductRow) {
+        dkdProductRow = document.createElement('div');
+        dkdProductRow.className = 'dkd-product-actions';
+        dkdCard.appendChild(dkdProductRow);
+      }
+      return dkdProductRow;
+    }
+
     let dkdRow = dkdCard.querySelector('.dkd-cleanup-actions');
     if (!dkdRow) {
       dkdRow = document.createElement('div');
@@ -34,7 +44,7 @@
 
   function dkdAddDeleteButton(dkdCard, dkdKind, dkdId, dkdEndpoint, dkdLabel, dkdConfirmText) {
     if (!dkdId || dkdCard.querySelector(`[data-dkd-cleanup-kind="${dkdKind}"]`)) return;
-    const dkdRow = dkdActionRow(dkdCard);
+    const dkdRow = dkdActionRow(dkdCard, dkdKind);
     const dkdButton = document.createElement('button');
     dkdButton.type = 'button';
     dkdButton.className = 'dkd-cleanup-delete-btn';
@@ -47,7 +57,7 @@
       const dkdOldText = dkdButton.textContent;
       try {
         dkdButton.disabled = true;
-        dkdButton.textContent = 'Siliniyor...';
+        dkdButton.textContent = 'Siliniyor';
         await dkdDeleteRequest(dkdEndpoint, dkdName || dkdLabel);
       } catch (dkdError) {
         const dkdBox = dkdResultBox();
@@ -63,17 +73,17 @@
   function dkdAddCleanupButtons() {
     document.querySelectorAll('#dkdProducts .dkd-item[data-dkd-product-id]').forEach((dkdCard) => {
       const dkdId = dkdCard.dataset.dkdProductId || '';
-      dkdAddDeleteButton(dkdCard, 'product', dkdId, `/api/dkd-products/${encodeURIComponent(dkdId)}`, '🗑 Ürünü Sil', 'Bu ürünü, ürün snapshot kayıtlarını ve bu ürüne bağlı sosyal gönderi kayıtlarını silmek istiyor musun?');
+      dkdAddDeleteButton(dkdCard, 'product', dkdId, `/api/dkd-products/${encodeURIComponent(dkdId)}`, 'Sil', 'Bu ürünü, ürün snapshot kayıtlarını ve bu ürüne bağlı sosyal gönderi kayıtlarını silmek istiyor musun?');
     });
 
     document.querySelectorAll('#dkdSocialPosts .dkd-item[data-dkd-social-post-id]').forEach((dkdCard) => {
       const dkdId = dkdCard.dataset.dkdSocialPostId || '';
-      dkdAddDeleteButton(dkdCard, 'social-post', dkdId, `/api/dkd-social-posts/${encodeURIComponent(dkdId)}`, '🗑 Gönderi Kaydını Sil', 'Bu Telegram gönderi kaydını silmek istiyor musun? Kanal içindeki gerçek Telegram mesajı ayrıca elle silinmelidir.');
+      dkdAddDeleteButton(dkdCard, 'social-post', dkdId, `/api/dkd-social-posts/${encodeURIComponent(dkdId)}`, 'Gönderi Kaydını Sil', 'Bu Telegram gönderi kaydını silmek istiyor musun? Kanal içindeki gerçek Telegram mesajı ayrıca elle silinmelidir.');
     });
 
     document.querySelectorAll('#dkdWatchLinks .dkd-item[data-dkd-watch-link-id]').forEach((dkdCard) => {
       const dkdId = dkdCard.dataset.dkdWatchLinkId || '';
-      dkdAddDeleteButton(dkdCard, 'watch-link', dkdId, `/api/dkd-watch-links/${encodeURIComponent(dkdId)}`, '🗑 Link Geçmişini Sil', 'Bu bağlantı geçmişi kaydını silmek istiyor musun?');
+      dkdAddDeleteButton(dkdCard, 'watch-link', dkdId, `/api/dkd-watch-links/${encodeURIComponent(dkdId)}`, 'Link Geçmişini Sil', 'Bu bağlantı geçmişi kaydını silmek istiyor musun?');
     });
   }
 
