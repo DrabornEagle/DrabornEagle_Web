@@ -1,6 +1,7 @@
 import { dkdAdminFetchProduct } from './dkd_admin_product_fetcher.js';
 import { dkdAdminBuildCaption, dkdAdminSendTelegram } from './dkd_admin_telegram.js';
 import { dkdDealQuality } from './dkd_deal_quality_v0_24.js';
+import { dkdBuildTrackedProductUrl } from './dkd_click_redirect_v0_25.js';
 
 export function dkdAdminDetectSourceKey(dkdUrl) {
   const dkdHost = new URL(dkdUrl).hostname.toLowerCase();
@@ -86,7 +87,9 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_source_key: dkdSourceKey
   });
 
-  const dkdCaption = dkdAdminBuildCaption({ ...dkdProduct, dkd_deal_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent }, dkdFinalUrl || dkdUrl);
+  const dkdTargetUrl = dkdFinalUrl || dkdUrl;
+  const dkdTrackedUrl = dkdBuildTrackedProductUrl(dkdSavedProduct.dkd_id, dkdTargetUrl);
+  const dkdCaption = dkdAdminBuildCaption({ ...dkdProduct, dkd_deal_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent }, dkdTrackedUrl);
   const dkdMessageId = await dkdAdminSendTelegram(dkdBotToken, dkdChannel.dkd_chat_id, dkdProduct, dkdCaption);
 
   await dkdSupabase.from('dkd_deal_social_posts').insert({
@@ -99,9 +102,11 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_external_message_id: dkdMessageId,
     dkd_published_at: new Date().toISOString(),
     dkd_metrics: {
-      dkd_created_from: 'admin_direct_share_v0_24',
+      dkd_created_from: 'admin_direct_share_v0_25',
       dkd_channel_key: dkdChannel.dkd_channel_key,
-      dkd_quality: dkdQuality
+      dkd_quality: dkdQuality,
+      dkd_tracked_url: dkdTrackedUrl,
+      dkd_target_url: dkdTargetUrl
     }
   });
 
@@ -112,6 +117,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_source_key: dkdSourceKey,
     dkd_interest_score: dkdQuality.dkd_interest_score,
     dkd_discount_percent: dkdQuality.dkd_discount_percent,
+    dkd_tracked_url: dkdTrackedUrl,
     dkd_telegram_message_id: dkdMessageId
   };
 }
