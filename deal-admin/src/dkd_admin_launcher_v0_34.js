@@ -1,2 +1,6 @@
-console.log(JSON.stringify({ dkd_project: 'DraBornDeal', dkd_worker_engine: 'DraBornBee', dkd_version: 'v0.34' }));
-await import('./dkd_admin_launcher_v0_30.js');
+console.log(JSON.stringify({ dkd_version: 'v0.34' }));
+await Promise.all([
+  import('./dkd_server_v0_34.js'),
+  import('./dkd_drabornbee_control_server_v0_34.js'),
+  import('./dkd_click_server_v0_34.js')
+]);
