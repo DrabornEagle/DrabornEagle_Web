@@ -10,9 +10,9 @@ const dkdSupabase = createClient(process.env.DKD_SUPABASE_URL || '', process.env
 });
 
 dkdApp.set('trust proxy', true);
-dkdApp.get('/health', (req, res) => res.json({ dkd_ok: true, dkd_service: 'click_redirect', dkd_version: 'v0.25' }));
+dkdApp.get('/health', (req, res) => res.json({ dkd_ok: true, dkd_service: 'DraBornDeal click tracking', dkd_version: 'v0.34' }));
 dkdRegisterClickRedirectRoute(dkdApp, dkdSupabase);
 
 dkdApp.listen(dkdClickPort, '0.0.0.0', () => {
-  console.log(JSON.stringify({ dkd_message: 'dkd_click_server_started', dkd_port: dkdClickPort, dkd_version: 'v0.25' }));
+  console.log(JSON.stringify({ dkd_message: 'draborndeal_click_server_started', dkd_port: dkdClickPort, dkd_version: 'v0.34' }));
 });
