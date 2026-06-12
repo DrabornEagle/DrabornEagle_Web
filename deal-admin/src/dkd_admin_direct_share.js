@@ -1,6 +1,6 @@
 import { dkdAdminFetchProduct } from './dkd_admin_product_fetcher.js';
 import { dkdAdminBuildCaption, dkdAdminSendTelegram } from './dkd_admin_telegram.js';
-import { dkdDealQuality } from './dkd_deal_quality_v0_24.js';
+import { dkdDiscountQualityV029 } from './dkd_discount_quality_v0_29.js';
 import { dkdBuildTrackedProductUrl } from './dkd_click_redirect_v0_25.js';
 
 export function dkdAdminDetectSourceKey(dkdUrl) {
@@ -25,12 +25,10 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     .single();
 
   if (dkdSourceError || !dkdSource) throw new Error('Kaynak aktif değil veya bulunamadı.');
-  if (!dkdSource.dkd_allowed_by_terms || dkdSource.dkd_needs_manual_review) {
-    throw new Error('Bu kaynak için manuel ürün bağlantısı izni kapalı.');
-  }
+  if (!dkdSource.dkd_allowed_by_terms || dkdSource.dkd_needs_manual_review) throw new Error('Bu kaynak için manuel ürün bağlantısı izni kapalı.');
 
   const dkdProduct = await dkdAdminFetchProduct(dkdUrl);
-  const dkdQuality = dkdDealQuality(dkdProduct);
+  const dkdQuality = dkdDiscountQualityV029(dkdProduct);
   const dkdPayload = {
     dkd_source_id: dkdSource.dkd_id,
     dkd_country_code: 'TR',
@@ -71,7 +69,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
   });
 
   if (!dkdQuality.dkd_pass) {
-    throw new Error(`Fırsat filtresinden geçmedi: ilgi ${dkdQuality.dkd_interest_score}/100, indirim %${dkdQuality.dkd_discount_percent}, neden ${dkdQuality.dkd_reasons.join(',') || 'zayıf veri'}`);
+    throw new Error(`İndirimli fırsat değil: güncel ${dkdQuality.dkd_current_price}, eski ${dkdQuality.dkd_original_price}, indirim %${dkdQuality.dkd_discount_percent}, neden ${dkdQuality.dkd_reasons.join(',') || 'eski fiyat yok'}`);
   }
 
   const { data: dkdChannel, error: dkdChannelError } = await dkdSupabase
@@ -82,11 +80,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     .single();
   if (dkdChannelError || !dkdChannel) throw new Error('Aktif Telegram kanalı bulunamadı.');
 
-  const { data: dkdFinalUrl } = await dkdSupabase.rpc('dkd_deal_affiliate_url_v0_9', {
-    dkd_product_url: dkdUrl,
-    dkd_source_key: dkdSourceKey
-  });
-
+  const { data: dkdFinalUrl } = await dkdSupabase.rpc('dkd_deal_affiliate_url_v0_9', { dkd_product_url: dkdUrl, dkd_source_key: dkdSourceKey });
   const dkdTargetUrl = dkdFinalUrl || dkdUrl;
   const dkdTrackedUrl = dkdBuildTrackedProductUrl(dkdSavedProduct.dkd_id, dkdTargetUrl);
   const dkdCaption = dkdAdminBuildCaption({ ...dkdProduct, dkd_deal_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent }, dkdTrackedUrl);
@@ -101,23 +95,8 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_telegram_channel_id: dkdChannel.dkd_id,
     dkd_external_message_id: dkdMessageId,
     dkd_published_at: new Date().toISOString(),
-    dkd_metrics: {
-      dkd_created_from: 'admin_direct_share_v0_25',
-      dkd_channel_key: dkdChannel.dkd_channel_key,
-      dkd_quality: dkdQuality,
-      dkd_tracked_url: dkdTrackedUrl,
-      dkd_target_url: dkdTargetUrl
-    }
+    dkd_metrics: { dkd_created_from: 'admin_direct_share_v0_29', dkd_channel_key: dkdChannel.dkd_channel_key, dkd_quality: dkdQuality, dkd_tracked_url: dkdTrackedUrl, dkd_target_url: dkdTargetUrl }
   });
 
-  return {
-    dkd_product_id: dkdSavedProduct.dkd_id,
-    dkd_product_name: dkdProduct.dkd_product_name,
-    dkd_price: dkdProduct.dkd_current_price,
-    dkd_source_key: dkdSourceKey,
-    dkd_interest_score: dkdQuality.dkd_interest_score,
-    dkd_discount_percent: dkdQuality.dkd_discount_percent,
-    dkd_tracked_url: dkdTrackedUrl,
-    dkd_telegram_message_id: dkdMessageId
-  };
+  return { dkd_product_id: dkdSavedProduct.dkd_id, dkd_product_name: dkdProduct.dkd_product_name, dkd_price: dkdProduct.dkd_current_price, dkd_original_price: dkdProduct.dkd_original_price, dkd_source_key: dkdSourceKey, dkd_interest_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent, dkd_discount_amount: dkdQuality.dkd_discount_amount, dkd_tracked_url: dkdTrackedUrl, dkd_telegram_message_id: dkdMessageId };
 }
