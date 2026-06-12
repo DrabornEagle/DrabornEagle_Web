@@ -35,7 +35,8 @@ export function dkdAdminBuildCaption(dkdProduct, dkdUrl) {
   const dkdReviews = Number(dkdProduct.dkd_review_count || 0);
   const dkdSourceLabel = dkdAdminSourceLabel(dkdProduct);
   const dkdStockLabel = dkdAdminStockLabel(dkdProduct);
-  const dkdHeadline = dkdInfo.dkd_discount_percent >= 20 ? '🔥 Büyük İndirim Fırsatı' : '🔥 İndirimli Fırsat';
+  const dkdCampaign = Boolean(dkdProduct.dkd_campaign_signal);
+  const dkdHeadline = dkdInfo.dkd_discount_percent >= 20 ? '🔥 Büyük İndirim Fırsatı' : dkdCampaign ? '🔥 Kampanyalı Fırsat' : '🔥 İndirimli Fırsat';
 
   return [
     dkdHeadline,
@@ -44,9 +45,10 @@ export function dkdAdminBuildCaption(dkdProduct, dkdUrl) {
     '',
     `🏬 Kaynak: ${dkdSourceLabel}`,
     dkdOldPrice ? `🏷️ Eski Fiyat: ${dkdOldPrice}` : null,
-    `💰 İndirimli Fiyat: ${dkdDiscountPrice}`,
+    `💰 Fırsat Fiyatı: ${dkdDiscountPrice}`,
     dkdInfo.dkd_discount_percent > 0 ? `📉 İndirim Oranı: %${Number(dkdInfo.dkd_discount_percent).toLocaleString('tr-TR')}` : null,
     dkdSaving ? `💸 Fiyat Farkı: ${dkdSaving}` : null,
+    dkdCampaign && !dkdInfo.dkd_discount_percent ? '🎯 Kampanya Sinyali: Var' : null,
     `📦 Stok: ${dkdStockLabel}`,
     dkdRating ? `⭐ Puan: ${dkdRating.toLocaleString('tr-TR')}` : null,
     dkdReviews ? `💬 Yorum: ${dkdReviews.toLocaleString('tr-TR')}` : null,
@@ -54,7 +56,7 @@ export function dkdAdminBuildCaption(dkdProduct, dkdUrl) {
     '🔗 Ürün Linki:',
     dkdUrl,
     '',
-    '#fırsat #indirim #DraBornDeal'
+    '#fırsat #kampanya #indirim #DraBornDeal'
   ].filter((dkdLine) => dkdLine !== null && dkdLine !== undefined).join('\n');
 }
 
