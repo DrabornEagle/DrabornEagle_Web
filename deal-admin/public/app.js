@@ -3,27 +3,169 @@ const dkdLoginCard = document.getElementById('dkdLoginCard');
 const dkdPanel = document.getElementById('dkdPanel');
 const dkdAdminKey = document.getElementById('dkdAdminKey');
 const dkdActionResult = document.getElementById('dkdActionResult');
-const dkdStatusTr = { mapped:'işlendi', pending:'bekliyor', accepted:'işleniyor', paused:'duraklatıldı', rejected:'reddedildi', draft:'taslak', published:'yayınlandı', cancelled:'iptal edildi', failed:'hatalı' };
-const dkdModeTr = { append_query:'Bağlantının sonuna ekle', template:'Hazır bağlantı şablonu', none:'Kullanma' };
-function dkdHeaders(){return {'content-type':'application/json','x-dkd-admin-key':dkdState.dkdKey};}
-async function dkdApi(path, opt={}){const r=await fetch(path,{...opt,headers:{...dkdHeaders(),...(opt.headers||{})}});const j=await r.json();if(!r.ok)throw new Error(j.dkd_error||'API error');return j;}
-function dkdMoney(v,c){if(v===null||v===undefined)return 'Fiyat yok';const cc=!c||c==='TRY'?'TL':c;return `${Number(v).toLocaleString('tr-TR')} ${cc}`.trim();}
-function dkdEscape(v){return String(v??'').replace(/[&<>"]/g,(ch)=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[ch]));}
-function dkdPill(t,cls=''){return `<span class="dkd-pill ${cls}">${dkdEscape(t)}</span>`;}
-function dkdSetHtml(id,html){document.getElementById(id).innerHTML=html||'<p class="dkd-muted">Kayıt yok.</p>';}
-function dkdTrStatus(v){return dkdStatusTr[v]||v||'-';}
-function dkdTrMode(v){return dkdModeTr[v]||v||'-';}
-async function dkdLoadAll(){try{dkdActionResult.textContent='';const [h,s,w,p,hot,posts,a]=await Promise.all([dkdApi('/api/dkd-health'),dkdApi('/api/dkd-sources'),dkdApi('/api/dkd-watch-links'),dkdApi('/api/dkd-products'),dkdApi('/api/dkd-hot-feed'),dkdApi('/api/dkd-social-posts'),dkdApi('/api/dkd-affiliate-rules')]);dkdRenderHealth(h.dkd_settings);dkdRenderSources(s.dkd_rows);dkdRenderWatchLinks(w.dkd_rows);dkdRenderProducts(p.dkd_rows);dkdRenderHotFeed(hot.dkd_rows);dkdRenderPosts(posts.dkd_rows);dkdRenderAffiliateRules(a.dkd_rows);}catch(e){dkdActionResult.textContent=`Hata: ${e.message}`;}}
-function dkdHealthView(row){const k=row.dkd_setting_key;const v=row.dkd_setting_value||{};if(k==='dkd_deal_worker_runtime_mode')return{t:'Çalışma modu',d:'Sistem şu an Termux test modunda. CX33 sunucu kurulumu sen haber verene kadar beklemede.',p:['Termux aktif']};if(k==='dkd_deal_source_admin_version')return{t:'Kaynak yönetimi',d:'Trendyol, Hepsiburada ve diğer kaynakların aktiflik/izin ayarları panelden yönetiliyor.',p:['hazır']};if(k==='dkd_deal_hot_deals_version')return{t:'Fırsat skoru sistemi',d:`Ürünler fiyat, puan, yorum ve trend bilgilerine göre fırsat skoruna giriyor. Sürüm ${v.version||'aktif'}.`,p:['aktif']};if(k==='dkd_deal_telegram_caption_format_version')return{t:'Telegram mesaj formatı',d:'Telegram paylaşımlarında TL kullanılır; yeni fiyat, önceki fiyat, indirim, puan, yorum ve link alanları standarttır.',p:['standart']};if(k==='dkd_deal_affiliate_links_version')return{t:'Affiliate sistemi',d:'Affiliate altyapısı hazır ama şimdilik kapalı. Gerçek affiliate bilgileri gelince aktif edilecek.',p:['sona bırakıldı']};if(k==='dkd_deal_termux_telegram_live_test')return{t:'Telegram bağlantısı',d:'Telegram kanal bağlantısı test edildi ve mesaj gönderimi çalışıyor.',p:['bağlı']};return null;}
-function dkdRenderHealth(rows){const cards=rows.map(dkdHealthView).filter(Boolean);dkdSetHtml('dkdHealth',cards.map((v)=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(v.t)}</div><div class="dkd-meta">${dkdEscape(v.d)}</div>${v.p.map(x=>dkdPill(x,'hot')).join('')}</div>`).join(''));}
-function dkdRenderSources(rows){dkdSetHtml('dkdSources',rows.map((r)=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_source_name)} — ${r.dkd_is_active?'aktif':'kapalı'}</div><div class="dkd-meta">Kaynak: ${dkdEscape(r.dkd_source_key)}</div>${dkdPill(r.dkd_allowed_by_terms?'izinli':'izin kapalı',r.dkd_allowed_by_terms?'hot':'warn')}${dkdPill(r.dkd_needs_manual_review?'inceleme bekliyor':'inceleme yok',r.dkd_needs_manual_review?'warn':'hot')}<form class="dkd-source-form" data-source-id="${dkdEscape(r.dkd_id)}"><label class="dkd-switch"><input type="checkbox" name="dkd_is_active" ${r.dkd_is_active?'checked':''}> Aktif</label><label class="dkd-switch"><input type="checkbox" name="dkd_allowed_by_terms" ${r.dkd_allowed_by_terms?'checked':''}> Manuel ürün linki izni</label><label class="dkd-switch"><input type="checkbox" name="dkd_needs_manual_review" ${r.dkd_needs_manual_review?'checked':''}> Manuel inceleme beklesin</label><input name="dkd_priority" type="number" min="1" value="${dkdEscape(r.dkd_priority)}"><input name="dkd_crawl_interval_minutes" type="number" min="5" value="${dkdEscape(r.dkd_crawl_interval_minutes)}"><button type="submit">Kaydet</button></form></div>`).join(''));document.querySelectorAll('.dkd-source-form').forEach(f=>f.addEventListener('submit',dkdSaveSource));}
-function dkdRenderWatchLinks(rows){dkdSetHtml('dkdWatchLinks',rows.map(r=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_detected_source_key||'bilinmeyen')} — ${dkdEscape(dkdTrStatus(r.dkd_status))}</div><div class="dkd-meta">${dkdEscape(r.dkd_submitted_url)}</div>${r.dkd_product_name?dkdPill(r.dkd_product_name,'hot'):''}</div>`).join(''));}
-function dkdRenderProducts(rows){dkdSetHtml('dkdProducts',rows.map(r=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_product_name)}</div><div class="dkd-meta">${dkdMoney(r.dkd_current_price,r.dkd_currency_code)} · ${dkdEscape(r.dkd_stock_status)} · Puan ${dkdEscape(r.dkd_rating||'-')} · Yorum ${dkdEscape(r.dkd_review_count||'-')}</div>${dkdPill(`fırsat puanı ${r.dkd_deal_score}`)}${dkdPill(`trend ${r.dkd_trend_score}`)}<div class="dkd-meta">${dkdEscape(r.dkd_product_url)}</div></div>`).join(''));}
-function dkdRenderHotFeed(rows){dkdSetHtml('dkdHotFeed',rows.map(r=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_product_name)}</div><div class="dkd-meta">${dkdMoney(r.dkd_current_price,r.dkd_currency_code)} · ${dkdEscape(r.dkd_source_key)}</div>${dkdPill(r.dkd_heat_label,r.dkd_heat_label==='super_hot'?'hot':'warn')}${dkdPill(`sıcaklık ${r.dkd_hot_score}`)}${dkdPill(`indirim %${r.dkd_discount_percent||0}`)}</div>`).join(''));}
-function dkdRenderPosts(rows){dkdSetHtml('dkdSocialPosts',rows.map(r=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdTrStatus(r.dkd_status))} — ${dkdEscape(r.dkd_channel_key||'-')}</div><div class="dkd-meta">${dkdEscape((r.dkd_caption||'').slice(0,180))}</div>${r.dkd_published_at?dkdPill('yayınlandı','hot'):''}${r.dkd_status==='failed'?dkdPill('hatalı','danger'):''}</div>`).join(''));}
-function dkdRenderAffiliateRules(rows){dkdSetHtml('dkdAffiliateRules',rows.map(r=>`<div class="dkd-item"><div class="dkd-title">${dkdEscape(r.dkd_source_name)} — ${r.dkd_is_active?'aktif':'kapalı'}</div><div class="dkd-meta">Yöntem: ${dkdEscape(dkdTrMode(r.dkd_affiliate_mode))}</div>${dkdPill(r.dkd_source_key,r.dkd_is_active?'hot':'warn')}</div>`).join(''));}
-async function dkdSaveSource(e){e.preventDefault();const f=e.currentTarget;const fd=new FormData(f);try{const result=await dkdApi(`/api/dkd-sources/${f.dataset.sourceId}`,{method:'POST',body:JSON.stringify({dkd_is_active:fd.get('dkd_is_active')==='on',dkd_allowed_by_terms:fd.get('dkd_allowed_by_terms')==='on',dkd_needs_manual_review:fd.get('dkd_needs_manual_review')==='on',dkd_priority:Number(fd.get('dkd_priority')||10),dkd_crawl_interval_minutes:Number(fd.get('dkd_crawl_interval_minutes')||1440)})});dkdActionResult.textContent=JSON.stringify(result,null,2);await dkdLoadAll();}catch(err){dkdActionResult.textContent=`Hata: ${err.message}`;}}
-document.getElementById('dkdSaveKeyBtn').addEventListener('click',async()=>{dkdState.dkdKey=dkdAdminKey.value.trim();localStorage.setItem('dkd_admin_key',dkdState.dkdKey);dkdLoginCard.hidden=true;dkdPanel.hidden=false;await dkdLoadAll();});
-document.getElementById('dkdRefreshBtn').addEventListener('click',dkdLoadAll);
-document.getElementById('dkdAddLinkForm').addEventListener('submit',async(e)=>{e.preventDefault();try{dkdActionResult.textContent='Ürün çekiliyor ve Telegram’a gönderiliyor...';const url=document.getElementById('dkdProductUrl').value.trim();const result=await dkdApi('/api/dkd-share-link-direct',{method:'POST',body:JSON.stringify({dkd_url:url})});dkdActionResult.textContent=JSON.stringify(result,null,2);document.getElementById('dkdProductUrl').value='';await dkdLoadAll();}catch(err){dkdActionResult.textContent=`Hata: ${err.message}`;}});
-if(dkdState.dkdKey){dkdLoginCard.hidden=true;dkdPanel.hidden=false;dkdLoadAll();}
+const dkdTelegramPreview = document.getElementById('dkdTelegramPreview');
+const dkdStatusTr = { mapped: 'işlendi', pending: 'bekliyor', accepted: 'işleniyor', paused: 'duraklatıldı', rejected: 'reddedildi', draft: 'taslak', published: 'yayınlandı', cancelled: 'iptal edildi', failed: 'hatalı' };
+const dkdModeTr = { append_query: 'Bağlantının sonuna ekle', template: 'Hazır bağlantı şablonu', none: 'Kullanma' };
+
+function dkdHeaders() { return { 'content-type': 'application/json', 'x-dkd-admin-key': dkdState.dkdKey }; }
+async function dkdApi(dkdPath, dkdOptions = {}) {
+  const dkdResponse = await fetch(dkdPath, { ...dkdOptions, headers: { ...dkdHeaders(), ...(dkdOptions.headers || {}) } });
+  const dkdJson = await dkdResponse.json();
+  if (!dkdResponse.ok) throw new Error(dkdJson.dkd_error || 'API error');
+  return dkdJson;
+}
+function dkdMoney(dkdValue, dkdCurrency) {
+  if (dkdValue === null || dkdValue === undefined) return 'Fiyat yok';
+  const dkdCurrencyLabel = !dkdCurrency || dkdCurrency === 'TRY' ? 'TL' : dkdCurrency;
+  return `${Number(dkdValue).toLocaleString('tr-TR')} ${dkdCurrencyLabel}`.trim();
+}
+function dkdEscape(dkdValue) { return String(dkdValue ?? '').replace(/[&<>"']/g, (dkdChar) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[dkdChar])); }
+function dkdPill(dkdText, dkdClass = '') { return `<span class="dkd-pill ${dkdClass}">${dkdEscape(dkdText)}</span>`; }
+function dkdSetHtml(dkdId, dkdHtml) { document.getElementById(dkdId).innerHTML = dkdHtml || '<p class="dkd-muted">Kayıt yok.</p>'; }
+function dkdTrStatus(dkdValue) { return dkdStatusTr[dkdValue] || dkdValue || '-'; }
+function dkdTrMode(dkdValue) { return dkdModeTr[dkdValue] || dkdValue || '-'; }
+function dkdTelegramSendType(dkdValue) { return dkdValue === 'photo_caption' ? 'Fotoğraflı gönderi' : 'Metin mesajı'; }
+
+async function dkdLoadAll() {
+  try {
+    dkdActionResult.textContent = '';
+    const [dkdHealth, dkdSources, dkdWatch, dkdProducts, dkdHot, dkdPosts, dkdAffiliateRules] = await Promise.all([
+      dkdApi('/api/dkd-health'),
+      dkdApi('/api/dkd-sources'),
+      dkdApi('/api/dkd-watch-links'),
+      dkdApi('/api/dkd-products'),
+      dkdApi('/api/dkd-hot-feed'),
+      dkdApi('/api/dkd-social-posts'),
+      dkdApi('/api/dkd-affiliate-rules')
+    ]);
+    dkdRenderHealth(dkdHealth.dkd_settings);
+    dkdRenderSources(dkdSources.dkd_rows);
+    dkdRenderWatchLinks(dkdWatch.dkd_rows);
+    dkdRenderProducts(dkdProducts.dkd_rows);
+    dkdRenderHotFeed(dkdHot.dkd_rows);
+    dkdRenderPosts(dkdPosts.dkd_rows);
+    dkdRenderAffiliateRules(dkdAffiliateRules.dkd_rows);
+  } catch (dkdError) {
+    dkdActionResult.textContent = `Hata: ${dkdError.message}`;
+  }
+}
+
+function dkdHealthView(dkdRow) {
+  const dkdKey = dkdRow.dkd_setting_key;
+  const dkdValue = dkdRow.dkd_setting_value || {};
+  if (dkdKey === 'dkd_deal_worker_runtime_mode') return { t: 'Çalışma modu', d: 'Sistem şu an Termux test modunda. CX33 sunucu kurulumu sen haber verene kadar beklemede.', p: ['Termux aktif'] };
+  if (dkdKey === 'dkd_deal_source_admin_version') return { t: 'Kaynak yönetimi', d: 'Trendyol, Hepsiburada ve diğer kaynakların aktiflik/izin ayarları panelden yönetiliyor.', p: ['hazır'] };
+  if (dkdKey === 'dkd_deal_hot_deals_version') return { t: 'Fırsat skoru sistemi', d: `Ürünler fiyat, puan, yorum ve trend bilgilerine göre fırsat skoruna giriyor. Sürüm ${dkdValue.version || 'aktif'}.`, p: ['aktif'] };
+  if (dkdKey === 'dkd_deal_telegram_caption_format_version') return { t: 'Telegram mesaj formatı', d: 'Telegram paylaşımlarında TL kullanılır; yeni fiyat, önceki fiyat, indirim, puan, yorum ve link alanları standarttır.', p: ['standart'] };
+  if (dkdKey === 'dkd_deal_telegram_preview_version') return { t: 'Telegram önizleme', d: 'v0.15 ile mesaj Telegram’a gitmeden önce panelde kontrol edilebilir.', p: ['v0.15'] };
+  if (dkdKey === 'dkd_deal_affiliate_links_version') return { t: 'Affiliate sistemi', d: 'Affiliate altyapısı hazır ama şimdilik kapalı. Gerçek affiliate bilgileri gelince aktif edilecek.', p: ['sona bırakıldı'] };
+  if (dkdKey === 'dkd_deal_termux_telegram_live_test') return { t: 'Telegram bağlantısı', d: 'Telegram kanal bağlantısı test edildi ve mesaj gönderimi çalışıyor.', p: ['bağlı'] };
+  return null;
+}
+function dkdRenderHealth(dkdRows) {
+  const dkdCards = dkdRows.map(dkdHealthView).filter(Boolean);
+  dkdSetHtml('dkdHealth', dkdCards.map((dkdView) => `<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdView.t)}</div><div class="dkd-meta">${dkdEscape(dkdView.d)}</div>${dkdView.p.map((dkdText) => dkdPill(dkdText, 'hot')).join('')}</div>`).join(''));
+}
+function dkdRenderSources(dkdRows) {
+  dkdSetHtml('dkdSources', dkdRows.map((dkdRow) => `<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdRow.dkd_source_name)} — ${dkdRow.dkd_is_active ? 'aktif' : 'kapalı'}</div><div class="dkd-meta">Kaynak: ${dkdEscape(dkdRow.dkd_source_key)}</div>${dkdPill(dkdRow.dkd_allowed_by_terms ? 'izinli' : 'izin kapalı', dkdRow.dkd_allowed_by_terms ? 'hot' : 'warn')}${dkdPill(dkdRow.dkd_needs_manual_review ? 'inceleme bekliyor' : 'inceleme yok', dkdRow.dkd_needs_manual_review ? 'warn' : 'hot')}<form class="dkd-source-form" data-source-id="${dkdEscape(dkdRow.dkd_id)}"><label class="dkd-switch"><input type="checkbox" name="dkd_is_active" ${dkdRow.dkd_is_active ? 'checked' : ''}> Aktif</label><label class="dkd-switch"><input type="checkbox" name="dkd_allowed_by_terms" ${dkdRow.dkd_allowed_by_terms ? 'checked' : ''}> Manuel ürün linki izni</label><label class="dkd-switch"><input type="checkbox" name="dkd_needs_manual_review" ${dkdRow.dkd_needs_manual_review ? 'checked' : ''}> Manuel inceleme beklesin</label><input name="dkd_priority" type="number" min="1" value="${dkdEscape(dkdRow.dkd_priority)}"><input name="dkd_crawl_interval_minutes" type="number" min="5" value="${dkdEscape(dkdRow.dkd_crawl_interval_minutes)}"><button type="submit">Kaydet</button></form></div>`).join(''));
+  document.querySelectorAll('.dkd-source-form').forEach((dkdForm) => dkdForm.addEventListener('submit', dkdSaveSource));
+}
+function dkdRenderWatchLinks(dkdRows) {
+  dkdSetHtml('dkdWatchLinks', dkdRows.map((dkdRow) => `<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdRow.dkd_detected_source_key || 'bilinmeyen')} — ${dkdEscape(dkdTrStatus(dkdRow.dkd_status))}</div><div class="dkd-meta">${dkdEscape(dkdRow.dkd_submitted_url)}</div>${dkdRow.dkd_product_name ? dkdPill(dkdRow.dkd_product_name, 'hot') : ''}</div>`).join(''));
+}
+function dkdRenderProducts(dkdRows) {
+  dkdSetHtml('dkdProducts', dkdRows.map((dkdRow) => `<div class="dkd-item" data-dkd-product-url="${dkdEscape(dkdRow.dkd_product_url)}"><div class="dkd-title">${dkdEscape(dkdRow.dkd_product_name)}</div><div class="dkd-meta">${dkdMoney(dkdRow.dkd_current_price, dkdRow.dkd_currency_code)} · ${dkdEscape(dkdRow.dkd_stock_status)} · Puan ${dkdEscape(dkdRow.dkd_rating || '-')} · Yorum ${dkdEscape(dkdRow.dkd_review_count || '-')}</div>${dkdPill(`fırsat puanı ${dkdRow.dkd_deal_score}`)}${dkdPill(`trend ${dkdRow.dkd_trend_score}`)}<div class="dkd-meta dkd-product-url">${dkdEscape(dkdRow.dkd_product_url)}</div><div class="dkd-product-actions"></div></div>`).join(''));
+}
+function dkdRenderHotFeed(dkdRows) {
+  dkdSetHtml('dkdHotFeed', dkdRows.map((dkdRow) => `<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdRow.dkd_product_name)}</div><div class="dkd-meta">${dkdMoney(dkdRow.dkd_current_price, dkdRow.dkd_currency_code)} · ${dkdEscape(dkdRow.dkd_source_key)}</div>${dkdPill(dkdRow.dkd_heat_label, dkdRow.dkd_heat_label === 'super_hot' ? 'hot' : 'warn')}${dkdPill(`sıcaklık ${dkdRow.dkd_hot_score}`)}${dkdPill(`indirim %${dkdRow.dkd_discount_percent || 0}`)}</div>`).join(''));
+}
+function dkdRenderPosts(dkdRows) {
+  dkdSetHtml('dkdSocialPosts', dkdRows.map((dkdRow) => `<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdTrStatus(dkdRow.dkd_status))} — ${dkdEscape(dkdRow.dkd_channel_key || '-')}</div><div class="dkd-meta">${dkdEscape((dkdRow.dkd_caption || '').slice(0, 180))}</div>${dkdRow.dkd_published_at ? dkdPill('yayınlandı', 'hot') : ''}${dkdRow.dkd_status === 'failed' ? dkdPill('hatalı', 'danger') : ''}</div>`).join(''));
+}
+function dkdRenderAffiliateRules(dkdRows) {
+  dkdSetHtml('dkdAffiliateRules', dkdRows.map((dkdRow) => `<div class="dkd-item"><div class="dkd-title">${dkdEscape(dkdRow.dkd_source_name)} — ${dkdRow.dkd_is_active ? 'aktif' : 'kapalı'}</div><div class="dkd-meta">Yöntem: ${dkdEscape(dkdTrMode(dkdRow.dkd_affiliate_mode))}</div>${dkdPill(dkdRow.dkd_source_key, dkdRow.dkd_is_active ? 'hot' : 'warn')}</div>`).join(''));
+}
+
+function dkdRenderTelegramPreview(dkdPreview) {
+  if (!dkdTelegramPreview || !dkdPreview) return;
+  const dkdLimitClass = dkdPreview.dkd_caption_is_over_limit ? 'danger' : 'hot';
+  const dkdImageHtml = dkdPreview.dkd_image_url ? `<img class="dkd-preview-image" src="${dkdEscape(dkdPreview.dkd_image_url)}" alt="Ürün görseli">` : '<div class="dkd-preview-no-image">Görsel yok, metin mesajı olarak gider.</div>';
+  dkdTelegramPreview.hidden = false;
+  dkdTelegramPreview.innerHTML = `
+    <div class="dkd-preview-head">
+      <div>
+        <p class="dkd-kicker-small">Telegram Önizleme</p>
+        <h3>${dkdEscape(dkdPreview.dkd_product_name)}</h3>
+      </div>
+      ${dkdPill(dkdTelegramSendType(dkdPreview.dkd_will_be_sent_as), 'hot')}
+    </div>
+    ${dkdImageHtml}
+    <pre class="dkd-preview-caption">${dkdEscape(dkdPreview.dkd_caption)}</pre>
+    <div class="dkd-preview-meta">
+      ${dkdPill(`${dkdPreview.dkd_caption_character_count}/${dkdPreview.dkd_caption_limit} karakter`, dkdLimitClass)}
+      ${dkdPill(dkdPreview.dkd_source_key || 'kaynak yok')}
+      ${dkdPreview.dkd_caption_is_over_limit ? dkdPill('Telegram limiti aşılabilir', 'danger') : ''}
+    </div>
+    <a class="dkd-preview-link" href="${dkdEscape(dkdPreview.dkd_final_url)}" target="_blank" rel="noreferrer">Son bağlantıyı aç</a>
+  `;
+}
+
+async function dkdPreviewByUrl(dkdUrl) {
+  if (!dkdUrl) throw new Error('Önizleme için ürün bağlantısı gerekli.');
+  dkdActionResult.textContent = 'Telegram mesaj önizlemesi hazırlanıyor...';
+  const dkdJson = await dkdApi('/api/dkd-telegram-preview', { method: 'POST', body: JSON.stringify({ dkd_url: dkdUrl }) });
+  dkdRenderTelegramPreview(dkdJson.dkd_preview);
+  dkdActionResult.textContent = 'Önizleme hazır. Mesajı kontrol edip istersen Telegram’da paylaşabilirsin.';
+  return dkdJson.dkd_preview;
+}
+
+async function dkdSaveSource(dkdEvent) {
+  dkdEvent.preventDefault();
+  const dkdForm = dkdEvent.currentTarget;
+  const dkdFormData = new FormData(dkdForm);
+  try {
+    const dkdResult = await dkdApi(`/api/dkd-sources/${dkdForm.dataset.sourceId}`, { method: 'POST', body: JSON.stringify({ dkd_is_active: dkdFormData.get('dkd_is_active') === 'on', dkd_allowed_by_terms: dkdFormData.get('dkd_allowed_by_terms') === 'on', dkd_needs_manual_review: dkdFormData.get('dkd_needs_manual_review') === 'on', dkd_priority: Number(dkdFormData.get('dkd_priority') || 10), dkd_crawl_interval_minutes: Number(dkdFormData.get('dkd_crawl_interval_minutes') || 1440) }) });
+    dkdActionResult.textContent = JSON.stringify(dkdResult, null, 2);
+    await dkdLoadAll();
+  } catch (dkdError) {
+    dkdActionResult.textContent = `Hata: ${dkdError.message}`;
+  }
+}
+
+document.getElementById('dkdSaveKeyBtn').addEventListener('click', async () => {
+  dkdState.dkdKey = dkdAdminKey.value.trim();
+  localStorage.setItem('dkd_admin_key', dkdState.dkdKey);
+  dkdLoginCard.hidden = true;
+  dkdPanel.hidden = false;
+  await dkdLoadAll();
+});
+document.getElementById('dkdRefreshBtn').addEventListener('click', dkdLoadAll);
+document.getElementById('dkdPreviewBtn').addEventListener('click', async () => {
+  try {
+    await dkdPreviewByUrl(document.getElementById('dkdProductUrl').value.trim());
+  } catch (dkdError) {
+    dkdActionResult.textContent = `Hata: ${dkdError.message}`;
+  }
+});
+document.getElementById('dkdAddLinkForm').addEventListener('submit', async (dkdEvent) => {
+  dkdEvent.preventDefault();
+  try {
+    dkdActionResult.textContent = 'Ürün çekiliyor ve Telegram’a gönderiliyor...';
+    const dkdUrl = document.getElementById('dkdProductUrl').value.trim();
+    const dkdResult = await dkdApi('/api/dkd-share-link-direct', { method: 'POST', body: JSON.stringify({ dkd_url: dkdUrl }) });
+    dkdActionResult.textContent = JSON.stringify(dkdResult, null, 2);
+    document.getElementById('dkdProductUrl').value = '';
+    await dkdLoadAll();
+  } catch (dkdError) {
+    dkdActionResult.textContent = `Hata: ${dkdError.message}`;
+  }
+});
+
+window.dkdTelegramPreviewFromUrl = dkdPreviewByUrl;
+window.dkdRenderTelegramPreview = dkdRenderTelegramPreview;
+
+if (dkdState.dkdKey) {
+  dkdLoginCard.hidden = true;
+  dkdPanel.hidden = false;
+  dkdLoadAll();
+}
