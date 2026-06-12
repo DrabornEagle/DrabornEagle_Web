@@ -1,4 +1,4 @@
-import { dkdDealDiscountPercent, dkdDealEstimatedInterest } from './dkd_deal_quality_v0_24.js';
+import { dkdDiscountInfoV029 } from './dkd_discount_quality_v0_29.js';
 
 function dkdAdminCurrencyLabel(dkdCurrencyCode) {
   if (!dkdCurrencyCode || dkdCurrencyCode === 'TRY') return 'TL';
@@ -10,13 +10,6 @@ function dkdAdminMoney(dkdValue, dkdCurrencyCode) {
   const dkdNumber = Number(dkdValue || 0);
   if (!Number.isFinite(dkdNumber) || dkdNumber <= 0) return null;
   return `${dkdNumber.toLocaleString('tr-TR')} ${dkdAdminCurrencyLabel(dkdCurrencyCode)}`;
-}
-
-function dkdAdminPriceDiff(dkdProduct) {
-  const dkdCurrent = Number(dkdProduct.dkd_current_price || 0);
-  const dkdOriginal = Number(dkdProduct.dkd_original_price || 0);
-  if (dkdCurrent > 0 && dkdOriginal > dkdCurrent) return dkdOriginal - dkdCurrent;
-  return null;
 }
 
 function dkdAdminSourceLabel(dkdProduct) {
@@ -34,17 +27,15 @@ function dkdAdminStockLabel(dkdProduct) {
 }
 
 export function dkdAdminBuildCaption(dkdProduct, dkdUrl) {
-  const dkdCurrentPrice = dkdAdminMoney(dkdProduct.dkd_current_price, dkdProduct.dkd_currency_code) || 'Fiyat bilgisi yok';
-  const dkdOriginalPrice = dkdAdminMoney(dkdProduct.dkd_original_price, dkdProduct.dkd_currency_code);
-  const dkdDiscount = dkdDealDiscountPercent(dkdProduct);
-  const dkdInterest = dkdDealEstimatedInterest(dkdProduct);
-  const dkdPriceDiff = dkdAdminPriceDiff(dkdProduct);
-  const dkdPriceDiffText = dkdPriceDiff ? dkdAdminMoney(dkdPriceDiff, dkdProduct.dkd_currency_code) : null;
+  const dkdInfo = dkdDiscountInfoV029(dkdProduct);
+  const dkdDiscountPrice = dkdAdminMoney(dkdInfo.dkd_current_price, dkdProduct.dkd_currency_code) || 'Fiyat bilgisi yok';
+  const dkdOldPrice = dkdAdminMoney(dkdInfo.dkd_original_price, dkdProduct.dkd_currency_code);
+  const dkdSaving = dkdAdminMoney(dkdInfo.dkd_discount_amount, dkdProduct.dkd_currency_code);
   const dkdRating = Number(dkdProduct.dkd_rating || 0);
   const dkdReviews = Number(dkdProduct.dkd_review_count || 0);
   const dkdSourceLabel = dkdAdminSourceLabel(dkdProduct);
   const dkdStockLabel = dkdAdminStockLabel(dkdProduct);
-  const dkdHeadline = dkdDiscount >= 15 ? '🔥 Fiyatı Düşen Fırsat' : dkdInterest >= 70 ? '🔥 Yoğun İlgi Alan Ürün' : '🔥 Fırsat Radarı';
+  const dkdHeadline = dkdInfo.dkd_discount_percent >= 20 ? '🔥 Büyük İndirim Fırsatı' : '🔥 İndirimli Fırsat';
 
   return [
     dkdHeadline,
@@ -52,14 +43,13 @@ export function dkdAdminBuildCaption(dkdProduct, dkdUrl) {
     `🛒 ${dkdProduct.dkd_product_name}`,
     '',
     `🏬 Kaynak: ${dkdSourceLabel}`,
-    `💰 Güncel Fiyat: ${dkdCurrentPrice}`,
-    dkdOriginalPrice ? `🏷️ Önceki / Liste Fiyatı: ${dkdOriginalPrice}` : null,
-    dkdPriceDiffText ? `📉 Tahmini Kazanç: ${dkdPriceDiffText}` : null,
-    dkdDiscount > 0 ? `📊 İndirim: %${Number(dkdDiscount).toLocaleString('tr-TR')}` : null,
+    dkdOldPrice ? `🏷️ Eski Fiyat: ${dkdOldPrice}` : null,
+    `💰 İndirimli Fiyat: ${dkdDiscountPrice}`,
+    dkdInfo.dkd_discount_percent > 0 ? `📉 İndirim Oranı: %${Number(dkdInfo.dkd_discount_percent).toLocaleString('tr-TR')}` : null,
+    dkdSaving ? `💸 Fiyat Farkı: ${dkdSaving}` : null,
     `📦 Stok: ${dkdStockLabel}`,
     dkdRating ? `⭐ Puan: ${dkdRating.toLocaleString('tr-TR')}` : null,
     dkdReviews ? `💬 Yorum: ${dkdReviews.toLocaleString('tr-TR')}` : null,
-    `👀 İlgi Skoru: ${dkdInterest}/100`,
     '',
     '🔗 Ürün Linki:',
     dkdUrl,
