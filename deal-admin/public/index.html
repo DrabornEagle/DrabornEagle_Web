@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DraBornDeal Admin</title>
   <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/dkd_reshare_overlay.css" />
+  <link rel="stylesheet" href="/dkd_telegram_preview.css" />
 </head>
 <body>
   <main class="dkd-shell">
     <section class="dkd-hero">
       <p class="dkd-kicker">DraBornDeal</p>
       <h1>Fırsat Radarı Admin</h1>
-      <p>Ürünün tam bağlantısını yapıştır, fırsatı çek, Telegram paylaşımını ve kaynakları tek ekrandan yönet.</p>
+      <p>Ürünün tam bağlantısını yapıştır, fırsatı çek, Telegram mesajını önce gör, sonra paylaş.</p>
     </section>
 
     <section class="dkd-card dkd-login" id="dkdLoginCard">
@@ -26,15 +28,19 @@
         <div class="dkd-card-head">
           <div>
             <p class="dkd-kicker-small">Hızlı Paylaş</p>
-            <h2>Telegram’da Paylaş</h2>
+            <h2>Telegram Mesaj Önizleme</h2>
           </div>
           <button id="dkdRefreshBtn" type="button">Yenile</button>
         </div>
-        <p class="dkd-muted">Kısa bağlantı değil, ürünün tam bağlantısını kullan. Örnek: trendyol.com/... veya hepsiburada.com/...</p>
+        <p class="dkd-muted">Kısa bağlantı değil, ürünün tam bağlantısını kullan. Önce mesajı kontrol et, sonra Telegram’da paylaş.</p>
         <form id="dkdAddLinkForm" class="dkd-form">
           <input id="dkdProductUrl" type="url" placeholder="Tam ürün bağlantısını yapıştır" required />
-          <button type="submit">Telegram’da Paylaş</button>
+          <div class="dkd-form-actions">
+            <button id="dkdPreviewBtn" type="button" class="dkd-secondary-btn">Önizleme Oluştur</button>
+            <button type="submit">Telegram’da Paylaş</button>
+          </div>
         </form>
+        <article id="dkdTelegramPreview" class="dkd-telegram-preview" hidden></article>
         <pre id="dkdActionResult"></pre>
       </section>
 
@@ -51,6 +57,7 @@
 
       <details class="dkd-card dkd-section">
         <summary>Ürünler</summary>
+        <p class="dkd-muted">Kayıtlı ürünlerde “Önizle” ile Telegram mesajını göndermeden kontrol edebilirsin.</p>
         <div id="dkdProducts" class="dkd-list"></div>
       </details>
 
@@ -77,5 +84,7 @@
     </section>
   </main>
   <script src="/app.js"></script>
+  <script src="/dkd_reshare_overlay.js"></script>
+  <script src="/dkd_telegram_preview_overlay.js"></script>
 </body>
 </html>
