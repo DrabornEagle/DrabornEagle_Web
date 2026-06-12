@@ -19,6 +19,7 @@ function dkdMoney(dkdValue, dkdCurrency) {
   const dkdCurrencyLabel = !dkdCurrency || dkdCurrency === 'TRY' ? 'TL' : dkdCurrency;
   return `${Number(dkdValue).toLocaleString('tr-TR')} ${dkdCurrencyLabel}`.trim();
 }
+function dkdNumberText(dkdValue) { return Number(dkdValue || 0).toLocaleString('tr-TR'); }
 function dkdEscape(dkdValue) { return String(dkdValue ?? '').replace(/[&<>"']/g, (dkdChar) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[dkdChar])); }
 function dkdPill(dkdText, dkdClass = '') { return `<span class="dkd-pill ${dkdClass}">${dkdEscape(dkdText)}</span>`; }
 function dkdSetHtml(dkdId, dkdHtml) { document.getElementById(dkdId).innerHTML = dkdHtml || '<p class="dkd-muted">Kayıt yok.</p>'; }
@@ -29,7 +30,8 @@ function dkdTelegramSendType(dkdValue) { return dkdValue === 'photo_caption' ? '
 async function dkdLoadAll() {
   try {
     dkdActionResult.textContent = '';
-    const [dkdHealth, dkdSources, dkdWatch, dkdProducts, dkdHot, dkdPosts, dkdAffiliateRules] = await Promise.all([
+    const [dkdStats, dkdHealth, dkdSources, dkdWatch, dkdProducts, dkdHot, dkdPosts, dkdAffiliateRules] = await Promise.all([
+      dkdApi('/api/dkd-stats'),
       dkdApi('/api/dkd-health'),
       dkdApi('/api/dkd-sources'),
       dkdApi('/api/dkd-watch-links'),
@@ -38,6 +40,7 @@ async function dkdLoadAll() {
       dkdApi('/api/dkd-social-posts'),
       dkdApi('/api/dkd-affiliate-rules')
     ]);
+    dkdRenderStats(dkdStats.dkd_stats);
     dkdRenderHealth(dkdHealth.dkd_settings);
     dkdRenderSources(dkdSources.dkd_rows);
     dkdRenderWatchLinks(dkdWatch.dkd_rows);
@@ -48,6 +51,28 @@ async function dkdLoadAll() {
   } catch (dkdError) {
     dkdActionResult.textContent = `Hata: ${dkdError.message}`;
   }
+}
+
+function dkdRenderStats(dkdStats) {
+  if (!dkdStats) return dkdSetHtml('dkdStats', '<p class="dkd-muted">İstatistik alınamadı.</p>');
+  const dkdTotals = dkdStats.dkd_totals || {};
+  const dkdStatCard = (dkdValue, dkdLabel) => `<div class="dkd-stat-card"><div class="dkd-stat-value">${dkdEscape(dkdNumberText(dkdValue))}</div><div class="dkd-stat-label">${dkdEscape(dkdLabel)}</div></div>`;
+  const dkdSourceRows = (dkdStats.dkd_sources || []).map((dkdSource) => `<div class="dkd-stat-row"><div><div class="dkd-stat-row-title">${dkdEscape(dkdSource.dkd_source_name || dkdSource.dkd_source_key)}</div><div class="dkd-stat-row-meta">${dkdEscape(dkdSource.dkd_source_key)} · ${dkdSource.dkd_is_active ? 'aktif' : 'kapalı'}</div></div><div class="dkd-stat-row-value">${dkdEscape(dkdNumberText(dkdSource.dkd_product_count))}</div></div>`).join('');
+  const dkdHotRows = (dkdStats.dkd_top_hot_products || []).map((dkdHot) => `<div class="dkd-stat-row"><div><div class="dkd-stat-row-title">${dkdEscape(dkdHot.dkd_product_name)}</div><div class="dkd-stat-row-meta">${dkdMoney(dkdHot.dkd_current_price, dkdHot.dkd_currency_code)} · ${dkdEscape(dkdHot.dkd_source_key || '-')}</div></div><div class="dkd-stat-row-value">${dkdEscape(dkdNumberText(dkdHot.dkd_hot_score))}</div></div>`).join('');
+  dkdSetHtml('dkdStats', `
+    <div class="dkd-stat-grid">
+      ${dkdStatCard(dkdTotals.dkd_total_products, 'Toplam ürün')}
+      ${dkdStatCard(dkdTotals.dkd_today_products, 'Bugün güncellenen')}
+      ${dkdStatCard(dkdTotals.dkd_published_telegram_posts, 'Telegram yayınlandı')}
+      ${dkdStatCard(dkdTotals.dkd_today_telegram_posts, 'Bugünkü Telegram')}
+      ${dkdStatCard(dkdTotals.dkd_pending_watch_links, 'Bekleyen link')}
+      ${dkdStatCard(dkdTotals.dkd_active_sources, 'Aktif kaynak')}
+    </div>
+    <div class="dkd-stat-two">
+      <div class="dkd-stat-card"><div class="dkd-stat-subtitle">Kaynak Bazlı Ürün</div><div class="dkd-stat-list">${dkdSourceRows || '<p class="dkd-muted">Kaynak sayımı yok.</p>'}</div></div>
+      <div class="dkd-stat-card"><div class="dkd-stat-subtitle">En Sıcak 5 Ürün</div><div class="dkd-stat-list">${dkdHotRows || '<p class="dkd-muted">Sıcak ürün yok.</p>'}</div></div>
+    </div>
+  `);
 }
 
 function dkdHealthView(dkdRow) {
