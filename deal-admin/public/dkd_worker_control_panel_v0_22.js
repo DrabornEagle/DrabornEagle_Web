@@ -19,7 +19,7 @@
       }
     });
     const dkdJson = await dkdResponse.json().catch(() => ({}));
-    if (!dkdResponse.ok) throw new Error(dkdJson.dkd_error || 'Worker kontrol API hatası');
+    if (!dkdResponse.ok) throw new Error(dkdJson.dkd_error || 'DraBornBee kontrol API hatası');
     return dkdJson;
   }
 
@@ -30,10 +30,10 @@
     dkdBox.innerHTML = `
       <div class="dkd-item">
         <div class="dkd-title">Durum: ${dkdState.dkd_running ? 'Çalışıyor' : 'Kapalı'}</div>
-        <div class="dkd-meta">PID: ${dkdEscape(dkdState.dkd_pid || '-')} · Başladı: ${dkdEscape(dkdState.dkd_started_at || '-')}</div>
+        <div class="dkd-meta">PID: ${dkdEscape(dkdState.dkd_pid || '-')} · Başladı: ${dkdEscape(dkdState.dkd_started_at || '-')} · Sürüm: ${dkdEscape(dkdState.dkd_worker_version || 'v0.34')}</div>
         <span class="dkd-pill ${dkdState.dkd_running ? 'hot' : 'warn'}">${dkdState.dkd_running ? 'aktif' : 'kapalı'}</span>
       </div>
-      ${dkdLogs || '<p class="dkd-muted">Henüz worker logu yok.</p>'}
+      ${dkdLogs || '<p class="dkd-muted">Henüz DraBornBee logu yok.</p>'}
     `;
   }
 
@@ -43,13 +43,13 @@
       const dkdJson = await dkdControlApi('/api/dkd-worker-status');
       dkdRenderState(dkdJson.dkd_state);
     } catch (dkdError) {
-      if (dkdBox) dkdBox.innerHTML = `<div class="dkd-item"><div class="dkd-title">Worker kontrol server kapalı</div><div class="dkd-meta">${dkdEscape(dkdError.message)}. npm run dev komutunun v0.22 launcher ile çalıştığından emin ol.</div></div>`;
+      if (dkdBox) dkdBox.innerHTML = `<div class="dkd-item"><div class="dkd-title">DraBornBee kontrol server kapalı</div><div class="dkd-meta">${dkdEscape(dkdError.message)}. npm run dev komutunun v0.34 launcher ile çalıştığından emin ol.</div></div>`;
     }
   }
 
   async function dkdStartWorker() {
     const dkdBox = document.getElementById('dkdWorkerControlState');
-    if (dkdBox) dkdBox.innerHTML = '<div class="dkd-item"><div class="dkd-title">Worker başlatılıyor...</div></div>';
+    if (dkdBox) dkdBox.innerHTML = '<div class="dkd-item"><div class="dkd-title">DraBornBee başlatılıyor...</div></div>';
     const dkdJson = await dkdControlApi('/api/dkd-worker-start', { method: 'POST', body: '{}' });
     dkdRenderState(dkdJson.dkd_state);
     setTimeout(dkdRefreshState, 1200);
@@ -74,12 +74,12 @@
       <div class="dkd-card-head">
         <div>
           <p class="dkd-kicker-small">DraBornBee</p>
-          <h2>Worker Kontrol</h2>
+          <h2>Veri Çekme Motoru</h2>
         </div>
       </div>
-      <p class="dkd-muted">Gateway crawler worker'ı panelden başlatıp durdurabilirsin. Admin panel açıkken çalışır.</p>
+      <p class="dkd-muted">DraBornDeal için fırsat adaylarını DraBornBee ile tara, başlat, durdur ve logları izle.</p>
       <div class="dkd-form-actions">
-        <button id="dkdWorkerStartBtn" type="button">Worker Başlat</button>
+        <button id="dkdWorkerStartBtn" type="button">DraBornBee Başlat</button>
         <button id="dkdWorkerStopBtn" type="button" class="dkd-secondary-btn">Durdur</button>
       </div>
       <button id="dkdWorkerRefreshBtn" type="button" class="dkd-secondary-btn" style="margin-top:8px;width:100%">Durum Yenile</button>
