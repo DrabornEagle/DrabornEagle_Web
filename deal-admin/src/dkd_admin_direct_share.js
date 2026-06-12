@@ -1,6 +1,7 @@
 import { dkdAdminFetchProduct } from './dkd_admin_product_fetcher.js';
 import { dkdAdminBuildCaption, dkdAdminSendTelegram } from './dkd_admin_telegram.js';
 import { dkdDiscountQualityV029 } from './dkd_discount_quality_v0_29.js';
+import { dkdHepsiOpportunityQualityV033 } from './dkd_hepsi_opportunity_quality_v0_33.js';
 import { dkdBuildTrackedProductUrl } from './dkd_click_redirect_v0_25.js';
 
 export function dkdAdminDetectSourceKey(dkdUrl) {
@@ -10,6 +11,11 @@ export function dkdAdminDetectSourceKey(dkdUrl) {
   if (dkdHost.includes('n11')) return 'n11';
   if (dkdHost.includes('amazon.com.tr')) return 'amazon_tr';
   return null;
+}
+
+function dkdQualityForSource(dkdSourceKey, dkdProduct) {
+  if (dkdSourceKey === 'hepsiburada') return dkdHepsiOpportunityQualityV033(dkdProduct);
+  return dkdDiscountQualityV029(dkdProduct);
 }
 
 export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
@@ -28,7 +34,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
   if (!dkdSource.dkd_allowed_by_terms || dkdSource.dkd_needs_manual_review) throw new Error('Bu kaynak için manuel ürün bağlantısı izni kapalı.');
 
   const dkdProduct = await dkdAdminFetchProduct(dkdUrl);
-  const dkdQuality = dkdDiscountQualityV029(dkdProduct);
+  const dkdQuality = dkdQualityForSource(dkdSourceKey, dkdProduct);
   const dkdPayload = {
     dkd_source_id: dkdSource.dkd_id,
     dkd_country_code: 'TR',
@@ -69,7 +75,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
   });
 
   if (!dkdQuality.dkd_pass) {
-    throw new Error(`İndirimli fırsat değil: güncel ${dkdQuality.dkd_current_price}, eski ${dkdQuality.dkd_original_price}, indirim %${dkdQuality.dkd_discount_percent}, neden ${dkdQuality.dkd_reasons.join(',') || 'eski fiyat yok'}`);
+    throw new Error(`Fırsat filtresinden geçmedi: skor ${dkdQuality.dkd_interest_score}, indirim %${dkdQuality.dkd_discount_percent}, neden ${dkdQuality.dkd_reasons.join(',') || 'zayıf sinyal'}`);
   }
 
   const { data: dkdChannel, error: dkdChannelError } = await dkdSupabase
@@ -83,7 +89,7 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
   const { data: dkdFinalUrl } = await dkdSupabase.rpc('dkd_deal_affiliate_url_v0_9', { dkd_product_url: dkdUrl, dkd_source_key: dkdSourceKey });
   const dkdTargetUrl = dkdFinalUrl || dkdUrl;
   const dkdTrackedUrl = dkdBuildTrackedProductUrl(dkdSavedProduct.dkd_id, dkdTargetUrl);
-  const dkdCaption = dkdAdminBuildCaption({ ...dkdProduct, dkd_deal_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent }, dkdTrackedUrl);
+  const dkdCaption = dkdAdminBuildCaption({ ...dkdProduct, dkd_deal_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent, dkd_campaign_signal: dkdQuality.dkd_campaign_signal }, dkdTrackedUrl);
   const dkdMessageId = await dkdAdminSendTelegram(dkdBotToken, dkdChannel.dkd_chat_id, dkdProduct, dkdCaption);
 
   await dkdSupabase.from('dkd_deal_social_posts').insert({
@@ -95,8 +101,8 @@ export async function dkdAdminDirectShare(dkdSupabase, dkdBotToken, dkdUrl) {
     dkd_telegram_channel_id: dkdChannel.dkd_id,
     dkd_external_message_id: dkdMessageId,
     dkd_published_at: new Date().toISOString(),
-    dkd_metrics: { dkd_created_from: 'admin_direct_share_v0_29', dkd_channel_key: dkdChannel.dkd_channel_key, dkd_quality: dkdQuality, dkd_tracked_url: dkdTrackedUrl, dkd_target_url: dkdTargetUrl }
+    dkd_metrics: { dkd_created_from: 'admin_direct_share_v0_33', dkd_channel_key: dkdChannel.dkd_channel_key, dkd_quality: dkdQuality, dkd_tracked_url: dkdTrackedUrl, dkd_target_url: dkdTargetUrl }
   });
 
-  return { dkd_product_id: dkdSavedProduct.dkd_id, dkd_product_name: dkdProduct.dkd_product_name, dkd_price: dkdProduct.dkd_current_price, dkd_original_price: dkdProduct.dkd_original_price, dkd_source_key: dkdSourceKey, dkd_interest_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent, dkd_discount_amount: dkdQuality.dkd_discount_amount, dkd_tracked_url: dkdTrackedUrl, dkd_telegram_message_id: dkdMessageId };
+  return { dkd_product_id: dkdSavedProduct.dkd_id, dkd_product_name: dkdProduct.dkd_product_name, dkd_price: dkdProduct.dkd_current_price, dkd_original_price: dkdProduct.dkd_original_price, dkd_source_key: dkdSourceKey, dkd_interest_score: dkdQuality.dkd_interest_score, dkd_discount_percent: dkdQuality.dkd_discount_percent, dkd_discount_amount: dkdQuality.dkd_discount_amount, dkd_campaign_signal: dkdQuality.dkd_campaign_signal, dkd_tracked_url: dkdTrackedUrl, dkd_telegram_message_id: dkdMessageId };
 }
