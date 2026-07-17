@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="tr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DraBornEagle</title></head>
+<body>
+<script>
+(() => {
+  const path = location.pathname + location.search + location.hash;
+  if (location.pathname.startsWith('/DraBornGarage/')) {
+    sessionStorage.setItem('dkd_garage_route', path);
+    location.replace('/DraBornGarage/');
+    return;
+  }
+  location.replace('/');
+})();
+</script>
+</body>
+</html>
