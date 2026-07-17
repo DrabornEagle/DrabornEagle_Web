@@ -1,0 +1,182 @@
+         <article class="dkd-public-card"><span class="dkd-kicker">HAKKIMIZDA</span><h2>Garajın motoruna iyi bakar.</h2><p>${D.esc(w.description || `${w.name}, motosiklet bakım, arıza tespiti ve onarım süreçlerini DraBornGarage güvencesiyle dijital olarak takip eder.`)}</p></article>
+            <article class="dkd-public-card"><span class="dkd-kicker">HİZMETLER</span><h2>Uzmanlık alanları</h2>
+              <div class="dkd-service-list">${services.length ? services.map(item => {
+                const title = typeof item === 'string' ? item : item.title;
+                const description = typeof item === 'string' ? '' : item.description;
+                return `<div><i>✓</i><span><b>${D.esc(title)}</b>${description ? `<small>${D.esc(description)}</small>` : ''}</span></div>`;
+              }).join('') : ['Periyodik bakım','Arıza tespiti','Motor ve mekanik onarım','Fren ve yürüyen aksam','Elektrik ve elektronik'].map(item => `<div><i>✓</i><span><b>${item}</b></span></div>`).join('')}</div>
+            </article>
+            ${!selected && mechanics.length ? `<article class="dkd-public-card"><span class="dkd-kicker">EKİP</span><h2>Ustalarımız</h2>
+              <div class="dkd-mechanic-grid">${mechanics.map(item => `<a class="dkd-mechanic-card" href="${D.BASE}/${D.attr(w.slug)}/${D.attr(item.slug)}" data-link>
+                <div class="dkd-mechanic-photo">${item.profile_image_url ? `<img src="${D.attr(item.profile_image_url)}" alt="">` : D.icon('user', 34)}</div>
+                <div><b>${D.esc(item.display_name)}</b><small>${D.esc(item.title || 'Motosiklet Ustası')}</small><span>${D.esc(D.status(item.availability_status))}</span></div>${D.icon('arrow')}</a>`).join('')}</div>
+            </article>` : ''}
+          </div>
+          <aside class="dkd-public-aside">
+            <article class="dkd-public-card"><span class="dkd-kicker">İLETİŞİM</span><h3>${D.esc(w.name)}</h3>
+              ${w.phone ? `<a href="tel:${D.attr(w.phone)}">${D.icon('phone')} ${D.esc(w.phone)}</a>` : ''}
+              ${w.address ? `<p>${D.icon('location')} ${D.esc(w.address)}</p>` : ''}
+              ${social.instagram ? `<a href="${D.attr(social.instagram)}" target="_blank" rel="noopener">Instagram</a>` : ''}
+              ${social.website ? `<a href="${D.attr(social.website)}" target="_blank" rel="noopener">Web sitesi</a>` : ''}
+            </article>
+            <article class="dkd-public-card dkd-public-trust">${D.icon('shield', 34)}<h3>Dijital servis takibi</h3><p>Servis kaydın oluşturulduğunda aynı hesapla durumunu webden takip edebilirsin.</p></article>
+          </aside>
+        </section>
+      </main>
+      <footer class="dkd-site-footer"><b>${D.esc(w.name)}</b><span>DraBornGarage altyapısıyla çalışır.</span></footer>
+    </div>`);
+    D.bindCommonLinks();
+    const button = document.getElementById('dkd-public-appointment');
+    if (button) button.onclick = () => {
+      if (!D.state.session) {
+        sessionStorage.setItem('dkd-garage-return', `/${w.slug}${selected ? `/${selected.slug}` : ''}`);
+        sessionStorage.setItem('dkd-garage-appointment-workshop', w.id);
+        sessionStorage.setItem('dkd-garage-appointment-mechanic', selected?.user_id || '');
+        D.navigate('/giris');
+        return;
+      }
+      if (D.customer?.openAppointment) D.customer.openAppointment(w.id, selected?.user_id || null, w.name);
+      else D.toast('Randevu modülü hazırlanamadı.', 'error');
+    };
+  };
+
+  D.notFound = (message = 'Aradığın sayfa bulunamadı.') => `<main class="dkd-not-found">
+    <div>${D.icon('wrench', 54)}</div><span class="dkd-kicker">404 • GARAJ DIŞI</span>
+    <h1>Bu bağlantı boşa dönüyor.</h1><p>${D.esc(message)}</p>
+    <a class="dkd-btn dkd-btn-primary" href="${D.BASE}/" data-link>Ana Sayfaya Dön</a>
+  </main>`;
+
+  D.bindCommonLinks = () => {
+    document.querySelectorAll('[data-link]').forEach(el => {
+      el.onclick = (event) => {
+        const href = el.getAttribute('href') || '';
+        if (!href.startsWith(D.BASE)) return;
+        event.preventDefault();
+        D.navigate(href.slice(D.BASE.length) || '/');
+      };
+    });
+  };
+
+  D.navItems = () => {
+    if (D.isStaff()) {
+      const apprentice = D.isApprentice();
+      const owner = D.isOwner();
+      const items = [
+        ['dashboard','dashboard', apprentice ? 'Atölye' : 'Panel'],
+        ['orders','orders', apprentice ? 'Görevler' : 'İş Emirleri'],
+        ['appointments','calendar','Randevular'],
+        ['customers','customers','Müşteriler'],
+        ['receivables','wallet','Alacaklar'],
+        ['reports','chart', owner ? 'Raporlar' : 'Usta Raporum'],
+        ['team','team', owner ? 'Ekip & Erişim' : 'Ekibim'],
+        ['web-profile','web','Web Sayfası'],
+        ['settings','settings','Ayarlar']
+      ];
+      if (apprentice) return items.filter(([key]) => ['dashboard','orders','settings'].includes(key));
+      if (!owner) return items.filter(([key]) => !['team','web-profile'].includes(key));
+      return items;
+    }
+    return [
+      ['dashboard','dashboard','Panel'],
+      ['services','orders','Servislerim'],
+      ['motorcycles','bike','Motosikletlerim'],
+      ['appointments','calendar','Randevularım'],
+      ['connect','link','Garaja Bağlan'],
+      ['profile','settings','Hesabım']
+    ];
+  };
+
+  D.shell = (section, content) => {
+    const profile = D.state.profile;
+    const workshopName = D.isStaff()
+      ? (D.state.workshop?.name || 'DraBornGarage')
+      : (D.state.customerWorkshop?.workshop_name || 'Müşteri Paneli');
+    const nav = D.navItems();
+    return `<div class="dkd-app-shell">
+      <aside class="dkd-sidebar" id="dkd-sidebar">
+        <a class="dkd-brand" href="${D.BASE}/" data-link><span class="dkd-brand-mark">${D.icon('wrench', 24)}</span><span><b>DraBornGarage</b><small>Web v1.0</small></span></a>
+        <div class="dkd-workshop-chip"><div>${D.icon(D.isStaff() ? 'garage' : 'bike', 22)}</div><span><small>${D.isStaff() ? D.role(D.state.membership?.role) : 'Müşteri hesabı'}</small><b>${D.esc(workshopName)}</b></span></div>
+        <nav class="dkd-side-nav">${nav.map(([key,icon,label]) => `<a class="${section === key ? 'is-active' : ''}" href="${D.BASE}/panel/${key}" data-link>${D.icon(icon, 20)}<span>${D.esc(label)}</span></a>`).join('')}</nav>
+        <div class="dkd-sidebar-bottom"><a href="${D.BASE}/" data-link>${D.icon('web')} Web Ana Sayfa</a><button id="dkd-logout">${D.icon('logout')} Çıkış Yap</button></div>
+      </aside>
+      <div class="dkd-shell-main">
+        <header class="dkd-topbar">
+          <button id="dkd-menu" class="dkd-icon-btn" aria-label="Menü">${D.icon('menu', 24)}</button>
+          <div class="dkd-topbar-title"><small>${D.isStaff() ? D.esc(workshopName) : 'DraBornGarage Müşteri'}</small><b>${D.esc(nav.find(item => item[0] === section)?.[2] || 'Panel')}</b></div>
+          <div class="dkd-topbar-actions">
+            ${D.isStaff() && D.state.workshops.length > 1 ? `<select id="dkd-workshop-switch">${D.state.workshops.map(item => `<option value="${D.attr(item.id)}" ${item.id === D.state.workshop?.id ? 'selected' : ''}>${D.esc(item.name)}</option>`).join('')}</select>` : ''}
+            ${!D.isStaff() && D.state.customerWorkshops.length > 1 ? `<select id="dkd-customer-workshop-switch">${D.state.customerWorkshops.map(item => `<option value="${D.attr(item.workshop_id)}" ${item.workshop_id === D.state.customerWorkshop?.workshop_id ? 'selected' : ''}>${D.esc(item.workshop_name)}</option>`).join('')}</select>` : ''}
+            <div class="dkd-user-mini">${profile?.avatar_url ? `<img src="${D.attr(profile.avatar_url)}" alt="">` : D.icon('user', 20)}<span><b>${D.esc(profile?.full_name || 'Kullanıcı')}</b><small>${D.isStaff() ? D.role(D.state.membership?.role) : 'Müşteri'}</small></span></div>
+          </div>
+        </header>
+        <main class="dkd-panel-content" id="dkd-panel-content">${content}</main>
+      </div>
+    </div>`;
+  };
+
+  D.bindShell = () => {
+    D.bindCommonLinks();
+    const logout = document.getElementById('dkd-logout');
+    if (logout) logout.onclick = () => D.confirm('Çıkış yapılsın mı?', 'Bu tarayıcıdaki DraBornGarage oturumu kapatılacak.', async () => {
+      await D.client.auth.signOut();
+      await D.refreshWorkspace(true);
+      D.navigate('/', true);
+    }, 'Çıkış Yap');
+    const menu = document.getElementById('dkd-menu');
+    if (menu) menu.onclick = () => document.getElementById('dkd-sidebar').classList.toggle('is-open');
+    const workshop = document.getElementById('dkd-workshop-switch');
+    if (workshop) workshop.onchange = () => D.selectWorkshop(workshop.value);
+    const customerWorkshop = document.getElementById('dkd-customer-workshop-switch');
+    if (customerWorkshop) customerWorkshop.onchange = () => D.selectCustomerWorkshop(customerWorkshop.value);
+  };
+
+  D.renderPanel = async () => {
+    if (!D.state.session) { sessionStorage.setItem('dkd-garage-return', D.getPath()); D.navigate('/giris', true); return; }
+    const section = D.segments()[1] || 'dashboard';
+    D.loading('Panel verileri hazırlanıyor…');
+    try {
+      const content = D.isStaff()
+        ? await D.staff.render(section)
+        : await D.customer.render(section);
+      D.setApp(D.shell(section, content));
+      D.bindShell();
+      if (D.isStaff()) D.staff.bind(section);
+      else D.customer.bind(section);
+      document.title = `${D.navItems().find(item => item[0] === section)?.[2] || 'Panel'} | DraBornGarage`;
+    } catch (error) {
+      console.error(error);
+      D.setApp(D.shell(section, `<div class="dkd-error-panel"><h2>Panel yüklenemedi</h2><p>${D.esc(error.message || String(error))}</p><button class="dkd-btn dkd-btn-primary" id="dkd-retry">Tekrar Dene</button></div>`));
+      D.bindShell();
+      document.getElementById('dkd-retry').onclick = () => D.renderPanel();
+    }
+  };
+
+  D.render = async () => {
+    const path = D.getPath();
+    const segments = D.segments();
+    document.documentElement.style.removeProperty('--dkd-orange');
+    if (D.state.loading) return D.loading();
+    if (path === '/' || !segments.length) {
+      document.title = 'DraBornGarage | Motosiklet Servis Yönetimi';
+      D.setApp(D.landing());
+      D.bindCommonLinks();
+      return;
+    }
+    if (segments[0] === 'giris') {
+      if (D.state.session) return D.navigate('/panel', true);
+      document.title = 'Giriş | DraBornGarage';
+      D.setApp(D.authCard('login'));
+      D.bindAuth();
+      return;
+    }
+    if (segments[0] === 'kayit') {
+      if (D.state.session) return D.navigate('/panel', true);
+      document.title = 'Kayıt Ol | DraBornGarage';
+      D.setApp(D.authCard('register'));
+      D.bindAuth();
+      return;
+    }
+    if (segments[0] === 'panel') return D.renderPanel();
+    return D.publicPage(segments[0], segments[1] || '');
+  };
+})();
