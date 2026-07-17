@@ -1,0 +1,13 @@
+{
+  "name": "DraBornGarage",
+  "short_name": "Garage",
+  "start_url": "/DraBornGarage/",
+  "scope": "/DraBornGarage/",
+  "display": "standalone",
+  "background_color": "#0b0d10",
+  "theme_color": "#ff6b00",
+  "description": "Motosiklet servis, usta, müşteri ve randevu yönetimi.",
+  "icons": [
+    { "src": "/DraBornGarage/assets/dkd_icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+  ]
+}
