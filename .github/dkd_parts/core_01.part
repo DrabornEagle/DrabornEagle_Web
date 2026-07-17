@@ -1,0 +1,279 @@
+d: true })}
+    ${D.field('Şifre', 'password', '', { type: 'password', required: true })}
+    ${D.field('Şifre Tekrar', 'password_confirm', '', { type: 'password', required: true })}
+    <div id="dkd-customer-registration-fields" class="dkd-form-subgrid">
+      ${D.field('Motosiklet Markası', 'customer_brand', '', { placeholder: 'Honda' })}
+      ${D.field('Model', 'customer_model', '', { placeholder: 'CBR 650R' })}
+      ${D.field('Plaka', 'customer_plate', '', { placeholder: '06 ABC 123' })}
+      ${D.field('Güncel KM', 'customer_odometer', '', { type: 'number', min: 0 })}
+      ${D.field('QR / Kayıt Kodu (varsa)', 'customer_registration_code', '', { placeholder: 'Garajın verdiği kod', full: true })}
+    </div>
+    <div id="dkd-staff-registration-fields" class="dkd-form-subgrid is-hidden">
+      <label class="dkd-check dkd-field-full"><input type="checkbox" name="join_existing_workshop" id="dkd-join-existing">
+        <span>Zaten bir işletmenin ortağıyım / ekibindeyim</span></label>
+      <div id="dkd-new-business-fields" class="dkd-form-subgrid dkd-field-full">
+        ${D.field('İşletme Adı', 'business_name', '', { full: true })}
+        ${D.field('İşletme Telefonu', 'business_phone', '', {})}
+        ${D.field('İşletme Adresi', 'business_address', '', {})}
+        ${D.field('Vergi Dairesi', 'tax_office', '', {})}
+        ${D.field('Vergi / T.C. No', 'tax_number', '', {})}
+      </div>
+      <div id="dkd-existing-business-fields" class="dkd-field-full is-hidden">
+        ${D.field('İşletme Ara', 'workshop_search', '', { placeholder: 'İşletme adı, telefon veya adres', full: true })}
+        <div id="dkd-workshop-search-results" class="dkd-search-results"></div>
+        <input type="hidden" name="existing_workshop_id">
+        <label class="dkd-check"><input type="checkbox" name="request_mechanic_panel" checked>
+          <span>Kendi Usta Panelimi de istiyorum</span></label>
+      </div>
+    </div>
+    <label class="dkd-check dkd-field-full"><input type="checkbox" required>
+      <span>Kullanım şartlarını ve gizlilik metnini kabul ediyorum.</span></label>
+    <button class="dkd-btn dkd-btn-primary dkd-btn-block" type="submit">${D.icon('user')} Hesap Oluştur</button>
+  </form>`;
+
+  D.bindAuth = () => {
+    document.querySelectorAll('[data-link]').forEach(el => el.addEventListener('click', (event) => {
+      const url = new URL(el.href);
+      if (url.origin === location.origin && url.pathname.startsWith(D.BASE)) {
+        event.preventDefault();
+        D.navigate(url.pathname.slice(D.BASE.length) || '/');
+      }
+    }));
+
+    const loginForm = document.getElementById('dkd-login-form');
+    if (loginForm) loginForm.onsubmit = async (event) => {
+      event.preventDefault();
+      const button = loginForm.querySelector('button[type=submit]');
+      const data = D.formData(loginForm);
+      D.busy(button, true, 'Giriş yapılıyor…');
+      const { error } = await D.client.auth.signInWithPassword({ email: data.email.trim(), password: data.password });
+      if (error) { D.toast(D.translateAuthError(error.message), 'error'); D.busy(button, false); return; }
+      try {
+        await D.refreshWorkspace(true);
+        const returnPath = sessionStorage.getItem('dkd-garage-return');
+        sessionStorage.removeItem('dkd-garage-return');
+        D.navigate(returnPath || '/panel', true);
+      } catch (error2) {
+        D.toast(error2.message, 'error'); D.busy(button, false);
+      }
+    };
+
+    const registerForm = document.getElementById('dkd-register-form');
+    if (!registerForm) return;
+    const radios = registerForm.querySelectorAll('input[name=account_mode]');
+    const customerFields = document.getElementById('dkd-customer-registration-fields');
+    const staffFields = document.getElementById('dkd-staff-registration-fields');
+    const refreshMode = () => {
+      const mode = registerForm.querySelector('input[name=account_mode]:checked').value;
+      customerFields.classList.toggle('is-hidden', mode !== 'customer');
+      staffFields.classList.toggle('is-hidden', mode !== 'staff');
+      document.querySelectorAll('#dkd-account-mode-choice .dkd-choice').forEach(label =>
+        label.classList.toggle('is-active', label.querySelector('input').checked));
+    };
+    radios.forEach(radio => radio.onchange = refreshMode);
+
+    const join = document.getElementById('dkd-join-existing');
+    const newBusiness = document.getElementById('dkd-new-business-fields');
+    const existingBusiness = document.getElementById('dkd-existing-business-fields');
+    join.onchange = () => {
+      newBusiness.classList.toggle('is-hidden', join.checked);
+      existingBusiness.classList.toggle('is-hidden', !join.checked);
+    };
+
+    const searchInput = registerForm.elements.workshop_search;
+    let searchTimer;
+    searchInput.oninput = () => {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(async () => {
+        const q = searchInput.value.trim();
+        const resultRoot = document.getElementById('dkd-workshop-search-results');
+        if (q.length < 2) { resultRoot.innerHTML = ''; return; }
+        resultRoot.innerHTML = '<span class="dkd-mini-loading">Aranıyor…</span>';
+        const { data, error } = await D.client.rpc('public_search_workshops_for_registration', { p_query: q });
+        if (error) { resultRoot.innerHTML = `<span class="dkd-error-inline">${D.esc(error.message)}</span>`; return; }
+        resultRoot.innerHTML = (data || []).map(item => `<button type="button" class="dkd-search-result" data-workshop="${D.attr(item.id)}">
+          <b>${D.esc(item.name)}</b><small>${D.esc(item.phone || '')} ${item.address ? `• ${D.esc(item.address)}` : ''}</small></button>`).join('')
+          || '<span class="dkd-muted">Eşleşen işletme yok.</span>';
+        resultRoot.querySelectorAll('[data-workshop]').forEach(button => button.onclick = () => {
+          registerForm.elements.existing_workshop_id.value = button.dataset.workshop;
+          resultRoot.querySelectorAll('button').forEach(item => item.classList.toggle('is-selected', item === button));
+        });
+      }, 300);
+    };
+
+    registerForm.onsubmit = async (event) => {
+      event.preventDefault();
+      const button = registerForm.querySelector('button[type=submit]');
+      const data = D.formData(registerForm);
+      if (data.password !== data.password_confirm) return D.toast('Şifreler eşleşmiyor.', 'error');
+      if (String(data.password).length < 6) return D.toast('Şifre en az 6 karakter olmalıdır.', 'error');
+      if (data.account_mode === 'staff' && data.join_existing_workshop === 'on' && !data.existing_workshop_id)
+        return D.toast('Katılmak istediğin işletmeyi seç.', 'error');
+
+      const metadata = {
+        full_name: data.full_name.trim(),
+        phone: data.phone.trim(),
+        requested_account_mode: data.account_mode,
+        account_mode: 'customer'
+      };
+      if (data.account_mode === 'customer') {
+        Object.assign(metadata, {
+          customer_plate: data.customer_plate?.trim().toUpperCase() || null,
+          customer_motorcycle_brand: data.customer_brand?.trim() || null,
+          customer_motorcycle_model: data.customer_model?.trim() || null,
+          customer_motorcycle_odometer: data.customer_odometer ? Number(data.customer_odometer) : null,
+          customer_registration_code: data.customer_registration_code?.trim() || null
+        });
+      } else if (data.join_existing_workshop === 'on') {
+        Object.assign(metadata, {
+          join_existing_workshop: true,
+          existing_workshop_id: data.existing_workshop_id,
+          request_mechanic_panel: data.request_mechanic_panel === 'on'
+        });
+      } else {
+        if (!data.business_name?.trim() || !data.tax_office?.trim() || !data.tax_number?.trim())
+          return D.toast('İşletme adı, vergi dairesi ve vergi numarası zorunludur.', 'error');
+        Object.assign(metadata, {
+          join_existing_workshop: false,
+          business_name: data.business_name.trim(),
+          business_phone: data.business_phone?.trim() || data.phone.trim(),
+          business_address: data.business_address?.trim() || null,
+          business_tax_office: data.tax_office.trim(),
+          business_tax_number: data.tax_number.replace(/\D/g, '')
+        });
+      }
+
+      D.busy(button, true, 'Hesap oluşturuluyor…');
+      const { data: signupData, error } = await D.client.auth.signUp({
+        email: data.email.trim(), password: data.password, options: { data: metadata }
+      });
+      if (error) { D.toast(D.translateAuthError(error.message), 'error'); D.busy(button, false); return; }
+      if (!signupData.session) {
+        D.toast('Hesabın oluşturuldu. E-posta doğrulamasını tamamlayıp giriş yap.', 'success');
+        D.navigate('/giris');
+        return;
+      }
+      await D.refreshWorkspace(true);
+      D.navigate('/panel', true);
+    };
+  };
+
+  D.translateAuthError = (message = '') => {
+    const lower = message.toLowerCase();
+    if (lower.includes('invalid login')) return 'E-posta veya şifre hatalı.';
+    if (lower.includes('already registered')) return 'Bu e-posta zaten kayıtlı.';
+    if (lower.includes('email not confirmed')) return 'Önce e-posta adresini doğrula.';
+    if (lower.includes('password')) return 'Şifre şartları karşılanmadı.';
+    return message;
+  };
+
+  D.landing = () => `<div class="dkd-site">
+    <header class="dkd-site-header">
+      <a class="dkd-brand" href="${D.BASE}/" data-link><span class="dkd-brand-mark">${D.icon('wrench', 25)}</span>
+        <span><b>DraBornGarage</b><small>Motosiklet servis ağı</small></span></a>
+      <nav><a href="#ozellikler">Özellikler</a><a href="#kimler-icin">Kimler için?</a><a href="#baglanti">Özel bağlantılar</a></nav>
+      <div class="dkd-header-actions">
+        ${D.state.session ? `<a class="dkd-btn dkd-btn-primary" href="${D.BASE}/panel" data-link>Panele Git</a>`
+          : `<a class="dkd-btn dkd-btn-ghost" href="${D.BASE}/giris" data-link>Giriş</a>
+             <a class="dkd-btn dkd-btn-primary" href="${D.BASE}/kayit" data-link>Ücretsiz Katıl</a>`}
+      </div>
+    </header>
+    <main>
+      <section class="dkd-hero">
+        <div class="dkd-hero-copy">
+          <span class="dkd-kicker">DraBornGarage v1.0 • WEB</span>
+          <h1>Garajın, ustaların ve müşterilerin <em>aynı sistemde.</em></h1>
+          <p>Mobil uygulamadaki iş emirleri, randevular, motosikletler, tahsilatlar ve servis geçmişi web üzerinde gerçek zamanlı çalışır.</p>
+          <div class="dkd-hero-actions">
+            <a class="dkd-btn dkd-btn-primary dkd-btn-lg" href="${D.BASE}/${D.state.session ? 'panel' : 'kayit'}" data-link>${D.icon('garage')} ${D.state.session ? 'Garaj Panelini Aç' : 'Sisteme Katıl'}</a>
+            <a class="dkd-btn dkd-btn-ghost dkd-btn-lg" href="#ozellikler">Nasıl çalışır?</a>
+          </div>
+          <div class="dkd-trust-row"><span>✓ Uygulamayla senkron</span><span>✓ Kurulum gerektirmez</span><span>✓ Telefon, tablet ve bilgisayar</span></div>
+        </div>
+        <div class="dkd-hero-stage">
+          <div class="dkd-stage-grid"></div>
+          <div class="dkd-stage-card dkd-stage-main">
+            <div class="dkd-stage-top"><span><i></i> Piston Garaj • Canlı</span><b>Bugün</b></div>
+            <strong class="dkd-stage-money">₺18.450</strong><small>Tahsil edilen</small>
+            <div class="dkd-stage-stats"><span><b>7</b> Aktif motor</span><span><b>3</b> Hazır</span><span><b>2</b> Randevu</span></div>
+          </div>
+          <div class="dkd-stage-card dkd-stage-bike"><span>12</span>${D.icon('bike', 42)}<b>Honda CBR 650R</b><small>Test aşamasında</small></div>
+          <div class="dkd-stage-card dkd-stage-user">${D.icon('user', 34)}<b>Ahmet Usta</b><span>Müsait</span></div>
+          <div class="dkd-gear dkd-gear-a">⚙</div><div class="dkd-gear dkd-gear-b">⚙</div>
+        </div>
+      </section>
+      <section class="dkd-feature-section" id="ozellikler">
+        <div class="dkd-section-head"><span class="dkd-kicker">TEK MERKEZ</span><h2>Servisin her adımı webde.</h2><p>Telefon bildirimi gibi tarayıcıya gereksiz mobil katmanlar çıkarıldı; işin kendisi eksiksiz kaldı.</p></div>
+        <div class="dkd-feature-grid">
+          ${[
+            ['orders','İş Emirleri','Motor kabulünden teste, hazır durumundan teslimata kadar tüm süreç.'],
+            ['calendar','Randevular','Usta müsaitliği, saat seçimi, onay ve servis kaydına dönüştürme.'],
+            ['customers','Müşteri Hafızası','Müşteri, motosiklet, kilometre ve geçmiş servis kayıtları.'],
+            ['wallet','Tahsilat ve Alacak','Nakit/IBAN tahsilatı, kalan borç ve ödeme geçmişi.'],
+            ['chart','Usta ve İşletme Raporu','Her usta kendi kaydını, işletme sahibi toplam işletmeyi görür.'],
+            ['web','Özel Web Sayfası','Her işletme ve yayınlanan usta için paylaşılabilir özel bağlantı.']
+          ].map(([icon,title,text]) => `<article class="dkd-feature-card"><div>${D.icon(icon, 27)}</div><h3>${title}</h3><p>${text}</p></article>`).join('')}
+        </div>
+      </section>
+      <section class="dkd-audience" id="kimler-icin">
+        <article><span class="dkd-kicker">İŞLETME SAHİBİ</span><h3>Garajını gerçek zamanlı yönet.</h3><p>Ekip, gelir, müşteri ve işlem takibi tek panelde.</p></article>
+        <article><span class="dkd-kicker">USTA</span><h3>Sadece kendi işlerini gör.</h3><p>Atanan motorlar, yapılan işlemler ve kayıtlı tutarlar.</p></article>
+        <article><span class="dkd-kicker">MÜŞTERİ</span><h3>Uygulama indirmeden takip et.</h3><p>Servis durumu, randevu, onay ve motosiklet geçmişi.</p></article>
+      </section>
+      <section class="dkd-link-showcase" id="baglanti">
+        <div><span class="dkd-kicker">KENDİ ADINLA</span><h2>Garajının dijital vitrini hazır.</h2><p>İşletme sahipleri bağlantı adını, açıklamayı, hizmetleri ve yayınlanan usta profillerini panelden düzenler.</p></div>
+        <div class="dkd-url-demo"><span>www.draborneagle.com</span><b>/DraBornGarage/PistonGaraj/AhmetUsta</b></div>
+      </section>
+      <section class="dkd-final-cta"><span class="dkd-kicker">HEMEN BAŞLA</span><h2>Motorlar beklemez. Garajını dijitale taşı.</h2>
+        <a class="dkd-btn dkd-btn-primary dkd-btn-lg" href="${D.BASE}/${D.state.session ? 'panel' : 'kayit'}" data-link>${D.state.session ? 'Paneli Aç' : 'DraBornGarage’a Katıl'}</a></section>
+    </main>
+    <footer class="dkd-site-footer"><b>DraBornGarage</b><span>© ${new Date().getFullYear()} DraBornEagle • Web v1.0</span></footer>
+  </div>`;
+
+  D.publicPage = async (workshopSlug, mechanicSlug = '') => {
+    D.loading('Garaj sayfası açılıyor…');
+    const { data, error } = await D.client.rpc('web_get_public_profile', {
+      p_workshop_slug: workshopSlug, p_mechanic_slug: mechanicSlug || null
+    });
+    if (error || !data?.workshop) {
+      D.setApp(D.notFound('Bu garaj sayfası bulunamadı veya henüz yayında değil.'));
+      D.bindCommonLinks();
+      return;
+    }
+    const w = data.workshop;
+    const mechanics = data.mechanics || [];
+    const selected = data.mechanic || null;
+    const accent = /^#[0-9a-f]{6}$/i.test(w.accent_color || '') ? w.accent_color : '#ff6b00';
+    document.documentElement.style.setProperty('--dkd-orange', accent);
+    const services = Array.isArray(w.services) ? w.services : [];
+    const social = w.social_links || {};
+    const profileTitle = selected ? `${selected.display_name} • ${w.name}` : w.name;
+    document.title = `${profileTitle} | DraBornGarage`;
+    D.setApp(`<div class="dkd-public" style="--workshop-accent:${D.attr(accent)}">
+      <header class="dkd-public-nav">
+        <a class="dkd-brand" href="${D.BASE}/" data-link><span class="dkd-brand-mark">${D.icon('wrench', 24)}</span><span><b>DraBornGarage</b><small>Doğrulanmış servis sayfası</small></span></a>
+        <div>${D.state.session ? `<a class="dkd-btn dkd-btn-ghost" href="${D.BASE}/panel" data-link>Panelim</a>` : `<a class="dkd-btn dkd-btn-ghost" href="${D.BASE}/giris" data-link>Giriş</a>`}</div>
+      </header>
+      <main>
+        <section class="dkd-public-hero" ${w.cover_url ? `style="background-image:linear-gradient(90deg,rgba(7,9,12,.96),rgba(7,9,12,.55)),url('${D.attr(w.cover_url)}')"` : ''}>
+          <div class="dkd-public-logo">${w.logo_url ? `<img src="${D.attr(w.logo_url)}" alt="">` : D.icon('garage', 40)}</div>
+          <div><span class="dkd-kicker">DraBornGarage İŞLETME PROFİLİ</span><h1>${D.esc(w.name)}</h1>
+            <p>${D.esc(w.headline || 'Motosiklet bakım ve onarım merkezi')}</p>
+            <div class="dkd-public-meta">${w.address ? `<span>${D.icon('location')} ${D.esc(w.address)}</span>` : ''}${w.phone ? `<span>${D.icon('phone')} ${D.esc(w.phone)}</span>` : ''}</div>
+            <div class="dkd-hero-actions">
+              ${w.appointments_enabled ? `<button class="dkd-btn dkd-btn-primary dkd-btn-lg" id="dkd-public-appointment">${D.icon('calendar')} Randevu Al</button>` : ''}
+              ${w.phone ? `<a class="dkd-btn dkd-btn-ghost dkd-btn-lg" href="tel:${D.attr(w.phone)}">Telefon Et</a>` : ''}
+            </div>
+          </div>
+        </section>
+        ${selected ? `<section class="dkd-mechanic-focus">
+          <div class="dkd-mechanic-photo">${selected.profile_image_url ? `<img src="${D.attr(selected.profile_image_url)}" alt="${D.attr(selected.display_name)}">` : D.icon('user', 54)}</div>
+          <div><span class="dkd-kicker">${D.esc(selected.title || 'MOTOSİKLET USTASI')}</span><h2>${D.esc(selected.display_name)}</h2>
+            <p>${D.esc(selected.bio || `${w.name} bünyesinde hizmet veren motosiklet ustası.`)}</p>
+            <div class="dkd-tags">${(selected.specialties || []).map(item => `<span>${D.esc(item)}</span>`).join('')}</div>
+            <div class="dkd-mechanic-info">${selected.experience_years != null ? `<b>${selected.experience_years} yıl deneyim</b>` : ''}<span class="dkd-live-dot">${D.esc(D.status(selected.availability_status))}</span></div>
+          </div>
+        </section>` : ''}
+        <section class="dkd-public-content">
+          <div class="dkd-public-main">
+    
