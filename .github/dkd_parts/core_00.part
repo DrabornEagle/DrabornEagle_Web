@@ -1,0 +1,366 @@
+
+(() => {
+  'use strict';
+
+  const D = window.DKD = window.DKD || {};
+  D.VERSION = '1.0.0-web';
+  D.BASE = '/DraBornGarage';
+  D.SUPABASE_URL = 'https://xpdiwyxnnrmyvpcqwuyb.supabase.co';
+  D.SUPABASE_KEY = 'sb_publishable_cu71JQGPiRusMw_YeZzUbg_6r9r13TG';
+  D.client = window.supabase.createClient(D.SUPABASE_URL, D.SUPABASE_KEY, {
+    auth: { persistSession: true, autoRefreshToken: true, detectSessionInUrl: true },
+    realtime: { params: { eventsPerSecond: 10 } }
+  });
+
+  D.state = {
+    loading: true,
+    session: null,
+    profile: null,
+    workshops: [],
+    memberships: [],
+    workshop: null,
+    membership: null,
+    customerWorkshops: [],
+    customerWorkshop: null,
+    businessApplication: null,
+    mechanicApplications: [],
+    realtime: [],
+    returnPath: null
+  };
+
+  D.esc = (value = '') => String(value ?? '')
+    .replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;').replaceAll("'", '&#039;');
+
+  D.attr = D.esc;
+  D.money = (value) => new Intl.NumberFormat('tr-TR', {
+    style: 'currency', currency: 'TRY', maximumFractionDigits: 2
+  }).format(Number(value || 0));
+  D.date = (value, withTime = true) => {
+    if (!value) return '—';
+    const date = new Date(value);
+    if (Number.isNaN(date.getTime())) return '—';
+    return new Intl.DateTimeFormat('tr-TR', withTime
+      ? { day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }
+      : { day: '2-digit', month: 'short', year: 'numeric' }).format(date);
+  };
+  D.todayStart = () => {
+    const now = new Date();
+    now.setHours(0, 0, 0, 0);
+    return now.toISOString();
+  };
+  D.slugify = (value = '') => String(value).trim().toLocaleLowerCase('tr-TR')
+    .replaceAll('ç', 'c').replaceAll('ğ', 'g').replaceAll('ı', 'i')
+    .replaceAll('ö', 'o').replaceAll('ş', 's').replaceAll('ü', 'u')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+
+  D.statusMap = {
+    opened: 'Açıldı', received: 'Teslim Alındı', queued: 'Sırada', precheck: 'Ön Kontrol',
+    price_entered: 'Fiyat Girildi', approval_waiting: 'Onay Bekliyor',
+    repair_started: 'Tamirde', extra_approval_waiting: 'Ek Onay Bekliyor',
+    parts_waiting: 'Parça Bekliyor', testing: 'Testte', ready: 'Hazır',
+    delivered: 'Teslim Edildi', cancelled: 'İptal', waiting: 'Bekliyor',
+    in_progress: 'İşlemde', completed: 'Tamamlandı', pending: 'Bekliyor',
+    confirmed: 'Onaylandı', arrived: 'Geldi', converted: 'Servise Çevrildi',
+    no_show: 'Gelmedi', unpaid: 'Ödenmedi', partial: 'Kısmi', paid: 'Ödendi',
+    open: 'Açık', closed: 'Kapalı', not_set: 'Borç Yok',
+    approved: 'Onaylandı', rejected: 'Reddedildi'
+  };
+  D.status = (value) => D.statusMap[value] || value || '—';
+  D.roleMap = {
+    owner: 'İşletme Sahibi', owner_mechanic: 'İşletme Sahibi + Usta',
+    mechanic: 'Usta', apprentice: 'Çırak'
+  };
+  D.role = (value) => D.roleMap[value] || value || 'Kullanıcı';
+  D.isOwner = () => Boolean(D.state.profile?.is_admin ||
+    ['owner', 'owner_mechanic'].includes(D.state.membership?.role));
+  D.canWork = () => Boolean(['mechanic', 'owner_mechanic'].includes(D.state.membership?.role));
+  D.isApprentice = () => D.state.membership?.role === 'apprentice';
+  D.isStaff = () => Boolean(D.state.profile?.is_admin || D.state.membership);
+
+  D.icon = (name, size = 20) => `<span class="dkd-icon" aria-hidden="true" style="font-size:${size}px">${({
+    garage: '🏍️', wrench: '🔧', dashboard: '▦', orders: '🛠️', calendar: '📅',
+    customers: '👥', wallet: '💳', team: '🧑‍🔧', settings: '⚙️', logout: '↪',
+    add: '＋', search: '⌕', check: '✓', close: '×', arrow: '›', phone: '☎',
+    location: '⌖', link: '🔗', user: '👤', bike: '🏍', chart: '📊',
+    web: '🌐', copy: '⧉', menu: '☰', bell: '•', shield: '🛡️', qr: '▦'
+  })[name] || name}</span>`;
+
+  D.toast = (message, type = 'info') => {
+    const root = document.getElementById('dkd-toast-root');
+    if (!root) return;
+    const item = document.createElement('div');
+    item.className = `dkd-toast dkd-toast-${type}`;
+    item.innerHTML = `<b>${type === 'error' ? 'Hata' : type === 'success' ? 'Tamam' : 'DraBornGarage'}</b><span>${D.esc(message)}</span>`;
+    root.appendChild(item);
+    requestAnimationFrame(() => item.classList.add('is-visible'));
+    setTimeout(() => {
+      item.classList.remove('is-visible');
+      setTimeout(() => item.remove(), 250);
+    }, 4200);
+  };
+
+  D.modal = (html, options = {}) => {
+    const root = document.getElementById('dkd-modal-root');
+    root.innerHTML = `<div class="dkd-modal-backdrop" data-modal-close>
+      <section class="dkd-modal ${options.wide ? 'dkd-modal-wide' : ''}" role="dialog" aria-modal="true">
+        <button class="dkd-modal-x" type="button" data-modal-close aria-label="Kapat">×</button>
+        ${html}
+      </section>
+    </div>`;
+    root.querySelectorAll('[data-modal-close]').forEach(el => el.addEventListener('click', (event) => {
+      if (el.classList.contains('dkd-modal-backdrop') && event.target !== el) return;
+      D.closeModal();
+    }));
+  };
+  D.closeModal = () => {
+    const root = document.getElementById('dkd-modal-root');
+    if (root) root.innerHTML = '';
+  };
+  D.confirm = (title, message, onYes, yesLabel = 'Onayla') => {
+    D.modal(`<div class="dkd-modal-head"><span class="dkd-kicker">ONAY</span><h2>${D.esc(title)}</h2><p>${D.esc(message)}</p></div>
+      <div class="dkd-form-actions">
+        <button class="dkd-btn dkd-btn-ghost" type="button" data-modal-close>Vazgeç</button>
+        <button class="dkd-btn dkd-btn-danger" id="dkd-confirm-yes" type="button">${D.esc(yesLabel)}</button>
+      </div>`);
+    document.getElementById('dkd-confirm-yes').onclick = async () => {
+      const btn = document.getElementById('dkd-confirm-yes');
+      btn.disabled = true;
+      try { await onYes(); D.closeModal(); } catch (error) { D.toast(error.message || String(error), 'error'); btn.disabled = false; }
+    };
+  };
+  D.copy = async (text) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      D.toast('Bağlantı panoya kopyalandı.', 'success');
+    } catch {
+      D.toast('Kopyalama izni alınamadı.', 'error');
+    }
+  };
+
+  D.busy = (button, active, label = 'İşleniyor…') => {
+    if (!button) return;
+    if (active) {
+      button.dataset.originalText = button.innerHTML;
+      button.disabled = true;
+      button.innerHTML = `<span class="dkd-spinner"></span>${D.esc(label)}`;
+    } else {
+      button.disabled = false;
+      if (button.dataset.originalText) button.innerHTML = button.dataset.originalText;
+    }
+  };
+
+  D.getPath = () => {
+    const path = window.location.pathname || D.BASE + '/';
+    return path.startsWith(D.BASE) ? path.slice(D.BASE.length) || '/' : '/';
+  };
+  D.segments = () => D.getPath().split('/').filter(Boolean).map(decodeURIComponent);
+  D.navigate = (path, replace = false) => {
+    const clean = path.startsWith('/') ? path : `/${path}`;
+    const next = `${D.BASE}${clean === '/' ? '/' : clean}`;
+    if (replace) history.replaceState({}, '', next);
+    else history.pushState({}, '', next);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    D.render();
+  };
+  D.publicUrl = (workshopSlug, mechanicSlug = '') =>
+    `${window.location.origin}${D.BASE}/${encodeURIComponent(workshopSlug)}${mechanicSlug ? `/${encodeURIComponent(mechanicSlug)}` : ''}`;
+
+  D.setApp = (html) => {
+    const app = document.getElementById('dkd-app');
+    app.innerHTML = html;
+  };
+
+  D.loading = (text = 'Garaj sistemi hazırlanıyor…') => {
+    D.setApp(`<div class="dkd-boot">
+      <div class="dkd-boot-logo">⚙</div><strong>DraBornGarage</strong>
+      <span>${D.esc(text)}</span><div class="dkd-loader"><i></i></div>
+    </div>`);
+  };
+
+  D.empty = (icon, title, text, action = '') => `<div class="dkd-empty">
+    <div class="dkd-empty-icon">${D.icon(icon, 34)}</div>
+    <h3>${D.esc(title)}</h3><p>${D.esc(text)}</p>${action}
+  </div>`;
+
+  D.stat = (label, value, icon, tone = 'orange', hint = '') => `<article class="dkd-stat dkd-tone-${tone}">
+    <div class="dkd-stat-icon">${D.icon(icon, 22)}</div>
+    <div><span>${D.esc(label)}</span><strong>${D.esc(value)}</strong>${hint ? `<small>${D.esc(hint)}</small>` : ''}</div>
+  </article>`;
+
+  D.pill = (status, label = '') => `<span class="dkd-status dkd-status-${D.attr(status)}">${D.esc(label || D.status(status))}</span>`;
+
+  D.field = (label, name, value = '', options = {}) => {
+    const type = options.type || 'text';
+    const extra = options.required ? 'required' : '';
+    const placeholder = options.placeholder ? `placeholder="${D.attr(options.placeholder)}"` : '';
+    const min = options.min != null ? `min="${D.attr(options.min)}"` : '';
+    const max = options.max != null ? `max="${D.attr(options.max)}"` : '';
+    const step = options.step != null ? `step="${D.attr(options.step)}"` : '';
+    if (type === 'textarea') return `<label class="dkd-field ${options.full ? 'dkd-field-full' : ''}">
+      <span>${D.esc(label)}</span><textarea name="${D.attr(name)}" ${extra} ${placeholder} rows="${options.rows || 4}">${D.esc(value)}</textarea></label>`;
+    return `<label class="dkd-field ${options.full ? 'dkd-field-full' : ''}">
+      <span>${D.esc(label)}</span><input type="${D.attr(type)}" name="${D.attr(name)}" value="${D.attr(value)}" ${extra} ${placeholder} ${min} ${max} ${step}></label>`;
+  };
+
+  D.select = (label, name, options, selected = '', full = false) => `<label class="dkd-field ${full ? 'dkd-field-full' : ''}">
+    <span>${D.esc(label)}</span><select name="${D.attr(name)}">${options.map(item =>
+      `<option value="${D.attr(item.value)}" ${String(item.value) === String(selected) ? 'selected' : ''}>${D.esc(item.label)}</option>`
+    ).join('')}</select></label>`;
+
+  D.formData = (form) => Object.fromEntries(new FormData(form).entries());
+
+  D.unsubscribeRealtime = async () => {
+    const channels = D.state.realtime.splice(0);
+    await Promise.all(channels.map(channel => D.client.removeChannel(channel).catch(() => undefined)));
+  };
+
+  D.subscribeWorkspace = () => {
+    D.unsubscribeRealtime();
+    const userId = D.state.session?.user?.id;
+    if (!userId) return;
+    const workspaceChannel = D.client.channel(`dkd-web-workspace-${userId}`)
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'workshop_members', filter: `user_id=eq.${userId}` }, () => D.refreshWorkspace(true))
+      .on('postgres_changes', { event: '*', schema: 'public', table: 'customer_workshop_links', filter: `user_id=eq.${userId}` }, () => D.refreshWorkspace(true))
+      .on('postgres_changes', { event: 'UPDATE', schema: 'public', table: 'profiles', filter: `id=eq.${userId}` }, () => D.refreshWorkspace(true))
+      .subscribe();
+    D.state.realtime.push(workspaceChannel);
+
+    if (D.state.workshop?.id) {
+      const wid = D.state.workshop.id;
+      const dataChannel = D.client.channel(`dkd-web-data-${wid}`)
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'work_orders', filter: `workshop_id=eq.${wid}` }, () => D.refreshCurrentView())
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'appointments', filter: `workshop_id=eq.${wid}` }, () => D.refreshCurrentView())
+        .on('postgres_changes', { event: '*', schema: 'public', table: 'payments', filter: `workshop_id=eq.${wid}` }, () => D.refreshCurrentView())
+        .subscribe();
+      D.state.realtime.push(dataChannel);
+    }
+  };
+
+  D.refreshCurrentView = (() => {
+    let timer;
+    return () => {
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (D.getPath().startsWith('/panel')) D.renderPanel();
+      }, 350);
+    };
+  })();
+
+  D.refreshWorkspace = async (silent = false) => {
+    if (!silent) D.loading('Hesabın ve garajların eşitleniyor…');
+    const { data: sessionData } = await D.client.auth.getSession();
+    const session = sessionData.session;
+    D.state.session = session;
+    if (!session?.user) {
+      D.state.profile = null;
+      D.state.workshops = [];
+      D.state.memberships = [];
+      D.state.workshop = null;
+      D.state.membership = null;
+      D.state.customerWorkshops = [];
+      D.state.customerWorkshop = null;
+      D.state.loading = false;
+      await D.unsubscribeRealtime();
+      return;
+    }
+
+    const userId = session.user.id;
+    const [profileResult, memberResult, customerWorkshopResult, applicationResult, mechanicResult] = await Promise.all([
+      D.client.from('profiles').select('id,full_name,phone,avatar_url,is_admin,account_mode,customer_plate,customer_motorcycle_brand,customer_motorcycle_model,customer_motorcycle_odometer').eq('id', userId).maybeSingle(),
+      D.client.from('workshop_members').select('workshop_id,user_id,role,is_active,availability_status,staff_note').eq('user_id', userId).eq('is_active', true).order('joined_at'),
+      D.client.rpc('customer_get_workshops'),
+      D.client.from('business_applications').select('*').eq('user_id', userId).maybeSingle(),
+      D.client.rpc('customer_get_mechanic_applications')
+    ]);
+    if (profileResult.error || !profileResult.data) throw new Error(profileResult.error?.message || 'Profil bulunamadı.');
+
+    D.state.profile = profileResult.data;
+    D.state.memberships = memberResult.data || [];
+    D.state.customerWorkshops = customerWorkshopResult.data || [];
+    D.state.businessApplication = applicationResult.data || null;
+    D.state.mechanicApplications = mechanicResult.data || [];
+
+    let workshops = [];
+    if (D.state.profile.is_admin) {
+      const result = await D.client.from('workshops').select('*').order('created_at');
+      workshops = result.data || [];
+    } else if (D.state.memberships.length) {
+      const ids = D.state.memberships.map(item => item.workshop_id);
+      const result = await D.client.from('workshops').select('*').in('id', ids).eq('is_active', true).order('created_at');
+      workshops = result.data || [];
+    }
+    D.state.workshops = workshops;
+
+    const savedStaff = localStorage.getItem('dkd-garage-workshop');
+    D.state.workshop = workshops.find(item => item.id === savedStaff) || workshops[0] || null;
+    if (D.state.workshop) localStorage.setItem('dkd-garage-workshop', D.state.workshop.id);
+    D.state.membership = D.state.workshop
+      ? D.state.memberships.find(item => item.workshop_id === D.state.workshop.id) ||
+        (D.state.profile.is_admin ? { workshop_id: D.state.workshop.id, user_id: userId, role: 'owner', is_active: true, availability_status: 'available' } : null)
+      : null;
+
+    const savedCustomer = localStorage.getItem('dkd-garage-customer-workshop');
+    D.state.customerWorkshop = D.state.customerWorkshops.find(item => item.workshop_id === savedCustomer)
+      || D.state.customerWorkshops[0] || null;
+    if (D.state.customerWorkshop) localStorage.setItem('dkd-garage-customer-workshop', D.state.customerWorkshop.workshop_id);
+    D.state.loading = false;
+    D.subscribeWorkspace();
+  };
+
+  D.selectWorkshop = async (id) => {
+    localStorage.setItem('dkd-garage-workshop', id);
+    await D.refreshWorkspace(true);
+    D.renderPanel();
+  };
+  D.selectCustomerWorkshop = async (id) => {
+    localStorage.setItem('dkd-garage-customer-workshop', id);
+    await D.refreshWorkspace(true);
+    D.renderPanel();
+  };
+
+  D.authCard = (mode) => {
+    const login = mode === 'login';
+    return `<main class="dkd-auth-page">
+      <a class="dkd-brand dkd-brand-auth" href="${D.BASE}/" data-link>
+        <span class="dkd-brand-mark">${D.icon('wrench', 26)}</span>
+        <span><b>DraBornGarage</b><small>Web v1.0</small></span>
+      </a>
+      <section class="dkd-auth-card">
+        <div class="dkd-auth-visual">
+          <span class="dkd-kicker">MOTOSİKLET SERVİS AĞI</span>
+          <h1>${login ? 'Garajına geri dön.' : 'Tek hesap, tüm servis geçmişin.'}</h1>
+          <p>${login
+            ? 'Mobil uygulamadaki hesabınla giriş yap. Verilerin ve işlemlerin anında eşitlenir.'
+            : 'Müşteri, usta veya işletme sahibi olarak web üzerinden DraBornGarage sistemine katıl.'}</p>
+          <ul><li>Canlı iş emri takibi</li><li>Randevu ve müşteri yönetimi</li><li>İşletme ve ustaya özel bağlantı</li></ul>
+        </div>
+        <div class="dkd-auth-form-wrap">
+          <div class="dkd-modal-head"><span class="dkd-kicker">${login ? 'GİRİŞ' : 'ÜYELİK'}</span>
+            <h2>${login ? 'Hesabına giriş yap' : 'DraBornGarage hesabı oluştur'}</h2>
+            <p>${login ? 'Uygulamadaki e-posta ve şifren geçerlidir.' : 'Hesap türünü daha sonra da değiştirebilirsin.'}</p>
+          </div>
+          ${login ? D.loginForm() : D.registerForm()}
+          <p class="dkd-auth-switch">${login ? 'Hesabın yok mu?' : 'Zaten hesabın var mı?'}
+            <a href="${D.BASE}/${login ? 'kayit' : 'giris'}" data-link>${login ? 'Kayıt ol' : 'Giriş yap'}</a></p>
+        </div>
+      </section>
+    </main>`;
+  };
+
+  D.loginForm = () => `<form id="dkd-login-form" class="dkd-form">
+    ${D.field('E-posta', 'email', '', { type: 'email', required: true, placeholder: 'ornek@eposta.com', full: true })}
+    ${D.field('Şifre', 'password', '', { type: 'password', required: true, placeholder: '••••••••', full: true })}
+    <button class="dkd-btn dkd-btn-primary dkd-btn-block" type="submit">${D.icon('arrow')} Giriş Yap</button>
+  </form>`;
+
+  D.registerForm = () => `<form id="dkd-register-form" class="dkd-form">
+    <div class="dkd-choice-row" id="dkd-account-mode-choice">
+      <label class="dkd-choice is-active"><input type="radio" name="account_mode" value="customer" checked>
+        <span>${D.icon('bike', 24)}<b>Müşteriyim</b><small>Motorumu ve servis geçmişimi takip edeceğim.</small></span></label>
+      <label class="dkd-choice"><input type="radio" name="account_mode" value="staff">
+        <span>${D.icon('wrench', 24)}<b>Usta / İşletmeyim</b><small>Servis ve işletme paneli kullanacağım.</small></span></label>
+    </div>
+    ${D.field('Ad Soyad', 'full_name', '', { required: true, full: true })}
+    ${D.field('Telefon', 'phone', '', { type: 'tel', required: true })}
+    ${D.field('E-posta', 'email', '', { type: 'email', require
