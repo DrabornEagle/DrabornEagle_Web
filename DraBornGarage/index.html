@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#0b0d10" />
+  <meta name="description" content="DraBornGarage — motosiklet servisleri, ustalar ve müşteriler için canlı servis yönetim sistemi." />
+  <meta property="og:title" content="DraBornGarage" />
+  <meta property="og:description" content="İşletmeni, ustalarını, müşterilerini, randevularını ve servis süreçlerini tek merkezden yönet." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="/DraBornGarage/assets/dkd_icon.svg" />
+  <title>DraBornGarage</title>
+  <link rel="icon" href="/DraBornGarage/assets/dkd_icon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="/DraBornGarage/manifest.webmanifest" />
+  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_garage.css" />
+  <script>
+    (() => {
+      const saved = sessionStorage.getItem('dkd_garage_route');
+      if (saved) {
+        sessionStorage.removeItem('dkd_garage_route');
+        history.replaceState(null, '', saved);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <div id="dkd-app">
+    <div class="dkd-boot">
+      <div class="dkd-boot-logo">⚙</div>
+      <strong>DraBornGarage</strong>
+      <span>Garaj sistemi hazırlanıyor…</span>
+      <div class="dkd-loader"><i></i></div>
+    </div>
+  </div>
+  <div id="dkd-toast-root" aria-live="polite"></div>
+  <div id="dkd-modal-root"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2"></script>
+  <script src="/DraBornGarage/assets/dkd_core.js"></script>
+  <script src="/DraBornGarage/assets/dkd_customer.js"></script>
+  <script src="/DraBornGarage/assets/dkd_staff.js"></script>
+  <script src="/DraBornGarage/assets/dkd_garage.js"></script>
+</body>
+</html>
