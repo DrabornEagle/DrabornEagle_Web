@@ -1,0 +1,63 @@
+name: Stage Original Piston Garaj Poster
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stage-poster:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/draborngarage-piston-apk-v1.1
+          fetch-depth: 0
+
+      - name: Download original-resolution lossless poster
+        shell: bash
+        env:
+          POSTER_URL: "https://media.canva.com/v2/image-resize/format:PNG/height:1536/quality:100/uri:ifs%3A%2F%2FM%2F259f43c4-ed98-4914-bc9a-c2e4d6452d70/watermark:F/width:819?csig=AAAAAAAAAAAAAAAAAAAAAO5ojNImTv2MeEWbteayV4pIPFoPA-pxaWM-0Q4rsMgD&exp=1784401937&osig=AAAAAAAAAAAAAAAAAAAAAOlMFgGxQD9Dx7gCJHKZEvJRu7hltp5Xj3TjpyMyfJTo&signer=media-rpc&x-canva-quality=thumbnail"
+        run: |
+          set -euo pipefail
+          TARGET="DraBornGarage/PistonGaraj/APKindir/assets/poster.png"
+          mkdir -p "$(dirname "$TARGET")"
+          curl --fail --location --retry 3 --retry-delay 2 "$POSTER_URL" --output "$TARGET"
+          test -s "$TARGET"
+          file "$TARGET"
+          wc -c "$TARGET"
+
+      - name: Validate PNG dimensions
+        shell: python
+        run: |
+          from pathlib import Path
+          import struct
+
+          path = Path("DraBornGarage/PistonGaraj/APKindir/assets/poster.png")
+          data = path.read_bytes()
+          if not data.startswith(b"\x89PNG\r\n\x1a\n"):
+              raise SystemExit("Poster is not PNG")
+          width, height = struct.unpack(">II", data[16:24])
+          if (width, height) != (819, 1536):
+              raise SystemExit(f"Unexpected dimensions: {width}x{height}")
+          if len(data) < 500_000:
+              raise SystemExit(f"Poster file is unexpectedly small: {len(data)} bytes")
+          print(f"Validated lossless PNG {width}x{height}, {len(data)} bytes")
+
+      - name: Commit poster and clean staging files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf DraBornGarage/PistonGaraj/APKindir/source_exact
+          rm -f .github/workflows/draborngarage-piston-exact.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat(draborngarage): publish original-resolution Piston Garaj poster"
+          git push origin HEAD:feature/draborngarage-piston-apk-v1.1
