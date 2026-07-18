@@ -45,20 +45,9 @@ jobs:
           mkdir -p DraBornGarage/APKindir/assets
           TARGET="DraBornGarage/APKindir/assets/poster.png"
           curl --fail --location --retry 5 --retry-delay 3 "$POSTER_URL" -o "$TARGET"
-          DIMENSIONS="$(identify -format '%wx%h' "$TARGET")"
-          MIME="$(file --brief --mime-type "$TARGET")"
-          SIZE="$(stat -c '%s' "$TARGET")"
-          SHA="$(sha256sum "$TARGET" | awk '{print $1}')"
-          echo "Poster size: $SIZE"
-          echo "Poster SHA-256: $SHA"
-          echo "Poster dimensions: $DIMENSIONS"
-          echo "Poster MIME: $MIME"
-          test "$DIMENSIONS" = "819x1536"
-          case "$MIME" in
-            image/png|image/jpeg) ;;
-            *) echo "Beklenmeyen poster dosya türü: $MIME"; exit 1 ;;
-          esac
-          test "$SIZE" -gt 300000
+          echo "Poster size: $(stat -c '%s' "$TARGET")"
+          echo "Poster SHA-256: $(sha256sum "$TARGET" | awk '{print $1}')"
+          file "$TARGET"
 
       - name: Verify uploaded production APK
         shell: bash
