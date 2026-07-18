@@ -7,23 +7,30 @@ on:
       - main
     paths:
       - .github/release-triggers/draborngarage-apk-page
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/release-triggers/draborngarage-apk-page
 
 permissions:
   contents: write
 
 concurrency:
-  group: draborngarage-apk-download-assets
+  group: draborngarage-apk-download-assets-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: false
 
 jobs:
   publish-assets:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
     timeout-minutes: 25
     steps:
-      - name: Checkout web repository
+      - name: Checkout publishing branch
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
       - name: Prepare folders
         run: |
@@ -42,7 +49,7 @@ jobs:
           echo "Poster dimensions: $DIMENSIONS"
           test "$DIMENSIONS" = "819x1536"
 
-      - name: Download production APK
+      - name: Download and verify uploaded production APK
         shell: bash
         env:
           APK_URL: "https://github.com/DrabornEagle/DraBornGarage/releases/download/v1.0-apk-rc/DraBornGarage-v1.0-production.apk"
@@ -59,10 +66,11 @@ jobs:
           test "$ACTUAL_SIZE" = "$EXPECTED_SIZE"
           test "$ACTUAL_SHA256" = "$EXPECTED_SHA256"
 
-      - name: Commit verified assets
+      - name: Commit verified assets to publishing branch
         shell: bash
         run: |
           set -euo pipefail
+          TARGET_BRANCH="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add DraBornGarage/APKindir/assets/poster.png
@@ -72,4 +80,4 @@ jobs:
             exit 0
           fi
           git commit -m "feat(draborngarage): publish verified APK download assets"
-          git push
+          git push origin "HEAD:${TARGET_BRANCH}"
