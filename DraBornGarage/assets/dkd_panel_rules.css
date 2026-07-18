@@ -1,0 +1,9 @@
+/* DraBornGarage panel visibility + incremental list rules */
+.dkd-rule-quick-hidden{display:none!important}
+.dkd-paged-item[hidden]{display:none!important}
+.dkd-inline-pagination{display:flex;justify-content:center;padding:18px 0 4px}
+.dkd-more-button{min-width:190px!important;justify-content:center;gap:12px!important;border-color:rgba(255,91,0,.22)!important;background:linear-gradient(145deg,rgba(255,91,0,.09),rgba(255,255,255,.025))!important}
+.dkd-more-button b{display:inline-grid;place-items:center;min-width:35px;height:27px;padding:0 9px;border-radius:999px;background:linear-gradient(135deg,#ff6800,#ff2f00);color:#fff;font-size:11px;box-shadow:0 8px 22px rgba(255,67,0,.23)}
+.dkd-more-link{color:#ff7130!important;text-decoration:none!important}
+.dkd-more-link[hidden],.dkd-more-button[hidden]{display:none!important}
+@media(max-width:560px){.dkd-inline-pagination{padding-top:15px}.dkd-more-button{width:100%;min-height:54px!important}}
