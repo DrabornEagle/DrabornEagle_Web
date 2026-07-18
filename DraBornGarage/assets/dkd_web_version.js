@@ -5,7 +5,9 @@
   const VERSION_PATTERN = /\bWEB\s+v?1\.0\b/gi;
 
   function updateTextNode(node) {
-    if (!node?.nodeValue || !VERSION_PATTERN.test(node.nodeValue)) return;
+    if (!node?.nodeValue) return;
+    VERSION_PATTERN.lastIndex = 0;
+    if (!VERSION_PATTERN.test(node.nodeValue)) return;
     VERSION_PATTERN.lastIndex = 0;
     node.nodeValue = node.nodeValue.replace(VERSION_PATTERN, `WEB v${VERSION}`);
   }
@@ -13,10 +15,12 @@
   function scan(root = document.body) {
     if (!root) return;
     document.documentElement.dataset.webVersion = VERSION;
+
     if (root.nodeType === Node.TEXT_NODE) {
       updateTextNode(root);
       return;
     }
+
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
     while (walker.nextNode()) updateTextNode(walker.currentNode);
   }
