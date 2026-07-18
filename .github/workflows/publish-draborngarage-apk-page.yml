@@ -39,7 +39,7 @@ jobs:
       - name: Download original Canva source PNG without recompression
         shell: bash
         env:
-          POSTER_URL: "https://s3.amazonaws.com/document-export.canva.com/H7o24/DAHPuYH7o24/1/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHXSTDDERN%2F20260717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260717T210241Z&X-Amz-Expires=53079&X-Amz-Signature=84538301d71d06dca0c2ff81515894268fc740dea8f9cb624ad3ba23b825ed5a&X-Amz-SignedHeaders=host&response-expires=Sat%2C%2018%20Jul%202026%2011%3A47%3A20%20GMT"
+          POSTER_URL: "https://s3.amazonaws.com/document-export.canva.com/H7o24/DAHPuYH7o24/1/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHXSTDDERN%2F20260717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260717T210241Z&X-Amz-Expires=53280&X-Amz-Signature=099d9511b52efdaed798ad5ed5780067d239eac1d75011837b24126d2d6c3b13&X-Amz-SignedHeaders=host"
         run: |
           set -euo pipefail
           mkdir -p DraBornGarage/APKindir/assets
