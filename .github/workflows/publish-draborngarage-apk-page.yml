@@ -4,14 +4,18 @@ on:
   workflow_dispatch:
   push:
     branches:
+      - automation/draborngarage-finalize
       - main
     paths:
+      - .github/workflows/publish-draborngarage-apk-page.yml
       - .github/release-triggers/draborngarage-apk-page
   pull_request:
     branches:
       - main
     paths:
+      - .github/workflows/publish-draborngarage-apk-page.yml
       - .github/release-triggers/draborngarage-apk-page
+      - DraBornGarage/APKindir/**
 
 permissions:
   contents: write
@@ -33,26 +37,23 @@ jobs:
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
       - name: Prepare folders
-        run: |
-          mkdir -p DraBornGarage/APKindir/assets
-          mkdir -p DraBornGarage/APKindir/files
+        run: mkdir -p DraBornGarage/APKindir/assets
 
-      - name: Rebuild and verify original uploaded poster
+      - name: Download and verify exact uploaded poster
         shell: bash
         env:
           EXPECTED_POSTER_SHA256: "27679d020e94a5ab6e31499b01416b2c607fa49461aab4cde22cfb3583c5b791"
           EXPECTED_POSTER_SIZE: "353853"
+          POSTER_URL: "https://media.canva.com/v2/document-image/hash:546206831/height:1536/id:DAHPuYH7o24/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAGsN20yEqMk-fvn4Ndg7xmDeVl3jWd_JojRxe7aNuNzk&disableexport=T&exp=1784375240&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FH7o24%2FDAHPuYH7o24%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260717%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260717T210241Z%26X-Amz-Expires%3D53079%26X-Amz-Signature%3D84538301d71d06dca0c2ff81515894268fc740dea8f9cb624ad3ba23b825ed5a%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252011%253A47%253A20%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAABt3YncNCak3u7jgK4ewO1wBsfW83LZ1yiL1a9hfs0O3&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1"
         run: |
           set -euo pipefail
-          SOURCE_DIR="DraBornGarage/APKindir/source"
           TARGET="DraBornGarage/APKindir/assets/poster.jpg"
-          test -f "$SOURCE_DIR/READY"
-          test "$(find "$SOURCE_DIR" -maxdepth 1 -type f -name 'poster_*.b64' | wc -l)" = "30"
-          cat "$SOURCE_DIR"/poster_*.b64 | tr -d '\r\n' | base64 --decode > "$TARGET"
-          ACTUAL_SIZE="$(stat -c '%s' "$TARGET")"
-          ACTUAL_SHA256="$(sha256sum "$TARGET" | awk '{print $1}')"
-          DIMENSIONS="$(identify -format '%wx%h' "$TARGET")"
-          MIME="$(file --brief --mime-type "$TARGET")"
+          TEMP="${RUNNER_TEMP}/draborngarage-poster"
+          curl --fail --location --retry 5 --retry-delay 3 "$POSTER_URL" -o "$TEMP"
+          ACTUAL_SIZE="$(stat -c '%s' "$TEMP")"
+          ACTUAL_SHA256="$(sha256sum "$TEMP" | awk '{print $1}')"
+          DIMENSIONS="$(identify -format '%wx%h' "$TEMP")"
+          MIME="$(file --brief --mime-type "$TEMP")"
           echo "Poster size: $ACTUAL_SIZE"
           echo "Poster SHA-256: $ACTUAL_SHA256"
           echo "Poster dimensions: $DIMENSIONS"
@@ -61,8 +62,9 @@ jobs:
           test "$ACTUAL_SHA256" = "$EXPECTED_POSTER_SHA256"
           test "$DIMENSIONS" = "819x1536"
           test "$MIME" = "image/jpeg"
+          mv "$TEMP" "$TARGET"
 
-      - name: Download and verify uploaded production APK
+      - name: Verify uploaded production APK
         shell: bash
         env:
           APK_URL: "https://github.com/DrabornEagle/DraBornGarage/releases/download/v1.0-apk-rc/DraBornGarage-v1.0-production.apk"
@@ -70,7 +72,7 @@ jobs:
           EXPECTED_SIZE: "103411037"
         run: |
           set -euo pipefail
-          TARGET="DraBornGarage/APKindir/files/DraBornGarage-v1.0-production.apk"
+          TARGET="${RUNNER_TEMP}/DraBornGarage-v1.0-production.apk"
           curl --fail --location --retry 5 --retry-delay 5 "$APK_URL" -o "$TARGET"
           ACTUAL_SIZE="$(stat -c '%s' "$TARGET")"
           ACTUAL_SHA256="$(sha256sum "$TARGET" | awk '{print $1}')"
@@ -79,20 +81,17 @@ jobs:
           test "$ACTUAL_SIZE" = "$EXPECTED_SIZE"
           test "$ACTUAL_SHA256" = "$EXPECTED_SHA256"
 
-      - name: Commit verified assets to publishing branch
+      - name: Commit verified poster to publishing branch
         shell: bash
         run: |
           set -euo pipefail
           TARGET_BRANCH="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
-          rm -rf DraBornGarage/APKindir/source
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A DraBornGarage/APKindir/source
           git add DraBornGarage/APKindir/assets/poster.jpg
-          git add DraBornGarage/APKindir/files/DraBornGarage-v1.0-production.apk
           if git diff --cached --quiet; then
-            echo "Assets already current."
+            echo "Poster already current."
             exit 0
           fi
-          git commit -m "feat(draborngarage): publish verified APK download assets"
+          git commit -m "feat(draborngarage): publish verified APK poster"
           git push origin "HEAD:${TARGET_BRANCH}"
