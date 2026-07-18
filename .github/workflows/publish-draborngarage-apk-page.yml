@@ -1,0 +1,75 @@
+name: Publish DraBornGarage APK Download Assets
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - .github/release-triggers/draborngarage-apk-page
+
+permissions:
+  contents: write
+
+concurrency:
+  group: draborngarage-apk-download-assets
+  cancel-in-progress: false
+
+jobs:
+  publish-assets:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Checkout web repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Prepare folders
+        run: |
+          mkdir -p DraBornGarage/APKindir/assets
+          mkdir -p DraBornGarage/APKindir/files
+
+      - name: Download original poster without resizing
+        shell: bash
+        env:
+          POSTER_URL: "https://media.canva.com/v2/document-image/hash:546206831/height:1536/id:DAHPuYH7o24/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAA8LwF4HfUiQPhbsIH70njQzvaUGkBaag05K6F4-0IfZ&disableexport=T&exp=1784371516&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FH7o24%2FDAHPuYH7o24%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260717%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260717T210241Z%26X-Amz-Expires%3D49355%26X-Amz-Signature%3D4ab362ae5f82617b63dfd7dba5608706aa9fb3a635eb5070965b197ada3973a5%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252010%253A45%253A16%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAHFC78ztYhyo1vHzZ-pom0eekGv7szYIj5cKXAAy9TkM&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1"
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 4 --retry-delay 3 "$POSTER_URL" -o DraBornGarage/APKindir/assets/poster.png
+          file DraBornGarage/APKindir/assets/poster.png
+          DIMENSIONS="$(identify -format '%wx%h' DraBornGarage/APKindir/assets/poster.png)"
+          echo "Poster dimensions: $DIMENSIONS"
+          test "$DIMENSIONS" = "819x1536"
+
+      - name: Download production APK
+        shell: bash
+        env:
+          APK_URL: "https://github.com/DrabornEagle/DraBornGarage/releases/download/v1.0-apk-rc/DraBornGarage-v1.0-production.apk"
+          EXPECTED_SHA256: "a2318284cf1ab7f2b3061e5705e9fd9768ffda151fff9ca6befe5ed292fc1bd6"
+          EXPECTED_SIZE: "103411037"
+        run: |
+          set -euo pipefail
+          TARGET="DraBornGarage/APKindir/files/DraBornGarage-v1.0-production.apk"
+          curl --fail --location --retry 5 --retry-delay 5 "$APK_URL" -o "$TARGET"
+          ACTUAL_SIZE="$(stat -c '%s' "$TARGET")"
+          ACTUAL_SHA256="$(sha256sum "$TARGET" | awk '{print $1}')"
+          echo "APK size: $ACTUAL_SIZE"
+          echo "APK SHA-256: $ACTUAL_SHA256"
+          test "$ACTUAL_SIZE" = "$EXPECTED_SIZE"
+          test "$ACTUAL_SHA256" = "$EXPECTED_SHA256"
+
+      - name: Commit verified assets
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DraBornGarage/APKindir/assets/poster.png
+          git add DraBornGarage/APKindir/files/DraBornGarage-v1.0-production.apk
+          if git diff --cached --quiet; then
+            echo "Assets already current."
+            exit 0
+          fi
+          git commit -m "feat(draborngarage): publish verified APK download assets"
+          git push
