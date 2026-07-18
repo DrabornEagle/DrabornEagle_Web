@@ -1,51 +1,41 @@
 # DraBornGarage Web v1.0
 
-DraBornGarage mobil uygulamasının aynı Supabase projesiyle çalışan, GitHub Pages uyumlu web sürümüdür.
+DraBornGarage mobil uygulamasının aynı Supabase projesi, kullanıcı hesapları ve canlı verileriyle çalışan GitHub Pages web sürümüdür.
 
-## Canlı adres
+## Adresler
 
 - Ana sayfa: `https://www.draborneagle.com/DraBornGarage/`
-- İşletme: `https://www.draborneagle.com/DraBornGarage/<isletme-baglanti-adi>`
-- Usta: `https://www.draborneagle.com/DraBornGarage/<isletme-baglanti-adi>/<usta-baglanti-adi>`
+- İşletme: `/DraBornGarage/<isletme-baglanti-adi>`
+- Usta: `/DraBornGarage/<isletme-baglanti-adi>/<usta-baglanti-adi>`
 
-Bağlantı adları güvenli URL biçimine otomatik dönüştürülür. İşletme ve usta profilleri varsayılan olarak **taslak** oluşturulur; işletme sahibi panelden yayınlamadan dışarı açılmaz.
+İşletme ve usta profilleri önce taslak oluşturulur. İşletme sahibi Web Profili ekranından yayınlamadan halka açılmaz.
 
-## Uygulamayla ortak çalışan modüller
+## Senkron modüller
 
-- Aynı e-posta/şifre ve Supabase Auth oturumu
-- İşletme sahibi, işletme sahibi + usta, usta, çırak ve müşteri rolleri
-- İş emirleri, servis durumları, işlem ve parça kalemleri
-- Teşhis, iç not, müşteri notu ve servis geçmişi
-- Nakit / IBAN tahsilatı ve açık hesap takibi
-- Müşteri ve motosiklet kayıtları
-- KM, plaka, servis sayısı ve geçmiş
-- Randevu oluşturma, onay, geldi ve iptal akışı
-- QR, kayıt kodu, takip kodu ve usta onayıyla müşteri eşleştirme
-- Usta kişisel raporu ve işletme raporu
-- Ekip rolü, aktiflik ve erişim başvuruları
-- İşletme ve usta için yayınlanabilir web profilleri
-- Supabase Realtime ile panel yenileme
+- Supabase Auth ve mobil uygulamayla ortak oturum
+- İşletme sahibi, sahip + usta, usta, çırak ve müşteri rolleri
+- İş emirleri, durumlar, hizmet/parça/not/teşhis yönetimi
+- Nakit–IBAN tahsilatı, açık hesap ve alacak takibi
+- Müşteri, motosiklet, kilometre ve servis geçmişi
+- Randevu oluşturma, onay, geldi, iptal ve servise dönüştürme
+- Kayıt kodu, takip kodu, telefon ve usta onayıyla eşleştirme
+- Kişisel usta ve işletme raporları
+- Ekip rolleri, erişim başvuruları ve davet kodları
+- Supabase Realtime panel yenilemesi
+- Yayınlanabilir işletme ve usta web sayfaları
 
-## Web sürümünden ayrılan mobil özellikler
+## Webden ayrılan mobil özellikler
 
-- Expo / FCM push bildirimi
-- Bildirim kanal ve cihaz token yönetimi
-- Mobil bildirim sesi ve haptik
-- Kamera tabanlı QR tarama
+Expo/FCM push, cihaz tokenı, bildirim sesi, haptik ve kamera QR tarama web paketine alınmadı. Manuel QR/kod girişi korunur.
 
-Webde kod girişi korunur. Mobil uygulama push bildirimlerini ve kamera taramasını kullanmaya devam eder.
+## Yapı
 
-## Dosyalar
-
-- `index.html`: GitHub Pages uygulama girişi
-- `assets/dkd_bundle_loader.js`: sıkıştırılmış üretim modüllerini sırasıyla yükler
-- `assets/chunks/core_*.txt`: oturum, yönlendirme, ortak bileşenler ve halka açık sayfalar
-- `assets/chunks/customer_*.txt`: müşteri paneli
-- `assets/chunks/staff_*.txt`: işletme, usta ve çırak paneli
-- `assets/chunks/garage_*.txt`: başlangıç, oturum ve Realtime dinleyicisi
-- `assets/dkd_garage.css`: responsive garaj/tamir teması
-- `supabase/*.sql`: web profil ve kayıt kodu migrations
+- `index.html`: uygulama girişi
+- `assets/dkd_bundle_loader.js`: üretim yükleyicisi
+- `assets/chunks_v3/`: doğrulanmış sıkıştırılmış modüller
+- `assets/dkd_garage.css`: responsive garaj teması
+- `supabase/README.md`: uygulanan web veritabanı katmanı
 
 ## Güvenlik
 
-Tarayıcıda yalnızca Supabase publishable key bulunur. `service_role` anahtarı kullanılmaz. Tüm kişisel ve işletme verileri mevcut RLS/RPC kurallarıyla korunur. Halka açık sayfalar doğrudan tablolara erişmez; yalnızca yayınlanmış ve filtrelenmiş alanları döndüren `web_get_public_profile` RPC işlevini kullanır.
+Tarayıcıda yalnızca Supabase publishable key kullanılır. `service_role` bulunmaz. Kişisel veriler mevcut RLS/RPC yetkileriyle korunur; halka açık sayfalar yalnızca yayınlanmış filtreli profil RPC’sini okur.
