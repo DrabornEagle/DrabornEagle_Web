@@ -57,7 +57,7 @@
     <a class="back" href="/DraBornGarage/" aria-label="DraBornGarage ana sayfasına dön">‹</a>
     <section class="poster" aria-label="DraBornGarage APK indirme posteri">
       <div class="loading"><i></i><span>Görsel yükleniyor…</span></div>
-      <img src="/DraBornGarage/APKindir/assets/poster.png?v=1.0" width="819" height="1536" alt="DraBornGarage Garage APK İndir" />
+      <img id="apkPoster" src="/DraBornGarage/APKindir/assets/poster.png?v=1.0" width="819" height="1536" alt="DraBornGarage Garage APK İndir" />
       <button class="download-hotspot" id="openDownload" type="button" aria-label="APK indirme seçeneklerini aç"></button>
     </section>
   </main>
@@ -74,7 +74,7 @@
           <span class="ico">▦</span>
           <span><strong>QR Okutarak İndir</strong><small>Başka bir telefonun kamerasıyla okut.</small></span>
         </button>
-        <a class="option instant" href="/DraBornGarage/APKindir/files/DraBornGarage-v1.0-production.apk" download="DraBornGarage-v1.0-production.apk">
+        <a class="option instant" href="https://github.com/DrabornEagle/DraBornGarage/releases/download/v1.0-apk-rc/DraBornGarage-v1.0-production.apk">
           <span class="ico">⇩</span>
           <span><strong>Hemen İndir</strong><small>APK dosyasını bu telefona indir.</small></span>
         </a>
@@ -85,7 +85,7 @@
         <p>QR kodu açan telefonda DraBornGarage v1.0 APK indirmesi başlayacak.</p>
         <div class="qr-actions">
           <button type="button" id="backOptions">Geri</button>
-          <a href="/DraBornGarage/APKindir/files/DraBornGarage-v1.0-production.apk" download>Bu Telefona İndir</a>
+          <a href="https://github.com/DrabornEagle/DraBornGarage/releases/download/v1.0-apk-rc/DraBornGarage-v1.0-production.apk">Bu Telefona İndir</a>
         </div>
       </div>
     </section>
@@ -93,6 +93,9 @@
 
   <script>
     (()=>{
+      const POSTER_FALLBACK='https://media.canva.com/v2/document-image/hash:546206831/height:1536/id:DAHPuYH7o24/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAA8LwF4HfUiQPhbsIH70njQzvaUGkBaag05K6F4-0IfZ&disableexport=T&exp=1784371516&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FH7o24%2FDAHPuYH7o24%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260717%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260717T210241Z%26X-Amz-Expires%3D49355%26X-Amz-Signature%3D4ab362ae5f82617b63dfd7dba5608706aa9fb3a635eb5070965b197ada3973a5%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252010%253A45%253A16%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAHFC78ztYhyo1vHzZ-pom0eekGv7szYIj5cKXAAy9TkM&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1';
+      const poster=document.getElementById('apkPoster');
+      poster.addEventListener('error',()=>{if(poster.dataset.fallback)return;poster.dataset.fallback='1';poster.src=POSTER_FALLBACK});
       const modal=document.getElementById('downloadModal');
       const options=document.getElementById('downloadOptions');
       const qr=document.getElementById('qrPanel');
