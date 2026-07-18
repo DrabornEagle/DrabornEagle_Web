@@ -1,4 +1,4 @@
-name: Inspect DraBornGarage Staff Bundle
+name: Inspect DraBornGarage Web Bundles
 
 on:
   push:
@@ -24,20 +24,22 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rebuild staff source
+      - name: Rebuild web sources
         shell: bash
         run: |
           set -euo pipefail
-          cat DraBornGarage/assets/chunks_v3/staff_*.txt | tr -d '\r\n' | base64 --decode | gzip --decompress > dkd_staff.js
-          sha256sum dkd_staff.js
-          rg -n -C 30 'Hızlı Servis|Bırakılan Motor' dkd_staff.js | tee staff-matches.txt || true
+          mkdir -p reconstructed
+          for module in core customer staff garage; do
+            cat DraBornGarage/assets/chunks_v3/${module}_*.txt | tr -d '\r\n' | base64 --decode | gzip --decompress > reconstructed/dkd_${module}.js
+            sha256sum reconstructed/dkd_${module}.js
+          done
+          rg -n -C 40 'Hızlı Servis|Bırakılan Motor' reconstructed | tee reconstructed/matches.txt || true
+          rg -n -C 20 -i 'hızlı.*servis|bırakılan.*motor|quick.*service|dropped.*motor' reconstructed | tee reconstructed/related.txt || true
 
-      - name: Upload reconstructed source
+      - name: Upload reconstructed sources
         uses: actions/upload-artifact@v4
         with:
-          name: draborngarage-staff-source
-          path: |
-            dkd_staff.js
-            staff-matches.txt
+          name: draborngarage-web-sources
+          path: reconstructed/
           if-no-files-found: error
           retention-days: 1
