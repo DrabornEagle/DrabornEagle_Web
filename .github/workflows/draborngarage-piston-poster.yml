@@ -4,9 +4,6 @@ on:
   push:
     branches:
       - feature/draborngarage-piston-apk-v1.1
-  pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 permissions:
@@ -26,7 +23,7 @@ jobs:
       - name: Download full-resolution poster
         shell: bash
         env:
-          POSTER_URL: "https://media.canva.com/v2/document-image/hash:-48349259/height:1536/id:DAHPvdrsP3M/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAEKXjAeETgJ3Ku32uf-gtPIUMOWx1PxovC4ISDr5qitv&disableexport=T&exp=1784384098&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FrsP3M%2FDAHPvdrsP3M%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260718%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260718T073931Z%26X-Amz-Expires%3D23727%26X-Amz-Signature%3Dacc2f659029dd1cc6a1824b945c46965902afa998034e90dc423fcf0a2e5e116%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252014%253A14%253A58%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAALTJc4kKC6dnkGPPqUpcBaNYDpJvvnTMU4Ke_kVmXOwk&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1"
+          POSTER_URL: "https://design-manipulation-download.canva.com/a81efdcb-73cf-461e-800d-de4fefd44dfb/0000-4134814348543274995.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHWASWGM4Q%2F20260718%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260718T034216Z&X-Amz-Expires=42132&X-Amz-Signature=f85cd1a3aa53ca71c3ed89bf6bc85b4c093fc5e774f44f2cf06db91c0f06309e&X-Amz-SignedHeaders=host%3Bx-amz-expected-bucket-owner&response-expires=Sat%2C%2018%20Jul%202026%2015%3A24%3A28%20GMT"
         run: |
           set -euo pipefail
           mkdir -p DraBornGarage/PistonGaraj/APKindir/assets
@@ -79,6 +76,6 @@ jobs:
           rm -f .github/workflows/draborngarage-piston-poster.yml
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add DraBornGarage/PistonGaraj/APKindir .github/workflows/draborngarage-piston-poster.yml
+          git add -A DraBornGarage/PistonGaraj/APKindir .github/workflows/draborngarage-piston-poster.yml
           git commit -m "feat(draborngarage): add full-resolution Piston Garaj poster"
           git push origin HEAD:feature/draborngarage-piston-apk-v1.1
