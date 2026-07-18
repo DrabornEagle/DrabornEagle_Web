@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - feature/draborngarage-piston-apk-v1.1
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
