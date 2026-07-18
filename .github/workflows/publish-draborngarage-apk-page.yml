@@ -1,76 +1,26 @@
-name: Publish DraBornGarage APK Download Assets
+name: Verify DraBornGarage APK Download
 
 on:
-  workflow_dispatch:
   push:
     branches:
       - automation/draborngarage-finalize
-      - main
     paths:
       - .github/workflows/publish-draborngarage-apk-page.yml
-      - .github/release-triggers/draborngarage-apk-page
-  pull_request:
-    branches:
-      - main
-    paths:
-      - .github/workflows/publish-draborngarage-apk-page.yml
-      - .github/release-triggers/draborngarage-apk-page
-      - DraBornGarage/APKindir/**
 
 permissions:
-  contents: write
-
-concurrency:
-  group: draborngarage-apk-download-assets-${{ github.event.pull_request.number || github.ref }}
-  cancel-in-progress: false
+  contents: read
 
 jobs:
-  publish-assets:
-    if: github.actor != 'github-actions[bot]'
+  verify-apk:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     env:
       GH_TOKEN: ${{ github.token }}
+      EXPECTED_SHA256: "a2318284cf1ab7f2b3061e5705e9fd9768ffda151fff9ca6befe5ed292fc1bd6"
+      EXPECTED_SIZE: "103411037"
     steps:
-      - name: Checkout publishing branch
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
-
-      - name: Download original uploaded poster without recompression
+      - name: Download and verify production APK from GitHub Release
         shell: bash
-        env:
-          POSTER_URL: "https://s3.amazonaws.com/document-export.canva.com/H7o24/DAHPuYH7o24/1/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHXSTDDERN%2F20260717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260717T210241Z&X-Amz-Expires=53079&X-Amz-Signature=84538301d71d06dca0c2ff81515894268fc740dea8f9cb624ad3ba23b825ed5a&X-Amz-SignedHeaders=host&response-expires=Sat%2C%2018%20Jul%202026%2011%3A47%3A20%20GMT"
-        run: |
-          set -euo pipefail
-          mkdir -p DraBornGarage/APKindir/assets
-          TARGET="DraBornGarage/APKindir/assets/poster.png"
-          curl --fail --location --retry 5 --retry-delay 3 "$POSTER_URL" -o "$TARGET"
-          echo "Poster size: $(stat -c '%s' "$TARGET")"
-          echo "Poster SHA-256: $(sha256sum "$TARGET" | awk '{print $1}')"
-          file "$TARGET"
-
-      - name: Commit original poster to publishing branch
-        shell: bash
-        run: |
-          set -euo pipefail
-          TARGET_BRANCH="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add DraBornGarage/APKindir/assets/poster.png
-          if ! git diff --cached --quiet; then
-            git commit -m "feat(draborngarage): publish original full-resolution APK poster"
-            git push origin "HEAD:${TARGET_BRANCH}"
-          else
-            echo "Poster already current."
-          fi
-
-      - name: Download APK from GitHub Release API
-        shell: bash
-        env:
-          EXPECTED_SHA256: "a2318284cf1ab7f2b3061e5705e9fd9768ffda151fff9ca6befe5ed292fc1bd6"
-          EXPECTED_SIZE: "103411037"
         run: |
           set -euo pipefail
           RELEASE_REPO="DrabornEagle/DraBornGarage"
