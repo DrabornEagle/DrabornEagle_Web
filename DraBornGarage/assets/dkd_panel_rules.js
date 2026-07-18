@@ -13,7 +13,13 @@
     .trim()
     .toLocaleLowerCase('tr-TR');
 
-  const isTargetTitle = (element) => SECTION_LABELS.includes(normalize(element.textContent));
+  function titleText(element) {
+    const copy = element.cloneNode(true);
+    copy.querySelectorAll?.('.dkd-live-pill').forEach((pill) => pill.remove());
+    return normalize(copy.textContent);
+  }
+
+  const isTargetTitle = (element) => SECTION_LABELS.includes(titleText(element));
 
   function panelMode() {
     const active = document.querySelector('.dkd-panel-switch button.active');
@@ -50,7 +56,7 @@
     }
 
     if (mode === 'business') {
-      content.querySelectorAll('.dkd-page-actions .dkd-btn,.dkd-page-actions button,.dkd-page-actions a').forEach((control) => {
+      content.querySelectorAll('.dkd-btn,button,a').forEach((control) => {
         if (normalize(control.textContent).includes('hızlı servis')) {
           control.classList.add('dkd-rule-quick-hidden');
           control.setAttribute('aria-hidden', 'true');
@@ -72,7 +78,7 @@
   }
 
   function sectionKey(title, occurrence) {
-    return `${location.pathname}|${normalize(title.textContent)}|${occurrence}`;
+    return `${location.pathname}|${titleText(title)}|${occurrence}`;
   }
 
   function nextTargetHeading(title, scope) {
@@ -154,7 +160,7 @@
     const counts = new Map();
 
     headings.forEach((title) => {
-      const label = normalize(title.textContent);
+      const label = titleText(title);
       const occurrence = counts.get(label) || 0;
       counts.set(label, occurrence + 1);
       const key = sectionKey(title, occurrence);
