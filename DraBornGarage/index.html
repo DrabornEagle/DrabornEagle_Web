@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="tr" data-web-version="1.3">
+<html lang="tr" data-web-version="1.4">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
@@ -12,10 +12,92 @@
   <title>DraBornGarage</title>
   <link rel="icon" href="/DraBornGarage/assets/dkd_icon.svg" type="image/svg+xml" />
   <link rel="manifest" href="/DraBornGarage/manifest.webmanifest" />
-  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_garage.css" />
-  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_premium_core.css?cache=20260718-v1.3" />
-  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_premium_motion.css?cache=20260718-v1.3" />
-  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_panel_rules.css?cache=20260718-v1.3" />
+  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_garage.css?cache=20260718-v1.4" />
+  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_premium_core.css?cache=20260718-v1.4" />
+  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_premium_motion.css?cache=20260718-v1.4" />
+  <link rel="stylesheet" href="/DraBornGarage/assets/dkd_panel_rules.css?cache=20260718-v1.4" />
+  <style>
+    .dkd-boot{
+      position:relative!important;
+      min-height:100dvh!important;
+      display:flex!important;
+      flex-direction:column!important;
+      align-items:center!important;
+      justify-content:center!important;
+      gap:0!important;
+      padding:34px 24px!important;
+      overflow:hidden!important;
+      text-align:center!important;
+      isolation:isolate;
+      background:
+        radial-gradient(circle at 15% 15%,rgba(255,65,0,.24),transparent 34%),
+        radial-gradient(circle at 90% 12%,rgba(0,194,255,.20),transparent 32%),
+        radial-gradient(circle at 50% 95%,rgba(132,50,255,.18),transparent 38%),
+        linear-gradient(155deg,#07090e 0%,#0b0d17 48%,#080713 100%)!important;
+    }
+    .dkd-boot:before,.dkd-boot:after{
+      content:"";position:absolute;border-radius:50%;filter:blur(42px);opacity:.62;z-index:-1;
+      animation:dkdBootFloat 5.5s ease-in-out infinite alternate;
+    }
+    .dkd-boot:before{width:220px;height:220px;left:-85px;top:15%;background:#ff4d00}
+    .dkd-boot:after{width:250px;height:250px;right:-110px;bottom:10%;background:#5237ff;animation-delay:-2.2s}
+    .dkd-boot-grid{
+      position:absolute;inset:0;z-index:-1;opacity:.13;
+      background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);
+      background-size:32px 32px;
+      mask-image:linear-gradient(to bottom,transparent 0,#000 35%,#000 78%,transparent 100%);
+    }
+    .dkd-boot-badge{
+      display:inline-flex;align-items:center;gap:8px;margin-bottom:24px;padding:8px 13px;border:1px solid rgba(255,255,255,.14);
+      border-radius:999px;background:rgba(255,255,255,.055);backdrop-filter:blur(14px);color:#d9ddea;font-size:11px;font-weight:900;letter-spacing:1.5px;
+      box-shadow:inset 0 1px 0 rgba(255,255,255,.08)
+    }
+    .dkd-boot-badge i{width:8px;height:8px;border-radius:50%;background:#31e981;box-shadow:0 0 16px #31e981;animation:dkdPulse 1.1s infinite}
+    .dkd-boot-stage{
+      position:relative;width:min(100%,390px);height:172px;margin-bottom:10px;border:1px solid rgba(255,255,255,.10);border-radius:34px;
+      background:linear-gradient(145deg,rgba(255,255,255,.075),rgba(255,255,255,.02));backdrop-filter:blur(18px);
+      box-shadow:0 28px 90px rgba(0,0,0,.46),inset 0 1px 0 rgba(255,255,255,.10);overflow:hidden
+    }
+    .dkd-boot-stage:before{
+      content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 72%,rgba(255,94,0,.28),transparent 40%),linear-gradient(110deg,transparent 15%,rgba(0,194,255,.08),transparent 70%)
+    }
+    .dkd-boot-ring{
+      position:absolute;left:50%;top:22px;width:96px;height:96px;transform:translateX(-50%);border-radius:50%;
+      border:2px solid rgba(255,255,255,.10);box-shadow:0 0 0 10px rgba(255,255,255,.025),0 0 45px rgba(255,72,0,.24)
+    }
+    .dkd-boot-ring:before,.dkd-boot-ring:after{content:"";position:absolute;inset:-2px;border-radius:inherit;border:2px solid transparent}
+    .dkd-boot-ring:before{border-top-color:#ff5b00;border-right-color:#ff2f9d;animation:dkdSpin 1.5s linear infinite}
+    .dkd-boot-ring:after{inset:10px;border-bottom-color:#00c2ff;border-left-color:#7d4dff;animation:dkdSpinReverse 2s linear infinite}
+    .dkd-boot-gear{position:absolute;left:50%;top:47px;transform:translateX(-50%);font-size:42px;filter:drop-shadow(0 0 18px rgba(255,255,255,.28));animation:dkdGear 2.8s linear infinite}
+    .dkd-road{position:absolute;left:24px;right:24px;bottom:24px;height:34px;border-radius:999px;background:linear-gradient(180deg,#20242d,#10131a);box-shadow:inset 0 2px 0 rgba(255,255,255,.05),0 12px 28px rgba(0,0,0,.34);overflow:hidden}
+    .dkd-road:after{content:"";position:absolute;left:-55%;top:15px;width:210%;height:4px;background:repeating-linear-gradient(90deg,#ffd33d 0 30px,transparent 30px 52px);animation:dkdRoad 1.1s linear infinite}
+    .dkd-bike{
+      position:absolute;left:30px;bottom:39px;z-index:3;font-size:53px;line-height:1;filter:drop-shadow(0 11px 10px rgba(0,0,0,.55)) drop-shadow(0 0 15px rgba(255,80,0,.30));
+      animation:dkdRide 2.25s cubic-bezier(.45,.02,.55,.98) infinite
+    }
+    .dkd-bike-smoke{position:absolute;bottom:54px;left:34px;width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.5);filter:blur(1px);animation:dkdSmoke 1.15s ease-out infinite}
+    .dkd-boot-title{margin:15px 0 7px!important;font-size:clamp(34px,8vw,48px)!important;line-height:1!important;letter-spacing:-2px!important;color:#fff!important;text-shadow:0 12px 35px rgba(0,0,0,.44)}
+    .dkd-boot-title em{font-style:normal;background:linear-gradient(90deg,#ff6a00,#ff2f9d 48%,#00c2ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .dkd-boot-copy{margin:0!important;color:#aeb7c6!important;font-size:15px!important;line-height:1.5!important}
+    .dkd-boot-version{margin-top:10px;color:#6f7a8c;font-size:11px;font-weight:900;letter-spacing:1.4px}
+    .dkd-loader{position:relative;width:min(82vw,330px)!important;height:9px!important;margin-top:25px!important;border-radius:999px!important;overflow:hidden!important;background:#171c26!important;border:1px solid rgba(255,255,255,.07)!important;box-shadow:inset 0 2px 4px rgba(0,0,0,.36)!important}
+    .dkd-loader i{display:block!important;width:48%!important;height:100%!important;border-radius:inherit!important;background:linear-gradient(90deg,#ff5b00,#ff2f9d,#7d4dff,#00c2ff)!important;background-size:220% 100%!important;box-shadow:0 0 20px rgba(255,47,157,.52)!important;animation:dkdLoadRide 1.45s cubic-bezier(.6,.05,.35,1) infinite!important}
+    .dkd-loading-dots{display:flex;gap:7px;margin-top:14px}
+    .dkd-loading-dots i{width:6px;height:6px;border-radius:50%;background:#778195;animation:dkdDot 1.1s infinite ease-in-out}
+    .dkd-loading-dots i:nth-child(2){animation-delay:.16s}.dkd-loading-dots i:nth-child(3){animation-delay:.32s}
+    @keyframes dkdBootFloat{to{transform:translate3d(28px,-18px,0) scale(1.1)}}
+    @keyframes dkdPulse{50%{opacity:.3;transform:scale(.72)}}
+    @keyframes dkdSpin{to{transform:rotate(360deg)}}
+    @keyframes dkdSpinReverse{to{transform:rotate(-360deg)}}
+    @keyframes dkdGear{to{transform:translateX(-50%) rotate(360deg)}}
+    @keyframes dkdRoad{to{transform:translateX(52px)}}
+    @keyframes dkdRide{0%{transform:translateX(0) translateY(0) rotate(-2deg)}48%{transform:translateX(235px) translateY(-4px) rotate(2deg)}50%{opacity:1}51%{opacity:0}52%{transform:translateX(-35px) translateY(0);opacity:0}56%{opacity:1}100%{transform:translateX(0) translateY(0) rotate(-2deg)}}
+    @keyframes dkdSmoke{0%{transform:translate(0,0) scale(.7);opacity:.7}100%{transform:translate(-26px,-20px) scale(2.5);opacity:0}}
+    @keyframes dkdLoadRide{0%{transform:translateX(-110%);background-position:0 0}100%{transform:translateX(315%);background-position:100% 0}}
+    @keyframes dkdDot{0%,100%{transform:translateY(0);opacity:.35}50%{transform:translateY(-5px);opacity:1;background:#ff5b00}}
+    @media(max-width:420px){.dkd-boot-stage{height:158px}.dkd-bike{font-size:47px}.dkd-road{left:18px;right:18px}.dkd-boot-title{font-size:36px!important}}
+    @media(prefers-reduced-motion:reduce){.dkd-boot *{animation-duration:.01ms!important;animation-iteration-count:1!important}}
+  </style>
   <script>
     (() => {
       const saved = sessionStorage.getItem('dkd_garage_route');
@@ -28,19 +110,30 @@
 </head>
 <body>
   <div id="dkd-app">
-    <div class="dkd-boot">
-      <div class="dkd-boot-logo">⚙</div>
-      <strong>DraBornGarage</strong>
-      <span>Premium garaj sistemi hazırlanıyor…</span>
-      <div class="dkd-loader"><i></i></div>
+    <div class="dkd-boot" role="status" aria-live="polite" aria-label="DraBornGarage yükleniyor">
+      <div class="dkd-boot-grid" aria-hidden="true"></div>
+      <div class="dkd-boot-badge"><i aria-hidden="true"></i> PREMIUM GARAGE OS</div>
+      <div class="dkd-boot-stage" aria-hidden="true">
+        <div class="dkd-boot-ring"></div>
+        <div class="dkd-boot-gear">⚙</div>
+        <div class="dkd-bike-smoke"></div>
+        <div class="dkd-bike">🏍️</div>
+        <div class="dkd-road"></div>
+      </div>
+      <strong class="dkd-boot-title">DraBorn<em>Garage</em></strong>
+      <span class="dkd-boot-copy">Garajın canlı sistemi hazırlanıyor…</span>
+      <div class="dkd-boot-version">WEB v1.4</div>
+      <div class="dkd-loader" aria-hidden="true"><i></i></div>
+      <div class="dkd-loading-dots" aria-hidden="true"><i></i><i></i><i></i></div>
     </div>
   </div>
   <div id="dkd-toast-root" aria-live="polite"></div>
   <div id="dkd-modal-root"></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.110.2"></script>
-  <script src="/DraBornGarage/assets/dkd_bundle_loader.js"></script>
-  <script src="/DraBornGarage/assets/dkd_premium_ui.js?cache=20260718-v1.3"></script>
-  <script src="/DraBornGarage/assets/dkd_panel_rules.js?cache=20260718-v1.3"></script>
-  <script src="/DraBornGarage/assets/dkd_mechanic_cleanup.js?cache=20260718-v1.3"></script>
+  <script src="/DraBornGarage/assets/dkd_bundle_loader.js?cache=20260718-v1.4"></script>
+  <script src="/DraBornGarage/assets/dkd_web_version.js?cache=20260718-v1.4"></script>
+  <script src="/DraBornGarage/assets/dkd_premium_ui.js?cache=20260718-v1.4"></script>
+  <script src="/DraBornGarage/assets/dkd_panel_rules.js?cache=20260718-v1.4"></script>
+  <script src="/DraBornGarage/assets/dkd_mechanic_cleanup.js?cache=20260718-v1.4"></script>
 </body>
 </html>
