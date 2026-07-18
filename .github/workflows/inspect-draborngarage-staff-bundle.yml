@@ -1,0 +1,37 @@
+name: Inspect DraBornGarage Staff Bundle
+
+on:
+  push:
+    branches:
+      - automation/draborngarage-finalize
+    paths:
+      - .github/workflows/inspect-draborngarage-staff-bundle.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild staff source
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat DraBornGarage/assets/chunks_v3/staff_*.txt | tr -d '\r\n' | base64 --decode | gzip --decompress > dkd_staff.js
+          sha256sum dkd_staff.js
+          rg -n -C 30 'Hızlı Servis|Bırakılan Motor' dkd_staff.js | tee staff-matches.txt || true
+
+      - name: Upload reconstructed source
+        uses: actions/upload-artifact@v4
+        with:
+          name: draborngarage-staff-source
+          path: |
+            dkd_staff.js
+            staff-matches.txt
+          if-no-files-found: error
+          retention-days: 1
