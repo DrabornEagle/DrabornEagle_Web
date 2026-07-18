@@ -1,0 +1,81 @@
+name: Stage Piston Garaj Poster
+
+on:
+  push:
+    branches:
+      - feature/draborngarage-piston-apk-v1.1
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  stage-poster:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/draborngarage-piston-apk-v1.1
+          fetch-depth: 0
+
+      - name: Download full-resolution poster
+        shell: bash
+        env:
+          POSTER_URL: "https://media.canva.com/v2/document-image/hash:-48349259/height:1536/id:DAHPvdrsP3M/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAEKXjAeETgJ3Ku32uf-gtPIUMOWx1PxovC4ISDr5qitv&disableexport=T&exp=1784384098&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FrsP3M%2FDAHPvdrsP3M%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260718%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260718T073931Z%26X-Amz-Expires%3D23727%26X-Amz-Signature%3Dacc2f659029dd1cc6a1824b945c46965902afa998034e90dc423fcf0a2e5e116%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252014%253A14%253A58%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAALTJc4kKC6dnkGPPqUpcBaNYDpJvvnTMU4Ke_kVmXOwk&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1"
+        run: |
+          set -euo pipefail
+          mkdir -p DraBornGarage/PistonGaraj/APKindir/assets
+          curl --fail --location --retry 3 --retry-delay 2 \
+            "$POSTER_URL" \
+            --output DraBornGarage/PistonGaraj/APKindir/assets/poster.png
+
+      - name: Validate poster dimensions and format
+        shell: python
+        run: |
+          from pathlib import Path
+          import struct
+
+          path = Path("DraBornGarage/PistonGaraj/APKindir/assets/poster.png")
+          data = path.read_bytes()
+          if len(data) < 250_000:
+              raise SystemExit(f"Poster is unexpectedly small: {len(data)} bytes")
+
+          width = height = None
+          if data.startswith(b"\x89PNG\r\n\x1a\n"):
+              width, height = struct.unpack(">II", data[16:24])
+          elif data.startswith(b"\xff\xd8"):
+              index = 2
+              while index + 9 < len(data):
+                  if data[index] != 0xFF:
+                      index += 1
+                      continue
+                  marker = data[index + 1]
+                  index += 2
+                  if marker in (0xD8, 0xD9):
+                      continue
+                  segment_length = int.from_bytes(data[index:index + 2], "big")
+                  if marker in range(0xC0, 0xC4):
+                      height = int.from_bytes(data[index + 3:index + 5], "big")
+                      width = int.from_bytes(data[index + 5:index + 7], "big")
+                      break
+                  index += segment_length
+          else:
+              raise SystemExit("Poster is not a supported PNG/JPEG image")
+
+          if (width, height) != (819, 1536):
+              raise SystemExit(f"Unexpected dimensions: {width}x{height}")
+          print(f"Validated {width}x{height}, {len(data)} bytes")
+
+      - name: Commit poster and remove staging files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf DraBornGarage/PistonGaraj/APKindir/source
+          rm -f .github/workflows/draborngarage-piston-poster.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add DraBornGarage/PistonGaraj/APKindir .github/workflows/draborngarage-piston-poster.yml
+          git commit -m "feat(draborngarage): add full-resolution Piston Garaj poster"
+          git push origin HEAD:feature/draborngarage-piston-apk-v1.1
