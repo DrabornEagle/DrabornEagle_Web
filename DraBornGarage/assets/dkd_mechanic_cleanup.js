@@ -1,124 +1,109 @@
 (() => {
   'use strict';
 
-  const HIDDEN_CLASS = 'dkd-force-hidden';
-  const normalize = (value = '') => value.replace(/\s+/g, ' ').trim().toLocaleLowerCase('tr-TR');
+  const TARGETS = ['hızlı servis', 'bırakılan motor'];
+  const normalize = (value = '') => String(value)
+    .replace(/[+＋]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim()
+    .toLocaleLowerCase('tr-TR');
 
-  function getPanelMode() {
-    const activeSwitch = document.querySelector('.dkd-panel-switch button.active');
-    const topTitle = document.querySelector('.dkd-top-title strong');
-    const pageTitle = document.querySelector('.dkd-page-head h1');
-    const text = normalize(`${activeSwitch?.textContent || ''} ${topTitle?.textContent || ''} ${pageTitle?.textContent || ''}`);
-    if (text.includes('işletme panel')) return 'business';
-    if (text.includes('usta panel') || text.includes('usta panelim')) return 'mechanic';
-    return 'other';
+  const protectedArea = (element) => Boolean(element?.closest(
+    '.dkd-topbar,.dkd-sidebar,.dkd-modal,.dkd-modal-root,#dkd-modal-root,.dkd-panel-switch'
+  ));
+
+  function containsTarget(value) {
+    const text = normalize(value);
+    return TARGETS.some((target) => text.includes(target));
   }
 
-  function labelNodes(root, phrase) {
-    return [...root.querySelectorAll('button,a,strong,b,h1,h2,h3,h4,span,p,div')]
-      .filter((element) => normalize(element.textContent).includes(phrase));
-  }
-
-  function looksLikeCard(element, root) {
-    if (!element || element === root) return false;
-    const className = typeof element.className === 'string' ? element.className : '';
-    if (/(quick|action|shortcut|tile|card)/i.test(className)) return true;
-    if (element.matches('button,a,article,section')) {
-      const style = getComputedStyle(element);
-      const radius = Number.parseFloat(style.borderRadius) || 0;
-      return radius >= 10;
-    }
-    return false;
-  }
-
-  function closestVisualCard(node, root) {
-    let current = node;
-    let fallback = null;
-    while (current && current !== root) {
-      if (!fallback && current.matches('button,a,article,section')) fallback = current;
-      if (looksLikeCard(current, root)) return current;
-      current = current.parentElement;
-    }
-    return fallback || node.parentElement;
-  }
-
-  function hideCardForPhrase(root, phrase) {
-    const nodes = labelNodes(root, phrase).sort((a, b) => b.querySelectorAll('*').length - a.querySelectorAll('*').length);
-    const deepest = nodes[nodes.length - 1];
-    if (!deepest) return;
-    const card = closestVisualCard(deepest, root);
-    if (card && !card.closest('.dkd-topbar,.dkd-sidebar,.dkd-modal')) {
-      card.classList.add(HIDDEN_CLASS);
-      card.setAttribute('aria-hidden', 'true');
-    }
-  }
-
-  function hideCombinedQuickContainer(root) {
-    const quick = labelNodes(root, 'hızlı servis').pop();
-    const dropped = labelNodes(root, 'bırakılan motor').pop();
-    if (!quick || !dropped) return false;
-
-    let container = quick.parentElement;
-    while (container && container !== root) {
-      const text = normalize(container.textContent);
-      if (text.includes('hızlı servis') && text.includes('bırakılan motor')) {
-        const childCards = [...container.children].filter((child) => looksLikeCard(child, root));
-        if (childCards.length >= 2 || /(grid|quick|action|shortcut)/i.test(container.className || '')) {
-          container.classList.add(HIDDEN_CLASS);
-          container.setAttribute('aria-hidden', 'true');
-          return true;
-        }
+  function directTargetNodes(root) {
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode(node) {
+        if (!containsTarget(node.nodeValue)) return NodeFilter.FILTER_REJECT;
+        const parent = node.parentElement;
+        if (!parent || protectedArea(parent)) return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
       }
-      container = container.parentElement;
-    }
-    return false;
+    });
+    const nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    return nodes;
   }
 
-  function cleanup() {
-    const root = document.querySelector('.dkd-content');
+  function removalCandidate(textNode, root) {
+    let element = textNode.parentElement;
+    let compactFallback = null;
+
+    while (element && element !== root) {
+      if (protectedArea(element)) return null;
+
+      const className = typeof element.className === 'string' ? element.className : '';
+      const text = normalize(element.textContent);
+      const isInteractive = element.matches('button,a,[role="button"],article');
+      const isShortcut = /(quick|shortcut|action|tile|service-card|menu-card)/i.test(className);
+      const isCompactCard = /(^|\s)dkd-card(\s|$)/i.test(className) && text.length <= 140;
+
+      if (isInteractive || isShortcut || isCompactCard) return element;
+      if (!compactFallback && text.length <= 90 && element.children.length <= 5) compactFallback = element;
+      element = element.parentElement;
+    }
+
+    return compactFallback;
+  }
+
+  function removeObsoleteShortcuts() {
+    const root = document.querySelector('.dkd-content') || document.getElementById('dkd-app');
     if (!root) return;
 
-    root.querySelectorAll(`.${HIDDEN_CLASS}`).forEach((element) => {
-      element.classList.remove(HIDDEN_CLASS);
-      element.removeAttribute('aria-hidden');
+    const candidates = new Set();
+    directTargetNodes(root).forEach((textNode) => {
+      const candidate = removalCandidate(textNode, root);
+      if (candidate) candidates.add(candidate);
     });
 
-    const mode = getPanelMode();
-    if (mode === 'mechanic') {
-      if (!hideCombinedQuickContainer(root)) {
-        hideCardForPhrase(root, 'hızlı servis');
-        hideCardForPhrase(root, 'bırakılan motor');
-      }
-    } else if (mode === 'business') {
-      labelNodes(root, 'hızlı servis').forEach((node) => {
-        const card = closestVisualCard(node, root);
-        if (card && !card.closest('.dkd-topbar,.dkd-sidebar,.dkd-modal')) {
-          card.classList.add(HIDDEN_CLASS);
-          card.setAttribute('aria-hidden', 'true');
-        }
-      });
-    }
+    root.querySelectorAll('[aria-label],[title],[data-label],[data-action]').forEach((element) => {
+      const labels = [
+        element.getAttribute('aria-label'),
+        element.getAttribute('title'),
+        element.getAttribute('data-label'),
+        element.getAttribute('data-action')
+      ].filter(Boolean).join(' ');
+      if (!containsTarget(labels) || protectedArea(element)) return;
+      candidates.add(element.closest('button,a,[role="button"],article,.dkd-quick-card,.dkd-card') || element);
+    });
+
+    candidates.forEach((element) => {
+      if (!element?.isConnected || protectedArea(element)) return;
+      element.remove();
+    });
   }
 
-  let queued = false;
-  const schedule = () => {
-    if (queued) return;
-    queued = true;
+  let scheduled = false;
+  function schedule() {
+    if (scheduled) return;
+    scheduled = true;
     requestAnimationFrame(() => {
-      queued = false;
-      cleanup();
+      scheduled = false;
+      removeObsoleteShortcuts();
     });
-  };
+  }
 
-  document.addEventListener('click', (event) => {
-    if (event.target.closest('.dkd-panel-switch,.dkd-nav-item,.dkd-mobile-menu,.dkd-btn')) {
-      setTimeout(schedule, 0);
-      setTimeout(schedule, 160);
-      setTimeout(schedule, 500);
-    }
+  document.addEventListener('click', () => {
+    setTimeout(schedule, 0);
+    setTimeout(schedule, 120);
+    setTimeout(schedule, 400);
   }, true);
 
-  new MutationObserver(schedule).observe(document.documentElement, { childList: true, subtree: true });
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', schedule, { once: true });
-  else schedule();
+  new MutationObserver(schedule).observe(document.documentElement, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', schedule, { once: true });
+  } else {
+    schedule();
+  }
 })();
