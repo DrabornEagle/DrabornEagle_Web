@@ -75,7 +75,7 @@
       .${HELPER_CLASS}{display:block;margin:8px 2px 0;color:#9ca9ba;font-size:12px;line-height:1.45}
       .${HELPER_CLASS}.is-error{color:#ff6677;font-weight:750}
       .${ERROR_CLASS}{margin:12px 0 0;padding:13px 15px;border:1px solid rgba(255,79,98,.42);border-radius:14px;background:rgba(255,55,78,.10);color:#ffd9de;font-size:13px;font-weight:750;line-height:1.45;box-shadow:0 12px 30px rgba(255,35,65,.10)}
-      .dkd-tax-invalid{border-color:#ff5368!important;box-shadow:0 0 0 3px rgba(255,83,104,.13)!important}
+      .dkd-registration-invalid{border-color:#ff5368!important;box-shadow:0 0 0 3px rgba(255,83,104,.13)!important}
     `;
     document.head.appendChild(style);
   }
@@ -108,26 +108,30 @@
     else form.appendChild(box);
   }
 
-  function showError(form, input, message) {
-    const helper = input ? helperFor(input) : null;
+  function showError(form, input, message, showTaxHelper = false) {
     if (input) {
-      input.classList.add('dkd-tax-invalid');
+      input.classList.add('dkd-registration-invalid');
       input.setCustomValidity(message);
       input.focus({ preventScroll: true });
       input.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
-    if (helper) {
-      helper.textContent = message;
-      helper.classList.add('is-error');
+    if (showTaxHelper && input) {
+      const helper = helperFor(input);
+      if (helper) {
+        helper.textContent = message;
+        helper.classList.add('is-error');
+      }
     }
     showInlineError(form, message);
-    const toast = window.DKD?.toast;
-    if (typeof toast === 'function') toast(message, 'error');
+  }
+
+  function clearFieldError(input) {
+    input.classList.remove('dkd-registration-invalid');
+    input.setCustomValidity('');
   }
 
   function clearTaxError(input) {
-    input.classList.remove('dkd-tax-invalid');
-    input.setCustomValidity('');
+    clearFieldError(input);
     const helper = helperFor(input);
     if (helper) {
       helper.textContent = TAX_MESSAGE;
@@ -172,16 +176,18 @@
       showError(form, businessName, 'İşletme adı en az 2 karakter olmalıdır.');
       return false;
     }
+    if (businessName) clearFieldError(businessName);
 
     const taxOffice = findTaxOfficeInput(form);
     if (taxOffice && normalize(taxOffice.value).length < 2) {
       showError(form, taxOffice, 'Vergi Dairesi en az 2 karakter olmalıdır.');
       return false;
     }
+    if (taxOffice) clearFieldError(taxOffice);
 
     const taxNumber = digits(taxInput.value);
     if (![10, 11].includes(taxNumber.length)) {
-      showError(form, taxInput, TAX_MESSAGE);
+      showError(form, taxInput, TAX_MESSAGE, true);
       return false;
     }
 
@@ -212,7 +218,11 @@
 
     const originalToast = typeof dkd.toast === 'function' ? dkd.toast.bind(dkd) : null;
     if (originalToast) {
-      dkd.toast = (message, type = 'info') => originalToast(errorMessage(message), type);
+      dkd.toast = (...args) => originalToast(...args.map((value) => {
+        if (value && typeof value === 'object') return errorMessage(value);
+        if (typeof value === 'string' && ['{}', '[object Object]'].includes(value.trim())) return errorMessage(value);
+        return value;
+      }));
     }
 
     const originalTranslate = typeof dkd.translateAuthError === 'function'
