@@ -1,5 +1,5 @@
 /* DraBornGarage panel visibility + incremental list rules */
-.dkd-rule-quick-hidden{display:none!important}
+.dkd-rule-quick-hidden,.dkd-force-hidden{display:none!important}
 .dkd-paged-item[hidden]{display:none!important}
 .dkd-inline-pagination{display:flex;justify-content:center;padding:18px 0 4px}
 .dkd-more-button{min-width:190px!important;justify-content:center;gap:12px!important;border-color:rgba(255,91,0,.22)!important;background:linear-gradient(145deg,rgba(255,91,0,.09),rgba(255,255,255,.025))!important}
