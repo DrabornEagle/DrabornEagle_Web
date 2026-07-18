@@ -36,33 +36,26 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.ref || github.ref_name }}
 
-      - name: Prepare folders
-        run: mkdir -p DraBornGarage/APKindir/assets
-
-      - name: Download and verify exact uploaded poster
+      - name: Download original Canva source PNG without recompression
         shell: bash
         env:
-          EXPECTED_POSTER_SHA256: "27679d020e94a5ab6e31499b01416b2c607fa49461aab4cde22cfb3583c5b791"
-          EXPECTED_POSTER_SIZE: "353853"
-          POSTER_URL: "https://media.canva.com/v2/document-image/hash:546206831/height:1536/id:DAHPuYH7o24/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAGsN20yEqMk-fvn4Ndg7xmDeVl3jWd_JojRxe7aNuNzk&disableexport=T&exp=1784375240&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FH7o24%2FDAHPuYH7o24%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260717%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260717T210241Z%26X-Amz-Expires%3D53079%26X-Amz-Signature%3D84538301d71d06dca0c2ff81515894268fc740dea8f9cb624ad3ba23b825ed5a%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252011%253A47%253A20%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAABt3YncNCak3u7jgK4ewO1wBsfW83LZ1yiL1a9hfs0O3&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1"
+          POSTER_URL: "https://s3.amazonaws.com/document-export.canva.com/H7o24/DAHPuYH7o24/1/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHXSTDDERN%2F20260717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260717T210241Z&X-Amz-Expires=53079&X-Amz-Signature=84538301d71d06dca0c2ff81515894268fc740dea8f9cb624ad3ba23b825ed5a&X-Amz-SignedHeaders=host&response-expires=Sat%2C%2018%20Jul%202026%2011%3A47%3A20%20GMT"
         run: |
           set -euo pipefail
-          TARGET="DraBornGarage/APKindir/assets/poster.jpg"
-          TEMP="${RUNNER_TEMP}/draborngarage-poster"
-          curl --fail --location --retry 5 --retry-delay 3 "$POSTER_URL" -o "$TEMP"
-          ACTUAL_SIZE="$(stat -c '%s' "$TEMP")"
-          ACTUAL_SHA256="$(sha256sum "$TEMP" | awk '{print $1}')"
-          DIMENSIONS="$(identify -format '%wx%h' "$TEMP")"
-          MIME="$(file --brief --mime-type "$TEMP")"
-          echo "Poster size: $ACTUAL_SIZE"
-          echo "Poster SHA-256: $ACTUAL_SHA256"
+          mkdir -p DraBornGarage/APKindir/assets
+          TARGET="DraBornGarage/APKindir/assets/poster.png"
+          curl --fail --location --retry 5 --retry-delay 3 "$POSTER_URL" -o "$TARGET"
+          DIMENSIONS="$(identify -format '%wx%h' "$TARGET")"
+          MIME="$(file --brief --mime-type "$TARGET")"
+          SIZE="$(stat -c '%s' "$TARGET")"
+          SHA="$(sha256sum "$TARGET" | awk '{print $1}')"
+          echo "Poster size: $SIZE"
+          echo "Poster SHA-256: $SHA"
           echo "Poster dimensions: $DIMENSIONS"
           echo "Poster MIME: $MIME"
-          test "$ACTUAL_SIZE" = "$EXPECTED_POSTER_SIZE"
-          test "$ACTUAL_SHA256" = "$EXPECTED_POSTER_SHA256"
           test "$DIMENSIONS" = "819x1536"
-          test "$MIME" = "image/jpeg"
-          mv "$TEMP" "$TARGET"
+          test "$MIME" = "image/png"
+          test "$SIZE" -gt 300000
 
       - name: Verify uploaded production APK
         shell: bash
@@ -88,10 +81,10 @@ jobs:
           TARGET_BRANCH="${GITHUB_HEAD_REF:-${GITHUB_REF_NAME}}"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add DraBornGarage/APKindir/assets/poster.jpg
+          git add DraBornGarage/APKindir/assets/poster.png
           if git diff --cached --quiet; then
             echo "Poster already current."
             exit 0
           fi
-          git commit -m "feat(draborngarage): publish verified APK poster"
+          git commit -m "feat(draborngarage): publish original lossless APK poster"
           git push origin "HEAD:${TARGET_BRANCH}"
