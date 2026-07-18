@@ -1,9 +1,9 @@
 name: Verify DraBornGarage APK Download
 
 on:
-  push:
+  pull_request:
     branches:
-      - automation/draborngarage-finalize
+      - main
     paths:
       - .github/workflows/publish-draborngarage-apk-page.yml
 
