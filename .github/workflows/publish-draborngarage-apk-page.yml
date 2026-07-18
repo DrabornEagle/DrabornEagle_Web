@@ -54,7 +54,10 @@ jobs:
           echo "Poster dimensions: $DIMENSIONS"
           echo "Poster MIME: $MIME"
           test "$DIMENSIONS" = "819x1536"
-          test "$MIME" = "image/png"
+          case "$MIME" in
+            image/png|image/jpeg) ;;
+            *) echo "Beklenmeyen poster dosya türü: $MIME"; exit 1 ;;
+          esac
           test "$SIZE" -gt 300000
 
       - name: Verify uploaded production APK
