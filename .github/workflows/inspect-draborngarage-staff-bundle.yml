@@ -6,6 +6,12 @@ on:
       - automation/draborngarage-finalize
     paths:
       - .github/workflows/inspect-draborngarage-staff-bundle.yml
+  pull_request:
+    branches:
+      - main
+    paths:
+      - .github/workflows/inspect-draborngarage-staff-bundle.yml
+      - DraBornGarage/assets/chunks_v3/**
   workflow_dispatch:
 
 permissions:
