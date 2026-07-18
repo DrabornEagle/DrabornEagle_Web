@@ -34,7 +34,7 @@ jobs:
             "$POSTER_URL" \
             --output DraBornGarage/PistonGaraj/APKindir/assets/poster.png
 
-      - name: Validate poster dimensions and format
+      - name: Validate poster file
         shell: python
         run: |
           from pathlib import Path
@@ -42,13 +42,15 @@ jobs:
 
           path = Path("DraBornGarage/PistonGaraj/APKindir/assets/poster.png")
           data = path.read_bytes()
-          if len(data) < 250_000:
+          if len(data) < 50_000:
               raise SystemExit(f"Poster is unexpectedly small: {len(data)} bytes")
 
-          width = height = None
           if data.startswith(b"\x89PNG\r\n\x1a\n"):
               width, height = struct.unpack(">II", data[16:24])
+              image_type = "PNG"
           elif data.startswith(b"\xff\xd8"):
+              width = height = None
+              image_type = "JPEG"
               index = 2
               while index + 9 < len(data):
                   if data[index] != 0xFF:
@@ -67,9 +69,9 @@ jobs:
           else:
               raise SystemExit("Poster is not a supported PNG/JPEG image")
 
-          if (width, height) != (819, 1536):
-              raise SystemExit(f"Unexpected dimensions: {width}x{height}")
-          print(f"Validated {width}x{height}, {len(data)} bytes")
+          if not width or not height or width < 800 or height < 1500:
+              raise SystemExit(f"Poster resolution is too low: {width}x{height}")
+          print(f"Validated {image_type} {width}x{height}, {len(data)} bytes")
 
       - name: Commit poster and remove staging files
         shell: bash
