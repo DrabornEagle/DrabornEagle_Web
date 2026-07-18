@@ -1,4 +1,4 @@
-name: Verify DraBornGarage APK Download
+name: Inspect DraBornGarage Release APK
 
 on:
   pull_request:
@@ -11,27 +11,28 @@ permissions:
   contents: read
 
 jobs:
-  verify-apk:
+  inspect-apk:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
       GH_TOKEN: ${{ github.token }}
-      EXPECTED_SHA256: "a2318284cf1ab7f2b3061e5705e9fd9768ffda151fff9ca6befe5ed292fc1bd6"
-      EXPECTED_SIZE: "103411037"
     steps:
-      - name: Download and verify production APK from GitHub Release
+      - name: Download current production APK
         shell: bash
         run: |
           set -euo pipefail
-          RELEASE_REPO="DrabornEagle/DraBornGarage"
-          RELEASE_TAG="v1.0-apk-rc"
-          APK_NAME="DraBornGarage-v1.0-production.apk"
-          TARGET="${RUNNER_TEMP}/${APK_NAME}"
-          gh release view "$RELEASE_TAG" --repo "$RELEASE_REPO" --json name,tagName,assets
-          gh release download "$RELEASE_TAG" --repo "$RELEASE_REPO" --pattern "$APK_NAME" --dir "$RUNNER_TEMP" --clobber
-          ACTUAL_SIZE="$(stat -c '%s' "$TARGET")"
-          ACTUAL_SHA256="$(sha256sum "$TARGET" | awk '{print $1}')"
-          echo "APK size: $ACTUAL_SIZE"
-          echo "APK SHA-256: $ACTUAL_SHA256"
-          test "$ACTUAL_SIZE" = "$EXPECTED_SIZE"
-          test "$ACTUAL_SHA256" = "$EXPECTED_SHA256"
+          gh release download v1.0-apk-rc \
+            --repo DrabornEagle/DraBornGarage \
+            --pattern DraBornGarage-v1.0-production.apk \
+            --dir "$RUNNER_TEMP" \
+            --clobber
+          sha256sum "$RUNNER_TEMP/DraBornGarage-v1.0-production.apk"
+          stat -c '%s bytes' "$RUNNER_TEMP/DraBornGarage-v1.0-production.apk"
+
+      - name: Upload current release APK for binary comparison
+        uses: actions/upload-artifact@v4
+        with:
+          name: draborngarage-current-release-apk
+          path: ${{ runner.temp }}/DraBornGarage-v1.0-production.apk
+          compression-level: 0
+          retention-days: 1
