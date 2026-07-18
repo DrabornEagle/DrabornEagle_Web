@@ -40,7 +40,7 @@ jobs:
       - name: Download original poster without resizing
         shell: bash
         env:
-          POSTER_URL: "https://media.canva.com/v2/document-image/hash:546206831/height:1536/id:DAHPuYH7o24/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAA8LwF4HfUiQPhbsIH70njQzvaUGkBaag05K6F4-0IfZ&disableexport=T&exp=1784371516&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FH7o24%2FDAHPuYH7o24%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260717%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260717T210241Z%26X-Amz-Expires%3D49355%26X-Amz-Signature%3D4ab362ae5f82617b63dfd7dba5608706aa9fb3a635eb5070965b197ada3973a5%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252010%253A45%253A16%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAHFC78ztYhyo1vHzZ-pom0eekGv7szYIj5cKXAAy9TkM&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1"
+          POSTER_URL: "https://s3.amazonaws.com/document-export.canva.com/H7o24/DAHPuYH7o24/1/thumbnail/0001.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAQYCGKMUHXSTDDERN%2F20260717%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20260717T210241Z&X-Amz-Expires=50375&X-Amz-Signature=eb6427c1d78ac9b5ad7e224438fc07ffa68bfb4b65229ac03a3ba35faff04f61&X-Amz-SignedHeaders=host&response-expires=Sat%2C%2018%20Jul%202026%2011%3A02%3A16%20GMT"
         run: |
           set -euo pipefail
           curl --fail --location --retry 4 --retry-delay 3 "$POSTER_URL" -o DraBornGarage/APKindir/assets/poster.png
