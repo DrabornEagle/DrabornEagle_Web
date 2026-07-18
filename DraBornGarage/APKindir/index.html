@@ -7,9 +7,9 @@
   <meta name="description" content="DraBornGarage v1.0 APK indir." />
   <title>DraBornGarage APK İndir</title>
   <style>
-    :root{color-scheme:dark;--red:#ff2350;--cyan:#31dcff;--orange:#ff6a00;--panel:rgba(7,10,16,.96)}
+    :root{color-scheme:dark;--red:#ff2350;--cyan:#31dcff;--orange:#ff6a00}
     *{box-sizing:border-box}
-    html,body{margin:0;min-height:100%;background:#000;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
+    html,body{margin:0;width:100%;height:100%;min-height:100%;background:#000;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow:hidden}
     button,a{font:inherit}
     .stage{position:fixed;inset:0;display:grid;place-items:center;background:#000;isolation:isolate}
     .poster{position:relative;width:min(100vw,calc(100dvh * 819 / 1536));height:min(100dvh,calc(100vw * 1536 / 819));aspect-ratio:819/1536;overflow:hidden;background:#05070b}
@@ -21,7 +21,6 @@
     .loading{position:absolute;inset:0;display:grid;place-content:center;gap:14px;text-align:center;color:#c8d1dc;background:#030407;z-index:-1}
     .loading i{width:48px;height:48px;margin:auto;border-radius:50%;border:4px solid rgba(255,255,255,.12);border-top-color:var(--cyan);animation:spin .8s linear infinite}
     @keyframes spin{to{transform:rotate(360deg)}}
-    .back{position:fixed;left:max(14px,env(safe-area-inset-left));top:max(14px,env(safe-area-inset-top));z-index:5;width:46px;height:46px;border:1px solid rgba(255,255,255,.18);border-radius:15px;background:rgba(3,5,9,.62);backdrop-filter:blur(13px);color:white;font-size:22px;display:grid;place-items:center;text-decoration:none;box-shadow:0 12px 30px rgba(0,0,0,.35)}
     .modal-backdrop{position:fixed;inset:0;z-index:20;display:grid;place-items:center;padding:20px;background:rgba(0,0,0,.78);backdrop-filter:blur(14px);opacity:0;visibility:hidden;transition:.25s}
     .modal-backdrop.open{opacity:1;visibility:visible}
     .modal{width:min(100%,440px);border:1px solid rgba(255,255,255,.14);border-radius:30px;background:linear-gradient(155deg,rgba(18,24,34,.99),rgba(5,8,13,.99));box-shadow:0 30px 100px rgba(0,0,0,.72),0 0 50px rgba(255,35,80,.13);overflow:hidden;transform:translateY(25px) scale(.97);transition:.3s cubic-bezier(.2,.8,.2,1)}
@@ -54,10 +53,9 @@
 </head>
 <body>
   <main class="stage">
-    <a class="back" href="/DraBornGarage/" aria-label="DraBornGarage ana sayfasına dön">‹</a>
     <section class="poster" aria-label="DraBornGarage APK indirme posteri">
       <div class="loading"><i></i><span>Görsel yükleniyor…</span></div>
-      <img id="apkPoster" src="/DraBornGarage/APKindir/assets/poster.png?v=1.0" width="819" height="1536" alt="DraBornGarage Garage APK İndir" />
+      <img id="apkPoster" src="/DraBornGarage/APKindir/assets/poster.png?v=20260718" width="819" height="1536" alt="DraBornGarage APK İndir" draggable="false" />
       <button class="download-hotspot" id="openDownload" type="button" aria-label="APK indirme seçeneklerini aç"></button>
     </section>
   </main>
@@ -74,13 +72,13 @@
           <span class="ico">▦</span>
           <span><strong>QR Okutarak İndir</strong><small>Başka bir telefonun kamerasıyla okut.</small></span>
         </button>
-        <a class="option instant" href="https://github.com/DrabornEagle/DraBornGarage/releases/download/v1.0-apk-rc/DraBornGarage-v1.0-production.apk">
+        <a class="option instant" href="https://github.com/DrabornEagle/DraBornGarage/releases/download/v1.0-apk-rc/DraBornGarage-v1.0-production.apk" aria-label="DraBornGarage APK dosyasını hemen indir">
           <span class="ico">⇩</span>
           <span><strong>Hemen İndir</strong><small>APK dosyasını bu telefona indir.</small></span>
         </a>
       </div>
       <div class="qr-panel" id="qrPanel">
-        <div class="qr-box"><img src="/DraBornGarage/APKindir/assets/qr.svg?v=1" alt="DraBornGarage APK indirme QR kodu" /></div>
+        <div class="qr-box"><img src="/DraBornGarage/APKindir/assets/qr.svg?v=20260718" alt="DraBornGarage APK indirme QR kodu" /></div>
         <h2>Kamerayla QR kodu okut</h2>
         <p>QR kodu açan telefonda DraBornGarage v1.0 APK indirmesi başlayacak.</p>
         <div class="qr-actions">
@@ -93,9 +91,6 @@
 
   <script>
     (()=>{
-      const POSTER_FALLBACK='https://media.canva.com/v2/document-image/hash:546206831/height:1536/id:DAHPuYH7o24/type:B/width:819?brand=BAHAlrSItdY&csig=AAAAAAAAAAAAAAAAAAAAAA8LwF4HfUiQPhbsIH70njQzvaUGkBaag05K6F4-0IfZ&disableexport=T&exp=1784371516&fallback=https%3A%2F%2Fs3.amazonaws.com%2Fdocument-export.canva.com%2FH7o24%2FDAHPuYH7o24%2F1%2Fthumbnail%2F0001.png%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQYCGKMUHXSTDDERN%252F20260717%252Fus-east-1%252Fs3%252Faws4_request%26X-Amz-Date%3D20260717T210241Z%26X-Amz-Expires%3D49355%26X-Amz-Signature%3D4ab362ae5f82617b63dfd7dba5608706aa9fb3a635eb5070965b197ada3973a5%26X-Amz-SignedHeaders%3Dhost%26response-expires%3DSat%252C%252018%2520Jul%25202026%252010%253A45%253A16%2520GMT&osig=AAAAAAAAAAAAAAAAAAAAAHFC78ztYhyo1vHzZ-pom0eekGv7szYIj5cKXAAy9TkM&page=1&signed=brand%2Cdisableexport%2Cfallback%2Cpage%2Cversion&signer=document-rpc&version=1';
-      const poster=document.getElementById('apkPoster');
-      poster.addEventListener('error',()=>{if(poster.dataset.fallback)return;poster.dataset.fallback='1';poster.src=POSTER_FALLBACK});
       const modal=document.getElementById('downloadModal');
       const options=document.getElementById('downloadOptions');
       const qr=document.getElementById('qrPanel');
@@ -105,8 +100,8 @@
       document.getElementById('closeDownload').addEventListener('click',close);
       document.getElementById('showQr').addEventListener('click',()=>{options.style.display='none';qr.classList.add('open')});
       document.getElementById('backOptions').addEventListener('click',()=>{qr.classList.remove('open');options.style.display='grid'});
-      modal.addEventListener('click',e=>{if(e.target===modal)close()});
-      addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+      modal.addEventListener('click',event=>{if(event.target===modal)close()});
+      addEventListener('keydown',event=>{if(event.key==='Escape')close()});
     })();
   </script>
 </body>
