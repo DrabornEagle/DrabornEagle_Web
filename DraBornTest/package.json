@@ -1,0 +1,15 @@
+{
+  "name": "draborntest-crm",
+  "version": "1.0.0-demo",
+  "private": true,
+  "type": "module",
+  "description": "Küçük işletmeler için demo CRM, randevu ve WhatsApp hatırlatma SaaS uygulaması",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check": "node --check app.js && node --check api-client.js && node --check mock-data.js && node --check server/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
