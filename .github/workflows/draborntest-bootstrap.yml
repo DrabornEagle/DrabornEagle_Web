@@ -1,0 +1,44 @@
+name: DraBornTest Bootstrap
+
+on:
+  push:
+    branches:
+      - agent/draborntest-crm-demo
+    paths:
+      - .github/workflows/draborntest-bootstrap.yml
+
+permissions:
+  contents: write
+
+jobs:
+  unpack:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/draborntest-crm-demo
+          fetch-depth: 0
+
+      - name: Rebuild DraBornTest source files
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .draborntest-bootstrap/part* | base64 --decode > /tmp/draborntest-remaining.tgz
+          tar -xzf /tmp/draborntest-remaining.tgz
+          rm -rf .draborntest-bootstrap
+          rm -f .github/workflows/draborntest-bootstrap.yml
+          node --check DraBornTest/app.js
+          node --check DraBornTest/api-client.js
+          node --check DraBornTest/mock-data.js
+          node --check DraBornTest/server/index.js
+
+      - name: Commit rebuilt application
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "DraBornTest Builder"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Build DraBornTest CRM demo application"
+          git push origin HEAD:agent/draborntest-crm-demo
