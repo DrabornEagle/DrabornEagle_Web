@@ -1,8 +1,8 @@
 (() => {
   'use strict';
 
-  const VERSION = '1.5';
-  const VERSION_PATTERN = /\bWEB\s+v?1\.(?:0|1|2|3|4)\b/gi;
+  const VERSION = '1.6';
+  const VERSION_PATTERN = /\bWEB\s+v?1\.(?:0|1|2|3|4|5)\b/gi;
 
   function updateTextNode(node) {
     if (!node?.nodeValue) return;
