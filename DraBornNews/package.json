@@ -1,0 +1,15 @@
+{
+  "name": "drabornnews-web",
+  "version": "0.1.0-demo",
+  "private": true,
+  "type": "module",
+  "description": "DraBornNews yapay zekâ destekli, çok kaynaklı haber akışı demo web uygulaması",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "check": "node --check app.js && node --check mock-data.js && node --check server/index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
