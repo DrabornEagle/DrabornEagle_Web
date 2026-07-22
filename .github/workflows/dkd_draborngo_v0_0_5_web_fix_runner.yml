@@ -1,0 +1,66 @@
+name: DKD DraBornGo v0.0.5 Web Fix Runner
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dkd-draborngo-v0-0-5-web-fix
+  cancel-in-progress: false
+
+jobs:
+  dkd_web_fix:
+    if: github.event.pull_request.title == '[DKD] Apply DraBornGo v0.0.5 web fix'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout trusted main
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Apply DraBornGo web repair
+        run: python3 scripts/dkd_draborngo_v0_0_5_web_fix.py
+
+      - name: Verify DraBornGo web version
+        shell: bash
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+          import json
+
+          dkd_root_path = Path('DraBornGo/App')
+          dkd_manifest_value = json.loads((dkd_root_path / 'dkd_draborngo_update_manifest.json').read_text(encoding='utf-8'))
+          if dkd_manifest_value.get('dkd_latest_version_name') != '0.0.5':
+              raise SystemExit('Web manifest version is not 0.0.5.')
+          if int(dkd_manifest_value.get('dkd_latest_version_code', 0)) != 5:
+              raise SystemExit('Web manifest version code is not 5.')
+
+          for dkd_path_value in [
+              dkd_root_path / 'dkd_draborngo_update_manifest.json',
+              dkd_root_path / 'dkd_download.html',
+              dkd_root_path / 'dkd_draborngo_release_notes.html',
+          ]:
+              dkd_text_value = dkd_path_value.read_text(encoding='utf-8')
+              if '0.0.4' in dkd_text_value or 'Kod 4' in dkd_text_value:
+                  raise SystemExit(f'Old version remains in {dkd_path_value}.')
+
+          print('DraBornGo web manifest, download page and release notes verified at v0.0.5/code5.')
+          PY
+
+      - name: Publish web repair to main
+        shell: bash
+        run: |
+          git config user.name 'DKD Web Release Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            echo 'No web changes to publish.'
+            exit 0
+          fi
+          git commit -m 'DraBornGo web: publish v0.0.5 visible version state'
+          git push origin HEAD:main
