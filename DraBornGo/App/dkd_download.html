@@ -228,19 +228,19 @@
 
     <section class="dkd_hero">
       <div class="dkd_card">
-        <span class="dkd_badge">v0.0.4 • Android</span>
+        <span class="dkd_badge">v0.0.5 • Android</span>
         <h1>DraBornGo APK İndir</h1>
         <p class="dkd_lead">DraBornGo uygulamasını resmi web adresinden indir. Yeni sürüm çıktığında uygulama seni bilgilendirir ve güncelleme sayfasını açar.</p>
         <div class="dkd_actions">
-          <a class="dkd_button dkd_button_primary" href="https://github.com/DrabornEagle/DrabornEagle_Web/releases/download/dkd_draborngo_v0.0.4/dkd_draborngo_latest.apk">APK İndir</a>
+          <a class="dkd_button dkd_button_primary" href="#" aria-disabled="true" onclick="return false;">v0.0.5 APK hazırlanıyor</a>
           <a class="dkd_button dkd_button_secondary" href="./dkd_draborngo_release_notes.html">Sürüm Notları</a>
           
         </div>
-        <div class="dkd_warning"></div>
+        <div class="dkd_warning">DraBornGo v0.0.5 kaynak ve Expo Go test sürümü yayında. İmzalı APK hazırlandığında indirme düğmesi otomatik açılacaktır.</div>
       </div>
       <aside class="dkd_side">
-        <div class="dkd_stat"><small>Son sürüm</small><strong>0.0.4</strong></div>
-        <div class="dkd_stat"><small>Version Code</small><strong>4</strong></div>
+        <div class="dkd_stat"><small>Son sürüm</small><strong>0.0.5</strong></div>
+        <div class="dkd_stat"><small>Version Code</small><strong>5</strong></div>
         <div class="dkd_stat"><small>Güncelleme tipi</small><strong>Kullanıcı onaylı</strong></div>
       </aside>
     </section>
@@ -385,7 +385,7 @@
     return dkd_get_text_value(dkd_button_value).includes('Sürüm Notları');
   });
 
-  const dkd_latest_version_card_value = dkd_get_card_value(['Son sürüm', '0.0.4'], ['Version Code', 'Güncelleme tipi']);
+  const dkd_latest_version_card_value = dkd_get_card_value(['Son sürüm', '0.0.5'], ['Version Code', 'Güncelleme tipi']);
 
   if (dkd_release_notes_button_value && dkd_latest_version_card_value) {
     dkd_latest_version_card_value.classList.add('dkd_latest_version_card');

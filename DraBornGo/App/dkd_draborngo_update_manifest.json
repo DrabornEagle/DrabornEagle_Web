@@ -1,10 +1,10 @@
 {
-  "dkd_latest_version_name": "0.0.4",
-  "dkd_latest_version_code": 4,
+  "dkd_latest_version_name": "0.0.5",
+  "dkd_latest_version_code": 5,
   "dkd_min_supported_version_code": 3,
   "dkd_update_required": false,
-  "dkd_apk_url": "https://github.com/DrabornEagle/DrabornEagle_Web/releases/download/dkd_draborngo_v0.0.4/dkd_draborngo_latest.apk",
+  "dkd_apk_url": "https://www.draborneagle.com/DraBornGo/App/",
   "dkd_download_page_url": "https://www.draborneagle.com/DraBornGo/App/",
-  "dkd_sha256": "a8b8124d587cf96ebe50fa5141a46fe3ba4319b0ce860ea4f2b36e811845051b",
-  "dkd_release_notes": "DraBornGo resmi APK indirme sayfası, uygulama içi sürüm kontrolü ve kullanıcı onaylı güncelleme merkezi eklendi."
+  "dkd_sha256": "",
+  "dkd_release_notes": "DraBornGo v0.0.5: Expo SDK 54 uyumu, DBG kimliği, sabit public ortam ayarları, görünür sürüm düzeltmeleri ve DraBornDeal veritabanı temizliği tamamlandı."
 }
