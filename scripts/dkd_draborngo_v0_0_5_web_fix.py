@@ -64,9 +64,16 @@ def main():
         '<div class="dkd_warning">DraBornGo v0.0.5 kaynak ve Expo Go test sürümü yayında. İmzalı APK hazırlandığında indirme düğmesi otomatik açılacaktır.</div>',
     )
 
+    dkd_download_text_value = dkd_download_path_value.read_text(encoding='utf-8')
+    dkd_download_text_value = dkd_download_text_value.replace('v0.0.4', 'v0.0.5')
+    dkd_download_text_value = dkd_download_text_value.replace('0.0.4', '0.0.5')
+    dkd_download_text_value = dkd_download_text_value.replace('Kod 4', 'Kod 5')
+    dkd_download_path_value.write_text(dkd_download_text_value, encoding='utf-8')
+
     dkd_release_notes_path_value = DKD_APP_PATH / 'dkd_draborngo_release_notes.html'
     dkd_release_notes_text_value = dkd_release_notes_path_value.read_text(encoding='utf-8')
     dkd_release_notes_text_value = dkd_release_notes_text_value.replace('v0.0.4', 'v0.0.5')
+    dkd_release_notes_text_value = dkd_release_notes_text_value.replace('0.0.4', '0.0.5')
     dkd_release_notes_text_value = dkd_release_notes_text_value.replace(
         '<li></li>\n        <li>Hatalar Giderildi.</li>',
         '<li>Expo SDK 54 paketleri uyumlu sürümlere getirildi.</li>\n'
