@@ -19,6 +19,7 @@ new vm.Script(dkdServiceWorker, { filename: 'sw.js' });
 
 assert.match(dkdRecovery, /DKD_RECOVERY_VERSION\s*=\s*['"]2\.9\.1['"]/);
 assert.match(dkdRecovery, /navigator\.serviceWorker\.getRegistrations\(\)/);
+assert.match(dkdRecovery, /dkdRegistration\.scope[\s\S]*includes\(['"]\/DraBornGate\/['"]\)/);
 assert.match(dkdRecovery, /dkdKey\.startsWith\(['"]draborngate-web-['"]\)/);
 assert.match(dkdRecovery, /sessionStorage\.getItem\(DKD_RECOVERY_ATTEMPT_KEY\)/);
 assert.match(dkdRecovery, /sessionStorage\.setItem\(DKD_RECOVERY_ATTEMPT_KEY/);
