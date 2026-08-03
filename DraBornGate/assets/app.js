@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.5.1';
+const DKD_WEB_VERSION = '2.5.2';
 
 function dkdPrepareCleanPersonalRoute() {
   const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
@@ -23,7 +23,7 @@ function dkdPrepareCleanPersonalRoute() {
 
 async function dkdReadPayload(path) {
   const response = await fetch(path, { cache: 'no-cache' });
-  if (!response.ok) throw new Error(`DraBornGate Web v2.5.1 paketi alınamadı (${response.status}).`);
+  if (!response.ok) throw new Error(`DraBornGate Web v2.5.2 paketi alınamadı (${response.status}).`);
   return (await response.text()).trim();
 }
 
@@ -49,23 +49,28 @@ async function dkdAppendPackedStyle(dkdPath, dkdDatasetKey) {
   document.head.appendChild(dkdStyle);
 }
 
+async function dkdReadJoinedPayload(dkdPattern, dkdCount) {
+  const dkdPaths = Array.from({ length: dkdCount }, (_, dkdIndex) => `${dkdPattern}.${dkdIndex + 1}.txt?v=${DKD_WEB_VERSION}`);
+  return (await Promise.all(dkdPaths.map(dkdReadPayload))).join('');
+}
+
 async function dkdBootWebV25() {
   dkdPrepareCleanPersonalRoute();
   await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
 
-  const partPaths = [1, 2, 3, 4].map((part) => `./assets/app.v2.payload.${part}.txt?v=${DKD_WEB_VERSION}`);
-  const jsPayload = (await Promise.all(partPaths.map(dkdReadPayload))).join('');
-  await dkdImportSource(await dkdUnpack(jsPayload));
+  const dkdCorePayload = await dkdReadJoinedPayload('./assets/app.v2.payload', 4);
+  await dkdImportSource(await dkdUnpack(dkdCorePayload));
   await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
 
   await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
   await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
 
   await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
-  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.5.js.payload.txt?v=${DKD_WEB_VERSION}`)));
+  const dkdV25Payload = await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5);
+  await dkdImportSource(await dkdUnpack(dkdV25Payload));
 }
 
 dkdBootWebV25().catch((error) => {
   console.error(error);
-  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.5.1 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
+  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.5.2 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
 });
