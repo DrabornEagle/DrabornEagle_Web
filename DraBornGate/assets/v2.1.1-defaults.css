@@ -1,0 +1,28 @@
+#dkd-app input:focus,
+#dkd-app input:focus-visible,
+#dkd-app textarea:focus,
+#dkd-app textarea:focus-visible,
+#dkd-app select:focus,
+#dkd-app select:focus-visible {
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+#dkd-app input:not([type="checkbox"]):not([type="radio"]):focus,
+#dkd-app input:not([type="checkbox"]):not([type="radio"]):focus-visible,
+#dkd-app textarea:focus,
+#dkd-app textarea:focus-visible {
+  border-color: transparent !important;
+}
+
+#dkd-app input,
+#dkd-app textarea,
+#dkd-app select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#dkd-app input::-moz-focus-inner,
+#dkd-app button::-moz-focus-inner {
+  border: 0;
+}

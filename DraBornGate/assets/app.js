@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.1.0';
+const DKD_WEB_VERSION = '2.1.1';
 
 function dkdPrepareCleanPersonalRoute() {
   const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets']);
@@ -44,6 +44,7 @@ async function dkdBootWebV21() {
   try {
     await import(moduleUrl);
     await import(`./v2.1-fixes.js?v=${DKD_WEB_VERSION}`);
+    await import(`./v2.1.1-defaults.js?v=${DKD_WEB_VERSION}`);
   } finally {
     URL.revokeObjectURL(moduleUrl);
   }
