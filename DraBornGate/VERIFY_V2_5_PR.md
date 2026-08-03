@@ -1,1 +1,0 @@
-# PR doğrulama tetikleyicisi
