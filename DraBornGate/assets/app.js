@@ -1,44 +1,81 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.7.0';
+const DKD_WEB_VERSION = '2.8.0';
+
+function dkdIsSimpleModeRequested() {
+  const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
+  return dkdPath.includes('guvenlik-sade-tema') ||
+    sessionStorage.getItem('dkd_gate_security_theme') === 'simple' ||
+    sessionStorage.getItem('dkd_gate_force_theme') === 'simple';
+}
+
+function dkdSetBootProgress(dkdPercent, dkdLabel) {
+  const dkdSafePercent = Math.max(0, Math.min(100, Number(dkdPercent) || 0));
+  const dkdFill = document.querySelector('#dkd-v28-progress-fill');
+  const dkdProgress = document.querySelector('#dkd-v28-progress');
+  const dkdText = document.querySelector('#dkd-v28-progress-label');
+  if (dkdFill) dkdFill.style.width = `${dkdSafePercent}%`;
+  if (dkdProgress) dkdProgress.setAttribute('aria-valuenow', String(Math.round(dkdSafePercent)));
+  if (dkdText && dkdLabel) dkdText.textContent = dkdLabel;
+}
+
+window.dkdSetBootProgress = dkdSetBootProgress;
+
+const dkdBootWatchdog = setTimeout(() => {
+  const dkdRetry = document.querySelector('#dkd-v28-retry');
+  dkdSetBootProgress(96, 'Bağlantı beklenenden uzun sürüyor. Yeniden deneyebilirsiniz.');
+  if (dkdRetry) dkdRetry.hidden = false;
+}, 20000);
 
 function dkdPrepareCleanPersonalRoute() {
-  const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
-  const storedRoute = sessionStorage.getItem('dkd_gate_route');
-  if (!storedRoute) return;
-  let pathname = storedRoute;
-  try { pathname = new URL(storedRoute, location.origin).pathname; } catch { pathname = String(storedRoute).split(/[?#]/)[0]; }
-  const parts = pathname.split('/').filter(Boolean);
-  const routeName = String(parts[1] || '').toLocaleLowerCase('tr-TR');
-  if (parts[0] !== 'DraBornGate' || parts.length !== 2) return;
-  if (routeName === 'guvenlik-sade-tema') {
+  const dkdReserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
+  const dkdStoredRoute = sessionStorage.getItem('dkd_gate_route');
+  if (!dkdStoredRoute) return;
+  let dkdPathname = dkdStoredRoute;
+  try {
+    dkdPathname = new URL(dkdStoredRoute, location.origin).pathname;
+  } catch {
+    dkdPathname = String(dkdStoredRoute).split(/[?#]/)[0];
+  }
+  const dkdParts = dkdPathname.split('/').filter(Boolean);
+  const dkdRouteName = String(dkdParts[1] || '').toLocaleLowerCase('tr-TR');
+  if (dkdParts[0] !== 'DraBornGate' || dkdParts.length !== 2) return;
+  if (dkdRouteName === 'guvenlik-sade-tema') {
     sessionStorage.removeItem('dkd_gate_route');
     sessionStorage.setItem('dkd_gate_security_theme', 'simple');
     sessionStorage.setItem('dkd_gate_force_theme', 'simple');
     return;
   }
-  if (reserved.has(routeName)) return;
+  if (dkdReserved.has(dkdRouteName)) return;
   sessionStorage.removeItem('dkd_gate_route');
-  sessionStorage.setItem('dkd_gate_clean_personal_route', `/DraBornGate/${parts[1]}`);
+  sessionStorage.setItem('dkd_gate_clean_personal_route', `/DraBornGate/${dkdParts[1]}`);
 }
 
-async function dkdReadPayload(path) {
-  const response = await fetch(path, { cache: 'no-cache' });
-  if (!response.ok) throw new Error(`DraBornGate Web v${DKD_WEB_VERSION} paketi alınamadı (${response.status}).`);
-  return (await response.text()).trim();
+async function dkdReadPayload(dkdPath) {
+  const dkdResponse = await fetch(dkdPath, { cache: 'no-cache' });
+  if (!dkdResponse.ok) throw new Error(`DraBornGate Web v${DKD_WEB_VERSION} paketi alınamadı (${dkdResponse.status}).`);
+  return (await dkdResponse.text()).trim();
 }
 
-async function dkdUnpack(base64) {
-  if (typeof DecompressionStream === 'undefined') throw new Error('Tarayıcınız modern sıkıştırma desteği sunmuyor. Güncel Chrome, Edge, Firefox veya Safari kullanın.');
-  const binary = atob(base64);
-  const compressed = new Uint8Array(binary.length);
-  for (let index = 0; index < binary.length; index += 1) compressed[index] = binary.charCodeAt(index);
-  const stream = new Blob([compressed]).stream().pipeThrough(new DecompressionStream('gzip'));
-  return new Response(stream).text();
+async function dkdUnpack(dkdBase64) {
+  if (typeof DecompressionStream === 'undefined') {
+    throw new Error('Tarayıcınız modern sıkıştırma desteği sunmuyor. Güncel Chrome, Edge, Firefox veya Safari kullanın.');
+  }
+  const dkdBinary = atob(dkdBase64);
+  const dkdCompressed = new Uint8Array(dkdBinary.length);
+  for (let dkdIndex = 0; dkdIndex < dkdBinary.length; dkdIndex += 1) {
+    dkdCompressed[dkdIndex] = dkdBinary.charCodeAt(dkdIndex);
+  }
+  const dkdStream = new Blob([dkdCompressed]).stream().pipeThrough(new DecompressionStream('gzip'));
+  return new Response(dkdStream).text();
 }
 
 async function dkdImportSource(dkdSource) {
   const dkdModuleUrl = URL.createObjectURL(new Blob([dkdSource], { type: 'text/javascript' }));
-  try { await import(dkdModuleUrl); } finally { URL.revokeObjectURL(dkdModuleUrl); }
+  try {
+    await import(dkdModuleUrl);
+  } finally {
+    URL.revokeObjectURL(dkdModuleUrl);
+  }
 }
 
 async function dkdAppendPackedStyle(dkdPath, dkdDatasetKey) {
@@ -50,48 +87,92 @@ async function dkdAppendPackedStyle(dkdPath, dkdDatasetKey) {
 }
 
 async function dkdAppendStyleLink(dkdPath, dkdDatasetKey) {
-  await new Promise((resolve, reject) => {
-    const link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.href = `${dkdPath}?v=${DKD_WEB_VERSION}`;
-    link.dataset[dkdDatasetKey] = 'true';
-    link.onload = resolve;
-    link.onerror = () => reject(new Error(`${dkdPath} yüklenemedi.`));
-    document.head.appendChild(link);
+  await new Promise((dkdResolve, dkdReject) => {
+    const dkdLink = document.createElement('link');
+    dkdLink.rel = 'stylesheet';
+    dkdLink.href = `${dkdPath}?v=${DKD_WEB_VERSION}`;
+    dkdLink.dataset[dkdDatasetKey] = 'true';
+    dkdLink.onload = dkdResolve;
+    dkdLink.onerror = () => dkdReject(new Error(`${dkdPath} yüklenemedi.`));
+    document.head.appendChild(dkdLink);
   });
 }
 
 async function dkdReadJoinedPayload(dkdPattern, dkdCount) {
-  const dkdPaths = Array.from({ length: dkdCount }, (_, dkdIndex) => `${dkdPattern}.${dkdIndex + 1}.txt?v=${DKD_WEB_VERSION}`);
+  const dkdPaths = Array.from(
+    { length: dkdCount },
+    (_, dkdIndex) => `${dkdPattern}.${dkdIndex + 1}.txt?v=${DKD_WEB_VERSION}`
+  );
   return (await Promise.all(dkdPaths.map(dkdReadPayload))).join('');
 }
 
-async function dkdBootWebV27() {
-  dkdPrepareCleanPersonalRoute();
-  await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
-
-  const dkdCorePayload = await dkdReadJoinedPayload('./assets/app.v2.payload', 4);
-  await dkdImportSource(await dkdUnpack(dkdCorePayload));
-  await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
-
-  await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
-  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
-
-  await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
-  const dkdV25Payload = await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5);
-  await dkdImportSource(await dkdUnpack(dkdV25Payload));
-
-  await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
-  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
-
-  await import(`./v2.7.guard.js?v=${DKD_WEB_VERSION}`);
-  await dkdAppendStyleLink('./assets/v2.7.css', 'dkdWebV27');
-  await import(`./v2.7.js?v=${DKD_WEB_VERSION}`);
+function dkdFinishBoot() {
+  clearTimeout(dkdBootWatchdog);
+  dkdSetBootProgress(100, 'Hazır');
+  setTimeout(() => {
+    const dkdSplash = document.querySelector('#dkd-v28-splash');
+    dkdSplash?.classList.add('is-hidden');
+    setTimeout(() => dkdSplash?.remove(), 460);
+  }, 240);
 }
 
-dkdBootWebV27().catch((error) => {
-  console.error(error);
-  const splash = document.querySelector('#dkd-v27-splash') || document.querySelector('#dkd-v26-splash');
-  if (splash) splash.classList.add('is-hidden');
-  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v${DKD_WEB_VERSION} açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
-});
+function dkdShowBootError(dkdError) {
+  clearTimeout(dkdBootWatchdog);
+  console.error(dkdError);
+  const dkdRetry = document.querySelector('#dkd-v28-retry');
+  dkdSetBootProgress(100, `Yükleme tamamlanamadı: ${String(dkdError?.message || dkdError)}`);
+  if (dkdRetry) dkdRetry.hidden = false;
+  if (!document.querySelector('#dkd-v28-splash')) {
+    dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v${DKD_WEB_VERSION} açılamadı</strong><span>${String(dkdError?.message || dkdError)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
+  }
+}
+
+async function dkdBootWebV28() {
+  dkdSetBootProgress(4, 'Başlatılıyor');
+  dkdPrepareCleanPersonalRoute();
+  const dkdSimpleMode = dkdIsSimpleModeRequested();
+
+  dkdSetBootProgress(10, 'Arayüz dosyaları yükleniyor');
+  await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
+
+  dkdSetBootProgress(20, 'Ana uygulama paketi alınıyor');
+  const dkdCorePayload = await dkdReadJoinedPayload('./assets/app.v2.payload', 4);
+
+  dkdSetBootProgress(34, 'Ana uygulama hazırlanıyor');
+  await dkdImportSource(await dkdUnpack(dkdCorePayload));
+
+  dkdSetBootProgress(48, 'Oturum ve rol sistemi bağlanıyor');
+  await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
+
+  if (!dkdSimpleMode) {
+    dkdSetBootProgress(57, 'Modern tema hazırlanıyor');
+    await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
+    await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
+
+    dkdSetBootProgress(66, 'Güvenlik paneli güncelleniyor');
+    await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
+    const dkdV25Payload = await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5);
+    await dkdImportSource(await dkdUnpack(dkdV25Payload));
+
+    dkdSetBootProgress(75, 'Tema geçişleri bağlanıyor');
+    await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
+    await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
+
+    dkdSetBootProgress(82, 'Modern panel son kontrolleri yapılıyor');
+    await import(`./v2.7.guard.js?v=${DKD_WEB_VERSION}`);
+    await dkdAppendStyleLink('./assets/v2.7.css', 'dkdWebV27');
+    await import(`./v2.7.js?v=${DKD_WEB_VERSION}`);
+  } else {
+    dkdSetBootProgress(82, 'Bağımsız Sade Tema hazırlanıyor');
+  }
+
+  dkdSetBootProgress(90, 'Canlı geçiş sistemi bağlanıyor');
+  await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
+
+  dkdSetBootProgress(96, 'Son kontroller yapılıyor');
+  await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
+
+  dkdFinishBoot();
+}
+
+dkdBootWebV28().catch(dkdShowBootError);
