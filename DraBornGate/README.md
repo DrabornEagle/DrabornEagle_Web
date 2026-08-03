@@ -42,7 +42,7 @@ Kişisel yollar yalnızca okunabilir bağlantıdır; URL tek başına yetki sağ
 - `index.html`: Web v2.4 giriş noktası
 - `Guvenlik-Sade-Tema/index.html`: doğrudan Sade Tema giriş adresi
 - `assets/app.js`: sıkıştırılmış çekirdek uygulamayı ve sürüm katmanlarını yükler
-- `assets/v2.4.js`: güvenlik tema seçimi ve Sade Tema işlev katmanı
-- `assets/v2.4.css`: tam ekran Sade Tema ve tema seçimi tasarım sistemi
+- `assets/v2.4.js.payload.txt`: sıkıştırılmış güvenlik tema seçimi ve Sade Tema işlev katmanı
+- `assets/v2.4.css.payload.txt`: sıkıştırılmış tam ekran Sade Tema ve tema seçimi tasarım sistemi
 - `manifest.webmanifest`: kurulabilir web uygulaması bilgileri
 - `sw.js`: güncel statik web kabuğu önbelleği
