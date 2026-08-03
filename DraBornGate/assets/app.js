@@ -36,6 +36,11 @@ async function dkdUnpack(base64) {
   return new Response(stream).text();
 }
 
+async function dkdImportSource(dkdSource) {
+  const dkdModuleUrl = URL.createObjectURL(new Blob([dkdSource], { type: 'text/javascript' }));
+  try { await import(dkdModuleUrl); } finally { URL.revokeObjectURL(dkdModuleUrl); }
+}
+
 async function dkdBootWebV24() {
   dkdPrepareCleanPersonalRoute();
   const cssPayload = await dkdReadPayload(`./assets/app.v2.css.payload.txt?v=${DKD_WEB_VERSION}`);
@@ -47,15 +52,17 @@ async function dkdBootWebV24() {
 
   const partPaths = [1, 2, 3, 4].map((part) => `./assets/app.v2.payload.${part}.txt?v=${DKD_WEB_VERSION}`);
   const jsPayload = (await Promise.all(partPaths.map(dkdReadPayload))).join('');
-  const source = await dkdUnpack(jsPayload);
-  const moduleUrl = URL.createObjectURL(new Blob([source], { type: 'text/javascript' }));
-  try {
-    await import(moduleUrl);
-    await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
-    await import(`./v2.4.js?v=${DKD_WEB_VERSION}`);
-  } finally {
-    URL.revokeObjectURL(moduleUrl);
-  }
+  await dkdImportSource(await dkdUnpack(jsPayload));
+  await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
+
+  const themeCssPayload = await dkdReadPayload(`./assets/v2.4.css.payload.txt?v=${DKD_WEB_VERSION}`);
+  const themeStyle = document.createElement('style');
+  themeStyle.dataset.dkdWebV24 = 'true';
+  themeStyle.textContent = await dkdUnpack(themeCssPayload);
+  document.head.appendChild(themeStyle);
+
+  const themeJsPayload = await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`);
+  await dkdImportSource(await dkdUnpack(themeJsPayload));
 }
 
 dkdBootWebV24().catch((error) => {
