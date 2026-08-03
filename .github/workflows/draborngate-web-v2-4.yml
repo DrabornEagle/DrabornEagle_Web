@@ -1,4 +1,4 @@
-name: DraBornGate Web v2.9.2 Verify
+name: DraBornGate Web v2.9.3 Emergency Stable Verify
 
 on:
   push:
@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v2-9-2-${{ github.ref }}
+  group: draborngate-web-v2-9-3-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -33,11 +33,9 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Kilitlenmeyen yükleyiciyi doğrula
-        run: node --check DraBornGate/assets/app-v2.9.2.js
-      - name: Ayrıntılı canlı kuyruk sözdizimini doğrula
-        run: node --check DraBornGate/assets/v2.9.js
-      - name: Service Worker sözdizimini doğrula
+      - name: Kararlı yükleyiciyi doğrula
+        run: node --check DraBornGate/assets/app-v2.9.3-stable.js
+      - name: Service Worker kaldırma sözdizimini doğrula
         run: node --check DraBornGate/sw.js
-      - name: Web v2.9.2 açılış ve kuyruk kapsamını doğrula
-        run: node DraBornGate/tests/dkd_verify_web_v290.mjs
+      - name: Tıklanabilir acil panel kapsamını doğrula
+        run: node DraBornGate/tests/dkd_verify_emergency_stable_v293.mjs
