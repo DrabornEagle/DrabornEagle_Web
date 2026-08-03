@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v2.9.2",
+  "name": "DraBornGate Web v2.9.3",
   "short_name": "DraBornGate",
-  "description": "Kilitlenmeyen açılış, ayrıntılı canlı kurye kuyruğu, 6 haneli Kuryeni Bul alanı ve güvenli eşleştirme sunan geçiş platformu.",
-  "start_url": "/DraBornGate/",
+  "description": "Kararlı ve tıklanabilir Modern Güvenlik paneli.",
+  "start_url": "/DraBornGate/?v=2.9.3",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
