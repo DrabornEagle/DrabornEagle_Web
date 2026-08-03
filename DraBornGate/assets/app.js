@@ -84,6 +84,7 @@ async function dkdBootWebV27() {
   await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
   await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
 
+  await import(`./v2.7.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdAppendStyleLink('./assets/v2.7.css', 'dkdWebV27');
   await import(`./v2.7.js?v=${DKD_WEB_VERSION}`);
 }
