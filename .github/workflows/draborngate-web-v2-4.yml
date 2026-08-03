@@ -35,6 +35,8 @@ jobs:
           node-version: 22
       - name: Yükleyici sözdizimini doğrula
         run: node --check DraBornGate/assets/app.js
+      - name: Eski katman korumasını doğrula
+        run: node --check DraBornGate/assets/v2.7.guard.js
       - name: Bağımsız Sade Tema sözdizimini doğrula
         run: node --check DraBornGate/assets/v2.7.js
       - name: Bağımsız Sade Tema kapsamını doğrula
