@@ -27,6 +27,7 @@ assert.match(dkdApp, /dkdIsSimpleModeRequested/);
 assert.match(dkdApp, /if \(!dkdSimpleMode\)/);
 assert.match(dkdApp, /v2\.8\.css/);
 assert.match(dkdApp, /v2\.8\.js/);
+assert.match(dkdApp, /v2\.8\.1\.js\?v=2\.8\.1/);
 
 const dkdBootStart = dkdApp.indexOf('async function dkdBootWebV28');
 const dkdBootEnd = dkdApp.indexOf('dkdBootWebV28().catch');
@@ -40,7 +41,7 @@ for (let dkdIndexValue = 1; dkdIndexValue < dkdProgressValues.length; dkdIndexVa
     `Yükleme ilerlemesi geriye gidiyor: ${dkdProgressValues.join(', ')}`
   );
 }
-assert.equal(dkdProgressValues.at(-1), 96);
+assert.equal(dkdProgressValues.at(-1), 98);
 assert.match(dkdApp, /function dkdFinishBoot\(\)[\s\S]*dkdSetBootProgress\(100, ['"]Hazır['"]\)/);
 
 const dkdLegacyStart = dkdApp.indexOf('if (!dkdSimpleMode)');
@@ -82,15 +83,17 @@ assert.match(dkdIndex, /DraBornGate Web v2\.8\.0/);
 assert.match(dkdIndex, /id="dkd-v28-splash"/);
 assert.match(dkdIndex, />DBG</);
 assert.match(dkdIndex, /id="dkd-v28-progress-fill"/);
-assert.match(dkdIndex, /assets\/app\.js\?v=2\.8\.0/);
+assert.match(dkdIndex, /assets\/app\.js\?v=2\.8\.1/);
 assert.doesNotMatch(dkdIndex, /animation:dkdSplash/);
 assert.match(dkdSimpleIndex, /Güvenlik Sade Tema v2\.8\.0/);
 assert.match(dkdSimpleIndex, /id="dkd-v28-splash"/);
 assert.match(dkdSimpleIndex, />DBG</);
 assert.match(dkdSimpleIndex, /dkd_gate_force_theme/);
+assert.match(dkdSimpleIndex, /assets\/app\.js\?v=2\.8\.1/);
 assert.equal(dkdManifest.name, 'DraBornGate Web v2.8.0');
-assert.match(dkdServiceWorker, /draborngate-web-v2\.8\.0/);
+assert.match(dkdServiceWorker, /draborngate-web-v2\.8\.1-racing-motorcycle/);
 assert.match(dkdServiceWorker, /assets\/v2\.8\.js\?v=2\.8\.0/);
 assert.match(dkdServiceWorker, /assets\/v2\.8\.css\?v=2\.8\.0/);
+assert.match(dkdServiceWorker, /assets\/v2\.8\.1\.js\?v=2\.8\.1/);
 
-console.log('DraBornGate Web v2.8.0 gerçek yükleme ve kararlı Sade Tema doğrulaması başarılı.');
+console.log('DraBornGate Web v2.8.1 motosiklet ikon yaması ve kararlı Sade Tema doğrulaması başarılı.');
