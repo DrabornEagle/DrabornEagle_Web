@@ -1,4 +1,4 @@
-const DKD_CACHE = 'draborngate-web-v2.8.0';
+const DKD_CACHE = 'draborngate-web-v2.8.1-racing-motorcycle';
 const DKD_ASSETS = [
   '/DraBornGate/',
   '/DraBornGate/index.html',
@@ -13,7 +13,7 @@ const DKD_ASSETS = [
   '/DraBornGate/assets/v2.6.css.payload.txt?v=2.8.0',
   '/DraBornGate/assets/v2.7.css?v=2.8.0',
   '/DraBornGate/assets/v2.8.css?v=2.8.0',
-  '/DraBornGate/assets/app.js?v=2.8.0',
+  '/DraBornGate/assets/app.js?v=2.8.1',
   '/DraBornGate/assets/v2.3.js?v=2.8.0',
   '/DraBornGate/assets/v2.4.js.payload.txt?v=2.8.0',
   '/DraBornGate/assets/v2.5.js.payload.1.txt?v=2.8.0',
@@ -25,6 +25,7 @@ const DKD_ASSETS = [
   '/DraBornGate/assets/v2.7.guard.js?v=2.8.0',
   '/DraBornGate/assets/v2.7.js?v=2.8.0',
   '/DraBornGate/assets/v2.8.js?v=2.8.0',
+  '/DraBornGate/assets/v2.8.1.js?v=2.8.1',
   '/DraBornGate/manifest.webmanifest?v=2.8.0'
 ];
 
