@@ -170,18 +170,33 @@ async function dkdBootWebV29() {
     dkdSetBootProgress(82, 'Bağımsız Sade Tema hazırlanıyor');
   }
 
-  dkdSetBootProgress(88, 'Canlı geçiş sistemi bağlanıyor');
-  await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
-  await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
+  if (!dkdSimpleMode) {
+    dkdSetBootProgress(88, 'Canlı geçiş sistemi bağlanıyor');
+    await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
+    await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
 
-  dkdSetBootProgress(93, 'Uygulama motosikleti hazırlanıyor');
-  await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
+    dkdSetBootProgress(93, 'Uygulama motosikleti hazırlanıyor');
+    await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
+  } else {
+    dkdSetBootProgress(93, 'Sade Tema canlı veri köprüsü hazırlanıyor');
+  }
 
   dkdSetBootProgress(96, 'Gelişmiş güvenlik ekranı yükleniyor');
   await dkdAppendStyleLink('./assets/v2.9.css', 'dkdWebV29');
 
   dkdSetBootProgress(98, 'Kurye kodu ve canlı kuyruk bağlanıyor');
-  const dkdV29Module = await import(`./v2.9.js?v=${DKD_WEB_VERSION}`);
+  const dkdNativeMutationObserver = window.MutationObserver;
+  window.MutationObserver = class extends dkdNativeMutationObserver {
+    observe(dkdTarget, dkdOptions = {}) {
+      return super.observe(dkdTarget, { ...dkdOptions, characterData: false });
+    }
+  };
+  let dkdV29Module;
+  try {
+    dkdV29Module = await import(`./v2.9.js?v=${DKD_WEB_VERSION}`);
+  } finally {
+    window.MutationObserver = dkdNativeMutationObserver;
+  }
 
   dkdSetBootProgress(99, 'İlk ekran doğrulanıyor');
   await dkdV29Module.dkdV29PrepareInitialSurface({ simpleMode: dkdSimpleMode });
