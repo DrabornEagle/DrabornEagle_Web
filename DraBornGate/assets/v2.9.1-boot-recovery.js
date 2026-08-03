@@ -18,7 +18,9 @@
       dkdTasks.push(
         navigator.serviceWorker.getRegistrations()
           .then((dkdRegistrations) => Promise.allSettled(
-            dkdRegistrations.map((dkdRegistration) => dkdRegistration.unregister())
+            dkdRegistrations
+              .filter((dkdRegistration) => String(dkdRegistration.scope || '').includes('/DraBornGate/'))
+              .map((dkdRegistration) => dkdRegistration.unregister())
           ))
           .catch(() => undefined)
       );
