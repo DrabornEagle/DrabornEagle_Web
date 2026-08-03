@@ -1,10 +1,12 @@
-const DKD_CACHE = 'draborngate-web-v2.0.0';
+const DKD_CACHE = 'draborngate-web-v2.1.0';
 const DKD_ASSETS = [
   '/DraBornGate/',
   '/DraBornGate/index.html',
-  '/DraBornGate/assets/app.css?v=2.0.0',
-  '/DraBornGate/assets/app.js?v=2.0.0',
-  '/DraBornGate/manifest.webmanifest'
+  '/DraBornGate/assets/app.css?v=2.1.0',
+  '/DraBornGate/assets/v2.1-fixes.css?v=2.1.0',
+  '/DraBornGate/assets/app.js?v=2.1.0',
+  '/DraBornGate/assets/v2.1-fixes.js?v=2.1.0',
+  '/DraBornGate/manifest.webmanifest?v=2.1.0'
 ];
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(DKD_CACHE).then((cache) => cache.addAll(DKD_ASSETS)).catch(() => undefined));
