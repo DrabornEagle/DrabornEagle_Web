@@ -1,0 +1,24 @@
+const DKD_CACHE = 'draborngate-web-v2.0.0';
+const DKD_ASSETS = [
+  '/DraBornGate/',
+  '/DraBornGate/index.html',
+  '/DraBornGate/assets/app.css?v=2.0.0',
+  '/DraBornGate/assets/app.js?v=2.0.0',
+  '/DraBornGate/manifest.webmanifest'
+];
+self.addEventListener('install', (event) => {
+  event.waitUntil(caches.open(DKD_CACHE).then((cache) => cache.addAll(DKD_ASSETS)).catch(() => undefined));
+  self.skipWaiting();
+});
+self.addEventListener('activate', (event) => {
+  event.waitUntil(caches.keys().then((keys) => Promise.all(keys.filter((key) => key !== DKD_CACHE).map((key) => caches.delete(key)))));
+  self.clients.claim();
+});
+self.addEventListener('fetch', (event) => {
+  if (event.request.method !== 'GET' || !event.request.url.includes('/DraBornGate/')) return;
+  event.respondWith(fetch(event.request).then((response) => {
+    const copy = response.clone();
+    caches.open(DKD_CACHE).then((cache) => cache.put(event.request, copy)).catch(() => undefined);
+    return response;
+  }).catch(() => caches.match(event.request).then((cached) => cached || caches.match('/DraBornGate/'))));
+});
