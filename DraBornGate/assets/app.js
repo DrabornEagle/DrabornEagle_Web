@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.2.0';
+const DKD_WEB_VERSION = '2.3.0';
 
 function dkdPrepareCleanPersonalRoute() {
   const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets']);
@@ -15,7 +15,7 @@ function dkdPrepareCleanPersonalRoute() {
 
 async function dkdReadPayload(path) {
   const response = await fetch(path, { cache: 'no-cache' });
-  if (!response.ok) throw new Error(`DraBornGate Web v2.2 paketi alınamadı (${response.status}).`);
+  if (!response.ok) throw new Error(`DraBornGate Web v2.3 paketi alınamadı (${response.status}).`);
   return (await response.text()).trim();
 }
 
@@ -28,7 +28,7 @@ async function dkdUnpack(base64) {
   return new Response(stream).text();
 }
 
-async function dkdBootWebV22() {
+async function dkdBootWebV23() {
   dkdPrepareCleanPersonalRoute();
   const cssPayload = await dkdReadPayload(`./assets/app.v2.css.payload.txt?v=${DKD_WEB_VERSION}`);
   const cssSource = await dkdUnpack(cssPayload);
@@ -43,14 +43,13 @@ async function dkdBootWebV22() {
   const moduleUrl = URL.createObjectURL(new Blob([source], { type: 'text/javascript' }));
   try {
     await import(moduleUrl);
-    await import(`./v2.1-fixes.js?v=${DKD_WEB_VERSION}`);
-    await import(`./v2.2.js?v=${DKD_WEB_VERSION}`);
+    await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
   } finally {
     URL.revokeObjectURL(moduleUrl);
   }
 }
 
-dkdBootWebV22().catch((error) => {
+dkdBootWebV23().catch((error) => {
   console.error(error);
-  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.2 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
+  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.3 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
 });
