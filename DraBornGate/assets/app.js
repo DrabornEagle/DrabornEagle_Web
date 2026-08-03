@@ -172,6 +172,9 @@ async function dkdBootWebV28() {
   dkdSetBootProgress(96, 'Son kontroller yapılıyor');
   await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
 
+  dkdSetBootProgress(98, 'Motosiklet arayüzü güncelleniyor');
+  await import('./v2.8.1.js?v=2.8.1');
+
   dkdFinishBoot();
 }
 
