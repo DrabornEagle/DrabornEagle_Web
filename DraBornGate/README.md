@@ -1,48 +1,35 @@
-# DraBornGate Web v2.4
+# DraBornGate Web v2.5
 
 DraBornGate mobil uygulamasıyla aynı Supabase projesini, ortak kullanıcı oturumunu, `draborngate` şemasını ve mevcut `dkd_gate_*` RPC işlemlerini kullanan rol bazlı web istemcisidir.
 
-## Güvenlik tema seçimi
+## v2.5 güvenlik düzeltmeleri
 
-Güvenlik rolüne sahip kullanıcı giriş yaptıktan sonra iki görünüm arasından seçim yapar:
+- Eski v2.3/v2.4 görünür sürüm metinleri Web v2.5.0 olarak eşitlenir.
+- Tema seçimindeki “Modern Temayı Aç” düğmesi açıklamanın altına alınarak metin çakışması giderilir.
+- Modern Güvenlik paneline “Sade Temaya Geç” işlemi eklenir.
+- Sade Tema, Modern paneldeki gerçek `Kurye Kuyruğu` ve `Geçiş Talepleri` görünümünü otomatik açar.
+- Bekleyen kurye kartları daha geniş DOM eşleştirmesiyle Sade Tema’ya yansıtılır.
+- Sade Tema kod alanı, mevcut yetkili eşleştirme penceresi ve Supabase/RLS akışıyla çalışır.
 
-- **Sade Tema:** Yalnızca kapıya gelen kuryeleri, kurye ayrıntılarını, 6 haneli eşleştirme kodu alanını ve eşleştirme işlemini gösterir.
-- **Modern Tema:** Mevcut tam kapsamlı güvenlik panelini hiçbir işlev kaybı olmadan kullanmaya devam eder.
+## Tema seçimi
+
+- **Sade Tema:** Kapıya gelen kuryeleri, kurye ayrıntılarını, 6 haneli eşleştirme kodunu ve eşleştirme işlemini gösterir.
+- **Modern Tema:** Mevcut tam kapsamlı Güvenlik Merkezi’ni korur.
+- İki tema arasında güvenlik oturumu açıkken çift yönlü geçiş yapılabilir.
 
 Sade Tema adresi:
 
 `https://www.draborneagle.com/DraBornGate/Guvenlik-Sade-Tema/`
 
-Sade Tema yeni bir yetkilendirme veya veri katmanı oluşturmaz. Mevcut güvenlik panelindeki izinli kurye kartlarını yansıtır ve kod eşleştirme işlemini yine mevcut Supabase oturumu, RPC çağrıları ve RLS politikaları üzerinden gerçekleştirir.
-
-## Web v2.4 arayüzü
-
-- Tam ekran, büyük ve okunabilir metinler
-- Animasyonlu tema seçimi
-- Canlı saat ve senkronizasyon durumu
-- Modern kurye bilgi kartları
-- 6 haneli kod alanı ve belirgin eşleştirme butonu
-- Başarı penceresi, hata ve işlem geri bildirimleri
-- Masaüstü, tablet ve mobil uyumluluk
-- `prefers-reduced-motion` erişilebilirlik desteği
-
-## Rol panelleri
-
-- **Kurye:** geçiş talebi, kapıya geldim, tek seferlik konum kontrolü, geçiş kodu ve geçmiş.
-- **Güvenlik:** Sade Tema veya mevcut Modern Tema üzerinden güvenli kurye eşleştirme ve kapı operasyonu.
-- **Site Sakini:** gelen kuryeler, misafir kodu, aidat, paylaşılan finans özeti ve web bildirim merkezi.
-- **Site Yönetimi:** raporlar, CSV dışa aktarma, rol başvuruları, sakin arama, kurallar, aidat ve finans.
-
-## Kişisel bağlantılar ve güvenlik
-
-Kişisel yollar yalnızca okunabilir bağlantıdır; URL tek başına yetki sağlamaz. Erişim Supabase oturumu, rol doğrulaması, mevcut RPC kontrolleri ve RLS politikalarıyla korunur.
+Sade Tema yeni bir yetkilendirme veya veri API’si oluşturmaz. İşlemler mevcut Supabase oturumu, RPC çağrıları ve RLS politikaları üzerinden gerçekleştirilir.
 
 ## Dosyalar
 
-- `index.html`: Web v2.4 giriş noktası
+- `index.html`: Web v2.5 giriş noktası
 - `Guvenlik-Sade-Tema/index.html`: doğrudan Sade Tema giriş adresi
-- `assets/app.js`: sıkıştırılmış çekirdek uygulamayı ve sürüm katmanlarını yükler
-- `assets/v2.4.js.payload.txt`: sıkıştırılmış güvenlik tema seçimi ve Sade Tema işlev katmanı
-- `assets/v2.4.css.payload.txt`: sıkıştırılmış tam ekran Sade Tema ve tema seçimi tasarım sistemi
+- `assets/app.js`: çekirdek ve v2.4/v2.5 katman yükleyicisi
+- `assets/v2.4.*.payload.txt`: temel güvenlik tema sistemi
+- `assets/v2.5.js.payload.txt`: sürüm, çift yönlü geçiş ve canlı kuyruk düzeltmeleri
+- `assets/v2.5.css.payload.txt`: tema kartı ve canlı kurye kartı yerleşimleri
 - `manifest.webmanifest`: kurulabilir web uygulaması bilgileri
-- `sw.js`: güncel statik web kabuğu önbelleği
+- `sw.js`: v2.5 PWA önbelleği
