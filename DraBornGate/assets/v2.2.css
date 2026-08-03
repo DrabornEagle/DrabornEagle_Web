@@ -1,0 +1,185 @@
+:root {
+  --dkd-v22-text: #f4f7ff;
+  --dkd-v22-muted: #b9c4d8;
+  --dkd-v22-soft: #9da9bf;
+}
+
+html {
+  font-size: 17px;
+}
+
+#dkd-app {
+  font-size: 17px !important;
+  line-height: 1.62 !important;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+#dkd-app h1 {
+  font-size: clamp(2rem, 6vw, 3.25rem) !important;
+  line-height: 1.12 !important;
+}
+
+#dkd-app h2 {
+  font-size: clamp(1.55rem, 4.8vw, 2.2rem) !important;
+  line-height: 1.2 !important;
+}
+
+#dkd-app h3 {
+  font-size: clamp(1.2rem, 3.8vw, 1.55rem) !important;
+  line-height: 1.3 !important;
+}
+
+#dkd-app p,
+#dkd-app label,
+#dkd-app small,
+#dkd-app li,
+#dkd-app td,
+#dkd-app th,
+#dkd-app [class*="subtitle"],
+#dkd-app [class*="description"],
+#dkd-app [class*="detail"],
+#dkd-app [class*="meta"],
+#dkd-app [class*="hint"],
+#dkd-app [class*="help"],
+#dkd-app [class*="caption"],
+#dkd-app [class*="eyebrow"] {
+  font-size: max(15.5px, .91rem) !important;
+  line-height: 1.58 !important;
+}
+
+#dkd-app small,
+#dkd-app [class*="meta"],
+#dkd-app [class*="hint"],
+#dkd-app [class*="caption"] {
+  color: var(--dkd-v22-muted) !important;
+}
+
+#dkd-app label,
+#dkd-app th {
+  font-weight: 800 !important;
+  color: #d6dfef !important;
+}
+
+#dkd-app button,
+#dkd-app input,
+#dkd-app select,
+#dkd-app textarea {
+  font-size: 17px !important;
+  line-height: 1.45 !important;
+}
+
+#dkd-app input,
+#dkd-app select,
+#dkd-app textarea {
+  min-height: 62px !important;
+}
+
+#dkd-app nav button,
+#dkd-app nav a,
+#dkd-app aside button,
+#dkd-app aside a,
+#dkd-app [class*="menu"] button,
+#dkd-app [class*="menu"] a,
+#dkd-app [class*="drawer"] button,
+#dkd-app [class*="drawer"] a,
+#dkd-app [class*="sidebar"] button,
+#dkd-app [class*="sidebar"] a {
+  font-size: 17px !important;
+  font-weight: 760 !important;
+}
+
+#dkd-app [class*="bottom"] span,
+#dkd-app [class*="tab"] span,
+#dkd-app nav span {
+  font-size: max(13.5px, .8rem) !important;
+}
+
+#dkd-app [class*="card"] strong,
+#dkd-app [class*="panel"] strong,
+#dkd-app [class*="item"] strong,
+#dkd-app [class*="row"] strong {
+  font-size: max(17px, 1rem);
+  line-height: 1.4;
+}
+
+#dkd-app [class*="badge"],
+#dkd-app [class*="pill"],
+#dkd-app [class*="chip"] {
+  font-size: max(12.5px, .74rem) !important;
+  line-height: 1.3 !important;
+}
+
+#dkd-app input,
+#dkd-app textarea,
+#dkd-app select {
+  -webkit-tap-highlight-color: transparent;
+}
+
+#dkd-app input:focus,
+#dkd-app input:focus-visible,
+#dkd-app textarea:focus,
+#dkd-app textarea:focus-visible,
+#dkd-app select:focus,
+#dkd-app select:focus-visible {
+  outline: 0 !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+}
+
+#dkd-app input:not([type="checkbox"]):not([type="radio"]):focus,
+#dkd-app input:not([type="checkbox"]):not([type="radio"]):focus-visible,
+#dkd-app textarea:focus,
+#dkd-app textarea:focus-visible {
+  border-color: transparent !important;
+}
+
+#dkd-app input[type="text"],
+#dkd-app input[type="email"],
+#dkd-app input[type="tel"],
+#dkd-app input[type="password"],
+#dkd-app input[type="search"],
+#dkd-app textarea {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+#dkd-app input::-moz-focus-inner,
+#dkd-app button::-moz-focus-inner {
+  border: 0;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 17px;
+  }
+
+  #dkd-app {
+    font-size: 17px !important;
+  }
+
+  #dkd-app p,
+  #dkd-app label,
+  #dkd-app small,
+  #dkd-app li,
+  #dkd-app td,
+  #dkd-app th,
+  #dkd-app [class*="subtitle"],
+  #dkd-app [class*="description"],
+  #dkd-app [class*="detail"],
+  #dkd-app [class*="meta"],
+  #dkd-app [class*="hint"],
+  #dkd-app [class*="help"] {
+    font-size: 15.5px !important;
+  }
+
+  #dkd-app nav button,
+  #dkd-app nav a,
+  #dkd-app aside button,
+  #dkd-app aside a,
+  #dkd-app [class*="menu"] button,
+  #dkd-app [class*="menu"] a {
+    font-size: 17px !important;
+  }
+}
