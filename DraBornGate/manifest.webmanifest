@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v2.1",
+  "name": "DraBornGate Web v2.2",
   "short_name": "DraBornGate",
-  "description": "Okunabilir ve hızlı kurye, güvenlik, site yönetimi ve site sakini geçiş platformu.",
+  "description": "Okunabilir, Türkçe ve hızlı kurye, güvenlik, site yönetimi ve site sakini geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
