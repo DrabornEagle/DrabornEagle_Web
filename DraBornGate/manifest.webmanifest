@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v2.9.1",
+  "name": "DraBornGate Web v2.9.2",
   "short_name": "DraBornGate",
-  "description": "Güvenli açılış kurtarma, ayrıntılı canlı kurye kuyruğu, 6 haneli Kuryeni Bul alanı ve güvenli eşleştirme sunan geçiş platformu.",
+  "description": "Kilitlenmeyen açılış, ayrıntılı canlı kurye kuyruğu, 6 haneli Kuryeni Bul alanı ve güvenli eşleştirme sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
