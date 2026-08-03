@@ -1,74 +1,47 @@
-const DKD_CACHE = 'draborngate-web-v2.9.1-boot-hotfix';
+const DKD_CACHE = 'draborngate-web-v2.9.2-nonblocking-loader';
 const DKD_ASSETS = [
   '/DraBornGate/',
   '/DraBornGate/index.html',
   '/DraBornGate/Guvenlik-Sade-Tema/',
   '/DraBornGate/Guvenlik-Sade-Tema/index.html',
-  '/DraBornGate/assets/app.css?v=2.9.1',
-  '/DraBornGate/assets/v2.1-fixes.css?v=2.9.1',
-  '/DraBornGate/assets/v2.2.css?v=2.9.1',
-  '/DraBornGate/assets/v2.3.css?v=2.9.1',
-  '/DraBornGate/assets/app.js?v=2.9.1',
-  '/DraBornGate/assets/v2.9.1-boot-recovery.js?v=2.9.1',
-  '/DraBornGate/assets/v2.4.css.payload.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.5.css.payload.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.6.css.payload.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.7.css?v=2.9.0',
-  '/DraBornGate/assets/v2.8.css?v=2.9.0',
-  '/DraBornGate/assets/v2.9.css?v=2.9.0',
-  '/DraBornGate/assets/v2.3.js?v=2.9.0',
-  '/DraBornGate/assets/v2.4.js.payload.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.5.js.payload.1.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.5.js.payload.2.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.5.js.payload.3.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.5.js.payload.4.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.5.js.payload.5.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.6.js.payload.txt?v=2.9.0',
-  '/DraBornGate/assets/v2.7.guard.js?v=2.9.0',
-  '/DraBornGate/assets/v2.7.js?v=2.9.0',
-  '/DraBornGate/assets/v2.8.js?v=2.9.0',
-  '/DraBornGate/assets/v2.8.1.js?v=2.9.0',
-  '/DraBornGate/assets/v2.9.js?v=2.9.0',
-  '/DraBornGate/manifest.webmanifest?v=2.9.1'
+  '/DraBornGate/assets/app-v2.9.2.js',
+  '/DraBornGate/assets/app.css?v=2.9.2',
+  '/DraBornGate/assets/v2.1-fixes.css?v=2.9.2',
+  '/DraBornGate/assets/v2.2.css?v=2.9.2',
+  '/DraBornGate/assets/v2.3.css?v=2.9.2',
+  '/DraBornGate/assets/v2.9.css?v=2.9.2',
+  '/DraBornGate/assets/v2.9.js?v=2.9.2',
+  '/DraBornGate/manifest.webmanifest?v=2.9.2'
 ];
 
-function dkdFetchWithTimeout(dkdRequest, dkdTimeout = 6500) {
+function dkdFetchWithTimeout(dkdRequest, dkdTimeout = 5000) {
   const dkdController = new AbortController();
   const dkdTimer = setTimeout(() => dkdController.abort(), dkdTimeout);
-  return fetch(dkdRequest, { signal: dkdController.signal })
-    .finally(() => clearTimeout(dkdTimer));
+  return fetch(dkdRequest, { signal: dkdController.signal }).finally(() => clearTimeout(dkdTimer));
 }
 
-async function dkdCacheResponse(dkdRequest, dkdResponse) {
+async function dkdPut(dkdRequest, dkdResponse) {
   if (!dkdResponse || !dkdResponse.ok) return dkdResponse;
   const dkdCache = await caches.open(DKD_CACHE);
   await dkdCache.put(dkdRequest, dkdResponse.clone()).catch(() => undefined);
   return dkdResponse;
 }
 
-async function dkdCacheFirst(dkdRequest) {
-  const dkdExact = await caches.match(dkdRequest);
-  if (dkdExact) return dkdExact;
-  const dkdLoose = await caches.match(dkdRequest, { ignoreSearch: true });
-  if (dkdLoose) {
-    void dkdFetchWithTimeout(dkdRequest, 5000)
-      .then((dkdResponse) => dkdCacheResponse(dkdRequest, dkdResponse))
-      .catch(() => undefined);
-    return dkdLoose;
-  }
-  return dkdCacheResponse(dkdRequest, await dkdFetchWithTimeout(dkdRequest));
+async function dkdStaticCacheFirst(dkdRequest) {
+  const dkdCached = await caches.match(dkdRequest);
+  if (dkdCached) return dkdCached;
+  return dkdPut(dkdRequest, await dkdFetchWithTimeout(dkdRequest));
 }
 
 async function dkdNavigationNetworkFirst(dkdRequest) {
   try {
-    return await dkdCacheResponse(dkdRequest, await dkdFetchWithTimeout(dkdRequest, 7000));
+    return await dkdPut(dkdRequest, await dkdFetchWithTimeout(dkdRequest, 4500));
   } catch {
-    const dkdCached = await caches.match(dkdRequest, { ignoreSearch: true });
-    if (dkdCached) return dkdCached;
+    const dkdExact = await caches.match(dkdRequest);
+    if (dkdExact) return dkdExact;
     const dkdPath = new URL(dkdRequest.url).pathname.toLocaleLowerCase('tr-TR');
     if (dkdPath.includes('guvenlik-sade-tema')) {
-      const dkdSimple = await caches.match('/DraBornGate/Guvenlik-Sade-Tema/');
-      if (dkdSimple) return dkdSimple;
+      return (await caches.match('/DraBornGate/Guvenlik-Sade-Tema/')) || caches.match('/DraBornGate/');
     }
     return caches.match('/DraBornGate/');
   }
@@ -79,7 +52,7 @@ self.addEventListener('install', (dkdEvent) => {
     caches.open(DKD_CACHE).then((dkdCache) => Promise.allSettled(
       DKD_ASSETS.map(async (dkdAsset) => {
         const dkdRequest = new Request(dkdAsset, { cache: 'reload' });
-        const dkdResponse = await dkdFetchWithTimeout(dkdRequest, 7000);
+        const dkdResponse = await dkdFetchWithTimeout(dkdRequest, 5000);
         if (dkdResponse.ok) await dkdCache.put(dkdRequest, dkdResponse);
       })
     ))
@@ -101,23 +74,11 @@ self.addEventListener('activate', (dkdEvent) => {
 self.addEventListener('fetch', (dkdEvent) => {
   if (dkdEvent.request.method !== 'GET' || !dkdEvent.request.url.includes('/DraBornGate/')) return;
   const dkdUrl = new URL(dkdEvent.request.url);
-  const dkdIsNavigation = dkdEvent.request.mode === 'navigate';
-  const dkdIsStaticAsset = dkdUrl.pathname.includes('/DraBornGate/assets/')
-    || dkdUrl.pathname.endsWith('/manifest.webmanifest');
-
-  if (dkdIsNavigation) {
+  if (dkdEvent.request.mode === 'navigate') {
     dkdEvent.respondWith(dkdNavigationNetworkFirst(dkdEvent.request));
     return;
   }
-  if (dkdIsStaticAsset) {
-    dkdEvent.respondWith(
-      dkdCacheFirst(dkdEvent.request).catch(() => caches.match(dkdEvent.request, { ignoreSearch: true }))
-    );
-    return;
+  if (dkdUrl.pathname.includes('/DraBornGate/assets/') || dkdUrl.pathname.endsWith('/manifest.webmanifest')) {
+    dkdEvent.respondWith(dkdStaticCacheFirst(dkdEvent.request).catch(() => fetch(dkdEvent.request)));
   }
-  dkdEvent.respondWith(
-    dkdFetchWithTimeout(dkdEvent.request)
-      .then((dkdResponse) => dkdCacheResponse(dkdEvent.request, dkdResponse))
-      .catch(() => caches.match(dkdEvent.request, { ignoreSearch: true }))
-  );
 });
