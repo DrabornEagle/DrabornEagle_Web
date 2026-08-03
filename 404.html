@@ -5,6 +5,11 @@
 <script>
 (() => {
   const path = location.pathname + location.search + location.hash;
+  if (location.pathname.startsWith('/DraBornGate/')) {
+    sessionStorage.setItem('dkd_gate_route', path);
+    location.replace('/DraBornGate/');
+    return;
+  }
   if (location.pathname.startsWith('/DraBornGarage/')) {
     sessionStorage.setItem('dkd_garage_route', path);
     location.replace('/DraBornGarage/');

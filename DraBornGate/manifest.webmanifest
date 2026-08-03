@@ -1,0 +1,12 @@
+{
+  "name": "DraBornGate Web",
+  "short_name": "DraBornGate",
+  "description": "Kurye geçişi, güvenlik, site yönetimi ve site sakini işlemleri için DraBornGate web paneli.",
+  "start_url": "/DraBornGate/",
+  "scope": "/DraBornGate/",
+  "display": "standalone",
+  "background_color": "#071019",
+  "theme_color": "#071019",
+  "lang": "tr",
+  "orientation": "any"
+}
