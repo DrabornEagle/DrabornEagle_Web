@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.6.0';
+const DKD_WEB_VERSION = '2.7.0';
 
 function dkdPrepareCleanPersonalRoute() {
   const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
@@ -49,12 +49,24 @@ async function dkdAppendPackedStyle(dkdPath, dkdDatasetKey) {
   document.head.appendChild(dkdStyle);
 }
 
+async function dkdAppendStyleLink(dkdPath, dkdDatasetKey) {
+  await new Promise((resolve, reject) => {
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = `${dkdPath}?v=${DKD_WEB_VERSION}`;
+    link.dataset[dkdDatasetKey] = 'true';
+    link.onload = resolve;
+    link.onerror = () => reject(new Error(`${dkdPath} yüklenemedi.`));
+    document.head.appendChild(link);
+  });
+}
+
 async function dkdReadJoinedPayload(dkdPattern, dkdCount) {
   const dkdPaths = Array.from({ length: dkdCount }, (_, dkdIndex) => `${dkdPattern}.${dkdIndex + 1}.txt?v=${DKD_WEB_VERSION}`);
   return (await Promise.all(dkdPaths.map(dkdReadPayload))).join('');
 }
 
-async function dkdBootWebV26() {
+async function dkdBootWebV27() {
   dkdPrepareCleanPersonalRoute();
   await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
 
@@ -71,11 +83,14 @@ async function dkdBootWebV26() {
 
   await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
   await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
+
+  await dkdAppendStyleLink('./assets/v2.7.css', 'dkdWebV27');
+  await import(`./v2.7.js?v=${DKD_WEB_VERSION}`);
 }
 
-dkdBootWebV26().catch((error) => {
+dkdBootWebV27().catch((error) => {
   console.error(error);
-  const splash = document.querySelector('#dkd-v26-splash');
+  const splash = document.querySelector('#dkd-v27-splash') || document.querySelector('#dkd-v26-splash');
   if (splash) splash.classList.add('is-hidden');
   dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v${DKD_WEB_VERSION} açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
 });
