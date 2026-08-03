@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.5.2';
+const DKD_WEB_VERSION = '2.6.0';
 
 function dkdPrepareCleanPersonalRoute() {
   const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
@@ -23,7 +23,7 @@ function dkdPrepareCleanPersonalRoute() {
 
 async function dkdReadPayload(path) {
   const response = await fetch(path, { cache: 'no-cache' });
-  if (!response.ok) throw new Error(`DraBornGate Web v2.5.2 paketi alınamadı (${response.status}).`);
+  if (!response.ok) throw new Error(`DraBornGate Web v${DKD_WEB_VERSION} paketi alınamadı (${response.status}).`);
   return (await response.text()).trim();
 }
 
@@ -54,7 +54,7 @@ async function dkdReadJoinedPayload(dkdPattern, dkdCount) {
   return (await Promise.all(dkdPaths.map(dkdReadPayload))).join('');
 }
 
-async function dkdBootWebV25() {
+async function dkdBootWebV26() {
   dkdPrepareCleanPersonalRoute();
   await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
 
@@ -68,9 +68,14 @@ async function dkdBootWebV25() {
   await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
   const dkdV25Payload = await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5);
   await dkdImportSource(await dkdUnpack(dkdV25Payload));
+
+  await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
+  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
 }
 
-dkdBootWebV25().catch((error) => {
+dkdBootWebV26().catch((error) => {
   console.error(error);
-  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.5.2 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
+  const splash = document.querySelector('#dkd-v26-splash');
+  if (splash) splash.classList.add('is-hidden');
+  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v${DKD_WEB_VERSION} açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
 });

@@ -1,20 +1,21 @@
-# DraBornGate Web v2.5.2
+# DraBornGate Web v2.6.0
 
 DraBornGate mobil uygulamasıyla aynı Supabase projesini, ortak kullanıcı oturumunu, `draborngate` şemasını ve mevcut `dkd_gate_*` RPC işlemlerini kullanan rol bazlı web istemcisidir.
 
-## v2.5.2 güvenlik düzeltmeleri
+## v2.6.0 güvenlik düzeltmeleri
 
-- Eski v2.3/v2.4 görünür sürüm metinleri Web v2.5.2 olarak eşitlenir.
-- Tema seçimindeki “Modern Temayı Aç” düğmesi açıklamanın altına alınarak metin çakışması giderilir.
-- Modern Güvenlik paneline “Sade Temaya Geç” işlemi eklenir.
-- Sade Tema, Modern paneldeki gerçek `Kurye Kuyruğu` ve `Geçiş Talepleri` görünümünü otomatik açar.
-- Bekleyen kurye kartları daha geniş DOM eşleştirmesiyle Sade Tema’ya yansıtılır.
-- Sade Tema kod alanı, mevcut yetkili eşleştirme penceresi ve Supabase/RLS akışıyla çalışır.
-- v2.5 JavaScript katmanı aktarım bütünlüğü için beş küçük parçaya ayrılmıştır.
+- Açılışta eski v2.3/v2.5 metninin görünmesini engelleyen sabit v2.6.0 karşılama katmanı eklendi.
+- Sade Tema, Modern panelin tüm metinlerini kopyalamak yerine yalnızca gerçek 6 haneli eşleştirme alanı ve bağlı işlem düğmesini kaynak kabul eder.
+- Menü, profil, sürüm ve güvenlik paneli metinlerinin kurye kartına karışması engellenir.
+- Bekleyen kurye sayısı tek taramada sıfırlanmaz; geçici DOM yenilenmelerinde dört doğrulama turu boyunca son kararlı değer korunur.
+- Canlı geçiş talebi kartı modern başlık, durum rozeti, düzenli bilgi alanları, kod paneli ve işlem geri bildirimiyle yeniden tasarlandı.
+- Modern Güvenlik panelindeki “Sade Temaya Geç” işlemi korunur.
+- Sade Tema yalnızca doğrulanmış Güvenlik oturumu açıldıktan sonra etkinleşir; giriş ekranını kapatmaz.
+- Tasarım görsel dosyası kullanmadan CSS, yerel SVG ikonlar ve erişilebilir animasyonlarla oluşturulmuştur.
 
 ## Tema seçimi
 
-- **Sade Tema:** Kapıya gelen kuryeleri, kurye ayrıntılarını, 6 haneli eşleştirme kodunu ve eşleştirme işlemini gösterir.
+- **Sade Tema:** Kapıya gelen kuryeleri, düzenli talep ayrıntılarını, 6 haneli eşleştirme kodunu ve eşleştirme işlemini gösterir.
 - **Modern Tema:** Mevcut tam kapsamlı Güvenlik Merkezi’ni korur.
 - İki tema arasında güvenlik oturumu açıkken çift yönlü geçiş yapılabilir.
 
@@ -26,11 +27,10 @@ Sade Tema yeni bir yetkilendirme veya veri API’si oluşturmaz. İşlemler mevc
 
 ## Dosyalar
 
-- `index.html`: Web v2.5.2 giriş noktası
+- `index.html`: Web v2.6.0 giriş noktası ve eski sürüm parlamasını engelleyen karşılama katmanı
 - `Guvenlik-Sade-Tema/index.html`: doğrudan Sade Tema giriş adresi
-- `assets/app.js`: çekirdek ve v2.4/v2.5 katman yükleyicisi
-- `assets/v2.4.*.payload.txt`: temel güvenlik tema sistemi
-- `assets/v2.5.js.payload.1-5.txt`: sürüm, çift yönlü geçiş ve canlı kuyruk düzeltmeleri
-- `assets/v2.5.css.payload.txt`: tema kartı ve canlı kurye kartı yerleşimleri
+- `assets/app.js`: çekirdek ve v2.4/v2.5/v2.6 katman yükleyicisi
+- `assets/v2.6.js.payload.txt`: kararlı kuyruk, veri süzme, sayaç ve eşleştirme denetleyicisi
+- `assets/v2.6.css.payload.txt`: modern tam ekran Sade Tema tasarım sistemi
 - `manifest.webmanifest`: kurulabilir web uygulaması bilgileri
-- `sw.js`: v2.5.2 PWA önbelleği
+- `sw.js`: v2.6.0 PWA önbelleği
