@@ -1,5 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.8.0';
+const DKD_WEB_VERSION = '2.9.0';
+let dkdBootProgressValue = 2;
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -9,12 +10,13 @@ function dkdIsSimpleModeRequested() {
 }
 
 function dkdSetBootProgress(dkdPercent, dkdLabel) {
-  const dkdSafePercent = Math.max(0, Math.min(100, Number(dkdPercent) || 0));
+  const dkdRequested = Math.max(0, Math.min(100, Number(dkdPercent) || 0));
+  dkdBootProgressValue = Math.max(dkdBootProgressValue, dkdRequested);
   const dkdFill = document.querySelector('#dkd-v28-progress-fill');
   const dkdProgress = document.querySelector('#dkd-v28-progress');
   const dkdText = document.querySelector('#dkd-v28-progress-label');
-  if (dkdFill) dkdFill.style.width = `${dkdSafePercent}%`;
-  if (dkdProgress) dkdProgress.setAttribute('aria-valuenow', String(Math.round(dkdSafePercent)));
+  if (dkdFill) dkdFill.style.width = `${dkdBootProgressValue}%`;
+  if (dkdProgress) dkdProgress.setAttribute('aria-valuenow', String(Math.round(dkdBootProgressValue)));
   if (dkdText && dkdLabel) dkdText.textContent = dkdLabel;
 }
 
@@ -109,16 +111,18 @@ async function dkdReadJoinedPayload(dkdPattern, dkdCount) {
 function dkdFinishBoot() {
   clearTimeout(dkdBootWatchdog);
   dkdSetBootProgress(100, 'Hazır');
+  document.body.classList.add('dkd-web-ready');
   setTimeout(() => {
     const dkdSplash = document.querySelector('#dkd-v28-splash');
     dkdSplash?.classList.add('is-hidden');
     setTimeout(() => dkdSplash?.remove(), 460);
-  }, 240);
+  }, 180);
 }
 
 function dkdShowBootError(dkdError) {
   clearTimeout(dkdBootWatchdog);
   console.error(dkdError);
+  document.body.classList.add('dkd-web-ready');
   const dkdRetry = document.querySelector('#dkd-v28-retry');
   dkdSetBootProgress(100, `Yükleme tamamlanamadı: ${String(dkdError?.message || dkdError)}`);
   if (dkdRetry) dkdRetry.hidden = false;
@@ -127,7 +131,7 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV28() {
+async function dkdBootWebV29() {
   dkdSetBootProgress(4, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
   const dkdSimpleMode = dkdIsSimpleModeRequested();
@@ -166,16 +170,23 @@ async function dkdBootWebV28() {
     dkdSetBootProgress(82, 'Bağımsız Sade Tema hazırlanıyor');
   }
 
-  dkdSetBootProgress(90, 'Canlı geçiş sistemi bağlanıyor');
+  dkdSetBootProgress(88, 'Canlı geçiş sistemi bağlanıyor');
   await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
-
-  dkdSetBootProgress(96, 'Son kontroller yapılıyor');
   await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
 
-  dkdSetBootProgress(98, 'Motosiklet arayüzü güncelleniyor');
-  await import('./v2.8.1.js?v=2.8.1');
+  dkdSetBootProgress(93, 'Uygulama motosikleti hazırlanıyor');
+  await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
+
+  dkdSetBootProgress(96, 'Gelişmiş güvenlik ekranı yükleniyor');
+  await dkdAppendStyleLink('./assets/v2.9.css', 'dkdWebV29');
+
+  dkdSetBootProgress(98, 'Kurye kodu ve canlı kuyruk bağlanıyor');
+  const dkdV29Module = await import(`./v2.9.js?v=${DKD_WEB_VERSION}`);
+
+  dkdSetBootProgress(99, 'İlk ekran doğrulanıyor');
+  await dkdV29Module.dkdV29PrepareInitialSurface({ simpleMode: dkdSimpleMode });
 
   dkdFinishBoot();
 }
 
-dkdBootWebV28().catch(dkdShowBootError);
+dkdBootWebV29().catch(dkdShowBootError);
