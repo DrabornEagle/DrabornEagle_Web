@@ -8,10 +8,10 @@ const DKD_ASSETS = [
   '/DraBornGate/assets/v2.1-fixes.css?v=2.4.0',
   '/DraBornGate/assets/v2.2.css?v=2.4.0',
   '/DraBornGate/assets/v2.3.css?v=2.4.0',
-  '/DraBornGate/assets/v2.4.css?v=2.4.0',
+  '/DraBornGate/assets/v2.4.css.payload.txt?v=2.4.0',
   '/DraBornGate/assets/app.js?v=2.4.0',
   '/DraBornGate/assets/v2.3.js?v=2.4.0',
-  '/DraBornGate/assets/v2.4.js?v=2.4.0',
+  '/DraBornGate/assets/v2.4.js.payload.txt?v=2.4.0',
   '/DraBornGate/manifest.webmanifest?v=2.4.0'
 ];
 self.addEventListener('install', (event) => {
