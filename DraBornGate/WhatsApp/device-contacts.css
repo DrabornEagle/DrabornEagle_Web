@@ -1,4 +1,4 @@
-/* DraBornGate WhatsApp cihaz rehberi seçimi v1.2 */
+/* DraBornGate WhatsApp cihaz rehberi seçimi v1.3 */
 .device-contact-spotlight {
   position: relative;
   isolation: isolate;
@@ -17,6 +17,25 @@
   border-radius: 16px;
   pointer-events: none;
   animation: dkd-contact-ring 1.8s ease-out infinite;
+}
+
+.vcf-download-spotlight {
+  position: relative;
+  isolation: isolate;
+  outline: 3px solid rgba(32, 215, 181, .8);
+  outline-offset: 4px;
+  animation: dkd-vcf-pulse 1.35s ease-in-out infinite;
+}
+
+.vcf-download-spotlight::after {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  z-index: -1;
+  border: 2px solid rgba(32, 215, 181, .68);
+  border-radius: 17px;
+  pointer-events: none;
+  animation: dkd-vcf-ring 1.35s ease-out infinite;
 }
 
 .device-contact-help {
@@ -51,14 +70,13 @@
   min-height: 50px;
 }
 
-.contact-import-note {
-  margin: 14px 0 0;
-  padding: 11px 13px;
-  border: 1px solid var(--line);
-  border-radius: 12px;
+.vcf-download-copy {
+  display: block;
+  margin: -2px 3px 4px;
   color: var(--soft);
-  font-size: 12px;
-  line-height: 1.5;
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
 }
 
 @keyframes dkd-contact-nudge {
@@ -72,6 +90,16 @@
   70%, 100% { opacity: 0; transform: scale(1.07); }
 }
 
+@keyframes dkd-vcf-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.025); }
+}
+
+@keyframes dkd-vcf-ring {
+  0% { opacity: .8; transform: scale(.985); }
+  75%, 100% { opacity: 0; transform: scale(1.065); }
+}
+
 @media (max-width: 620px) {
   .device-contact-spotlight {
     width: 100%;
@@ -80,7 +108,9 @@
 
 @media (prefers-reduced-motion: reduce) {
   .device-contact-spotlight,
-  .device-contact-spotlight::after {
+  .device-contact-spotlight::after,
+  .vcf-download-spotlight,
+  .vcf-download-spotlight::after {
     animation: none;
   }
 }
