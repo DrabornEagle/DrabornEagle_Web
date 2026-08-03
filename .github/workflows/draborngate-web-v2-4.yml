@@ -1,4 +1,4 @@
-name: DraBornGate Web v2.9.0 Verify
+name: DraBornGate Web v2.9.1 Verify
 
 on:
   push:
@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v2-9-0-${{ github.ref }}
+  group: draborngate-web-v2-9-1-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -41,5 +41,11 @@ jobs:
         run: node --check DraBornGate/assets/v2.8.1.js
       - name: Ayrıntılı canlı kuyruk sözdizimini doğrula
         run: node --check DraBornGate/assets/v2.9.js
+      - name: Açılış kurtarma sözdizimini doğrula
+        run: node --check DraBornGate/assets/v2.9.1-boot-recovery.js
+      - name: Service Worker sözdizimini doğrula
+        run: node --check DraBornGate/sw.js
       - name: Web v2.9 kapsamını doğrula
         run: node DraBornGate/tests/dkd_verify_web_v290.mjs
+      - name: Web v2.9.1 açılış kurtarmayı doğrula
+        run: node DraBornGate/tests/dkd_verify_boot_recovery_v291.mjs
