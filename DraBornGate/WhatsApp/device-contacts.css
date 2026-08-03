@@ -1,4 +1,4 @@
-/* DraBornGate WhatsApp cihaz rehberi seçimi v1.3 */
+/* DraBornGate WhatsApp cihaz rehberi seçimi v1.4 */
 .device-contact-spotlight {
   position: relative;
   isolation: isolate;
@@ -19,15 +19,15 @@
   animation: dkd-contact-ring 1.8s ease-out infinite;
 }
 
-.vcf-download-spotlight {
+.vcf-all-spotlight {
   position: relative;
   isolation: isolate;
   outline: 3px solid rgba(32, 215, 181, .8);
   outline-offset: 4px;
-  animation: dkd-vcf-pulse 1.35s ease-in-out infinite;
+  animation: dkd-vcf-all-pulse 1.35s ease-in-out infinite;
 }
 
-.vcf-download-spotlight::after {
+.vcf-all-spotlight::after {
   content: "";
   position: absolute;
   inset: -8px;
@@ -35,7 +35,7 @@
   border: 2px solid rgba(32, 215, 181, .68);
   border-radius: 17px;
   pointer-events: none;
-  animation: dkd-vcf-ring 1.35s ease-out infinite;
+  animation: dkd-vcf-all-ring 1.35s ease-out infinite;
 }
 
 .device-contact-help {
@@ -70,15 +70,6 @@
   min-height: 50px;
 }
 
-.vcf-download-copy {
-  display: block;
-  margin: -2px 3px 4px;
-  color: var(--soft);
-  font-size: 11px;
-  line-height: 1.45;
-  text-align: center;
-}
-
 @keyframes dkd-contact-nudge {
   0%, 100% { transform: translateY(0) scale(1); }
   45% { transform: translateY(-3px) scale(1.018); }
@@ -90,12 +81,12 @@
   70%, 100% { opacity: 0; transform: scale(1.07); }
 }
 
-@keyframes dkd-vcf-pulse {
+@keyframes dkd-vcf-all-pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.025); }
 }
 
-@keyframes dkd-vcf-ring {
+@keyframes dkd-vcf-all-ring {
   0% { opacity: .8; transform: scale(.985); }
   75%, 100% { opacity: 0; transform: scale(1.065); }
 }
@@ -109,8 +100,8 @@
 @media (prefers-reduced-motion: reduce) {
   .device-contact-spotlight,
   .device-contact-spotlight::after,
-  .vcf-download-spotlight,
-  .vcf-download-spotlight::after {
+  .vcf-all-spotlight,
+  .vcf-all-spotlight::after {
     animation: none;
   }
 }
