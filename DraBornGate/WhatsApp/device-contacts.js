@@ -3,7 +3,6 @@
 
   const DKD_CONTACTS_KEY = 'dkd_gate_whatsapp_contacts_v2';
   const DKD_IMPORT_STATUS_KEY = 'dkd_gate_whatsapp_device_import_status_v1';
-  const DKD_DOWNLOAD_AFTER_IMPORT_KEY = 'dkd_gate_whatsapp_download_after_import_v1';
 
   function dkdText(value) {
     return String(value ?? '').trim();
@@ -125,73 +124,6 @@
     dkdVcfInput.click();
   }
 
-  function dkdEscapeVcfValue(value) {
-    return dkdText(value)
-      .replace(/\\/g, '\\\\')
-      .replace(/\r?\n/g, '\\n')
-      .replace(/;/g, '\\;')
-      .replace(/,/g, '\\,');
-  }
-
-  function dkdBuildVcf(dkdContacts) {
-    return dkdContacts.map((dkdContact) => {
-      const dkdName = dkdEscapeVcfValue(dkdContact.name || 'İsimsiz Kişi');
-      const dkdPhone = dkdNormalizePhone(dkdContact.phone);
-      const dkdLocation = [dkdText(dkdContact.block), dkdText(dkdContact.flat) && `Daire ${dkdText(dkdContact.flat)}`]
-        .filter(Boolean)
-        .join(' ');
-      const dkdLines = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        `FN:${dkdName}`,
-        `N:;${dkdName};;;`,
-        `TEL;TYPE=CELL:${dkdPhone}`,
-      ];
-      if (dkdLocation) dkdLines.push(`NOTE:${dkdEscapeVcfValue(dkdLocation)}`);
-      dkdLines.push('END:VCARD');
-      return dkdLines.join('\r\n');
-    }).join('\r\n');
-  }
-
-  function dkdSaveVcfFile(dkdContacts) {
-    const dkdVcfContent = dkdBuildVcf(dkdContacts);
-    const dkdBlob = new Blob([`\uFEFF${dkdVcfContent}`], { type: 'text/vcard;charset=utf-8' });
-    const dkdUrl = URL.createObjectURL(dkdBlob);
-    const dkdAnchor = document.createElement('a');
-    const dkdDate = new Date().toISOString().slice(0, 10);
-
-    dkdAnchor.href = dkdUrl;
-    dkdAnchor.download = `DraBornGate_Rehber_${dkdDate}.vcf`;
-    dkdAnchor.hidden = true;
-    document.body.appendChild(dkdAnchor);
-    dkdAnchor.click();
-    dkdAnchor.remove();
-    window.setTimeout(() => URL.revokeObjectURL(dkdUrl), 1500);
-  }
-
-  function dkdDownloadVcf(dkdOptions = {}) {
-    const dkdDialog = document.getElementById('contactImportDialog');
-    const dkdContacts = dkdReadStoredContacts()
-      .map((dkdContact) => ({ ...dkdContact, phone: dkdNormalizePhone(dkdContact.phone) }))
-      .filter((dkdContact) => dkdContact.phone);
-
-    if (!dkdContacts.length) {
-      if (dkdOptions.afterImport) {
-        dkdSetStatus('Seçilen kişilerde indirilebilir telefon numarası bulunamadı.', 'error');
-        return;
-      }
-
-      sessionStorage.setItem(DKD_DOWNLOAD_AFTER_IMPORT_KEY, '1');
-      dkdSetStatus('VCF oluşturmak için rehberden kişileri seç. Seçim bitince dosya otomatik indirilecek.');
-      dkdImportFromDevice();
-      return;
-    }
-
-    dkdSaveVcfFile(dkdContacts);
-    if (dkdDialog?.open) dkdDialog.close();
-    dkdSetStatus(`${dkdContacts.length} kişi VCF rehberi olarak indirildi.`, 'ok');
-  }
-
   async function dkdSupportedContactProperties() {
     const dkdRequired = ['name', 'tel'];
     if (!navigator.contacts || typeof navigator.contacts.getProperties !== 'function') return dkdRequired;
@@ -211,7 +143,6 @@
     if (dkdDialog?.open) dkdDialog.close();
 
     if (!window.isSecureContext || !navigator.contacts || typeof navigator.contacts.select !== 'function') {
-      sessionStorage.removeItem(DKD_DOWNLOAD_AFTER_IMPORT_KEY);
       dkdSetStatus('Bu tarayıcı doğrudan rehber seçimini desteklemiyor. VCF dosyası seçimi açıldı.', 'error');
       dkdOpenVcfPicker();
       return;
@@ -225,7 +156,6 @@
     try {
       const dkdProperties = await dkdSupportedContactProperties();
       if (!dkdProperties.includes('tel')) {
-        sessionStorage.removeItem(DKD_DOWNLOAD_AFTER_IMPORT_KEY);
         dkdSetStatus('Tarayıcı telefon numarası paylaşımını desteklemiyor. VCF dosyası seçimi açıldı.', 'error');
         dkdOpenVcfPicker();
         return;
@@ -235,7 +165,6 @@
       const dkdImported = dkdConvertPickedContacts(dkdPickedContacts);
 
       if (!dkdImported.length) {
-        sessionStorage.removeItem(DKD_DOWNLOAD_AFTER_IMPORT_KEY);
         dkdSetStatus('Kişi seçilmedi veya seçilen kişilerde geçerli telefon numarası bulunamadı.');
         return;
       }
@@ -244,7 +173,6 @@
       sessionStorage.setItem(DKD_IMPORT_STATUS_KEY, JSON.stringify({ total: dkdImported.length, added: dkdAdded }));
       window.location.reload();
     } catch (dkdError) {
-      sessionStorage.removeItem(DKD_DOWNLOAD_AFTER_IMPORT_KEY);
       if (dkdError?.name === 'AbortError') {
         dkdSetStatus('Rehber seçimi iptal edildi.');
       } else {
@@ -270,17 +198,10 @@
     if (dkdDialog?.open) dkdDialog.close();
   }
 
-  function dkdDownloadAfterImport() {
-    if (sessionStorage.getItem(DKD_DOWNLOAD_AFTER_IMPORT_KEY) !== '1') return;
-    sessionStorage.removeItem(DKD_DOWNLOAD_AFTER_IMPORT_KEY);
-    window.setTimeout(() => dkdDownloadVcf({ afterImport: true }), 350);
-  }
-
   function dkdInitializeDeviceContacts() {
     const dkdButton = document.getElementById('deviceContacts');
     const dkdPickMultipleButton = document.getElementById('pickMultipleContacts');
     const dkdPickVcfButton = document.getElementById('pickVcfAll');
-    const dkdDownloadVcfButton = document.getElementById('downloadVcfContacts');
     const dkdCloseButton = document.getElementById('closeContactImport');
     const dkdCancelButton = document.getElementById('cancelContactImport');
 
@@ -288,11 +209,9 @@
     dkdButton.addEventListener('click', dkdOpenImportDialog);
     dkdPickMultipleButton?.addEventListener('click', dkdImportFromDevice);
     dkdPickVcfButton?.addEventListener('click', dkdOpenVcfPicker);
-    dkdDownloadVcfButton?.addEventListener('click', () => dkdDownloadVcf());
     dkdCloseButton?.addEventListener('click', dkdCloseImportDialog);
     dkdCancelButton?.addEventListener('click', dkdCloseImportDialog);
     dkdShowPreviousImportStatus();
-    dkdDownloadAfterImport();
   }
 
   if (document.readyState === 'loading') {
