@@ -1,33 +1,52 @@
-# DraBornGate Web v1.0
+# DraBornGate Web v2.0
 
-DraBornGate mobil uygulamasıyla aynı Supabase projesini, kullanıcı oturumunu, `draborngate` şemasını ve `dkd_gate_*` RPC işlemlerini kullanan rol bazlı web istemcisidir.
+DraBornGate mobil uygulamasıyla aynı Supabase projesini, ortak kullanıcı oturumunu, `draborngate` şemasını ve mevcut `dkd_gate_*` RPC işlemlerini kullanan premium rol bazlı web istemcisidir.
 
-## Web panelleri
+## Web v2.0 tasarım sistemi
 
-- Kurye: geçiş talebi, kapıya geldim, tek seferlik konum kontrolü, geçiş kodu ve geçmiş.
-- Güvenlik: kapı kuyruğu, kurye kodu eşleştirme, onay/ret, giriş tamamlama ve ziyaretçi doğrulama.
-- Site Sakini: gelen kuryeler, misafir kodu, aidat, paylaşılan finans özeti ve web bildirim merkezi.
-- Site Yönetimi: raporlar, CSV dışa aktarma, rol başvuruları, sakin arama, kurallar, aidat ve finans.
+- Neon cam katmanlı, renkli premium arayüz
+- Animasyonlu metrik kartları, radar efektli rol kahraman alanları ve canlı durum göstergeleri
+- Yerel SVG ikon sistemi; emoji tabanlı ikon kullanılmaz
+- Masaüstü sabit yan menü, mobil çekmece ve mobil alt navigasyon
+- Modern tablo, form, modal, bildirim ve işlem kartları
+- `prefers-reduced-motion` desteği
+- PWA manifesti ve çevrimdışı kabuk önbelleği
 
-## Güvenlik ve kişisel bağlantılar
+## Rol panelleri
 
-Kişisel yollar okunabilir bağlantılardır:
+- **Kurye:** geçiş talebi, kapıya geldim, tek seferlik konum kontrolü, geçiş kodu ve geçmiş.
+- **Güvenlik:** kapı kuyruğu, kurye kodu eşleştirme, onay/ret, giriş tamamlama ve ziyaretçi doğrulama.
+- **Site Sakini:** gelen kuryeler, misafir kodu, aidat, paylaşılan finans özeti ve web bildirim merkezi.
+- **Site Yönetimi:** premium raporlar, CSV dışa aktarma, rol başvuruları, sakin arama, kurallar, aidat ve finans.
+
+## Kişisel bağlantılar
 
 - `/DraBornGate/site-adi/yonetim-kullanici-adi`
 - `/DraBornGate/site-adi/guvenlik-kullanici-adi`
 - `/DraBornGate/site-adi/sitesakini-kullanici-adi`
 - `/DraBornGate/site-adi/kurye-kullanici-adi`
 
-URL tek başına yetki sağlamaz. Her ekran Supabase oturumu, rol doğrulaması ve mevcut RLS politikalarıyla korunur. GitHub Pages doğrudan alt yol istekleri, kök `404.html` üzerinden SPA girişine taşınır.
+URL tek başına yetki sağlamaz. Erişim Supabase oturumu, rol doğrulaması, mevcut RPC kontrolleri ve RLS politikalarıyla korunur.
 
-## Mobil uygulamadan ayrılan özellikler
+## Web'e taşınmayan native özellikler
 
-Native push bildirimi, bildirim zil sesi, Google Play Billing ve ödüllü reklam web istemcisine taşınmamıştır. Web, uygulama içi bildirim kayıtlarını ve Supabase Realtime yenilemeyi kullanır. Mevcut Google Play politika sayfaları ayrı klasörlerde korunur.
+Native push bildirimi, cihaz zil sesi, Google Play Billing ve ödüllü reklam web istemcisinden ayrıdır. Web sürümü Supabase Realtime ve uygulama içi bildirim kayıtlarını kullanır.
+
+## Korunan politika sayfaları
+
+- `privacy/`
+- `data-safety/`
+- `account-deletion/`
+- `subscriptions/`
+- `support/`
+- `terms/`
 
 ## Dosyalar
 
-- `index.html`: DraBornGate Web giriş noktası
-- `assets/app.js`: sıkıştırılmış uygulama ve stil paketlerini güvenli biçimde açan yükleyici
-- `assets/app.payload.*.txt`: Supabase istemcisi, rol panelleri ve işlem akışlarının sıkıştırılmış kaynak paketi
-- `assets/app.css` ve `assets/app.css.payload.txt`: başlangıç ekranı ile tam modern kurye/güvenlik arayüzü
+- `index.html`: Web v2.0 giriş noktası
+- `assets/app.js`: v2 kaynak paketlerini açan güvenli yükleyici
+- `assets/app.v2.payload.*.txt`: Web v2.0 uygulama kaynak paketi
+- `assets/app.css`: premium başlangıç ekranı
+- `assets/app.v2.css.payload.txt`: tam v2 tasarım sistemi
 - `manifest.webmanifest`: kurulabilir web uygulaması bilgileri
+- `sw.js`: statik web kabuğu önbelleği
