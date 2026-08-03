@@ -21,6 +21,7 @@ const DKD_ASSETS = [
   '/DraBornGate/assets/v2.5.js.payload.4.txt?v=2.7.0',
   '/DraBornGate/assets/v2.5.js.payload.5.txt?v=2.7.0',
   '/DraBornGate/assets/v2.6.js.payload.txt?v=2.7.0',
+  '/DraBornGate/assets/v2.7.guard.js?v=2.7.0',
   '/DraBornGate/assets/v2.7.js?v=2.7.0',
   '/DraBornGate/manifest.webmanifest?v=2.7.0'
 ];
