@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v2.7.0",
+  "name": "DraBornGate Web v2.8.0",
   "short_name": "DraBornGate",
-  "description": "Bağımsız Güvenlik Sade Tema, kararlı canlı kurye kuyruğu ve güvenli kod eşleştirme sunan geçiş platformu.",
+  "description": "Gerçek yükleme ilerlemesi, kararlı Güvenlik Sade Tema, canlı geçiş talepleri ve güvenli kod eşleştirme sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
