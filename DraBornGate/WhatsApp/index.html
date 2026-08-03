@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#071018">
+  <meta name="description" content="DraBornGate VCF rehber ve WhatsApp mesaj yönetimi">
+  <link rel="canonical" href="https://www.draborneagle.com/DraBornGate/WhatsApp/">
+  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <title>DraBornGate WhatsApp Yönetimi</title>
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">DRABORNGATE</span>
+        <h1>WhatsApp Yönetim Merkezi</h1>
+        <p>Güvenlik rehberini VCF olarak yükle, site sakinlerini bul ve hazır mesajı WhatsApp üzerinden gönder.</p>
+      </div>
+      <span class="local">Kayıtlar bu tarayıcıda saklanır</span>
+    </header>
+
+    <nav class="tabs" aria-label="Bölümler">
+      <button class="tab active" data-tab="bulk" type="button">Toplu Gönderim</button>
+      <button class="tab" data-tab="management" type="button">Site Yönetimi</button>
+    </nav>
+
+    <section id="bulk" class="panel active">
+      <div class="grid two">
+        <article class="card">
+          <span class="eyebrow">1 · REHBER</span>
+          <h2>VCF rehberini içe aktar</h2>
+          <label class="upload" for="vcfFile">
+            <strong>VCF dosyası seç</strong>
+            <small>Android rehberinden dışa aktarılan .vcf dosyası</small>
+          </label>
+          <input id="vcfFile" type="file" accept=".vcf,text/vcard,text/x-vcard" hidden>
+          <div class="actions">
+            <button id="clearAll" class="button secondary" type="button">Rehberi Temizle</button>
+            <button id="exportJson" class="button secondary" type="button">Yedek İndir</button>
+            <label class="button secondary file-button" for="importJson">Yedeği Yükle</label>
+            <input id="importJson" type="file" accept=".json,application/json" hidden>
+          </div>
+          <p id="importStatus" class="status">Henüz VCF yüklenmedi.</p>
+        </article>
+
+        <article class="card">
+          <span class="eyebrow">2 · MESAJ</span>
+          <h2>DraBornGate tanıtım mesajı</h2>
+          <label class="field">
+            <span>Google Play bağlantısı</span>
+            <input id="playUrl" type="url" inputmode="url">
+          </label>
+          <label class="field">
+            <span>Gönderilecek mesaj</span>
+            <textarea id="messageTemplate" rows="10"></textarea>
+          </label>
+          <p class="hint"><code>{ad}</code>, <code>{ad_soyad}</code> ve <code>{google_play}</code> alanlarını kullanabilirsin.</p>
+          <button id="saveMessage" class="button primary" type="button">Mesajı Kaydet</button>
+        </article>
+      </div>
+
+      <article class="card list-card">
+        <div class="card-head">
+          <div>
+            <span class="eyebrow">3 · KİŞİLER</span>
+            <h2>Gönderim listesi</h2>
+          </div>
+          <div class="stats">
+            <div><strong id="totalCount">0</strong><span>Toplam</span></div>
+            <div><strong id="selectedCount">0</strong><span>Seçili</span></div>
+            <div><strong id="sentCount">0</strong><span>Gönderildi</span></div>
+          </div>
+        </div>
+
+        <div class="toolbar">
+          <input id="bulkSearch" type="search" placeholder="Ad, blok, daire veya telefon ara">
+          <button id="selectVisible" class="button secondary" type="button">Görünenleri Seç</button>
+          <button id="unselectVisible" class="button secondary" type="button">Seçimi Kaldır</button>
+          <button id="resetSent" class="button secondary" type="button">Gönderimleri Sıfırla</button>
+        </div>
+
+        <div id="bulkEmpty" class="empty">VCF yüklendiğinde kişiler burada görünecek.</div>
+        <div id="bulkList" class="list"></div>
+
+        <div class="sendbar">
+          <div>
+            <strong id="queueSummary">Gönderime hazır kişi yok</strong>
+            <small>API kullanılmaz. Her kişinin WhatsApp sohbeti hazır mesajla açılır; Gönder düğmesine sen basarsın.</small>
+          </div>
+          <button id="startQueue" class="button primary" type="button" disabled>Gönderime Başla</button>
+        </div>
+      </article>
+    </section>
+
+    <section id="management" class="panel">
+      <article class="card">
+        <div class="card-head">
+          <div>
+            <span class="eyebrow">SİTE YÖNETİMİ</span>
+            <h2>Site sakini ara ve mesaj gönder</h2>
+            <p class="muted">Ad soyad, blok, daire veya telefon numarasından herhangi biriyle arama yap.</p>
+          </div>
+          <button id="addResident" class="button primary" type="button">Yeni Sakin Ekle</button>
+        </div>
+        <div class="toolbar">
+          <input id="residentSearch" type="search" placeholder="Örn: Ahmet, A Blok, 24 veya 0532...">
+          <select id="blockFilter"><option value="">Tüm Bloklar</option></select>
+        </div>
+        <div id="residentEmpty" class="empty">Henüz kayıt bulunmuyor. VCF yükleyebilir veya yeni sakin ekleyebilirsin.</div>
+        <div id="residentList" class="resident-list"></div>
+      </article>
+    </section>
+  </main>
+
+  <dialog id="residentDialog">
+    <form id="residentForm">
+      <div class="dialog-head">
+        <div><span class="eyebrow">SAKİN KAYDI</span><h2 id="residentTitle">Yeni sakin ekle</h2></div>
+        <button class="icon-button" data-close="residentDialog" type="button" aria-label="Kapat">×</button>
+      </div>
+      <input id="residentId" type="hidden">
+      <div class="form-grid">
+        <label class="field"><span>Ad Soyad</span><input id="residentName" required></label>
+        <label class="field"><span>Telefon</span><input id="residentPhone" inputmode="tel" required></label>
+        <label class="field"><span>Blok</span><input id="residentBlock" placeholder="A Blok"></label>
+        <label class="field"><span>Daire</span><input id="residentFlat" placeholder="24"></label>
+      </div>
+      <div class="dialog-actions">
+        <button class="button secondary" data-close="residentDialog" type="button">Vazgeç</button>
+        <button class="button primary" type="submit">Kaydet</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="messageDialog">
+    <form id="messageForm">
+      <div class="dialog-head">
+        <div><span class="eyebrow">WHATSAPP MESAJI</span><h2 id="messageTitle">Mesaj gönder</h2></div>
+        <button class="icon-button" data-close="messageDialog" type="button" aria-label="Kapat">×</button>
+      </div>
+      <input id="messageContactId" type="hidden">
+      <label class="field"><span>Mesaj</span><textarea id="singleMessage" rows="10" required></textarea></label>
+      <div class="dialog-actions">
+        <button class="button secondary" data-close="messageDialog" type="button">Vazgeç</button>
+        <button class="button primary" type="submit">WhatsApp'ı Aç</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog id="queueDialog">
+    <div class="dialog-head">
+      <div><span class="eyebrow">SIRALI GÖNDERİM</span><h2 id="queueName">Kişi hazırlanıyor</h2><p id="queueProgress" class="muted"></p></div>
+      <button class="icon-button" data-close="queueDialog" type="button" aria-label="Kapat">×</button>
+    </div>
+    <div id="queuePhone" class="queue-phone"></div>
+    <p class="muted">WhatsApp'ı aç, mesajı gönder, bu sayfaya dön ve “Gönderildi, Sıradaki” düğmesine bas.</p>
+    <div class="stack">
+      <button id="openQueueWhatsApp" class="button primary" type="button">WhatsApp'ı Aç</button>
+      <button id="markSentNext" class="button success" type="button">Gönderildi, Sıradaki</button>
+      <button id="skipQueue" class="button secondary" type="button">Bu Kişiyi Atla</button>
+    </div>
+  </dialog>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="./app.js?v=1.0.0" defer></script>
+</body>
+</html>
