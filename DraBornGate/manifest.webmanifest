@@ -1,13 +1,13 @@
 {
-  "name": "DraBornGate Web v2.3",
+  "name": "DraBornGate Web v2.4",
   "short_name": "DraBornGate",
-  "description": "Aramalı site seçimi ve belirgin işlem geri bildirimi sunan kurye, güvenlik, site yönetimi ve site sakini geçiş platformu.",
+  "description": "Kurye, güvenlik, site yönetimi ve site sakini operasyonlarıyla birlikte güvenlik kullanıcılarına Sade ve Modern tema seçimi sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#050816",
   "theme_color": "#050816",
-  "orientation": "portrait-primary",
+  "orientation": "any",
   "categories": ["business", "security", "productivity"],
   "lang": "tr"
 }
