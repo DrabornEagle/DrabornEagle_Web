@@ -25,7 +25,7 @@ new vm.Script(dkdThemeV24Js, { filename: 'assets/v2.4.js' });
 new vm.Script(dkdThemeV25Js, { filename: 'assets/v2.5.js' });
 JSON.parse(dkdManifest);
 
-assert.match(dkdApp, /DKD_WEB_VERSION\s*=\s*['"]2\.5\.0['"]/);
+assert.match(dkdApp, /DKD_WEB_VERSION\s*=\s*['"]2\.5\.1['"]/);
 assert.match(dkdApp, /v2\.4\.js\.payload\.txt/);
 assert.match(dkdApp, /v2\.5\.js\.payload\.txt/);
 assert.match(dkdApp, /v2\.5\.css\.payload\.txt/);
@@ -50,14 +50,14 @@ assert.match(dkdThemeV25Css, /prefers-reduced-motion/);
 
 assert.match(dkdThemeV24Js, /dkdV24ShowChooser/);
 assert.match(dkdThemeV24Css, /\.dkd-v24-simple-shell/);
-assert.match(dkdIndex, /DraBornGate Web v2\.5\.0/);
-assert.match(dkdIndex, /assets\/app\.js\?v=2\.5\.0/);
-assert.match(dkdSimpleIndex, /Güvenlik Sade Tema v2\.5\.0/);
+assert.match(dkdIndex, /DraBornGate Web v2\.5\.1/);
+assert.match(dkdIndex, /assets\/app\.js\?v=2\.5\.1/);
+assert.match(dkdSimpleIndex, /Güvenlik Sade Tema v2\.5\.1/);
 assert.match(dkdSimpleIndex, /dkd_gate_security_theme/);
 assert.match(dkdSimpleIndex, /Guvenlik-Sade-Tema/);
-assert.equal(JSON.parse(dkdManifest).name, 'DraBornGate Web v2.5');
-assert.match(dkdServiceWorker, /draborngate-web-v2\.5\.0/);
-assert.match(dkdServiceWorker, /assets\/v2\.5\.js\.payload\.txt\?v=2\.5\.0/);
-assert.match(dkdServiceWorker, /assets\/v2\.5\.css\.payload\.txt\?v=2\.5\.0/);
+assert.equal(JSON.parse(dkdManifest).name, 'DraBornGate Web v2.5.1');
+assert.match(dkdServiceWorker, /draborngate-web-v2\.5\.1/);
+assert.match(dkdServiceWorker, /assets\/v2\.5\.js\.payload\.txt\?v=2\.5\.1/);
+assert.match(dkdServiceWorker, /assets\/v2\.5\.css\.payload\.txt\?v=2\.5\.1/);
 
-console.log('DraBornGate Web v2.5 Guvenlik tema ve canli kuyruk dogrulamasi basarili.');
+console.log('DraBornGate Web v2.5.1 Guvenlik tema ve canli kuyruk dogrulamasi basarili.');
