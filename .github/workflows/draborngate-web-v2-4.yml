@@ -1,4 +1,4 @@
-name: DraBornGate Web v2.4 Verify
+name: DraBornGate Web v2.5 Verify
 
 on:
   push:
@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v2-4-${{ github.ref }}
+  group: draborngate-web-v2-5-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -35,5 +35,5 @@ jobs:
           node-version: 22
       - name: Yükleyici sözdizimini doğrula
         run: node --check DraBornGate/assets/app.js
-      - name: Güvenlik Sade Tema kapsamını doğrula
+      - name: Güvenlik tema ve canlı kuyruk kapsamını doğrula
         run: node DraBornGate/tests/dkd_verify_security_simple_theme.mjs
