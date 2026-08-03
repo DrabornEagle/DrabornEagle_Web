@@ -15,7 +15,7 @@
       <div>
         <span class="eyebrow">DRABORNGATE</span>
         <h1>WhatsApp Yönetim Merkezi</h1>
-        <p>Güvenlik rehberini VCF olarak yükle, site sakinlerini bul ve hazır mesajı WhatsApp üzerinden gönder.</p>
+        <p>Güvenlik rehberini cihazdan veya VCF dosyasından içe aktar, site sakinlerini bul ve hazır mesajı WhatsApp üzerinden gönder.</p>
       </div>
       <span class="local">Kayıtlar bu tarayıcıda saklanır</span>
     </header>
@@ -29,19 +29,20 @@
       <div class="grid two">
         <article class="card">
           <span class="eyebrow">1 · REHBER</span>
-          <h2>VCF rehberini içe aktar</h2>
+          <h2>Rehberi içe aktar</h2>
           <label class="upload" for="vcfFile">
             <strong>VCF dosyası seç</strong>
             <small>Android rehberinden dışa aktarılan .vcf dosyası</small>
           </label>
           <input id="vcfFile" type="file" accept=".vcf,text/vcard,text/x-vcard" hidden>
           <div class="actions">
+            <button id="deviceContacts" class="button primary" type="button">Cihaz Rehberinden Al</button>
             <button id="clearAll" class="button secondary" type="button">Rehberi Temizle</button>
             <button id="exportJson" class="button secondary" type="button">Yedek İndir</button>
             <label class="button secondary file-button" for="importJson">Yedeği Yükle</label>
             <input id="importJson" type="file" accept=".json,application/json" hidden>
           </div>
-          <p id="importStatus" class="status">Henüz VCF yüklenmedi.</p>
+          <p id="importStatus" class="status">Henüz cihaz rehberinden veya VCF dosyasından kişi alınmadı.</p>
         </article>
 
         <article class="card">
@@ -80,7 +81,7 @@
           <button id="resetSent" class="button secondary" type="button">Gönderimleri Sıfırla</button>
         </div>
 
-        <div id="bulkEmpty" class="empty">VCF yüklendiğinde kişiler burada görünecek.</div>
+        <div id="bulkEmpty" class="empty">Rehber içe aktarıldığında kişiler burada görünecek.</div>
         <div id="bulkList" class="list"></div>
 
         <div class="sendbar">
@@ -107,7 +108,7 @@
           <input id="residentSearch" type="search" placeholder="Örn: Ahmet, A Blok, 24 veya 0532...">
           <select id="blockFilter"><option value="">Tüm Bloklar</option></select>
         </div>
-        <div id="residentEmpty" class="empty">Henüz kayıt bulunmuyor. VCF yükleyebilir veya yeni sakin ekleyebilirsin.</div>
+        <div id="residentEmpty" class="empty">Henüz kayıt bulunmuyor. Cihaz rehberinden, VCF dosyasından veya manuel olarak kayıt ekleyebilirsin.</div>
         <div id="residentList" class="resident-list"></div>
       </article>
     </section>
@@ -164,5 +165,6 @@
 
   <div id="toast" class="toast" role="status"></div>
   <script src="./app.js?v=1.0.0" defer></script>
+  <script src="./device-contacts.js?v=1.1.0" defer></script>
 </body>
 </html>
