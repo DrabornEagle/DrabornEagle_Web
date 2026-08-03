@@ -9,6 +9,7 @@ const dkdRoot = path.resolve(dkdTestDir, '..');
 const dkdRead = (dkdRelative) => fs.readFileSync(path.join(dkdRoot, dkdRelative), 'utf8');
 
 const dkdApp = dkdRead('assets/app.js');
+const dkdThemeV27Guard = dkdRead('assets/v2.7.guard.js');
 const dkdThemeV27Js = dkdRead('assets/v2.7.js');
 const dkdThemeV27Css = dkdRead('assets/v2.7.css');
 const dkdIndex = dkdRead('index.html');
@@ -17,11 +18,13 @@ const dkdManifest = JSON.parse(dkdRead('manifest.webmanifest'));
 const dkdServiceWorker = dkdRead('sw.js');
 
 new vm.Script(dkdApp, { filename: 'assets/app.js' });
+new vm.Script(dkdThemeV27Guard, { filename: 'assets/v2.7.guard.js' });
 new vm.Script(dkdThemeV27Js, { filename: 'assets/v2.7.js' });
 
 assert.match(dkdApp, /DKD_WEB_VERSION\s*=\s*['"]2\.7\.0['"]/);
 assert.match(dkdApp, /dkdBootWebV27/);
 assert.match(dkdApp, /dkdAppendStyleLink/);
+assert.match(dkdApp, /v2\.7\.guard\.js/);
 assert.match(dkdApp, /v2\.7\.css/);
 assert.match(dkdApp, /v2\.7\.js/);
 
@@ -40,7 +43,15 @@ assert.match(dkdThemeV27Js, /Modern Temadan Sade Temaya Geçiş/);
 assert.match(dkdThemeV27Js, /premium menu/);
 assert.match(dkdThemeV27Js, /input\.closest\(DKD_V27_BANNED_ANCESTOR\)/);
 assert.match(dkdThemeV27Js, /location\.assign\(['"]\/DraBornGate\/['"]\)/);
-assert.match(dkdThemeV27Js, /location\.assign\(['"]\/DraBornGate\/Guvenlik-Sade-Tema\/['"]\)|DKD_V27_SIMPLE_PATH/);
+
+assert.match(dkdThemeV27Guard, /DKD_V27_LEGACY_SELECTOR/);
+assert.match(dkdThemeV27Guard, /\[class\*="dkd-v24"\]/);
+assert.match(dkdThemeV27Guard, /\[class\*="dkd-v25"\]/);
+assert.match(dkdThemeV27Guard, /\[class\*="dkd-v26"\]/);
+assert.match(dkdThemeV27Guard, /dkd-v26-simple-legacy/);
+assert.match(dkdThemeV27Guard, /now - previous < 3500/);
+assert.match(dkdThemeV27Guard, /stopImmediatePropagation/);
+assert.match(dkdThemeV27Guard, /MutationObserver/);
 
 for (const dkdClass of [
   '#dkd-v27-root', '.dkd-v27-request-card', '.dkd-v27-code-panel',
@@ -60,6 +71,7 @@ assert.match(dkdSimpleIndex, /id="dkd-v27-splash"/);
 assert.match(dkdSimpleIndex, /dkd_gate_force_theme/);
 assert.equal(dkdManifest.name, 'DraBornGate Web v2.7.0');
 assert.match(dkdServiceWorker, /draborngate-web-v2\.7\.0/);
+assert.match(dkdServiceWorker, /assets\/v2\.7\.guard\.js\?v=2\.7\.0/);
 assert.match(dkdServiceWorker, /assets\/v2\.7\.js\?v=2\.7\.0/);
 assert.match(dkdServiceWorker, /assets\/v2\.7\.css\?v=2\.7\.0/);
 
