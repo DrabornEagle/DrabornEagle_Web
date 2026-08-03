@@ -7,7 +7,7 @@
   <meta name="description" content="DraBornGate VCF rehber ve WhatsApp mesaj yönetimi">
   <link rel="canonical" href="https://www.draborneagle.com/DraBornGate/WhatsApp/">
   <link rel="stylesheet" href="./styles.css?v=1.0.0">
-  <link rel="stylesheet" href="./device-contacts.css?v=1.2.0">
+  <link rel="stylesheet" href="./device-contacts.css?v=1.3.0">
   <title>DraBornGate WhatsApp Yönetimi</title>
 </head>
 <body>
@@ -18,7 +18,6 @@
         <h1>WhatsApp Yönetim Merkezi</h1>
         <p>Güvenlik rehberini cihazdan veya VCF dosyasından içe aktar, site sakinlerini bul ve hazır mesajı WhatsApp üzerinden gönder.</p>
       </div>
-      <span class="local">Kayıtlar bu tarayıcıda saklanır</span>
     </header>
 
     <nav class="tabs" aria-label="Bölümler">
@@ -38,11 +37,9 @@
           <input id="vcfFile" type="file" accept=".vcf,text/vcard,text/x-vcard" hidden>
           <div class="actions">
             <button id="deviceContacts" class="button primary device-contact-spotlight" type="button">Cihaz Rehberinden Çoklu Seç</button>
-            <button id="clearAll" class="button secondary" type="button">Rehberi Temizle</button>
-            <button id="exportJson" class="button secondary" type="button">Yedek İndir</button>
-            <label class="button secondary file-button" for="importJson">Yedeği Yükle</label>
-            <input id="importJson" type="file" accept=".json,application/json" hidden>
           </div>
+          <button id="exportJson" type="button" hidden aria-hidden="true"></button>
+          <input id="importJson" type="file" accept=".json,application/json" hidden aria-hidden="true">
           <p class="device-contact-help"><strong>Çoklu seçim:</strong> Rehber açıldığında kişilere tek tek dokun, seçtiklerin işaretlenince sağ üstteki <strong>Bitti</strong> düğmesine bas.</p>
           <p id="importStatus" class="status">Henüz cihaz rehberinden veya VCF dosyasından kişi alınmadı.</p>
         </article>
@@ -81,6 +78,7 @@
           <button id="selectVisible" class="button secondary" type="button">Görünenleri Seç</button>
           <button id="unselectVisible" class="button secondary" type="button">Seçimi Kaldır</button>
           <button id="resetSent" class="button secondary" type="button">Gönderimleri Sıfırla</button>
+          <button id="clearAll" class="button danger" type="button">Rehberi Temizle</button>
         </div>
 
         <div id="bulkEmpty" class="empty">Rehber içe aktarıldığında kişiler burada görünecek.</div>
@@ -126,11 +124,12 @@
     </div>
     <p class="contact-import-copy">Android rehber seçicisinde birden fazla kişiyi seçebilirsin. Kişilere tek tek dokun ve seçimler tamamlanınca sağ üstten <strong>Bitti</strong> de.</p>
     <div class="contact-import-options">
-      <button id="pickMultipleContacts" class="button primary" type="button">Çoklu Kişi Seç</button>
+      <button id="pickMultipleContacts" class="button secondary" type="button">Çoklu Kişi Seç</button>
+      <button id="downloadVcfContacts" class="button primary vcf-download-spotlight" type="button">VCF Rehberi İndir</button>
+      <small class="vcf-download-copy">Paneldeki kişileri VCF dosyası olarak telefonun indirme klasörüne kaydeder.</small>
       <button id="pickVcfAll" class="button secondary" type="button">VCF ile Tüm Rehberi Al</button>
       <button id="cancelContactImport" class="button secondary" type="button">Vazgeç</button>
     </div>
-    <p class="contact-import-note">Tarayıcı güvenliği nedeniyle cihaz seçicisinde “Tümünü Seç” düğmesi bulunmaz. Bütün rehberi tek seferde almak için telefon rehberinden dışa aktardığın VCF dosyasını seç.</p>
   </dialog>
 
   <dialog id="residentDialog">
@@ -184,6 +183,6 @@
 
   <div id="toast" class="toast" role="status"></div>
   <script src="./app.js?v=1.0.0" defer></script>
-  <script src="./device-contacts.js?v=1.2.0" defer></script>
+  <script src="./device-contacts.js?v=1.3.0" defer></script>
 </body>
 </html>
