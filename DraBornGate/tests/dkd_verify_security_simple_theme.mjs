@@ -11,49 +11,53 @@ const dkdRead = (dkdRelative) => fs.readFileSync(path.join(dkdRoot, dkdRelative)
 const dkdUnpack = (dkdRelative) => zlib.gunzipSync(Buffer.from(dkdRead(dkdRelative).trim(), 'base64')).toString('utf8');
 
 const dkdApp = dkdRead('assets/app.js');
-const dkdThemeJs = dkdUnpack('assets/v2.4.js.payload.txt');
-const dkdThemeCss = dkdUnpack('assets/v2.4.css.payload.txt');
+const dkdThemeV24Js = dkdUnpack('assets/v2.4.js.payload.txt');
+const dkdThemeV24Css = dkdUnpack('assets/v2.4.css.payload.txt');
+const dkdThemeV25Js = dkdUnpack('assets/v2.5.js.payload.txt');
+const dkdThemeV25Css = dkdUnpack('assets/v2.5.css.payload.txt');
 const dkdIndex = dkdRead('index.html');
 const dkdSimpleIndex = dkdRead('Guvenlik-Sade-Tema/index.html');
 const dkdManifest = dkdRead('manifest.webmanifest');
 const dkdServiceWorker = dkdRead('sw.js');
 
 new vm.Script(dkdApp, { filename: 'assets/app.js' });
-new vm.Script(dkdThemeJs, { filename: 'assets/v2.4.js' });
+new vm.Script(dkdThemeV24Js, { filename: 'assets/v2.4.js' });
+new vm.Script(dkdThemeV25Js, { filename: 'assets/v2.5.js' });
 JSON.parse(dkdManifest);
 
-assert.match(dkdApp, /DKD_WEB_VERSION\s*=\s*['"]2\.4\.0['"]/);
-assert.match(dkdApp, /v2\.3\.js/);
+assert.match(dkdApp, /DKD_WEB_VERSION\s*=\s*['"]2\.5\.0['"]/);
 assert.match(dkdApp, /v2\.4\.js\.payload\.txt/);
-assert.match(dkdApp, /v2\.4\.css\.payload\.txt/);
-assert.match(dkdApp, /dkd_gate_security_theme/);
-assert.match(dkdApp, /guvenlik-sade-tema/);
+assert.match(dkdApp, /v2\.5\.js\.payload\.txt/);
+assert.match(dkdApp, /v2\.5\.css\.payload\.txt/);
+assert.match(dkdApp, /dkdBootWebV25/);
 
 for (const dkdRequired of [
-  'dkdV24ShowChooser', 'dkdV24ActivateSimple', 'dkdV24SourceCards',
-  'dkdV24SubmitMatch', 'dkdV24NativeValue', 'dkdV24WaitForNativeInput',
-  'MutationObserver', 'DKD_V24_SIMPLE_PATH',
-  'data-dkd-v24-theme="simple"', 'data-dkd-v24-theme="modern"',
-]) assert.ok(dkdThemeJs.includes(dkdRequired), `Eksik v2.4 işlevi: ${dkdRequired}`);
+  'dkdV25ReplaceVersions', 'dkdV25FixThemeChooserLayout', 'dkdV25EnsureModernToSimpleSwitch',
+  'dkdV25SourceCards', 'dkdV25OpenQueuePage', 'dkdV25RenderSimpleQueue',
+  'dkdV25SubmitMatch', 'dkdV25NativeValue', 'dkdV25WaitForNativeInput',
+  'MutationObserver', 'DKD_V25_SIMPLE_PATH', 'Kurye Kuyruğu', 'Geçiş Talepleri',
+]) assert.ok(dkdThemeV25Js.includes(dkdRequired), `Eksik v2.5 işlevi: ${dkdRequired}`);
 
-assert.match(dkdThemeJs, /Object\.getOwnPropertyDescriptor\(HTMLInputElement\.prototype, ['"]value['"]\)/);
-assert.match(dkdThemeJs, /sessionStorage\.setItem\(DKD_V24_THEME_KEY/);
-assert.match(dkdThemeJs, /location\.assign\(DKD_V24_SIMPLE_PATH\)/);
-assert.match(dkdThemeCss, /\.dkd-v24-theme-backdrop/);
-assert.match(dkdThemeCss, /\.dkd-v24-simple-shell/);
-assert.match(dkdThemeCss, /\.dkd-v24-courier-card/);
-assert.match(dkdThemeCss, /\.dkd-v24-code-row input/);
-assert.match(dkdThemeCss, /prefers-reduced-motion/);
+assert.match(dkdThemeV25Js, /Object\.getOwnPropertyDescriptor\(HTMLInputElement\.prototype, ['"]value['"]\)/);
+assert.match(dkdThemeV25Js, /sessionStorage\.setItem\(DKD_V25_THEME_KEY/);
+assert.match(dkdThemeV25Js, /location\.assign\(DKD_V25_SIMPLE_PATH\)/);
+assert.match(dkdThemeV25Js, /replace\(\/DraBornGate Web v2/);
+assert.match(dkdThemeV25Css, /\.dkd-v25-theme-action/);
+assert.match(dkdThemeV25Css, /\.dkd-v25-modern-to-simple/);
+assert.match(dkdThemeV25Css, /\.dkd-v25-courier-card/);
+assert.match(dkdThemeV25Css, /\.dkd-v25-code-row input/);
+assert.match(dkdThemeV25Css, /prefers-reduced-motion/);
 
-assert.match(dkdIndex, /assets\/app\.js\?v=2\.4\.0/);
+assert.match(dkdThemeV24Js, /dkdV24ShowChooser/);
+assert.match(dkdThemeV24Css, /\.dkd-v24-simple-shell/);
+assert.match(dkdIndex, /DraBornGate Web v2\.5\.0/);
+assert.match(dkdIndex, /assets\/app\.js\?v=2\.5\.0/);
+assert.match(dkdSimpleIndex, /Güvenlik Sade Tema v2\.5\.0/);
 assert.match(dkdSimpleIndex, /dkd_gate_security_theme/);
-assert.match(dkdSimpleIndex, /dkd_gate_force_theme/);
 assert.match(dkdSimpleIndex, /Guvenlik-Sade-Tema/);
-assert.match(dkdSimpleIndex, /<base href="\/DraBornGate\/">/);
-assert.equal(JSON.parse(dkdManifest).name, 'DraBornGate Web v2.4');
-assert.match(dkdServiceWorker, /draborngate-web-v2\.4\.0/);
-assert.match(dkdServiceWorker, /Guvenlik-Sade-Tema/);
-assert.match(dkdServiceWorker, /assets\/v2\.4\.js\.payload\.txt\?v=2\.4\.0/);
-assert.match(dkdServiceWorker, /assets\/v2\.4\.css\.payload\.txt\?v=2\.4\.0/);
+assert.equal(JSON.parse(dkdManifest).name, 'DraBornGate Web v2.5');
+assert.match(dkdServiceWorker, /draborngate-web-v2\.5\.0/);
+assert.match(dkdServiceWorker, /assets\/v2\.5\.js\.payload\.txt\?v=2\.5\.0/);
+assert.match(dkdServiceWorker, /assets\/v2\.5\.css\.payload\.txt\?v=2\.5\.0/);
 
-console.log('DraBornGate Web v2.4 Guvenlik Sade Tema dogrulamasi basarili.');
+console.log('DraBornGate Web v2.5 Guvenlik tema ve canli kuyruk dogrulamasi basarili.');
