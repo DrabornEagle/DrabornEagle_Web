@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.5.0';
+const DKD_WEB_VERSION = '2.5.1';
 
 function dkdPrepareCleanPersonalRoute() {
   const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
@@ -23,7 +23,7 @@ function dkdPrepareCleanPersonalRoute() {
 
 async function dkdReadPayload(path) {
   const response = await fetch(path, { cache: 'no-cache' });
-  if (!response.ok) throw new Error(`DraBornGate Web v2.5 paketi alınamadı (${response.status}).`);
+  if (!response.ok) throw new Error(`DraBornGate Web v2.5.1 paketi alınamadı (${response.status}).`);
   return (await response.text()).trim();
 }
 
@@ -67,5 +67,5 @@ async function dkdBootWebV25() {
 
 dkdBootWebV25().catch((error) => {
   console.error(error);
-  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.5 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
+  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.5.1 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
 });
