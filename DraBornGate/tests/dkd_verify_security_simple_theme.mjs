@@ -35,7 +35,7 @@ for (const dkdRequired of [
   'dkdV25ReplaceVersions', 'dkdV25FixThemeChooserLayout', 'dkdV25EnsureModernToSimpleSwitch',
   'dkdV25SourceCards', 'dkdV25OpenQueuePage', 'dkdV25RenderSimpleQueue',
   'dkdV25SubmitMatch', 'dkdV25NativeValue', 'dkdV25WaitForNativeInput',
-  'MutationObserver', 'DKD_V25_SIMPLE_PATH', 'Kurye Kuyruğu', 'Geçiş Talepleri',
+  'MutationObserver', 'DKD_V25_SIMPLE_PATH', 'kurye kuyrugu', 'gecis talepleri',
 ]) assert.ok(dkdThemeV25Js.includes(dkdRequired), `Eksik v2.5 işlevi: ${dkdRequired}`);
 
 assert.match(dkdThemeV25Js, /Object\.getOwnPropertyDescriptor\(HTMLInputElement\.prototype, ['"]value['"]\)/);
