@@ -9,70 +9,83 @@ const dkdRoot = path.resolve(dkdTestDir, '..');
 const dkdRead = (dkdRelative) => fs.readFileSync(path.join(dkdRoot, dkdRelative), 'utf8');
 
 const dkdApp = dkdRead('assets/app.js');
-const dkdThemeV27Guard = dkdRead('assets/v2.7.guard.js');
-const dkdThemeV27Js = dkdRead('assets/v2.7.js');
-const dkdThemeV27Css = dkdRead('assets/v2.7.css');
+const dkdThemeV28Js = dkdRead('assets/v2.8.js');
+const dkdThemeV28Css = dkdRead('assets/v2.8.css');
 const dkdIndex = dkdRead('index.html');
 const dkdSimpleIndex = dkdRead('Guvenlik-Sade-Tema/index.html');
 const dkdManifest = JSON.parse(dkdRead('manifest.webmanifest'));
 const dkdServiceWorker = dkdRead('sw.js');
 
 new vm.Script(dkdApp, { filename: 'assets/app.js' });
-new vm.Script(dkdThemeV27Guard, { filename: 'assets/v2.7.guard.js' });
-new vm.Script(dkdThemeV27Js, { filename: 'assets/v2.7.js' });
+new vm.Script(dkdThemeV28Js, { filename: 'assets/v2.8.js' });
 
-assert.match(dkdApp, /DKD_WEB_VERSION\s*=\s*['"]2\.7\.0['"]/);
-assert.match(dkdApp, /dkdBootWebV27/);
-assert.match(dkdApp, /dkdAppendStyleLink/);
-assert.match(dkdApp, /v2\.7\.guard\.js/);
-assert.match(dkdApp, /v2\.7\.css/);
-assert.match(dkdApp, /v2\.7\.js/);
+assert.match(dkdApp, /DKD_WEB_VERSION\s*=\s*['"]2\.8\.0['"]/);
+assert.match(dkdApp, /dkdBootWebV28/);
+assert.match(dkdApp, /dkdSetBootProgress/);
+assert.match(dkdApp, /dkdBootWatchdog/);
+assert.match(dkdApp, /dkdIsSimpleModeRequested/);
+assert.match(dkdApp, /if \(!dkdSimpleMode\)/);
+assert.match(dkdApp, /v2\.8\.css/);
+assert.match(dkdApp, /v2\.8\.js/);
+
+const dkdProgressValues = [...dkdApp.matchAll(/dkdSetBootProgress\((\d+)/g)].map((dkdMatch) => Number(dkdMatch[1]));
+assert.ok(dkdProgressValues.length >= 10, 'Gerçek yükleme aşamaları eksik.');
+for (let dkdIndexValue = 1; dkdIndexValue < dkdProgressValues.length; dkdIndexValue += 1) {
+  assert.ok(
+    dkdProgressValues[dkdIndexValue] >= dkdProgressValues[dkdIndexValue - 1],
+    `Yükleme ilerlemesi geriye gidiyor: ${dkdProgressValues.join(', ')}`
+  );
+}
+assert.equal(dkdProgressValues.at(-1), 100);
+
+const dkdLegacyStart = dkdApp.indexOf('if (!dkdSimpleMode)');
+const dkdV28LoadStart = dkdApp.indexOf("await dkdAppendStyleLink('./assets/v2.8.css'");
+assert.ok(dkdLegacyStart >= 0 && dkdV28LoadStart > dkdLegacyStart);
+const dkdLegacyBlock = dkdApp.slice(dkdLegacyStart, dkdV28LoadStart);
+for (const dkdLegacyAsset of ['v2.4.css.payload.txt', 'v2.5.css.payload.txt', 'v2.6.css.payload.txt', 'v2.7.guard.js', 'v2.7.js']) {
+  assert.ok(dkdLegacyBlock.includes(dkdLegacyAsset), `Modern katman eksik: ${dkdLegacyAsset}`);
+}
 
 for (const dkdRequired of [
-  'dkdV27Mount', 'dkdV27ScanSources', 'dkdV27IsNativeCodeInput',
-  'dkdV27FindSubmit', 'dkdV27ExtractDetails', 'dkdV27Submit',
-  'dkdV27RenameModernSwitch', 'dkdV27OpenNativeQueue',
-  'dkd-v27-root', 'MutationObserver', 'DKD_V27_BANNED_ANCESTOR',
-]) assert.ok(dkdThemeV27Js.includes(dkdRequired), `Eksik v2.7 işlevi: ${dkdRequired}`);
+  'dkdV28Mount', 'dkdV28ScanCandidates', 'dkdV28ScanSources',
+  'dkdV28CandidateSignature', 'dkdV28Identity', 'dkdV28FindNativePair',
+  'dkdV28Submit', 'dkdV28GoSimple', 'dkdV28GoModern',
+  'dkdV28EnsureModernSwitchIcon', 'dkdV28HideLegacySwitches',
+  'dkd-v28-root', 'MutationObserver', 'DKD_V28_LEGACY_SELECTOR',
+]) assert.ok(dkdThemeV28Js.includes(dkdRequired), `Eksik v2.8 işlevi: ${dkdRequired}`);
 
-assert.match(dkdThemeV27Js, /DKD_V27_VERSION\s*=\s*['"]2\.7\.0['"]/);
-assert.match(dkdThemeV27Js, /dkdV27State\.missCycles\s*>=\s*6/);
-assert.match(dkdThemeV27Js, /seenInputs\s*=\s*new Set/);
-assert.match(dkdThemeV27Js, /Object\.getOwnPropertyDescriptor\(HTMLInputElement\.prototype, ['"]value['"]\)/);
-assert.match(dkdThemeV27Js, /Modern Temadan Sade Temaya Geçiş/);
-assert.match(dkdThemeV27Js, /premium menu/);
-assert.match(dkdThemeV27Js, /input\.closest\(DKD_V27_BANNED_ANCESTOR\)/);
-assert.match(dkdThemeV27Js, /location\.assign\(['"]\/DraBornGate\/['"]\)/);
-
-assert.match(dkdThemeV27Guard, /DKD_V27_LEGACY_SELECTOR/);
-assert.match(dkdThemeV27Guard, /\[class\*="dkd-v24"\]/);
-assert.match(dkdThemeV27Guard, /\[class\*="dkd-v25"\]/);
-assert.match(dkdThemeV27Guard, /\[class\*="dkd-v26"\]/);
-assert.match(dkdThemeV27Guard, /dkd-v26-simple-legacy/);
-assert.match(dkdThemeV27Guard, /now - previous < 3500/);
-assert.match(dkdThemeV27Guard, /stopImmediatePropagation/);
-assert.match(dkdThemeV27Guard, /MutationObserver/);
+assert.match(dkdThemeV28Js, /DKD_V28_VERSION\s*=\s*['"]2\.8\.0['"]/);
+assert.match(dkdThemeV28Js, /new Set\(\)/);
+assert.match(dkdThemeV28Js, /dkdCandidates\.length > 0 \? 2 : 5/);
+assert.match(dkdThemeV28Js, /generic-live-request/);
+assert.match(dkdThemeV28Js, /location\.replace\(/);
+assert.match(dkdThemeV28Js, /Object\.getOwnPropertyDescriptor\(HTMLInputElement\.prototype, ['"]value['"]\)/);
+assert.match(dkdThemeV28Js, /Sade Tema görünümüne geç/);
+assert.doesNotMatch(dkdThemeV28Js, /Modern Temadan Sade Temaya Geçiş/);
 
 for (const dkdClass of [
-  '#dkd-v27-root', '.dkd-v27-request-card', '.dkd-v27-code-panel',
-  '.dkd-v27-info-grid', '.dkd-v27-empty', '.dkd-v27-radar',
-]) assert.ok(dkdThemeV27Css.includes(dkdClass), `Eksik v2.7 stil sınıfı: ${dkdClass}`);
-assert.match(dkdThemeV27Css, /body\.dkd-v27-simple-active>\*:not\(#dkd-v27-root\)/);
-assert.match(dkdThemeV27Css, /left:-100000px!important/);
-assert.match(dkdThemeV27Css, /prefers-reduced-motion/);
-assert.match(dkdThemeV27Css, /@media\(max-width:560px\)/);
+  '#dkd-v28-root', '.dkd-v28-request-card', '.dkd-v28-code-panel',
+  '.dkd-v28-info-grid', '.dkd-v28-empty', '.dkd-v28-radar',
+  '#dkd-v28-modern-switch', '.dkd-v28-legacy-switch-hidden',
+]) assert.ok(dkdThemeV28Css.includes(dkdClass), `Eksik v2.8 stil sınıfı: ${dkdClass}`);
+assert.match(dkdThemeV28Css, /body\.dkd-v28-simple-active/);
+assert.match(dkdThemeV28Css, /left: -100000px !important/);
+assert.match(dkdThemeV28Css, /@media \(max-width: 620px\)/);
+assert.match(dkdThemeV28Css, /prefers-reduced-motion/);
 
-assert.match(dkdIndex, /DraBornGate Web v2\.7\.0/);
-assert.match(dkdIndex, /id="dkd-v27-splash"/);
-assert.match(dkdIndex, /assets\/app\.js\?v=2\.7\.0/);
-assert.doesNotMatch(dkdIndex, /DraBornGate Web v2\.3\.0/);
-assert.match(dkdSimpleIndex, /Güvenlik Sade Tema v2\.7\.0/);
-assert.match(dkdSimpleIndex, /id="dkd-v27-splash"/);
+assert.match(dkdIndex, /DraBornGate Web v2\.8\.0/);
+assert.match(dkdIndex, /id="dkd-v28-splash"/);
+assert.match(dkdIndex, />DBG</);
+assert.match(dkdIndex, /id="dkd-v28-progress-fill"/);
+assert.match(dkdIndex, /assets\/app\.js\?v=2\.8\.0/);
+assert.doesNotMatch(dkdIndex, /animation:dkdSplash/);
+assert.match(dkdSimpleIndex, /Güvenlik Sade Tema v2\.8\.0/);
+assert.match(dkdSimpleIndex, /id="dkd-v28-splash"/);
+assert.match(dkdSimpleIndex, />DBG</);
 assert.match(dkdSimpleIndex, /dkd_gate_force_theme/);
-assert.equal(dkdManifest.name, 'DraBornGate Web v2.7.0');
-assert.match(dkdServiceWorker, /draborngate-web-v2\.7\.0/);
-assert.match(dkdServiceWorker, /assets\/v2\.7\.guard\.js\?v=2\.7\.0/);
-assert.match(dkdServiceWorker, /assets\/v2\.7\.js\?v=2\.7\.0/);
-assert.match(dkdServiceWorker, /assets\/v2\.7\.css\?v=2\.7\.0/);
+assert.equal(dkdManifest.name, 'DraBornGate Web v2.8.0');
+assert.match(dkdServiceWorker, /draborngate-web-v2\.8\.0/);
+assert.match(dkdServiceWorker, /assets\/v2\.8\.js\?v=2\.8\.0/);
+assert.match(dkdServiceWorker, /assets\/v2\.8\.css\?v=2\.8\.0/);
 
-console.log('DraBornGate Web v2.7.0 bağımsız Sade Tema doğrulaması başarılı.');
+console.log('DraBornGate Web v2.8.0 gerçek yükleme ve kararlı Sade Tema doğrulaması başarılı.');
