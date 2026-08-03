@@ -1,12 +1,12 @@
 {
-  "name": "DraBornGate Web v2.6.0",
+  "name": "DraBornGate Web v2.7.0",
   "short_name": "DraBornGate",
-  "description": "Kararlı canlı kurye kuyruğu, çift yönlü güvenlik tema geçişi ve güvenli kod eşleştirme sunan geçiş platformu.",
+  "description": "Bağımsız Güvenlik Sade Tema, kararlı canlı kurye kuyruğu ve güvenli kod eşleştirme sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
-  "background_color": "#040817",
-  "theme_color": "#040817",
+  "background_color": "#030713",
+  "theme_color": "#030713",
   "orientation": "any",
   "categories": ["business", "security", "productivity"],
   "lang": "tr"
