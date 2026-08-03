@@ -124,6 +124,64 @@
     dkdVcfInput.click();
   }
 
+  function dkdEscapeVcfValue(value) {
+    return dkdText(value)
+      .replace(/\\/g, '\\\\')
+      .replace(/\r?\n/g, '\\n')
+      .replace(/;/g, '\\;')
+      .replace(/,/g, '\\,');
+  }
+
+  function dkdBuildVcf(dkdContacts) {
+    return dkdContacts.map((dkdContact) => {
+      const dkdName = dkdEscapeVcfValue(dkdContact.name || 'İsimsiz Kişi');
+      const dkdPhone = dkdNormalizePhone(dkdContact.phone);
+      const dkdLocation = [dkdText(dkdContact.block), dkdText(dkdContact.flat) && `Daire ${dkdText(dkdContact.flat)}`]
+        .filter(Boolean)
+        .join(' ');
+      const dkdLines = [
+        'BEGIN:VCARD',
+        'VERSION:3.0',
+        `FN:${dkdName}`,
+        `N:;${dkdName};;;`,
+        `TEL;TYPE=CELL:${dkdPhone}`,
+      ];
+      if (dkdLocation) dkdLines.push(`NOTE:${dkdEscapeVcfValue(dkdLocation)}`);
+      dkdLines.push('END:VCARD');
+      return dkdLines.join('\r\n');
+    }).join('\r\n');
+  }
+
+  function dkdDownloadVcf() {
+    const dkdDialog = document.getElementById('contactImportDialog');
+    const dkdContacts = dkdReadStoredContacts()
+      .map((dkdContact) => ({ ...dkdContact, phone: dkdNormalizePhone(dkdContact.phone) }))
+      .filter((dkdContact) => dkdContact.phone);
+
+    if (!dkdContacts.length) {
+      dkdSetStatus('VCF indirmek için önce cihaz rehberinden, VCF dosyasından veya manuel olarak kişi ekle.', 'error');
+      if (dkdDialog?.open) dkdDialog.close();
+      return;
+    }
+
+    const dkdVcfContent = dkdBuildVcf(dkdContacts);
+    const dkdBlob = new Blob([`\uFEFF${dkdVcfContent}`], { type: 'text/vcard;charset=utf-8' });
+    const dkdUrl = URL.createObjectURL(dkdBlob);
+    const dkdAnchor = document.createElement('a');
+    const dkdDate = new Date().toISOString().slice(0, 10);
+
+    dkdAnchor.href = dkdUrl;
+    dkdAnchor.download = `DraBornGate_Rehber_${dkdDate}.vcf`;
+    dkdAnchor.hidden = true;
+    document.body.appendChild(dkdAnchor);
+    dkdAnchor.click();
+    dkdAnchor.remove();
+    window.setTimeout(() => URL.revokeObjectURL(dkdUrl), 1500);
+
+    if (dkdDialog?.open) dkdDialog.close();
+    dkdSetStatus(`${dkdContacts.length} kişi VCF rehberi olarak cihaza indirildi.`, 'ok');
+  }
+
   async function dkdSupportedContactProperties() {
     const dkdRequired = ['name', 'tel'];
     if (!navigator.contacts || typeof navigator.contacts.getProperties !== 'function') return dkdRequired;
@@ -198,10 +256,29 @@
     if (dkdDialog?.open) dkdDialog.close();
   }
 
+  function dkdPrepareVcfDownloadButton() {
+    const dkdPickVcfButton = document.getElementById('pickVcfAll');
+    const dkdExistingButton = document.getElementById('downloadVcfContacts');
+    const dkdNote = document.querySelector('.contact-import-note');
+
+    dkdNote?.remove();
+    if (dkdExistingButton) return dkdExistingButton;
+    if (!dkdPickVcfButton) return null;
+
+    const dkdDownloadButton = document.createElement('button');
+    dkdDownloadButton.id = 'downloadVcfContacts';
+    dkdDownloadButton.className = 'button secondary';
+    dkdDownloadButton.type = 'button';
+    dkdDownloadButton.textContent = 'VCF Rehberi İndir';
+    dkdPickVcfButton.insertAdjacentElement('afterend', dkdDownloadButton);
+    return dkdDownloadButton;
+  }
+
   function dkdInitializeDeviceContacts() {
     const dkdButton = document.getElementById('deviceContacts');
     const dkdPickMultipleButton = document.getElementById('pickMultipleContacts');
     const dkdPickVcfButton = document.getElementById('pickVcfAll');
+    const dkdDownloadVcfButton = dkdPrepareVcfDownloadButton();
     const dkdCloseButton = document.getElementById('closeContactImport');
     const dkdCancelButton = document.getElementById('cancelContactImport');
 
@@ -209,6 +286,7 @@
     dkdButton.addEventListener('click', dkdOpenImportDialog);
     dkdPickMultipleButton?.addEventListener('click', dkdImportFromDevice);
     dkdPickVcfButton?.addEventListener('click', dkdOpenVcfPicker);
+    dkdDownloadVcfButton?.addEventListener('click', dkdDownloadVcf);
     dkdCloseButton?.addEventListener('click', dkdCloseImportDialog);
     dkdCancelButton?.addEventListener('click', dkdCloseImportDialog);
     dkdShowPreviousImportStatus();
