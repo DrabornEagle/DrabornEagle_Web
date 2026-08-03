@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v2.4",
+  "name": "DraBornGate Web v2.5",
   "short_name": "DraBornGate",
-  "description": "Kurye, güvenlik, site yönetimi ve site sakini operasyonlarıyla birlikte güvenlik kullanıcılarına Sade ve Modern tema seçimi sunan geçiş platformu.",
+  "description": "Çift yönlü güvenlik tema geçişi, canlı kurye kuyruğu ve güvenli kod eşleştirme sunan kurye, güvenlik, site yönetimi ve site sakini geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
