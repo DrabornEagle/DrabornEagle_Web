@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.4.0';
+const DKD_WEB_VERSION = '2.5.0';
 
 function dkdPrepareCleanPersonalRoute() {
   const reserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
@@ -23,7 +23,7 @@ function dkdPrepareCleanPersonalRoute() {
 
 async function dkdReadPayload(path) {
   const response = await fetch(path, { cache: 'no-cache' });
-  if (!response.ok) throw new Error(`DraBornGate Web v2.4 paketi alınamadı (${response.status}).`);
+  if (!response.ok) throw new Error(`DraBornGate Web v2.5 paketi alınamadı (${response.status}).`);
   return (await response.text()).trim();
 }
 
@@ -41,31 +41,31 @@ async function dkdImportSource(dkdSource) {
   try { await import(dkdModuleUrl); } finally { URL.revokeObjectURL(dkdModuleUrl); }
 }
 
-async function dkdBootWebV24() {
+async function dkdAppendPackedStyle(dkdPath, dkdDatasetKey) {
+  const dkdPayload = await dkdReadPayload(`${dkdPath}?v=${DKD_WEB_VERSION}`);
+  const dkdStyle = document.createElement('style');
+  dkdStyle.dataset[dkdDatasetKey] = 'true';
+  dkdStyle.textContent = await dkdUnpack(dkdPayload);
+  document.head.appendChild(dkdStyle);
+}
+
+async function dkdBootWebV25() {
   dkdPrepareCleanPersonalRoute();
-  const cssPayload = await dkdReadPayload(`./assets/app.v2.css.payload.txt?v=${DKD_WEB_VERSION}`);
-  const cssSource = await dkdUnpack(cssPayload);
-  const style = document.createElement('style');
-  style.dataset.dkdWebV2 = 'true';
-  style.textContent = cssSource;
-  document.head.appendChild(style);
+  await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
 
   const partPaths = [1, 2, 3, 4].map((part) => `./assets/app.v2.payload.${part}.txt?v=${DKD_WEB_VERSION}`);
   const jsPayload = (await Promise.all(partPaths.map(dkdReadPayload))).join('');
   await dkdImportSource(await dkdUnpack(jsPayload));
   await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
 
-  const themeCssPayload = await dkdReadPayload(`./assets/v2.4.css.payload.txt?v=${DKD_WEB_VERSION}`);
-  const themeStyle = document.createElement('style');
-  themeStyle.dataset.dkdWebV24 = 'true';
-  themeStyle.textContent = await dkdUnpack(themeCssPayload);
-  document.head.appendChild(themeStyle);
+  await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
+  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
 
-  const themeJsPayload = await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`);
-  await dkdImportSource(await dkdUnpack(themeJsPayload));
+  await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
+  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.5.js.payload.txt?v=${DKD_WEB_VERSION}`)));
 }
 
-dkdBootWebV24().catch((error) => {
+dkdBootWebV25().catch((error) => {
   console.error(error);
-  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.4 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
+  dkdRoot.innerHTML = `<div class="boot-shell"><div class="boot-logo"><span>!</span></div><div class="boot-copy"><strong>Web v2.5 açılamadı</strong><span>${String(error?.message || error)}</span></div><button class="boot-retry" onclick="location.reload()">Tekrar Dene</button></div>`;
 });
