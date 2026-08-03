@@ -95,45 +95,77 @@
     return dkdAdded;
   }
 
-  function dkdShowPreviousImportStatus() {
+  function dkdSetStatus(dkdMessage, dkdType = '') {
     const dkdStatusElement = document.getElementById('importStatus');
+    if (!dkdStatusElement) return;
+    dkdStatusElement.className = `status${dkdType ? ` ${dkdType}` : ''}`;
+    dkdStatusElement.textContent = dkdMessage;
+  }
+
+  function dkdShowPreviousImportStatus() {
     const dkdRawStatus = sessionStorage.getItem(DKD_IMPORT_STATUS_KEY);
-    if (!dkdStatusElement || !dkdRawStatus) return;
+    if (!dkdRawStatus) return;
 
     sessionStorage.removeItem(DKD_IMPORT_STATUS_KEY);
     try {
       const dkdStatus = JSON.parse(dkdRawStatus);
-      dkdStatusElement.className = 'status ok';
-      dkdStatusElement.textContent = `${dkdStatus.total} numara cihaz rehberinden alındı, ${dkdStatus.added} yeni kişi eklendi.`;
+      dkdSetStatus(`${dkdStatus.total} numara cihaz rehberinden alındı, ${dkdStatus.added} yeni kişi eklendi.`, 'ok');
     } catch {
       // Geçersiz geçici durum bilgisi gösterilmez.
     }
   }
 
+  function dkdOpenVcfPicker() {
+    const dkdDialog = document.getElementById('contactImportDialog');
+    const dkdVcfInput = document.getElementById('vcfFile');
+    if (dkdDialog?.open) dkdDialog.close();
+    if (!dkdVcfInput) return;
+    dkdSetStatus('VCF dosyanı seç. Dosya seçildiğinde rehber otomatik içe aktarılacak.');
+    dkdVcfInput.click();
+  }
+
+  async function dkdSupportedContactProperties() {
+    const dkdRequired = ['name', 'tel'];
+    if (!navigator.contacts || typeof navigator.contacts.getProperties !== 'function') return dkdRequired;
+
+    try {
+      const dkdSupported = await navigator.contacts.getProperties();
+      return dkdRequired.filter((dkdProperty) => dkdSupported.includes(dkdProperty));
+    } catch {
+      return dkdRequired;
+    }
+  }
+
   async function dkdImportFromDevice() {
     const dkdButton = document.getElementById('deviceContacts');
-    const dkdStatusElement = document.getElementById('importStatus');
-    const dkdVcfInput = document.getElementById('vcfFile');
-    if (!dkdButton || !dkdStatusElement || !dkdVcfInput) return;
+    const dkdDialog = document.getElementById('contactImportDialog');
+    if (!dkdButton) return;
+    if (dkdDialog?.open) dkdDialog.close();
 
     if (!window.isSecureContext || !navigator.contacts || typeof navigator.contacts.select !== 'function') {
-      dkdStatusElement.className = 'status error';
-      dkdStatusElement.textContent = 'Bu tarayıcı doğrudan rehber seçimini desteklemiyor. VCF dosyası seçimi açıldı.';
-      dkdVcfInput.click();
+      dkdSetStatus('Bu tarayıcı doğrudan rehber seçimini desteklemiyor. VCF dosyası seçimi açıldı.', 'error');
+      dkdOpenVcfPicker();
       return;
     }
 
     const dkdOriginalLabel = dkdButton.textContent;
     dkdButton.disabled = true;
     dkdButton.textContent = 'Rehber Açılıyor…';
+    dkdSetStatus('Çoklu seçim açık: Birden fazla kişiye tek tek dokun ve sağ üstte Bitti düğmesine bas.');
 
     try {
-      const dkdPickedContacts = await navigator.contacts.select(['name', 'tel'], { multiple: true });
+      const dkdProperties = await dkdSupportedContactProperties();
+      if (!dkdProperties.includes('tel')) {
+        dkdSetStatus('Tarayıcı telefon numarası paylaşımını desteklemiyor. VCF dosyası seçimi açıldı.', 'error');
+        dkdOpenVcfPicker();
+        return;
+      }
+
+      const dkdPickedContacts = await navigator.contacts.select(dkdProperties, { multiple: true });
       const dkdImported = dkdConvertPickedContacts(dkdPickedContacts);
 
       if (!dkdImported.length) {
-        dkdStatusElement.className = 'status';
-        dkdStatusElement.textContent = 'Kişi seçilmedi veya seçilen kişilerde geçerli telefon numarası bulunamadı.';
+        dkdSetStatus('Kişi seçilmedi veya seçilen kişilerde geçerli telefon numarası bulunamadı.');
         return;
       }
 
@@ -142,11 +174,9 @@
       window.location.reload();
     } catch (dkdError) {
       if (dkdError?.name === 'AbortError') {
-        dkdStatusElement.className = 'status';
-        dkdStatusElement.textContent = 'Rehber seçimi iptal edildi.';
+        dkdSetStatus('Rehber seçimi iptal edildi.');
       } else {
-        dkdStatusElement.className = 'status error';
-        dkdStatusElement.textContent = 'Cihaz rehberi açılamadı. VCF dosyası seçerek devam edebilirsin.';
+        dkdSetStatus('Cihaz rehberi açılamadı. VCF dosyası seçerek devam edebilirsin.', 'error');
       }
     } finally {
       dkdButton.disabled = false;
@@ -154,10 +184,33 @@
     }
   }
 
+  function dkdOpenImportDialog() {
+    const dkdDialog = document.getElementById('contactImportDialog');
+    if (dkdDialog && typeof dkdDialog.showModal === 'function') {
+      dkdDialog.showModal();
+      return;
+    }
+    dkdImportFromDevice();
+  }
+
+  function dkdCloseImportDialog() {
+    const dkdDialog = document.getElementById('contactImportDialog');
+    if (dkdDialog?.open) dkdDialog.close();
+  }
+
   function dkdInitializeDeviceContacts() {
     const dkdButton = document.getElementById('deviceContacts');
+    const dkdPickMultipleButton = document.getElementById('pickMultipleContacts');
+    const dkdPickVcfButton = document.getElementById('pickVcfAll');
+    const dkdCloseButton = document.getElementById('closeContactImport');
+    const dkdCancelButton = document.getElementById('cancelContactImport');
+
     if (!dkdButton) return;
-    dkdButton.addEventListener('click', dkdImportFromDevice);
+    dkdButton.addEventListener('click', dkdOpenImportDialog);
+    dkdPickMultipleButton?.addEventListener('click', dkdImportFromDevice);
+    dkdPickVcfButton?.addEventListener('click', dkdOpenVcfPicker);
+    dkdCloseButton?.addEventListener('click', dkdCloseImportDialog);
+    dkdCancelButton?.addEventListener('click', dkdCloseImportDialog);
     dkdShowPreviousImportStatus();
   }
 
