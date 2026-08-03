@@ -68,16 +68,17 @@ assert.match(dkdCss, /@keyframes dkdV29Ride/);
 assert.match(dkdCss, /@media \(max-width: 620px\)/);
 
 for (const dkdHtml of [dkdIndex, dkdSimpleIndex]) {
-  assert.match(dkdHtml, /v2\.9\.0/);
+  assert.match(dkdHtml, /v2\.9\.1/);
   assert.match(dkdHtml, /body:not\(\.dkd-web-ready\) #dkd-app/);
-  assert.match(dkdHtml, /assets\/app\.js\?v=2\.9\.0/);
+  assert.match(dkdHtml, /assets\/app\.js\?v=2\.9\.1/);
+  assert.match(dkdHtml, /v2\.9\.1-boot-recovery\.js\?v=2\.9\.1/);
   assert.doesNotMatch(dkdHtml, />[^<]*v2\.3(?:\.0)?[^<]*</i);
   assert.doesNotMatch(dkdHtml, />[^<]*v2\.8(?:\.\d+)?[^<]*</i);
 }
 assert.match(dkdSimpleIndex, /dkd_gate_force_theme/);
-assert.equal(dkdManifest.name, 'DraBornGate Web v2.9.0');
-assert.match(dkdSw, /draborngate-web-v2\.9\.0-detailed-live-queue/);
+assert.equal(dkdManifest.name, 'DraBornGate Web v2.9.1');
+assert.match(dkdSw, /draborngate-web-v2\.9\.1-boot-hotfix/);
 assert.match(dkdSw, /assets\/v2\.9\.js\?v=2\.9\.0/);
 assert.match(dkdSw, /assets\/v2\.9\.css\?v=2\.9\.0/);
 
-console.log('DraBornGate Web v2.9.0 ayrıntılı canlı kurye kuyruğu doğrulaması başarılı.');
+console.log('DraBornGate Web v2.9.1 açılış hotfix ve ayrıntılı canlı kurye kuyruğu doğrulaması başarılı.');
