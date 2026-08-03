@@ -28,7 +28,11 @@ assert.match(dkdApp, /if \(!dkdSimpleMode\)/);
 assert.match(dkdApp, /v2\.8\.css/);
 assert.match(dkdApp, /v2\.8\.js/);
 
-const dkdProgressValues = [...dkdApp.matchAll(/dkdSetBootProgress\((\d+)/g)].map((dkdMatch) => Number(dkdMatch[1]));
+const dkdBootStart = dkdApp.indexOf('async function dkdBootWebV28');
+const dkdBootEnd = dkdApp.indexOf('dkdBootWebV28().catch');
+assert.ok(dkdBootStart >= 0 && dkdBootEnd > dkdBootStart);
+const dkdBootBody = dkdApp.slice(dkdBootStart, dkdBootEnd);
+const dkdProgressValues = [...dkdBootBody.matchAll(/dkdSetBootProgress\((\d+)/g)].map((dkdMatch) => Number(dkdMatch[1]));
 assert.ok(dkdProgressValues.length >= 10, 'Gerçek yükleme aşamaları eksik.');
 for (let dkdIndexValue = 1; dkdIndexValue < dkdProgressValues.length; dkdIndexValue += 1) {
   assert.ok(
@@ -36,7 +40,8 @@ for (let dkdIndexValue = 1; dkdIndexValue < dkdProgressValues.length; dkdIndexVa
     `Yükleme ilerlemesi geriye gidiyor: ${dkdProgressValues.join(', ')}`
   );
 }
-assert.equal(dkdProgressValues.at(-1), 100);
+assert.equal(dkdProgressValues.at(-1), 96);
+assert.match(dkdApp, /function dkdFinishBoot\(\)[\s\S]*dkdSetBootProgress\(100, ['"]Hazır['"]\)/);
 
 const dkdLegacyStart = dkdApp.indexOf('if (!dkdSimpleMode)');
 const dkdV28LoadStart = dkdApp.indexOf("await dkdAppendStyleLink('./assets/v2.8.css'");
