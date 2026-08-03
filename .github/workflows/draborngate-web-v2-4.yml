@@ -1,0 +1,39 @@
+name: DraBornGate Web v2.4 Verify
+
+on:
+  push:
+    branches:
+      - main
+      - 'agent/**'
+    paths:
+      - 'DraBornGate/**'
+      - '.github/workflows/draborngate-web-v2-4.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'DraBornGate/**'
+      - '.github/workflows/draborngate-web-v2-4.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: draborngate-web-v2-4-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+      - name: Node.js 22 kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Yükleyici sözdizimini doğrula
+        run: node --check DraBornGate/assets/app.js
+      - name: Güvenlik Sade Tema kapsamını doğrula
+        run: node DraBornGate/tests/dkd_verify_security_simple_theme.mjs
