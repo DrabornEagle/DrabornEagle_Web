@@ -1,12 +1,13 @@
 {
-  "name": "DraBornGate Web",
+  "name": "DraBornGate Web v1.1",
   "short_name": "DraBornGate",
-  "description": "Kurye geçişi, güvenlik, site yönetimi ve site sakini işlemleri için DraBornGate web paneli.",
+  "description": "Kurye geçişi, güvenlik, site yönetimi ve site sakini işlemleri için premium, animasyonlu ve uygulamayla senkron DraBornGate web paneli.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
-  "background_color": "#071019",
-  "theme_color": "#071019",
+  "background_color": "#030711",
+  "theme_color": "#040b16",
   "lang": "tr",
-  "orientation": "any"
+  "orientation": "any",
+  "categories": ["business", "security", "productivity"]
 }
