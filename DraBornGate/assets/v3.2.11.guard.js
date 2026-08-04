@@ -11,10 +11,12 @@
   }
 
   function dkdV3211PatchText(dkdNode) {
-    if (!dkdNode || /^(SCRIPT|STYLE|NOSCRIPT)$/i.test(dkdNode.parentElement?.tagName || '')) return;
+    if (!dkdNode || /^(SCRIPT|STYLE|NOSCRIPT)$/i.test(dkdNode.parentElement?.tagName || '')) return false;
     const dkdCurrent = String(dkdNode.nodeValue || '');
     const dkdUpdated = dkdV3211Replace(dkdCurrent);
-    if (dkdUpdated !== dkdCurrent) dkdNode.nodeValue = dkdUpdated;
+    if (dkdUpdated === dkdCurrent) return false;
+    dkdNode.nodeValue = dkdUpdated;
+    return true;
   }
 
   function dkdV3211PatchRoot(dkdRoot) {
@@ -34,9 +36,14 @@
   }
 
   function dkdV3211PatchMetadata() {
-    document.title = dkdV3211Replace(document.title);
+    const dkdCurrentTitle = document.title;
+    const dkdUpdatedTitle = dkdV3211Replace(dkdCurrentTitle);
+    if (dkdUpdatedTitle !== dkdCurrentTitle) document.title = dkdUpdatedTitle;
+
     for (const dkdMeta of document.querySelectorAll('meta[name="description"],meta[name="application-name"]')) {
-      dkdMeta.setAttribute('content', dkdV3211Replace(dkdMeta.getAttribute('content') || ''));
+      const dkdCurrentContent = dkdMeta.getAttribute('content') || '';
+      const dkdUpdatedContent = dkdV3211Replace(dkdCurrentContent);
+      if (dkdUpdatedContent !== dkdCurrentContent) dkdMeta.setAttribute('content', dkdUpdatedContent);
     }
   }
 
@@ -47,11 +54,20 @@
   dkdV3211PatchRoot(document.documentElement);
   dkdV3211PatchMetadata();
 
-  new MutationObserver((dkdMutations) => {
+  let dkdV3211ObserverQueued = false;
+  const dkdV3211Observer = new MutationObserver((dkdMutations) => {
     for (const dkdMutation of dkdMutations) {
       if (dkdMutation.type === 'characterData') dkdV3211PatchText(dkdMutation.target);
       for (const dkdNode of dkdMutation.addedNodes) dkdV3211PatchRoot(dkdNode);
     }
-    dkdV3211PatchMetadata();
-  }).observe(document.documentElement, { childList: true, subtree: true, characterData: true });
+
+    if (dkdV3211ObserverQueued) return;
+    dkdV3211ObserverQueued = true;
+    requestAnimationFrame(() => {
+      dkdV3211ObserverQueued = false;
+      dkdV3211PatchMetadata();
+    });
+  });
+
+  dkdV3211Observer.observe(document.documentElement, { childList: true, subtree: true, characterData: true });
 })();
