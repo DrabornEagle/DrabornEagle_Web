@@ -21,18 +21,20 @@ const dkdFiles = JSON.parse(
   zlib.gunzipSync(Buffer.from(dkdPayload, 'base64')).toString('utf8')
 );
 
+let dkdWrittenCount = 0;
 for (const [dkdRelativePath, dkdContent] of Object.entries(dkdFiles)) {
+  if (dkdRelativePath.startsWith('.github/workflows/')) continue;
   const dkdTarget = path.resolve(process.cwd(), dkdRelativePath);
   fs.mkdirSync(path.dirname(dkdTarget), { recursive: true });
   fs.writeFileSync(dkdTarget, dkdContent, 'utf8');
+  dkdWrittenCount += 1;
 }
 
 for (const dkdCleanup of [
   'scripts/v324_payload',
   'scripts/dkd_apply_v324.mjs',
-  '.github/workflows/draborngate-web-v324-bootstrap.yml',
 ]) {
   fs.rmSync(path.resolve(process.cwd(), dkdCleanup), { recursive: true, force: true });
 }
 
-console.log(`DraBornGate Web v3.2.4 dosyaları uygulandı: ${Object.keys(dkdFiles).length}`);
+console.log(`DraBornGate Web v3.2.4 dosyaları uygulandı: ${dkdWrittenCount}`);
