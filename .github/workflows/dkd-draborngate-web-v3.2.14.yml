@@ -1,0 +1,44 @@
+name: DraBornGate Web v3.2.14 Verify
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'DraBornGate/**'
+      - '.github/workflows/dkd-draborngate-web-v3.2.14.yml'
+  pull_request:
+    paths:
+      - 'DraBornGate/**'
+      - '.github/workflows/dkd-draborngate-web-v3.2.14.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: draborngate-web-v3-2-14-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+      - name: Node.js hazırla
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: v3.2.14 yükleme yöneticisini doğrula
+        run: node --check DraBornGate/assets/app.v3.2.14.js
+      - name: v3.2.14 sürüm ve eski arayüz korumasını doğrula
+        run: node --check DraBornGate/assets/v3.2.14.guard.js
+      - name: v3.2.14 menü temizliğini doğrula
+        run: node --check DraBornGate/assets/v3.2.14.js
+      - name: Ana yükleme çekirdeğini doğrula
+        run: node --check DraBornGate/assets/app.js
+      - name: Service worker sözdizimini doğrula
+        run: node --check DraBornGate/sw.js
+      - name: v3.2.14 kapsam testlerini çalıştır
+        run: node DraBornGate/tests/dkd_verify_web_v3214.mjs
