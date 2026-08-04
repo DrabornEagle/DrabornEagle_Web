@@ -7,6 +7,7 @@ const dkdAssert = (dkdCondition, dkdMessage) => {
   if (!dkdCondition) throw new Error(dkdMessage);
 };
 const dkdIncludes = (dkdSource, dkdValue, dkdMessage) => dkdAssert(dkdSource.includes(dkdValue), dkdMessage);
+const dkdExcludes = (dkdSource, dkdValue, dkdMessage) => dkdAssert(!dkdSource.includes(dkdValue), dkdMessage);
 
 const dkdIndex = dkdRead('index.html');
 const dkdSimpleIndex = dkdRead('Guvenlik-Sade-Tema/index.html');
@@ -21,15 +22,23 @@ for (const [dkdName, dkdSource] of Object.entries({ dkdIndex, dkdSimpleIndex, dk
   dkdIncludes(dkdSource, '3.2.11', `${dkdName} v3.2.11 sürümünü içermiyor.`);
 }
 
-dkdIncludes(dkdIndex, 'app.v3.2.11.js?v=3.2.11', 'Ana giriş v3.2.11 yükleyicisini kullanmıyor.');
-dkdIncludes(dkdSimpleIndex, 'app.v3.2.11.js?v=3.2.11', 'Sade Tema v3.2.11 yükleyicisini kullanmıyor.');
+dkdIncludes(dkdIndex, 'app.v3.2.11.js?v=3.2.11-bootfix1', 'Ana giriş güncel v3.2.11 açılış hotfix dosyasını kullanmıyor.');
+dkdIncludes(dkdSimpleIndex, 'app.v3.2.11.js?v=3.2.11-bootfix1', 'Sade Tema güncel v3.2.11 açılış hotfix dosyasını kullanmıyor.');
+dkdIncludes(dkdLoader, "DKD_V3211_BOOT_REVISION = 'bootfix1'", 'v3.2.11 açılış önbellek revizyonu yok.');
 dkdIncludes(dkdLoader, './v3.2.11.guard.js', 'v3.2.11 guard yüklenmiyor.');
 dkdIncludes(dkdLoader, './assets/v3.2.11.css', 'v3.2.11 CSS yüklenmiyor.');
 dkdIncludes(dkdLoader, './v3.2.11.js', 'v3.2.11 modern katmanı yüklenmiyor.');
+dkdIncludes(dkdLoader, 'dkdV3211BootFailure', 'Açılış hatası kullanıcıya gösterilmiyor.');
 dkdIncludes(dkdLoader, 'dkdV3211BootIsSimple', 'Sade/Modern tema ayrımı korunmuyor.');
 dkdIncludes(dkdLoader, 'dkdV3211PartnerDataBridge', 'Kurye partner rol köprüsü yüklenmiyor.');
 dkdIncludes(dkdLoader, "dkdRole === 'courier'", 'Veritabanındaki courier rolü tanınmıyor.');
 dkdIncludes(dkdLoader, "preferred_role: 'kurye'", 'Courier rolü Kazançlarım görünürlüğüne uyarlanmıyor.');
+
+dkdIncludes(dkdGuard, 'dkdUpdatedTitle !== dkdCurrentTitle', 'Başlık yalnızca değiştiğinde yazılmıyor.');
+dkdIncludes(dkdGuard, 'dkdUpdatedContent !== dkdCurrentContent', 'Meta bilgisi yalnızca değiştiğinde yazılmıyor.');
+dkdIncludes(dkdGuard, 'dkdV3211ObserverQueued', 'MutationObserver çağrıları kare bazında sınırlandırılmıyor.');
+dkdIncludes(dkdGuard, 'requestAnimationFrame', 'Metadata güncellemesi güvenli kare kuyruğuna alınmıyor.');
+dkdExcludes(dkdGuard, 'document.title = dkdV3211Replace(document.title);', 'Sonsuz MutationObserver döngüsüne neden olan eski başlık yazımı kaldı.');
 
 dkdIncludes(dkdModern, "dkd_gate_current_user_context_v325", 'Kullanıcı rol ve site bağlantısı bağlanmamış.');
 dkdIncludes(dkdModern, '!dkdContext.is_admin', 'Admin için Kazançlarım görünürlük engeli yok.');
