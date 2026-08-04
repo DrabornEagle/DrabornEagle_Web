@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '2.8.0';
+const DKD_WEB_VERSION = '3.0.0';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -127,7 +127,7 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV28() {
+async function dkdBootWebV30() {
   dkdSetBootProgress(4, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
   const dkdSimpleMode = dkdIsSimpleModeRequested();
@@ -166,16 +166,23 @@ async function dkdBootWebV28() {
     dkdSetBootProgress(82, 'Bağımsız Sade Tema hazırlanıyor');
   }
 
-  dkdSetBootProgress(90, 'Canlı geçiş sistemi bağlanıyor');
+  dkdSetBootProgress(89, 'Canlı geçiş sistemi bağlanıyor');
   await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
-
-  dkdSetBootProgress(96, 'Son kontroller yapılıyor');
   await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
 
-  dkdSetBootProgress(98, 'Motosiklet arayüzü güncelleniyor');
-  await import('./v2.8.1.js?v=2.8.1');
+  dkdSetBootProgress(94, 'Uygulama motosiklet ikonu hazırlanıyor');
+  await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
+
+  dkdSetBootProgress(97, 'v3.0 ayrıntılı kurye ekranı hazırlanıyor');
+  await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
+
+  dkdSetBootProgress(98, 'v3.0 ayrıntılı kurye verileri bağlanıyor');
+  await import(`./v3.0.data.js?v=${DKD_WEB_VERSION}`);
+
+  dkdSetBootProgress(99, 'Kuryeni Bul ve canlı kuyruk bağlanıyor');
+  await import(`./v3.0.js?v=${DKD_WEB_VERSION}`);
 
   dkdFinishBoot();
 }
 
-dkdBootWebV28().catch(dkdShowBootError);
+dkdBootWebV30().catch(dkdShowBootError);
