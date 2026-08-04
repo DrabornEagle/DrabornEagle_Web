@@ -7,16 +7,16 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <meta name="theme-color" content="#030713">
-  <meta name="description" content="DraBornGate Web v3.2.11; siteye bağlı kuryeye özel modern Kazançlarım, ayrıntılı güvenlik doğrulama popup ekranı ve çalışan onay-red işlemleri sunar.">
-  <meta name="application-name" content="DraBornGate Web v3.2.11">
+  <meta name="description" content="DraBornGate Web v3.2.14; Kurye Premium menüsündeki tek Kazançlarım bağlantısı ve eski arayüz parçalarını otomatik temizleyen kararlı açılış sunar.">
+  <meta name="application-name" content="DraBornGate Web v3.2.14">
   <base href="/DraBornGate/">
   <link rel="canonical" href="https://www.draborneagle.com/DraBornGate/">
-  <link rel="manifest" href="./manifest.webmanifest?v=3.2.11-bootfix1">
-  <link rel="stylesheet" href="./assets/app.css?v=3.2.11-bootfix1">
-  <link rel="stylesheet" href="./assets/v2.1-fixes.css?v=3.2.11-bootfix1">
-  <link rel="stylesheet" href="./assets/v2.2.css?v=3.2.11-bootfix1">
-  <link rel="stylesheet" href="./assets/v2.3.css?v=3.2.11-bootfix1">
-  <title>DraBornGate Web v3.2.11 | Güvenlik ve Geçiş Yönetimi</title>
+  <link rel="manifest" href="./manifest.webmanifest?v=3.2.14-ui-clean1">
+  <link rel="stylesheet" href="./assets/app.css?v=3.2.14-ui-clean1">
+  <link rel="stylesheet" href="./assets/v2.1-fixes.css?v=3.2.14-ui-clean1">
+  <link rel="stylesheet" href="./assets/v2.2.css?v=3.2.14-ui-clean1">
+  <link rel="stylesheet" href="./assets/v2.3.css?v=3.2.14-ui-clean1">
+  <title>DraBornGate Web v3.2.14 | Güvenlik ve Geçiş Yönetimi</title>
   <style>
     html.dkd-simple-booting #dkd-app{visibility:hidden!important}
     #dkd-v28-splash{position:fixed;inset:0;z-index:2147483600;display:grid;place-items:center;align-content:center;gap:17px;padding:24px;text-align:center;background:radial-gradient(circle at 50% 34%,#10264a 0,#060b18 44%,#02050d 100%);color:#f7fbff;font-family:Inter,system-ui,sans-serif;transition:opacity .42s ease,visibility .42s ease}#dkd-v28-splash.is-hidden{opacity:0;visibility:hidden;pointer-events:none}#dkd-v28-splash .mark{position:relative;width:126px;height:126px;border-radius:38px;display:grid;place-items:center;overflow:hidden;border:1px solid rgba(71,220,255,.62);background:linear-gradient(145deg,rgba(48,203,244,.22),rgba(130,83,255,.24));box-shadow:0 0 0 13px rgba(73,214,255,.035),0 26px 76px rgba(0,0,0,.38);animation:dkdV28MarkFloat 2.4s ease-in-out infinite}#dkd-v28-splash .mark:before{content:"";position:absolute;inset:-48%;background:conic-gradient(from 0deg,transparent,rgba(83,229,255,.75),transparent 26%);animation:dkdV28MarkSpin 3.2s linear infinite}#dkd-v28-splash .mark:after{content:"";position:absolute;inset:5px;border-radius:33px;background:linear-gradient(145deg,#0a2948,#291d62)}#dkd-v28-splash .mark b{position:relative;z-index:2;font-size:37px;font-weight:950;letter-spacing:-.07em;color:#65e4ff}#dkd-v28-splash strong{font-size:clamp(30px,6vw,46px);line-height:1.12}#dkd-v28-progress-label{max-width:620px;min-height:26px;font-size:17px;color:#aebbd0;line-height:1.5}#dkd-v28-progress{width:min(78vw,500px);height:8px;border-radius:999px;overflow:hidden;background:#111a2d;border:1px solid rgba(116,162,226,.12)}#dkd-v28-progress-fill{display:block;width:2%;height:100%;border-radius:inherit;background:linear-gradient(90deg,#40dbff,#777eff,#a66fff);transition:width .38s cubic-bezier(.2,.7,.2,1)}#dkd-v28-retry{margin-top:4px;padding:13px 22px;border-radius:16px;border:1px solid rgba(94,214,255,.38);background:rgba(17,38,72,.88);color:#f5fbff;font-weight:850;font-size:15px}#dkd-v28-retry[hidden]{display:none}@keyframes dkdV28MarkSpin{to{transform:rotate(360deg)}}@keyframes dkdV28MarkFloat{50%{transform:translateY(-7px)}}@media(prefers-reduced-motion:reduce){#dkd-v28-splash .mark,#dkd-v28-splash .mark:before{animation:none}}
@@ -25,20 +25,21 @@
     if (String(location.pathname || '').toLocaleLowerCase('tr-TR').includes('guvenlik-sade-tema') || sessionStorage.getItem('dkd_gate_security_theme') === 'simple' || sessionStorage.getItem('dkd_gate_force_theme') === 'simple') {
       document.documentElement.classList.add('dkd-simple-booting');
     }
-    sessionStorage.setItem('dkd_gate_web_version','3.2.11');
+    sessionStorage.setItem('dkd_gate_web_version','3.2.14');
+    localStorage.setItem('dkd_gate_last_web_release','3.2.14-ui-clean1');
   </script>
 </head>
 <body>
-  <noscript>DraBornGate Web v3.2.11 için JavaScript etkin olmalıdır.</noscript>
+  <noscript>DraBornGate Web v3.2.14 için JavaScript etkin olmalıdır.</noscript>
   <div id="dkd-v28-splash" role="status" aria-live="polite">
     <div class="mark"><b>DBG</b></div>
-    <strong>DraBornGate Web v3.2.11</strong>
+    <strong>DraBornGate Web v3.2.14</strong>
     <span id="dkd-v28-progress-label">Başlatılıyor</span>
     <div id="dkd-v28-progress" role="progressbar" aria-label="DraBornGate yükleniyor" aria-valuemin="0" aria-valuemax="100" aria-valuenow="2"><i id="dkd-v28-progress-fill"></i></div>
     <button id="dkd-v28-retry" type="button" onclick="location.reload()" hidden>Tekrar Dene</button>
   </div>
   <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
-  <div id="dkd-app" class="app-root"><div class="boot-shell"><div class="boot-logo"><span>DBG</span></div><div class="boot-copy"><strong>DraBornGate Web v3.2.11</strong><span>Kazançlarım ve Güvenlik doğrulama sistemi hazırlanıyor</span></div><div class="boot-progress"><i></i></div></div></div>
-  <script type="module" src="./assets/app.v3.2.11.js?v=3.2.11-bootfix1"></script>
+  <div id="dkd-app" class="app-root"><div class="boot-shell"><div class="boot-logo"><span>DBG</span></div><div class="boot-copy"><strong>DraBornGate Web v3.2.14</strong><span>Kurye menüsü ve temiz arayüz hazırlanıyor</span></div><div class="boot-progress"><i></i></div></div></div>
+  <script type="module" src="./assets/app.v3.2.14.js?v=3.2.14-ui-clean1"></script>
 </body>
 </html>
