@@ -1,7 +1,9 @@
 const DKD_V324_VERSION = '3.2.4';
 
 async function dkdV324ReadPayload() {
-  const dkdResponse = await fetch(`./v3.2.4.js.payload.txt?v=${DKD_V324_VERSION}`, { cache: 'no-store' });
+  const dkdPayloadUrl = new URL('./v3.2.4.js.payload.txt', import.meta.url);
+  dkdPayloadUrl.searchParams.set('v', DKD_V324_VERSION);
+  const dkdResponse = await fetch(dkdPayloadUrl, { cache: 'no-store' });
   if (!dkdResponse.ok) throw new Error(`DraBornGate v${DKD_V324_VERSION} arayüz paketi yüklenemedi (${dkdResponse.status}).`);
   return (await dkdResponse.text()).trim();
 }
