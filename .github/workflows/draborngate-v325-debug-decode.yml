@@ -29,9 +29,9 @@ jobs:
       - name: Geçici dala yaz
         shell: bash
         run: |
-          if [ -z "$(git status --porcelain -- DraBornGate/.debug-v325)" ]; then exit 0; fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
-          git add DraBornGate/.debug-v325
+          git add -f DraBornGate/.debug-v325
+          if git diff --cached --quiet; then exit 0; fi
           git commit -m 'chore: decode v3.2.4 sources [decoded]'
           git push origin HEAD:debug/draborngate-v325-inspect
