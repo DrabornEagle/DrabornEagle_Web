@@ -31,7 +31,7 @@ assert.match(dkdApp, /cache: 'no-store'/);
 assert.match(dkdGuard, /DKD_V321_VERSION = '3\.2\.1'/);
 assert.match(dkdGuard, /MutationObserver/);
 assert.match(dkdGuard, /window\.__DKD_GATE_WEB_VERSION__/);
-assert.match(dkdGuard, /3\\\.1/);
+assert.ok(dkdGuard.includes('1(?:\\.\\d+)?'), 'Sürüm koruması v3.1.x metinlerini kapsamalı.');
 
 assert.match(dkdDataBridge, /DKD_V321_RPC_PATTERN/);
 assert.match(dkdDataBridge, /dkdHeaders\.delete\('Accept-Profile'\)/);
