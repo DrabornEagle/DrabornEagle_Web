@@ -1,0 +1,52 @@
+name: DraBornGate Web v3.2.7-r4 Static Verify
+
+on:
+  push:
+    branches:
+      - main
+      - fix/dkd-v327-static-runtime-r4
+    paths:
+      - 'DraBornGate/**'
+      - '.github/workflows/dkd-v327-r4-static-verify.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - 'DraBornGate/**'
+      - '.github/workflows/dkd-v327-r4-static-verify.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: draborngate-r4-static-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Kaynak kodu al
+        uses: actions/checkout@v4
+      - name: Node.js 22 kur
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: r4 açılış dosyalarını doğrula
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check DraBornGate/assets/app.v3.2.7-r4.js
+          node --check DraBornGate/assets/v3.2.7-r4.js
+          node --check DraBornGate/assets/app.v2.runtime.js
+          node --check DraBornGate/assets/v2.4.runtime.js
+          node --check DraBornGate/assets/v2.5.runtime.js
+          node --check DraBornGate/assets/v2.6.runtime.js
+          node --check DraBornGate/assets/v3.2.4.runtime.js
+          node --check DraBornGate/assets/v3.2.5.session.runtime.js
+          node --check DraBornGate/assets/v3.2.5.features.runtime.js
+      - name: r4 statik açılış regresyon testini çalıştır
+        run: node DraBornGate/tests/dkd_verify_static_runtime_r4.mjs
+      - name: Mevcut v3.2.7 kapsam testini çalıştır
+        run: node DraBornGate/tests/dkd_verify_web_v327.mjs
