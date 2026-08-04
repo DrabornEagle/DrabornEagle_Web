@@ -1,4 +1,4 @@
-name: DraBornGate Web v3.2.9 Verify
+name: DraBornGate Web v3.2.10 Verify
 
 on:
   push:
@@ -22,7 +22,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v3-2-9-${{ github.ref }}
+  group: draborngate-web-v3-2-10-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -36,14 +36,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: v3.2.9 yükleme yöneticisini doğrula
+      - name: v3.2.10 yükleme yöneticisini doğrula
         run: node --check DraBornGate/assets/app.js
-      - name: v3.2.9 sürüm korumasını doğrula
-        run: node --check DraBornGate/assets/v3.2.9.guard.js
-      - name: v3.2.9 modern düzeltme katmanını doğrula
-        run: node --check DraBornGate/assets/v3.2.9.js
-      - name: v3.2.9 bağımsız Sade Temayı doğrula
-        run: node --check DraBornGate/assets/v3.2.9.simple.js
+      - name: v3.2.10 sürüm korumasını doğrula
+        run: node --check DraBornGate/assets/v3.2.10.guard.js
+      - name: v3.2.10 modern düzeltme katmanını doğrula
+        run: node --check DraBornGate/assets/v3.2.10.js
+      - name: v3.2.10 Sade Tema katmanını doğrula
+        run: node --check DraBornGate/assets/v3.2.10.simple.js
+      - name: v3.2.9 uyumluluk katmanlarını doğrula
+        run: |
+          node --check DraBornGate/assets/v3.2.9.js
+          node --check DraBornGate/assets/v3.2.9.simple.js
       - name: v3.2.8 uyumluluk katmanını doğrula
         run: node --check DraBornGate/assets/v3.2.8.js
       - name: v3.2.5 uyumluluk katmanlarını doğrula
@@ -62,5 +66,5 @@ jobs:
         run: node --check DraBornGate/assets/v3.2.1.data.js
       - name: Service worker sözdizimini doğrula
         run: node --check DraBornGate/sw.js
-      - name: v3.2.9 kapsam testlerini çalıştır
-        run: node DraBornGate/tests/dkd_verify_web_v329.mjs
+      - name: v3.2.10 kapsam testlerini çalıştır
+        run: node DraBornGate/tests/dkd_verify_web_v3210.mjs
