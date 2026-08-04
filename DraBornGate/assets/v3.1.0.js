@@ -1,5 +1,5 @@
-const DKD_V31_JS_PARTS = 5;
-const DKD_V31_CSS_PARTS = 3;
+const DKD_V31_JS_PARTS = 12;
+const DKD_V31_CSS_PARTS = 7;
 
 async function dkdV31LoadPart(dkdKind, dkdIndex) {
   const dkdUrl = new URL(`./v3.1.0.${dkdKind}.part.${dkdIndex}.txt?v=3.1.0`, import.meta.url);
