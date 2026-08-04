@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v3.1.0",
+  "name": "DraBornGate Web v3.1.1",
   "short_name": "DraBornGate",
-  "description": "Gerçek kurye bilgileri, 6 haneli kod popup doğrulaması, kategorili canlı kuyruk ve site ortaklık kazancı sunan geçiş platformu.",
+  "description": "Doğru Supabase oturumu, gerçek kurye bilgileri, 6 haneli kod doğrulaması, Admin Paneli ve site ortaklık kazancı sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",

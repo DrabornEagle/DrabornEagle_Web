@@ -15,23 +15,41 @@ function dkdV31MountSimple() {
   if (!dkdMain) return;
   document.querySelector('#dkd-v30-root')?.remove();
   let dkdRoot = document.querySelector('#dkd-v31-root');
+  let dkdNeedsRender = false;
   if (!dkdRoot) {
     dkdRoot = document.createElement('div');
     dkdRoot.id = 'dkd-v31-root';
     dkdMain.appendChild(dkdRoot);
+    dkdNeedsRender = true;
   }
   document.body.classList.add('dkd-v31-simple-active');
-  dkdV31RenderSimple();
+  if (dkdNeedsRender || dkdRoot.dataset.dkdV31Mounted !== 'true') {
+    dkdRoot.dataset.dkdV31Mounted = 'true';
+    dkdV31RenderSimple();
+  }
 }
 
 function dkdV31RenderSimple() {
   const dkdRoot = document.querySelector('#dkd-v31-root');
   if (!dkdRoot) return;
-  const dkdPreviousCode = document.querySelector('#dkd-v31-code')?.value || '';
+  const dkdPreviousInput = document.querySelector('#dkd-v31-code');
+  const dkdPreviousCode = dkdPreviousInput?.value || '';
+  const dkdWasFocused = document.activeElement === dkdPreviousInput;
+  const dkdSelectionStart = dkdPreviousInput?.selectionStart ?? dkdPreviousCode.length;
   dkdRoot.innerHTML = dkdV31SimpleHtml();
   const dkdCode = document.querySelector('#dkd-v31-code');
-  if (dkdCode && dkdPreviousCode) dkdCode.value = dkdPreviousCode;
+  if (dkdCode && dkdPreviousCode) {
+    dkdCode.value = dkdPreviousCode;
+    dkdCode.classList.toggle('ready', dkdCode.value.length === 6);
+  }
   dkdV31BindSimple();
+  if (dkdWasFocused && dkdCode) {
+    requestAnimationFrame(() => {
+      dkdCode.focus({ preventScroll: true });
+      const dkdPosition = Math.min(dkdSelectionStart, dkdCode.value.length);
+      dkdCode.setSelectionRange?.(dkdPosition, dkdPosition);
+    });
+  }
 }
 
 function dkdV31BindSimple() {
@@ -41,9 +59,19 @@ function dkdV31BindSimple() {
     dkdCode.value = dkdCode.value.replace(/\D/g, '').slice(0, 6);
     dkdCode.classList.toggle('ready', dkdCode.value.length === 6);
   });
+  dkdCode?.addEventListener('blur', () => {
+    if (!dkdV31State.queueRenderPending) return;
+    dkdV31State.queueRenderPending = false;
+    dkdV31RenderSimple();
+  });
   dkdForm?.addEventListener('submit', async (dkdEvent) => {
     dkdEvent.preventDefault();
     const dkdValue = String(dkdCode?.value || '').replace(/\D/g, '').slice(0, 6);
+    if (dkdValue.length !== 6) {
+      dkdV31State.codeFeedback = { type: 'error', text: 'Lütfen 6 haneli kurye kodunu eksiksiz girin.' };
+      dkdV31RenderSimple();
+      return;
+    }
     dkdV31ActiveCode = dkdValue;
     dkdV31State.codeBusy = true;
     dkdV31State.codeFeedback = { type: 'loading', text: 'Kurye kodu güvenli veritabanında aranıyor…' };
@@ -53,7 +81,7 @@ function dkdV31BindSimple() {
       dkdV31State.codeFeedback = null;
       dkdV31OpenPassModal(dkdPass, dkdValue);
     } catch (dkdError) {
-      dkdV31State.codeFeedback = { type: 'error', text: String(dkdError?.message || dkdError) };
+      dkdV31State.codeFeedback = { type: 'error', text: dkdV31.readableError?.(dkdError) || String(dkdError?.message || dkdError) };
     } finally {
       dkdV31State.codeBusy = false;
       dkdV31RenderSimple();

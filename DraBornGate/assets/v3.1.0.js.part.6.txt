@@ -4,7 +4,7 @@
     } catch (dkdError) {
       dkdButton.disabled = false;
       dkdButton.innerHTML = `${dkdV31Icon('key')}<span>Kodu Onayla ve Giriş Ver</span>`;
-      alert(String(dkdError?.message || dkdError));
+      alert(dkdV31.readableError?.(dkdError) || String(dkdError?.message || dkdError));
     }
   });
 }
@@ -14,12 +14,19 @@ function dkdV31BindModal() {
 }
 
 async function dkdV31RefreshQueue() {
+  const dkdCodeInput = document.querySelector('#dkd-v31-code');
+  const dkdInputWasFocused = document.activeElement === dkdCodeInput;
   try {
     await dkdV31.loadQueue();
   } catch {
     // State already contains the readable error.
   }
   dkdV31MountSimple();
+  if (dkdInputWasFocused || document.activeElement === document.querySelector('#dkd-v31-code')) {
+    dkdV31State.queueRenderPending = true;
+    return;
+  }
+  dkdV31State.queueRenderPending = false;
   dkdV31RenderSimple();
 }
 
@@ -47,7 +54,7 @@ function dkdV31PatchDgAndVersion(dkdRoot = document) {
     const dkdNode = dkdWalker.currentNode;
     const dkdText = String(dkdNode.nodeValue || '');
     if (dkdText.trim() === 'DG') dkdNode.nodeValue = 'DBG';
-    if (/WEB\s+v3\.0\.1/i.test(dkdText)) dkdNode.nodeValue = dkdText.replace(/WEB\s+v3\.0\.1/gi, 'WEB v3.1.0');
+    if (/WEB\s+v3\.(?:0\.1|1\.0)/i.test(dkdText)) dkdNode.nodeValue = dkdText.replace(/WEB\s+v3\.(?:0\.1|1\.0)/gi, 'WEB v3.1.1');
   }
 }
 
@@ -56,4 +63,14 @@ function dkdV31PatchMotorcycleIcons(dkdRoot = document) {
   for (const dkdElement of dkdRoot.querySelectorAll('[class*="courier-icon"],[class*="kurye-icon"],[class*="motorcycle-icon"],[class*="motosiklet-icon"],[data-icon*="courier"],[data-icon*="kurye"],[data-icon*="motorcycle"],[data-icon*="motosiklet"]')) dkdTargets.add(dkdElement);
   for (const dkdClickable of dkdRoot.querySelectorAll('button,a,[role="button"],article,li')) {
     const dkdText = dkdV31.normalize(dkdClickable.textContent);
-    if (!/(^| )kurye( |$)|motosiklet|motorcycle/.test(dkdText)) continue;
+    const dkdIsCourierControl = /(^| )kurye( |$)|motosiklet|motorcycle/.test(dkdText);
+    const dkdIsCourierPassCard = dkdText.includes('adres') && dkdText.includes('siparis') && /(bekliyor|kapida|tamamlandi|reddedildi)/.test(dkdText);
+    if (!dkdIsCourierControl && !dkdIsCourierPassCard) continue;
+    const dkdCandidates = [...dkdClickable.querySelectorAll('[class*="icon"],[class*="avatar"],[class*="mark"],svg')];
+    const dkdIcon = dkdCandidates.find((dkdCandidate) => {
+      const dkdHost = dkdCandidate.matches('svg') ? dkdCandidate.parentElement : dkdCandidate;
+      return dkdHost && !dkdHost.closest('button') && String(dkdHost.textContent || '').trim().length < 8;
+    });
+    const dkdHost = dkdIcon?.matches?.('svg') ? dkdIcon.parentElement : dkdIcon;
+    if (dkdHost) dkdTargets.add(dkdHost);
+  }

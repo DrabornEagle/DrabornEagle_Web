@@ -20,16 +20,22 @@
 
 async function dkdV31OpenAdminPartners() {
   const dkdModal = dkdV31EnsureModal();
-  dkdV31GlobalModalMode = 'admin-partners';
+  dkdV31GlobalModalMode = 'admin';
   dkdModal.hidden = false;
   document.body.classList.add('dkd-v31-modal-open');
-  dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop" data-dkd-v31-close></div><section class="dkd-v31-modal-panel dkd-v31-finance-modal"><div class="dkd-v31-loading">${dkdV31Icon('sync')}<span>Ortaklık yönetimi hazırlanıyor…</span></div></section>`;
+  dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop" data-dkd-v31-close></div><section class="dkd-v31-modal-panel dkd-v31-finance-modal"><div class="dkd-v31-loading">${dkdV31Icon('sync')}<span>Admin Paneli hazırlanıyor…</span></div></section>`;
   dkdV31BindModal();
-  await dkdV31.loadAdminCatalog();
-  dkdV31RenderAdminPartners();
+  try {
+    await dkdV31.loadAdminCatalog();
+    if (!dkdV31State.adminCatalog) throw new Error('Admin yetkisi doğrulanamadı.');
+    dkdV31RenderAdminPartners();
+  } catch (dkdError) {
+    dkdModal.querySelector('section').innerHTML = `<div class="dkd-v31-error-panel"><h2>Admin Paneli açılamadı</h2><p>${dkdV31.escape(dkdV31.readableError?.(dkdError) || dkdError?.message || dkdError)}</p><button data-dkd-v31-close>Kapat</button></div>`;
+    dkdV31BindModal();
+  }
 }
 
 function dkdV31RenderAdminPartners() {
   const dkdCatalog = dkdV31State.adminCatalog;
   const dkdModal = dkdV31EnsureModal();
-  if (dkdV31GlobalModalMode !== 'admin-partners' || !dkdCatalog) return;
+  if (dkdV31GlobalModalMode !== 'admin' || !dkdCatalog) return;

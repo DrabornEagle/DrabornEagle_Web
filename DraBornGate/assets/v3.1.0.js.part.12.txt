@@ -1,14 +1,28 @@
   for (const dkdButton of document.querySelectorAll('[data-dkd-v31-toggle-link]')) {
     dkdButton.addEventListener('click', async () => {
       dkdButton.disabled = true;
-      await dkdV31.assignPartnerSite(
-        dkdButton.dataset.user,
-        dkdButton.dataset.site,
-        Number(dkdButton.dataset.amount || 10),
-        dkdButton.dataset.active !== 'true'
-      );
-      dkdV31RenderAdminPartners();
+      try {
+        await dkdV31.assignPartnerSite(
+          dkdButton.dataset.user,
+          dkdButton.dataset.site,
+          Number(dkdButton.dataset.amount || 10),
+          dkdButton.dataset.active !== 'true'
+        );
+        dkdV31RenderAdminPartners();
+      } catch (dkdError) {
+        dkdButton.disabled = false;
+        alert(dkdV31.readableError?.(dkdError) || String(dkdError?.message || dkdError));
+      }
     });
+  }
+}
+
+function dkdV31PatchUnreadableErrors(dkdRoot = document) {
+  const dkdWalker = document.createTreeWalker(dkdRoot, NodeFilter.SHOW_TEXT);
+  while (dkdWalker.nextNode()) {
+    const dkdNode = dkdWalker.currentNode;
+    if (!String(dkdNode.nodeValue || '').includes('[object Object]')) continue;
+    dkdNode.nodeValue = String(dkdNode.nodeValue || '').replace('[object Object]', 'İşlem tamamlanamadı. Zorunlu alanları kontrol edip tekrar deneyin.');
   }
 }
 
@@ -16,6 +30,7 @@ function dkdV31PatchModernUi() {
   if (dkdV31.isSimpleTheme()) return;
   dkdV31PatchDgAndVersion(document);
   dkdV31PatchMotorcycleIcons(document);
+  dkdV31PatchBottomCourierLabel();
   dkdV31RemoveLiveSyncCard();
   dkdV31PatchMinimalStats();
   dkdV31PatchCourierActionRow();
@@ -23,6 +38,7 @@ function dkdV31PatchModernUi() {
   dkdV31ApplyPagination('Geçiş Geçmişi', 'history');
   dkdV31ApplyPagination('Geçişlerim', 'passes');
   dkdV31PatchPartnerMenus();
+  dkdV31PatchUnreadableErrors(document);
 }
 
 function dkdV31SchedulePatch() {
@@ -30,6 +46,7 @@ function dkdV31SchedulePatch() {
   dkdV31PatchTimer = setTimeout(() => {
     dkdV31MountSimple();
     dkdV31PatchModernUi();
+    dkdV31PatchUnreadableErrors(document);
   }, 80);
 }
 
@@ -46,4 +63,4 @@ async function dkdV31Boot() {
 }
 
 new MutationObserver(dkdV31SchedulePatch).observe(document.body, { childList: true, subtree: true });
-dkdV31Boot().catch((dkdError) => console.error('DraBornGate v3.1.0 başlatılamadı:', dkdError));
+dkdV31Boot().catch((dkdError) => console.error('DraBornGate v3.1.1 başlatılamadı:', dkdError));

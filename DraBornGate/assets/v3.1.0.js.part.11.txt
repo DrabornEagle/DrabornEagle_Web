@@ -1,14 +1,38 @@
+  const dkdUsers = dkdCatalog.users || [];
+  const dkdSites = dkdCatalog.sites || [];
+  const dkdLinks = dkdCatalog.links || [];
+  const dkdActiveLinks = dkdLinks.filter((dkdLink) => dkdLink.is_active);
   dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop" data-dkd-v31-close></div>
-    <section class="dkd-v31-modal-panel dkd-v31-finance-modal">
-      <header><div><span>ADMİN YÖNETİMİ</span><h2>Kazanç Ortaklıkları</h2><p>Bir kullanıcıyı bir siteye bağlayın. Bağlantıdan sonra tamamlanan her gerçek kurye geçişi için varsayılan 10 TL kazanır.</p></div><button data-dkd-v31-close>${dkdV31Icon('close')}</button></header>
-      <form id="dkd-v31-admin-link-form" class="dkd-v31-admin-form">
-        <label>Kullanıcı<select id="dkd-v31-partner-user" required><option value="">Kullanıcı seçin</option>${(dkdCatalog.users || []).map((dkdUser) => `<option value="${dkdV31.escape(dkdUser.user_id)}">${dkdV31.escape(dkdUser.full_name || dkdUser.email)} · ${dkdV31.escape(dkdUser.email)}</option>`).join('')}</select></label>
-        <label>Site<select id="dkd-v31-partner-site" required><option value="">Site seçin</option>${(dkdCatalog.sites || []).map((dkdSite) => `<option value="${dkdV31.escape(dkdSite.site_id)}">${dkdV31.escape(dkdSite.site_name)}${dkdSite.city ? ` · ${dkdV31.escape(dkdSite.city)}` : ''}</option>`).join('')}</select></label>
-        <label>Kurye Başı Kazanç<input id="dkd-v31-partner-amount" type="number" min="0" step="0.01" value="10.00"></label>
-        <label class="dkd-v31-toggle"><input id="dkd-v31-partner-active" type="checkbox" checked><span>Bağlantı aktif</span></label>
-        <button type="submit">${dkdV31Icon('check')}Bağlantıyı Kaydet</button>
-      </form>
-      <div class="dkd-v31-admin-links"><h3>Mevcut Bağlantılar</h3>${(dkdCatalog.links || []).map((dkdLink) => `<article><div><strong>${dkdV31.escape(dkdLink.user_name)}</strong><span>${dkdV31.escape(dkdLink.site_name)}</span><small>Kurye başına ${dkdV31FormatMoney(dkdLink.amount_per_courier)}</small></div><button type="button" data-dkd-v31-toggle-link data-user="${dkdV31.escape(dkdLink.user_id)}" data-site="${dkdV31.escape(dkdLink.site_id)}" data-amount="${dkdV31.escape(dkdLink.amount_per_courier)}" data-active="${dkdLink.is_active ? 'true' : 'false'}">${dkdLink.is_active ? 'Pasifleştir' : 'Aktifleştir'}</button></article>`).join('') || '<p>Henüz bağlantı yok.</p>'}</div>
+    <section class="dkd-v31-modal-panel dkd-v31-finance-modal dkd-v311-admin-panel">
+      <header><div><span>ADMİN YÖNETİMİ</span><h2>Admin Paneli</h2><p>Site, kullanıcı, bağlantı ve kurye başı kazanç yönetiminin tamamı bu ekrandadır.</p></div><button data-dkd-v31-close>${dkdV31Icon('close')}</button></header>
+      <div class="dkd-v311-admin-stats">
+        <article><small>Kullanıcı</small><strong>${dkdUsers.length}</strong></article>
+        <article><small>Site</small><strong>${dkdSites.length}</strong></article>
+        <article><small>Aktif Bağlantı</small><strong>${dkdActiveLinks.length}</strong></article>
+        <article><small>Varsayılan Kazanç</small><strong>10 TL</strong></article>
+      </div>
+      <details class="dkd-v311-admin-section" open>
+        <summary><div><strong>Siteyi Kullanıcıya Bağla</strong><small>Her tamamlanan gerçek kurye geçişi için kazanç tanımla</small></div>${dkdV31Icon('chevron')}</summary>
+        <form id="dkd-v31-admin-link-form" class="dkd-v31-admin-form">
+          <label>Kullanıcı<select id="dkd-v31-partner-user" required><option value="">Kullanıcı seçin</option>${dkdUsers.map((dkdUser) => `<option value="${dkdV31.escape(dkdUser.user_id)}">${dkdV31.escape(dkdUser.full_name || dkdUser.email)} · ${dkdV31.escape(dkdUser.email)}</option>`).join('')}</select></label>
+          <label>Site<select id="dkd-v31-partner-site" required><option value="">Site seçin</option>${dkdSites.map((dkdSite) => `<option value="${dkdV31.escape(dkdSite.site_id)}">${dkdV31.escape(dkdSite.site_name)}${dkdSite.city ? ` · ${dkdV31.escape(dkdSite.city)}` : ''}</option>`).join('')}</select></label>
+          <label>Kurye Başı Kazanç<input id="dkd-v31-partner-amount" type="number" min="0" step="0.01" value="10.00"></label>
+          <label class="dkd-v31-toggle"><input id="dkd-v31-partner-active" type="checkbox" checked><span>Bağlantı aktif</span></label>
+          <button type="submit">${dkdV31Icon('check')}Bağlantıyı Kaydet</button>
+        </form>
+      </details>
+      <details class="dkd-v311-admin-section" open>
+        <summary><div><strong>Site–Kullanıcı Bağlantıları</strong><small>${dkdLinks.length} kayıt</small></div>${dkdV31Icon('chevron')}</summary>
+        <div class="dkd-v31-admin-links">${dkdLinks.map((dkdLink) => `<article><div><strong>${dkdV31.escape(dkdLink.user_name)}</strong><span>${dkdV31.escape(dkdLink.site_name)}</span><small>Kurye başına ${dkdV31FormatMoney(dkdLink.amount_per_courier)} · ${dkdLink.is_active ? 'Aktif' : 'Pasif'}</small></div><button type="button" data-dkd-v31-toggle-link data-user="${dkdV31.escape(dkdLink.user_id)}" data-site="${dkdV31.escape(dkdLink.site_id)}" data-amount="${dkdV31.escape(dkdLink.amount_per_courier)}" data-active="${dkdLink.is_active ? 'true' : 'false'}">${dkdLink.is_active ? 'Pasifleştir' : 'Aktifleştir'}</button></article>`).join('') || '<p>Henüz bağlantı yok.</p>'}</div>
+      </details>
+      <details class="dkd-v311-admin-section">
+        <summary><div><strong>Kullanıcılar</strong><small>${dkdUsers.length} kullanıcı</small></div>${dkdV31Icon('chevron')}</summary>
+        <div class="dkd-v311-admin-list">${dkdUsers.map((dkdUser) => `<article><div><strong>${dkdV31.escape(dkdUser.full_name || 'İsimsiz kullanıcı')}</strong><span>${dkdV31.escape(dkdUser.email || 'E-posta yok')}</span></div><small>${dkdV31.escape(dkdUser.preferred_role || 'Rol seçilmedi')}</small></article>`).join('') || '<p>Kullanıcı bulunamadı.</p>'}</div>
+      </details>
+      <details class="dkd-v311-admin-section">
+        <summary><div><strong>Siteler</strong><small>${dkdSites.length} site</small></div>${dkdV31Icon('chevron')}</summary>
+        <div class="dkd-v311-admin-list">${dkdSites.map((dkdSite) => `<article><div><strong>${dkdV31.escape(dkdSite.site_name)}</strong><span>${dkdV31.escape(dkdSite.city || 'Şehir bilgisi yok')}</span></div><small>${dkdSite.is_active ? 'Aktif' : 'Pasif'}</small></article>`).join('') || '<p>Site bulunamadı.</p>'}</div>
+      </details>
     </section>`;
   dkdV31BindModal();
   document.querySelector('#dkd-v31-admin-link-form')?.addEventListener('submit', async (dkdEvent) => {
@@ -17,9 +41,16 @@
     const dkdSite = document.querySelector('#dkd-v31-partner-site')?.value;
     const dkdAmount = document.querySelector('#dkd-v31-partner-amount')?.value;
     const dkdActive = document.querySelector('#dkd-v31-partner-active')?.checked;
+    const dkdSubmit = dkdEvent.submitter;
     if (!dkdUser || !dkdSite) return;
-    await dkdV31.assignPartnerSite(dkdUser, dkdSite, dkdAmount, dkdActive);
-    dkdV31RenderAdminPartners();
-    await dkdV31.loadPartnerSummary();
-    dkdV31PatchPartnerMenus();
+    if (dkdSubmit) dkdSubmit.disabled = true;
+    try {
+      await dkdV31.assignPartnerSite(dkdUser, dkdSite, dkdAmount, dkdActive);
+      dkdV31RenderAdminPartners();
+      await dkdV31.loadPartnerSummary();
+      dkdV31PatchPartnerMenus();
+    } catch (dkdError) {
+      if (dkdSubmit) dkdSubmit.disabled = false;
+      alert(dkdV31.readableError?.(dkdError) || String(dkdError?.message || dkdError));
+    }
   });

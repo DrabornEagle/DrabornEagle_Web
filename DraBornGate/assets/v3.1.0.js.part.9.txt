@@ -17,19 +17,24 @@ function dkdV31CreateMenuButton(dkdLabel, dkdMode, dkdIcon = 'wallet') {
   dkdButton.className = 'dkd-v31-menu-item';
   dkdButton.dataset.dkdV31Menu = dkdMode;
   dkdButton.innerHTML = `<span>${dkdV31Icon(dkdIcon)}</span><strong>${dkdLabel}</strong>`;
-  dkdButton.addEventListener('click', () => dkdMode === 'earnings' ? dkdV31OpenEarnings() : dkdV31OpenAdminPartners());
+  dkdButton.addEventListener('click', () => {
+    if (dkdMode === 'earnings') dkdV31OpenEarnings();
+    if (dkdMode === 'admin') dkdV31OpenAdminPartners();
+  });
   return dkdButton;
 }
 
 function dkdV31PatchPartnerMenus() {
   const dkdProfileText = dkdV31FindExactText('Profil ve Bağlantı');
   const dkdProfileItem = dkdProfileText?.closest('button,a,[role="button"]') || (dkdProfileText && dkdV31ClosestCard(dkdProfileText, 260));
-  if (dkdProfileItem && dkdV31State.partnerSummary?.visible && !document.querySelector('[data-dkd-v31-menu="earnings"]')) {
+  if (!dkdProfileItem) return;
+  document.querySelector('[data-dkd-v31-menu="admin-partners"]')?.remove();
+  if (dkdV31State.partnerSummary?.visible && !document.querySelector('[data-dkd-v31-menu="earnings"]')) {
     dkdProfileItem.after(dkdV31CreateMenuButton('Kazancım', 'earnings', 'wallet'));
   }
-  if (dkdProfileItem && dkdV31State.adminCatalog && !document.querySelector('[data-dkd-v31-menu="admin-partners"]')) {
+  if (dkdV31State.adminCatalog && !document.querySelector('[data-dkd-v31-menu="admin"]')) {
     const dkdEarnings = document.querySelector('[data-dkd-v31-menu="earnings"]');
-    (dkdEarnings || dkdProfileItem).after(dkdV31CreateMenuButton('Kazanç Ortaklıkları', 'admin-partners', 'user'));
+    (dkdEarnings || dkdProfileItem).after(dkdV31CreateMenuButton('Admin Paneli', 'admin', 'admin'));
   }
 }
 
@@ -44,7 +49,7 @@ async function dkdV31OpenEarnings() {
     const [dkdSummary] = await Promise.all([dkdV31.loadPartnerSummary(), dkdV31.loadPartnerRows(10, 0)]);
     dkdV31RenderEarnings(dkdSummary);
   } catch (dkdError) {
-    dkdModal.querySelector('section').innerHTML = `<div class="dkd-v31-error-panel"><h2>Kazançlar açılamadı</h2><p>${dkdV31.escape(dkdError?.message || dkdError)}</p><button data-dkd-v31-close>Kapat</button></div>`;
+    dkdModal.querySelector('section').innerHTML = `<div class="dkd-v31-error-panel"><h2>Kazançlar açılamadı</h2><p>${dkdV31.escape(dkdV31.readableError?.(dkdError) || dkdError?.message || dkdError)}</p><button data-dkd-v31-close>Kapat</button></div>`;
     dkdV31BindModal();
   }
 }
