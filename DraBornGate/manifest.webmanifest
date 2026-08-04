@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.8",
+  "name": "DraBornGate Web v3.2.9",
   "short_name": "DraBornGate",
-  "description": "Kararlı Kazançlarım menüsü, tek pencereli site araması ve detaylı kurye doğrulama popup ekranı sunan geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.8",
+  "description": "Titreşimsiz site seçimi, bağımsız Güvenlik Sade Tema ve çalışan detaylı kurye eşleştirme ekranı sunan geçiş platformu.",
+  "start_url": "/DraBornGate/?v=3.2.9",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
