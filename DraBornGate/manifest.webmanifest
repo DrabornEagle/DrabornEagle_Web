@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.2",
+  "name": "DraBornGate Web v3.2.3",
   "short_name": "DraBornGate",
-  "description": "Public RPC köprüsü, doğru Supabase oturumu, gerçek kurye bilgileri, 6 haneli kod doğrulaması, Admin Paneli ve site ortaklık kazancı sunan geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.2",
+  "description": "Güvenli oturum seçimi, Admin Paneli, premium Sade Tema, ayrıntılı kurye eşleştirme ve arayarak site seçimi sunan geçiş platformu.",
+  "start_url": "/DraBornGate/?v=3.2.3",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
