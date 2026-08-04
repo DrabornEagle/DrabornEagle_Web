@@ -1,0 +1,68 @@
+html[data-dkd-gate-version="3.2.15"] .dkd-v3211-earnings-menu,
+html[data-dkd-gate-version="3.2.15"] [data-dkd-v3211-earnings],
+html[data-dkd-gate-version="3.2.15"] .dkd-v328-earnings-menu,
+html[data-dkd-gate-version="3.2.15"] .dkd-v325-earnings-menu,
+html[data-dkd-gate-version="3.2.15"] [data-dkd-earnings-menu],
+html[data-dkd-gate-version="3.2.15"] #dkd-v328-earnings,
+html[data-dkd-gate-version="3.2.15"] #dkd-v325-earnings {
+  display: none !important;
+}
+
+.dkd-v3215-racing-motorcycle {
+  width: 64px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  position: relative;
+  overflow: visible;
+  color: var(--dkd-v3215-moto-tone, #ff8a4c);
+}
+
+.dkd-v3215-racing-motorcycle svg {
+  width: 64px;
+  height: 41px;
+  display: block;
+  overflow: visible;
+  animation: dkdV3215MotoRide 1.24s ease-in-out infinite;
+  transform-origin: 50% 70%;
+}
+
+.dkd-v3215-racing-motorcycle .dkd-v3215-speed-lines {
+  position: absolute;
+  left: -4px;
+  top: 18px;
+  width: 23px;
+  display: grid;
+  gap: 4px;
+  pointer-events: none;
+  animation: dkdV3215MotoLines .84s ease-in-out infinite;
+}
+
+.dkd-v3215-racing-motorcycle .dkd-v3215-speed-lines i {
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+}
+
+.dkd-v3215-racing-motorcycle .dkd-v3215-speed-lines i:last-child {
+  width: 62%;
+  margin-left: 5px;
+  background: #f5faff;
+  opacity: .72;
+}
+
+@keyframes dkdV3215MotoRide {
+  0%,100% { transform: translate(-1px,1px) rotate(-1.2deg); }
+  50% { transform: translate(2px,-1.5px) rotate(1.8deg); }
+}
+
+@keyframes dkdV3215MotoLines {
+  0%,100% { opacity: .2; transform: translateX(2px); }
+  50% { opacity: .72; transform: translateX(-4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dkd-v3215-racing-motorcycle svg,
+  .dkd-v3215-racing-motorcycle .dkd-v3215-speed-lines { animation: none; }
+}
