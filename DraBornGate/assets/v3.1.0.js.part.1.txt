@@ -19,13 +19,16 @@ function dkdV31Icon(dkdName) {
     sync: '<svg viewBox="0 0 24 24" fill="none"><path d="M20 7v5h-5M4 17v-5h5" stroke="currentColor" stroke-width="1.8"/><path d="M18 12a6 6 0 0 0-10.8-3.6L4 11m16 2-3.2 2.6A6 6 0 0 1 6 12" stroke="currentColor" stroke-width="1.8"/></svg>',
     chevron: '<svg viewBox="0 0 24 24" fill="none"><path d="m8 10 4 4 4-4" stroke="currentColor" stroke-width="2"/></svg>',
     plus: '<svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2"/></svg>',
+    admin: '<svg viewBox="0 0 24 24" fill="none"><path d="M4 4h7v7H4V4Zm9 0h7v7h-7V4ZM4 13h7v7H4v-7Zm9 0h7v7h-7v-7Z" stroke="currentColor" stroke-width="1.8"/></svg>',
   };
   return dkdIcons[dkdName] || '';
 }
 
 function dkdV31Moto(dkdClass = '') {
-  const dkdSource = document.querySelector('.dkd-v281-moto');
-  return `<span class="dkd-v31-moto ${dkdClass}" aria-hidden="true">${dkdSource?.outerHTML || '<span class="dkd-v31-moto-fallback">DBG</span>'}</span>`;
+  const dkdMarkup = typeof window.dkdV311MotorcycleSvg === 'function'
+    ? window.dkdV311MotorcycleSvg()
+    : document.querySelector('.dkd-v281-moto')?.outerHTML || '<span class="dkd-v31-moto-fallback">DBG</span>';
+  return `<span class="dkd-v31-moto ${dkdClass}" aria-hidden="true">${dkdMarkup}</span>`;
 }
 
 function dkdV31FormatDate(dkdValue) {
