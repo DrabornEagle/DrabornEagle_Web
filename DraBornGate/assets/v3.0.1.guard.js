@@ -2,6 +2,22 @@
   const DKD_V301_VERSION = '3.0.1';
   const DKD_V301_VERSION_PATTERN = /(?:DraBornGate\s+Web\s+)?v(?:2\.8(?:\.0)?|3\.0\.0)\b/gi;
 
+  function dkdV301GuardNormalize(dkdValue) {
+    return String(dkdValue || '')
+      .toLocaleLowerCase('tr-TR')
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .replace(/ı/g, 'i')
+      .replace(/[^a-z0-9]+/g, ' ')
+      .trim();
+  }
+
+  function dkdV301GuardIsSimple() {
+    return dkdV301GuardNormalize(location.pathname).includes('guvenlik sade tema') ||
+      sessionStorage.getItem('dkd_gate_security_theme') === 'simple' ||
+      sessionStorage.getItem('dkd_gate_force_theme') === 'simple';
+  }
+
   function dkdV301PatchTextNode(dkdNode) {
     const dkdValue = dkdNode?.nodeValue || '';
     if (!DKD_V301_VERSION_PATTERN.test(dkdValue)) {
@@ -32,8 +48,26 @@
   }
 
   window.__DKD_GATE_WEB_VERSION__ = DKD_V301_VERSION;
+  window.__DKD_GATE_V301_ACTIVE__ = true;
   sessionStorage.setItem('dkd_gate_web_version', DKD_V301_VERSION);
   dkdV301PatchRoot(document.documentElement);
+
+  document.addEventListener('click', (dkdEvent) => {
+    if (!dkdV301GuardIsSimple()) return;
+    const dkdTarget = dkdEvent.target?.closest?.('button,a,[role="button"]');
+    if (!dkdTarget || dkdTarget.closest('#dkd-v30-root,#dkd-v28-root')) return;
+    const dkdText = dkdV301GuardNormalize([
+      dkdTarget.textContent,
+      dkdTarget.getAttribute('aria-label'),
+      dkdTarget.title,
+    ].join(' '));
+    const dkdFinderNavigation = /kurye kodu dogrula|kuryeni bul|6 haneli kurye kodu|kodu dogrula/.test(dkdText);
+    if (!dkdFinderNavigation) return;
+    const dkdCode = String(document.querySelector('#dkd-v30-code')?.value || '').replace(/\D/g, '');
+    if (dkdCode.length === 6) return;
+    dkdEvent.preventDefault();
+    dkdEvent.stopImmediatePropagation();
+  }, true);
 
   new MutationObserver((dkdMutations) => {
     for (const dkdMutation of dkdMutations) {
