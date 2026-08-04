@@ -10,6 +10,7 @@ const dkdRead = (dkdRelativePath) => fs.readFileSync(path.join(dkdRoot, dkdRelat
 const dkdIndex = dkdRead('index.html');
 const dkdSimpleIndex = dkdRead('Guvenlik-Sade-Tema/index.html');
 const dkdApp = dkdRead('assets/app.js');
+const dkdBootUnlock = dkdRead('assets/v3.2.7.boot-unlock.js');
 const dkdGuard = dkdRead('assets/v3.2.7.guard.js');
 const dkdLoader = dkdRead('assets/v3.2.7.js');
 const dkdFeatures = dkdRead('assets/v3.2.7.features.js');
@@ -23,6 +24,7 @@ for (const [dkdLabel, dkdSource] of [
   ['ana index', dkdIndex],
   ['sade tema index', dkdSimpleIndex],
   ['app', dkdApp],
+  ['başlangıç kilit açıcı', dkdBootUnlock],
   ['guard', dkdGuard],
   ['loader', dkdLoader],
   ['özellikler', dkdFeatures],
@@ -44,6 +46,13 @@ assert.match(dkdApp, /dkdWaitForV327SimpleReady/);
 assert.match(dkdApp, /dataset\.dkdV327Ready/);
 assert.match(dkdApp, /dkdBootWebV327\(\)\.catch/);
 assert.doesNotMatch(dkdApp, /dkdBootWebV325\(\)\.catch/);
+
+assert.match(dkdBootUnlock, /__DKD_GATE_V327_BOOT_UNLOCK__/);
+assert.match(dkdBootUnlock, /Object\.defineProperty\(caches, 'keys'/);
+assert.match(dkdBootUnlock, /Object\.defineProperty\(navigator\.serviceWorker, 'register'/);
+assert.match(dkdBootUnlock, /return Promise\.resolve\(\[\]\)/);
+assert.match(dkdBootUnlock, /return Promise\.resolve\(dkdFacade\)/);
+assert.match(dkdBootUnlock, /Promise\.allSettled/);
 
 assert.match(dkdGuard, /__DKD_GATE_V327_ACTIVE__/);
 assert.match(dkdGuard, /dataset\.dkdV327Active/);
@@ -81,6 +90,14 @@ for (const dkdSelector of [
   assert.ok(dkdCss.includes(dkdSelector), `${dkdSelector} CSS içinde bulunmalı`);
 }
 
+for (const [dkdLabel, dkdSource] of [['ana index', dkdIndex], ['sade tema index', dkdSimpleIndex]]) {
+  assert.match(dkdSource, /v3\.2\.7\.boot-unlock\.js\?v=3\.2\.7-r2/, `${dkdLabel} kilit açıcıyı önce yüklemeli`);
+  assert.match(dkdSource, /app\.js\?v=3\.2\.7-r2/, `${dkdLabel} hotfix cache anahtarı kullanmalı`);
+  assert.ok(
+    dkdSource.indexOf('v3.2.7.boot-unlock.js') < dkdSource.indexOf('type="module" src="./assets/app.js'),
+    `${dkdLabel} kilit açıcıyı app.js öncesinde çalıştırmalı`
+  );
+}
 assert.match(dkdSimpleIndex, /dkd-v327-inline-hide/);
 assert.match(dkdSimpleIndex, /#dkd-v28-root\{display:none!important/);
 assert.match(dkdDataCompat, /DKD_V321_COMPAT_VERSION = '3\.2\.7'/);
@@ -89,11 +106,16 @@ const dkdManifestJson = JSON.parse(dkdManifest);
 assert.equal(dkdManifestJson.name, 'DraBornGate Web v3.2.7');
 assert.equal(dkdManifestJson.start_url, '/DraBornGate/?v=3.2.7');
 
-assert.match(dkdServiceWorker, /draborngate-web-v3\.2\.7-clean-menu-site-popup/);
+assert.match(dkdServiceWorker, /draborngate-web-v3\.2\.7-clean-menu-site-popup-boot-r2/);
+assert.match(dkdServiceWorker, /v3\.2\.7\.boot-unlock\.js\?v=3\.2\.7-r2/);
+assert.match(dkdServiceWorker, /app\.js\?v=3\.2\.7-r2/);
+assert.match(dkdServiceWorker, /Promise\.allSettled/);
+assert.doesNotMatch(dkdServiceWorker, /dkdCache\.addAll\(DKD_ASSETS\)/);
 for (const dkdAsset of ['v3.2.7.guard.js', 'v3.2.7.css', 'v3.2.7.js', 'v3.2.7.features.js']) {
   assert.match(dkdServiceWorker, new RegExp(dkdAsset.replaceAll('.', '\\.')));
 }
 assert.match(dkdWorkflow, /DraBornGate Web v3\.2\.7 Verify/);
+assert.match(dkdWorkflow, /v3\.2\.7\.boot-unlock\.js/);
 assert.match(dkdWorkflow, /dkd_verify_web_v327\.mjs/);
 
-console.log('DraBornGate Web v3.2.7 menü, kompakt site arama, Sade Tema ve detay popup doğrulamaları geçti.');
+console.log('DraBornGate Web v3.2.7 başlangıç kilidi, menü, kompakt site arama, Sade Tema ve detay popup doğrulamaları geçti.');
