@@ -1,0 +1,26 @@
+.dkd-v31-card-open,.dkd-v31-more{width:100%;min-height:52px;margin-top:14px;border:1px solid rgba(75,199,255,.24);border-radius:16px;display:flex;align-items:center;justify-content:center;gap:9px;background:rgba(18,64,94,.52);color:#e8f9ff;font-weight:900}
+.dkd-v31-card-open svg,.dkd-v31-more svg{width:21px}
+.dkd-v31-more b{margin-left:auto;margin-right:14px;color:#8194af;font-size:11px}
+.dkd-v31-empty-mini{padding:30px;text-align:center;color:var(--dkd-v31-muted)}
+.dkd-v31-queue-error{padding:16px;border:1px solid rgba(255,139,169,.25);border-radius:17px;color:#ffa4bb;background:rgba(108,27,50,.23)}
+.dkd-v31-queue-error button{margin-left:12px;border:0;border-radius:10px;padding:8px 12px}
+.dkd-v31-moto{display:grid;place-items:center;color:inherit}
+.dkd-v31-moto>.dkd-v281-moto{width:72px!important;height:48px!important;color:inherit}
+.dkd-v31-moto>.dkd-v281-moto svg{width:72px!important;height:46px!important}
+.dkd-v31-moto.modern>.dkd-v281-moto{width:36px!important;height:25px!important}
+.dkd-v31-moto.modern>.dkd-v281-moto svg{width:36px!important;height:24px!important}
+.dkd-v31-moto-fallback{font-weight:950;color:var(--dkd-v31-cyan)}
+body.dkd-v31-modal-open{overflow:hidden}
+#dkd-v31-global-modal[hidden]{display:none}
+#dkd-v31-global-modal{position:fixed;inset:0;z-index:2147483640;display:grid;place-items:center;padding:18px}
+.dkd-v31-modal-backdrop{position:absolute;inset:0;background:rgba(0,4,14,.82);backdrop-filter:blur(12px)}
+.dkd-v31-modal-panel{position:relative;width:min(1100px,100%);max-height:92vh;overflow:auto;border:1px solid rgba(85,184,255,.28);border-radius:32px;background:#07152a;color:var(--dkd-v31-text);box-shadow:0 35px 110px rgba(0,0,0,.55)}
+.dkd-v31-modal-panel>header{display:flex;align-items:flex-start;justify-content:space-between;gap:20px;padding:26px 28px;border-bottom:1px solid rgba(100,160,230,.16);position:sticky;top:0;z-index:3;background:rgba(7,21,42,.96);backdrop-filter:blur(12px)}
+.dkd-v31-modal-panel>header span{color:var(--dkd-v31-cyan);font-size:11px;font-weight:950;letter-spacing:.17em}
+.dkd-v31-modal-panel>header h2{margin:6px 0;font-size:34px}
+.dkd-v31-modal-panel>header p{margin:0;color:var(--dkd-v31-muted)}
+.dkd-v31-modal-panel>header>button{width:45px;height:45px;display:grid;place-items:center;border:1px solid rgba(107,167,239,.2);border-radius:14px;background:#0a1c36;color:#fff}
+.dkd-v31-modal-panel>header svg{width:22px}
+.dkd-v31-pass-modal>main{padding:26px 28px}
+.dkd-v31-pass-modal>footer{display:flex;justify-content:flex-end;gap:12px;padding:20px 28px;border-top:1px solid rgba(100,160,230,.16);position:sticky;bottom:0;background:rgba(7,21,42,.97)}
+.dkd-v31-pass-modal>footer button{min-height:55px;padding:0 22px;border:0;border-radius:17px;display:flex;align-items:center;justify-content:center;gap:9px;background:linear-gradient(100deg,var(--dkd-v31-cyan),var(--dkd-v31-violet));color:#04101a;font-weight:950}

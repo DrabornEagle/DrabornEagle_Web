@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v3.0.1",
+  "name": "DraBornGate Web v3.1.0",
   "short_name": "DraBornGate",
-  "description": "Doğrudan çalışan 6 haneli Kuryeni Bul, gerçek Canlı Kurye Kuyruğu, ayrıntılı adres bilgileri ve ortak motosiklet ikonunu sunan geçiş platformu.",
+  "description": "Gerçek kurye bilgileri, 6 haneli kod popup doğrulaması, kategorili canlı kuyruk ve site ortaklık kazancı sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",

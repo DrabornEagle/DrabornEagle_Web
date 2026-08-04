@@ -1,0 +1,64 @@
+        <aside><b>${dkdV31State.queueLoading && !dkdV31State.queueLoaded ? 'Hazırlanıyor' : `${dkdTotal} aktif`}</b><small>${dkdV31State.lastQueueSync ? dkdV31State.lastQueueSync.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' }) : 'Canlı bağlantı'}</small>${dkdV31Icon('chevron')}</aside>
+      </summary>
+      <div class="dkd-v31-queue-content">
+        ${dkdV31State.queueError ? `<div class="dkd-v31-queue-error">${dkdV31.escape(dkdV31State.queueError)}<button type="button" id="dkd-v31-retry-queue">Tekrar Dene</button></div>` : ''}
+        ${dkdV31QueueCategory('arrived', 'Kapıda Bekleyenler', dkdArrived, true)}
+        ${dkdV31QueueCategory('approaching', 'Yaklaşan / Onay Bekleyenler', dkdApproaching, false)}
+        ${dkdOther.length ? dkdV31QueueCategory('other', 'Diğer Aktif Geçişler', dkdOther, false) : ''}
+      </div>
+    </details>`;
+}
+
+function dkdV31MountSimple() {
+  if (!dkdV31.isSimpleTheme()) return;
+  const dkdMain = document.querySelector('#dkd-v28-root .dkd-v28-main');
+  if (!dkdMain) return;
+  document.querySelector('#dkd-v30-root')?.remove();
+  let dkdRoot = document.querySelector('#dkd-v31-root');
+  if (!dkdRoot) {
+    dkdRoot = document.createElement('div');
+    dkdRoot.id = 'dkd-v31-root';
+    dkdMain.appendChild(dkdRoot);
+  }
+  document.body.classList.add('dkd-v31-simple-active');
+  dkdV31RenderSimple();
+}
+
+function dkdV31RenderSimple() {
+  const dkdRoot = document.querySelector('#dkd-v31-root');
+  if (!dkdRoot) return;
+  const dkdPreviousCode = document.querySelector('#dkd-v31-code')?.value || '';
+  dkdRoot.innerHTML = dkdV31SimpleHtml();
+  const dkdCode = document.querySelector('#dkd-v31-code');
+  if (dkdCode && dkdPreviousCode) dkdCode.value = dkdPreviousCode;
+  dkdV31BindSimple();
+}
+
+function dkdV31BindSimple() {
+  const dkdForm = document.querySelector('#dkd-v31-search-form');
+  const dkdCode = document.querySelector('#dkd-v31-code');
+  dkdCode?.addEventListener('input', () => {
+    dkdCode.value = dkdCode.value.replace(/\D/g, '').slice(0, 6);
+    dkdCode.classList.toggle('ready', dkdCode.value.length === 6);
+  });
+  dkdForm?.addEventListener('submit', async (dkdEvent) => {
+    dkdEvent.preventDefault();
+    const dkdValue = String(dkdCode?.value || '').replace(/\D/g, '').slice(0, 6);
+    dkdV31ActiveCode = dkdValue;
+    dkdV31State.codeBusy = true;
+    dkdV31State.codeFeedback = { type: 'loading', text: 'Kurye kodu güvenli veritabanında aranıyor…' };
+    dkdV31RenderSimple();
+    try {
+      const dkdPass = await dkdV31.findPass(dkdValue);
+      dkdV31State.codeFeedback = null;
+      dkdV31OpenPassModal(dkdPass, dkdValue);
+    } catch (dkdError) {
+      dkdV31State.codeFeedback = { type: 'error', text: String(dkdError?.message || dkdError) };
+    } finally {
+      dkdV31State.codeBusy = false;
+      dkdV31RenderSimple();
+    }
+  });
+  document.querySelector('.dkd-v31-live-queue')?.addEventListener('toggle', (dkdEvent) => {
+    dkdV31State.queueOpen = dkdEvent.currentTarget.open;
+  });

@@ -1,0 +1,43 @@
+  if (Number.isNaN(dkdDate.getTime())) return String(dkdValue);
+  return dkdDate.toLocaleString('tr-TR', { dateStyle: 'short', timeStyle: 'short' });
+}
+
+function dkdV31FormatMoney(dkdValue) {
+  return new Intl.NumberFormat('tr-TR', { style: 'currency', currency: 'TRY', maximumFractionDigits: 2 }).format(Number(dkdValue || 0));
+}
+
+function dkdV31StatusLabel(dkdStatus) {
+  return ({ arrived: 'Kapıda', waiting: 'Yaklaşıyor', approved: 'Onay Bekliyor', completed: 'Tamamlandı' })[dkdStatus] || String(dkdStatus || 'Aktif');
+}
+
+function dkdV31Detail(dkdLabel, dkdValue, dkdIcon = 'user', dkdWide = false) {
+  return `<div class="dkd-v31-detail ${dkdWide ? 'wide' : ''}"><span>${dkdV31Icon(dkdIcon)}</span><div><small>${dkdV31.escape(dkdLabel)}</small><strong>${dkdV31.escape(dkdValue || '—')}</strong></div></div>`;
+}
+
+function dkdV31PassDetailsHtml(dkdPass, dkdShowCode = true) {
+  return `<div class="dkd-v31-pass-hero">
+      <div class="dkd-v31-pass-moto">${dkdV31Moto()}</div>
+      <div><small>KURYE</small><h3>${dkdV31.escape(dkdPass.courier_name)}</h3><p>${dkdV31.escape(dkdPass.platform)} · ${dkdV31.escape(dkdPass.courier_plate)}</p></div>
+      <span class="dkd-v31-status ${dkdV31.escape(dkdPass.status)}">${dkdV31StatusLabel(dkdPass.status)}</span>
+    </div>
+    <div class="dkd-v31-route-box">
+      <div><span>${dkdV31Icon('route')}</span><section><small>NEREDEN GELİYOR</small><strong>${dkdV31.escape(dkdPass.origin_name)}</strong><p>${dkdV31.escape(dkdPass.origin_address)}</p></section></div>
+      <i></i>
+      <div><span>${dkdV31Icon('pin')}</span><section><small>GİDECEĞİ TAM ADRES</small><strong>${dkdV31.escape(dkdPass.destination_full)}</strong></section></div>
+    </div>
+    <div class="dkd-v31-detail-grid">
+      ${dkdV31Detail('Kurye Adı Soyadı', dkdPass.courier_name, 'user')}
+      ${dkdV31Detail('Kurye Telefonu', dkdPass.courier_phone, 'phone')}
+      ${dkdV31Detail('Platform', dkdPass.platform, 'route')}
+      ${dkdV31Detail('Plaka', dkdPass.courier_plate, 'route')}
+      ${dkdV31Detail('Müşteri Adı Soyadı', dkdPass.customer_name, 'user')}
+      ${dkdV31Detail('Sipariş Numarası', dkdPass.order_number, 'search')}
+      ${dkdV31Detail('Site / Kapı', `${dkdPass.site_name || '—'} · ${dkdPass.gate || '—'}`, 'pin')}
+      ${dkdV31Detail('Blok / Kat / Daire', `${dkdPass.block || '—'} / ${dkdPass.floor || '—'} / ${dkdPass.apartment || '—'}`, 'pin')}
+      ${dkdV31Detail('Mesafe / Tahmini Varış', `${dkdPass.distance_m ?? '—'} m · ${dkdPass.eta_minutes ?? '—'} dk`, 'route')}
+      ${dkdV31Detail('Kapıya Geliş', dkdV31FormatDate(dkdPass.arrived_at || dkdPass.created_at), 'route')}
+      ${dkdV31Detail('Teslimat Notu', dkdPass.note, 'user', true)}
+    </div>
+    ${dkdShowCode ? `<div class="dkd-v31-code-display"><small>6 HANELİ EŞLEŞTİRME KODU</small><strong>${dkdV31.escape(dkdPass.approval_code || 'Kod paylaşılmadı')}</strong><span>${dkdV31Icon('key')}</span></div>` : ''}`;
+}
+

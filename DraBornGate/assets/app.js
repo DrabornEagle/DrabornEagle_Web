@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.0.1';
+const DKD_WEB_VERSION = '3.1.0';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -99,10 +99,7 @@ async function dkdAppendStyleLink(dkdPath, dkdDatasetKey) {
 }
 
 async function dkdReadJoinedPayload(dkdPattern, dkdCount) {
-  const dkdPaths = Array.from(
-    { length: dkdCount },
-    (_, dkdIndex) => `${dkdPattern}.${dkdIndex + 1}.txt?v=${DKD_WEB_VERSION}`
-  );
+  const dkdPaths = Array.from({ length: dkdCount }, (_, dkdIndex) => `${dkdPattern}.${dkdIndex + 1}.txt?v=${DKD_WEB_VERSION}`);
   return (await Promise.all(dkdPaths.map(dkdReadPayload))).join('');
 }
 
@@ -127,22 +124,19 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV301() {
-  dkdSetBootProgress(3, 'v3.0.1 sürüm koruması başlatılıyor');
-  await import(`./v3.0.1.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV310() {
+  dkdSetBootProgress(3, 'v3.1.0 sürüm koruması başlatılıyor');
+  await import(`./v3.1.0.guard.js?v=${DKD_WEB_VERSION}`);
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
   const dkdSimpleMode = dkdIsSimpleModeRequested();
 
   dkdSetBootProgress(10, 'Arayüz dosyaları yükleniyor');
   await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
-
   dkdSetBootProgress(20, 'Ana uygulama paketi alınıyor');
   const dkdCorePayload = await dkdReadJoinedPayload('./assets/app.v2.payload', 4);
-
   dkdSetBootProgress(34, 'Ana uygulama hazırlanıyor');
   await dkdImportSource(await dkdUnpack(dkdCorePayload));
-
   dkdSetBootProgress(48, 'Oturum ve rol sistemi bağlanıyor');
   await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
 
@@ -150,16 +144,12 @@ async function dkdBootWebV301() {
     dkdSetBootProgress(57, 'Modern tema hazırlanıyor');
     await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
     await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
-
     dkdSetBootProgress(66, 'Güvenlik paneli güncelleniyor');
     await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
-    const dkdV25Payload = await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5);
-    await dkdImportSource(await dkdUnpack(dkdV25Payload));
-
+    await dkdImportSource(await dkdUnpack(await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5)));
     dkdSetBootProgress(75, 'Tema geçişleri bağlanıyor');
     await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
     await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
-
     dkdSetBootProgress(82, 'Modern panel son kontrolleri yapılıyor');
     await import(`./v2.7.guard.js?v=${DKD_WEB_VERSION}`);
     await dkdAppendStyleLink('./assets/v2.7.css', 'dkdWebV27');
@@ -168,24 +158,18 @@ async function dkdBootWebV301() {
     dkdSetBootProgress(82, 'Bağımsız Sade Tema hazırlanıyor');
   }
 
-  dkdSetBootProgress(88, 'Güvenli eşleştirme köprüsü bağlanıyor');
+  dkdSetBootProgress(88, 'Sade Tema güvenlik kabuğu hazırlanıyor');
   await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
   await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
-
-  dkdSetBootProgress(92, 'Uygulama motosiklet ikonu hazırlanıyor');
+  dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
-
-  dkdSetBootProgress(95, 'v3.0.1 ayrıntılı kurye ekranı hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.1.0 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
-  await dkdAppendStyleLink('./assets/v3.0.1.css', 'dkdWebV301');
-
-  dkdSetBootProgress(97, 'Canlı Kurye Kuyruğu veri kaynağı açılıyor');
-  await import(`./v3.0.1.data.js?v=${DKD_WEB_VERSION}`);
-
-  dkdSetBootProgress(99, 'Kuryeni Bul doğrudan doğrulamaya bağlanıyor');
-  await import(`./v3.0.1.js?v=${DKD_WEB_VERSION}`);
-
+  dkdSetBootProgress(97, 'Gerçek kurye ve kazanç verileri bağlanıyor');
+  await import(`./v3.1.0.data.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(99, 'Kod doğrulama, kuyruk ve paneller bağlanıyor');
+  await import(`./v3.1.0.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV301().catch(dkdShowBootError);
+dkdBootWebV310().catch(dkdShowBootError);

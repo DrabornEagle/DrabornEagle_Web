@@ -1,0 +1,70 @@
+    else if (dkdText.includes('onaylandi')) dkdGroups.approved.push(dkdItem);
+    else dkdGroups.created.push(dkdItem);
+  }
+
+  const dkdContainer = document.createElement('div');
+  dkdContainer.className = 'dkd-v31-activity-groups';
+  const dkdDefinitions = [
+    ['completed', 'Tamamlananlar'],
+    ['approved', 'Onaylananlar'],
+    ['created', 'Oluşturulanlar'],
+  ];
+  for (const [dkdKey, dkdLabel] of dkdDefinitions) {
+    if (!dkdGroups[dkdKey].length) continue;
+    const dkdDetails = document.createElement('details');
+    dkdDetails.className = 'dkd-v31-activity-category';
+    if (dkdKey === 'completed') dkdDetails.open = true;
+    dkdDetails.innerHTML = `<summary><strong>${dkdLabel}</strong><small>${dkdGroups[dkdKey].length} hareket</small>${dkdV31Icon('chevron')}</summary><div></div>`;
+    const dkdBody = dkdDetails.lastElementChild;
+    for (const dkdItem of dkdGroups[dkdKey]) dkdBody.appendChild(dkdItem);
+    dkdContainer.appendChild(dkdDetails);
+  }
+  dkdScope.appendChild(dkdContainer);
+  dkdScope.dataset.dkdV31Activities = 'true';
+}
+
+function dkdV31UniqueTopLevel(dkdItems) {
+  return dkdItems.filter((dkdItem, dkdIndex) =>
+    dkdItems.findIndex((dkdOther) => dkdOther !== dkdItem && dkdOther.contains(dkdItem)) === -1 &&
+    dkdItems.indexOf(dkdItem) === dkdIndex
+  );
+}
+
+function dkdV31ApplyPagination(dkdPageName, dkdMode) {
+  const dkdHeading = dkdV31FindExactText(dkdPageName);
+  if (!dkdHeading) return;
+  const dkdScope = dkdHeading.closest('main,[role="main"]') || document.body;
+  const dkdKey = `dkdV31${dkdMode}Limit`;
+  const dkdLimit = Number(dkdScope.dataset[dkdKey] || 5);
+  let dkdItems = [];
+
+  if (dkdMode === 'history') {
+    dkdItems = [...dkdScope.querySelectorAll('tbody tr')];
+    if (!dkdItems.length) {
+      dkdItems = [...dkdScope.querySelectorAll('article,[class*="card"]')]
+        .filter((dkdItem) => /kurye|plaka|gecis/.test(dkdV31.normalize(dkdItem.textContent)) && String(dkdItem.textContent || '').length < 900);
+    }
+  } else {
+    dkdItems = [...dkdScope.querySelectorAll('article,[class*="card"]')]
+      .filter((dkdItem) => {
+        const dkdText = dkdV31.normalize(dkdItem.textContent);
+        return dkdText.includes('adres') && dkdText.includes('siparis') && String(dkdItem.textContent || '').length < 1300;
+      });
+  }
+
+  dkdItems = dkdV31UniqueTopLevel(dkdItems);
+  if (dkdItems.length <= 5) return;
+  dkdItems.forEach((dkdItem, dkdIndex) => {
+    dkdItem.hidden = dkdIndex >= dkdLimit;
+    dkdItem.classList.add('dkd-v31-paginated-item');
+  });
+
+  let dkdButton = dkdScope.querySelector(`[data-dkd-v31-pagination="${dkdMode}"]`);
+  if (dkdLimit < dkdItems.length) {
+    if (!dkdButton) {
+      dkdButton = document.createElement('button');
+      dkdButton.type = 'button';
+      dkdButton.className = 'dkd-v31-page-more';
+      dkdButton.dataset.dkdV31Pagination = dkdMode;
+      const dkdLastItem = dkdItems.at(-1);
+      const dkdTableWrap = dkdLastItem?.closest('table')?.parentElement;

@@ -1,0 +1,59 @@
+      dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop"></div><section class="dkd-v31-modal-panel dkd-v31-success-modal"><div>${dkdV31Icon('check')}</div><h2>Giriş Onaylandı</h2><p>${dkdV31.escape(dkdResult?.courier_name || dkdPass.courier_name)} için kurye geçişi tamamlandı.</p><button type="button" data-dkd-v31-close>Tamam</button></section>`;
+      dkdV31BindModal();
+      dkdV31RenderSimple();
+    } catch (dkdError) {
+      dkdButton.disabled = false;
+      dkdButton.innerHTML = `${dkdV31Icon('key')}<span>Kodu Onayla ve Giriş Ver</span>`;
+      alert(String(dkdError?.message || dkdError));
+    }
+  });
+}
+
+function dkdV31BindModal() {
+  for (const dkdClose of document.querySelectorAll('[data-dkd-v31-close]')) dkdClose.addEventListener('click', dkdV31CloseModal);
+}
+
+async function dkdV31RefreshQueue() {
+  try {
+    await dkdV31.loadQueue();
+  } catch {
+    // State already contains the readable error.
+  }
+  dkdV31MountSimple();
+  dkdV31RenderSimple();
+}
+
+function dkdV31ClosestCard(dkdElement, dkdMaxText = 700) {
+  let dkdNode = dkdElement;
+  for (let dkdDepth = 0; dkdNode && dkdDepth < 7; dkdDepth += 1, dkdNode = dkdNode.parentElement) {
+    const dkdLength = String(dkdNode.textContent || '').trim().length;
+    if (dkdLength > 15 && dkdLength <= dkdMaxText && /article|section|li|div/i.test(dkdNode.tagName)) {
+      const dkdParentLength = String(dkdNode.parentElement?.textContent || '').trim().length;
+      if (!dkdNode.parentElement || dkdParentLength > dkdLength * 1.35) return dkdNode;
+    }
+  }
+  return dkdElement.closest('article,section,li,div');
+}
+
+function dkdV31FindExactText(dkdText, dkdRoot = document) {
+  const dkdWanted = dkdV31.normalize(dkdText);
+  return [...dkdRoot.querySelectorAll('h1,h2,h3,h4,strong,b,span,p,button,a,[role="button"]')]
+    .find((dkdElement) => dkdV31.normalize(dkdElement.textContent) === dkdWanted);
+}
+
+function dkdV31PatchDgAndVersion(dkdRoot = document) {
+  const dkdWalker = document.createTreeWalker(dkdRoot, NodeFilter.SHOW_TEXT);
+  while (dkdWalker.nextNode()) {
+    const dkdNode = dkdWalker.currentNode;
+    const dkdText = String(dkdNode.nodeValue || '');
+    if (dkdText.trim() === 'DG') dkdNode.nodeValue = 'DBG';
+    if (/WEB\s+v3\.0\.1/i.test(dkdText)) dkdNode.nodeValue = dkdText.replace(/WEB\s+v3\.0\.1/gi, 'WEB v3.1.0');
+  }
+}
+
+function dkdV31PatchMotorcycleIcons(dkdRoot = document) {
+  const dkdTargets = new Set();
+  for (const dkdElement of dkdRoot.querySelectorAll('[class*="courier-icon"],[class*="kurye-icon"],[class*="motorcycle-icon"],[class*="motosiklet-icon"],[data-icon*="courier"],[data-icon*="kurye"],[data-icon*="motorcycle"],[data-icon*="motosiklet"]')) dkdTargets.add(dkdElement);
+  for (const dkdClickable of dkdRoot.querySelectorAll('button,a,[role="button"],article,li')) {
+    const dkdText = dkdV31.normalize(dkdClickable.textContent);
+    if (!/(^| )kurye( |$)|motosiklet|motorcycle/.test(dkdText)) continue;

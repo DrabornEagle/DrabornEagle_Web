@@ -1,0 +1,43 @@
+function dkdV31QueueCard(dkdPass) {
+  return `<article class="dkd-v31-queue-card">
+    ${dkdV31PassDetailsHtml(dkdPass, true)}
+    <button type="button" class="dkd-v31-card-open" data-dkd-v31-pass="${dkdV31.escape(dkdPass.pass_id)}">${dkdV31Icon('search')}<span>Tüm Bilgileri Aç</span></button>
+  </article>`;
+}
+
+function dkdV31QueueCategory(dkdKey, dkdTitle, dkdRows, dkdOpen = false) {
+  const dkdLimit = dkdV31State.queueLimits[dkdKey] || 3;
+  const dkdVisible = dkdRows.slice(0, dkdLimit);
+  const dkdRemaining = Math.max(0, dkdRows.length - dkdVisible.length);
+  return `<details class="dkd-v31-queue-category" data-dkd-v31-category="${dkdKey}" ${dkdOpen ? 'open' : ''}>
+    <summary><div><strong>${dkdV31.escape(dkdTitle)}</strong><small>${dkdRows.length} kurye</small></div>${dkdV31Icon('chevron')}</summary>
+    <div class="dkd-v31-category-body">
+      ${dkdVisible.length ? dkdVisible.map(dkdV31QueueCard).join('') : '<div class="dkd-v31-empty-mini">Bu kategoride aktif kurye yok.</div>'}
+      ${dkdRemaining ? `<button type="button" class="dkd-v31-more" data-dkd-v31-more="${dkdKey}">${dkdV31Icon('plus')}<span>5 Tane Daha Göster</span><b>${dkdRemaining} kayıt kaldı</b></button>` : ''}
+    </div>
+  </details>`;
+}
+
+function dkdV31SimpleHtml() {
+  const dkdArrived = dkdV31State.queue.filter((dkdPass) => dkdPass.category === 'arrived');
+  const dkdApproaching = dkdV31State.queue.filter((dkdPass) => dkdPass.category === 'approaching');
+  const dkdOther = dkdV31State.queue.filter((dkdPass) => dkdPass.category === 'other');
+  const dkdTotal = dkdV31State.queue.length;
+  const dkdFeedback = dkdV31State.codeFeedback;
+
+  return `<section class="dkd-v31-finder">
+      <div class="dkd-v31-finder-copy">
+        <span>ASİL İŞLEM · 6 HANELİ KOD</span>
+        <h1>Kuryeni Bul ve Eşleştir</h1>
+        <p>Kuryenin telefonundaki kodu girin. Doğru kurye bulunduğunda ad, telefon, plaka, platform, müşteri, sipariş ve tam adres bilgileri modern doğrulama penceresinde açılır.</p>
+      </div>
+      <form id="dkd-v31-search-form" class="dkd-v31-search-form">
+        <label for="dkd-v31-code">KURYE KODU</label>
+        <input id="dkd-v31-code" type="tel" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="• • • • • •" aria-label="6 haneli kurye kodu">
+        <button type="submit" ${dkdV31State.codeBusy ? 'disabled' : ''}>${dkdV31State.codeBusy ? dkdV31Icon('sync') : dkdV31Icon('search')}<span>${dkdV31State.codeBusy ? 'Kurye aranıyor…' : 'Kuryeni Bul ve Eşleştir'}</span></button>
+        ${dkdFeedback ? `<div class="dkd-v31-feedback ${dkdFeedback.type}">${dkdV31.escape(dkdFeedback.text)}</div>` : ''}
+      </form>
+    </section>
+    <details class="dkd-v31-live-queue" ${dkdV31State.queueOpen ? 'open' : ''}>
+      <summary>
+        <div><span>CANLI GÜVENLİK AKIŞI</span><h2>Canlı Kurye Kuyruğu</h2><p>Açılır kategorilerde ilk 3 kurye gösterilir; Daha Fazla ile her seferinde 5 kayıt eklenir.</p></div>

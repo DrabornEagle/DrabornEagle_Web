@@ -1,0 +1,57 @@
+      const dkdAnchor = dkdTableWrap || dkdLastItem?.parentElement || dkdScope;
+      dkdAnchor.after(dkdButton);
+    }
+    dkdButton.innerHTML = `${dkdV31Icon('plus')}<span>Daha Fazla Göster</span><small>5 kayıt daha</small>`;
+    dkdButton.onclick = () => {
+      dkdScope.dataset[dkdKey] = String(dkdLimit + 5);
+      dkdV31ApplyPagination(dkdPageName, dkdMode);
+    };
+  } else {
+    dkdButton?.remove();
+  }
+}
+
+function dkdV31CreateMenuButton(dkdLabel, dkdMode, dkdIcon = 'wallet') {
+  const dkdButton = document.createElement('button');
+  dkdButton.type = 'button';
+  dkdButton.className = 'dkd-v31-menu-item';
+  dkdButton.dataset.dkdV31Menu = dkdMode;
+  dkdButton.innerHTML = `<span>${dkdV31Icon(dkdIcon)}</span><strong>${dkdLabel}</strong>`;
+  dkdButton.addEventListener('click', () => dkdMode === 'earnings' ? dkdV31OpenEarnings() : dkdV31OpenAdminPartners());
+  return dkdButton;
+}
+
+function dkdV31PatchPartnerMenus() {
+  const dkdProfileText = dkdV31FindExactText('Profil ve Bağlantı');
+  const dkdProfileItem = dkdProfileText?.closest('button,a,[role="button"]') || (dkdProfileText && dkdV31ClosestCard(dkdProfileText, 260));
+  if (dkdProfileItem && dkdV31State.partnerSummary?.visible && !document.querySelector('[data-dkd-v31-menu="earnings"]')) {
+    dkdProfileItem.after(dkdV31CreateMenuButton('Kazancım', 'earnings', 'wallet'));
+  }
+  if (dkdProfileItem && dkdV31State.adminCatalog && !document.querySelector('[data-dkd-v31-menu="admin-partners"]')) {
+    const dkdEarnings = document.querySelector('[data-dkd-v31-menu="earnings"]');
+    (dkdEarnings || dkdProfileItem).after(dkdV31CreateMenuButton('Kazanç Ortaklıkları', 'admin-partners', 'user'));
+  }
+}
+
+async function dkdV31OpenEarnings() {
+  const dkdModal = dkdV31EnsureModal();
+  dkdV31GlobalModalMode = 'earnings';
+  dkdModal.hidden = false;
+  document.body.classList.add('dkd-v31-modal-open');
+  dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop" data-dkd-v31-close></div><section class="dkd-v31-modal-panel dkd-v31-finance-modal"><div class="dkd-v31-loading">${dkdV31Icon('sync')}<span>Kazanç tablosu hazırlanıyor…</span></div></section>`;
+  dkdV31BindModal();
+  try {
+    const [dkdSummary] = await Promise.all([dkdV31.loadPartnerSummary(), dkdV31.loadPartnerRows(10, 0)]);
+    dkdV31RenderEarnings(dkdSummary);
+  } catch (dkdError) {
+    dkdModal.querySelector('section').innerHTML = `<div class="dkd-v31-error-panel"><h2>Kazançlar açılamadı</h2><p>${dkdV31.escape(dkdError?.message || dkdError)}</p><button data-dkd-v31-close>Kapat</button></div>`;
+    dkdV31BindModal();
+  }
+}
+
+function dkdV31RenderEarnings(dkdSummary = dkdV31State.partnerSummary) {
+  const dkdModal = dkdV31EnsureModal();
+  if (dkdV31GlobalModalMode !== 'earnings') return;
+  const dkdRows = dkdV31State.partnerRows;
+  dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop" data-dkd-v31-close></div>
+    <section class="dkd-v31-modal-panel dkd-v31-finance-modal">

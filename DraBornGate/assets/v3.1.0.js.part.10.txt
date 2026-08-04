@@ -1,0 +1,35 @@
+      <header><div><span>SİTE ORTAKLIK KAZANCI</span><h2>Kazancım</h2><p>Admin tarafından bağlanan sitelerde tamamlanan her gerçek kurye geçişi otomatik kazanca dönüşür.</p></div><button data-dkd-v31-close>${dkdV31Icon('close')}</button></header>
+      <div class="dkd-v31-finance-stats">
+        <div><small>Toplam Kazanç</small><strong>${dkdV31FormatMoney(dkdSummary?.total_amount)}</strong></div>
+        <div><small>Bu Ay</small><strong>${dkdV31FormatMoney(dkdSummary?.month_amount)}</strong></div>
+        <div><small>Bugün</small><strong>${dkdV31FormatMoney(dkdSummary?.today_amount)}</strong></div>
+        <div><small>Kurye Geçişi</small><strong>${Number(dkdSummary?.pass_count || 0)}</strong></div>
+      </div>
+      <div class="dkd-v31-linked-sites"><h3>Bağlı Siteler</h3>${(dkdSummary?.sites || []).map((dkdSite) => `<div><strong>${dkdV31.escape(dkdSite.site_name)}</strong><span>Kurye başına ${dkdV31FormatMoney(dkdSite.amount_per_courier)}</span></div>`).join('') || '<p>Aktif site bağlantısı yok.</p>'}</div>
+      <div class="dkd-v31-earnings-table"><h3>Kazanç Hareketleri</h3><div class="dkd-v31-table-scroll"><table><thead><tr><th>Tarih</th><th>Site</th><th>Kurye</th><th>Sipariş</th><th>Kazanç</th></tr></thead><tbody>${dkdRows.map((dkdRow) => `<tr><td>${dkdV31FormatDate(dkdRow.earned_at)}</td><td>${dkdV31.escape(dkdRow.site_name)}</td><td>${dkdV31.escape(dkdRow.courier_name)}<small>${dkdV31.escape(dkdRow.platform)}</small></td><td>${dkdV31.escape(dkdRow.order_number)}</td><td><b>${dkdV31FormatMoney(dkdRow.amount)}</b></td></tr>`).join('') || '<tr><td colspan="5">Henüz kazanç hareketi oluşmadı.</td></tr>'}</tbody></table></div><button id="dkd-v31-earnings-more" type="button">${dkdV31Icon('plus')}10 Kayıt Daha</button></div>
+    </section>`;
+  dkdV31BindModal();
+  document.querySelector('#dkd-v31-earnings-more')?.addEventListener('click', async () => {
+    const dkdButton = document.querySelector('#dkd-v31-earnings-more');
+    dkdButton.disabled = true;
+    const dkdNewRows = await dkdV31.loadPartnerRows(10, dkdV31State.partnerRows.length);
+    if (!dkdNewRows.length) dkdButton.textContent = 'Başka kayıt yok';
+    else dkdV31RenderEarnings();
+  });
+}
+
+async function dkdV31OpenAdminPartners() {
+  const dkdModal = dkdV31EnsureModal();
+  dkdV31GlobalModalMode = 'admin-partners';
+  dkdModal.hidden = false;
+  document.body.classList.add('dkd-v31-modal-open');
+  dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop" data-dkd-v31-close></div><section class="dkd-v31-modal-panel dkd-v31-finance-modal"><div class="dkd-v31-loading">${dkdV31Icon('sync')}<span>Ortaklık yönetimi hazırlanıyor…</span></div></section>`;
+  dkdV31BindModal();
+  await dkdV31.loadAdminCatalog();
+  dkdV31RenderAdminPartners();
+}
+
+function dkdV31RenderAdminPartners() {
+  const dkdCatalog = dkdV31State.adminCatalog;
+  const dkdModal = dkdV31EnsureModal();
+  if (dkdV31GlobalModalMode !== 'admin-partners' || !dkdCatalog) return;
