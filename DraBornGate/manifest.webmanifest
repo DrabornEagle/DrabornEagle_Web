@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.4",
+  "name": "DraBornGate Web v3.2.5",
   "short_name": "DraBornGate",
   "description": "Premium kurye eşleştirme, detaylı doğrulama popup ekranı, tüm rollerde yetkili Admin Paneli ve aramayla site seçimi sunan geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.4",
+  "start_url": "/DraBornGate/?v=3.2.5",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
