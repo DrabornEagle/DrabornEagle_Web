@@ -7,7 +7,8 @@ const dkdTestDir = path.dirname(fileURLToPath(import.meta.url));
 const dkdRoot = path.resolve(dkdTestDir, '..');
 const dkdRead = (dkdRelative) => fs.readFileSync(path.join(dkdRoot, dkdRelative), 'utf8');
 
-const dkdHotfix = dkdRead('assets/v3.2.3.hotfix.js');
+const dkdApp = dkdRead('assets/app.js');
+const dkdGuard = dkdRead('assets/v3.2.3.guard.js');
 const dkdData = dkdRead('assets/v3.2.3.data.js');
 const dkdUi = dkdRead('assets/v3.2.3.ui.js');
 const dkdCss = dkdRead('assets/v3.2.3.css');
@@ -16,10 +17,18 @@ const dkdSimpleIndex = dkdRead('Guvenlik-Sade-Tema/index.html');
 const dkdManifest = JSON.parse(dkdRead('manifest.webmanifest'));
 const dkdSw = dkdRead('sw.js');
 
-assert.match(dkdHotfix, /DKD_V323_HOTFIX_VERSION = '3\.2\.3'/);
-assert.match(dkdHotfix, /loadAdminCatalog/);
-assert.match(dkdHotfix, /v3\.2\.3\.data\.js/);
-assert.match(dkdHotfix, /v3\.2\.3\.ui\.js/);
+assert.match(dkdApp, /DKD_WEB_VERSION = '3\.2\.3'/);
+assert.match(dkdApp, /dkdBootWebV323/);
+assert.match(dkdApp, /v3\.2\.3\.guard\.js/);
+assert.match(dkdApp, /v3\.2\.1\.data\.js/);
+assert.match(dkdApp, /v3\.2\.3\.data\.js/);
+assert.match(dkdApp, /v3\.2\.1\.js/);
+assert.match(dkdApp, /v3\.2\.3\.ui\.js/);
+assert.doesNotMatch(dkdApp, /dkdBootWebV322/);
+
+assert.match(dkdGuard, /DKD_V323_VERSION = '3\.2\.3'/);
+assert.match(dkdGuard, /MutationObserver/);
+assert.match(dkdGuard, /dkdUpdated !== dkdValue/);
 
 assert.match(dkdData, /dkdV323ReadBestAccessToken/);
 assert.match(dkdData, /sort\(\(dkdLeft, dkdRight\) => dkdRight\.exp - dkdLeft\.exp\)/);
@@ -44,13 +53,16 @@ assert.match(dkdCss, /dkd-v323-site-search/);
 for (const dkdHtml of [dkdIndex, dkdSimpleIndex]) {
   assert.match(dkdHtml, /DraBornGate Web v3\.2\.3/);
   assert.match(dkdHtml, /v3\.2\.3\.css\?v=3\.2\.3/);
-  assert.match(dkdHtml, /v3\.2\.3\.hotfix\.js\?v=3\.2\.3/);
+  assert.match(dkdHtml, /assets\/app\.js\?v=3\.2\.3/);
+  assert.doesNotMatch(dkdHtml, /v3\.2\.3\.hotfix\.js/);
 }
 assert.equal(dkdManifest.name, 'DraBornGate Web v3.2.3');
 assert.equal(dkdManifest.start_url, '/DraBornGate/?v=3.2.3');
 assert.match(dkdSw, /draborngate-web-v3\.2\.3-admin-simple-site-search/);
-assert.match(dkdSw, /v3\.2\.3\.hotfix\.js\?v=3\.2\.3/);
+assert.match(dkdSw, /app\.js\?v=3\.2\.3/);
+assert.match(dkdSw, /v3\.2\.3\.guard\.js\?v=3\.2\.3/);
 assert.match(dkdSw, /v3\.2\.3\.data\.js\?v=3\.2\.3/);
 assert.match(dkdSw, /v3\.2\.3\.ui\.js\?v=3\.2\.3/);
+assert.doesNotMatch(dkdSw, /v3\.2\.3\.hotfix\.js/);
 
 console.log('DraBornGate Web v3.2.3 Admin menüsü, Sade Tema, popup, minimalist kart ve aramalı site seçimi kontrolleri geçti.');
