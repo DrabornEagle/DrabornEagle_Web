@@ -8,6 +8,7 @@ const dkdRoot = path.resolve(dkdTestDir, '..');
 const dkdRead = (dkdRelative) => fs.readFileSync(path.join(dkdRoot, dkdRelative), 'utf8');
 
 const dkdApp = dkdRead('assets/app.js');
+const dkdCompat = dkdRead('assets/v3.2.3.compat.js');
 const dkdGuard = dkdRead('assets/v3.2.3.guard.js');
 const dkdData = dkdRead('assets/v3.2.3.data.js');
 const dkdUi = dkdRead('assets/v3.2.3.ui.js');
@@ -25,6 +26,10 @@ assert.match(dkdApp, /v3\.2\.3\.data\.js/);
 assert.match(dkdApp, /v3\.2\.1\.js/);
 assert.match(dkdApp, /v3\.2\.3\.ui\.js/);
 assert.doesNotMatch(dkdApp, /dkdBootWebV322/);
+
+assert.match(dkdCompat, /dkdV323ProtectLegacySiteSearch/);
+assert.match(dkdCompat, /dkd-v323-legacy-site-search/);
+assert.match(dkdCompat, /Object\.defineProperty\(dkdWidget, 'remove'/);
 
 assert.match(dkdGuard, /DKD_V323_VERSION = '3\.2\.3'/);
 assert.match(dkdGuard, /MutationObserver/);
@@ -53,12 +58,14 @@ assert.match(dkdCss, /dkd-v323-site-search/);
 for (const dkdHtml of [dkdIndex, dkdSimpleIndex]) {
   assert.match(dkdHtml, /DraBornGate Web v3\.2\.3/);
   assert.match(dkdHtml, /v3\.2\.3\.css\?v=3\.2\.3/);
+  assert.match(dkdHtml, /v3\.2\.3\.compat\.js\?v=3\.2\.3/);
   assert.match(dkdHtml, /assets\/app\.js\?v=3\.2\.3/);
   assert.doesNotMatch(dkdHtml, /v3\.2\.3\.hotfix\.js/);
 }
 assert.equal(dkdManifest.name, 'DraBornGate Web v3.2.3');
 assert.equal(dkdManifest.start_url, '/DraBornGate/?v=3.2.3');
 assert.match(dkdSw, /draborngate-web-v3\.2\.3-admin-simple-site-search/);
+assert.match(dkdSw, /v3\.2\.3\.compat\.js\?v=3\.2\.3/);
 assert.match(dkdSw, /app\.js\?v=3\.2\.3/);
 assert.match(dkdSw, /v3\.2\.3\.guard\.js\?v=3\.2\.3/);
 assert.match(dkdSw, /v3\.2\.3\.data\.js\?v=3\.2\.3/);
