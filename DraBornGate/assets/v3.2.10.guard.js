@@ -1,6 +1,6 @@
 (() => {
   const DKD_V3210_VERSION = '3.2.10';
-  const DKD_V3210_VERSION_PATTERN = /(?:DraBornGate\s+Web\s+)?v(?:2(?:\.\d+){0,2}|3\.(?:0|1)(?:\.\d+)?|3\.2(?:\.(?:[0-9]|10))?)(?!\.\d)\b/gi;
+  const DKD_V3210_VERSION_PATTERN = /(?:DraBornGate\s+Web\s+)?v(?:2(?:\.\d+){0,2}|3\.(?:0|1)(?:\.\d+)?|3\.2(?:\.(?:10|[0-9]))?)(?!\d|\.\d)\b/gi;
 
   function dkdV3210ReplaceVersion(dkdValue) {
     const dkdText = String(dkdValue || '');
