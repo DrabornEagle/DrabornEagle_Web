@@ -22,7 +22,20 @@ function dkdV3214BootIsSimple() {
     || sessionStorage.getItem('dkd_gate_force_theme') === 'simple';
 }
 
+function dkdV3214ResetStaleDom() {
+  if (!document.body) return;
+  for (const dkdChild of [...document.body.children]) {
+    if (dkdChild.matches('#dkd-v28-splash,#dkd-app,.ambient,noscript,script')) continue;
+    dkdChild.remove();
+  }
+  const dkdRoot = document.querySelector('#dkd-app');
+  if (dkdRoot) {
+    dkdRoot.innerHTML = '<div class="boot-shell"><div class="boot-logo"><span>DBG</span></div><div class="boot-copy"><strong>DraBornGate Web v3.2.14</strong><span>Eski arayüz kalıntıları temizleniyor</span></div><div class="boot-progress"><i></i></div></div>';
+  }
+}
+
 async function dkdV3214PrepareFreshRuntime() {
+  dkdV3214ResetStaleDom();
   sessionStorage.setItem('dkd_gate_web_version', DKD_V3214_BOOT_VERSION);
   document.documentElement.dataset.dkdGateVersion = DKD_V3214_BOOT_VERSION;
 
@@ -109,6 +122,8 @@ async function dkdV3214Start() {
 
   document.documentElement.dataset.dkdGateVersion = DKD_V3214_BOOT_VERSION;
   sessionStorage.setItem('dkd_gate_web_version', DKD_V3214_BOOT_VERSION);
+  window.__DKD_GATE_WEB_VERSION__ = DKD_V3214_BOOT_VERSION;
+  window.__DKD_GATE_V3214_ACTIVE__ = true;
   await dkdV3214RegisterWorker();
   window.dkdV3214Cleanup?.();
 }
