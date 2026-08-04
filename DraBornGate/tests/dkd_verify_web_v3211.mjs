@@ -24,7 +24,7 @@ for (const [dkdName, dkdSource] of Object.entries({ dkdIndex, dkdSimpleIndex, dk
 dkdIncludes(dkdIndex, 'app.v3.2.11.js?v=3.2.11', 'Ana giriş v3.2.11 yükleyicisini kullanmıyor.');
 dkdIncludes(dkdSimpleIndex, 'app.v3.2.11.js?v=3.2.11', 'Sade Tema v3.2.11 yükleyicisini kullanmıyor.');
 dkdIncludes(dkdLoader, './v3.2.11.guard.js', 'v3.2.11 guard yüklenmiyor.');
-dkdIncludes(dkdLoader, './v3.2.11.css', 'v3.2.11 CSS yüklenmiyor.');
+dkdIncludes(dkdLoader, './assets/v3.2.11.css', 'v3.2.11 CSS yüklenmiyor.');
 dkdIncludes(dkdLoader, './v3.2.11.js', 'v3.2.11 modern katmanı yüklenmiyor.');
 dkdIncludes(dkdLoader, 'dkdV3211BootIsSimple', 'Sade/Modern tema ayrımı korunmuyor.');
 
