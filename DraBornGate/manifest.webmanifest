@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.11",
+  "name": "DraBornGate Web v3.2.14",
   "short_name": "DraBornGate",
-  "description": "Siteye bağlı kurye için modern Kazançlarım ve Güvenlik Modern Temada ayrıntılı çalışan kurye doğrulama ekranı sunan geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.11",
+  "description": "Kurye Premium menüsündeki tek Kazançlarım bağlantısı ve eski arayüz parçalarını otomatik temizleyen geçiş platformu.",
+  "start_url": "/DraBornGate/?v=3.2.14-ui-clean1",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
