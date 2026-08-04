@@ -1,5 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.1.1';
+const DKD_WEB_VERSION = '3.2.1';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.1-public-rpc-version-guard';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -26,6 +27,27 @@ const dkdBootWatchdog = setTimeout(() => {
   if (dkdRetry) dkdRetry.hidden = false;
 }, 20000);
 
+async function dkdPrepareFreshRuntime() {
+  sessionStorage.setItem('dkd_gate_web_version', DKD_WEB_VERSION);
+
+  if ('caches' in window) {
+    const dkdCacheKeys = await caches.keys().catch(() => []);
+    await Promise.all(
+      dkdCacheKeys
+        .filter((dkdKey) => dkdKey.startsWith('draborngate-web-') && dkdKey !== DKD_WEB_CACHE)
+        .map((dkdKey) => caches.delete(dkdKey))
+    );
+  }
+
+  if ('serviceWorker' in navigator) {
+    const dkdRegistration = await navigator.serviceWorker.register(
+      `./sw.js?v=${DKD_WEB_VERSION}`,
+      { scope: '/DraBornGate/', updateViaCache: 'none' }
+    );
+    await dkdRegistration.update().catch(() => undefined);
+  }
+}
+
 function dkdPrepareCleanPersonalRoute() {
   const dkdReserved = new Set(['privacy', 'data-safety', 'account-deletion', 'subscriptions', 'support', 'terms', 'assets', 'guvenlik-sade-tema']);
   const dkdStoredRoute = sessionStorage.getItem('dkd_gate_route');
@@ -51,7 +73,7 @@ function dkdPrepareCleanPersonalRoute() {
 }
 
 async function dkdReadPayload(dkdPath) {
-  const dkdResponse = await fetch(dkdPath, { cache: 'no-cache' });
+  const dkdResponse = await fetch(dkdPath, { cache: 'no-store' });
   if (!dkdResponse.ok) throw new Error(`DraBornGate Web v${DKD_WEB_VERSION} paketi alınamadı (${dkdResponse.status}).`);
   return (await dkdResponse.text()).trim();
 }
@@ -124,9 +146,10 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV311() {
-  dkdSetBootProgress(3, 'v3.1.1 sürüm koruması başlatılıyor');
-  await import(`./v3.1.0.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV321() {
+  dkdSetBootProgress(2, 'v3.2.1 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.1.guard.js?v=${DKD_WEB_VERSION}`);
+  await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
   const dkdSimpleMode = dkdIsSimpleModeRequested();
@@ -164,14 +187,14 @@ async function dkdBootWebV311() {
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
   await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.1.1 modern arayüz hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.2.1 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
-  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV311Fixes');
-  dkdSetBootProgress(97, 'Doğru DraBornGate oturumu ve canlı veriler bağlanıyor');
-  await import(`./v3.1.1.data.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV321Fixes');
+  dkdSetBootProgress(97, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
+  await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
   dkdSetBootProgress(99, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
-  await import(`./v3.1.1.js?v=${DKD_WEB_VERSION}`);
+  await import(`./v3.2.1.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV311().catch(dkdShowBootError);
+dkdBootWebV321().catch(dkdShowBootError);
