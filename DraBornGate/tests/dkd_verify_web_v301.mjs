@@ -32,10 +32,11 @@ assert.match(dkdApp, /v3\.0\.1\.js/);
 assert.ok(dkdApp.indexOf('v3.0.1.guard.js') < dkdApp.indexOf('app.v2.payload'), 'Sürüm koruması çekirdek uygulamadan önce yüklenmeli.');
 assert.doesNotMatch(dkdApp, /v3\.0\.data\.js/);
 
-assert.match(dkdGuard, /2\.8/);
-assert.match(dkdGuard, /3\.0\.0/);
+assert.ok(dkdGuard.includes('2\\.8'));
+assert.ok(dkdGuard.includes('3\\.0\\.0'));
 assert.match(dkdGuard, /dkdMark\.textContent = 'DBG'/);
 assert.match(dkdGuard, /MutationObserver/);
+assert.match(dkdGuard, /stopImmediatePropagation/);
 
 assert.match(dkdData, /dkdKind === 'finder'/);
 assert.match(dkdData, /canli kurye kuyrugu/);
