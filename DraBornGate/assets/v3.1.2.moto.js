@@ -1,0 +1,36 @@
+let dkdV312MotoSequence = 0;
+function dkdV312Normalize(dkdValue){return String(dkdValue||'').toLocaleLowerCase('tr-TR').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/ı/g,'i').replace(/[^a-z0-9]+/g,' ').trim()}
+function dkdV312MotorcycleSvg(){
+  dkdV312MotoSequence+=1;
+  const dkdBody=`dkd-v312-body-${dkdV312MotoSequence}`,dkdGlass=`dkd-v312-glass-${dkdV312MotoSequence}`;
+  return `<span class="dkd-v281-moto dkd-v312-app-moto" aria-hidden="true"><span class="dkd-v281-speed-lines"><i></i><i></i></span><svg class="dkd-v281-moto-bike" viewBox="0 0 132 84" fill="none" role="img"><defs><linearGradient id="${dkdBody}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F5FAFF" stop-opacity=".98"/><stop offset=".28" stop-color="currentColor"/><stop offset="1" stop-color="currentColor" stop-opacity=".62"/></linearGradient><linearGradient id="${dkdGlass}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#DFF8FF" stop-opacity=".9"/><stop offset="1" stop-color="#6BCBFF" stop-opacity=".16"/></linearGradient></defs><path d="M12 71C34 76 96 76 120 70" stroke="#000" stroke-opacity=".24" stroke-width="5" stroke-linecap="round"/><g><circle cx="27" cy="61" r="16" fill="#07111D" stroke="#D7E8F5" stroke-width="2.4"/><circle cx="27" cy="61" r="10.2" fill="#101E2B" stroke="currentColor" stroke-width="2.2"/><circle cx="27" cy="61" r="3.4" fill="#F5FAFF"/><path d="M27 50.8V71.2M16.8 61H37.2M20 54L34 68M34 54L20 68" stroke="#F5FAFF" stroke-opacity=".52" stroke-width="1.4"/></g><g><circle cx="102" cy="61" r="16" fill="#07111D" stroke="#D7E8F5" stroke-width="2.4"/><circle cx="102" cy="61" r="10.2" fill="#101E2B" stroke="currentColor" stroke-width="2.2"/><circle cx="102" cy="61" r="3.4" fill="#F5FAFF"/><path d="M102 50.8V71.2M91.8 61H112.2M95 54L109 68M109 54L95 68" stroke="#F5FAFF" stroke-opacity=".52" stroke-width="1.4"/></g><path d="M31 58 47 42 74 49 96 59" stroke="#B8C7D2" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/><path d="m42 58 17-22 20 16-17 6Z" fill="#0B1722" stroke="currentColor" stroke-width="2.2"/><path d="m88 57 12-24" stroke="#C6D8E5" stroke-width="4" stroke-linecap="round"/><path d="m93 58 11-23" stroke="currentColor" stroke-width="2.1" stroke-linecap="round"/><path d="M39 46c8-14 20-23 38-22 10 1 17 7 22 16l-8 9-23 1-15 7-15-2Z" fill="url(#${dkdBody})" stroke="#F5FAFF" stroke-opacity=".72" stroke-width="1.7" stroke-linejoin="round"/><path d="M56 28c7-10 20-11 31-6l-4 10-20 2Z" fill="currentColor" stroke="#F5FAFF" stroke-opacity=".7" stroke-width="1.6"/><path d="M75 22c9-9 20-7 25 3l-12 2Z" fill="url(#${dkdGlass})" stroke="#F5FAFF" stroke-opacity=".7" stroke-width="1.4"/><path d="m83 31 16 1 8 7-10 3-8-3Z" fill="currentColor" stroke="#F5FAFF" stroke-opacity=".72" stroke-width="1.5"/><path d="m35 42-18-5-5 5 26 8Z" fill="currentColor" stroke="#F5FAFF" stroke-opacity=".62" stroke-width="1.5"/><path d="m19 39 18 3" stroke="#F5FAFF" stroke-width="2" stroke-linecap="round"/><path d="M54 55c11-5 24-6 37-4l-6 8-27 2Z" fill="#0A1520" stroke="#F5FAFF" stroke-opacity=".44" stroke-width="1.3"/><path d="m48 34 21 1-8 8-18 1Z" fill="#111D28" opacity=".94"/><path d="m52 31 17-1M45 48l25-5" stroke="#F5FAFF" stroke-opacity=".78" stroke-width="2.2" stroke-linecap="round"/><path d="m50 51 29-5" stroke="#0A1520" stroke-opacity=".75" stroke-width="3.2" stroke-linecap="round"/><path d="m68 28 10 12 12-2" stroke="#F5FAFF" stroke-width="2.2" stroke-linecap="round"/><path d="m43 58-14 5M67 59l-19 9" stroke="#AFC2CF" stroke-width="3.4" stroke-linecap="round"/><path d="M46 67h16" stroke="currentColor" stroke-width="4.2" stroke-linecap="round"/><rect x="40" y="64" width="17" height="5" rx="2.5" fill="#101D28" stroke="#F5FAFF" stroke-opacity=".5"/><path d="m99 38 13-2" stroke="#F5FAFF" stroke-width="2.3" stroke-linecap="round"/><circle cx="98" cy="36" r="2.2" fill="#F5FAFF"/><path d="m93 35 8-6" stroke="#BFD7E5" stroke-width="2.4" stroke-linecap="round"/><path d="M99 41h7" stroke="#FFF4B8" stroke-width="3.2" stroke-linecap="round"/><path d="m28 42-8 3" stroke="#FF6A7D" stroke-width="2.8" stroke-linecap="round"/><path d="m84 52 13 3M83 55l12 5" stroke="#CFDAE2" stroke-width="2.7" stroke-linecap="round"/><circle cx="65" cy="50" r="6.2" fill="#142737" stroke="#F5FAFF" stroke-opacity=".58" stroke-width="1.5"/><circle cx="65" cy="50" r="2.4" fill="currentColor"/></svg></span>`
+}
+function dkdV312IconHost(dkdElement){
+  if(!dkdElement)return null;
+  if(dkdElement.matches?.('svg'))return dkdElement.parentElement;
+  if(dkdElement.matches?.('[class*="icon"],[class*="avatar"],[class*="mark"]'))return dkdElement;
+  return dkdElement.querySelector?.('[class*="icon"],[class*="avatar"],[class*="mark"],svg')?.closest('[class*="icon"],[class*="avatar"],[class*="mark"]')||dkdElement.querySelector?.('svg')?.parentElement||null
+}
+function dkdV312ReplaceMotorcycle(dkdHost,dkdKind='standard'){
+  if(!dkdHost||dkdHost.closest('.dkd-v312-app-moto'))return;
+  if(dkdHost.querySelector(':scope > .dkd-v312-app-moto'))return;
+  dkdHost.innerHTML=dkdV312MotorcycleSvg();dkdHost.dataset.dkdV312Moto='true';dkdHost.dataset.dkdV31Moto='true';dkdHost.classList.add('dkd-v312-moto-host',`dkd-v312-moto-${dkdKind}`)
+}
+function dkdV312PatchMotorcycles(dkdRoot=document){
+  const dkdTargets=new Set();
+  const dkdSelectors=['.dkd-v28-request-icon','.dkd-v28-stats .icon.cyan','.dkd-v31-pass-moto','.dkd-v31-modern-moto-host','[class*="courier-icon"]','[class*="kurye-icon"]','[class*="motorcycle-icon"]','[class*="motosiklet-icon"]','[data-icon*="courier"]','[data-icon*="kurye"]','[data-icon*="motorcycle"]','[data-icon*="motosiklet"]'];
+  if(dkdRoot instanceof Element&&dkdRoot.matches(dkdSelectors.join(',')))dkdTargets.add(dkdRoot);
+  for(const dkdElement of dkdRoot.querySelectorAll?.(dkdSelectors.join(','))||[])dkdTargets.add(dkdElement);
+  for(const dkdControl of dkdRoot.querySelectorAll?.('button,a,[role="button"],article,li')||[]){
+    const dkdText=dkdV312Normalize(dkdControl.textContent);
+    const dkdCourierCard=dkdText.includes('adres')&&dkdText.includes('siparis')&&/(bekliyor|kapida|onaylandi|tamamlandi|reddedildi)/.test(dkdText);
+    if(!['kurye','kurye merkezi'].includes(dkdText)&&!dkdCourierCard&&!(dkdText==='kurye'||dkdText.endsWith(' kurye')))continue;
+    const dkdHost=dkdV312IconHost(dkdControl);if(dkdHost)dkdTargets.add(dkdHost)
+  }
+  for(const dkdTarget of dkdTargets)dkdV312ReplaceMotorcycle(dkdV312IconHost(dkdTarget)||dkdTarget,'unified')
+}
+window.dkdV312MotorcycleSvg=dkdV312MotorcycleSvg;
+window.dkdV311MotorcycleSvg=dkdV312MotorcycleSvg;
+window.dkdV312PatchMotorcycles=dkdV312PatchMotorcycles;
+dkdV312PatchMotorcycles();
+new MutationObserver((dkdMutations)=>{for(const dkdMutation of dkdMutations)for(const dkdNode of dkdMutation.addedNodes)if(dkdNode instanceof Element)dkdV312PatchMotorcycles(dkdNode)}).observe(document.body,{childList:true,subtree:true});
