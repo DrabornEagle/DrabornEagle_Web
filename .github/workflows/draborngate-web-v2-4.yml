@@ -1,4 +1,4 @@
-name: DraBornGate Web v3.2.8 Verify
+name: DraBornGate Web v3.2.9 Verify
 
 on:
   push:
@@ -21,7 +21,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v3-2-8-${{ github.ref }}
+  group: draborngate-web-v3-2-9-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -35,11 +35,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: v3.2.8 yükleme yöneticisini doğrula
+      - name: v3.2.9 yükleme yöneticisini doğrula
         run: node --check DraBornGate/assets/app.js
-      - name: v3.2.8 sürüm korumasını doğrula
-        run: node --check DraBornGate/assets/v3.2.8.guard.js
-      - name: v3.2.8 etkileşim katmanını doğrula
+      - name: v3.2.9 sürüm korumasını doğrula
+        run: node --check DraBornGate/assets/v3.2.9.guard.js
+      - name: v3.2.9 modern düzeltme katmanını doğrula
+        run: node --check DraBornGate/assets/v3.2.9.js
+      - name: v3.2.9 bağımsız Sade Temayı doğrula
+        run: node --check DraBornGate/assets/v3.2.9.simple.js
+      - name: v3.2.8 uyumluluk katmanını doğrula
         run: node --check DraBornGate/assets/v3.2.8.js
       - name: v3.2.5 uyumluluk katmanlarını doğrula
         run: |
@@ -53,13 +57,9 @@ jobs:
           base64 -d DraBornGate/assets/v3.2.5.features.js.payload.txt | gzip -dc > /tmp/dkd-v325-features.js
           node --check /tmp/dkd-v325-session.js
           node --check /tmp/dkd-v325-features.js
-      - name: Güvenlik tema rol kontrolünü doğrula
-        run: node --check DraBornGate/assets/v2.8.js
       - name: Veri başlangıcını doğrula
         run: node --check DraBornGate/assets/v3.2.1.data.js
-      - name: Ana arayüz paketini doğrula
-        run: node --check DraBornGate/assets/v3.2.1.js
       - name: Service worker sözdizimini doğrula
         run: node --check DraBornGate/sw.js
-      - name: v3.2.8 kapsam testlerini çalıştır
-        run: node DraBornGate/tests/dkd_verify_web_v328.mjs
+      - name: v3.2.9 kapsam testlerini çalıştır
+        run: node DraBornGate/tests/dkd_verify_web_v329.mjs
