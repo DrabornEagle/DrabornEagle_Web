@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.5';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.5-stable-popup-admin-earnings';
+const DKD_WEB_VERSION = '3.2.7';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.7-clean-menu-site-popup';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -146,9 +146,22 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV325() {
-  dkdSetBootProgress(2, 'v3.2.5 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.5.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdWaitForV327SimpleReady() {
+  if (!dkdIsSimpleModeRequested()) return;
+  const dkdStartedAt = performance.now();
+  while (performance.now() - dkdStartedAt < 2600) {
+    document.querySelector('#dkd-v28-root')?.remove();
+    document.body.classList.remove('dkd-v28-simple-active');
+    const dkdReady = document.documentElement.dataset.dkdV327Ready === 'true';
+    const dkdFinderReady = Boolean(document.querySelector('.dkd-v31-finder,.dkd-v324-finder'));
+    if (dkdReady && dkdFinderReady) return;
+    await new Promise((dkdResolve) => setTimeout(dkdResolve, 50));
+  }
+}
+
+async function dkdBootWebV327() {
+  dkdSetBootProgress(2, 'v3.2.7 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.7.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -187,18 +200,20 @@ async function dkdBootWebV325() {
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
   await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.2.5 modern arayüz hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.2.7 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
   await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV324Base');
   dkdSetBootProgress(96, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
   await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
   dkdSetBootProgress(98, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
   await import(`./v3.2.1.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(99, 'v3.2.5 arayüz ve kurye akışı tamamlanıyor');
+  dkdSetBootProgress(99, 'v3.2.7 arayüz ve kurye akışı tamamlanıyor');
   await dkdAppendPackedStyle('./assets/v3.2.4.css.payload.txt', 'dkdWebV324Base');
   await dkdAppendPackedStyle('./assets/v3.2.5.css.payload.txt', 'dkdWebV325');
-  await import(`./v3.2.5.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendStyleLink('./assets/v3.2.7.css', 'dkdWebV327');
+  await import(`./v3.2.7.js?v=${DKD_WEB_VERSION}`);
+  await dkdWaitForV327SimpleReady();
   dkdFinishBoot();
 }
 
-dkdBootWebV325().catch(dkdShowBootError);
+dkdBootWebV327().catch(dkdShowBootError);
