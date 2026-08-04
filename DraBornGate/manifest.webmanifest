@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.14",
+  "name": "DraBornGate Web v3.2.15",
   "short_name": "DraBornGate",
-  "description": "Kurye Premium menüsündeki tek Kazançlarım bağlantısı ve eski arayüz parçalarını otomatik temizleyen geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.14-ui-clean1",
+  "description": "Kurye Premium menüsünde yalnızca üst Kazançlarım bağlantısını koruyan ve Geçişlerim kartlarında DraBornGate uygulamasının yarış motosikletini kullanan geçiş platformu.",
+  "start_url": "/DraBornGate/?v=3.2.15-earnings-moto1",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
