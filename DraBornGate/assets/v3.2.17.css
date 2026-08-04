@@ -7,8 +7,10 @@ html[data-dkd-gate-version="3.2.17"] [data-dkd-earnings-menu]{display:none!impor
 .dkd-v3217-earnings-menu{width:100%!important;min-height:68px!important;margin:14px 0 0!important;padding:11px 13px!important;border:1px solid rgba(99,217,255,.22)!important;border-radius:18px!important;background:rgba(10,24,42,.94)!important;box-shadow:none!important;color:#f4f8ff!important;display:flex!important;align-items:center!important;gap:12px!important;text-align:left!important;transform:none!important;animation:none!important;transition:background-color .18s ease,border-color .18s ease!important;will-change:auto!important}
 .dkd-v3217-earnings-menu>span{width:42px!important;height:42px!important;min-width:42px!important;border-radius:13px!important;display:grid!important;place-items:center!important;color:#62dcf7!important;background:rgba(61,205,239,.08)!important;border:1px solid rgba(88,215,246,.14)!important}
 .dkd-v3217-earnings-menu svg{width:23px!important;height:23px!important}
-.dkd-v3217-earnings-menu>strong{display:block!important;flex:1!important;font-size:0!important}
-.dkd-v3217-earnings-menu>strong:before{content:attr(data-label);display:block;font-size:17px;font-weight:820;letter-spacing:-.01em}
+.dkd-v3217-earnings-menu>strong{display:none!important}
+.dkd-v3217-earnings-menu:after{content:attr(aria-label);display:block;flex:1;font-size:17px;font-weight:820;letter-spacing:-.01em;order:1}
+.dkd-v3217-earnings-menu>span{order:0}
+.dkd-v3217-earnings-menu>i{order:2}
 .dkd-v3217-earnings-menu>i{width:32px!important;height:32px!important;border-radius:11px!important;display:grid!important;place-items:center!important;color:#75dff7!important;background:rgba(83,206,236,.06)!important;border:1px solid rgba(91,211,241,.1)!important}
 .dkd-v3217-earnings-menu>i:before{content:'>';font-size:18px;line-height:1}
 .dkd-v3217-earnings-menu:hover,.dkd-v3217-earnings-menu:focus-visible{transform:none!important;animation:none!important;background:rgba(12,29,49,.98)!important;border-color:rgba(99,217,255,.38)!important;outline:none!important}
