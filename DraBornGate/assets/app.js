@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.1.0';
+const DKD_WEB_VERSION = '3.1.1';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -124,8 +124,8 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV310() {
-  dkdSetBootProgress(3, 'v3.1.0 sürüm koruması başlatılıyor');
+async function dkdBootWebV311() {
+  dkdSetBootProgress(3, 'v3.1.1 sürüm koruması başlatılıyor');
   await import(`./v3.1.0.guard.js?v=${DKD_WEB_VERSION}`);
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -163,13 +163,15 @@ async function dkdBootWebV310() {
   await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.1.0 modern arayüz hazırlanıyor');
+  await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(94, 'v3.1.1 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
-  dkdSetBootProgress(97, 'Gerçek kurye ve kazanç verileri bağlanıyor');
-  await import(`./v3.1.0.data.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(99, 'Kod doğrulama, kuyruk ve paneller bağlanıyor');
-  await import(`./v3.1.0.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV311Fixes');
+  dkdSetBootProgress(97, 'Doğru DraBornGate oturumu ve canlı veriler bağlanıyor');
+  await import(`./v3.1.1.data.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(99, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
+  await import(`./v3.1.1.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV310().catch(dkdShowBootError);
+dkdBootWebV311().catch(dkdShowBootError);
