@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.8';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.8-site-popup-earnings-header';
+const DKD_WEB_VERSION = '3.2.9';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.9-simple-isolation-site-stability';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -150,9 +150,52 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV328() {
-  dkdSetBootProgress(2, 'v3.2.8 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.8.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootSimpleV329() {
+  dkdSetBootProgress(70, 'Sade Tema canlı veri katmanı bağlanıyor');
+  await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(86, 'Eski Sade Tema katmanları devre dışı bırakılıyor');
+  await dkdAppendStyleLink('./assets/v3.2.9.simple.css', 'dkdWebV329Simple');
+  dkdSetBootProgress(97, 'Kurye doğrulama ve modern detay ekranı hazırlanıyor');
+  await import(`./v3.2.9.simple.js?v=${DKD_WEB_VERSION}`);
+}
+
+async function dkdBootModernV329() {
+  dkdSetBootProgress(57, 'Modern tema hazırlanıyor');
+  await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
+  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
+  dkdSetBootProgress(66, 'Güvenlik paneli güncelleniyor');
+  await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
+  await dkdImportSource(await dkdUnpack(await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5)));
+  dkdSetBootProgress(75, 'Tema geçişleri bağlanıyor');
+  await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
+  await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
+  dkdSetBootProgress(82, 'Modern panel son kontrolleri yapılıyor');
+  await import(`./v2.7.guard.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendStyleLink('./assets/v2.7.css', 'dkdWebV27');
+  await import(`./v2.7.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(88, 'Güvenlik ve kurye modülleri hazırlanıyor');
+  await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
+  await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
+  await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
+  await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
+  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV324Base');
+  dkdSetBootProgress(93, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
+  await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
+  await import(`./v3.2.1.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendPackedStyle('./assets/v3.2.4.css.payload.txt', 'dkdWebV324Base');
+  await dkdAppendPackedStyle('./assets/v3.2.5.css.payload.txt', 'dkdWebV325');
+  await import(`./v3.2.5.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(98, 'Site arama, kazanç ve popup katmanları bağlanıyor');
+  await dkdAppendStyleLink('./assets/v3.2.8.css', 'dkdWebV328');
+  await import(`./v3.2.8.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendStyleLink('./assets/v3.2.9.css', 'dkdWebV329');
+  await import(`./v3.2.9.js?v=${DKD_WEB_VERSION}`);
+}
+
+async function dkdBootWebV329() {
+  dkdSetBootProgress(2, 'v3.2.9 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.9.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -168,44 +211,10 @@ async function dkdBootWebV328() {
   dkdSetBootProgress(48, 'Oturum ve rol sistemi bağlanıyor');
   await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
 
-  if (!dkdSimpleMode) {
-    dkdSetBootProgress(57, 'Modern tema hazırlanıyor');
-    await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
-    await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
-    dkdSetBootProgress(66, 'Güvenlik paneli güncelleniyor');
-    await dkdAppendPackedStyle('./assets/v2.5.css.payload.txt', 'dkdWebV25');
-    await dkdImportSource(await dkdUnpack(await dkdReadJoinedPayload('./assets/v2.5.js.payload', 5)));
-    dkdSetBootProgress(75, 'Tema geçişleri bağlanıyor');
-    await dkdAppendPackedStyle('./assets/v2.6.css.payload.txt', 'dkdWebV26');
-    await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.6.js.payload.txt?v=${DKD_WEB_VERSION}`)));
-    dkdSetBootProgress(82, 'Modern panel son kontrolleri yapılıyor');
-    await import(`./v2.7.guard.js?v=${DKD_WEB_VERSION}`);
-    await dkdAppendStyleLink('./assets/v2.7.css', 'dkdWebV27');
-    await import(`./v2.7.js?v=${DKD_WEB_VERSION}`);
-  } else {
-    dkdSetBootProgress(82, 'Bağımsız Sade Tema hazırlanıyor');
-  }
+  if (dkdSimpleMode) await dkdBootSimpleV329();
+  else await dkdBootModernV329();
 
-  dkdSetBootProgress(88, 'Sade Tema güvenlik kabuğu hazırlanıyor');
-  await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
-  await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
-  await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
-  await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.2.8 modern arayüz hazırlanıyor');
-  await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
-  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV324Base');
-  dkdSetBootProgress(96, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
-  await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(98, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
-  await import(`./v3.2.1.js?v=${DKD_WEB_VERSION}`);
-  await dkdAppendPackedStyle('./assets/v3.2.4.css.payload.txt', 'dkdWebV324Base');
-  await dkdAppendPackedStyle('./assets/v3.2.5.css.payload.txt', 'dkdWebV325');
-  await import(`./v3.2.5.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(99, 'v3.2.8 site arama, kazanç ve popup düzeltmeleri uygulanıyor');
-  await dkdAppendStyleLink('./assets/v3.2.8.css', 'dkdWebV328');
-  await import(`./v3.2.8.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV328().catch(dkdShowBootError);
+dkdBootWebV329().catch(dkdShowBootError);
