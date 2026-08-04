@@ -202,6 +202,13 @@ async function dkdBootWebV329() {
   const dkdSimpleMode = dkdIsSimpleModeRequested();
   if (dkdSimpleMode) document.documentElement.classList.add('dkd-simple-booting');
 
+  if (dkdSimpleMode) {
+    dkdSetBootProgress(24, 'Bağımsız Sade Tema başlatılıyor');
+    await dkdBootSimpleV329();
+    dkdFinishBoot();
+    return;
+  }
+
   dkdSetBootProgress(10, 'Arayüz dosyaları yükleniyor');
   await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
   dkdSetBootProgress(20, 'Ana uygulama paketi alınıyor');
@@ -210,10 +217,7 @@ async function dkdBootWebV329() {
   await dkdImportSource(await dkdUnpack(dkdCorePayload));
   dkdSetBootProgress(48, 'Oturum ve rol sistemi bağlanıyor');
   await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
-
-  if (dkdSimpleMode) await dkdBootSimpleV329();
-  else await dkdBootModernV329();
-
+  await dkdBootModernV329();
   dkdFinishBoot();
 }
 
