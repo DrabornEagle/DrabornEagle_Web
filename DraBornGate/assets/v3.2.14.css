@@ -1,0 +1,11 @@
+html[data-dkd-gate-version="3.2.14"] .dkd-v328-earnings-menu,
+html[data-dkd-gate-version="3.2.14"] .dkd-v325-earnings-menu,
+html[data-dkd-gate-version="3.2.14"] [data-dkd-earnings-menu]:not(.dkd-v3211-earnings-menu),
+html[data-dkd-gate-version="3.2.14"] #dkd-v328-earnings,
+html[data-dkd-gate-version="3.2.14"] #dkd-v325-earnings {
+  display: none !important;
+}
+
+html[data-dkd-gate-version="3.2.14"] .dkd-v3211-earnings-menu {
+  isolation: isolate;
+}
