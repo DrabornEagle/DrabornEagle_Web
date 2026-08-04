@@ -38,9 +38,15 @@ jobs:
         run: node --check DraBornGate/assets/app.js
       - name: v3.2.4 sürüm korumasını doğrula
         run: node --check DraBornGate/assets/v3.2.4.guard.js
+      - name: v3.2.4 public RPC köprüsünü doğrula
+        run: node --check DraBornGate/assets/v3.2.4.data.js
+      - name: v3.2.4 oturum yükleyicisini doğrula
+        run: node --check DraBornGate/assets/v3.2.4.auth.js
+      - name: v3.2.4 rol ve çıkış yükleyicisini doğrula
+        run: node --check DraBornGate/assets/v3.2.4.session.js
       - name: v3.2.4 arayüz katmanını doğrula
         run: node --check DraBornGate/assets/v3.2.4.js
-      - name: Public RPC veri köprüsünü doğrula
+      - name: Uyumlu veri başlangıcını doğrula
         run: node --check DraBornGate/assets/v3.2.1.data.js
       - name: Ana arayüz yükleyicisini doğrula
         run: node --check DraBornGate/assets/v3.2.1.js

@@ -23,3 +23,5 @@ try {
 } finally {
   URL.revokeObjectURL(dkdV324ModuleUrl);
 }
+
+await import(`./v3.2.4.session.js?v=${DKD_V324_VERSION}`);
