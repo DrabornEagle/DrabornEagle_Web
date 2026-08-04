@@ -1,4 +1,4 @@
-name: DraBornGate Web v2.8.1 Verify
+name: DraBornGate Web v3.0.0 Verify
 
 on:
   push:
@@ -19,7 +19,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v2-8-1-${{ github.ref }}
+  group: draborngate-web-v3-0-0-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -33,13 +33,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Gerçek yükleme yöneticisini doğrula
+      - name: v3.0 yükleme yöneticisini doğrula
         run: node --check DraBornGate/assets/app.js
-      - name: Kararlı Sade Tema sözdizimini doğrula
+      - name: v2.8 güvenli eşleştirme köprüsünü doğrula
         run: node --check DraBornGate/assets/v2.8.js
       - name: Uygulama motosiklet ikonunu doğrula
         run: node --check DraBornGate/assets/v2.8.1.js
-      - name: Yükleme, geçiş ve canlı talep kapsamını doğrula
-        run: node DraBornGate/tests/dkd_verify_security_simple_theme.mjs
-      - name: Motosiklet ve metin düzeltmesini doğrula
-        run: node DraBornGate/tests/dkd_verify_racing_motorcycle_patch.mjs
+      - name: v3.0 ayrıntılı kurye verilerini doğrula
+        run: node --check DraBornGate/assets/v3.0.data.js
+      - name: v3.0 ayrıntılı kurye arayüzünü doğrula
+        run: node --check DraBornGate/assets/v3.0.js
+      - name: v3.0 kapsam testlerini çalıştır
+        run: node DraBornGate/tests/dkd_verify_web_v3.mjs
