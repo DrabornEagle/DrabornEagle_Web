@@ -38,6 +38,9 @@ assert.match(dkdApp, /import\(`\.\/v3\.2\.4\.js\?v=\$\{DKD_WEB_VERSION\}`\)/);
 assert.match(dkdApp, /dkdBootWebV324\(\)\.catch/);
 
 assert.match(dkdUiLoader, /v3\.2\.4\.js\.payload\.txt/);
+assert.match(dkdUiLoader, /new URL\('\.\/v3\.2\.4\.js\.payload\.txt', import\.meta\.url\)/);
+assert.match(dkdUiLoader, /searchParams\.set\('v', DKD_V324_VERSION\)/);
+assert.doesNotMatch(dkdUiLoader, /fetch\(`\.\/v3\.2\.4\.js\.payload\.txt/);
 assert.match(dkdUiLoader, /DecompressionStream/);
 
 assert.match(dkdGuard, /DKD_V324_VERSION = '3\.2\.4'/);
@@ -99,4 +102,4 @@ assert.match(dkdWorkflow, /DraBornGate Web v3\.2\.4 Verify/);
 assert.match(dkdWorkflow, /node --check DraBornGate\/assets\/v3\.2\.4\.js/);
 assert.match(dkdWorkflow, /node DraBornGate\/tests\/dkd_verify_web_v324\.mjs/);
 
-console.log('DraBornGate Web v3.2.4 Admin, Sade Tema, kurye popup, minimalist istatistik ve aramalı site seçimi doğrulamaları geçti.');
+console.log('DraBornGate Web v3.2.4 Admin, Sade Tema, kurye popup, minimalist istatistik, aramalı site seçimi ve payload yol doğrulamaları geçti.');
