@@ -1,11 +1,29 @@
-    const dkdIcon = dkdClickable.querySelector('[class*="icon"],[class*="mark"],svg')?.parentElement;
-    if (dkdIcon && String(dkdIcon.textContent || '').trim().length < 8) dkdTargets.add(dkdIcon);
-  }
   for (const dkdTarget of dkdTargets) {
     if (!dkdTarget || dkdTarget.closest('.dkd-v31-moto,.dkd-v281-moto') || dkdTarget.dataset.dkdV31Moto === 'true') continue;
     dkdTarget.innerHTML = dkdV31Moto('modern');
     dkdTarget.dataset.dkdV31Moto = 'true';
     dkdTarget.classList.add('dkd-v31-modern-moto-host');
+  }
+}
+
+function dkdV31PatchBottomCourierLabel() {
+  const dkdNavigationCandidates = [...document.querySelectorAll('nav,[class*="bottom"],[class*="tab-bar"],[class*="navigation"]')];
+  for (const dkdNavigation of dkdNavigationCandidates) {
+    const dkdText = dkdV31.normalize(dkdNavigation.textContent);
+    if (!dkdText.includes('yeni') || !dkdText.includes('gecislerim') || !dkdText.includes('hareket')) continue;
+    const dkdDbgLabel = [...dkdNavigation.querySelectorAll('span,strong,b,p')]
+      .find((dkdElement) => dkdV31.normalize(dkdElement.textContent) === 'dbg');
+    if (!dkdDbgLabel) continue;
+    dkdDbgLabel.textContent = 'Kurye';
+    const dkdItem = dkdDbgLabel.closest('button,a,[role="button"],li,div');
+    const dkdIconHost = dkdItem?.querySelector('svg')?.parentElement || dkdItem?.querySelector('[class*="icon"]');
+    if (dkdIconHost && dkdIconHost.dataset.dkdV31Moto !== 'true') {
+      dkdIconHost.innerHTML = dkdV31Moto('bottom');
+      dkdIconHost.dataset.dkdV31Moto = 'true';
+      dkdIconHost.classList.add('dkd-v31-modern-moto-host');
+    }
+    dkdItem?.classList.add('dkd-v31-courier-tab');
+    break;
   }
 }
 
