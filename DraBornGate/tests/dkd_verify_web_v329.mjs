@@ -62,4 +62,11 @@ assert.match(dkdWorker, /v3\.2\.9\.simple\.js\?v=3\.2\.9/);
 assert.match(dkdWorker, /v3\.2\.9\.js\?v=3\.2\.9/);
 assert.doesNotMatch(dkdWorker, /v3\.2\.8\.js\?v=3\.2\.9/);
 
+const dkdAssetMatches = [...dkdWorker.matchAll(/'\/DraBornGate\/([^']*)'/g)];
+for (const dkdMatch of dkdAssetMatches) {
+  const dkdAssetPath = String(dkdMatch[1] || '').split('?')[0];
+  if (!dkdAssetPath || dkdAssetPath.endsWith('/')) continue;
+  assert.equal(fs.existsSync(new URL(`../${dkdAssetPath}`, import.meta.url)), true, `Service worker varlığı bulunamadı: ${dkdAssetPath}`);
+}
+
 console.log('DraBornGate Web v3.2.9 doğrulamaları başarılı.');
