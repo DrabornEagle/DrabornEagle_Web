@@ -30,7 +30,7 @@ function dkdV3212InstallFastWorkerRegister() {
     Object.defineProperty(dkdContainer, 'register', {
       configurable: true,
       writable: true,
-      value(dkdUrl, dkdOptions) {
+      value: function dkdV3212FastRegister(dkdUrl, dkdOptions) {
         if (!dkdV3212WorkerState.started) {
           dkdV3212WorkerState.started = true;
           setTimeout(() => {
