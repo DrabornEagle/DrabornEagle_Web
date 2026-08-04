@@ -1,0 +1,58 @@
+  for (const dkdButton of document.querySelectorAll('[data-dkd-v31-more]')) {
+    dkdButton.addEventListener('click', () => {
+      const dkdKey = dkdButton.dataset.dkdV31More;
+      dkdV31State.queueLimits[dkdKey] = (dkdV31State.queueLimits[dkdKey] || 3) + 5;
+      dkdV31RenderSimple();
+      document.querySelector(`[data-dkd-v31-category="${dkdKey}"]`)?.setAttribute('open', '');
+    });
+  }
+  for (const dkdButton of document.querySelectorAll('[data-dkd-v31-pass]')) {
+    dkdButton.addEventListener('click', () => {
+      const dkdPass = dkdV31State.queue.find((dkdRow) => dkdRow.pass_id === dkdButton.dataset.dkdV31Pass);
+      if (dkdPass) dkdV31OpenPassModal(dkdPass, dkdPass.approval_code);
+    });
+  }
+  document.querySelector('#dkd-v31-retry-queue')?.addEventListener('click', dkdV31RefreshQueue);
+}
+
+function dkdV31EnsureModal() {
+  let dkdModal = document.querySelector('#dkd-v31-global-modal');
+  if (!dkdModal) {
+    dkdModal = document.createElement('div');
+    dkdModal.id = 'dkd-v31-global-modal';
+    dkdModal.hidden = true;
+    document.body.appendChild(dkdModal);
+  }
+  return dkdModal;
+}
+
+function dkdV31CloseModal() {
+  const dkdModal = dkdV31EnsureModal();
+  dkdModal.hidden = true;
+  dkdModal.innerHTML = '';
+  document.body.classList.remove('dkd-v31-modal-open');
+  dkdV31GlobalModalMode = '';
+}
+
+function dkdV31OpenPassModal(dkdPass, dkdCode) {
+  const dkdModal = dkdV31EnsureModal();
+  dkdV31GlobalModalMode = 'pass';
+  dkdV31ActiveCode = String(dkdCode || dkdPass.approval_code || '').replace(/\D/g, '').slice(0, 6);
+  dkdModal.hidden = false;
+  document.body.classList.add('dkd-v31-modal-open');
+  dkdModal.innerHTML = `<div class="dkd-v31-modal-backdrop" data-dkd-v31-close></div>
+    <section class="dkd-v31-modal-panel dkd-v31-pass-modal">
+      <header><div><span>KODLA KURYE DOĞRULAMA</span><h2>Kurye Bilgileri</h2><p>Onaylamadan önce bütün bilgileri kontrol edin.</p></div><button type="button" data-dkd-v31-close aria-label="Kapat">${dkdV31Icon('close')}</button></header>
+      <main>${dkdV31PassDetailsHtml(dkdPass, true)}</main>
+      <footer>
+        <button type="button" class="dkd-v31-secondary" data-dkd-v31-close>Kapat</button>
+        <button type="button" id="dkd-v31-approve-pass">${dkdV31Icon('key')}<span>Kodu Onayla ve Giriş Ver</span></button>
+      </footer>
+    </section>`;
+  dkdV31BindModal();
+  document.querySelector('#dkd-v31-approve-pass')?.addEventListener('click', async () => {
+    const dkdButton = document.querySelector('#dkd-v31-approve-pass');
+    dkdButton.disabled = true;
+    dkdButton.innerHTML = `${dkdV31Icon('sync')}<span>Kod onaylanıyor…</span>`;
+    try {
+      const dkdResult = await dkdV31.approvePass(dkdV31ActiveCode);
