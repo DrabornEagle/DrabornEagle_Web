@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.2';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.2-observer-loop-hotfix';
+const DKD_WEB_VERSION = '3.2.4';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.4-courier-admin-premium';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -146,9 +146,9 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV322() {
-  dkdSetBootProgress(2, 'v3.2.2 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.2.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV324() {
+  dkdSetBootProgress(2, 'v3.2.4 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.4.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -187,14 +187,15 @@ async function dkdBootWebV322() {
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
   await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.2.2 modern arayüz hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.2.4 premium arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
-  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV322Fixes');
-  dkdSetBootProgress(97, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
-  await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(99, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
-  await import(`./v3.2.1.js?v=${DKD_WEB_VERSION}`);
+  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV311Fixes');
+  await dkdAppendStyleLink('./assets/v3.2.4.css', 'dkdWebV324');
+  dkdSetBootProgress(97, 'Admin, rol ve canlı veri bağlantıları kuruluyor');
+  await import(`./v3.2.4.data.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(99, 'Kurye ekranları ve arama sistemi bağlanıyor');
+  await import(`./v3.2.4.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV322().catch(dkdShowBootError);
+dkdBootWebV324().catch(dkdShowBootError);

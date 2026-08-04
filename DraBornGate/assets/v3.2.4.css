@@ -1,0 +1,384 @@
+:root {
+  --dkd-v324-cyan: #4ddcff;
+  --dkd-v324-violet: #8c76ff;
+  --dkd-v324-ink: #050a18;
+  --dkd-v324-panel: rgba(8, 18, 40, .92);
+  --dkd-v324-line: rgba(103, 220, 255, .24);
+}
+
+html[data-dkd-gate-version="3.2.4"] body {
+  text-rendering: optimizeLegibility;
+}
+
+/* Sade Tema: premium ve hareketli Kuryeni Bul kartı */
+.dkd-v324-premium-finder {
+  position: relative !important;
+  isolation: isolate;
+  overflow: hidden !important;
+  border: 1px solid rgba(91, 220, 255, .34) !important;
+  background:
+    radial-gradient(circle at 10% 5%, rgba(61, 213, 255, .16), transparent 34%),
+    radial-gradient(circle at 92% 14%, rgba(138, 103, 255, .18), transparent 38%),
+    linear-gradient(145deg, rgba(8, 24, 51, .98), rgba(7, 12, 31, .99)) !important;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .34) !important;
+}
+
+.dkd-v324-premium-finder::before {
+  content: "";
+  position: absolute;
+  inset: -45%;
+  z-index: -2;
+  background: conic-gradient(from 0deg, transparent 0 25%, rgba(77, 220, 255, .34) 31%, transparent 40% 66%, rgba(140, 118, 255, .3) 73%, transparent 82%);
+  animation: dkdV324FinderSpin 12s linear infinite;
+}
+
+.dkd-v324-premium-finder::after {
+  content: "";
+  position: absolute;
+  inset: 1px;
+  z-index: -1;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(7, 23, 47, .98), rgba(7, 11, 29, .98));
+}
+
+.dkd-v324-premium-finder .dkd-v31-finder-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
+.dkd-v324-premium-finder .dkd-v31-finder-copy > span {
+  display: inline-flex !important;
+  align-items: center;
+  min-height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgba(77, 220, 255, .28);
+  border-radius: 999px;
+  background: rgba(12, 38, 67, .66);
+  color: #64e4ff !important;
+  font-size: 13px !important;
+  font-weight: 900 !important;
+  letter-spacing: .09em !important;
+}
+
+.dkd-v324-premium-finder .dkd-v31-finder-copy h1 {
+  margin-top: 18px !important;
+  max-width: 780px;
+  font-size: clamp(34px, 6vw, 64px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -.045em !important;
+}
+
+.dkd-v324-premium-finder .dkd-v31-search-form {
+  position: relative;
+  z-index: 1;
+  padding: 22px !important;
+  border: 1px solid rgba(126, 170, 230, .2) !important;
+  border-radius: 26px !important;
+  background: rgba(5, 13, 31, .74) !important;
+  backdrop-filter: blur(18px);
+}
+
+.dkd-v324-premium-finder .dkd-v31-search-form input {
+  min-height: 82px !important;
+  border-radius: 22px !important;
+  border-color: rgba(87, 219, 255, .33) !important;
+  background: rgba(3, 10, 24, .92) !important;
+  font-size: clamp(30px, 8vw, 52px) !important;
+  letter-spacing: .24em !important;
+}
+
+.dkd-v324-premium-action {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 76px !important;
+  border-radius: 22px !important;
+  font-size: clamp(18px, 4vw, 24px) !important;
+  font-weight: 950 !important;
+  letter-spacing: -.02em !important;
+  transform: translateZ(0);
+}
+
+.dkd-v324-premium-action::after {
+  content: "";
+  position: absolute;
+  inset: -120% auto -120% -45%;
+  width: 38%;
+  transform: rotate(16deg);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.58), transparent);
+  animation: dkdV324ActionSweep 3.2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Canlı kuyruk kategorileri ilk açılışta kapalıdır; kullanıcı seçimi JS ile korunur. */
+.dkd-v31-queue-category > summary {
+  min-height: 88px !important;
+}
+
+/* Kurye doğrulama ayrıntı popup'ı */
+#dkd-v31-global-modal.dkd-v324-detail-popup {
+  padding: clamp(10px, 3vw, 30px) !important;
+}
+
+.dkd-v324-detail-panel {
+  width: min(980px, 100%) !important;
+  max-height: min(92dvh, 980px) !important;
+  overflow: hidden !important;
+  border: 1px solid rgba(88, 219, 255, .27) !important;
+  border-radius: 30px !important;
+  background: rgba(5, 12, 29, .98) !important;
+}
+
+.dkd-v324-detail-panel > header {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  padding: 24px 26px !important;
+  background: rgba(5, 12, 29, .96) !important;
+  backdrop-filter: blur(18px);
+}
+
+.dkd-v324-detail-panel > main {
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+  padding: 20px 26px 28px !important;
+}
+
+.dkd-v324-detail-panel .dkd-v31-detail-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 14px !important;
+}
+
+.dkd-v324-detail-panel .dkd-v31-detail {
+  min-height: 104px !important;
+  border-radius: 20px !important;
+}
+
+.dkd-v324-detail-panel > footer {
+  position: sticky;
+  bottom: 0;
+  z-index: 3;
+  padding: 18px 26px calc(18px + env(safe-area-inset-bottom)) !important;
+  background: rgba(5, 12, 29, .97) !important;
+  backdrop-filter: blur(18px);
+}
+
+/* Tamamlanan + Aktif Geçiş + Aktif Site: daha kısa, sade ve büyük metinli */
+.dkd-v31-minimal-stat,
+.dkd-v324-minimal-stat {
+  min-height: 168px !important;
+  padding: 22px 24px !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(111, 157, 219, .18) !important;
+  background: rgba(7, 17, 37, .88) !important;
+  box-shadow: none !important;
+  overflow: hidden !important;
+}
+
+.dkd-v31-minimal-stat::before,
+.dkd-v31-minimal-stat::after,
+.dkd-v324-minimal-stat::before,
+.dkd-v324-minimal-stat::after {
+  opacity: .16 !important;
+  filter: none !important;
+}
+
+.dkd-v31-minimal-stat strong,
+.dkd-v31-minimal-stat b,
+.dkd-v324-minimal-stat strong,
+.dkd-v324-minimal-stat b {
+  font-size: clamp(27px, 5vw, 42px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+}
+
+.dkd-v31-minimal-stat p,
+.dkd-v31-minimal-stat span,
+.dkd-v324-minimal-stat p,
+.dkd-v324-minimal-stat span {
+  font-size: clamp(16px, 3.6vw, 21px) !important;
+  line-height: 1.35 !important;
+}
+
+/* Kurye rolünde site adı yerine bağımsız Kurye Merkezi başlığı */
+.dkd-v324-courier-header-title {
+  max-width: min(58vw, 520px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 900 !important;
+  letter-spacing: -.025em !important;
+}
+
+/* Yeni Geçiş: varsayılan sitesiz, aramalı site seçici */
+.dkd-v324-native-site-select {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.dkd-v324-site-picker {
+  position: relative;
+  z-index: 22;
+  width: 100%;
+}
+
+.dkd-v324-site-search {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr) 42px;
+  align-items: center;
+  min-height: 76px;
+  padding: 0 12px 0 18px;
+  border: 1px solid rgba(92, 219, 255, .32);
+  border-radius: 22px;
+  background: rgba(7, 18, 40, .94);
+  transition: border-color .2s ease, transform .2s ease;
+}
+
+.dkd-v324-site-search:focus-within {
+  border-color: rgba(91, 224, 255, .72);
+  transform: translateY(-1px);
+}
+
+.dkd-v324-site-search > span {
+  color: #56ddff;
+  font-size: 27px;
+  font-weight: 800;
+}
+
+.dkd-v324-site-search input {
+  width: 100%;
+  min-width: 0;
+  border: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  color: #f6f9ff !important;
+  font-size: clamp(18px, 4vw, 23px) !important;
+  font-weight: 800 !important;
+}
+
+.dkd-v324-site-search input::placeholder {
+  color: #7f8ca8 !important;
+  opacity: 1;
+}
+
+.dkd-v324-site-search button {
+  width: 40px;
+  height: 40px;
+  border: 0;
+  border-radius: 13px;
+  background: rgba(121, 145, 190, .12);
+  color: #aab6ce;
+  font-size: 25px;
+}
+
+.dkd-v324-site-results {
+  position: absolute;
+  top: calc(100% + 9px);
+  left: 0;
+  right: 0;
+  z-index: 300;
+  max-height: min(390px, 50dvh);
+  overflow-y: auto;
+  padding: 9px;
+  border: 1px solid rgba(94, 211, 255, .28);
+  border-radius: 22px;
+  background: rgba(4, 11, 27, .985);
+  box-shadow: 0 24px 58px rgba(0, 0, 0, .42);
+}
+
+.dkd-v324-site-results[hidden] {
+  display: none !important;
+}
+
+.dkd-v324-site-results button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  width: 100%;
+  min-height: 66px;
+  padding: 12px 15px;
+  border: 0;
+  border-bottom: 1px solid rgba(115, 150, 205, .1);
+  border-radius: 15px;
+  background: transparent;
+  color: #eef5ff;
+  text-align: left;
+}
+
+.dkd-v324-site-results button:hover,
+.dkd-v324-site-results button:focus-visible {
+  background: rgba(47, 183, 229, .12);
+  outline: none;
+}
+
+.dkd-v324-site-results button strong {
+  font-size: 17px;
+}
+
+.dkd-v324-site-results button small {
+  flex: 0 0 auto;
+  color: #5ee0ff;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.dkd-v324-site-empty {
+  padding: 22px 16px;
+  color: #9aa8bf;
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+@keyframes dkdV324FinderSpin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes dkdV324ActionSweep {
+  0%, 58% { left: -45%; }
+  88%, 100% { left: 125%; }
+}
+
+@media (max-width: 720px) {
+  .dkd-v324-premium-finder {
+    border-radius: 30px !important;
+  }
+
+  .dkd-v324-premium-finder .dkd-v31-search-form {
+    padding: 16px !important;
+    border-radius: 22px !important;
+  }
+
+  .dkd-v324-detail-panel {
+    max-height: 96dvh !important;
+    border-radius: 26px 26px 20px 20px !important;
+  }
+
+  .dkd-v324-detail-panel .dkd-v31-detail-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dkd-v324-detail-panel > header,
+  .dkd-v324-detail-panel > main,
+  .dkd-v324-detail-panel > footer {
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+  }
+
+  .dkd-v31-minimal-stat,
+  .dkd-v324-minimal-stat {
+    min-height: 148px !important;
+    padding: 20px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dkd-v324-premium-finder::before,
+  .dkd-v324-premium-action::after {
+    animation: none !important;
+  }
+}
