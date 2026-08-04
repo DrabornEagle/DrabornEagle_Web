@@ -1,7 +1,19 @@
 const DKD_V3211_BOOT_VERSION = '3.2.11';
+const DKD_V3211_BOOT_REVISION = 'bootfix1';
 
-await import(`./v3.2.11.guard.js?v=${DKD_V3211_BOOT_VERSION}`);
-await import(`./app.js?v=${DKD_V3211_BOOT_VERSION}-core`);
+function dkdV3211BootFailure(dkdError) {
+  console.error('DraBornGate v3.2.11 açılış hatası:', dkdError);
+  document.documentElement.classList.remove('dkd-simple-booting');
+  const dkdMessage = String(dkdError?.message || dkdError || 'Bilinmeyen açılış hatası');
+  const dkdLabel = document.querySelector('#dkd-v28-progress-label');
+  const dkdFill = document.querySelector('#dkd-v28-progress-fill');
+  const dkdProgress = document.querySelector('#dkd-v28-progress');
+  const dkdRetry = document.querySelector('#dkd-v28-retry');
+  if (dkdLabel) dkdLabel.textContent = `Yükleme tamamlanamadı: ${dkdMessage}`;
+  if (dkdFill) dkdFill.style.width = '100%';
+  if (dkdProgress) dkdProgress.setAttribute('aria-valuenow', '100');
+  if (dkdRetry) dkdRetry.hidden = false;
+}
 
 function dkdV3211BootIsSimple() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -24,7 +36,7 @@ async function dkdV3211BootStyle() {
   await new Promise((dkdResolve, dkdReject) => {
     const dkdLink = document.createElement('link');
     dkdLink.rel = 'stylesheet';
-    dkdLink.href = `./assets/v3.2.11.css?v=${DKD_V3211_BOOT_VERSION}`;
+    dkdLink.href = `./assets/v3.2.11.css?v=${DKD_V3211_BOOT_VERSION}-${DKD_V3211_BOOT_REVISION}`;
     dkdLink.dataset.dkdWebV3211 = 'true';
     dkdLink.onload = dkdResolve;
     dkdLink.onerror = () => dkdReject(new Error('v3.2.11 arayüz dosyası yüklenemedi.'));
@@ -48,17 +60,24 @@ function dkdV3211PartnerDataBridge(dkdOriginalData) {
   });
 }
 
-await dkdV3211BootWait();
-if (!dkdV3211BootIsSimple()) {
-  await dkdV3211BootStyle();
-  const dkdOriginalData = window.dkdV31Data;
-  window.dkdV31Data = dkdV3211PartnerDataBridge(dkdOriginalData);
-  try {
-    await import(`./v3.2.11.js?v=${DKD_V3211_BOOT_VERSION}-courier-role`);
-  } finally {
-    window.dkdV31Data = dkdOriginalData;
+async function dkdV3211Start() {
+  await import(`./v3.2.11.guard.js?v=${DKD_V3211_BOOT_VERSION}-${DKD_V3211_BOOT_REVISION}`);
+  await import(`./app.js?v=${DKD_V3211_BOOT_VERSION}-${DKD_V3211_BOOT_REVISION}-core`);
+  await dkdV3211BootWait();
+
+  if (!dkdV3211BootIsSimple()) {
+    await dkdV3211BootStyle();
+    const dkdOriginalData = window.dkdV31Data;
+    window.dkdV31Data = dkdV3211PartnerDataBridge(dkdOriginalData);
+    try {
+      await import(`./v3.2.11.js?v=${DKD_V3211_BOOT_VERSION}-${DKD_V3211_BOOT_REVISION}-courier-role`);
+    } finally {
+      window.dkdV31Data = dkdOriginalData;
+    }
   }
+
+  document.documentElement.dataset.dkdGateVersion = DKD_V3211_BOOT_VERSION;
+  sessionStorage.setItem('dkd_gate_web_version', DKD_V3211_BOOT_VERSION);
 }
 
-document.documentElement.dataset.dkdGateVersion = DKD_V3211_BOOT_VERSION;
-sessionStorage.setItem('dkd_gate_web_version', DKD_V3211_BOOT_VERSION);
+dkdV3211Start().catch(dkdV3211BootFailure);
