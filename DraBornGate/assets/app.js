@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.7';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.7-popup-site-flash-fixes';
+const DKD_WEB_VERSION = '3.2.8';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.8-site-popup-earnings-header';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -150,9 +150,9 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV327() {
-  dkdSetBootProgress(2, 'v3.2.7 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.7.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV328() {
+  dkdSetBootProgress(2, 'v3.2.8 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.8.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -192,7 +192,7 @@ async function dkdBootWebV327() {
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
   await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.2.7 modern arayüz hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.2.8 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
   await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV324Base');
   dkdSetBootProgress(96, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
@@ -202,10 +202,10 @@ async function dkdBootWebV327() {
   await dkdAppendPackedStyle('./assets/v3.2.4.css.payload.txt', 'dkdWebV324Base');
   await dkdAppendPackedStyle('./assets/v3.2.5.css.payload.txt', 'dkdWebV325');
   await import(`./v3.2.5.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(99, 'v3.2.7 etkileşim düzeltmeleri uygulanıyor');
-  await dkdAppendStyleLink('./assets/v3.2.7.css', 'dkdWebV327');
-  await import(`./v3.2.7.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(99, 'v3.2.8 site arama, kazanç ve popup düzeltmeleri uygulanıyor');
+  await dkdAppendStyleLink('./assets/v3.2.8.css', 'dkdWebV328');
+  await import(`./v3.2.8.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV327().catch(dkdShowBootError);
+dkdBootWebV328().catch(dkdShowBootError);
