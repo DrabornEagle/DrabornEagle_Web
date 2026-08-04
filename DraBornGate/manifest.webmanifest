@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v3.0.0",
+  "name": "DraBornGate Web v3.0.1",
   "short_name": "DraBornGate",
-  "description": "6 haneli Kuryeni Bul kartı, ayrıntılı Canlı Kurye Kuyruğu ve DraBornGate uygulamasıyla aynı motosiklet ikonunu sunan geçiş platformu.",
+  "description": "Doğrudan çalışan 6 haneli Kuryeni Bul, gerçek Canlı Kurye Kuyruğu, ayrıntılı adres bilgileri ve ortak motosiklet ikonunu sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
