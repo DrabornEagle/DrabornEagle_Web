@@ -1,5 +1,5 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.0.0';
+const DKD_WEB_VERSION = '3.0.1';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -127,8 +127,10 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV30() {
-  dkdSetBootProgress(4, 'Başlatılıyor');
+async function dkdBootWebV301() {
+  dkdSetBootProgress(3, 'v3.0.1 sürüm koruması başlatılıyor');
+  await import(`./v3.0.1.guard.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
   const dkdSimpleMode = dkdIsSimpleModeRequested();
 
@@ -166,23 +168,24 @@ async function dkdBootWebV30() {
     dkdSetBootProgress(82, 'Bağımsız Sade Tema hazırlanıyor');
   }
 
-  dkdSetBootProgress(89, 'Canlı geçiş sistemi bağlanıyor');
+  dkdSetBootProgress(88, 'Güvenli eşleştirme köprüsü bağlanıyor');
   await dkdAppendStyleLink('./assets/v2.8.css', 'dkdWebV28');
   await import(`./v2.8.js?v=${DKD_WEB_VERSION}`);
 
-  dkdSetBootProgress(94, 'Uygulama motosiklet ikonu hazırlanıyor');
+  dkdSetBootProgress(92, 'Uygulama motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
 
-  dkdSetBootProgress(97, 'v3.0 ayrıntılı kurye ekranı hazırlanıyor');
+  dkdSetBootProgress(95, 'v3.0.1 ayrıntılı kurye ekranı hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
+  await dkdAppendStyleLink('./assets/v3.0.1.css', 'dkdWebV301');
 
-  dkdSetBootProgress(98, 'v3.0 ayrıntılı kurye verileri bağlanıyor');
-  await import(`./v3.0.data.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(97, 'Canlı Kurye Kuyruğu veri kaynağı açılıyor');
+  await import(`./v3.0.1.data.js?v=${DKD_WEB_VERSION}`);
 
-  dkdSetBootProgress(99, 'Kuryeni Bul ve canlı kuyruk bağlanıyor');
-  await import(`./v3.0.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(99, 'Kuryeni Bul doğrudan doğrulamaya bağlanıyor');
+  await import(`./v3.0.1.js?v=${DKD_WEB_VERSION}`);
 
   dkdFinishBoot();
 }
 
-dkdBootWebV30().catch(dkdShowBootError);
+dkdBootWebV301().catch(dkdShowBootError);
