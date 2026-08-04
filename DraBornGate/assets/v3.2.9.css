@@ -1,0 +1,11 @@
+.dkd-v328-site-host[data-dkd-v329-stable="true"] .dkd-v328-site-picker,
+.dkd-v328-site-host[data-dkd-v329-stable="true"] .dkd-v328-site-row,
+.dkd-v328-site-host[data-dkd-v329-stable="true"] .dkd-v328-site-row input {
+  animation: none !important;
+  transition: border-color .18s ease, background-color .18s ease, color .18s ease !important;
+  transform: none !important;
+}
+
+.dkd-v328-site-host[data-dkd-v329-stable="true"] {
+  contain: layout paint;
+}
