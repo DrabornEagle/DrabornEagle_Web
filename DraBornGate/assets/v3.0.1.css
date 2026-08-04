@@ -1,0 +1,4 @@
+body.dkd-v30-simple-active #dkd-v28-root .dkd-v28-brand>div:last-child span:after{content:"Güvenlik Sade Tema · Web v3.0.1"!important}
+.dkd-v301-loading .dkd-v301-dots{width:auto!important;height:auto!important;display:flex!important;gap:9px!important}
+.dkd-v301-dots i{width:15px;height:15px;border-radius:50%;background:linear-gradient(145deg,var(--dkd-v30-cyan),var(--dkd-v30-violet));animation:dkdV301Dots 1s ease-in-out infinite}.dkd-v301-dots i:nth-child(2){animation-delay:.14s}.dkd-v301-dots i:nth-child(3){animation-delay:.28s}@keyframes dkdV301Dots{50%{transform:translateY(-10px);opacity:.55}}
+@media(prefers-reduced-motion:reduce){.dkd-v301-dots i{animation:none}}
