@@ -20,6 +20,7 @@ async function dkdV327LoadPackedModule(dkdFileName, dkdLabel) {
 await import(`./v3.2.5.stability.js?v=${DKD_V327_VERSION}`);
 await dkdV327LoadPackedModule('./v3.2.4.js.payload.txt', 'temel arayüz');
 await dkdV327LoadPackedModule('./v3.2.5.session.js.payload.txt', 'oturum ve rol');
-await dkdV327LoadPackedModule('./v3.2.5.features.js.payload.txt', 'Admin, kazanç ve temel popup');
 await import(`./v3.2.7.features.js?v=${DKD_V327_VERSION}`);
+await dkdV327LoadPackedModule('./v3.2.5.features.js.payload.txt', 'Admin, kazanç ve temel popup');
+window.__DKD_GATE_V327_FEATURES__?.patch?.();
 sessionStorage.setItem('dkd_gate_web_version', DKD_V327_VERSION);
