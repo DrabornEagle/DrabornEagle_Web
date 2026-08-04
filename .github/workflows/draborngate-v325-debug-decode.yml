@@ -1,0 +1,38 @@
+name: DraBornGate v3.2.5 Debug Decode
+
+on:
+  push:
+    branches:
+      - debug/draborngate-v325-inspect
+    paths:
+      - '.github/workflows/draborngate-v325-debug-decode.yml'
+      - 'DraBornGate/.debug-trigger-v325'
+
+permissions:
+  contents: write
+
+jobs:
+  decode:
+    if: ${{ !contains(github.event.head_commit.message, '[decoded]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: debug/draborngate-v325-inspect
+      - name: Sıkıştırılmış katmanları aç
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p DraBornGate/.debug-v325
+          base64 -d DraBornGate/assets/v3.2.4.js.payload.txt | gzip -dc > DraBornGate/.debug-v325/v3.2.4.ui.js
+          base64 -d DraBornGate/assets/v3.2.4.session.js.payload.txt | gzip -dc > DraBornGate/.debug-v325/v3.2.4.session.source.js
+          base64 -d DraBornGate/assets/v3.2.4.auth.js.payload.txt | gzip -dc > DraBornGate/.debug-v325/v3.2.4.auth.source.js
+          base64 -d DraBornGate/assets/v3.2.4.css.payload.txt | gzip -dc > DraBornGate/.debug-v325/v3.2.4.css
+      - name: İnceleme kaynaklarını dala yaz
+        shell: bash
+        run: |
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add DraBornGate/.debug-v325
+          git commit -m 'chore: decode DraBornGate v3.2.4 sources [decoded]'
+          git push origin HEAD:debug/draborngate-v325-inspect
