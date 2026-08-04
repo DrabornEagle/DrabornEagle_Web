@@ -1,0 +1,304 @@
+/* DraBornGate Web v3.2.4 — premium sade tema, rol bağımsız Admin ve kurye site akışı */
+
+.dkd-v324-hidden-courier-site{display:none!important}
+
+/* Sade Tema: Kuryeni Bul ve Eşleştir */
+body.dkd-v324-active .dkd-v31-finder.dkd-v324-finder{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  border:1px solid rgba(104,222,255,.38);
+  border-radius:30px;
+  background:#07111f;
+  padding:clamp(22px,4vw,42px);
+  gap:clamp(22px,4vw,44px);
+}
+body.dkd-v324-active .dkd-v324-finder-motion{
+  position:absolute;
+  z-index:-1;
+  top:0;
+  left:-34%;
+  width:34%;
+  height:3px;
+  background:#6fe7ff;
+  animation:dkdV324FinderLine 3.2s cubic-bezier(.4,0,.2,1) infinite;
+}
+body.dkd-v324-active .dkd-v31-finder-copy>p{display:none!important}
+body.dkd-v324-active .dkd-v31-finder-copy>span{
+  display:inline-flex;
+  width:max-content;
+  padding:8px 12px;
+  border:1px solid rgba(111,231,255,.26);
+  border-radius:999px;
+  background:#0d1b2c;
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+body.dkd-v324-active .dkd-v31-finder-copy h1{
+  margin-top:14px;
+  font-size:clamp(32px,5vw,58px)!important;
+  line-height:1.02!important;
+  letter-spacing:-.045em;
+}
+body.dkd-v324-active .dkd-v31-search-form{
+  position:relative;
+  border:1px solid rgba(137,165,202,.25);
+  border-radius:24px;
+  background:#0b1727;
+  padding:18px;
+}
+body.dkd-v324-active .dkd-v31-search-form label{
+  font-size:13px!important;
+  letter-spacing:.12em;
+  font-weight:900;
+}
+body.dkd-v324-active #dkd-v31-code{
+  min-height:72px;
+  border-radius:18px;
+  border:1px solid rgba(111,231,255,.28);
+  background:#050c16;
+  font-size:clamp(28px,6vw,42px)!important;
+  font-weight:950;
+  letter-spacing:.2em;
+  text-align:center;
+}
+body.dkd-v324-active #dkd-v31-search-form>button{
+  min-height:62px;
+  border-radius:18px;
+  border:1px solid #6fe7ff;
+  background:#6fe7ff;
+  color:#03101a;
+  font-size:17px!important;
+  font-weight:950;
+  transition:transform .22s ease,background-color .22s ease;
+}
+body.dkd-v324-active #dkd-v31-search-form>button:hover{transform:translateY(-2px);background:#8decff}
+body.dkd-v324-active #dkd-v31-search-form>button:active{transform:translateY(0) scale(.99)}
+body.dkd-v324-active #dkd-v31-search-form>button svg{width:23px;height:23px}
+
+/* Canlı Kuyruk: başlangıçta kapalı kategoriler ve temiz özetler */
+body.dkd-v324-active .dkd-v31-live-queue{
+  border:1px solid rgba(133,157,190,.22);
+  border-radius:26px;
+  background:#081221;
+}
+body.dkd-v324-active .dkd-v31-queue-category{
+  border:1px solid rgba(127,154,189,.2);
+  border-radius:18px;
+  background:#0b1727;
+  overflow:hidden;
+}
+body.dkd-v324-active .dkd-v31-queue-category>summary{
+  min-height:76px;
+  padding:16px 18px;
+}
+body.dkd-v324-active .dkd-v31-queue-category>summary strong{font-size:18px!important}
+body.dkd-v324-active .dkd-v31-queue-category>summary small{font-size:14px!important}
+body.dkd-v324-active .dkd-v31-queue-category[open]>summary{background:#0d1c2f}
+body.dkd-v324-active .dkd-v31-queue-category>summary svg{transition:transform .24s ease}
+body.dkd-v324-active .dkd-v31-queue-category[open]>summary svg{transform:rotate(180deg)}
+
+/* Eşleşme popup: bütün bilgiler tek premium pencerede */
+body.dkd-v324-active .dkd-v31-modal-panel.dkd-v324-pass-modal{
+  width:min(980px,calc(100vw - 24px));
+  max-height:min(92vh,980px);
+  border:1px solid rgba(111,231,255,.34);
+  border-radius:28px;
+  background:#07111f;
+  overflow:hidden;
+}
+body.dkd-v324-active .dkd-v324-pass-modal>header{
+  position:sticky;
+  top:0;
+  z-index:3;
+  border-bottom:1px solid rgba(130,157,194,.2);
+  background:#0a1626;
+  padding:22px 24px;
+}
+body.dkd-v324-active .dkd-v324-pass-modal>header h2{
+  font-size:clamp(27px,4vw,40px)!important;
+  letter-spacing:-.035em;
+}
+body.dkd-v324-active .dkd-v324-pass-modal>header p{
+  max-width:700px;
+  font-size:15px!important;
+  line-height:1.55;
+}
+body.dkd-v324-active .dkd-v324-modal-tags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+  margin-top:12px;
+}
+body.dkd-v324-active .dkd-v324-modal-tags span{
+  padding:7px 10px;
+  border:1px solid rgba(111,231,255,.22);
+  border-radius:999px;
+  background:#0f2034;
+  color:#c9f6ff;
+  font-size:12px;
+  font-weight:850;
+}
+body.dkd-v324-active .dkd-v324-pass-modal>main{
+  padding:22px 24px 26px;
+  overflow:auto;
+}
+body.dkd-v324-active .dkd-v324-pass-modal .dkd-v31-pass-hero,
+body.dkd-v324-active .dkd-v324-pass-modal .dkd-v31-route-box,
+body.dkd-v324-active .dkd-v324-pass-modal .dkd-v31-detail,
+body.dkd-v324-active .dkd-v324-pass-modal .dkd-v31-code-display{
+  border-color:rgba(127,157,195,.22)!important;
+  background:#0b1727!important;
+}
+body.dkd-v324-active .dkd-v324-pass-modal .dkd-v31-detail strong{font-size:16px!important;line-height:1.45}
+body.dkd-v324-active .dkd-v324-pass-modal .dkd-v31-code-display strong{font-size:clamp(28px,6vw,42px)!important;letter-spacing:.18em}
+body.dkd-v324-active .dkd-v324-pass-modal>footer{
+  border-top:1px solid rgba(130,157,194,.2);
+  background:#0a1626;
+  padding:16px 24px calc(16px + env(safe-area-inset-bottom));
+}
+
+/* Tamamlanan / Aktif Geçiş / Aktif Site */
+body.dkd-v324-active .dkd-v324-minimal-stat{
+  min-height:116px!important;
+  border:1px solid rgba(126,151,184,.18)!important;
+  border-radius:20px!important;
+  background:#0a1524!important;
+  padding:18px 20px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  justify-content:center!important;
+  gap:6px!important;
+}
+body.dkd-v324-active .dkd-v324-minimal-stat small,
+body.dkd-v324-active .dkd-v324-minimal-stat span,
+body.dkd-v324-active .dkd-v324-minimal-stat p{
+  font-size:15px!important;
+  font-weight:800!important;
+  color:#9eafc6!important;
+}
+body.dkd-v324-active .dkd-v324-minimal-stat strong,
+body.dkd-v324-active .dkd-v324-minimal-stat b,
+body.dkd-v324-active .dkd-v324-minimal-stat h2,
+body.dkd-v324-active .dkd-v324-minimal-stat h3{
+  font-size:clamp(30px,4vw,44px)!important;
+  line-height:1!important;
+  letter-spacing:-.04em!important;
+}
+body.dkd-v324-active .dkd-v324-minimal-stat svg{width:22px!important;height:22px!important;opacity:.72}
+
+/* Profil ve Bağlantı altında rol bağımsız Admin Paneli */
+body.dkd-v324-active .dkd-v324-admin-menu{
+  border:1px solid rgba(111,231,255,.3)!important;
+  background:#0d1b2c!important;
+}
+body.dkd-v324-active .dkd-v324-admin-menu strong{font-size:16px!important}
+body.dkd-v324-active .dkd-v324-admin-menu svg{width:22px;height:22px}
+#dkd-v324-admin-modal[hidden]{display:none!important}
+#dkd-v324-admin-modal{
+  position:fixed;
+  inset:0;
+  z-index:2147483500;
+  display:grid;
+  place-items:center;
+  padding:12px;
+}
+.dkd-v324-admin-backdrop{position:absolute;inset:0;background:rgba(2,7,14,.82)}
+.dkd-v324-admin-panel{
+  position:relative;
+  width:min(1080px,calc(100vw - 24px));
+  max-height:92vh;
+  overflow:auto;
+  border:1px solid rgba(111,231,255,.32);
+  border-radius:28px;
+  background:#07111f;
+  color:#eef8ff;
+}
+.dkd-v324-admin-panel>header{
+  position:sticky;
+  top:0;
+  z-index:2;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:22px 24px;
+  border-bottom:1px solid rgba(130,157,194,.2);
+  background:#0a1626;
+}
+.dkd-v324-admin-panel>header span{font-size:12px;font-weight:900;letter-spacing:.12em;color:#6fe7ff}
+.dkd-v324-admin-panel>header h2{margin:4px 0;font-size:clamp(28px,4vw,42px)}
+.dkd-v324-admin-panel>header p{margin:0;color:#9eafc6}
+.dkd-v324-admin-panel>header button{width:44px;height:44px;border:1px solid rgba(139,164,197,.28);border-radius:14px;background:#0d1b2c;color:#fff}
+.dkd-v324-admin-panel>header svg{width:22px;height:22px}
+.dkd-v324-admin-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;padding:20px 24px}
+.dkd-v324-admin-stats article{border:1px solid rgba(127,154,189,.2);border-radius:18px;background:#0b1727;padding:16px}
+.dkd-v324-admin-stats small{display:block;color:#9eafc6;font-weight:750}
+.dkd-v324-admin-stats strong{display:block;margin-top:5px;font-size:32px}
+.dkd-v324-admin-section{margin:0 24px 16px;border:1px solid rgba(127,154,189,.2);border-radius:18px;background:#0b1727;overflow:hidden}
+.dkd-v324-admin-section>summary{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:17px 18px;cursor:pointer}
+.dkd-v324-admin-section>summary strong{display:block;font-size:18px}
+.dkd-v324-admin-section>summary small{display:block;margin-top:3px;color:#9eafc6}
+.dkd-v324-admin-section>summary>b{font-size:24px;color:#6fe7ff;transition:transform .2s ease}
+.dkd-v324-admin-section[open]>summary>b{transform:rotate(45deg)}
+.dkd-v324-admin-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;padding:0 18px 18px}
+.dkd-v324-admin-form label{display:grid;gap:7px;color:#b9c8da;font-size:14px;font-weight:800}
+.dkd-v324-admin-form input,.dkd-v324-admin-form select{min-height:50px;border:1px solid rgba(132,158,191,.28);border-radius:14px;background:#07111f;color:#fff;padding:0 13px;font-size:15px}
+.dkd-v324-admin-form>button{min-height:52px;border:1px solid #6fe7ff;border-radius:14px;background:#6fe7ff;color:#03101a;font-size:16px;font-weight:950}
+.dkd-v324-admin-toggle{display:flex!important;align-items:center;gap:10px}.dkd-v324-admin-toggle input{min-height:auto;width:20px;height:20px}
+.dkd-v324-admin-links{display:grid;gap:10px;padding:0 18px 18px}
+.dkd-v324-admin-links article{display:flex;justify-content:space-between;align-items:center;gap:14px;border:1px solid rgba(127,154,189,.18);border-radius:15px;background:#07111f;padding:14px}
+.dkd-v324-admin-links strong,.dkd-v324-admin-links span,.dkd-v324-admin-links small{display:block}.dkd-v324-admin-links span{margin-top:3px}.dkd-v324-admin-links small{margin-top:4px;color:#9eafc6}
+.dkd-v324-admin-links button,.dkd-v324-admin-error button{min-height:42px;border:1px solid rgba(111,231,255,.4);border-radius:12px;background:#0d1b2c;color:#e9fbff;padding:0 14px;font-weight:850}
+.dkd-v324-admin-loading,.dkd-v324-admin-error{min-height:320px;display:grid;place-items:center;align-content:center;gap:16px;padding:30px;text-align:center}
+.dkd-v324-admin-loading span{width:42px;height:42px;border:4px solid rgba(111,231,255,.2);border-top-color:#6fe7ff;border-radius:50%;animation:dkdV324Spin .8s linear infinite}
+
+/* Yeni Geçiş Talebi: varsayılan site yok, yalnızca arama ile seçim */
+body.dkd-v324-active select.dkd-v324-native-site{position:absolute!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}
+body.dkd-v324-active .dkd-v324-site-search-upgraded,
+body.dkd-v324-active .dkd-v324-site-search{
+  border:1px solid rgba(111,231,255,.26)!important;
+  border-radius:18px!important;
+  background:#0a1727!important;
+  padding:14px!important;
+}
+body.dkd-v324-active .dkd-v23-site-input-shell,
+body.dkd-v324-active .dkd-v324-site-search label{
+  min-height:56px!important;
+  border:1px solid rgba(133,160,194,.26)!important;
+  border-radius:15px!important;
+  background:#06101c!important;
+}
+body.dkd-v324-active .dkd-v23-site-input-shell input,
+body.dkd-v324-active .dkd-v324-site-search input{
+  font-size:16px!important;
+  font-weight:750!important;
+}
+body.dkd-v324-active .dkd-v23-site-results,
+body.dkd-v324-active .dkd-v324-site-search>div{
+  margin-top:10px!important;
+  border:1px solid rgba(133,160,194,.2)!important;
+  border-radius:14px!important;
+  background:#07111f!important;
+  overflow:hidden!important;
+}
+body.dkd-v324-active .dkd-v324-site-search>div button{width:100%;display:flex;justify-content:space-between;gap:12px;border:0;border-bottom:1px solid rgba(133,160,194,.14);background:#07111f;color:#eef8ff;padding:14px;text-align:left}
+body.dkd-v324-active .dkd-v324-site-search>div button:hover{background:#0d1b2c}
+
+@keyframes dkdV324FinderLine{0%{transform:translateX(0)}55%,100%{transform:translateX(400%)}}
+@keyframes dkdV324Spin{to{transform:rotate(360deg)}}
+
+@media(max-width:760px){
+  body.dkd-v324-active .dkd-v31-finder.dkd-v324-finder{border-radius:22px;padding:18px}
+  body.dkd-v324-active .dkd-v31-search-form{padding:14px;border-radius:19px}
+  body.dkd-v324-active .dkd-v324-pass-modal>header,body.dkd-v324-active .dkd-v324-pass-modal>main,body.dkd-v324-active .dkd-v324-pass-modal>footer{padding-left:16px;padding-right:16px}
+  .dkd-v324-admin-stats{grid-template-columns:1fr;padding:16px}
+  .dkd-v324-admin-section{margin-left:16px;margin-right:16px}
+  .dkd-v324-admin-form{grid-template-columns:1fr}
+  .dkd-v324-admin-links article{align-items:flex-start;flex-direction:column}
+}
+
+@media(prefers-reduced-motion:reduce){
+  body.dkd-v324-active .dkd-v324-finder-motion,.dkd-v324-admin-loading span{animation:none}
+  *{scroll-behavior:auto!important}
+}
