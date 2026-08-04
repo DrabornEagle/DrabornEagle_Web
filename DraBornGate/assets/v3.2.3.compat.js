@@ -1,5 +1,10 @@
 const DKD_V323_COMPAT_VERSION = '3.2.3';
 
+const dkdV323CompatStyle = document.createElement('style');
+dkdV323CompatStyle.dataset.dkdV323Compat = 'true';
+dkdV323CompatStyle.textContent = '.dkd-v323-legacy-site-search{display:none!important}';
+document.head.appendChild(dkdV323CompatStyle);
+
 function dkdV323ProtectLegacySiteSearch(dkdRoot = document) {
   const dkdWidgets = dkdRoot.matches?.('.dkd-v23-site-search')
     ? [dkdRoot]
