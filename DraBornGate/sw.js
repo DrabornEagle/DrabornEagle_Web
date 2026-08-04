@@ -5,8 +5,9 @@ const DKD_PRECACHE = [
   '/DraBornGate/index.html',
   '/DraBornGate/Guvenlik-Sade-Tema/',
   '/DraBornGate/Guvenlik-Sade-Tema/index.html',
+  '/DraBornGate/assets/app.js?v=3.2.3',
+  '/DraBornGate/assets/v3.2.3.guard.js?v=3.2.3',
   '/DraBornGate/assets/v3.2.3.css?v=3.2.3',
-  '/DraBornGate/assets/v3.2.3.hotfix.js?v=3.2.3',
   '/DraBornGate/assets/v3.2.3.data.js?v=3.2.3',
   '/DraBornGate/assets/v3.2.3.ui.js?v=3.2.3',
   '/DraBornGate/manifest.webmanifest?v=3.2.3'
