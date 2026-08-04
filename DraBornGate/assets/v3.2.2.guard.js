@@ -1,6 +1,6 @@
 (() => {
   const DKD_V322_VERSION = '3.2.2';
-  const DKD_V322_VERSION_PATTERN = /(?:DraBornGate\s+Web\s+)?v(?:2(?:\.\d+){0,2}|3\.(?:0(?:\.\d+)?|1(?:\.\d+)?|2(?:\.[0-1])?))\b/gi;
+  const DKD_V322_VERSION_PATTERN = /(?:DraBornGate\s+Web\s+)?v(?:2(?:\.\d+){0,2}|3\.(?:0(?:\.\d+)?|1(?:\.\d+)?|2(?:\.[0-1])?))(?!\.\d)\b/gi;
 
   function dkdV322PatchTextNode(dkdNode) {
     const dkdValue = String(dkdNode?.nodeValue || '');
