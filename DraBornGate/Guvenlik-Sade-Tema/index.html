@@ -41,6 +41,108 @@
   </div>
   <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div><div class="ambient ambient-c"></div>
   <div id="dkd-app" class="app-root"><div class="boot-shell"><div class="boot-logo"><span>DBG</span></div><div class="boot-copy"><strong>Güvenlik Sade Tema v3.2.12</strong><span>Canlı kuyruk ve güncel güvenlik ekranı hazırlanıyor</span></div><div class="boot-progress"><i></i></div></div></div>
-  <script type="module" src="./assets/app.v3.2.12.js?v=3.2.12"></script>
+  <script>
+    (() => {
+      const dkdSetProgress = (dkdPercent, dkdLabel) => {
+        const dkdFill = document.querySelector('#dkd-v28-progress-fill');
+        const dkdProgress = document.querySelector('#dkd-v28-progress');
+        const dkdText = document.querySelector('#dkd-v28-progress-label');
+        if (dkdFill) dkdFill.style.width = `${dkdPercent}%`;
+        if (dkdProgress) dkdProgress.setAttribute('aria-valuenow', String(dkdPercent));
+        if (dkdText) dkdText.textContent = dkdLabel;
+      };
+
+      window.dkdV3212EmergencyBoot = () => {
+        if (window.__DKD_GATE_V3212_EMERGENCY_STARTED__) return;
+        window.__DKD_GATE_V3212_EMERGENCY_STARTED__ = true;
+        dkdSetProgress(6, 'Açılış kurtarma modu başlatılıyor');
+
+        let dkdWorker = null;
+        let dkdOriginalRegister = null;
+        let dkdOwnDescriptor = null;
+        try {
+          if ('serviceWorker' in navigator && navigator.serviceWorker?.register) {
+            dkdWorker = navigator.serviceWorker;
+            dkdOriginalRegister = dkdWorker.register.bind(dkdWorker);
+            dkdOwnDescriptor = Object.getOwnPropertyDescriptor(dkdWorker, 'register') || null;
+            Object.defineProperty(dkdWorker, 'register', {
+              configurable: true,
+              writable: true,
+              value: () => Promise.resolve({ update: async () => undefined }),
+            });
+          }
+        } catch (dkdError) {
+          console.warn('Kurtarma modu Service Worker geçişi uygulanamadı.', dkdError);
+        }
+
+        window.__DKD_GATE_V3212_RESTORE_WORKER__ = () => {
+          try {
+            if (dkdWorker) {
+              if (dkdOwnDescriptor) Object.defineProperty(dkdWorker, 'register', dkdOwnDescriptor);
+              else delete dkdWorker.register;
+            }
+          } catch (dkdError) {
+            console.warn('Service Worker kaydı geri yüklenemedi.', dkdError);
+          }
+          if (dkdOriginalRegister) {
+            setTimeout(() => {
+              void dkdOriginalRegister('./sw.js?v=3.2.12-recovery-3', {
+                scope: '/DraBornGate/',
+                updateViaCache: 'none',
+              }).then((dkdRegistration) => dkdRegistration.update().catch(() => undefined)).catch(() => undefined);
+            }, 1200);
+          }
+        };
+
+        const dkdModule = document.createElement('script');
+        dkdModule.type = 'module';
+        dkdModule.textContent = `
+          const dkdRecoveryProgress = (dkdPercent, dkdLabel) => {
+            const dkdFill = document.querySelector('#dkd-v28-progress-fill');
+            const dkdProgress = document.querySelector('#dkd-v28-progress');
+            const dkdText = document.querySelector('#dkd-v28-progress-label');
+            if (dkdFill) dkdFill.style.width = \`${'${dkdPercent}'}%\`;
+            if (dkdProgress) dkdProgress.setAttribute('aria-valuenow', String(dkdPercent));
+            if (dkdText) dkdText.textContent = dkdLabel;
+          };
+          try {
+            dkdRecoveryProgress(12, 'Eski önbellekler temizleniyor');
+            if ('caches' in window) {
+              const dkdKeys = await caches.keys().catch(() => []);
+              await Promise.all(dkdKeys.filter((dkdKey) => dkdKey.startsWith('draborngate-web-')).map((dkdKey) => caches.delete(dkdKey)));
+            }
+            dkdRecoveryProgress(24, 'Kararlı uygulama çekirdeği başlatılıyor');
+            await import('./assets/app.v3.2.11.js?v=3.2.12-recovery-3');
+            document.documentElement.dataset.dkdGateVersion = '3.2.12';
+            sessionStorage.setItem('dkd_gate_web_version', '3.2.12');
+            document.documentElement.classList.remove('dkd-simple-booting', 'dkd-v3212-booting');
+            dkdRecoveryProgress(100, 'Hazır');
+            const dkdSplash = document.querySelector('#dkd-v28-splash');
+            dkdSplash?.classList.add('is-hidden');
+            setTimeout(() => dkdSplash?.remove(), 460);
+          } catch (dkdError) {
+            console.error('DraBornGate Sade Tema açılış kurtarma hatası:', dkdError);
+            document.documentElement.classList.remove('dkd-simple-booting', 'dkd-v3212-booting');
+            dkdRecoveryProgress(100, 'Açılış tamamlanamadı: ' + String(dkdError?.message || dkdError));
+            const dkdRetry = document.querySelector('#dkd-v28-retry');
+            if (dkdRetry) dkdRetry.hidden = false;
+          } finally {
+            window.__DKD_GATE_V3212_RESTORE_WORKER__?.();
+          }
+        `;
+        document.body.appendChild(dkdModule);
+      };
+
+      setTimeout(() => {
+        const dkdSplash = document.querySelector('#dkd-v28-splash');
+        const dkdProgress = Number(document.querySelector('#dkd-v28-progress')?.getAttribute('aria-valuenow') || 0);
+        if (dkdSplash && dkdProgress <= 2) window.dkdV3212EmergencyBoot();
+      }, 3500);
+      setTimeout(() => {
+        if (document.querySelector('#dkd-v28-splash')) window.dkdV3212EmergencyBoot();
+      }, 22000);
+    })();
+  </script>
+  <script type="module" src="./assets/app.v3.2.12.js?v=3.2.12-recovery-3" onerror="window.dkdV3212EmergencyBoot?.()"></script>
 </body>
 </html>
