@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.2';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.2-observer-loop-hotfix';
+const DKD_WEB_VERSION = '3.2.3';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.3-admin-simple-site-search';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -146,9 +146,9 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV322() {
-  dkdSetBootProgress(2, 'v3.2.2 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.2.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV323() {
+  dkdSetBootProgress(2, 'v3.2.3 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.3.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -187,14 +187,18 @@ async function dkdBootWebV322() {
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
   await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.2.2 modern arayüz hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.2.3 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
-  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV322Fixes');
-  dkdSetBootProgress(97, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
+  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV323LegacyFixes');
+
+  dkdSetBootProgress(96, 'Güvenli oturum katmanı hazırlanıyor');
   await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(99, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
+  await import(`./v3.2.3.data.js?v=${DKD_WEB_VERSION}`);
+
+  dkdSetBootProgress(98, 'Admin Paneli ve kurye eşleştirme bağlanıyor');
   await import(`./v3.2.1.js?v=${DKD_WEB_VERSION}`);
+  await import(`./v3.2.3.ui.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV322().catch(dkdShowBootError);
+dkdBootWebV323().catch(dkdShowBootError);
