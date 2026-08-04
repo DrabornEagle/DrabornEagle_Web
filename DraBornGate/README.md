@@ -1,41 +1,39 @@
-# DraBornGate Web v2.8.0
+# DraBornGate Web v3.0.0
 
 DraBornGate mobil uygulamasıyla aynı Supabase projesini, ortak kullanıcı oturumunu, `draborngate` şemasını ve mevcut `dkd_gate_*` RPC işlemlerini kullanan rol bazlı web istemcisidir.
 
-## v2.8.0 yükleme ve tema mimarisi
+## v3.0 Güvenlik Sade Tema
 
-- Açılış çubuğu artık ileri-geri oynayan dekoratif animasyon değildir; çekirdek paket, rol sistemi, tema dosyaları ve canlı geçiş katmanı gerçekten tamamlandıkça ilerler.
-- Yükleme 20 saniyeyi aşarsa ekran sonsuza kadar beklemez ve `Tekrar Dene` seçeneğini gösterir.
-- Açılış işareti `DG` yerine animasyonlu `DBG` olarak güncellenmiştir.
-- Güvenlik Sade Tema adresinde v2.4, v2.5, v2.6 ve v2.7 tema katmanları yüklenmez. Yalnızca ana güvenlik çekirdeği ve bağımsız v2.8 ekranı çalışır.
-- Modern paneldeki büyük “Modern Temadan Sade Temaya Geçiş” kartı kaldırılır.
-- Güvenlik rolü doğrulandığında zil bildirim düğmesinin yanına yalnızca tema geçişini ifade eden ikon eklenir.
-- Tema geçişleri çakışan route ve oturum anahtarlarını temizleyerek `location.replace` ile güvenli biçimde gerçekleştirilir.
+- Sade Tema artık üst bölümde Modern Temadaki 6 haneli kurye kodu akışını kullanan **Kuryeni Bul** kartını gösterir.
+- Kod doğrulama yeni bir API oluşturmaz; görünmeyen yerel giriş alanı ve mevcut doğrulama düğmesi üzerinden güvenli Supabase/RPC akışına bağlanır.
+- **Canlı Kurye Kuyruğu** ayrı ve görünür bir bölüm olarak eklenmiştir.
+- Kuyruktaki her kurye için kurye adı, telefon, firma/platform, araç, plaka, nereden geldiği, gideceği tam adres, site, blok, daire, teslim alacak kişi, sipariş/kayıt numarası, varış, mesafe, durum ve teslimat notu gösterilir.
+- Aynı talebin tekrar eden DOM kopyaları tekilleştirilir; yeni kayıtlar iki taramada doğrulanır, geçici kaybolmalar altı boş tarama boyunca korunur.
+- Kuyruk henüz açılmadıysa sistem Modern Tema çekirdeğindeki Kuryeni Bul, kurye kodu veya kurye kuyruğu işlemini kontrollü biçimde açar.
+- Güvenlik görevlisi kuyruktan bir kurye seçip 6 haneli kodu doğrudan Kuryeni Bul kartından eşleştirebilir.
 
-## Kararlı geçiş talepleri
+## Birleşik motosiklet ikonu
 
-- Bekleyen sayı yalnızca gerçek 6 haneli eşleştirme alanları ve bağlı yerel doğrulama düğmelerinden hesaplanır.
-- Aynı talebin birden fazla DOM kopyası kimlik, plaka, hedef veya temizlenmiş talep parmak iziyle tekilleştirilir.
-- Yeni talepler iki ardışık taramada doğrulandıktan sonra gösterilir.
-- Kaybolan talepler beş ardışık boş taramadan sonra kaldırılır; geçici yeniden çizimlerde sayaç sıçramaz.
-- Kuyruk düğmesi hazır değilse MutationObserver ve kontrollü tekrar deneme sistemiyle otomatik açılır; sayfayı yenilemek gerekmez.
-- Talep kartları yalnızca güvenilir ve yapılandırılmış kurye, plaka/kayıt ve hedef bilgilerini gösterir. Profil, Premium Menü ve panel başlıkları kartlara karışmaz.
-- Kart arayüzü büyük kod alanı, durum rozeti, radar, renkli geri bildirimler ve telefon uyumlu modern yerleşimle hazırlanmıştır.
+- DraBornGate uygulamasındaki motosiklet çizimi v3.0 ortak web ikonu olarak kullanılır.
+- Sade Tema kartları, sayaçlar, boş durumlar ve kurye ayrıntıları bu ikonu kullanır.
+- Web tarafındaki `kurye`, `courier`, `motosiklet`, `motorcycle`, `rider` ve `teslimat` bağlamındaki eski motosiklet ikonları MutationObserver ile yakalanıp aynı ikonla değiştirilir.
+- Hareket azaltma tercihi açık olan cihazlarda ikon animasyonları kapatılır.
 
 ## Güvenlik yaklaşımı
 
-Sade Tema yeni bir veri API’si veya yetkilendirme yolu oluşturmaz. Mevcut Supabase oturumu, RPC çağrıları, RLS politikaları, gerçek 6 haneli kod alanı ve mevcut eşleştirme düğmesi kullanılmaya devam eder.
+Sade Tema yeni bir yetkilendirme, veri API’si veya ayrı kurye kaynağı oluşturmaz. Mevcut oturum, rol kontrolü, RLS politikaları, gerçek 6 haneli kod alanı ve eşleştirme düğmesi kullanılmaya devam eder.
 
 Sade Tema adresi:
 
 `https://www.draborneagle.com/DraBornGate/Guvenlik-Sade-Tema/`
 
-## Dosyalar
+## v3.0 dosyaları
 
-- `index.html`: Web v2.8.0 giriş noktası ve gerçek ilerleme gösteren DBG karşılama ekranı
-- `Guvenlik-Sade-Tema/index.html`: doğrudan bağımsız Sade Tema giriş adresi
-- `assets/app.js`: gerçek yükleme ilerlemesi ve Sade Tema katman izolasyonu
-- `assets/v2.8.js`: kararlı talep tarama, tekilleştirme, tema geçişi ve eşleştirme köprüsü
-- `assets/v2.8.css`: renkli, animasyonlu ve telefon uyumlu bağımsız Sade Tema tasarımı
+- `index.html`: Web v3.0.0 giriş noktası
+- `Guvenlik-Sade-Tema/index.html`: doğrudan Sade Tema giriş adresi
+- `assets/app.js`: v3.0 yükleme sırası ve sürüm yönetimi
+- `assets/v3.0.data.js`: ayrıntılı kurye veri eşleme ve mevcut 6 haneli doğrulama köprüsü
+- `assets/v3.0.js`: Kuryeni Bul, Canlı Kurye Kuyruğu ve tüm motosiklet ikonlarını tekilleştirme katmanı
+- `assets/v3.0.css`: telefon, tablet ve masaüstü uyumlu v3.0 Sade Tema tasarımı
 - `manifest.webmanifest`: kurulabilir web uygulaması bilgileri
-- `sw.js`: v2.8.0 PWA önbelleği
+- `sw.js`: v3.0.0 PWA önbelleği
