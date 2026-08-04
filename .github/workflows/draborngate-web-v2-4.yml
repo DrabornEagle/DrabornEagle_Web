@@ -1,4 +1,4 @@
-name: DraBornGate Web v3.2.5 Verify
+name: DraBornGate Web v3.2.7 Verify
 
 on:
   push:
@@ -20,7 +20,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v3-2-5-${{ github.ref }}
+  group: draborngate-web-v3-2-7-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -34,15 +34,17 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: v3.2.5 yükleme yöneticisini doğrula
+      - name: v3.2.7 yükleme yöneticisini doğrula
         run: node --check DraBornGate/assets/app.js
-      - name: v3.2.5 sürüm korumasını doğrula
-        run: node --check DraBornGate/assets/v3.2.5.guard.js
+      - name: v3.2.7 sürüm korumasını doğrula
+        run: node --check DraBornGate/assets/v3.2.7.guard.js
+      - name: v3.2.7 ana yükleyicisini doğrula
+        run: node --check DraBornGate/assets/v3.2.7.js
+      - name: v3.2.7 düzeltme katmanını doğrula
+        run: node --check DraBornGate/assets/v3.2.7.features.js
       - name: v3.2.5 kararlılık katmanını doğrula
         run: node --check DraBornGate/assets/v3.2.5.stability.js
-      - name: v3.2.5 ana yükleyicisini doğrula
-        run: node --check DraBornGate/assets/v3.2.5.js
-      - name: v3.2.5 sıkıştırılmış modüllerini doğrula
+      - name: Temel sıkıştırılmış modülleri doğrula
         shell: bash
         run: |
           base64 -d DraBornGate/assets/v3.2.5.session.js.payload.txt | gzip -dc > /tmp/dkd-v325-session.js
@@ -57,5 +59,5 @@ jobs:
         run: node --check DraBornGate/assets/v3.2.1.js
       - name: Service worker sözdizimini doğrula
         run: node --check DraBornGate/sw.js
-      - name: v3.2.5 kapsam testlerini çalıştır
-        run: node DraBornGate/tests/dkd_verify_web_v325.mjs
+      - name: v3.2.7 kapsam testlerini çalıştır
+        run: node DraBornGate/tests/dkd_verify_web_v327.mjs
