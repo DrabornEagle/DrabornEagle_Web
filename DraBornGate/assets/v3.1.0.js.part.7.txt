@@ -1,0 +1,59 @@
+    const dkdIcon = dkdClickable.querySelector('[class*="icon"],[class*="mark"],svg')?.parentElement;
+    if (dkdIcon && String(dkdIcon.textContent || '').trim().length < 8) dkdTargets.add(dkdIcon);
+  }
+  for (const dkdTarget of dkdTargets) {
+    if (!dkdTarget || dkdTarget.closest('.dkd-v31-moto,.dkd-v281-moto') || dkdTarget.dataset.dkdV31Moto === 'true') continue;
+    dkdTarget.innerHTML = dkdV31Moto('modern');
+    dkdTarget.dataset.dkdV31Moto = 'true';
+    dkdTarget.classList.add('dkd-v31-modern-moto-host');
+  }
+}
+
+function dkdV31RemoveLiveSyncCard() {
+  const dkdElement = [...document.querySelectorAll('h1,h2,h3,h4,strong,b,span,p')]
+    .find((dkdItem) => {
+      const dkdText = dkdV31.normalize(dkdItem.textContent);
+      return dkdText === 'canli senkron' && dkdV31.normalize(dkdItem.parentElement?.textContent).includes('web uygulama');
+    });
+  const dkdCard = dkdElement && dkdV31ClosestCard(dkdElement, 500);
+  if (dkdCard && !dkdCard.closest('#dkd-v31-root,#dkd-v31-global-modal')) dkdCard.remove();
+}
+
+function dkdV31PatchMinimalStats() {
+  for (const dkdLabel of ['Tamamlanan', 'Aktif Geçiş', 'Aktif Site']) {
+    const dkdElement = dkdV31FindExactText(dkdLabel);
+    const dkdCard = dkdElement && dkdV31ClosestCard(dkdElement, 520);
+    if (dkdCard) dkdCard.classList.add('dkd-v31-minimal-stat');
+  }
+}
+
+function dkdV31PatchCourierActionRow() {
+  const dkdLocation = dkdV31FindExactText('Konum Kontrolü Yap')?.closest('button,a,[role="button"]');
+  const dkdArrived = dkdV31FindExactText('Kapıya Geldim')?.closest('button,a,[role="button"]');
+  if (!dkdLocation || !dkdArrived || dkdLocation.closest('.dkd-v31-action-row')) return;
+  const dkdCommon = dkdLocation.parentElement === dkdArrived.parentElement ? dkdLocation.parentElement : dkdLocation.parentElement?.parentElement;
+  if (!dkdCommon || !dkdCommon.contains(dkdArrived)) return;
+  const dkdWrapper = document.createElement('div');
+  dkdWrapper.className = 'dkd-v31-action-row';
+  dkdLocation.before(dkdWrapper);
+  dkdWrapper.append(dkdLocation, dkdArrived);
+}
+
+function dkdV31PatchRecentActivities() {
+  const dkdHeading = dkdV31FindExactText('Son Hareketler');
+  if (!dkdHeading) return;
+  const dkdScope = dkdV31ClosestCard(dkdHeading, 3600);
+  if (!dkdScope || dkdScope.dataset.dkdV31Activities === 'true') return;
+  const dkdTitleElements = [...dkdScope.querySelectorAll('h3,h4,strong')]
+    .filter((dkdElement) => /tamamlandi|onaylandi|olusturuldu/.test(dkdV31.normalize(dkdElement.textContent)));
+  const dkdItems = [];
+  for (const dkdTitle of dkdTitleElements) {
+    const dkdItem = dkdV31ClosestCard(dkdTitle, 520);
+    if (dkdItem && !dkdItems.includes(dkdItem) && dkdItem !== dkdScope) dkdItems.push(dkdItem);
+  }
+  if (dkdItems.length < 2) return;
+
+  const dkdGroups = { completed: [], approved: [], created: [] };
+  for (const dkdItem of dkdItems) {
+    const dkdText = dkdV31.normalize(dkdItem.textContent);
+    if (dkdText.includes('tamamlandi')) dkdGroups.completed.push(dkdItem);
