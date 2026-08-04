@@ -88,17 +88,14 @@ function dkdV28GoModern() {
 }
 
 function dkdV28HasSecuritySession() {
-  const dkdApp = document.querySelector('#dkd-app');
-  if (!dkdApp) return false;
-  const dkdText = dkdV28Normalize(dkdApp.textContent);
-  const dkdHasRole = dkdText.includes('guvenlik') && (
-    dkdText.includes('guvenlik merkezi') ||
-    dkdText.includes('kurye kodu dogrula') ||
-    dkdText.includes('kurye kuyrugu') ||
-    dkdText.includes('gecis talepleri') ||
-    dkdText.includes('cikis yap')
-  );
-  return dkdHasRole;
+  const dkdContextRole = window.dkdV325Session?.currentRole?.() || window.dkdV324Session?.currentRole?.();
+  if (dkdContextRole) return dkdContextRole === 'security';
+  const dkdRoleBadge = [...document.querySelectorAll('span,strong,b,p,small')].find((dkdElement) => {
+    if (dkdV28Normalize(dkdElement.textContent) !== 'guvenlik') return false;
+    const dkdRect = dkdElement.getBoundingClientRect();
+    return dkdRect.top >= 0 && dkdRect.top < 720 && dkdRect.width > 0 && dkdRect.height > 0;
+  });
+  return Boolean(dkdRoleBadge);
 }
 
 function dkdV28Icon(dkdName, dkdClassName = '') {
