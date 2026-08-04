@@ -1,4 +1,4 @@
-const DKD_CACHE = 'draborngate-web-v3.2.4-admin-simple-courier-site-flow';
+const DKD_CACHE = 'draborngate-web-v3.2.4-session-admin-logout-role-hotfix';
 const DKD_FALLBACK = '/DraBornGate/';
 const DKD_ASSETS = [
   '/DraBornGate/',
@@ -31,12 +31,17 @@ const DKD_ASSETS = [
   '/DraBornGate/assets/v2.8.js?v=3.2.4',
   '/DraBornGate/assets/v2.8.1.js?v=3.2.4',
   '/DraBornGate/assets/v3.1.1.moto.js?v=3.2.4',
-  '/DraBornGate/assets/v3.1.1.data.js?v=3.2.4',
+  '/DraBornGate/assets/v3.1.1.data.js?v=3.2.4-session-refresh-lock',
   '/DraBornGate/assets/v3.2.4.guard.js?v=3.2.4',
   '/DraBornGate/assets/v3.2.1.data.js?v=3.2.4',
   '/DraBornGate/assets/v3.2.1.js?v=3.2.4',
+  '/DraBornGate/assets/v3.2.4.data.js?v=3.2.4',
+  '/DraBornGate/assets/v3.2.4.auth.js?v=3.2.4',
+  '/DraBornGate/assets/v3.2.4.auth.js.payload.txt?v=3.2.4',
   '/DraBornGate/assets/v3.2.4.js?v=3.2.4',
   '/DraBornGate/assets/v3.2.4.js.payload.txt?v=3.2.4',
+  '/DraBornGate/assets/v3.2.4.session.js?v=3.2.4',
+  '/DraBornGate/assets/v3.2.4.session.js.payload.txt?v=3.2.4',
   '/DraBornGate/assets/v3.1.0.css.part.1.txt?v=3.2.4',
   '/DraBornGate/assets/v3.1.0.css.part.2.txt?v=3.2.4',
   '/DraBornGate/assets/v3.1.0.css.part.3.txt?v=3.2.4',
@@ -60,10 +65,7 @@ const DKD_ASSETS = [
 ];
 
 self.addEventListener('install', (dkdEvent) => {
-  dkdEvent.waitUntil(
-    caches.open(DKD_CACHE)
-      .then((dkdCache) => dkdCache.addAll(DKD_ASSETS))
-  );
+  dkdEvent.waitUntil(caches.open(DKD_CACHE).then((dkdCache) => dkdCache.addAll(DKD_ASSETS)));
   self.skipWaiting();
 });
 
@@ -81,11 +83,7 @@ self.addEventListener('activate', (dkdEvent) => {
 
 self.addEventListener('fetch', (dkdEvent) => {
   if (dkdEvent.request.method !== 'GET' || !dkdEvent.request.url.includes('/DraBornGate/')) return;
-
-  const dkdRequest = dkdEvent.request.mode === 'navigate'
-    ? new Request(dkdEvent.request, { cache: 'no-store' })
-    : dkdEvent.request;
-
+  const dkdRequest = new Request(dkdEvent.request, { cache: 'no-store' });
   dkdEvent.respondWith(
     fetch(dkdRequest)
       .then((dkdResponse) => {
