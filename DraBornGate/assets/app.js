@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.1';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.1-public-rpc-version-guard';
+const DKD_WEB_VERSION = '3.2.2';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.2-observer-loop-hotfix';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -146,9 +146,9 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV321() {
-  dkdSetBootProgress(2, 'v3.2.1 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.1.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV322() {
+  dkdSetBootProgress(2, 'v3.2.2 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.2.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -187,9 +187,9 @@ async function dkdBootWebV321() {
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
   await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.2.1 modern arayüz hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.2.2 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
-  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV321Fixes');
+  await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV322Fixes');
   dkdSetBootProgress(97, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
   await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
   dkdSetBootProgress(99, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
@@ -197,4 +197,4 @@ async function dkdBootWebV321() {
   dkdFinishBoot();
 }
 
-dkdBootWebV321().catch(dkdShowBootError);
+dkdBootWebV322().catch(dkdShowBootError);
