@@ -27,6 +27,9 @@ dkdIncludes(dkdLoader, './v3.2.11.guard.js', 'v3.2.11 guard yüklenmiyor.');
 dkdIncludes(dkdLoader, './assets/v3.2.11.css', 'v3.2.11 CSS yüklenmiyor.');
 dkdIncludes(dkdLoader, './v3.2.11.js', 'v3.2.11 modern katmanı yüklenmiyor.');
 dkdIncludes(dkdLoader, 'dkdV3211BootIsSimple', 'Sade/Modern tema ayrımı korunmuyor.');
+dkdIncludes(dkdLoader, 'dkdV3211PartnerDataBridge', 'Kurye partner rol köprüsü yüklenmiyor.');
+dkdIncludes(dkdLoader, "dkdRole === 'courier'", 'Veritabanındaki courier rolü tanınmıyor.');
+dkdIncludes(dkdLoader, "preferred_role: 'kurye'", 'Courier rolü Kazançlarım görünürlüğüne uyarlanmıyor.');
 
 dkdIncludes(dkdModern, "dkd_gate_current_user_context_v325", 'Kullanıcı rol ve site bağlantısı bağlanmamış.');
 dkdIncludes(dkdModern, '!dkdContext.is_admin', 'Admin için Kazançlarım görünürlük engeli yok.');
