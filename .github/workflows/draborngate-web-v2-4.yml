@@ -34,10 +34,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: Ana yükleme yöneticisini doğrula
+      - name: v3.2.3 ana yükleme yöneticisini doğrula
         run: node --check DraBornGate/assets/app.js
-      - name: v3.2.3 çalışma zamanı düzeltmesini doğrula
-        run: node --check DraBornGate/assets/v3.2.3.hotfix.js
+      - name: v3.2.3 sürüm korumasını doğrula
+        run: node --check DraBornGate/assets/v3.2.3.guard.js
       - name: v3.2.3 güvenli veri katmanını doğrula
         run: node --check DraBornGate/assets/v3.2.3.data.js
       - name: v3.2.3 arayüz katmanını doğrula
