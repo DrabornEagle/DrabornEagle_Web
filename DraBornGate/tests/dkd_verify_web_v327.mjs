@@ -10,6 +10,7 @@ const dkdRead = (dkdRelativePath) => fs.readFileSync(path.join(dkdRoot, dkdRelat
 const dkdIndex = dkdRead('index.html');
 const dkdSimpleIndex = dkdRead('Guvenlik-Sade-Tema/index.html');
 const dkdApp = dkdRead('assets/app.js');
+const dkdR3App = dkdRead('assets/app.v3.2.7-r3.js');
 const dkdBootUnlock = dkdRead('assets/v3.2.7.boot-unlock.js');
 const dkdGuard = dkdRead('assets/v3.2.7.guard.js');
 const dkdLoader = dkdRead('assets/v3.2.7.js');
@@ -24,6 +25,7 @@ for (const [dkdLabel, dkdSource] of [
   ['ana index', dkdIndex],
   ['sade tema index', dkdSimpleIndex],
   ['app', dkdApp],
+  ['r3 app', dkdR3App],
   ['başlangıç kilit açıcı', dkdBootUnlock],
   ['guard', dkdGuard],
   ['loader', dkdLoader],
@@ -46,6 +48,13 @@ assert.match(dkdApp, /dkdWaitForV327SimpleReady/);
 assert.match(dkdApp, /dataset\.dkdV327Ready/);
 assert.match(dkdApp, /dkdBootWebV327\(\)\.catch/);
 assert.doesNotMatch(dkdApp, /dkdBootWebV325\(\)\.catch/);
+
+assert.match(dkdR3App, /const DKD_WEB_REVISION = '3\.2\.7-r3'/);
+assert.match(dkdR3App, /function dkdPrepareFreshRuntime\(\)/);
+assert.doesNotMatch(dkdR3App, /async function dkdPrepareFreshRuntime/);
+assert.doesNotMatch(dkdR3App, /await dkdPrepareFreshRuntime\(\)/);
+assert.match(dkdR3App, /dkdWithTimeout/);
+assert.match(dkdR3App, /void navigator\.serviceWorker\.register/);
 
 assert.match(dkdBootUnlock, /__DKD_GATE_V327_BOOT_UNLOCK__/);
 assert.match(dkdBootUnlock, /Object\.defineProperty\(caches, 'keys'/);
@@ -91,11 +100,11 @@ for (const dkdSelector of [
 }
 
 for (const [dkdLabel, dkdSource] of [['ana index', dkdIndex], ['sade tema index', dkdSimpleIndex]]) {
-  assert.match(dkdSource, /v3\.2\.7\.boot-unlock\.js\?v=3\.2\.7-r2/, `${dkdLabel} kilit açıcıyı önce yüklemeli`);
-  assert.match(dkdSource, /app\.js\?v=3\.2\.7-r2/, `${dkdLabel} hotfix cache anahtarı kullanmalı`);
+  assert.match(dkdSource, /v3\.2\.7\.boot-unlock\.js\?v=3\.2\.7-r3/, `${dkdLabel} r3 kilit açıcıyı önce yüklemeli`);
+  assert.match(dkdSource, /app\.v3\.2\.7-r3\.js\?v=3\.2\.7-r3/, `${dkdLabel} r3 güvenli yükleyiciyi kullanmalı`);
   assert.ok(
-    dkdSource.indexOf('v3.2.7.boot-unlock.js') < dkdSource.indexOf('type="module" src="./assets/app.js'),
-    `${dkdLabel} kilit açıcıyı app.js öncesinde çalıştırmalı`
+    dkdSource.indexOf('v3.2.7.boot-unlock.js') < dkdSource.indexOf('type="module" src="./assets/app.v3.2.7-r3.js'),
+    `${dkdLabel} kilit açıcıyı r3 app öncesinde çalıştırmalı`
   );
 }
 assert.match(dkdSimpleIndex, /dkd-v327-inline-hide/);
@@ -118,4 +127,4 @@ assert.match(dkdWorkflow, /DraBornGate Web v3\.2\.7 Verify/);
 assert.match(dkdWorkflow, /v3\.2\.7\.boot-unlock\.js/);
 assert.match(dkdWorkflow, /dkd_verify_web_v327\.mjs/);
 
-console.log('DraBornGate Web v3.2.7 başlangıç kilidi, menü, kompakt site arama, Sade Tema ve detay popup doğrulamaları geçti.');
+console.log('DraBornGate Web v3.2.7-r3 başlangıç kilidi, menü, kompakt site arama, Sade Tema ve detay popup doğrulamaları geçti.');
