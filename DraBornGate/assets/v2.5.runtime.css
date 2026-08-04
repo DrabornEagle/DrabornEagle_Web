@@ -1,0 +1,215 @@
+/* DraBornGate Web v2.5 — tema hizalama, çift yönlü geçiş ve canlı Sade Tema kuyruğu */
+#dkd-app .dkd-v25-theme-card {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: stretch !important;
+  min-height: 0 !important;
+  padding-bottom: 28px !important;
+}
+#dkd-app .dkd-v25-theme-action {
+  position: static !important;
+  inset: auto !important;
+  transform: none !important;
+  width: calc(100% - 4px) !important;
+  min-height: 58px !important;
+  margin: 30px 2px 0 !important;
+  padding: 15px 18px !important;
+  flex: 0 0 auto !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  border-radius: 18px !important;
+  z-index: 2 !important;
+}
+#dkd-app .dkd-v25-theme-card-modern .dkd-v25-theme-action {
+  border: 1px solid rgba(169, 111, 255, .5) !important;
+  background: rgba(137, 82, 255, .13) !important;
+}
+#dkd-app .dkd-v25-theme-card-simple .dkd-v25-theme-action {
+  border: 1px solid rgba(68, 220, 255, .5) !important;
+  background: rgba(68, 220, 255, .12) !important;
+}
+
+#dkd-app .dkd-v25-modern-to-simple {
+  width: 100%;
+  min-height: 92px;
+  margin: 18px 0 14px;
+  padding: 17px 20px;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  column-gap: 14px;
+  align-items: center;
+  text-align: left;
+  color: #f6fbff;
+  border: 1px solid rgba(63, 218, 255, .48);
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(11, 48, 72, .94), rgba(20, 28, 63, .96));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 14px 34px rgba(0,0,0,.2);
+}
+#dkd-app .dkd-v25-modern-to-simple > span {
+  grid-row: 1 / 3;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border-radius: 16px;
+  color: #42dcff;
+  background: rgba(66, 220, 255, .13);
+  border: 1px solid rgba(66, 220, 255, .34);
+  font-size: 23px;
+}
+#dkd-app .dkd-v25-modern-to-simple strong { font-size: 18px; font-weight: 900; }
+#dkd-app .dkd-v25-modern-to-simple small { color: #aebbd0; font-size: 13px; line-height: 1.4; }
+
+#dkd-app .dkd-v25-simple-list {
+  display: grid;
+  gap: 18px;
+  margin: 0 0 24px;
+}
+#dkd-app .dkd-v25-courier-card {
+  position: relative;
+  overflow: hidden;
+  padding: 22px;
+  border-radius: 28px;
+  border: 1px solid rgba(70, 220, 255, .36);
+  background: linear-gradient(145deg, rgba(8, 31, 51, .98), rgba(15, 22, 54, .98));
+  box-shadow: 0 22px 54px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.07);
+}
+#dkd-app .dkd-v25-courier-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #43ddff, #7c8cff, #4ce6aa);
+}
+#dkd-app .dkd-v25-card-top {
+  display: grid;
+  grid-template-columns: 62px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+}
+#dkd-app .dkd-v25-card-icon {
+  width: 62px;
+  height: 62px;
+  display: grid;
+  place-items: center;
+  border-radius: 20px;
+  color: #03111c;
+  background: linear-gradient(145deg, #43ddff, #8b7cff);
+  font-size: 22px;
+  font-weight: 1000;
+}
+#dkd-app .dkd-v25-card-copy { min-width: 0; }
+#dkd-app .dkd-v25-card-copy span {
+  display: block;
+  color: #43ddff;
+  font-size: 11px;
+  font-weight: 1000;
+  letter-spacing: .13em;
+}
+#dkd-app .dkd-v25-card-copy h3 {
+  margin: 5px 0 0;
+  color: #f7fbff;
+  font-size: clamp(22px, 4.7vw, 30px);
+  line-height: 1.12;
+}
+#dkd-app .dkd-v25-card-top > b {
+  padding: 8px 11px;
+  border: 1px solid rgba(76, 230, 170, .38);
+  border-radius: 999px;
+  color: #4ce6aa;
+  background: rgba(76, 230, 170, .1);
+  font-size: 10px;
+  letter-spacing: .08em;
+}
+#dkd-app .dkd-v25-card-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 9px;
+  margin: 18px 0;
+}
+#dkd-app .dkd-v25-card-details p {
+  min-height: 49px;
+  margin: 0;
+  padding: 12px 13px;
+  display: flex;
+  align-items: center;
+  color: #c4d0e0;
+  border: 1px solid rgba(105, 137, 181, .25);
+  border-radius: 15px;
+  background: rgba(255,255,255,.035);
+  font-size: 14px;
+  line-height: 1.35;
+}
+#dkd-app .dkd-v25-code-label {
+  display: block;
+  margin: 5px 0 9px;
+  color: #8ea0b9;
+  font-size: 11px;
+  font-weight: 1000;
+  letter-spacing: .12em;
+}
+#dkd-app .dkd-v25-code-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(145px, .72fr);
+  gap: 10px;
+}
+#dkd-app .dkd-v25-code-row input {
+  width: 100%;
+  min-height: 68px;
+  padding: 0 16px;
+  color: #f7fbff;
+  border: 2px solid rgba(67, 221, 255, .62);
+  border-radius: 19px;
+  outline: none;
+  background: rgba(3, 13, 29, .9);
+  font-size: 29px;
+  font-weight: 1000;
+  letter-spacing: .28em;
+  text-align: center;
+}
+#dkd-app .dkd-v25-code-row input:focus {
+  border-color: #43ddff;
+  box-shadow: 0 0 0 5px rgba(67, 221, 255, .1);
+}
+#dkd-app .dkd-v25-match-button {
+  min-height: 68px;
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 19px;
+  color: #03111c;
+  background: linear-gradient(135deg, #43ddff, #4ce6aa);
+  font-size: 15px;
+  font-weight: 1000;
+}
+#dkd-app .dkd-v25-match-button:disabled { opacity: .65; }
+#dkd-app .dkd-v25-match-button.dkd-v25-loading { cursor: progress; }
+#dkd-app .dkd-v25-match-message {
+  min-height: 21px;
+  margin-top: 10px;
+  color: #9fb0c7;
+  font-size: 13px;
+  line-height: 1.45;
+}
+#dkd-app .dkd-v25-hide-empty { display: none !important; }
+body.dkd-v25-has-mirrored-cards #dkd-app .dkd-v24-simple-shell .dkd-v24-courier-card { display: none !important; }
+
+@media (max-width: 620px) {
+  #dkd-app .dkd-v25-theme-action { margin-top: 36px !important; }
+  #dkd-app .dkd-v25-courier-card { padding: 18px; border-radius: 24px; }
+  #dkd-app .dkd-v25-card-top { grid-template-columns: 54px minmax(0, 1fr); }
+  #dkd-app .dkd-v25-card-icon { width: 54px; height: 54px; border-radius: 17px; }
+  #dkd-app .dkd-v25-card-top > b { grid-column: 1 / -1; width: max-content; }
+  #dkd-app .dkd-v25-card-details { grid-template-columns: 1fr; }
+  #dkd-app .dkd-v25-code-row { grid-template-columns: 1fr; }
+  #dkd-app .dkd-v25-code-row input,
+  #dkd-app .dkd-v25-match-button { min-height: 64px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #dkd-app .dkd-v25-theme-action,
+  #dkd-app .dkd-v25-modern-to-simple,
+  #dkd-app .dkd-v25-match-button { transition: none !important; }
+}
