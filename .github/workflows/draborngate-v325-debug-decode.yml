@@ -8,13 +8,16 @@ on:
       - 'DraBornGate/.debug-trigger-v325'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   decode:
+    if: ${{ !contains(github.event.pull_request.head.sha, 'decoded') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: debug/draborngate-v325-inspect
       - name: Sıkıştırılmış katmanları aç
         shell: bash
         run: |
@@ -24,9 +27,12 @@ jobs:
           base64 -d DraBornGate/assets/v3.2.4.session.js.payload.txt | gzip -dc > DraBornGate/.debug-v325/v3.2.4.session.source.js
           base64 -d DraBornGate/assets/v3.2.4.auth.js.payload.txt | gzip -dc > DraBornGate/.debug-v325/v3.2.4.auth.source.js
           base64 -d DraBornGate/assets/v3.2.4.css.payload.txt | gzip -dc > DraBornGate/.debug-v325/v3.2.4.css
-      - name: İnceleme kaynaklarını artifact olarak yükle
-        uses: actions/upload-artifact@v4
-        with:
-          name: draborngate-v324-decoded
-          path: DraBornGate/.debug-v325
-          retention-days: 1
+      - name: Geçici dala yaz
+        shell: bash
+        run: |
+          if git diff --quiet -- DraBornGate/.debug-v325 && git ls-files --error-unmatch DraBornGate/.debug-v325 >/dev/null 2>&1; then exit 0; fi
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add DraBornGate/.debug-v325
+          git commit -m 'chore: decode v3.2.4 sources [decoded]'
+          git push origin HEAD:debug/draborngate-v325-inspect
