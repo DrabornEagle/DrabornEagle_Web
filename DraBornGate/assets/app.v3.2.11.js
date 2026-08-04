@@ -32,10 +32,32 @@ async function dkdV3211BootStyle() {
   });
 }
 
+function dkdV3211PartnerDataBridge(dkdOriginalData) {
+  return new Proxy(dkdOriginalData, {
+    get(dkdTarget, dkdProperty, dkdReceiver) {
+      if (dkdProperty !== 'rpc') return Reflect.get(dkdTarget, dkdProperty, dkdReceiver);
+      return async (dkdFunctionName, dkdArguments = {}) => {
+        const dkdResult = await dkdTarget.rpc(dkdFunctionName, dkdArguments);
+        if (dkdFunctionName !== 'dkd_gate_current_user_context_v325' || !dkdResult || typeof dkdResult !== 'object') return dkdResult;
+        const dkdRole = String(dkdResult.preferred_role || '').toLocaleLowerCase('tr-TR');
+        return dkdRole === 'courier'
+          ? { ...dkdResult, preferred_role: 'kurye', preferred_role_code: 'courier' }
+          : dkdResult;
+      };
+    },
+  });
+}
+
 await dkdV3211BootWait();
 if (!dkdV3211BootIsSimple()) {
   await dkdV3211BootStyle();
-  await import(`./v3.2.11.js?v=${DKD_V3211_BOOT_VERSION}`);
+  const dkdOriginalData = window.dkdV31Data;
+  window.dkdV31Data = dkdV3211PartnerDataBridge(dkdOriginalData);
+  try {
+    await import(`./v3.2.11.js?v=${DKD_V3211_BOOT_VERSION}-courier-role`);
+  } finally {
+    window.dkdV31Data = dkdOriginalData;
+  }
 }
 
 document.documentElement.dataset.dkdGateVersion = DKD_V3211_BOOT_VERSION;
