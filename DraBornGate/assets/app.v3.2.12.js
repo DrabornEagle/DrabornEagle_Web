@@ -1,41 +1,69 @@
 const DKD_V3212_BOOT_VERSION = '3.2.12';
+const dkdV3212WorkerState = {
+  container: null,
+  originalOwnDescriptor: null,
+  originalRegister: null,
+  patched: false,
+  started: false,
+};
 
-document.documentElement.classList.add('dkd-v3212-booting');
-await import(`./v3.2.12.guard.js?v=${DKD_V3212_BOOT_VERSION}`);
+function dkdV3212SetProgress(dkdPercent, dkdLabel) {
+  window.dkdSetBootProgress?.(dkdPercent, dkdLabel);
+  const dkdFill = document.querySelector('#dkd-v28-progress-fill');
+  const dkdProgress = document.querySelector('#dkd-v28-progress');
+  const dkdText = document.querySelector('#dkd-v28-progress-label');
+  const dkdSafe = Math.max(0, Math.min(100, Number(dkdPercent) || 0));
+  if (dkdFill) dkdFill.style.width = `${dkdSafe}%`;
+  if (dkdProgress) dkdProgress.setAttribute('aria-valuenow', String(Math.round(dkdSafe)));
+  if (dkdText && dkdLabel) dkdText.textContent = dkdLabel;
+}
 
-const dkdV3212WorkerState = { restored: false, started: false };
-const dkdV3212WorkerPrototype = typeof ServiceWorkerContainer !== 'undefined' ? ServiceWorkerContainer.prototype : null;
-const dkdV3212OriginalRegister = dkdV3212WorkerPrototype?.register;
+function dkdV3212InstallFastWorkerRegister() {
+  if (!('serviceWorker' in navigator) || !navigator.serviceWorker?.register) return;
+  try {
+    const dkdContainer = navigator.serviceWorker;
+    const dkdOriginalRegister = dkdContainer.register.bind(dkdContainer);
+    dkdV3212WorkerState.container = dkdContainer;
+    dkdV3212WorkerState.originalOwnDescriptor = Object.getOwnPropertyDescriptor(dkdContainer, 'register') || null;
+    dkdV3212WorkerState.originalRegister = dkdOriginalRegister;
+
+    Object.defineProperty(dkdContainer, 'register', {
+      configurable: true,
+      writable: true,
+      value(dkdUrl, dkdOptions) {
+        if (!dkdV3212WorkerState.started) {
+          dkdV3212WorkerState.started = true;
+          setTimeout(() => {
+            void dkdOriginalRegister(`./sw.js?v=${DKD_V3212_BOOT_VERSION}-hotfix`, {
+              ...(dkdOptions || {}),
+              scope: '/DraBornGate/',
+              updateViaCache: 'none',
+            }).then((dkdRegistration) => dkdRegistration.update().catch(() => undefined)).catch(() => undefined);
+          }, 0);
+        }
+        return Promise.resolve({ update: async () => undefined });
+      },
+    });
+    dkdV3212WorkerState.patched = true;
+  } catch (dkdError) {
+    console.warn('DraBornGate Service Worker hızlandırması uygulanamadı; normal açılış kullanılacak.', dkdError);
+  }
+}
 
 function dkdV3212RestoreWorkerRegister() {
-  if (dkdV3212WorkerState.restored || !dkdV3212WorkerPrototype || !dkdV3212OriginalRegister) return;
-  dkdV3212WorkerState.restored = true;
-  Object.defineProperty(dkdV3212WorkerPrototype, 'register', {
-    configurable: true,
-    writable: true,
-    value: dkdV3212OriginalRegister,
-  });
+  if (!dkdV3212WorkerState.patched || !dkdV3212WorkerState.container) return;
+  try {
+    if (dkdV3212WorkerState.originalOwnDescriptor) {
+      Object.defineProperty(dkdV3212WorkerState.container, 'register', dkdV3212WorkerState.originalOwnDescriptor);
+    } else {
+      delete dkdV3212WorkerState.container.register;
+    }
+  } catch (dkdError) {
+    console.warn('DraBornGate Service Worker kaydı geri yüklenemedi.', dkdError);
+  } finally {
+    dkdV3212WorkerState.patched = false;
+  }
 }
-
-if (dkdV3212WorkerPrototype && dkdV3212OriginalRegister) {
-  Object.defineProperty(dkdV3212WorkerPrototype, 'register', {
-    configurable: true,
-    writable: true,
-    value: function dkdV3212FastRegister(dkdUrl, dkdOptions) {
-      if (!dkdV3212WorkerState.started) {
-        dkdV3212WorkerState.started = true;
-        void dkdV3212OriginalRegister.call(this, `./sw.js?v=${DKD_V3212_BOOT_VERSION}`, {
-          ...(dkdOptions || {}),
-          scope: '/DraBornGate/',
-          updateViaCache: 'none',
-        }).then((dkdRegistration) => dkdRegistration.update().catch(() => undefined)).catch(() => undefined);
-      }
-      return Promise.resolve({ update: async () => undefined });
-    },
-  });
-}
-
-await import(`./app.js?v=${DKD_V3212_BOOT_VERSION}-core`);
 
 function dkdV3212BootIsSimple() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -58,7 +86,7 @@ async function dkdV3212BootStyle(dkdPath, dkdDatasetKey) {
   await new Promise((dkdResolve, dkdReject) => {
     const dkdLink = document.createElement('link');
     dkdLink.rel = 'stylesheet';
-    dkdLink.href = `${dkdPath}?v=${DKD_V3212_BOOT_VERSION}`;
+    dkdLink.href = `${dkdPath}?v=${DKD_V3212_BOOT_VERSION}-hotfix`;
     dkdLink.setAttribute(`data-${dkdDatasetKey}`, 'true');
     dkdLink.onload = dkdResolve;
     dkdLink.onerror = () => dkdReject(new Error(`${dkdPath} yüklenemedi.`));
@@ -68,7 +96,7 @@ async function dkdV3212BootStyle(dkdPath, dkdDatasetKey) {
 
 function dkdV3212ReleaseBoot() {
   document.documentElement.classList.remove('dkd-simple-booting', 'dkd-v3212-booting');
-  window.dkdSetBootProgress?.(100, 'Hazır');
+  dkdV3212SetProgress(100, 'Hazır');
   const dkdSplash = document.querySelector('#dkd-v28-splash');
   dkdSplash?.classList.add('is-hidden');
   setTimeout(() => dkdSplash?.remove(), 460);
@@ -79,28 +107,35 @@ function dkdV3212BootError(dkdError) {
   dkdV3212RestoreWorkerRegister();
   document.documentElement.classList.remove('dkd-simple-booting', 'dkd-v3212-booting');
   const dkdRetry = document.querySelector('#dkd-v28-retry');
-  const dkdLabel = document.querySelector('#dkd-v28-progress-label');
-  if (dkdLabel) dkdLabel.textContent = `Yükleme tamamlanamadı: ${String(dkdError?.message || dkdError)}`;
+  dkdV3212SetProgress(100, `Yükleme tamamlanamadı: ${String(dkdError?.message || dkdError)}`);
   if (dkdRetry) dkdRetry.hidden = false;
 }
 
-try {
+async function dkdV3212Start() {
+  document.documentElement.classList.add('dkd-v3212-booting');
+  dkdV3212SetProgress(3, 'Açılış koruması hazırlanıyor');
+  await import(`./v3.2.12.guard.js?v=${DKD_V3212_BOOT_VERSION}-hotfix`);
+
+  dkdV3212InstallFastWorkerRegister();
+  dkdV3212SetProgress(5, 'Ana uygulama başlatılıyor');
+  await import(`./app.js?v=${DKD_V3212_BOOT_VERSION}-hotfix-core`);
+
   await dkdV3212BootWait();
   const dkdSimple = dkdV3212BootIsSimple();
-  window.dkdSetBootProgress?.(99, 'Eski arayüz kalıntıları temizleniyor');
+  dkdV3212SetProgress(98, 'Güncel arayüz sonlandırılıyor');
 
   if (!dkdSimple) {
     await dkdV3212BootStyle('./assets/v3.2.11.css', 'dkd-web-v3211');
-    await import(`./v3.2.11.js?v=${DKD_V3212_BOOT_VERSION}`);
+    await import(`./v3.2.11.js?v=${DKD_V3212_BOOT_VERSION}-hotfix`);
   }
 
   await dkdV3212BootStyle('./assets/v3.2.12.css', 'dkd-web-v3212');
-  await import(`./v3.2.12.js?v=${DKD_V3212_BOOT_VERSION}`);
+  await import(`./v3.2.12.js?v=${DKD_V3212_BOOT_VERSION}-hotfix`);
 
   document.documentElement.dataset.dkdGateVersion = DKD_V3212_BOOT_VERSION;
   sessionStorage.setItem('dkd_gate_web_version', DKD_V3212_BOOT_VERSION);
   dkdV3212RestoreWorkerRegister();
   dkdV3212ReleaseBoot();
-} catch (dkdError) {
-  dkdV3212BootError(dkdError);
 }
+
+dkdV3212Start().catch(dkdV3212BootError);
