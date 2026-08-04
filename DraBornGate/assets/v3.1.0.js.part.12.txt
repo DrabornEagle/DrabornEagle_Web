@@ -1,0 +1,49 @@
+  for (const dkdButton of document.querySelectorAll('[data-dkd-v31-toggle-link]')) {
+    dkdButton.addEventListener('click', async () => {
+      dkdButton.disabled = true;
+      await dkdV31.assignPartnerSite(
+        dkdButton.dataset.user,
+        dkdButton.dataset.site,
+        Number(dkdButton.dataset.amount || 10),
+        dkdButton.dataset.active !== 'true'
+      );
+      dkdV31RenderAdminPartners();
+    });
+  }
+}
+
+function dkdV31PatchModernUi() {
+  if (dkdV31.isSimpleTheme()) return;
+  dkdV31PatchDgAndVersion(document);
+  dkdV31PatchMotorcycleIcons(document);
+  dkdV31RemoveLiveSyncCard();
+  dkdV31PatchMinimalStats();
+  dkdV31PatchCourierActionRow();
+  dkdV31PatchRecentActivities();
+  dkdV31ApplyPagination('Geçiş Geçmişi', 'history');
+  dkdV31ApplyPagination('Geçişlerim', 'passes');
+  dkdV31PatchPartnerMenus();
+}
+
+function dkdV31SchedulePatch() {
+  clearTimeout(dkdV31PatchTimer);
+  dkdV31PatchTimer = setTimeout(() => {
+    dkdV31MountSimple();
+    dkdV31PatchModernUi();
+  }, 80);
+}
+
+async function dkdV31Boot() {
+  dkdV31PatchDgAndVersion(document);
+  dkdV31MountSimple();
+  if (dkdV31.isSimpleTheme()) {
+    await dkdV31RefreshQueue();
+    clearInterval(dkdV31QueueTimer);
+    dkdV31QueueTimer = setInterval(dkdV31RefreshQueue, 5000);
+  }
+  await Promise.all([dkdV31.loadPartnerSummary(), dkdV31.loadAdminCatalog()]);
+  dkdV31PatchModernUi();
+}
+
+new MutationObserver(dkdV31SchedulePatch).observe(document.body, { childList: true, subtree: true });
+dkdV31Boot().catch((dkdError) => console.error('DraBornGate v3.1.0 başlatılamadı:', dkdError));
