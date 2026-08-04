@@ -1,7 +1,7 @@
 {
-  "name": "DraBornGate Web v3.1.1",
+  "name": "DraBornGate Web v3.1.2",
   "short_name": "DraBornGate",
-  "description": "Doğru Supabase oturumu, gerçek kurye bilgileri, 6 haneli kod doğrulaması, Admin Paneli ve site ortaklık kazancı sunan geçiş platformu.",
+  "description": "Tek güncel sürüm kilidi, canlı Supabase oturum köprüsü, gerçek kurye bilgileri, Admin Paneli ve birleşik motosiklet ikonu sunan geçiş platformu.",
   "start_url": "/DraBornGate/",
   "scope": "/DraBornGate/",
   "display": "standalone",
