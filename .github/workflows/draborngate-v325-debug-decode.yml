@@ -12,7 +12,6 @@ permissions:
 
 jobs:
   decode:
-    if: ${{ !contains(github.event.pull_request.head.sha, 'decoded') }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -30,7 +29,7 @@ jobs:
       - name: Geçici dala yaz
         shell: bash
         run: |
-          if git diff --quiet -- DraBornGate/.debug-v325 && git ls-files --error-unmatch DraBornGate/.debug-v325 >/dev/null 2>&1; then exit 0; fi
+          if [ -z "$(git status --porcelain -- DraBornGate/.debug-v325)" ]; then exit 0; fi
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add DraBornGate/.debug-v325
