@@ -1,4 +1,4 @@
-name: DraBornGate Web v3.2.2 Verify
+name: DraBornGate Web v3.2.3 Verify
 
 on:
   push:
@@ -20,7 +20,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: draborngate-web-v3-2-2-${{ github.ref }}
+  group: draborngate-web-v3-2-3-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -34,17 +34,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: v3.2.2 yükleme yöneticisini doğrula
+      - name: Ana yükleme yöneticisini doğrula
         run: node --check DraBornGate/assets/app.js
-      - name: v3.2.2 sürüm korumasını doğrula
-        run: node --check DraBornGate/assets/v3.2.2.guard.js
-      - name: v3.2.1 public RPC veri köprüsünü doğrula
-        run: node --check DraBornGate/assets/v3.2.1.data.js
-      - name: v3.2.1 arayüz yükleyicisini doğrula
-        run: node --check DraBornGate/assets/v3.2.1.js
-      - name: DraBornGate motosiklet ikonunu doğrula
-        run: node --check DraBornGate/assets/v3.1.1.moto.js
+      - name: v3.2.3 çalışma zamanı düzeltmesini doğrula
+        run: node --check DraBornGate/assets/v3.2.3.hotfix.js
+      - name: v3.2.3 güvenli veri katmanını doğrula
+        run: node --check DraBornGate/assets/v3.2.3.data.js
+      - name: v3.2.3 arayüz katmanını doğrula
+        run: node --check DraBornGate/assets/v3.2.3.ui.js
       - name: Service worker sözdizimini doğrula
         run: node --check DraBornGate/sw.js
-      - name: v3.2.2 kapsam testlerini çalıştır
-        run: node DraBornGate/tests/dkd_verify_web_v322.mjs
+      - name: v3.2.3 kapsam testlerini çalıştır
+        run: node DraBornGate/tests/dkd_verify_web_v323.mjs
