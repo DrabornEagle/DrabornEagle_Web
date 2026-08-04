@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.9';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.9-simple-isolation-site-stability';
+const DKD_WEB_VERSION = '3.2.10';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.10-theme-notifications-site-lock';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -150,16 +150,18 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootSimpleV329() {
-  dkdSetBootProgress(70, 'Sade Tema canlı veri katmanı bağlanıyor');
+async function dkdBootSimpleV3210() {
+  dkdSetBootProgress(62, 'Sade Tema canlı veri katmanı bağlanıyor');
   await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(86, 'Eski Sade Tema katmanları devre dışı bırakılıyor');
+  dkdSetBootProgress(76, 'Bağımsız güvenlik ekranı hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.2.9.simple.css', 'dkdWebV329Simple');
-  dkdSetBootProgress(97, 'Kurye doğrulama ve modern detay ekranı hazırlanıyor');
   await import(`./v3.2.9.simple.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(90, 'Tema geçişi, bildirimler ve otomatik yenileme bağlanıyor');
+  await dkdAppendStyleLink('./assets/v3.2.10.simple.css', 'dkdWebV3210Simple');
+  await import(`./v3.2.10.simple.js?v=${DKD_WEB_VERSION}`);
 }
 
-async function dkdBootModernV329() {
+async function dkdBootModernV3210() {
   dkdSetBootProgress(57, 'Modern tema hazırlanıyor');
   await dkdAppendPackedStyle('./assets/v2.4.css.payload.txt', 'dkdWebV24');
   await dkdImportSource(await dkdUnpack(await dkdReadPayload(`./assets/v2.4.js.payload.txt?v=${DKD_WEB_VERSION}`)));
@@ -186,16 +188,19 @@ async function dkdBootModernV329() {
   await dkdAppendPackedStyle('./assets/v3.2.4.css.payload.txt', 'dkdWebV324Base');
   await dkdAppendPackedStyle('./assets/v3.2.5.css.payload.txt', 'dkdWebV325');
   await import(`./v3.2.5.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(98, 'Site arama, kazanç ve popup katmanları bağlanıyor');
+  dkdSetBootProgress(97, 'Site arama, kazanç ve popup katmanları bağlanıyor');
   await dkdAppendStyleLink('./assets/v3.2.8.css', 'dkdWebV328');
   await import(`./v3.2.8.js?v=${DKD_WEB_VERSION}`);
   await dkdAppendStyleLink('./assets/v3.2.9.css', 'dkdWebV329');
   await import(`./v3.2.9.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(99, 'Titreşimsiz site seçimi ve menü düzeltmeleri uygulanıyor');
+  await dkdAppendStyleLink('./assets/v3.2.10.css', 'dkdWebV3210');
+  await import(`./v3.2.10.js?v=${DKD_WEB_VERSION}`);
 }
 
-async function dkdBootWebV329() {
-  dkdSetBootProgress(2, 'v3.2.9 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.9.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV3210() {
+  dkdSetBootProgress(2, 'v3.2.10 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.10.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
@@ -204,7 +209,7 @@ async function dkdBootWebV329() {
 
   if (dkdSimpleMode) {
     dkdSetBootProgress(24, 'Bağımsız Sade Tema başlatılıyor');
-    await dkdBootSimpleV329();
+    await dkdBootSimpleV3210();
     dkdFinishBoot();
     return;
   }
@@ -217,8 +222,8 @@ async function dkdBootWebV329() {
   await dkdImportSource(await dkdUnpack(dkdCorePayload));
   dkdSetBootProgress(48, 'Oturum ve rol sistemi bağlanıyor');
   await import(`./v2.3.js?v=${DKD_WEB_VERSION}`);
-  await dkdBootModernV329();
+  await dkdBootModernV3210();
   dkdFinishBoot();
 }
 
-dkdBootWebV329().catch(dkdShowBootError);
+dkdBootWebV3210().catch(dkdShowBootError);
