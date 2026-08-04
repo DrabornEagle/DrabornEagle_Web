@@ -1,6 +1,6 @@
 const dkdRoot = document.querySelector('#dkd-app');
-const DKD_WEB_VERSION = '3.2.5';
-const DKD_WEB_CACHE = 'draborngate-web-v3.2.5-stable-popup-admin-earnings';
+const DKD_WEB_VERSION = '3.2.7';
+const DKD_WEB_CACHE = 'draborngate-web-v3.2.7-popup-site-flash-fixes';
 
 function dkdIsSimpleModeRequested() {
   const dkdPath = String(location.pathname || '').toLocaleLowerCase('tr-TR');
@@ -8,6 +8,8 @@ function dkdIsSimpleModeRequested() {
     sessionStorage.getItem('dkd_gate_security_theme') === 'simple' ||
     sessionStorage.getItem('dkd_gate_force_theme') === 'simple';
 }
+
+if (dkdIsSimpleModeRequested()) document.documentElement.classList.add('dkd-simple-booting');
 
 function dkdSetBootProgress(dkdPercent, dkdLabel) {
   const dkdSafePercent = Math.max(0, Math.min(100, Number(dkdPercent) || 0));
@@ -128,6 +130,7 @@ async function dkdReadJoinedPayload(dkdPattern, dkdCount) {
 function dkdFinishBoot() {
   clearTimeout(dkdBootWatchdog);
   dkdSetBootProgress(100, 'Hazır');
+  document.documentElement.classList.remove('dkd-simple-booting');
   setTimeout(() => {
     const dkdSplash = document.querySelector('#dkd-v28-splash');
     dkdSplash?.classList.add('is-hidden');
@@ -137,6 +140,7 @@ function dkdFinishBoot() {
 
 function dkdShowBootError(dkdError) {
   clearTimeout(dkdBootWatchdog);
+  document.documentElement.classList.remove('dkd-simple-booting');
   console.error(dkdError);
   const dkdRetry = document.querySelector('#dkd-v28-retry');
   dkdSetBootProgress(100, `Yükleme tamamlanamadı: ${String(dkdError?.message || dkdError)}`);
@@ -146,13 +150,14 @@ function dkdShowBootError(dkdError) {
   }
 }
 
-async function dkdBootWebV325() {
-  dkdSetBootProgress(2, 'v3.2.5 sürüm ve önbellek koruması başlatılıyor');
-  await import(`./v3.2.5.guard.js?v=${DKD_WEB_VERSION}`);
+async function dkdBootWebV327() {
+  dkdSetBootProgress(2, 'v3.2.7 sürüm ve önbellek koruması başlatılıyor');
+  await import(`./v3.2.7.guard.js?v=${DKD_WEB_VERSION}`);
   await dkdPrepareFreshRuntime();
   dkdSetBootProgress(5, 'Başlatılıyor');
   dkdPrepareCleanPersonalRoute();
   const dkdSimpleMode = dkdIsSimpleModeRequested();
+  if (dkdSimpleMode) document.documentElement.classList.add('dkd-simple-booting');
 
   dkdSetBootProgress(10, 'Arayüz dosyaları yükleniyor');
   await dkdAppendPackedStyle('./assets/app.v2.css.payload.txt', 'dkdWebV2');
@@ -187,18 +192,20 @@ async function dkdBootWebV325() {
   dkdSetBootProgress(91, 'DraBornGate motosiklet ikonu hazırlanıyor');
   await import(`./v2.8.1.js?v=${DKD_WEB_VERSION}`);
   await import(`./v3.1.1.moto.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(94, 'v3.2.5 modern arayüz hazırlanıyor');
+  dkdSetBootProgress(94, 'v3.2.7 modern arayüz hazırlanıyor');
   await dkdAppendStyleLink('./assets/v3.0.css', 'dkdWebV30');
   await dkdAppendStyleLink('./assets/v3.1.1.css', 'dkdWebV324Base');
   dkdSetBootProgress(96, 'Public RPC köprüsü ve canlı veriler bağlanıyor');
   await import(`./v3.2.1.data.js?v=${DKD_WEB_VERSION}`);
   dkdSetBootProgress(98, 'Admin Paneli, kod doğrulama ve kuyruk bağlanıyor');
   await import(`./v3.2.1.js?v=${DKD_WEB_VERSION}`);
-  dkdSetBootProgress(99, 'v3.2.5 arayüz ve kurye akışı tamamlanıyor');
   await dkdAppendPackedStyle('./assets/v3.2.4.css.payload.txt', 'dkdWebV324Base');
   await dkdAppendPackedStyle('./assets/v3.2.5.css.payload.txt', 'dkdWebV325');
   await import(`./v3.2.5.js?v=${DKD_WEB_VERSION}`);
+  dkdSetBootProgress(99, 'v3.2.7 etkileşim düzeltmeleri uygulanıyor');
+  await dkdAppendStyleLink('./assets/v3.2.7.css', 'dkdWebV327');
+  await import(`./v3.2.7.js?v=${DKD_WEB_VERSION}`);
   dkdFinishBoot();
 }
 
-dkdBootWebV325().catch(dkdShowBootError);
+dkdBootWebV327().catch(dkdShowBootError);
