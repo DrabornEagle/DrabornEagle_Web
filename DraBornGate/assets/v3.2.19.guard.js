@@ -1,4 +1,10 @@
 (() => {
+  if (window.__DKD_GATE_V3220_GUARD__) {
+    window.dkdV3219Cleanup = () => window.dkdV3220Cleanup?.();
+    window.__DKD_GATE_V3219_GUARD__ = true;
+    return;
+  }
+
   const DKD_V3219_VERSION = '3.2.19';
   const dkdV3219NativeAppendChild = Node.prototype.appendChild;
   const dkdV3219NativeInsertBefore = Node.prototype.insertBefore;
