@@ -34,6 +34,8 @@ jobs:
         run: node --check DraBornGate/assets/app.v3.2.20.js
       - name: v3.2.20 eski Kazancım korumasını doğrula
         run: node --check DraBornGate/assets/v3.2.20.guard.js
+      - name: v3.2.19 uyumluluk korumasını doğrula
+        run: node --check DraBornGate/assets/v3.2.19.guard.js
       - name: v3.2.20 menü ve motosiklet katmanını doğrula
         run: node --check DraBornGate/assets/v3.2.20.js
       - name: Service worker sözdizimini doğrula
