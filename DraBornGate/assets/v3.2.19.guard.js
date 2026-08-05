@@ -1,6 +1,6 @@
 (() => {
-  if (window.__DKD_GATE_V3220_GUARD__) {
-    window.dkdV3219Cleanup = () => window.dkdV3220Cleanup?.();
+  if (window.__DKD_GATE_V3221_GUARD__ || window.__DKD_GATE_V3220_GUARD__) {
+    window.dkdV3219Cleanup = () => window.dkdV3221Cleanup?.() || window.dkdV3220Cleanup?.();
     window.__DKD_GATE_V3219_GUARD__ = true;
     return;
   }
