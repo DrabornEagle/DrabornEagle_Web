@@ -1,7 +1,7 @@
-const DKD_CACHE = 'draborngate-web-v3.2.18-single-earnings-stable-gate1';
+const DKD_CACHE = 'draborngate-web-v3.2.19-clean-single-earnings-site-gate1';
 const DKD_SCOPE = '/DraBornGate/';
 const DKD_FALLBACK = '/DraBornGate/index.html';
-const DKD_REVISION = '3.2.18-single-earnings-stable-gate1';
+const DKD_REVISION = '3.2.19-clean-single-earnings-site-gate1';
 const DKD_CORE_ASSETS = [
   '/DraBornGate/',
   '/DraBornGate/index.html',
@@ -12,19 +12,14 @@ const DKD_CORE_ASSETS = [
   `/DraBornGate/assets/v2.1-fixes.css?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v2.2.css?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v2.3.css?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/app.v3.2.18.js?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.18.js?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.18.css?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.18.lock.js?v=${DKD_REVISION}-lock`,
-  `/DraBornGate/assets/app.v3.2.17.js?v=${DKD_REVISION}-base`,
-  `/DraBornGate/assets/v3.2.17.guard.js?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.17.js?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.17.css?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.11.js?v=${DKD_REVISION}-earnings`,
-  `/DraBornGate/assets/v3.2.11.css?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.10.js?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.10.css?v=${DKD_REVISION}`,
-  `/DraBornGate/assets/v3.2.9.js?v=${DKD_REVISION}`
+  `/DraBornGate/assets/app.v3.2.19.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.19.guard.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.19.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.19.css?v=${DKD_REVISION}`,
+  '/DraBornGate/assets/v3.2.11.js',
+  '/DraBornGate/assets/v3.2.11.css',
+  '/DraBornGate/assets/v3.2.15.js',
+  '/DraBornGate/assets/v3.2.15.css'
 ];
 
 self.addEventListener('install', (dkdEvent) => {
@@ -55,11 +50,9 @@ self.addEventListener('message', (dkdEvent) => {
 self.addEventListener('fetch', (dkdEvent) => {
   const dkdRequest = dkdEvent.request;
   if (dkdRequest.method !== 'GET' || !dkdRequest.url.includes(DKD_SCOPE)) return;
-
   dkdEvent.respondWith((async () => {
     try {
-      const dkdFreshRequest = new Request(dkdRequest, { cache: 'no-store' });
-      const dkdResponse = await fetch(dkdFreshRequest);
+      const dkdResponse = await fetch(new Request(dkdRequest, { cache: 'no-store' }));
       if (dkdResponse?.ok) {
         const dkdCache = await caches.open(DKD_CACHE);
         await dkdCache.put(dkdRequest, dkdResponse.clone());
@@ -68,9 +61,7 @@ self.addEventListener('fetch', (dkdEvent) => {
     } catch {
       const dkdCached = await caches.match(dkdRequest);
       if (dkdCached) return dkdCached;
-      if (dkdRequest.mode === 'navigate') {
-        return (await caches.match(DKD_FALLBACK)) || (await caches.match('/DraBornGate/')) || Response.error();
-      }
+      if (dkdRequest.mode === 'navigate') return (await caches.match(DKD_FALLBACK)) || (await caches.match('/DraBornGate/')) || Response.error();
       return Response.error();
     }
   })());
