@@ -1,0 +1,131 @@
+/* DraBornGate Web v3.2.18 */
+html[data-dkd-gate-version="3.2.18"] .dkd-v3211-earnings-menu,
+html[data-dkd-gate-version="3.2.18"] .dkd-v3217-earnings-menu,
+html[data-dkd-gate-version="3.2.18"] .dkd-v328-earnings-menu,
+html[data-dkd-gate-version="3.2.18"] .dkd-v325-earnings-menu,
+html[data-dkd-gate-version="3.2.18"] [data-dkd-earnings-menu],
+html[data-dkd-gate-version="3.2.18"] [data-dkd-v3211-earnings]:not([hidden]),
+[data-dkd-v3218-legacy-earnings="true"] {
+  display: none !important;
+}
+
+.dkd-v3218-earnings-menu {
+  width: 100%;
+  min-height: 76px;
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border: 1px solid rgba(70, 209, 247, .26);
+  border-radius: 21px;
+  background: #0b1a2d;
+  color: #f4f8ff;
+  display: grid;
+  grid-template-columns: 48px minmax(0, 1fr) 34px;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  font: inherit;
+  cursor: pointer;
+  position: relative;
+  animation: none !important;
+  transform: none !important;
+  transition: border-color .18s ease, background .18s ease;
+}
+.dkd-v3218-earnings-menu:hover,
+.dkd-v3218-earnings-menu:focus-visible { background: #0d2137; border-color: rgba(79, 220, 255, .48); }
+.dkd-v3218-earnings-menu > span {
+  width: 48px;
+  height: 48px;
+  border-radius: 15px;
+  display: grid;
+  place-items: center;
+  color: #57dcf7;
+  background: #0d2d41;
+  border: 1px solid rgba(81, 219, 249, .18);
+}
+.dkd-v3218-earnings-menu svg { width: 26px; height: 26px; }
+.dkd-v3218-earnings-menu strong { font-size: 18px; font-weight: 850; }
+.dkd-v3218-earnings-menu > i {
+  width: 34px;
+  height: 34px;
+  border-radius: 11px;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-size: 26px;
+  line-height: 1;
+  color: #62def7;
+  background: #0e263b;
+}
+
+.dkd-v3218-gate-host { position: relative; }
+.dkd-v3218-native-gate {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+}
+.dkd-v3218-gate-picker { width: 100%; position: relative; z-index: 24; }
+.dkd-v3218-gate-button {
+  width: 100%;
+  min-height: 74px;
+  padding: 0 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(116, 151, 210, .24);
+  background: #10192d;
+  color: #edf4ff;
+  display: grid;
+  grid-template-columns: 40px minmax(0, 1fr) 26px;
+  align-items: center;
+  gap: 12px;
+  text-align: left;
+  font: inherit;
+}
+.dkd-v3218-gate-button:disabled { color: #7d8ba4; cursor: wait; }
+.dkd-v3218-gate-button > span { color: #45d7f7; display: grid; place-items: center; }
+.dkd-v3218-gate-button > span svg { width: 25px; height: 25px; }
+.dkd-v3218-gate-button strong { font-size: 17px; font-weight: 800; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.dkd-v3218-gate-button > i { color: #b8c6d9; display: grid; place-items: center; transition: transform .18s ease; }
+.dkd-v3218-gate-button > i svg { width: 22px; height: 22px; }
+.dkd-v3218-gate-picker.open .dkd-v3218-gate-button { border-color: rgba(72, 218, 250, .52); background: #0c2133; }
+.dkd-v3218-gate-picker.open .dkd-v3218-gate-button > i { transform: rotate(180deg); }
+.dkd-v3218-gate-list {
+  display: none;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 20px;
+  border: 1px solid rgba(77, 213, 244, .32);
+  background: #081323;
+  max-height: 280px;
+  overflow: auto;
+  gap: 7px;
+}
+.dkd-v3218-gate-picker.open .dkd-v3218-gate-list { display: grid; }
+.dkd-v3218-gate-list button {
+  width: 100%;
+  min-height: 56px;
+  padding: 12px 14px;
+  border-radius: 15px;
+  border: 1px solid rgba(112, 146, 202, .18);
+  background: #0d1b30;
+  color: #e8f0fb;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  text-align: left;
+  font: inherit;
+  font-size: 16px;
+  font-weight: 760;
+}
+.dkd-v3218-gate-list button.selected { border-color: rgba(76, 222, 250, .54); background: #0b2b3d; color: #63e2fa; }
+.dkd-v3218-gate-list button svg { width: 22px; height: 22px; flex: 0 0 auto; }
+
+@media (max-width: 520px) {
+  .dkd-v3218-earnings-menu { min-height: 72px; padding: 12px 14px; }
+  .dkd-v3218-gate-button { min-height: 70px; }
+}
