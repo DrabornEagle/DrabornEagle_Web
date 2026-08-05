@@ -1,22 +1,26 @@
-const DKD_CACHE = 'draborngate-web-v3.2.15-earnings-moto1';
+const DKD_CACHE = 'draborngate-web-v3.2.17-stable-earnings-gate-moto1';
 const DKD_SCOPE = '/DraBornGate/';
 const DKD_FALLBACK = '/DraBornGate/index.html';
+const DKD_REVISION = '3.2.17-stable-earnings-gate-moto1';
 const DKD_CORE_ASSETS = [
   '/DraBornGate/',
   '/DraBornGate/index.html',
   '/DraBornGate/Guvenlik-Sade-Tema/',
   '/DraBornGate/Guvenlik-Sade-Tema/index.html',
-  '/DraBornGate/manifest.webmanifest?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/app.css?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/v2.1-fixes.css?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/v2.2.css?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/v2.3.css?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/app.v3.2.15.js?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/v3.2.15.guard.js?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/v3.2.15.js?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/v3.2.15.css?v=3.2.15-earnings-moto1',
-  '/DraBornGate/assets/v3.2.11.js?v=3.2.15-earnings-moto1-earnings',
-  '/DraBornGate/assets/v3.2.11.css?v=3.2.15-earnings-moto1'
+  `/DraBornGate/manifest.webmanifest?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/app.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v2.1-fixes.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v2.2.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v2.3.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/app.v3.2.17.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.17.guard.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.17.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.17.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.11.js?v=${DKD_REVISION}-earnings`,
+  `/DraBornGate/assets/v3.2.11.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.10.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.10.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.9.js?v=${DKD_REVISION}`
 ];
 
 self.addEventListener('install', (dkdEvent) => {
