@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.17",
+  "name": "DraBornGate Web v3.2.18",
   "short_name": "DraBornGate",
-  "description": "Sabit minimalist Kazançlarım menüsü, çalışan site-kapı seçimi ve daha kompakt kurye motosiklet ikonları sunan geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.17-stable-earnings-gate-moto1",
+  "description": "Tek ve sabit Kazançlarım menüsü, yalnızca site adı araması ve kapanmayan kararlı Kapı seçimi sunan geçiş platformu.",
+  "start_url": "/DraBornGate/?v=3.2.18-single-earnings-stable-gate1",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
