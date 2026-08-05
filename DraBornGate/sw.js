@@ -1,7 +1,7 @@
-const DKD_CACHE = 'draborngate-web-v3.2.19-clean-single-earnings-site-gate1';
+const DKD_CACHE = 'draborngate-web-v3.2.20-single-earnings-color-small-moto1';
 const DKD_SCOPE = '/DraBornGate/';
 const DKD_FALLBACK = '/DraBornGate/index.html';
-const DKD_REVISION = '3.2.19-clean-single-earnings-site-gate1';
+const DKD_REVISION = '3.2.20-single-earnings-color-small-moto1';
 const DKD_CORE_ASSETS = [
   '/DraBornGate/',
   '/DraBornGate/index.html',
@@ -12,6 +12,10 @@ const DKD_CORE_ASSETS = [
   `/DraBornGate/assets/v2.1-fixes.css?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v2.2.css?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v2.3.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/app.v3.2.20.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.20.guard.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.20.js?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.20.css?v=${DKD_REVISION}`,
   `/DraBornGate/assets/app.v3.2.19.js?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v3.2.19.guard.js?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v3.2.19.js?v=${DKD_REVISION}`,
