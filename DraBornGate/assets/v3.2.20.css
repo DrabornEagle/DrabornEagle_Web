@@ -1,0 +1,114 @@
+/* DraBornGate Web v3.2.20 */
+.dkd-v3211-earnings-menu,
+.dkd-v3217-earnings-menu,
+.dkd-v3218-earnings-menu,
+.dkd-v328-earnings-menu,
+.dkd-v325-earnings-menu,
+[data-dkd-earnings-menu] {
+  display: none !important;
+}
+
+.dkd-v3219-earnings-menu.dkd-v3220-earnings-menu {
+  position: relative;
+  isolation: isolate;
+  width: 100%;
+  min-height: 66px;
+  margin: 18px 0 0;
+  padding: 10px 12px;
+  border: 1px solid rgba(103, 224, 255, .34);
+  border-radius: 18px;
+  background:
+    linear-gradient(110deg, rgba(31, 214, 255, .14), rgba(116, 90, 255, .12) 56%, rgba(255, 100, 170, .08)),
+    #091426;
+  color: #f7fbff;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) 30px;
+  align-items: center;
+  gap: 11px;
+  overflow: hidden;
+  box-shadow: 0 12px 34px rgba(0, 7, 21, .26);
+  transition: border-color .18s ease, transform .18s ease, background-color .18s ease;
+}
+
+.dkd-v3219-earnings-menu.dkd-v3220-earnings-menu::before {
+  content: '';
+  position: absolute;
+  inset: 0 auto 0 0;
+  z-index: -1;
+  width: 4px;
+  background: linear-gradient(180deg, #52e4ff, #8f7cff 58%, #ff6fa8);
+}
+
+.dkd-v3219-earnings-menu.dkd-v3220-earnings-menu:active {
+  transform: scale(.985) !important;
+  border-color: rgba(153, 234, 255, .62);
+}
+
+.dkd-v3219-earnings-menu.dkd-v3220-earnings-menu > span {
+  width: 42px;
+  height: 42px;
+  border-radius: 13px;
+  display: grid;
+  place-items: center;
+  color: #ecfbff;
+  background: linear-gradient(145deg, rgba(30, 209, 255, .42), rgba(122, 91, 255, .46));
+  border: 1px solid rgba(194, 242, 255, .2);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .14);
+}
+
+.dkd-v3219-earnings-menu.dkd-v3220-earnings-menu > span svg {
+  width: 22px;
+  height: 22px;
+}
+
+.dkd-v3219-earnings-menu.dkd-v3220-earnings-menu strong {
+  min-width: 0;
+  font-size: 17px;
+  line-height: 1.15;
+  font-weight: 850;
+  letter-spacing: -.015em;
+  color: #f6fbff;
+}
+
+.dkd-v3219-earnings-menu.dkd-v3220-earnings-menu > i {
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  font-style: normal;
+  font-size: 23px;
+  line-height: 1;
+  color: #86eaff;
+  background: rgba(19, 49, 78, .78);
+  border: 1px solid rgba(111, 224, 255, .16);
+}
+
+html.dkd-v3220-passes-page .dkd-v3215-racing-motorcycle {
+  width: 46px !important;
+  height: 33px !important;
+}
+
+html.dkd-v3220-passes-page .dkd-v3215-racing-motorcycle svg {
+  width: 46px !important;
+  height: 30px !important;
+}
+
+html.dkd-v3220-passes-page .dkd-v3215-racing-motorcycle .dkd-v3215-speed-lines {
+  left: -1px !important;
+  top: 14px !important;
+  width: 14px !important;
+  gap: 3px !important;
+}
+
+html.dkd-v3220-passes-page .dkd-v3215-racing-motorcycle .dkd-v3215-speed-lines i {
+  height: 1.5px !important;
+}
+
+@media (max-width: 520px) {
+  .dkd-v3219-earnings-menu.dkd-v3220-earnings-menu {
+    min-height: 64px;
+    padding: 9px 11px;
+    border-radius: 17px;
+  }
+}
