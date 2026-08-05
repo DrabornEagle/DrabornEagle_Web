@@ -34,6 +34,8 @@ jobs:
         run: node --check DraBornGate/assets/app.v3.2.18.js
       - name: v3.2.18 tek kazanç ve kapı katmanını doğrula
         run: node --check DraBornGate/assets/v3.2.18.js
+      - name: v3.2.18 sürüm kilidini doğrula
+        run: node --check DraBornGate/assets/v3.2.18.lock.js
       - name: v3.2.17 temel yükleyicisini doğrula
         run: node --check DraBornGate/assets/app.v3.2.17.js
       - name: Service worker sözdizimini doğrula
