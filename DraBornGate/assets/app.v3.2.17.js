@@ -109,27 +109,28 @@ async function dkdV3217Start() {
   await import(`./app.js?v=${DKD_V3217_BOOT_VERSION}-${DKD_V3217_BOOT_REVISION}-core`);
   await dkdV3217BootWait();
 
+  await dkdV3217BootStyle('./assets/v3.2.15.css', 'dkd-web-v3215');
   await dkdV3217BootStyle('./assets/v3.2.17.css', 'dkd-web-v3217');
   if (!dkdV3217BootIsSimple()) {
     await dkdV3217BootStyle('./assets/v3.2.11.css', 'dkd-web-v3211');
-    await dkdV3217BootStyle('./assets/v3.2.15.css', 'dkd-web-v3215');
     const dkdOriginalData = window.dkdV31Data;
     window.dkdV31Data = dkdV3217PartnerDataBridge(dkdOriginalData);
     try {
       await import(`./v3.2.11.js?v=${DKD_V3217_BOOT_VERSION}-${DKD_V3217_BOOT_REVISION}-earnings`);
-      const dkdOriginalSetInterval = window.setInterval;
-      window.setInterval = (dkdCallback, dkdDelay, ...dkdArguments) => {
-        if (Number(dkdDelay) === 1200 && String(dkdCallback).includes('dkdV3215Apply')) return -3215;
-        return dkdOriginalSetInterval(dkdCallback, dkdDelay, ...dkdArguments);
-      };
-      try {
-        await import(`./v3.2.15.js?v=${DKD_V3217_BOOT_VERSION}-${DKD_V3217_BOOT_REVISION}-motorcycle`);
-      } finally {
-        window.setInterval = dkdOriginalSetInterval;
-      }
     } finally {
       window.dkdV31Data = dkdOriginalData;
     }
+  }
+
+  const dkdOriginalSetInterval = window.setInterval;
+  window.setInterval = (dkdCallback, dkdDelay, ...dkdArguments) => {
+    if (Number(dkdDelay) === 1200 && String(dkdCallback).includes('dkdV3215Apply')) return -3215;
+    return dkdOriginalSetInterval(dkdCallback, dkdDelay, ...dkdArguments);
+  };
+  try {
+    await import(`./v3.2.15.js?v=${DKD_V3217_BOOT_VERSION}-${DKD_V3217_BOOT_REVISION}-motorcycle`);
+  } finally {
+    window.setInterval = dkdOriginalSetInterval;
   }
   await import(`./v3.2.17.js?v=${DKD_V3217_BOOT_VERSION}-${DKD_V3217_BOOT_REVISION}-stable-ui`);
 
