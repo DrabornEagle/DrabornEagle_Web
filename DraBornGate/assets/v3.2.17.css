@@ -21,3 +21,7 @@ html[data-dkd-gate-version="3.2.17"] [data-dkd-earnings-menu]{display:none!impor
 .dkd-v3215-racing-motorcycle.dkd-v3217-moto-queue svg{width:50px!important;height:33px!important}
 .dkd-v3215-racing-motorcycle.dkd-v3217-moto-history .dkd-v3215-speed-lines,.dkd-v3215-racing-motorcycle.dkd-v3217-moto-queue .dkd-v3215-speed-lines{left:-2px!important;width:16px!important;opacity:.42!important}
 .dkd-v3215-racing-motorcycle.dkd-v3217-moto-queue .dkd-v3215-speed-lines{width:14px!important}
+body.dkd-v329-simple-active .dkd-v329-queue-row .dkd-v329-avatar{width:58px!important;height:58px!important;min-width:58px!important}
+body.dkd-v329-simple-active .dkd-v329-queue-row .dkd-v329-avatar svg{max-width:50px!important;max-height:34px!important}
+body.dkd-v329-simple-active .dkd-v329-queue-row .dkd-v329-avatar .dkd-v3215-racing-motorcycle{width:50px!important;height:36px!important}
+body.dkd-v329-simple-active .dkd-v329-queue-row .dkd-v329-avatar .dkd-v3215-racing-motorcycle svg{width:50px!important;height:33px!important}
