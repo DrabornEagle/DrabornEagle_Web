@@ -22,6 +22,7 @@ async function dkdV3218Start() {
   await import(`./app.v3.2.17.js?v=${DKD_V3218_BOOT_VERSION}-${DKD_V3218_BOOT_REVISION}-base`);
   await dkdV3218LoadStyle('./assets/v3.2.18.css', 'dkd-web-v3218');
   await import(`./v3.2.18.js?v=${DKD_V3218_BOOT_VERSION}-${DKD_V3218_BOOT_REVISION}-ui`);
+  await import(`./v3.2.18.lock.js?v=${DKD_V3218_BOOT_VERSION}-${DKD_V3218_BOOT_REVISION}-lock`);
 
   document.documentElement.dataset.dkdGateVersion = DKD_V3218_BOOT_VERSION;
   sessionStorage.setItem('dkd_gate_web_version', DKD_V3218_BOOT_VERSION);
