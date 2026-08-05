@@ -1,10 +1,10 @@
 /* DraBornGate Web v3.2.18 */
-html[data-dkd-gate-version="3.2.18"] .dkd-v3211-earnings-menu,
-html[data-dkd-gate-version="3.2.18"] .dkd-v3217-earnings-menu,
-html[data-dkd-gate-version="3.2.18"] .dkd-v328-earnings-menu,
-html[data-dkd-gate-version="3.2.18"] .dkd-v325-earnings-menu,
-html[data-dkd-gate-version="3.2.18"] [data-dkd-earnings-menu],
-html[data-dkd-gate-version="3.2.18"] [data-dkd-v3211-earnings]:not([hidden]),
+.dkd-v3211-earnings-menu,
+.dkd-v3217-earnings-menu,
+.dkd-v328-earnings-menu,
+.dkd-v325-earnings-menu,
+[data-dkd-earnings-menu],
+[data-dkd-v3211-earnings]:not([hidden]),
 [data-dkd-v3218-legacy-earnings="true"] {
   display: none !important;
 }
