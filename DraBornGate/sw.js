@@ -15,6 +15,7 @@ const DKD_CORE_ASSETS = [
   `/DraBornGate/assets/app.v3.2.18.js?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v3.2.18.js?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v3.2.18.css?v=${DKD_REVISION}`,
+  `/DraBornGate/assets/v3.2.18.lock.js?v=${DKD_REVISION}-lock`,
   `/DraBornGate/assets/app.v3.2.17.js?v=${DKD_REVISION}-base`,
   `/DraBornGate/assets/v3.2.17.guard.js?v=${DKD_REVISION}`,
   `/DraBornGate/assets/v3.2.17.js?v=${DKD_REVISION}`,
