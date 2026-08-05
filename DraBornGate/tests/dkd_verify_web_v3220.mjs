@@ -14,6 +14,7 @@ const dkdWorker = dkdRead('sw.js');
 const dkdLoader = dkdRead('assets/app.v3.2.20.js');
 const dkdGuard = dkdRead('assets/v3.2.20.guard.js');
 const dkdUi = dkdRead('assets/v3.2.20.js');
+const dkdBaseGuard = dkdRead('assets/v3.2.19.guard.js');
 const dkdCss = dkdRead('assets/v3.2.20.css');
 
 for (const [dkdName, dkdSource] of Object.entries({ dkdIndex, dkdSimpleIndex, dkdManifest, dkdWorker, dkdLoader, dkdGuard, dkdUi, dkdCss })) {
@@ -26,6 +27,7 @@ dkdIncludes(dkdLoader, './v3.2.20.guard.js', 'v3.2.20 koruması temel uygulamada
 dkdIncludes(dkdLoader, './app.v3.2.19.js', 'Kararlı v3.2.19 temel yükleyicisi kullanılmıyor.');
 dkdIncludes(dkdLoader, './assets/v3.2.20.css', 'v3.2.20 görünüm katmanı yüklenmiyor.');
 dkdIncludes(dkdLoader, './v3.2.20.js', 'v3.2.20 davranış katmanı yüklenmiyor.');
+dkdIncludes(dkdBaseGuard, 'window.__DKD_GATE_V3220_GUARD__', 'v3.2.19 koruması v3.2.20 altında devre dışı kalmıyor.');
 
 dkdIncludes(dkdGuard, "dkdNormalized === 'kazancim'", 'Eski tekil Kazancım düğmesi engellenmiyor.');
 dkdIncludes(dkdGuard, "dkdNormalized === 'kazanclarim'", 'Eski çoğul Kazançlarım düğmeleri engellenmiyor.');
