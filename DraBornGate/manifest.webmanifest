@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.20",
+  "name": "DraBornGate Web v3.2.21",
   "short_name": "DraBornGate",
-  "description": "Kurye Premium menüsünde yalnızca modern ve renkli Kazançlarım düğmesini gösteren, Geçişlerim kartlarındaki motosiklet ikonunu küçülten geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.20-single-earnings-color-small-moto1",
+  "description": "Aktif site bağlantısı bulunan Kurye kullanıcılarının Kazançlarım ekranını açmasını sağlayan geçiş platformu.",
+  "start_url": "/DraBornGate/?v=3.2.21-earnings-courier-role-link-fix1",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
