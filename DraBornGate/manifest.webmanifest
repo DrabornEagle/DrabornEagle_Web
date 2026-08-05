@@ -1,8 +1,8 @@
 {
-  "name": "DraBornGate Web v3.2.18",
+  "name": "DraBornGate Web v3.2.19",
   "short_name": "DraBornGate",
-  "description": "Tek ve sabit Kazançlarım menüsü, yalnızca site adı araması ve kapanmayan kararlı Kapı seçimi sunan geçiş platformu.",
-  "start_url": "/DraBornGate/?v=3.2.18-single-earnings-stable-gate1",
+  "description": "Eski sürüm arayüz katmanlarını çalıştırmadan tek Kazançlarım menüsü ve seçilen siteye bağlı tek Kapı seçici sunan geçiş platformu.",
+  "start_url": "/DraBornGate/?v=3.2.19-clean-single-earnings-site-gate1",
   "scope": "/DraBornGate/",
   "display": "standalone",
   "background_color": "#030713",
