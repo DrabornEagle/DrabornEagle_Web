@@ -1,10 +1,10 @@
 {
-  "dkd_latest_version_name": "0.0.5",
-  "dkd_latest_version_code": 5,
-  "dkd_min_supported_version_code": 3,
+  "dkd_latest_version_name": "0.0.6",
+  "dkd_latest_version_code": 6,
+  "dkd_min_supported_version_code": 5,
   "dkd_update_required": false,
-  "dkd_apk_url": "https://github.com/DrabornEagle/DraBornGo/releases/download/dkd_draborngo_v0.0.5/DraBornGo-v0.0.5-code5-release.apk",
-  "dkd_download_page_url": "https://www.draborneagle.com/DraBornGo/App/",
-  "dkd_sha256": "7b7bdc301eaaba4c4484ce18464c242fe98d4492012d44171c31394f72ed762f",
-  "dkd_release_notes": "DraBornGo v0.0.5 imzalı APK yayınlandı. Expo SDK 54 uyumu, DBG kimliği, sabit public ortam ayarları, görünür sürüm düzeltmeleri ve DraBornDeal veritabanı temizliği tamamlandı."
+  "dkd_apk_url": "",
+  "dkd_download_page_url": "https://play.google.com/store/apps/details?id=com.draborneagle.draborngo",
+  "dkd_sha256": "",
+  "dkd_release_notes": "DraBornGo v0.0.6 Expo SDK 57 test sürümü. Bu aşamada APK/AAB üretilmez. Google Play dağıtımında uygulama güncellemeleri yalnızca Google Play üzerinden sunulur."
 }
