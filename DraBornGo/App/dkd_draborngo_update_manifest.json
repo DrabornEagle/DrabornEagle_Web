@@ -1,5 +1,5 @@
 {
-  "dkd_latest_version_name": "0.0.14",
+  "dkd_latest_version_name": "0.0.16",
   "dkd_latest_version_code": 3,
   "dkd_min_supported_version_code": 2,
   "dkd_update_required": false,
@@ -8,5 +8,5 @@
   "dkd_apk_url": "",
   "dkd_download_page_url": "https://play.google.com/store/apps/details?id=com.draborneagle.draborngo",
   "dkd_sha256": "",
-  "dkd_release_notes": "DraBornGo v0.0.14: Android versionCode 3 Expo Go test hattına geçirildi ve AAB üretilene kadar code 3 sabitlenecek. Aktif kurye lisansı bulunan kullanıcı DKD Onay Merkezi içinde yeniden başvuru formu yerine lisansının aktif olduğunu görür. Profil, ana sayfa ve Şehir Ağı sürüm etiketleri v0.0.14 olarak eşitlendi; girişteki Şehir Ağı devam butonu düzeltildi. Gizlilik ve Veri Merkezi ile web politikalarından kullanılmayan SMS/OTP, İleti Merkezi ve genel kullanıcı DM ifadeleri kaldırıldı. APK/AAB bu aşamada üretilmez."
+  "dkd_release_notes": "DraBornGo v0.0.16: Mobil Google Play istemcisindeki eski kurye kayıt/onay ekranları ve admin onay kuyruğu kaynak koddan kaldırıldı; mevcut yetkili kuryelerin görev, rota, teslimat ve kazanç akışı korundu. Supabase tarafındaki eski veri şemaları ve kayıtlar geri yükleme ihtiyacı için korunuyor. Gizlilik, şartlar ve web ürün kapsamı v0.0.16 ile eşitlendi. Android versionCode 3 sabit; test Expo Go üzerinden devam ediyor ve APK/AAB üretilmedi."
 }
