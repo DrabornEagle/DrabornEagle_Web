@@ -1,43 +1,94 @@
-/* DraBornPark Test1 v0.4.4 — düz Spectrum kartları
-   Normal kartlarda glow/shadow/otomatik animasyon yoktur.
-   Hareket yalnızca kullanıcının seçtiği kartta çalışır. */
+/* DraBornPark Test1 v0.4.5 — modern flat Spectrum kartları
+   Glow/shadow yok. Normal kartlar statik; animasyon yalnızca seçili kartta. */
 
 .contact-mode .category{
+  position:relative!important;
   box-shadow:none!important;
   animation:none!important;
   transform:none!important;
   transition:border-color .16s ease,background-color .16s ease,color .16s ease!important;
-  background:rgba(var(--tone-rgb),.13)!important;
-  border-color:rgba(var(--tone-rgb),.58)!important;
+  background:rgba(var(--tone-rgb),.17)!important;
+  border:1px solid rgba(var(--tone-rgb),.72)!important;
+  border-radius:24px!important;
+  overflow:hidden!important;
+  padding:16px 15px 17px!important;
 }
 .contact-mode .category::after{
-  display:none!important;
-  content:none!important;
-  background:none!important;
-  opacity:0!important;
+  display:block!important;
+  content:''!important;
+  position:absolute!important;
+  left:14px!important;
+  right:14px!important;
+  bottom:0!important;
+  height:4px!important;
+  border-radius:999px 999px 0 0!important;
+  background:var(--tone)!important;
+  opacity:.92!important;
+  box-shadow:none!important;
+  animation:none!important;
 }
 .contact-mode .category::before{
   content:'SEÇ ›'!important;
-  background:rgba(var(--tone-rgb),.18)!important;
-  border-color:rgba(var(--tone-rgb),.7)!important;
+  top:14px!important;
+  right:14px!important;
+  padding:6px 9px!important;
+  border-radius:999px!important;
+  background:rgba(var(--tone-rgb),.22)!important;
+  border:1px solid rgba(var(--tone-rgb),.8)!important;
   color:var(--tone)!important;
+  font-size:9px!important;
+  font-weight:900!important;
+  letter-spacing:.55px!important;
   box-shadow:none!important;
   transition:none!important;
 }
 .contact-mode .category-icon{
+  width:56px!important;
+  height:56px!important;
+  border-radius:18px!important;
   box-shadow:none!important;
   transition:none!important;
   transform:none!important;
-  background:rgba(var(--tone-rgb),.24)!important;
-  border-color:rgba(var(--tone-rgb),.76)!important;
+  background:rgba(var(--tone-rgb),.29)!important;
+  border:1px solid rgba(var(--tone-rgb),.9)!important;
+  color:var(--tone)!important;
+  display:grid!important;
+  place-items:center!important;
+  margin-bottom:13px!important;
+}
+.contact-mode .category-icon svg{
+  width:31px!important;
+  height:31px!important;
+  fill:currentColor!important;
+  opacity:1!important;
+}
+.contact-mode .category-title{
+  color:#fff!important;
+  font-size:16px!important;
+  line-height:1.22!important;
+  font-weight:850!important;
+  letter-spacing:-.15px!important;
+  padding-right:42px!important;
+}
+.contact-mode .category-body{
+  color:#c8d5eb!important;
+  font-size:12.5px!important;
+  line-height:1.45!important;
+  margin-top:7px!important;
+}
+.contact-mode .category .tag{
+  border:1px solid rgba(var(--tone-rgb),.88)!important;
+  background:rgba(var(--tone-rgb),.23)!important;
+  color:var(--tone)!important;
+  box-shadow:none!important;
 }
 .contact-mode .category:hover,
 .contact-mode .category:focus-visible{
   transform:none!important;
   box-shadow:none!important;
   outline:none!important;
-  border-color:rgba(var(--tone-rgb),.82)!important;
-  background:rgba(var(--tone-rgb),.17)!important;
+  border-color:var(--tone)!important;
+  background:rgba(var(--tone-rgb),.21)!important;
 }
 .contact-mode .category:hover .category-icon,
 .contact-mode .category:focus-visible .category-icon{
@@ -47,15 +98,23 @@
 .contact-mode .category:active{
   transform:none!important;
   box-shadow:none!important;
-  background:rgba(var(--tone-rgb),.22)!important;
+  background:rgba(var(--tone-rgb),.25)!important;
 }
+
+/* Tonlar birbirinden daha net ayrılır. */
+.contact-mode .category.tone-blue{--tone:#6f91ff;--tone-rgb:111,145,255}
+.contact-mode .category.tone-cyan{--tone:#2de9ff;--tone-rgb:45,233,255}
+.contact-mode .category.tone-yellow{--tone:#ffe66e;--tone-rgb:255,230,110}
+.contact-mode .category.tone-orange{--tone:#ffaf57;--tone-rgb:255,175,87}
+.contact-mode .category.tone-purple{--tone:#b17cff;--tone-rgb:177,124,255}
+.contact-mode .category.tone-red{--tone:#ff5e7b;--tone-rgb:255,94,123}
 
 /* Sadece seçili kart hareket eder. */
 .contact-mode .category.active{
   border-color:var(--tone)!important;
-  background:rgba(var(--tone-rgb),.26)!important;
+  background:rgba(var(--tone-rgb),.31)!important;
   box-shadow:none!important;
-  animation:dbp-v044-selected 1.35s ease-in-out infinite!important;
+  animation:dbp-v045-selected 1.28s ease-in-out infinite!important;
 }
 .contact-mode .category.active::before{
   content:'SEÇİLDİ ✓'!important;
@@ -64,32 +123,48 @@
   color:#061019!important;
   box-shadow:none!important;
 }
+.contact-mode .category.active::after{height:5px!important;opacity:1!important}
 .contact-mode .category.active .category-icon{
+  background:rgba(var(--tone-rgb),.42)!important;
+  border-color:var(--tone)!important;
   box-shadow:none!important;
-  animation:dbp-v044-selected-icon 1.35s ease-in-out infinite!important;
+  animation:dbp-v045-selected-icon 1.28s ease-in-out infinite!important;
 }
-.contact-mode .category.active .category-title{color:#fff!important}
 
-/* Demo araç/gizlilik kartlarında da arka gölge yok. */
+/* Araç ve gizlilik kartlarında da arka gölge yok. */
 .demo-mode .vehicle-card,
 .demo-mode .privacy-note,
 .contact-mode .vehicle-card,
 .contact-mode .privacy-note{
   box-shadow:none!important;
 }
-
-@keyframes dbp-v044-selected{
-  0%,100%{transform:scale(1);border-color:var(--tone)}
-  50%{transform:scale(1.018);border-color:#fff}
+.demo-mode .vehicle-card,
+.contact-mode .vehicle-card{
+  border-color:rgba(45,233,255,.58)!important;
+  background:rgba(45,233,255,.08)!important;
 }
-@keyframes dbp-v044-selected-icon{
+.demo-mode .privacy-note,
+.contact-mode .privacy-note{
+  border-color:rgba(72,235,161,.52)!important;
+  background:rgba(72,235,161,.08)!important;
+}
+
+@keyframes dbp-v045-selected{
+  0%,100%{transform:scale(1);border-color:var(--tone)}
+  50%{transform:scale(1.016);border-color:#fff}
+}
+@keyframes dbp-v045-selected-icon{
   0%,100%{transform:scale(1)}
-  50%{transform:scale(1.08)}
+  50%{transform:scale(1.09)}
 }
 
 @media(max-width:760px){
-  .contact-mode .category{min-height:134px}
-  .contact-mode .category::before{font-size:8px;padding:5px 7px}
+  .contact-mode .category{min-height:146px!important;padding:14px 13px 16px!important}
+  .contact-mode .category::before{font-size:8px!important;padding:5px 7px!important;top:12px!important;right:12px!important}
+  .contact-mode .category-icon{width:51px!important;height:51px!important;border-radius:16px!important;margin-bottom:11px!important}
+  .contact-mode .category-icon svg{width:28px!important;height:28px!important}
+  .contact-mode .category-title{font-size:14.5px!important;padding-right:34px!important}
+  .contact-mode .category-body{font-size:11.5px!important;line-height:1.4!important}
 }
 
 @media(prefers-reduced-motion:reduce){
