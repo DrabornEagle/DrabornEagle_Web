@@ -1,0 +1,101 @@
+/* DraBornPark Test1 v0.4.6 — premium flat contact cards
+   No glow/shadow. Unselected cards are static. Animation is selected-only. */
+
+.demo-mode .category-grid{gap:12px!important}
+.demo-mode .category{
+  min-height:154px!important;
+  padding:16px 15px 18px!important;
+  border-radius:25px!important;
+  border:1px solid rgba(var(--tone-rgb),.76)!important;
+  background:linear-gradient(145deg,rgba(var(--tone-rgb),.21),rgba(7,12,28,.96) 72%)!important;
+  box-shadow:none!important;
+  transform:none!important;
+  animation:none!important;
+  transition:border-color .16s ease,background-color .16s ease!important;
+}
+.demo-mode .category::after{
+  content:''!important;
+  display:block!important;
+  position:absolute!important;
+  left:15px!important;right:15px!important;bottom:0!important;
+  height:5px!important;border-radius:999px 999px 0 0!important;
+  background:var(--tone)!important;opacity:.96!important;
+  box-shadow:none!important;animation:none!important;
+}
+.demo-mode .category::before{
+  content:'SEÇ  ›'!important;
+  top:13px!important;right:13px!important;
+  padding:6px 9px!important;border-radius:999px!important;
+  border:1px solid rgba(var(--tone-rgb),.82)!important;
+  background:rgba(var(--tone-rgb),.22)!important;
+  color:var(--tone)!important;font-size:9px!important;font-weight:900!important;letter-spacing:.6px!important;
+  box-shadow:none!important;animation:none!important;
+}
+.demo-mode .category-icon{
+  width:58px!important;height:58px!important;border-radius:19px!important;
+  display:grid!important;place-items:center!important;
+  border:1px solid rgba(var(--tone-rgb),.86)!important;
+  background:rgba(var(--tone-rgb),.25)!important;
+  box-shadow:none!important;transform:none!important;animation:none!important;
+}
+.demo-mode .category-icon svg{width:34px!important;height:34px!important;overflow:visible!important}
+.demo-mode .category-icon svg *{vector-effect:non-scaling-stroke}
+.demo-mode .category-icon svg .dbp-stroke{fill:none;stroke:var(--tone);stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.demo-mode .category-icon svg .dbp-fill{fill:var(--tone)}
+.demo-mode .category-icon svg .dbp-soft{fill:rgba(var(--tone-rgb),.22);stroke:var(--tone);stroke-width:1.4}
+.demo-mode .category-title{font-size:16px!important;line-height:1.16!important;font-weight:900!important;color:#fff!important;margin-top:13px!important;padding-right:48px!important}
+.demo-mode .category-body{font-size:12.5px!important;line-height:1.42!important;color:#aeb7cb!important;margin-top:6px!important}
+.demo-mode .category .tag{font-size:8px!important;letter-spacing:.7px!important;border-radius:999px!important;padding:5px 7px!important;box-shadow:none!important}
+
+.demo-mode .category:hover,.demo-mode .category:focus-visible,.demo-mode .category:active{
+  transform:none!important;box-shadow:none!important;outline:none!important;
+}
+.demo-mode .category:focus-visible{border-color:var(--tone)!important}
+.demo-mode .category:active{background:linear-gradient(145deg,rgba(var(--tone-rgb),.27),rgba(7,12,28,.97) 72%)!important}
+
+/* Only selected card moves. */
+.demo-mode .category.active{
+  border-color:var(--tone)!important;
+  background:linear-gradient(145deg,rgba(var(--tone-rgb),.34),rgba(8,14,31,.98) 72%)!important;
+  box-shadow:none!important;
+  animation:dbp-v046-selected 1.4s ease-in-out infinite!important;
+}
+.demo-mode .category.active::before{
+  content:'SEÇİLDİ  ✓'!important;
+  background:var(--tone)!important;border-color:var(--tone)!important;color:#061019!important;
+}
+.demo-mode .category.active .category-icon{animation:dbp-v046-icon 1.4s ease-in-out infinite!important}
+
+/* Premium vehicle + privacy surfaces, still flat. */
+.demo-mode .vehicle-card{
+  border:1px solid rgba(53,228,255,.72)!important;
+  background:linear-gradient(145deg,rgba(53,228,255,.16),rgba(9,17,39,.97) 68%)!important;
+  box-shadow:none!important;border-radius:28px!important;
+}
+.demo-mode .vehicle-icon{
+  border:1px solid rgba(53,228,255,.82)!important;
+  background:rgba(53,228,255,.19)!important;color:#35e4ff!important;
+  box-shadow:none!important;
+}
+.demo-mode .privacy-note{
+  border:1px solid rgba(79,230,164,.68)!important;
+  background:linear-gradient(145deg,rgba(79,230,164,.13),rgba(8,24,29,.94))!important;
+  box-shadow:none!important;border-radius:25px!important;
+}
+
+@keyframes dbp-v046-selected{0%,100%{transform:scale(1)}50%{transform:scale(1.014)}}
+@keyframes dbp-v046-icon{0%,100%{transform:scale(1)}50%{transform:scale(1.07)}}
+
+@media(max-width:760px){
+  .demo-mode .category-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important}
+  .demo-mode .category{min-height:148px!important;padding:14px 13px 17px!important}
+  .demo-mode .category-icon{width:54px!important;height:54px!important;border-radius:18px!important}
+  .demo-mode .category-icon svg{width:31px!important;height:31px!important}
+  .demo-mode .category-title{font-size:14px!important;padding-right:38px!important}
+  .demo-mode .category-body{font-size:11.5px!important}
+  .demo-mode .category::before{font-size:8px!important;padding:5px 7px!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .demo-mode .category.active,.demo-mode .category.active .category-icon{animation:none!important;transform:none!important}
+}
