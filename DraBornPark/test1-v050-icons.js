@@ -1,4 +1,4 @@
-/* DraBornPark v0.5.2 — shared Remix Icon contact UI for Test1 and real NFC/QR tags. */
+/* DraBornPark v0.5.3 — shared Remix Icon contact UI for Test1 and real NFC/QR tags. */
 (function(){
   const raw=new URLSearchParams(location.search).get('tag')||'';
   const clean=raw.toUpperCase().replace(/^DP-/,'').replace(/[^A-Z0-9]/g,'');
@@ -58,7 +58,7 @@
       .dbp47-choice strong{font-size:16px!important;line-height:1.22!important}
       .dbp47-choice small{font-size:12px!important;line-height:1.48!important}
       .dbp47-priority{font-size:9px!important}
-      .dbp47-select-hint{font-size:11px!important;font-weight:900!important;letter-spacing:.09em!important;padding:9px 11px!important}
+      .dbp47-select-hint{font-size:12.5px!important;font-weight:900!important;letter-spacing:.09em!important;padding:9px 11px!important}
       .dbp47-heading p,.dbp47-compose-head p,.dbp47-success>p{font-size:14px!important}
       .dbp51-vehicle-icon{font-size:46px;color:var(--dbp-cyan);line-height:1}
       .dbp51-security-icon{font-size:23px;line-height:1;color:currentColor}
@@ -92,7 +92,7 @@
       .dbp52-live #compose{border-radius:28px!important;border:1px solid rgba(53,228,255,.35)!important;background:rgba(11,25,52,.94)!important;padding:22px!important}
       .dbp52-live #notify-btn{border-radius:18px!important;min-height:58px!important;font-weight:900!important;letter-spacing:.04em!important}
       .dbp52-flow{display:flex;align-items:center;gap:10px;padding:4px 4px 12px}.dbp52-flow div{display:flex;align-items:center;gap:7px;color:#64708d;font-size:11px;font-weight:800}.dbp52-flow b{width:32px;height:32px;border-radius:11px;border:1px solid #263959;display:grid;place-items:center}.dbp52-flow i{height:3px;flex:1;border-radius:999px;background:#1d3154}.dbp52-flow .current{color:#35e4ff}.dbp52-flow .current b{border-color:#35e4ff;background:rgba(53,228,255,.12)}
-      @media(max-width:420px){.dbp47-icon{width:56px!important;height:56px!important}.dbp47-icon>i,.dbp51-icon-stack>i{font-size:29px}.dbp47-choice strong{font-size:16px!important}.dbp47-choice small{font-size:12px!important}.dbp47-select-hint{font-size:10.5px!important}.dbp52-live .vehicle-card{padding:20px!important}.dbp52-live .vehicle-icon{width:72px!important;height:72px!important}.dbp52-live .vehicle-name{font-size:25px!important}.dbp52-live .category.dbp47-choice{min-height:218px!important;padding:16px!important}}
+      @media(max-width:420px){.dbp47-icon{width:56px!important;height:56px!important}.dbp47-icon>i,.dbp51-icon-stack>i{font-size:29px}.dbp47-choice strong{font-size:16px!important}.dbp47-choice small{font-size:12px!important}.dbp47-select-hint{font-size:12.5px!important}.dbp52-live .vehicle-card{padding:20px!important}.dbp52-live .vehicle-icon{width:72px!important;height:72px!important}.dbp52-live .vehicle-name{font-size:25px!important}.dbp52-live .category.dbp47-choice{min-height:218px!important;padding:16px!important}}
     `;
     document.head.appendChild(s);
   }
