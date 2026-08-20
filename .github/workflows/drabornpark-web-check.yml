@@ -23,6 +23,7 @@ jobs:
         run: |
           node --check DraBornPark/app.js
           node --check DraBornPark/test1-v046.js
+          node --check DraBornPark/test1-v050-icons.js
       - name: Required public pages
         run: |
           test -f DraBornPark/index.html
@@ -38,6 +39,13 @@ jobs:
           grep -q "dbp47-choice" DraBornPark/test1-v046.js
           grep -q "aria-pressed" DraBornPark/test1-v046.js
           grep -q "prefers-reduced-motion" DraBornPark/test1-v046.css
+      - name: Test1 icon system
+        run: |
+          grep -q "test1-v050-icons.js" DraBornPark/index.html
+          grep -q "blocking_exit" DraBornPark/test1-v050-icons.js
+          grep -q "door_open" DraBornPark/test1-v050-icons.js
+          grep -q "phoneLock" DraBornPark/test1-v050-icons.js
+          grep -q "dbp50-svg" DraBornPark/test1-v050-icons.js
       - name: Google Play privacy essentials
         run: |
           grep -q "DrabornEagle" DraBornPark/privacy/index.html
