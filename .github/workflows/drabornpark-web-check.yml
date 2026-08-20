@@ -39,13 +39,16 @@ jobs:
           grep -q "dbp47-choice" DraBornPark/test1-v046.js
           grep -q "aria-pressed" DraBornPark/test1-v046.js
           grep -q "prefers-reduced-motion" DraBornPark/test1-v046.css
-      - name: Test1 Remix Icon system
+      - name: Shared Remix Icon contact UI
         run: |
-          grep -q "test1-v050-icons.js" DraBornPark/index.html
           grep -q "remixicon@4.9.1" DraBornPark/test1-v050-icons.js
           grep -q "ri-car-line" DraBornPark/test1-v050-icons.js
           grep -q "ri-door-open-line" DraBornPark/test1-v050-icons.js
           grep -q "ri-phone-lock-line" DraBornPark/test1-v050-icons.js
+          grep -q "enhanceLiveContact" DraBornPark/test1-v050-icons.js
+          grep -q "dbp52-live" DraBornPark/test1-v050-icons.js
+          grep -q "DOKUN • SEÇ" DraBornPark/test1-v050-icons.js
+          grep -q "font-size:11px" DraBornPark/test1-v050-icons.js
           ! grep -q "<svg" DraBornPark/test1-v050-icons.js
       - name: Google Play privacy essentials
         run: |
