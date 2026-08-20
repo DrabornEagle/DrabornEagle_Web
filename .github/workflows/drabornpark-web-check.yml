@@ -48,7 +48,7 @@ jobs:
           grep -q "enhanceLiveContact" DraBornPark/test1-v050-icons.js
           grep -q "dbp52-live" DraBornPark/test1-v050-icons.js
           grep -q "DOKUN • SEÇ" DraBornPark/test1-v050-icons.js
-          grep -q "font-size:11px" DraBornPark/test1-v050-icons.js
+          grep -q "font-size:12.5px" DraBornPark/test1-v050-icons.js
           ! grep -q "<svg" DraBornPark/test1-v050-icons.js
       - name: Google Play privacy essentials
         run: |
