@@ -97,3 +97,9 @@
 @media(prefers-reduced-motion:reduce){
   .contact-mode .category,.contact-mode .category.active,.contact-mode .category-icon{animation:none!important;transition:none!important}
 }
+
+/* v0.4.7 isolated Test1: keep hint text deterministic after demo reset. */
+.test1-v047 .dbp47-select-hint{font-size:0!important}
+.test1-v047 .dbp47-select-hint::after{content:'DOKUN • SEÇ';font-size:8px!important;font-weight:1000;letter-spacing:.55px}
+.test1-v047 .dbp47-choice.is-selected .dbp47-select-hint::after{content:'SEÇİLDİ'}
+@media(max-width:520px){.test1-v047 .dbp47-select-hint::after{font-size:7px!important}}

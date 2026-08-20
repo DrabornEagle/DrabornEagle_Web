@@ -20,7 +20,9 @@ jobs:
         with:
           node-version: 22
       - name: JavaScript syntax
-        run: node --check DraBornPark/app.js
+        run: |
+          node --check DraBornPark/app.js
+          node --check DraBornPark/test1-v046.js
       - name: Required public pages
         run: |
           test -f DraBornPark/index.html
@@ -29,8 +31,21 @@ jobs:
           test -f DraBornPark/data-safety/index.html
           test -f DraBornPark/account-deletion/index.html
           test -f DraBornPark/support/index.html
-      - name: Test1 safe demo contract
+      - name: Test1 isolated safe demo contract
         run: |
-          grep -q "TEST1" DraBornPark/app.js
-          grep -q "DEMO_CATEGORIES" DraBornPark/app.js
-          grep -q "isDemoTag" DraBornPark/app.js
+          grep -q "clean!=='TEST1'" DraBornPark/test1-v046.js
+          grep -q "üretim verisine yazılmaz" DraBornPark/test1-v046.js
+          grep -q "dbp47-choice" DraBornPark/test1-v046.js
+          grep -q "aria-pressed" DraBornPark/test1-v046.js
+          grep -q "prefers-reduced-motion" DraBornPark/test1-v046.css
+      - name: Google Play privacy essentials
+        run: |
+          grep -q "DrabornEagle" DraBornPark/privacy/index.html
+          grep -q "DraBornPark/support/" DraBornPark/privacy/index.html
+          grep -q "DraBornPark/account-deletion/" DraBornPark/privacy/index.html
+          grep -q "Hesabı yalnızca devre dışı bırakmak" DraBornPark/privacy/index.html
+          grep -q "HTTPS/TLS" DraBornPark/privacy/index.html
+          grep -q "saklama" DraBornPark/privacy/index.html
+          grep -q "uygulama içinden" DraBornPark/account-deletion/index.html
+          grep -q "giriş gerekmez" DraBornPark/account-deletion/index.html
+          grep -q "Data Safety" DraBornPark/data-safety/index.html
