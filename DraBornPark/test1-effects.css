@@ -1,0 +1,99 @@
+/* DraBornPark NFC/QR etkileşim katmanı — uygulamadaki Demo kart hissi */
+.contact-mode .category{
+  --tone:#6f91ff;
+  --tone-rgb:111,145,255;
+  border-color:rgba(var(--tone-rgb),.42);
+  background:linear-gradient(145deg,rgba(var(--tone-rgb),.15),rgba(13,24,48,.94) 62%);
+  box-shadow:0 10px 26px rgba(0,0,0,.2),inset 0 1px 0 rgba(255,255,255,.025);
+  transform:translateY(0) scale(1);
+  transition:transform .2s cubic-bezier(.2,.8,.2,1),border-color .2s ease,background .2s ease,box-shadow .2s ease;
+  animation:dbp-card-in .42s both;
+  isolation:isolate;
+}
+.contact-mode .category:nth-child(1){--tone:#35e4ff;--tone-rgb:53,228,255;animation-delay:.02s}
+.contact-mode .category:nth-child(2){--tone:#6c8cff;--tone-rgb:108,140,255;animation-delay:.05s}
+.contact-mode .category:nth-child(3){--tone:#ffe06b;--tone-rgb:255,224,107;animation-delay:.08s}
+.contact-mode .category:nth-child(4){--tone:#4ff4c8;--tone-rgb:79,244,200;animation-delay:.11s}
+.contact-mode .category:nth-child(5){--tone:#ffae5c;--tone-rgb:255,174,92;animation-delay:.14s}
+.contact-mode .category:nth-child(6){--tone:#ff73c6;--tone-rgb:255,115,198;animation-delay:.17s}
+.contact-mode .category:nth-child(7){--tone:#ff637a;--tone-rgb:255,99,122;animation-delay:.20s}
+.contact-mode .category:nth-child(8){--tone:#ff7b72;--tone-rgb:255,123,114;animation-delay:.23s}
+.contact-mode .category:nth-child(9){--tone:#a67bff;--tone-rgb:166,123,255;animation-delay:.26s}
+.contact-mode .category:nth-child(10){--tone:#4fe6a4;--tone-rgb:79,230,164;animation-delay:.29s}
+
+.contact-mode .category::before{
+  content:'DOKUN • SEÇ';
+  position:absolute;
+  right:10px;
+  top:10px;
+  z-index:3;
+  border:1px solid rgba(var(--tone-rgb),.42);
+  background:rgba(var(--tone-rgb),.11);
+  color:var(--tone);
+  border-radius:999px;
+  padding:4px 7px;
+  font-size:8px;
+  line-height:1;
+  font-weight:950;
+  letter-spacing:.07em;
+  transition:.2s ease;
+}
+.contact-mode .category::after{
+  content:'';
+  position:absolute;
+  inset:-1px;
+  z-index:-1;
+  border-radius:inherit;
+  background:radial-gradient(circle at 84% 8%,rgba(var(--tone-rgb),.22),transparent 42%);
+  opacity:.8;
+  transition:.2s ease;
+}
+.contact-mode .category-icon{
+  border:1px solid rgba(var(--tone-rgb),.48)!important;
+  background:rgba(var(--tone-rgb),.19)!important;
+  color:var(--tone)!important;
+  box-shadow:0 8px 18px rgba(var(--tone-rgb),.09);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.contact-mode .category-title{padding-right:4px}
+.contact-mode .category:hover,.contact-mode .category:focus-visible{
+  transform:translateY(-3px) scale(1.015);
+  border-color:rgba(var(--tone-rgb),.86);
+  box-shadow:0 15px 34px rgba(var(--tone-rgb),.13),0 12px 28px rgba(0,0,0,.25);
+  outline:none;
+}
+.contact-mode .category:hover .category-icon,.contact-mode .category:focus-visible .category-icon{transform:scale(1.08) rotate(-2deg);box-shadow:0 10px 26px rgba(var(--tone-rgb),.18)}
+.contact-mode .category:active{transform:scale(.975)}
+.contact-mode .category.active{
+  border-color:var(--tone)!important;
+  background:linear-gradient(145deg,rgba(var(--tone-rgb),.28),rgba(14,27,53,.98) 64%)!important;
+  box-shadow:0 0 0 2px rgba(var(--tone-rgb),.14),0 16px 38px rgba(var(--tone-rgb),.22),0 14px 32px rgba(0,0,0,.27)!important;
+  animation:dbp-selected-pulse 1.65s ease-in-out infinite;
+}
+.contact-mode .category.active::before{
+  content:'SEÇİLDİ ✓';
+  background:var(--tone);
+  border-color:var(--tone);
+  color:#061019;
+  box-shadow:0 8px 20px rgba(var(--tone-rgb),.25);
+}
+.contact-mode .category.active::after{opacity:1;background:radial-gradient(circle at 84% 8%,rgba(var(--tone-rgb),.34),transparent 48%)}
+.contact-mode .category.active .category-icon{transform:scale(1.08);box-shadow:0 12px 28px rgba(var(--tone-rgb),.24)}
+.contact-mode .category.active .category-title{color:#fff}
+
+.demo-mode .vehicle-card{box-shadow:0 12px 34px rgba(53,228,255,.09),inset 0 1px 0 rgba(255,255,255,.025)}
+.demo-mode .privacy-note{box-shadow:0 12px 30px rgba(79,230,164,.075)}
+.demo-mode .section-intro::after{content:'  •  Bir karta dokunarak seç';color:var(--cyan);font-weight:850}
+
+@keyframes dbp-card-in{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes dbp-selected-pulse{0%,100%{box-shadow:0 0 0 2px rgba(var(--tone-rgb),.12),0 16px 38px rgba(var(--tone-rgb),.18),0 14px 32px rgba(0,0,0,.27)}50%{box-shadow:0 0 0 4px rgba(var(--tone-rgb),.18),0 18px 42px rgba(var(--tone-rgb),.29),0 14px 32px rgba(0,0,0,.27)}}
+
+@media(max-width:760px){
+  .contact-mode .category{min-height:132px;padding:12px}
+  .contact-mode .category::before{font-size:7px;padding:4px 6px}
+  .contact-mode .category-title{font-size:13.2px;line-height:1.25}
+  .contact-mode .category-body{font-size:11.5px}
+}
+@media(prefers-reduced-motion:reduce){
+  .contact-mode .category,.contact-mode .category.active,.contact-mode .category-icon{animation:none!important;transition:none!important}
+}
