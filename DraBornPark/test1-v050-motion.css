@@ -40,13 +40,15 @@
   pointer-events: none;
   animation: dbp50-other-scan 2.8s linear infinite;
 }
-.dbp47-choice[data-key="other"] .dbp47-choice-icon {
-  border-color: rgba(33,232,255,.68) !important;
+.dbp47-choice[data-key="other"] .dbp47-icon {
+  border: 1px solid rgba(33,232,255,.68) !important;
   background: rgba(102,140,255,.18) !important;
 }
-.dbp47-choice[data-key="other"] .dbp47-choice-tag {
+.dbp47-choice[data-key="other"] .dbp47-priority,
+.dbp47-choice[data-key="other"] .dbp47-select-hint {
   border-color: rgba(176,110,255,.72) !important;
   background: rgba(176,110,255,.13) !important;
+  color: #d9bcff !important;
 }
 
 .dbp47-send {
