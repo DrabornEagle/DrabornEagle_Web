@@ -1,0 +1,36 @@
+name: DraBornPark Web Check
+
+on:
+  pull_request:
+    paths:
+      - 'DraBornPark/**'
+      - '.github/workflows/drabornpark-web-check.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'DraBornPark/**'
+      - '.github/workflows/drabornpark-web-check.yml'
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: JavaScript syntax
+        run: node --check DraBornPark/app.js
+      - name: Required public pages
+        run: |
+          test -f DraBornPark/index.html
+          test -f DraBornPark/privacy/index.html
+          test -f DraBornPark/terms/index.html
+          test -f DraBornPark/data-safety/index.html
+          test -f DraBornPark/account-deletion/index.html
+          test -f DraBornPark/support/index.html
+      - name: Test1 safe demo contract
+        run: |
+          grep -q "TEST1" DraBornPark/app.js
+          grep -q "DEMO_CATEGORIES" DraBornPark/app.js
+          grep -q "isDemoTag" DraBornPark/app.js
