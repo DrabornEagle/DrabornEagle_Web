@@ -1,0 +1,98 @@
+/* DraBornPark Test1 v0.4.4 — düz Spectrum kartları
+   Normal kartlarda glow/shadow/otomatik animasyon yoktur.
+   Hareket yalnızca kullanıcının seçtiği kartta çalışır. */
+
+.contact-mode .category{
+  box-shadow:none!important;
+  animation:none!important;
+  transform:none!important;
+  transition:border-color .16s ease,background-color .16s ease,color .16s ease!important;
+  background:rgba(var(--tone-rgb),.13)!important;
+  border-color:rgba(var(--tone-rgb),.58)!important;
+}
+.contact-mode .category::after{
+  display:none!important;
+  content:none!important;
+  background:none!important;
+  opacity:0!important;
+}
+.contact-mode .category::before{
+  content:'SEÇ ›'!important;
+  background:rgba(var(--tone-rgb),.18)!important;
+  border-color:rgba(var(--tone-rgb),.7)!important;
+  color:var(--tone)!important;
+  box-shadow:none!important;
+  transition:none!important;
+}
+.contact-mode .category-icon{
+  box-shadow:none!important;
+  transition:none!important;
+  transform:none!important;
+  background:rgba(var(--tone-rgb),.24)!important;
+  border-color:rgba(var(--tone-rgb),.76)!important;
+}
+.contact-mode .category:hover,
+.contact-mode .category:focus-visible{
+  transform:none!important;
+  box-shadow:none!important;
+  outline:none!important;
+  border-color:rgba(var(--tone-rgb),.82)!important;
+  background:rgba(var(--tone-rgb),.17)!important;
+}
+.contact-mode .category:hover .category-icon,
+.contact-mode .category:focus-visible .category-icon{
+  transform:none!important;
+  box-shadow:none!important;
+}
+.contact-mode .category:active{
+  transform:none!important;
+  box-shadow:none!important;
+  background:rgba(var(--tone-rgb),.22)!important;
+}
+
+/* Sadece seçili kart hareket eder. */
+.contact-mode .category.active{
+  border-color:var(--tone)!important;
+  background:rgba(var(--tone-rgb),.26)!important;
+  box-shadow:none!important;
+  animation:dbp-v044-selected 1.35s ease-in-out infinite!important;
+}
+.contact-mode .category.active::before{
+  content:'SEÇİLDİ ✓'!important;
+  background:var(--tone)!important;
+  border-color:var(--tone)!important;
+  color:#061019!important;
+  box-shadow:none!important;
+}
+.contact-mode .category.active .category-icon{
+  box-shadow:none!important;
+  animation:dbp-v044-selected-icon 1.35s ease-in-out infinite!important;
+}
+.contact-mode .category.active .category-title{color:#fff!important}
+
+/* Demo araç/gizlilik kartlarında da arka gölge yok. */
+.demo-mode .vehicle-card,
+.demo-mode .privacy-note,
+.contact-mode .vehicle-card,
+.contact-mode .privacy-note{
+  box-shadow:none!important;
+}
+
+@keyframes dbp-v044-selected{
+  0%,100%{transform:scale(1);border-color:var(--tone)}
+  50%{transform:scale(1.018);border-color:#fff}
+}
+@keyframes dbp-v044-selected-icon{
+  0%,100%{transform:scale(1)}
+  50%{transform:scale(1.08)}
+}
+
+@media(max-width:760px){
+  .contact-mode .category{min-height:134px}
+  .contact-mode .category::before{font-size:8px;padding:5px 7px}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .contact-mode .category.active,
+  .contact-mode .category.active .category-icon{animation:none!important;transform:none!important}
+}
