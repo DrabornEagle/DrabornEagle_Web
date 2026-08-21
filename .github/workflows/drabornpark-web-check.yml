@@ -23,6 +23,8 @@ jobs:
         run: |
           node --check DraBornPark/app.js
           node --check DraBornPark/contact-v051.js
+          node --check DraBornPark/realtime-v052.js
+          node --check DraBornPark/evidence-v053.js
           node --check DraBornPark/test1-v050-icons.js
           node --check DraBornPark/production-icons-v051.js
       - name: Required public pages
@@ -40,6 +42,19 @@ jobs:
           grep -q "aria-pressed" DraBornPark/contact-v051.js
           grep -q "production-icons-v051.js" DraBornPark/index.html
           grep -q "MutationObserver" DraBornPark/production-icons-v051.js
+      - name: v0.5.3 camera-only evidence
+        run: |
+          test -f DraBornPark/evidence-v053.js
+          test -f DraBornPark/evidence-v053.css
+          grep -q "evidence-v053.js" DraBornPark/index.html
+          grep -q "evidence-v053.css" DraBornPark/index.html
+          grep -q "getUserMedia" DraBornPark/evidence-v053.js
+          grep -q "facingMode" DraBornPark/evidence-v053.js
+          grep -q "canvas.toDataURL('image/jpeg'" DraBornPark/evidence-v053.js
+          grep -q "ANLIK KANIT" DraBornPark/evidence-v053.js
+          grep -q "capturedAt" DraBornPark/evidence-v053.js
+          ! grep -q 'type="file"' DraBornPark/evidence-v053.js
+          ! grep -q 'accept="image' DraBornPark/evidence-v053.js
       - name: Remix Icon contact UI
         run: |
           grep -q "remixicon@4.6.0" DraBornPark/index.html
