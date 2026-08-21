@@ -19,22 +19,29 @@
     if(capture&&capture.textContent!=='Fotoğraf ÇEK')capture.textContent='Fotoğraf ÇEK';
   }
 
+  function syncOwnerBadge(){
+    const badge=document.querySelector('.dbp47-tag');
+    if(!badge)return;
+    const text=String(badge.textContent||'').trim();
+    if(/^ETİKET\s*•/i.test(text))badge.textContent=text.replace(/^ETİKET\s*•/i,'Araç Sahibi •');
+  }
+
   function installAvatar(url){
     const holder=document.querySelector('.dbp47-vehicle .dbp47-car');
-    if(!holder||holder.querySelector('.dbp47-owner-avatar'))return;
-    const dot=holder.querySelector(':scope > span:last-child');
+    if(!holder||holder.classList.contains('dbp53-has-avatar'))return;
     const img=document.createElement('img');
     img.className='dbp47-owner-avatar';
     img.alt='Araç sahibinin profil fotoğrafı';
     img.loading='eager';
     img.referrerPolicy='no-referrer';
     img.addEventListener('load',()=>{
-      holder.querySelectorAll('.dbp48-raster,.dbp49-car-raster').forEach(node=>node.remove());
-      if(!img.isConnected){if(dot)holder.insertBefore(img,dot);else holder.prepend(img);}
+      const statusDot=document.createElement('span');
+      statusDot.className='dbp53-avatar-status';
+      holder.replaceChildren(img,statusDot);
+      holder.classList.add('dbp53-has-avatar');
     },{once:true});
     img.addEventListener('error',()=>img.remove(),{once:true});
     img.src=url;
-    if(dot)holder.insertBefore(img,dot);else holder.prepend(img);
   }
 
   async function loadAvatarAfterRender(){
@@ -51,6 +58,7 @@
 
   function sync(){
     syncEvidenceText();
+    syncOwnerBadge();
     loadAvatarAfterRender();
     if(document.querySelector('.dbp47-vehicle')&&document.getElementById('dbp53-evidence')){
       if(observer){observer.disconnect();observer=null;}
@@ -59,7 +67,10 @@
 
   function start(){
     sync();
-    if(!observer){observer=new MutationObserver(sync);observer.observe(document.body||document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});}
+    if(!observer){
+      observer=new MutationObserver(sync);
+      observer.observe(document.body||document.documentElement,{childList:true,subtree:true,attributes:true,attributeFilter:['hidden']});
+    }
     setTimeout(sync,250);
     setTimeout(sync,900);
   }
