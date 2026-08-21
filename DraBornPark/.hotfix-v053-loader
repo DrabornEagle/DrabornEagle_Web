@@ -1,0 +1,1 @@
+v0.5.3 tag loading hotfix: defer avatar lookup until contact UI is rendered; cache-bust polish script v057.
