@@ -22,8 +22,9 @@ jobs:
       - name: JavaScript syntax
         run: |
           node --check DraBornPark/app.js
-          node --check DraBornPark/test1-v046.js
+          node --check DraBornPark/contact-v051.js
           node --check DraBornPark/test1-v050-icons.js
+          node --check DraBornPark/production-icons-v051.js
       - name: Required public pages
         run: |
           test -f DraBornPark/index.html
@@ -32,25 +33,21 @@ jobs:
           test -f DraBornPark/data-safety/index.html
           test -f DraBornPark/account-deletion/index.html
           test -f DraBornPark/support/index.html
-      - name: Test1 isolated safe demo contract
+      - name: Production contact layout contract
         run: |
-          grep -q "clean!=='TEST1'" DraBornPark/test1-v046.js
-          grep -q "üretim verisine yazılmaz" DraBornPark/test1-v046.js
-          grep -q "dbp47-choice" DraBornPark/test1-v046.js
-          grep -q "aria-pressed" DraBornPark/test1-v046.js
-          grep -q "prefers-reduced-motion" DraBornPark/test1-v046.css
-      - name: Shared Remix Icon contact UI
+          grep -q "test1-v047','test1-v048" DraBornPark/contact-v051.js
+          grep -q "dbp47-choice" DraBornPark/contact-v051.js
+          grep -q "aria-pressed" DraBornPark/contact-v051.js
+          grep -q "production-icons-v051.js" DraBornPark/index.html
+          grep -q "MutationObserver" DraBornPark/production-icons-v051.js
+      - name: Remix Icon contact UI
         run: |
-          grep -q "remixicon@4.9.1" DraBornPark/test1-v050-icons.js
-          grep -q "ri-car-line" DraBornPark/test1-v050-icons.js
-          grep -q "ri-door-open-line" DraBornPark/test1-v050-icons.js
-          grep -q "ri-phone-lock-line" DraBornPark/test1-v050-icons.js
-          grep -q "enhanceLiveContact" DraBornPark/test1-v050-icons.js
-          grep -q "dbp52-live" DraBornPark/test1-v050-icons.js
-          grep -q "DOKUN • SEÇ" DraBornPark/test1-v050-icons.js
-          grep -q "font-size:13.5px" DraBornPark/test1-v050-icons.js
-          grep -q "margin-top:4px" DraBornPark/test1-v050-icons.js
-          ! grep -q "<svg" DraBornPark/test1-v050-icons.js
+          grep -q "remixicon@4.6.0" DraBornPark/index.html
+          grep -q "ri-car-line" DraBornPark/production-icons-v051.js
+          grep -q "ri-door-open-line" DraBornPark/production-icons-v051.js
+          grep -q "ri-phone-lock-line" DraBornPark/production-icons-v051.js
+          grep -q "ri-shield-check-line" DraBornPark/production-icons-v051.js
+          ! grep -q "<svg" DraBornPark/production-icons-v051.js
       - name: Google Play privacy essentials
         run: |
           grep -q "DrabornEagle" DraBornPark/privacy/index.html
