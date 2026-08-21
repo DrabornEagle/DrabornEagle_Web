@@ -1,0 +1,36 @@
+/* DraBornPark v0.5.3 — additive polish only. No production contact layout rewrite. */
+.dbp53-evidence{position:relative;overflow:hidden;border-width:2px;border-color:rgba(42,221,255,.72);background:rgba(8,20,39,.92);animation:dbp53EvidenceBorder 5.6s ease-in-out infinite}
+.dbp53-evidence:before,.dbp53-evidence:after{content:"";position:absolute;left:16px;right:16px;height:4px;border-radius:999px;pointer-events:none;animation:dbp53Accent 4.8s ease-in-out infinite}
+.dbp53-evidence:before{top:0;background:#2addff}.dbp53-evidence:after{bottom:0;background:#41eebf;animation-delay:-2.4s}
+.dbp53-evidence-head{position:relative;z-index:1}.dbp53-camera-icon{width:54px;height:54px;border-radius:18px;border-width:2px;background:rgba(167,100,255,.16);color:#a764ff;animation:dbp53IconPulse 2.4s ease-in-out infinite}
+.dbp53-evidence-head b{font-size:18px}.dbp53-evidence-head small{font-size:13px;color:#aebbd0}
+.dbp53-camera-open{position:relative;overflow:hidden;min-height:66px;border-width:2px;border-color:#2addff;background:#092c3b;color:#f7fbff;font-size:16px;letter-spacing:.25px;animation:dbp53ButtonColor 5s ease-in-out infinite,dbp53ButtonPulse 2.8s ease-in-out infinite}
+.dbp53-camera-open i{font-size:27px;color:#41eebf}.dbp53-camera-open:after{content:"";position:absolute;left:-32%;top:0;width:22%;height:100%;background:rgba(255,255,255,.12);transform:skewX(-18deg);animation:dbp53Sweep 3.8s ease-in-out infinite;pointer-events:none}
+.dbp53-evidence-note{padding:10px 11px;border:1px solid rgba(65,238,191,.28);border-radius:14px;background:rgba(65,238,191,.07)}
+.dbp53-camera-panel{position:relative}.dbp53-camera-actions{z-index:5;background:#071122}.dbp53-camera-actions button{min-height:68px;border:2px solid #41eebf;background:#41eebf;color:#03120e;font-size:17px;animation:dbp53CaptureColor 4.6s ease-in-out infinite}
+
+/* Vehicle card: same DOM/layout, richer solid-color motion and owner avatar. */
+.dbp47-vehicle{position:relative;overflow:hidden;border-width:2px!important;border-color:rgba(42,221,255,.72)!important;background:rgba(7,24,41,.94)!important;animation:dbp53VehicleBorder 6.2s ease-in-out infinite}
+.dbp47-vehicle:before,.dbp47-vehicle:after{content:"";position:absolute;left:22px;right:22px;height:5px;border-radius:999px;pointer-events:none;z-index:0}
+.dbp47-vehicle:before{top:0;background:#2addff;animation:dbp53Accent 5s ease-in-out infinite}.dbp47-vehicle:after{bottom:0;background:#ff5cbd;animation:dbp53Accent 5s ease-in-out infinite reverse}
+.dbp47-vehicle-main,.dbp47-vehicle-status{position:relative;z-index:1}.dbp47-car{overflow:visible!important;border-width:2px!important;border-color:rgba(65,238,191,.7)!important;background:rgba(13,48,64,.9)!important;animation:dbp53AvatarRing 4s ease-in-out infinite}
+.dbp47-owner-avatar{display:block;width:100%;height:100%;object-fit:cover;border-radius:inherit;background:#0a2033}
+.dbp47-car>span:last-child{z-index:3!important}.dbp47-vehicle-copy .dbp47-kicker{color:#41eebf!important}.dbp47-vehicle-copy h1{color:#fff!important}.dbp47-tag{border-color:rgba(167,100,255,.52)!important;color:#d6b9ff!important;background:rgba(167,100,255,.1)!important}
+
+@keyframes dbp53EvidenceBorder{0%,100%{border-color:rgba(42,221,255,.72)}25%{border-color:rgba(167,100,255,.72)}50%{border-color:rgba(255,92,189,.68)}75%{border-color:rgba(65,238,191,.72)}}
+@keyframes dbp53VehicleBorder{0%,100%{border-color:rgba(42,221,255,.72)}33%{border-color:rgba(65,238,191,.7)}66%{border-color:rgba(167,100,255,.68)}}
+@keyframes dbp53Accent{0%,100%{background:#2addff;transform:scaleX(.72)}25%{background:#a764ff;transform:scaleX(1)}50%{background:#ff5cbd;transform:scaleX(.82)}75%{background:#41eebf;transform:scaleX(.94)}}
+@keyframes dbp53IconPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.07) rotate(-3deg)}}
+@keyframes dbp53ButtonColor{0%,100%{border-color:#2addff;background:#092c3b}33%{border-color:#a764ff;background:#24163d}66%{border-color:#41eebf;background:#0b352f}}
+@keyframes dbp53ButtonPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
+@keyframes dbp53Sweep{0%,55%{left:-32%}80%,100%{left:118%}}
+@keyframes dbp53CaptureColor{0%,100%{background:#41eebf;border-color:#41eebf}35%{background:#2addff;border-color:#2addff}70%{background:#b57cff;border-color:#b57cff}}
+@keyframes dbp53AvatarRing{0%,100%{border-color:rgba(65,238,191,.75);transform:scale(1)}50%{border-color:rgba(42,221,255,.92);transform:scale(1.02)}}
+
+@media(max-width:520px){
+  .dbp53-camera-actions{position:fixed!important;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));padding:0!important;background:transparent!important;z-index:100001!important}
+  .dbp53-camera-actions button{width:100%;min-height:72px;border-radius:22px}
+  .dbp53-camera-panel video{padding-bottom:92px;box-sizing:border-box}
+  .dbp53-evidence{padding:15px;border-radius:22px}
+}
+@media(prefers-reduced-motion:reduce){.dbp53-evidence,.dbp53-camera-icon,.dbp53-camera-open,.dbp53-camera-open:after,.dbp53-camera-actions button,.dbp47-vehicle,.dbp47-car,.dbp47-vehicle:before,.dbp47-vehicle:after{animation:none!important}}
