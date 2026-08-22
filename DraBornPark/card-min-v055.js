@@ -15,18 +15,21 @@
     const dkd_p=dkd_vehicle.querySelector('.dbp47-vehicle-copy>p');
     let dkd_detail=dkd_p?.textContent?.trim()||'';
     if(dkd_detail.startsWith(dkd_plate))dkd_detail=dkd_detail.slice(dkd_plate.length).replace(/^\s*[•·|]\s*/,'').trim();
+    const dkd_parts=dkd_detail.split(/\s*[•·|]\s*/).map(dkd_part=>dkd_part.trim()).filter(Boolean);
+    const dkd_color=dkd_parts[0]||'Belirtilmedi';
+    const dkd_vehicle_detail=dkd_parts.slice(1).join(' • ')||'Araç profili';
     const dkd_tag_label=dkd_vehicle.querySelector('.dbp47-tag')?.textContent?.trim()||('ETİKET • '+dkd_tag.toUpperCase());
     const dkd_car=dkd_vehicle.querySelector('.dbp47-car');
     const dkd_car_html=dkd_car?dkd_car.outerHTML:'<div class="dbp47-car"><span class="dbp48-raster dbp48-i-blocking dbp49-car-raster" aria-hidden="true"></span><span></span></div>';
-    return{dkd_vehicle,dkd_name,dkd_plate,dkd_detail,dkd_tag_label,dkd_car_html};
+    return{dkd_vehicle,dkd_name,dkd_plate,dkd_color,dkd_vehicle_detail,dkd_tag_label,dkd_car_html};
   }
 
   function dkd_rebuild(){
     const dkd_data=dkd_extract();if(!dkd_data)return false;
-    const {dkd_vehicle,dkd_name,dkd_plate,dkd_detail,dkd_tag_label,dkd_car_html}=dkd_data;
-    if(dkd_vehicle.dataset.dkdCardV3==='1')return true;
-    dkd_vehicle.dataset.dkdCardV3='1';
-    dkd_vehicle.className='dbp47-vehicle dkd63-card';
+    const {dkd_vehicle,dkd_name,dkd_plate,dkd_color,dkd_vehicle_detail,dkd_tag_label,dkd_car_html}=dkd_data;
+    if(dkd_vehicle.dataset.dkdCardV4==='1')return true;
+    dkd_vehicle.dataset.dkdCardV4='1';
+    dkd_vehicle.className='dbp47-vehicle dkd63-card dkd64-card';
     dkd_vehicle.innerHTML=`
       <span class="dkd63-orb dkd63-orb-a"></span>
       <span class="dkd63-orb dkd63-orb-b"></span>
@@ -42,12 +45,26 @@
         </button>
       </div>
 
-      <div class="dkd63-main">
+      <div class="dkd63-main dkd64-main">
         <div class="dkd63-photo">${dkd_car_html}</div>
-        <div class="dkd63-copy">
+        <div class="dkd63-copy dkd64-copy">
+          <span class="dkd64-vehicle-kicker">KORUMALI ARAÇ PROFİLİ</span>
           <h1>${dkd_escape(dkd_name)}</h1>
-          <div class="dkd63-plate"><i class="ri-bank-card-2-line"></i><strong>${dkd_escape(dkd_plate)}</strong></div>
-          ${dkd_detail?`<div class="dkd63-detail">${dkd_escape(dkd_detail)}</div>`:''}
+        </div>
+      </div>
+
+      <div class="dkd64-info-grid">
+        <div class="dkd64-info dkd64-info-plate">
+          <span class="dkd64-info-icon"><i class="ri-bank-card-2-line"></i></span>
+          <span class="dkd64-info-copy"><small>PLAKA</small><strong>${dkd_escape(dkd_plate)}</strong></span>
+        </div>
+        <div class="dkd64-info dkd64-info-color">
+          <span class="dkd64-info-icon"><i class="ri-palette-line"></i></span>
+          <span class="dkd64-info-copy"><small>RENK</small><strong>${dkd_escape(dkd_color)}</strong></span>
+        </div>
+        <div class="dkd64-info dkd64-info-model">
+          <span class="dkd64-info-icon"><i class="ri-car-line"></i></span>
+          <span class="dkd64-info-copy"><small>ARAÇ</small><strong>${dkd_escape(dkd_vehicle_detail)}</strong></span>
         </div>
       </div>
 
@@ -62,11 +79,20 @@
     return true;
   }
 
+  function dkd_update_send_label(){
+    const dkd_send=document.querySelector('#dkd55-message-send span');
+    if(dkd_send&&dkd_send.textContent!=='ARAÇ SAHİBİNE GÖNDER')dkd_send.textContent='ARAÇ SAHİBİNE GÖNDER';
+  }
+
   function dkd_boot(){
-    if(dkd_rebuild())return;
-    const dkd_observer=new MutationObserver(()=>{if(dkd_rebuild())dkd_observer.disconnect();});
+    dkd_update_send_label();
+    const dkd_ready=dkd_rebuild();
+    const dkd_observer=new MutationObserver(()=>{
+      dkd_update_send_label();
+      if(!dkd_ready)dkd_rebuild();
+    });
     dkd_observer.observe(document.documentElement,{childList:true,subtree:true});
-    setTimeout(()=>dkd_observer.disconnect(),12000);
+    setTimeout(()=>{dkd_update_send_label();dkd_observer.disconnect();},12000);
   }
 
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',dkd_boot);else dkd_boot();
