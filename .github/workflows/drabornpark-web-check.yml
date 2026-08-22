@@ -27,6 +27,7 @@ jobs:
           node --check DraBornPark/evidence-v053.js
           node --check DraBornPark/test1-v050-icons.js
           node --check DraBornPark/production-icons-v051.js
+          node --check DraBornPark/web-v055.js
       - name: Required public pages
         run: |
           test -f DraBornPark/index.html
@@ -55,6 +56,20 @@ jobs:
           grep -q "capturedAt" DraBornPark/evidence-v053.js
           ! grep -q 'type="file"' DraBornPark/evidence-v053.js
           ! grep -q 'accept="image' DraBornPark/evidence-v053.js
+      - name: v0.5.5 direct secure message
+        run: |
+          test -f DraBornPark/web-v055.js
+          test -f DraBornPark/web-v055.css
+          grep -q "web-v055.js?v=060" DraBornPark/index.html
+          grep -q "web-v055.css?v=060" DraBornPark/index.html
+          grep -q "category:'direct_message'" DraBornPark/web-v055.js
+          grep -q "FOTOĞRAF EKLE" DraBornPark/web-v055.js
+          grep -q "ARAÇ SAHİBİ •" DraBornPark/web-v055.js
+          grep -q "NFC + QR • AKTİF" DraBornPark/web-v055.js
+          grep -q "Trendyol" DraBornPark/web-v055.js
+          grep -q "Hepsiburada" DraBornPark/web-v055.js
+          grep -q "Amazon" DraBornPark/web-v055.js
+          grep -q "DraBornPark Mağaza" DraBornPark/web-v055.js
       - name: Remix Icon contact UI
         run: |
           grep -q "remixicon@4.6.0" DraBornPark/index.html
