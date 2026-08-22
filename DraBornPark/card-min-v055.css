@@ -1,117 +1,19 @@
-/* DraBornPark web v0.5.5 — minimalist, colorful protected vehicle card overrides. */
-.dbp47-vehicle.dkd55-vehicle-premium.dkd55-minimal-card{
-  border-radius:28px!important;
-  padding:17px!important;
-  border:1px solid rgba(66,214,255,.42)!important;
-  background:
-    radial-gradient(circle at 12% 12%,rgba(42,221,255,.12),transparent 30%),
-    radial-gradient(circle at 92% 12%,rgba(167,100,255,.12),transparent 31%),
-    radial-gradient(circle at 86% 100%,rgba(255,101,184,.08),transparent 38%),
-    linear-gradient(145deg,rgba(5,19,32,.985),rgba(8,14,29,.985) 58%,rgba(15,9,27,.985))!important;
-  box-shadow:0 18px 44px rgba(0,0,0,.24),inset 0 1px rgba(255,255,255,.035)!important;
-}
-.dbp47-vehicle.dkd55-minimal-card:before{opacity:.5!important}
-.dbp47-vehicle.dkd55-minimal-card .dkd55-vehicle-spectrum{left:18px;right:18px;height:4px;gap:4px}
-.dbp47-vehicle.dkd55-minimal-card .dkd55-vehicle-aurora-a{width:190px;height:190px;right:-85px;top:-75px;opacity:.78}
-.dbp47-vehicle.dkd55-minimal-card .dkd55-vehicle-aurora-b{width:165px;height:165px;left:-85px;bottom:-95px;opacity:.62}
-.dbp47-vehicle.dkd55-minimal-card .dkd55-vehicle-scan{width:82px;opacity:.72;animation-duration:5.8s}
+/* DraBornPark web v0.5.5 — rebuilt colorful protected vehicle card. */
+.dbp47-vehicle.dkd63-card{position:relative!important;isolation:isolate!important;overflow:hidden!important;border-radius:28px!important;padding:16px!important;border:1px solid rgba(61,217,255,.48)!important;background:radial-gradient(circle at 8% 8%,rgba(42,221,255,.17),transparent 30%),radial-gradient(circle at 96% 6%,rgba(167,100,255,.15),transparent 33%),radial-gradient(circle at 86% 100%,rgba(255,101,184,.11),transparent 37%),linear-gradient(148deg,#071826 0%,#07111f 56%,#120b20 100%)!important;box-shadow:0 18px 46px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.045)!important;transform:translateZ(0)}
+.dbp47-vehicle.dkd63-card:before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1px;background:linear-gradient(120deg,rgba(42,221,255,.88),rgba(111,140,255,.25),rgba(255,101,184,.78),rgba(69,235,174,.62));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;pointer-events:none;opacity:.72;z-index:9}
+.dkd63-spectrum{position:absolute;z-index:10;left:18px;right:18px;top:0;height:4px;display:flex;gap:4px}.dkd63-spectrum i{flex:1;border-radius:0 0 999px 999px}.dkd63-spectrum i:nth-child(1){background:#2addff}.dkd63-spectrum i:nth-child(2){background:#6f8cff}.dkd63-spectrum i:nth-child(3){background:#a764ff}.dkd63-spectrum i:nth-child(4){background:#ff65b8}.dkd63-spectrum i:nth-child(5){background:#45ebae}
+.dkd63-orb{position:absolute;border-radius:50%;pointer-events:none;z-index:-1;animation:dkd63Float 6s ease-in-out infinite}.dkd63-orb-a{width:210px;height:210px;right:-100px;top:-80px;background:radial-gradient(circle,rgba(42,221,255,.14),rgba(167,100,255,.08) 48%,transparent 72%)}.dkd63-orb-b{width:180px;height:180px;left:-90px;bottom:-105px;background:radial-gradient(circle,rgba(255,101,184,.12),rgba(255,177,94,.05) 48%,transparent 72%);animation-delay:-2.3s}@keyframes dkd63Float{50%{transform:translate3d(10px,8px,0) scale(1.08)}}
+.dkd63-scan{position:absolute;z-index:1;top:-70px;bottom:-70px;left:-130px;width:86px;background:linear-gradient(90deg,transparent,rgba(255,255,255,.065),transparent);transform:rotate(13deg);animation:dkd63Scan 5.2s linear infinite;pointer-events:none}@keyframes dkd63Scan{0%{left:-140px}55%,100%{left:120%}}
 
-.dkd55-minimal-top{position:relative;z-index:5;display:flex;align-items:center;justify-content:flex-start;margin:9px 0 12px;padding-right:190px;min-height:44px}
-.dkd55-minimal-protected{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 10px;border-radius:999px;border:1px solid rgba(69,235,174,.26);background:rgba(69,235,174,.075);color:#71f2c0;font-size:10px;letter-spacing:.9px;font-weight:900;backdrop-filter:blur(12px)}
-.dkd55-minimal-protected i{font-size:16px}
-.dkd55-hide-old-kicker{display:none!important}
+.dkd63-head{position:relative;z-index:5;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;margin:7px 0 13px}.dkd63-protected{min-height:42px;width:max-content;max-width:145px;padding:7px 11px;border-radius:15px;border:1px solid rgba(69,235,174,.28);background:rgba(69,235,174,.075);color:#6ff1be;display:flex;align-items:center;gap:8px;backdrop-filter:blur(13px)}.dkd63-protected>i{font-size:20px;flex:0 0 auto}.dkd63-protected span{font-size:9px;line-height:1.16;letter-spacing:.8px;font-weight:800}.dkd63-protected b{font-size:11px;color:#94ffd5;letter-spacing:.9px}
 
-.dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-main{
-  grid-template-columns:76px minmax(0,1fr)!important;
-  gap:14px!important;
-  align-items:center!important;
-  padding-top:0!important;
-}
-.dbp47-vehicle.dkd55-minimal-card .dbp47-car{
-  width:74px!important;height:74px!important;border-radius:23px!important;padding:3px!important;
-  border:1px solid rgba(42,221,255,.42)!important;
-  background:linear-gradient(145deg,rgba(42,221,255,.18),rgba(167,100,255,.12))!important;
-  box-shadow:0 0 0 4px rgba(42,221,255,.035),0 10px 24px rgba(0,0,0,.2)!important;
-}
-.dbp47-vehicle.dkd55-minimal-card .dbp47-car img,.dbp47-vehicle.dkd55-minimal-card .dbp47-car .dbp49-car-raster{border-radius:20px!important}
-.dbp47-vehicle.dkd55-minimal-card .dbp47-car:after{width:10px;height:10px;right:1px;bottom:2px;border-width:2px}
-.dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-copy h1{font-size:26px!important;line-height:1.05!important;letter-spacing:-.65px!important;margin:0!important}
-.dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-copy>p{display:flex!important;align-items:center;flex-wrap:wrap;gap:7px;margin:7px 0 0!important;color:#8fa0b9!important;font-size:12.5px!important;line-height:1.35!important}
-.dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-copy>p>i{margin:0 1px!important;color:#566984!important;font-size:10px!important}
+.dkd63-protect-cta{min-width:194px;min-height:54px;padding:6px 7px;border-radius:17px;border:1px solid rgba(255,215,87,.58);background:linear-gradient(110deg,rgba(255,215,87,.17),rgba(255,101,184,.12) 54%,rgba(167,100,255,.14));display:grid;grid-template-columns:40px minmax(0,1fr) 29px;gap:8px;align-items:center;color:#fff;cursor:pointer;text-align:left;box-shadow:0 12px 28px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.05);animation:dkd63Cta 2.4s ease-in-out infinite;transition:transform .18s ease,border-color .18s ease}.dkd63-protect-cta:hover{transform:translateY(-1px) scale(1.012);border-color:rgba(255,215,87,.85)}@keyframes dkd63Cta{50%{box-shadow:0 12px 28px rgba(0,0,0,.2),0 0 0 5px rgba(255,215,87,.035)}}.dkd63-cta-icon{width:40px;height:40px;border-radius:13px;background:linear-gradient(145deg,#ffe36d,#ff9c5b);display:grid;place-items:center;color:#281800;box-shadow:inset 0 1px rgba(255,255,255,.4)}.dkd63-cta-icon i{font-size:21px}.dkd63-cta-copy{display:flex;flex-direction:column;min-width:0}.dkd63-cta-copy b{font-size:10.5px;line-height:1.2;letter-spacing:.34px;white-space:nowrap}.dkd63-cta-copy small{font-size:8.7px;line-height:1.2;color:#decf9d;margin-top:3px;white-space:nowrap}.dkd63-cta-arrow{width:29px;height:29px;border-radius:10px;display:grid;place-items:center;background:rgba(255,255,255,.06);color:#ffd757}.dkd63-cta-arrow i{font-size:16px}
 
-.dkd55-plate-focus{
-  display:inline-flex!important;align-items:center;gap:7px!important;
-  min-height:38px;padding:0 12px!important;border-radius:12px!important;
-  border:1px solid rgba(42,221,255,.5)!important;
-  background:linear-gradient(110deg,rgba(42,221,255,.15),rgba(111,140,255,.09))!important;
-  color:#f5fbff!important;font-size:17px!important;font-weight:950!important;letter-spacing:.7px!important;
-  box-shadow:inset 0 1px rgba(255,255,255,.04),0 8px 22px rgba(42,221,255,.06)!important;
-}
-.dkd55-plate-focus i{color:#2addff!important;font-size:17px!important;margin:0!important}
-.dkd55-plate-focus span{white-space:nowrap}
+.dkd63-main{position:relative;z-index:4;display:grid;grid-template-columns:78px minmax(0,1fr);gap:14px;align-items:center}.dkd63-photo{width:78px;height:78px;border-radius:24px;padding:4px;background:linear-gradient(145deg,rgba(42,221,255,.2),rgba(167,100,255,.13));border:1px solid rgba(42,221,255,.48);box-shadow:0 0 0 4px rgba(42,221,255,.035),0 12px 28px rgba(0,0,0,.22);position:relative}.dkd63-photo:after{content:"";position:absolute;right:3px;bottom:4px;width:11px;height:11px;border-radius:50%;background:#45ebae;border:2px solid #071321;box-shadow:0 0 0 4px rgba(69,235,174,.08);animation:dkd63Online 1.8s ease-in-out infinite}@keyframes dkd63Online{50%{transform:scale(1.25);box-shadow:0 0 0 7px rgba(69,235,174,.05)}}.dkd63-photo .dbp47-car{width:100%!important;height:100%!important;border:0!important;padding:0!important;background:transparent!important;box-shadow:none!important;border-radius:20px!important;overflow:hidden!important}.dkd63-photo .dbp47-car:after{display:none!important}.dkd63-photo .dbp47-car img,.dkd63-photo .dbp47-car .dbp49-car-raster{width:100%!important;height:100%!important;border-radius:20px!important;object-fit:cover!important}
+.dkd63-copy{min-width:0}.dkd63-copy h1{margin:0!important;color:#fff!important;font-size:29px!important;line-height:1.03!important;letter-spacing:-.72px!important;font-weight:950!important}.dkd63-plate{width:max-content;max-width:100%;min-height:42px;margin-top:9px;padding:0 13px;border-radius:13px;border:1px solid rgba(42,221,255,.58);background:linear-gradient(110deg,rgba(42,221,255,.16),rgba(111,140,255,.09));display:inline-flex;align-items:center;gap:8px;color:#f7fbff;box-shadow:inset 0 1px rgba(255,255,255,.04),0 8px 20px rgba(42,221,255,.055)}.dkd63-plate i{color:#2addff;font-size:18px}.dkd63-plate strong{font-size:18px;letter-spacing:.9px;white-space:nowrap}.dkd63-detail{margin-top:7px;color:#8fa0b8;font-size:12.5px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-/* Büyük ARAÇ SAHİBİ rozeti artık yok. Eski grup bir şekilde kalırsa görünmesin. */
-.dbp47-vehicle.dkd55-minimal-card .dkd55-public-badges{display:none!important}
+.dkd63-footer{position:relative;z-index:4;margin-top:14px;min-height:56px;padding:9px 10px;border-radius:17px;border:1px solid rgba(255,255,255,.075);background:rgba(255,255,255,.028);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center;backdrop-filter:blur(12px)}.dkd63-nfc{display:flex;align-items:center;gap:9px;min-width:0}.dkd63-nfc-icon{width:36px;height:36px;border-radius:12px;display:grid;place-items:center;background:rgba(69,235,174,.1);border:1px solid rgba(69,235,174,.25);color:#6ff1be;flex:0 0 auto}.dkd63-nfc-svg{width:23px;height:23px;fill:none;stroke:currentColor;stroke-width:2.15;stroke-linecap:round;stroke-linejoin:round}.dkd63-nfc-copy{display:flex;flex-direction:column;min-width:0}.dkd63-nfc-copy small{font-size:8px;line-height:1.1;letter-spacing:.85px;color:#74988a;font-weight:900}.dkd63-nfc-copy b{font-size:10.8px;line-height:1.35;letter-spacing:.45px;color:#6ff1be;white-space:nowrap}.dkd63-tag{max-width:170px;padding:7px 10px;border-radius:11px;border:1px solid rgba(167,100,255,.26);background:rgba(167,100,255,.07);color:#bfa5e9;font-size:9px;font-weight:900;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 
-.dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-status{
-  margin-top:13px!important;min-height:52px!important;padding:9px 10px!important;
-  border-radius:16px!important;border:1px solid rgba(255,255,255,.075)!important;
-  background:rgba(255,255,255,.028)!important;display:grid!important;
-  grid-template-columns:minmax(0,1fr) auto!important;align-items:center!important;gap:9px!important;
-  backdrop-filter:blur(12px)
-}
-.dkd55-nfc-status{display:flex!important;align-items:center!important;gap:9px!important;min-width:0;color:#69f2bd!important}
-.dkd55-nfc-status>i{width:34px;height:34px;border-radius:11px;display:grid;place-items:center;background:rgba(69,235,174,.1);border:1px solid rgba(69,235,174,.23);font-size:18px;color:#69f2bd;flex:0 0 auto}
-.dkd55-nfc-status>span{display:flex;flex-direction:column;min-width:0}
-.dkd55-nfc-status small{font-size:8px;letter-spacing:.85px;color:#729685;font-weight:900;line-height:1.1}
-.dkd55-nfc-status b{font-size:10.5px;letter-spacing:.45px;color:#69f2bd;line-height:1.35;white-space:nowrap}
-.dbp47-vehicle.dkd55-minimal-card .dbp47-tag{max-width:170px!important;padding:7px 10px!important;border-radius:11px!important;border-color:rgba(167,100,255,.26)!important;background:rgba(167,100,255,.07)!important;color:#bea2ea!important;font-size:9px!important}
-
-/* Daha anlaşılır ve büyük CTA */
-.dkd55-protect-badge.dkd55-protect-badge-v2{
-  top:14px;right:14px;min-height:50px;min-width:178px;padding:6px 8px 6px 6px;
-  border-radius:16px;border:1px solid rgba(255,215,87,.52);
-  background:linear-gradient(110deg,rgba(255,215,87,.17),rgba(255,101,184,.12) 56%,rgba(167,100,255,.12));
-  gap:8px;box-shadow:0 12px 26px rgba(0,0,0,.19),inset 0 1px rgba(255,255,255,.04);
-  animation:dkd55ProtectBadgeV2 2.4s ease-in-out infinite
-}
-@keyframes dkd55ProtectBadgeV2{50%{border-color:rgba(255,215,87,.78);box-shadow:0 12px 26px rgba(0,0,0,.19),0 0 0 4px rgba(255,215,87,.035)}}
-.dkd55-protect-badge-v2 .dkd55-protect-badge-icon{width:38px;height:38px;border-radius:12px;background:linear-gradient(145deg,#ffe36d,#ff9c5b);display:grid;place-items:center;flex:0 0 auto;color:#281800;box-shadow:inset 0 1px rgba(255,255,255,.4)}
-.dkd55-protect-badge-v2 .dkd55-protect-badge-icon i{font-size:20px}
-.dkd55-protect-badge-v2 .dkd55-protect-badge-copy{display:flex;flex-direction:column;align-items:flex-start;min-width:0;line-height:1.1}
-.dkd55-protect-badge-v2 .dkd55-protect-badge-copy b{font-size:10.5px;letter-spacing:.4px;color:#fff;white-space:nowrap}
-.dkd55-protect-badge-v2 .dkd55-protect-badge-copy small{font-size:8.8px;color:#d9c991;margin-top:4px;white-space:nowrap}
-.dkd55-protect-badge-v2>em{width:25px;height:25px;border-radius:9px;display:grid;place-items:center;margin-left:auto;background:rgba(255,255,255,.055);color:#ffd757!important;font-size:14px!important}
-.dkd55-protect-badge-v2:hover{transform:translateY(-1px) scale(1.015)}
-
-@media(max-width:640px){
-  .dbp47-vehicle.dkd55-vehicle-premium.dkd55-minimal-card{padding:14px!important;border-radius:25px!important}
-  .dkd55-minimal-top{margin:7px 0 10px;min-height:47px;padding-right:160px}
-  .dkd55-minimal-protected{font-size:8.6px;letter-spacing:.65px;min-height:29px;padding:0 8px}
-  .dkd55-protect-badge.dkd55-protect-badge-v2{top:10px;right:10px;min-width:154px;min-height:46px;border-radius:14px;padding:5px 7px 5px 5px;gap:6px}
-  .dkd55-protect-badge-v2 .dkd55-protect-badge-icon{width:35px;height:35px;border-radius:11px}
-  .dkd55-protect-badge-v2 .dkd55-protect-badge-copy b{font-size:9.2px;letter-spacing:.25px}
-  .dkd55-protect-badge-v2 .dkd55-protect-badge-copy small{font-size:7.8px}
-  .dkd55-protect-badge-v2>em{width:22px;height:22px}
-  .dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-main{grid-template-columns:68px minmax(0,1fr)!important;gap:11px!important}
-  .dbp47-vehicle.dkd55-minimal-card .dbp47-car{width:66px!important;height:66px!important;border-radius:20px!important}
-  .dbp47-vehicle.dkd55-minimal-card .dbp47-car img,.dbp47-vehicle.dkd55-minimal-card .dbp47-car .dbp49-car-raster{border-radius:17px!important}
-  .dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-copy h1{font-size:23px!important}
-  .dkd55-plate-focus{min-height:35px;padding:0 10px!important;font-size:15px!important;border-radius:11px!important}
-  .dkd55-plate-focus i{font-size:15px!important}
-  .dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-copy>p{font-size:11.5px!important;gap:6px}
-  .dbp47-vehicle.dkd55-minimal-card .dbp47-vehicle-status{grid-template-columns:minmax(0,1fr) auto!important;margin-top:11px!important;min-height:49px!important;padding:7px 8px!important}
-  .dkd55-nfc-status>i{width:31px;height:31px;border-radius:10px;font-size:16px}
-  .dkd55-nfc-status small{font-size:7.3px}.dkd55-nfc-status b{font-size:9.3px}
-  .dbp47-vehicle.dkd55-minimal-card .dbp47-tag{max-width:120px!important;font-size:8px!important;padding:6px 8px!important}
-}
-
-@media(max-width:380px){
-  .dkd55-minimal-top{padding-right:145px}
-  .dkd55-minimal-protected b{max-width:105px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-  .dkd55-protect-badge.dkd55-protect-badge-v2{min-width:142px}
-  .dkd55-protect-badge-v2 .dkd55-protect-badge-copy b{font-size:8.6px}
-  .dkd55-protect-badge-v2 .dkd55-protect-badge-copy small{font-size:7.2px}
-}
-
-@media(prefers-reduced-motion:reduce){.dkd55-protect-badge.dkd55-protect-badge-v2{animation:none!important}}
+@media(max-width:640px){.dbp47-vehicle.dkd63-card{padding:14px!important;border-radius:25px!important}.dkd63-head{grid-template-columns:minmax(0,1fr) auto;gap:7px;margin:6px 0 12px}.dkd63-protected{min-height:40px;max-width:124px;padding:6px 9px}.dkd63-protected>i{font-size:18px}.dkd63-protected span{font-size:7.9px;letter-spacing:.62px}.dkd63-protected b{font-size:9.8px}.dkd63-protect-cta{min-width:172px;min-height:52px;grid-template-columns:37px minmax(0,1fr) 26px;gap:6px;padding:5px 6px;border-radius:15px}.dkd63-cta-icon{width:37px;height:37px;border-radius:12px}.dkd63-cta-icon i{font-size:20px}.dkd63-cta-copy b{font-size:9.4px;letter-spacing:.2px}.dkd63-cta-copy small{font-size:7.8px}.dkd63-cta-arrow{width:26px;height:26px}.dkd63-main{grid-template-columns:70px minmax(0,1fr);gap:11px}.dkd63-photo{width:70px;height:70px;border-radius:21px}.dkd63-photo .dbp47-car,.dkd63-photo .dbp47-car img,.dkd63-photo .dbp47-car .dbp49-car-raster{border-radius:17px!important}.dkd63-copy h1{font-size:25px!important}.dkd63-plate{min-height:39px;margin-top:8px;padding:0 11px;border-radius:12px}.dkd63-plate i{font-size:16px}.dkd63-plate strong{font-size:16px;letter-spacing:.7px}.dkd63-detail{font-size:11.5px}.dkd63-footer{min-height:52px;margin-top:12px;padding:8px}.dkd63-nfc-icon{width:33px;height:33px;border-radius:11px}.dkd63-nfc-svg{width:21px;height:21px}.dkd63-nfc-copy small{font-size:7.2px}.dkd63-nfc-copy b{font-size:9.4px}.dkd63-tag{max-width:118px;font-size:8px;padding:6px 8px}}
+@media(max-width:380px){.dkd63-protected{max-width:112px}.dkd63-protected span{font-size:7.2px}.dkd63-protected b{font-size:9px}.dkd63-protect-cta{min-width:160px}.dkd63-cta-copy b{font-size:8.7px}.dkd63-cta-copy small{font-size:7.2px}.dkd63-copy h1{font-size:23px!important}.dkd63-tag{max-width:102px}}
+@media(prefers-reduced-motion:reduce){.dkd63-orb,.dkd63-scan,.dkd63-protect-cta,.dkd63-photo:after{animation:none!important}.dkd63-protect-cta{transition:none!important}}
