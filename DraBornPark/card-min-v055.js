@@ -1,60 +1,70 @@
-/* DraBornPark web v0.5.5 — minimalist protected vehicle enhancer for every ?tag= route. */
+/* DraBornPark web v0.5.5 — rebuilt protected vehicle card for every ?tag= route. */
 (function(){
   const dkd_tag=(new URLSearchParams(location.search).get('tag')||'').trim();
   if(!dkd_tag)return;
 
-  function dkd_upgrade(){
-    const dkd_vehicle=document.querySelector('.dbp47-vehicle');
-    if(!dkd_vehicle)return false;
+  const dkd_escape=dkd_value=>String(dkd_value??'').replace(/[&<>'"]/g,dkd_char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[dkd_char]));
 
-    dkd_vehicle.classList.add('dkd55-minimal-card');
+  function dkd_nfc_svg(){return '<svg class="dkd63-nfc-svg" viewBox="0 0 32 32" aria-hidden="true"><path d="M8 24V8l10 16V8"/><path d="M22 10c2 2.2 2 9.8 0 12"/><path d="M26 7c4 4.7 4 13.3 0 18"/></svg>';}
 
-    /* Eski büyük ARAÇ SAHİBİ / NFC rozet grubunu tamamen kaldır. */
-    dkd_vehicle.querySelectorAll('.dkd55-public-badges').forEach(dkd_node=>dkd_node.remove());
+  function dkd_extract(){
+    const dkd_vehicle=document.querySelector('.dbp47-vehicle');if(!dkd_vehicle)return null;
+    const dkd_name=dkd_vehicle.querySelector('.dbp47-vehicle-copy h1')?.textContent?.trim()||'DraBornPark aracı';
+    const dkd_plate_node=dkd_vehicle.querySelector('.dkd55-plate-focus span')||dkd_vehicle.querySelector('.dbp47-vehicle-copy>p b');
+    const dkd_plate=dkd_plate_node?.textContent?.trim()||'PLAKA GİZLİ';
+    const dkd_p=dkd_vehicle.querySelector('.dbp47-vehicle-copy>p');
+    let dkd_detail=dkd_p?.textContent?.trim()||'';
+    if(dkd_detail.startsWith(dkd_plate))dkd_detail=dkd_detail.slice(dkd_plate.length).replace(/^\s*[•·|]\s*/,'').trim();
+    const dkd_tag_label=dkd_vehicle.querySelector('.dbp47-tag')?.textContent?.trim()||('ETİKET • '+dkd_tag.toUpperCase());
+    const dkd_car=dkd_vehicle.querySelector('.dbp47-car');
+    const dkd_car_html=dkd_car?dkd_car.outerHTML:'<div class="dbp47-car"><span class="dbp48-raster dbp48-i-blocking dbp49-car-raster" aria-hidden="true"></span><span></span></div>';
+    return{dkd_vehicle,dkd_name,dkd_plate,dkd_detail,dkd_tag_label,dkd_car_html};
+  }
 
-    /* Kartın üstünde daha sade bir koruma başlığı oluştur. */
-    if(!dkd_vehicle.querySelector('.dkd55-minimal-top')){
-      const dkd_top=document.createElement('div');
-      dkd_top.className='dkd55-minimal-top';
-      dkd_top.innerHTML='<span class="dkd55-minimal-protected"><i class="ri-shield-check-line"></i><b>DRABORNPARK KORUMALI</b></span>';
-      const dkd_main=dkd_vehicle.querySelector('.dbp47-vehicle-main');
-      dkd_main?.insertAdjacentElement('beforebegin',dkd_top);
-    }
+  function dkd_rebuild(){
+    const dkd_data=dkd_extract();if(!dkd_data)return false;
+    const {dkd_vehicle,dkd_name,dkd_plate,dkd_detail,dkd_tag_label,dkd_car_html}=dkd_data;
+    if(dkd_vehicle.dataset.dkdCardV3==='1')return true;
+    dkd_vehicle.dataset.dkdCardV3='1';
+    dkd_vehicle.className='dbp47-vehicle dkd63-card';
+    dkd_vehicle.innerHTML=`
+      <span class="dkd63-orb dkd63-orb-a"></span>
+      <span class="dkd63-orb dkd63-orb-b"></span>
+      <span class="dkd63-scan"></span>
+      <div class="dkd63-spectrum"><i></i><i></i><i></i><i></i><i></i></div>
 
-    /* Eski kicker tekrara düşmesin. */
-    const dkd_old_kicker=dkd_vehicle.querySelector('.dbp47-vehicle-copy>.dbp47-kicker');
-    if(dkd_old_kicker)dkd_old_kicker.classList.add('dkd55-hide-old-kicker');
+      <div class="dkd63-head">
+        <span class="dkd63-protected"><i class="ri-shield-check-line"></i><span>DRABORNPARK<br><b>KORUMALI</b></span></span>
+        <button id="dkd55-protect-badge" class="dkd63-protect-cta" type="button" aria-label="Sen de aracını koru — etiket seçeneklerini aç">
+          <span class="dkd63-cta-icon"><i class="ri-shield-star-line"></i></span>
+          <span class="dkd63-cta-copy"><b>SEN DE ARACINI KORU</b><small>Etiket seçeneklerini gör</small></span>
+          <span class="dkd63-cta-arrow"><i class="ri-arrow-right-line"></i></span>
+        </button>
+      </div>
 
-    /* Plakayı kartın görsel odak noktası yap. */
-    const dkd_plate=dkd_vehicle.querySelector('.dbp47-vehicle-copy>p b');
-    if(dkd_plate&&!dkd_plate.classList.contains('dkd55-plate-focus')){
-      const dkd_text=dkd_plate.textContent?.trim()||'PLAKA GİZLİ';
-      dkd_plate.classList.add('dkd55-plate-focus');
-      dkd_plate.innerHTML='<i class="ri-bank-card-2-line"></i><span>'+dkd_text+'</span>';
-    }
+      <div class="dkd63-main">
+        <div class="dkd63-photo">${dkd_car_html}</div>
+        <div class="dkd63-copy">
+          <h1>${dkd_escape(dkd_name)}</h1>
+          <div class="dkd63-plate"><i class="ri-bank-card-2-line"></i><strong>${dkd_escape(dkd_plate)}</strong></div>
+          ${dkd_detail?`<div class="dkd63-detail">${dkd_escape(dkd_detail)}</div>`:''}
+        </div>
+      </div>
 
-    /* NFC + QR aktif durumunu büyük rozetten çıkarıp güvenlik satırına taşı. */
-    const dkd_status=dkd_vehicle.querySelector('.dbp47-vehicle-status');
-    const dkd_status_first=dkd_status?.querySelector('span:first-child');
-    if(dkd_status_first&&!dkd_status_first.classList.contains('dkd55-nfc-status')){
-      dkd_status_first.className='dkd55-nfc-status';
-      dkd_status_first.innerHTML='<i class="ri-nfc-line"></i><span><small>ETİKET AĞI</small><b>NFC + QR • AKTİF</b></span>';
-    }
-
-    /* Mevcut popup'ı açan CTA'yı daha büyük ve anlaşılır hale getir. */
-    const dkd_cta=document.getElementById('dkd55-protect-badge');
-    if(dkd_cta&&!dkd_cta.classList.contains('dkd55-protect-badge-v2')){
-      dkd_cta.classList.add('dkd55-protect-badge-v2');
-      dkd_cta.innerHTML='<span class="dkd55-protect-badge-icon"><i class="ri-shield-star-line"></i></span><span class="dkd55-protect-badge-copy"><b>SEN DE ARACINI KORU</b><small>NFC + QR etiketini keşfet</small></span><em><i class="ri-arrow-right-line"></i></em>';
-      dkd_cta.setAttribute('aria-label','Sen de aracını koru — DraBornPark etiket seçeneklerini aç');
-    }
-
+      <div class="dkd63-footer">
+        <div class="dkd63-nfc">
+          <span class="dkd63-nfc-icon">${dkd_nfc_svg()}</span>
+          <span class="dkd63-nfc-copy"><small>ETİKET AĞI</small><b>NFC + QR • AKTİF</b></span>
+        </div>
+        <span class="dkd63-tag">${dkd_escape(dkd_tag_label)}</span>
+      </div>
+    `;
     return true;
   }
 
   function dkd_boot(){
-    if(dkd_upgrade())return;
-    const dkd_observer=new MutationObserver(()=>{if(dkd_upgrade())dkd_observer.disconnect();});
+    if(dkd_rebuild())return;
+    const dkd_observer=new MutationObserver(()=>{if(dkd_rebuild())dkd_observer.disconnect();});
     dkd_observer.observe(document.documentElement,{childList:true,subtree:true});
     setTimeout(()=>dkd_observer.disconnect(),12000);
   }
