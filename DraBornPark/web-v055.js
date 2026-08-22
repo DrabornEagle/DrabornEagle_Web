@@ -82,17 +82,21 @@
     return true;
   }
 
+  function dkd_bind_message_panel(dkd_panel){
+    if(!dkd_panel||dkd_panel.dataset.dkdBound==='1')return;
+    dkd_panel.dataset.dkdBound='1';
+    document.getElementById('dkd55-message-close')?.addEventListener('click',()=>{dkd_panel.hidden=true;});
+    document.getElementById('dkd55-photo-button')?.addEventListener('click',()=>document.getElementById('dkd55-photo-input')?.click());
+    document.getElementById('dkd55-photo-input')?.addEventListener('change',async dkd_event=>{dkd_status('');try{const dkd_file=dkd_event.target.files?.[0];dkd_state.photo=await dkd_file_to_jpeg(dkd_file);dkd_set_preview();}catch(dkd_error){dkd_state.photo=null;dkd_set_preview();dkd_status(dkd_error?.message||'Fotoğraf hazırlanamadı.');}});
+    document.getElementById('dkd55-message-send')?.addEventListener('click',dkd_send);
+  }
+
   function dkd_install_panel(){
     const dkd_message_button=document.getElementById('dbp53call-message');if(!dkd_message_button)return false;
     const dkd_small=dkd_message_button.querySelector('small');if(dkd_small)dkd_small.textContent='Kendi güvenli mesajını yaz • fotoğraf ekleyebilirsin';
     let dkd_panel=document.getElementById('dkd55-message-panel');if(!dkd_panel){dkd_message_button.closest('.dbp53call-actions')?.insertAdjacentHTML('afterend',dkd_panel_markup());dkd_panel=document.getElementById('dkd55-message-panel');}
     if(!document.getElementById('dkd55-promo')){const dkd_root=document.querySelector('.dbp47-app');const dkd_footer=dkd_root?.querySelector('.dbp47-footer');if(dkd_footer)dkd_footer.insertAdjacentHTML('beforebegin',dkd_promo_markup());else document.querySelector('#tag-shell')?.insertAdjacentHTML('beforeend',dkd_promo_markup());}
-    dkd_upgrade_vehicle_card();
-    document.getElementById('dkd55-message-close')?.addEventListener('click',()=>{dkd_panel.hidden=true;},{once:true});
-    document.getElementById('dkd55-photo-button')?.addEventListener('click',()=>document.getElementById('dkd55-photo-input')?.click(),{once:true});
-    document.getElementById('dkd55-photo-input')?.addEventListener('change',async dkd_event=>{dkd_status('');try{const dkd_file=dkd_event.target.files?.[0];dkd_state.photo=await dkd_file_to_jpeg(dkd_file);dkd_set_preview();}catch(dkd_error){dkd_state.photo=null;dkd_set_preview();dkd_status(dkd_error?.message||'Fotoğraf hazırlanamadı.');}},{once:true});
-    document.getElementById('dkd55-message-send')?.addEventListener('click',dkd_send,{once:true});
-    return true;
+    dkd_upgrade_vehicle_card();dkd_bind_message_panel(dkd_panel);return true;
   }
 
   async function dkd_send(){
