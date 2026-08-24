@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/DraBornPark/tag/:slug",
+      "destination": "/DraBornPark/tag/index.html?token=:slug"
+    },
+    {
       "source": "/DraBornPark/t/:token",
       "destination": "/DraBornPark/t/index.html?token=:token"
     }
