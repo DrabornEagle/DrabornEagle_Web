@@ -1,6 +1,6 @@
 /* DraBornPark web v0.5.5 — direct secure message + premium protected vehicle card for every ?tag= link. */
 (function(){
-  const dkd_raw_tag=(new URLSearchParams(location.search).get('tag')||'').trim();
+  const dkd_raw_tag=(new URLSearchParams(location.search).get('tag')||globalThis.DKDBP_PATH_TAG||'').trim();
   if(!dkd_raw_tag)return;
   const dkd_contact_url='https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/drabornpark-public-contact';
   const dkd_state={photo:null,sending:false};

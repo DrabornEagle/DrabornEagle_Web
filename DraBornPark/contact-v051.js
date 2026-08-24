@@ -1,6 +1,6 @@
 /* DraBornPark production contact UI v0.5.1 — premium Test1 visual language, live Supabase data. */
 (function(){
-  const rawTag=(new URLSearchParams(location.search).get('tag')||'').trim();
+  const rawTag=(new URLSearchParams(location.search).get('tag')||globalThis.DKDBP_PATH_TAG||'').trim();
   if(!rawTag)return;
 
   const CONTACT_URL='https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/drabornpark-public-contact';
