@@ -6,20 +6,21 @@
   <meta name="theme-color" content="#050816" />
   <meta name="robots" content="noindex,nofollow" />
   <title>DraBornPark • Güvenli Araç İletişimi</title>
-  <link rel="stylesheet" href="../public-tag-v101.css" />
+  <link rel="stylesheet" href="../public-tag-v104.css" />
 </head>
 <body>
   <main class="shell">
-    <header class="brand"><div class="brand-mark">P</div><div><strong>DraBornPark</strong><span>NFC + QR ARAÇ İLETİŞİMİ</span></div><b>v1.0.1</b></header>
-    <section id="loading" class="card center"><div class="loader"></div><h1>Etiket doğrulanıyor</h1><p>Güvenli public token kontrol ediliyor…</p></section>
+    <header class="brand"><div class="brand-mark">P</div><div><strong>DraBornPark</strong><span>NFC + QR ARAÇ İLETİŞİMİ</span></div><b class="version">v1.0.4</b></header>
+    <section id="loading" class="card center"><div class="loader"></div><h1>Etiket doğrulanıyor</h1><p>DraBornPark etiketi güvenli olarak çözülüyor…</p></section>
     <section id="error" class="card center hidden"><div class="icon danger">!</div><h1>Etiket açılamadı</h1><p id="errorText">Bağlantı geçersiz veya etiket bulunamadı.</p><button id="retryBtn" class="btn secondary">TEKRAR DENE</button></section>
-    <section id="inactive" class="card center hidden"><div class="icon warn">⌁</div><div class="eyebrow">AKTİVASYON GEREKLİ</div><h1>Bu etiket henüz aktive edilmedi</h1><p>Kutudaki gizli PIN olmadan etiket bir hesaba veya araca bağlanamaz. NFC ve QR üzerinde aynı güvenli URL kalıcı olarak kullanılır.</p><a id="activateLink" class="btn primary" href="#">DRABORNPARK İLE AKTİVE ET</a><a class="store" href="https://play.google.com/store/apps/details?id=com.draborneagle.drabornpark" rel="noopener">Google Play Store’dan DraBornPark’ı aç</a></section>
+    <section id="inactive" class="card center hidden"><div class="icon warn">⌁</div><div class="eyebrow">AKTİVASYON GEREKLİ</div><h1>Bu etiket henüz aktive edilmedi</h1><p>Etiket kodu: <strong id="inactiveCode"></strong></p><p>Kutudaki gizli PIN olmadan etiket hesaba veya araca bağlanamaz. QR ve NFC üzerinde aynı fiziksel URL kalıcıdır.</p><a id="activateLink" class="btn primary" href="#">DRABORNPARK İLE AKTİVE ET</a><a class="store" href="https://play.google.com/store/apps/details?id=com.draborneagle.drabornpark" rel="noopener">Google Play Store’dan DraBornPark’ı aç</a></section>
     <section id="active" class="hidden">
-      <section class="hero card center"><div class="icon car">P</div><div class="eyebrow">GÜVENLİ ARAÇ İLETİŞİMİ</div><h1 id="vehicleName">DraBornPark Aracı</h1><p id="vehicleMeta">Araç sahibinin paylaşmayı seçtiği bilgiler gösteriliyor.</p><div class="privacy">Telefon numarası paylaşılmaz • Mesajlar DraBornPark üzerinden iletilir</div></section>
-      <section class="card"><div class="section-head"><div><span>HIZLI BİLDİRİM</span><h2>Araç sahibine haber ver</h2></div><div class="secure">GÜVENLİ</div></div><div id="categories" class="grid"></div><label class="label" for="message">İSTEĞE BAĞLI AÇIKLAMA</label><textarea id="message" maxlength="700" placeholder="Kısa ve gerekli bir açıklama ekleyebilirsin…"></textarea><button id="sendBtn" class="btn primary" disabled>BİLDİRİM GÖNDER</button><p id="sendStatus" class="status"></p></section>
+      <section class="card center"><div class="icon">P</div><div class="eyebrow">DRABORNPARK KORUMALI ARAÇ</div><h1 id="vehicleName">DraBornPark Aracı</h1><p id="vehicleMeta">Araç sahibinin paylaşmayı seçtiği bilgiler gösteriliyor.</p><div id="publicCode" class="privacy">DraBornPark etiketi</div><div class="privacy">Telefon ve e-posta paylaşılmaz • iletişim DraBornPark üzerinden güvenli yürür</div></section>
+      <section id="composeCard" class="card"><div class="section-head"><div><span>GÜVENLİ ARAÇ İLETİŞİMİ</span><h2 id="composerTitle">Araç sahibine ulaş</h2></div><div class="secure">GÜVENLİ</div></div><div id="categories" class="grid"></div><label class="label" for="message">İSTEĞE BAĞLI AÇIKLAMA</label><textarea id="message" maxlength="700" placeholder="Mesajını buraya yaz…"></textarea><input id="cameraInput" type="file" accept="image/*" capture="environment" hidden /><button id="cameraBtn" class="camera" type="button">📷 <span id="cameraText">ANLIK FOTOĞRAF ÇEK</span></button><div id="photoPreviewWrap" class="preview hidden"><img id="photoPreview" alt="Anlık fotoğraf önizlemesi"/><button id="removePhoto" type="button" aria-label="Fotoğrafı kaldır">×</button></div><button id="sendBtn" class="btn primary" disabled>ARAÇ SAHİBİNE GÖNDER</button><p id="sendStatus" class="status"></p></section>
+      <section id="chatCard" class="card hidden"><div class="chat-head"><div class="shield">✓</div><div><div class="eyebrow">GEÇİCİ GÜVENLİ OTURUM</div><h2>Mesaj geçmişi</h2></div></div><div id="history" class="history"><p class="muted">Mesajlar yükleniyor…</p></div><label class="label" for="chatInput">YENİ MESAJ</label><textarea id="chatInput" maxlength="700" placeholder="Araç sahibine mesaj yaz…"></textarea><button id="chatBtn" class="btn primary">MESAJ GÖNDER</button><p id="chatStatus" class="status"></p></section>
     </section>
     <footer><a href="https://www.draborneagle.com/DraBornPark/">DraBornPark</a><span>•</span><a href="https://play.google.com/store/apps/details?id=com.draborneagle.drabornpark">Google Play</a><span>•</span><a href="https://www.draborneagle.com/DraBornPark/privacy/">Gizlilik</a></footer>
   </main>
-  <script src="../public-tag-v101.js" defer></script>
+  <script src="../public-tag-v104.js" defer></script>
 </body>
 </html>
