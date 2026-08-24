@@ -28,9 +28,11 @@ jobs:
           node --check DraBornPark/test1-v050-icons.js
           node --check DraBornPark/production-icons-v051.js
           node --check DraBornPark/web-v055.js
+          node --check DraBornPark/card-min-v055.js
       - name: Required public pages
         run: |
           test -f DraBornPark/index.html
+          test -f DraBornPark/tag/index.html
           test -f DraBornPark/privacy/index.html
           test -f DraBornPark/terms/index.html
           test -f DraBornPark/data-safety/index.html
@@ -43,6 +45,16 @@ jobs:
           grep -q "aria-pressed" DraBornPark/contact-v051.js
           grep -q "production-icons-v051.js" DraBornPark/index.html
           grep -q "MutationObserver" DraBornPark/production-icons-v051.js
+      - name: Unified username and NFC tag card
+        run: |
+          grep -q "DKDBP_PATH_TAG" DraBornPark/contact-v051.js
+          grep -q "DKDBP_PATH_TAG" DraBornPark/web-v055.js
+          grep -q "DKDBP_PATH_TAG" DraBornPark/card-min-v055.js
+          grep -q "card-min-v055.js?v=065" DraBornPark/index.html
+          grep -q "card-min-v055.js?v=065" DraBornPark/tag/index.html
+          grep -q "dkd63-card dkd64-card" DraBornPark/card-min-v055.js
+          grep -q "KORUMALI ARAÇ PROFİLİ" DraBornPark/card-min-v055.js
+          grep -q "NFC + QR • AKTİF" DraBornPark/card-min-v055.js
       - name: v0.5.3 camera-only evidence
         run: |
           test -f DraBornPark/evidence-v053.js
@@ -60,8 +72,8 @@ jobs:
         run: |
           test -f DraBornPark/web-v055.js
           test -f DraBornPark/web-v055.css
-          grep -q "web-v055.js?v=060" DraBornPark/index.html
-          grep -q "web-v055.css?v=060" DraBornPark/index.html
+          grep -q "web-v055.js?v=061" DraBornPark/index.html
+          grep -q "web-v055.css?v=061" DraBornPark/index.html
           grep -q "category:'direct_message'" DraBornPark/web-v055.js
           grep -q "FOTOĞRAF EKLE" DraBornPark/web-v055.js
           grep -q "ARAÇ SAHİBİ •" DraBornPark/web-v055.js
