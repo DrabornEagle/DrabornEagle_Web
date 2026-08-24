@@ -1,64 +1,76 @@
-/* DraBornPark v1.0.6-web — clearer vehicle identity + minimalist owner card. */
+/* DraBornPark v1.0.6-web — premium protected vehicle card, single-pass enhancer. */
 (()=>{
-  const dkd_escape=dkd_value=>String(dkd_value??'').replace(/[&<>'"]/g,dkd_char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[dkd_char]));
+  const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
-  function dkd_enhance_vehicle(){
-    const dkd_vehicle=document.querySelector('.dp-vehicle');
-    if(!dkd_vehicle||dkd_vehicle.dataset.dkdVehicleFacts==='2')return false;
+  function readVehicleData(card){
+    const meta=card.querySelector('.dp-meta');
+    const plate=String(meta?.querySelector('strong')?.textContent||'').trim()||'Plaka gizli';
+    const detail=String(meta?.querySelector('span')?.textContent||'').trim();
+    const parts=detail.split('•').map(value=>value.trim()).filter(Boolean);
+    const color=parts[0]||'Belirtilmedi';
+    const model=parts.slice(1).join(' • ')||'Araç bilgisi';
+    const title=String(card.querySelector('.dp-identity h1')?.textContent||'DraBornPark aracı').trim();
+    const ownerRaw=String(card.querySelector('.dp-owner')?.textContent||'Araç Sahibi').replace(/\s+/g,' ').trim();
+    const username=(ownerRaw.split('•')[1]||'').trim();
+    const image=card.querySelector('.dp-avatar img');
+    const avatar=image?.src?`<img src="${esc(image.src)}" alt="Araç sahibinin profil fotoğrafı" referrerpolicy="no-referrer">`:'<i class="ri-car-line"></i>';
+    return{plate,color,model,title,username,avatar};
+  }
 
-    const dkd_meta=dkd_vehicle.querySelector('.dp-meta');
-    const dkd_plate=String(dkd_meta?.querySelector('strong')?.textContent||'').trim()||'Plaka gizli';
-    const dkd_detail=String(dkd_meta?.querySelector('span')?.textContent||'').trim();
-    const dkd_parts=dkd_detail.split('•').map(dkd_value=>dkd_value.trim()).filter(Boolean);
-    const dkd_color=dkd_parts[0]||'Belirtilmedi';
-    const dkd_model=dkd_parts.slice(1).join(' • ')||document.querySelector('.dp-identity h1')?.textContent?.trim()||'Araç bilgisi';
+  function enhance(){
+    const card=document.querySelector('.dp-vehicle');
+    if(!card||card.dataset.dkdPremiumCard==='1')return false;
+    const data=readVehicleData(card);
+    const owner=data.username||'DraBornPark kullanıcısı';
 
-    if(dkd_meta){
-      dkd_meta.classList.add('dkd106-meta-hidden');
-      const dkd_existing=dkd_vehicle.querySelector('.dkd106-vehicle-info');
-      if(dkd_existing)dkd_existing.remove();
-      const dkd_info=document.createElement('div');
-      dkd_info.className='dkd106-vehicle-info';
-      dkd_info.innerHTML=`
-        <div class="dkd106-info dkd106-plate">
-          <span class="dkd106-info-icon"><i class="ri-roadster-line" aria-hidden="true"></i></span>
-          <span class="dkd106-info-copy"><small>PLAKA</small><b>${dkd_escape(dkd_plate)}</b><em>Araç kimliği</em></span>
+    card.className='dp-vehicle dkd107-vehicle-card';
+    card.dataset.dkdPremiumCard='1';
+    card.innerHTML=`
+      <div class="dkd107-spectrum" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      <div class="dkd107-card-head">
+        <div class="dkd107-protection-state"><span class="dkd107-shield"><i class="ri-shield-check-line"></i></span><span><small>DRABORNPARK</small><b>KORUMALI ARAÇ</b></span></div>
+        <button id="dp-protect" class="dkd107-protect-cta" type="button"><span><i class="ri-shield-star-line"></i></span><b>SEN DE ARACINI KORU</b><i class="ri-arrow-right-line"></i></button>
+      </div>
+
+      <div class="dkd107-hero">
+        <div class="dkd107-avatar">${data.avatar}<span class="dkd107-online" aria-label="Aktif"></span></div>
+        <div class="dkd107-hero-copy">
+          <span class="dkd107-overline">GÜVENLİ ARAÇ PROFİLİ</span>
+          <h1>${esc(data.title)}</h1>
+          <div class="dkd107-live-row"><span class="dkd107-live-dot"></span><b>NFC + QR AKTİF</b><small>Doğrulanmış etiket</small></div>
         </div>
-        <div class="dkd106-info dkd106-color">
-          <span class="dkd106-info-icon"><i class="ri-palette-line" aria-hidden="true"></i></span>
-          <span class="dkd106-info-copy"><small>RENK</small><b>${dkd_escape(dkd_color)}</b></span>
-        </div>
-        <div class="dkd106-info dkd106-model">
-          <span class="dkd106-info-icon"><i class="ri-car-line" aria-hidden="true"></i></span>
-          <span class="dkd106-info-copy"><small>ARAÇ</small><b>${dkd_escape(dkd_model)}</b></span>
-        </div>`;
-      dkd_meta.insertAdjacentElement('afterend',dkd_info);
-    }
+      </div>
 
-    const dkd_network=dkd_vehicle.querySelector('.dp-network');
-    const dkd_net=dkd_network?.querySelector('.dp-net');
-    if(dkd_net)dkd_net.classList.add('dkd106-network-hidden');
-    if(dkd_network)dkd_network.classList.add('dkd106-owner-row');
+      <div class="dkd107-data-grid">
+        <article class="dkd107-data dkd107-plate">
+          <span class="dkd107-data-icon"><i class="ri-car-washing-line"></i></span>
+          <span class="dkd107-data-copy"><small>PLAKA</small><b>${esc(data.plate)}</b><em>Araç kimliği</em></span>
+        </article>
+        <article class="dkd107-data dkd107-color">
+          <span class="dkd107-data-icon"><i class="ri-palette-line"></i></span>
+          <span class="dkd107-data-copy"><small>RENK</small><b>${esc(data.color)}</b></span>
+        </article>
+        <article class="dkd107-data dkd107-model">
+          <span class="dkd107-data-icon"><i class="ri-roadster-line"></i></span>
+          <span class="dkd107-data-copy"><small>ARAÇ BİLGİSİ</small><b>${esc(data.model)}</b></span>
+        </article>
+      </div>
 
-    const dkd_owner=dkd_vehicle.querySelector('.dp-owner');
-    if(dkd_owner){
-      const dkd_raw=String(dkd_owner.textContent||'').replace(/\s+/g,' ').trim();
-      const dkd_username=dkd_raw.includes('•')?dkd_raw.split('•').slice(1).join('•').trim():dkd_raw.replace(/^Araç Sahibi\s*/i,'').trim();
-      dkd_owner.classList.add('dkd106-owner-min');
-      dkd_owner.innerHTML=`<i class="ri-user-3-line" aria-hidden="true"></i><span><small>ARAÇ SAHİBİ</small><b>${dkd_escape(dkd_username||'DraBornPark kullanıcısı')}</b></span>`;
-    }
+      <div class="dkd107-owner-row">
+        <span class="dkd107-owner-avatar"><i class="ri-user-3-line"></i></span>
+        <span class="dkd107-owner-copy"><small>ARAÇ SAHİBİ</small><b>${esc(owner)}</b></span>
+        <span class="dkd107-owner-safe"><i class="ri-lock-2-line"></i> Gizli iletişim</span>
+      </div>`;
 
-    dkd_vehicle.dataset.dkdVehicleFacts='2';
+    card.querySelector('#dp-protect')?.addEventListener('click',()=>alert('DraBornPark etiket seçenekleri yakında burada listelenecek.'));
     return true;
   }
 
-  function dkd_boot(){
-    if(dkd_enhance_vehicle())return;
-    const dkd_root=document.getElementById('tag-shell')||document.body;
-    const dkd_observer=new MutationObserver(()=>{if(dkd_enhance_vehicle())dkd_observer.disconnect();});
-    dkd_observer.observe(dkd_root,{childList:true,subtree:true});
-    setTimeout(()=>dkd_observer.disconnect(),10000);
+  function boot(){
+    if(enhance())return;
+    let tries=0;
+    const timer=setInterval(()=>{tries+=1;if(enhance()||tries>=40)clearInterval(timer);},150);
   }
 
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',dkd_boot,{once:true});else dkd_boot();
+  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',boot,{once:true});else boot();
 })();
