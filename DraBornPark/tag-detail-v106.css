@@ -1,0 +1,13 @@
+/* DraBornPark v1.0.6-web — modern vehicle detail cards. */
+.dkd106-meta-hidden{display:none!important}
+.dkd106-facts{display:grid;grid-template-columns:1fr 1.35fr;gap:10px;margin-top:14px}
+.dkd106-fact{position:relative;overflow:hidden;min-height:68px;border-radius:19px;padding:11px 13px;display:flex;align-items:center;gap:11px;border:1px solid rgba(255,255,255,.1)}
+.dkd106-fact:after{content:"";position:absolute;right:-28px;bottom:-32px;width:92px;height:92px;border-radius:50%;opacity:.16;pointer-events:none}
+.dkd106-fact-icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;border:1px solid currentColor;background:rgba(255,255,255,.035)}
+.dkd106-fact-icon i{font-size:22px}.dkd106-fact>span:last-child{min-width:0;display:grid;gap:5px}.dkd106-fact small{font-size:8px;font-weight:950;letter-spacing:1.15px}.dkd106-fact b{font-size:14px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.dkd106-color{color:#ff80c5;border-color:rgba(255,101,184,.35);background:linear-gradient(120deg,rgba(255,101,184,.16),rgba(166,123,255,.08))}.dkd106-color:after{background:#ff65b8}.dkd106-color small{color:#ed95c5}.dkd106-color b{color:#ffe0f1}
+.dkd106-model{color:#b88cff;border-color:rgba(166,123,255,.38);background:linear-gradient(120deg,rgba(166,123,255,.17),rgba(53,228,255,.065))}.dkd106-model:after{background:#a67bff}.dkd106-model small{color:#bda5e6}.dkd106-model b{color:#eee4ff}
+.dp-net.dkd106-plate-card{border-color:rgba(53,228,255,.38)!important;background:linear-gradient(120deg,rgba(53,228,255,.15),rgba(108,140,255,.08))!important;color:#62e8ff!important}
+.dp-net.dkd106-plate-card i{font-size:25px!important}.dp-net.dkd106-plate-card small{color:#79cce0!important}.dp-net.dkd106-plate-card b{color:#fff!important;font-size:15px!important;letter-spacing:.85px!important}
+@media(max-width:620px){.dkd106-facts{grid-template-columns:1fr 1fr;gap:8px}.dkd106-fact{min-height:62px;padding:9px 10px;border-radius:16px}.dkd106-fact-icon{width:36px;height:36px;border-radius:12px}.dkd106-fact-icon i{font-size:19px}.dkd106-fact small{font-size:7px}.dkd106-fact b{font-size:12px}.dp-net.dkd106-plate-card b{font-size:14px!important}}
+@media(max-width:370px){.dkd106-facts{grid-template-columns:1fr}.dkd106-fact b{white-space:normal}}
