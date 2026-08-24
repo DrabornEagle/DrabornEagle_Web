@@ -1,10 +1,46 @@
 <!doctype html>
 <html lang="tr">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DraBornEagle</title></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050816"><title>DraBornEagle</title></head>
 <body>
 <script>
-(() => {
+(async () => {
   const path = location.pathname + location.search + location.hash;
+  const tagMatch = location.pathname.match(/^\/DraBornPark\/tag\/([^/]+)\/?$/i);
+  if (tagMatch) {
+    try {
+      const response = await fetch('/DraBornPark/tag/index.html', {cache:'no-store'});
+      if (!response.ok) throw new Error('tag_shell_unavailable');
+      const html = await response.text();
+      document.open();
+      document.write(html);
+      document.close();
+      return;
+    } catch (_) {
+      document.body.textContent = 'DraBornPark etiket sayfası şu anda açılamadı.';
+      return;
+    }
+  }
+
+  const legacyMatch = location.pathname.match(/^\/DraBornPark\/t\/([^/]+)\/?$/i);
+  if (legacyMatch) {
+    try {
+      const token = decodeURIComponent(legacyMatch[1]);
+      const response = await fetch('https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/drabornpark-public-contact', {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({action:'lookup',tagCode:token})
+      });
+      const data = await response.json();
+      const code = String(data?.snapshot?.nfcConnectionCode || data?.snapshot?.shortCode || '').trim();
+      if (!response.ok || !/^\d{4}-\d{4}$/.test(code)) throw new Error('legacy_tag_unresolved');
+      location.replace('/DraBornPark/tag/' + encodeURIComponent(code));
+      return;
+    } catch (_) {
+      location.replace('/DraBornPark/tag/');
+      return;
+    }
+  }
+
   if (location.pathname.startsWith('/DraBornGate/')) {
     sessionStorage.setItem('dkd_gate_route', path);
     location.replace('/DraBornGate/');
