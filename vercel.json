@@ -16,6 +16,18 @@
         {"key": "Content-Type", "value": "application/json; charset=utf-8"},
         {"key": "Cache-Control", "value": "public, max-age=300"}
       ]
+    },
+    {
+      "source": "/DraBornPark/tag/:path*",
+      "headers": [
+        {"key": "Cache-Control", "value": "no-store, max-age=0, must-revalidate"}
+      ]
+    },
+    {
+      "source": "/api/drabornpark-contact",
+      "headers": [
+        {"key": "Cache-Control", "value": "no-store, max-age=0"}
+      ]
     }
   ]
 }
