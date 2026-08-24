@@ -1,13 +1,41 @@
-/* DraBornPark v1.0.6-web — modern vehicle detail cards. */
+/* DraBornPark v1.0.6-web — clearer vehicle identity cards + minimalist owner. */
 .dkd106-meta-hidden{display:none!important}
-.dkd106-facts{display:grid;grid-template-columns:1fr 1.35fr;gap:10px;margin-top:14px}
-.dkd106-fact{position:relative;overflow:hidden;min-height:68px;border-radius:19px;padding:11px 13px;display:flex;align-items:center;gap:11px;border:1px solid rgba(255,255,255,.1)}
-.dkd106-fact:after{content:"";position:absolute;right:-28px;bottom:-32px;width:92px;height:92px;border-radius:50%;opacity:.16;pointer-events:none}
-.dkd106-fact-icon{width:42px;height:42px;border-radius:14px;display:grid;place-items:center;flex:0 0 auto;border:1px solid currentColor;background:rgba(255,255,255,.035)}
-.dkd106-fact-icon i{font-size:22px}.dkd106-fact>span:last-child{min-width:0;display:grid;gap:5px}.dkd106-fact small{font-size:8px;font-weight:950;letter-spacing:1.15px}.dkd106-fact b{font-size:14px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.dkd106-color{color:#ff80c5;border-color:rgba(255,101,184,.35);background:linear-gradient(120deg,rgba(255,101,184,.16),rgba(166,123,255,.08))}.dkd106-color:after{background:#ff65b8}.dkd106-color small{color:#ed95c5}.dkd106-color b{color:#ffe0f1}
-.dkd106-model{color:#b88cff;border-color:rgba(166,123,255,.38);background:linear-gradient(120deg,rgba(166,123,255,.17),rgba(53,228,255,.065))}.dkd106-model:after{background:#a67bff}.dkd106-model small{color:#bda5e6}.dkd106-model b{color:#eee4ff}
-.dp-net.dkd106-plate-card{border-color:rgba(53,228,255,.38)!important;background:linear-gradient(120deg,rgba(53,228,255,.15),rgba(108,140,255,.08))!important;color:#62e8ff!important}
-.dp-net.dkd106-plate-card i{font-size:25px!important}.dp-net.dkd106-plate-card small{color:#79cce0!important}.dp-net.dkd106-plate-card b{color:#fff!important;font-size:15px!important;letter-spacing:.85px!important}
-@media(max-width:620px){.dkd106-facts{grid-template-columns:1fr 1fr;gap:8px}.dkd106-fact{min-height:62px;padding:9px 10px;border-radius:16px}.dkd106-fact-icon{width:36px;height:36px;border-radius:12px}.dkd106-fact-icon i{font-size:19px}.dkd106-fact small{font-size:7px}.dkd106-fact b{font-size:12px}.dp-net.dkd106-plate-card b{font-size:14px!important}}
-@media(max-width:370px){.dkd106-facts{grid-template-columns:1fr}.dkd106-fact b{white-space:normal}}
+
+.dkd106-vehicle-info{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.dkd106-info{position:relative;overflow:hidden;min-height:72px;border-radius:18px;padding:11px 12px;display:flex;align-items:center;gap:11px;border:1px solid rgba(255,255,255,.1);background:#0b1830}
+.dkd106-info:after{content:"";position:absolute;right:-34px;bottom:-38px;width:100px;height:100px;border-radius:50%;opacity:.12;pointer-events:none}
+.dkd106-info-icon{position:relative;z-index:1;width:43px;height:43px;border-radius:13px;display:grid;place-items:center;flex:0 0 auto;border:1px solid currentColor;background:rgba(255,255,255,.035)}
+.dkd106-info-icon i{font-size:22px}
+.dkd106-info-copy{position:relative;z-index:1;min-width:0;display:grid;gap:3px}
+.dkd106-info small{font-size:8px;font-weight:950;letter-spacing:1.15px;opacity:.82}
+.dkd106-info b{font-size:14px;line-height:1.15;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#fff}
+.dkd106-info em{font-style:normal;font-size:8px;font-weight:800;letter-spacing:.25px;opacity:.62}
+
+.dkd106-plate{grid-column:1/-1;min-height:78px;color:#52e7ff;border-color:rgba(53,228,255,.34);background:linear-gradient(115deg,rgba(35,166,205,.18),rgba(46,84,181,.13) 58%,rgba(10,23,48,.96))}
+.dkd106-plate:after{background:#35e4ff}
+.dkd106-plate .dkd106-info-icon{width:48px;height:48px;border-radius:15px;background:rgba(53,228,255,.09)}
+.dkd106-plate .dkd106-info-icon i{font-size:25px}
+.dkd106-plate small{color:#8ddced}.dkd106-plate b{font-size:20px;letter-spacing:1.25px}.dkd106-plate em{color:#7fa3bb}
+
+.dkd106-color{color:#ff86c6;border-color:rgba(255,101,184,.3);background:linear-gradient(120deg,rgba(255,101,184,.14),rgba(126,69,183,.08),rgba(10,23,48,.96))}
+.dkd106-color:after{background:#ff65b8}.dkd106-color small{color:#eba1c8}.dkd106-color b{color:#ffe2f2}
+.dkd106-model{color:#b692ff;border-color:rgba(166,123,255,.32);background:linear-gradient(120deg,rgba(166,123,255,.14),rgba(53,228,255,.055),rgba(10,23,48,.96))}
+.dkd106-model:after{background:#a67bff}.dkd106-model small{color:#c2afe5}.dkd106-model b{color:#eee7ff}
+
+.dp-network.dkd106-owner-row{display:block!important;margin-top:11px!important}
+.dp-net.dkd106-network-hidden{display:none!important}
+.dp-owner.dkd106-owner-min{min-height:48px!important;width:100%!important;border-radius:15px!important;padding:8px 12px!important;justify-content:flex-start!important;text-align:left!important;gap:10px!important;border:1px solid rgba(166,123,255,.24)!important;background:rgba(103,66,145,.1)!important;color:#d8c4f5!important;font-size:inherit!important;font-weight:inherit!important}
+.dp-owner.dkd106-owner-min>i{width:32px;height:32px;border-radius:10px;display:grid;place-items:center;flex:0 0 auto;background:rgba(166,123,255,.11);color:#c69dff;font-size:17px!important}
+.dp-owner.dkd106-owner-min>span{display:grid;min-width:0;gap:2px}
+.dp-owner.dkd106-owner-min small{font-size:7px;font-weight:900;letter-spacing:1px;color:#897da0}
+.dp-owner.dkd106-owner-min b{font-size:12px;line-height:1.2;color:#e9ddf8;font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+@media(max-width:620px){
+  .dkd106-vehicle-info{gap:8px;margin-top:12px}
+  .dkd106-info{min-height:64px;padding:9px 10px;border-radius:16px;gap:9px}
+  .dkd106-info-icon{width:36px;height:36px;border-radius:11px}.dkd106-info-icon i{font-size:19px}
+  .dkd106-info small{font-size:7px}.dkd106-info b{font-size:12px}
+  .dkd106-plate{min-height:69px}.dkd106-plate .dkd106-info-icon{width:41px;height:41px;border-radius:12px}.dkd106-plate b{font-size:17px}
+  .dp-owner.dkd106-owner-min{min-height:46px!important;padding:7px 10px!important}.dp-owner.dkd106-owner-min>i{width:30px;height:30px}.dp-owner.dkd106-owner-min b{font-size:11px}
+}
+@media(max-width:370px){.dkd106-vehicle-info{grid-template-columns:1fr}.dkd106-plate{grid-column:auto}.dkd106-info b{white-space:normal}}
