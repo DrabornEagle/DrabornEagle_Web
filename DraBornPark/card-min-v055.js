@@ -1,6 +1,6 @@
-/* DraBornPark web v0.5.5 — rebuilt protected vehicle card for every ?tag= route. */
+/* DraBornPark web v0.5.5 — rebuilt protected vehicle card for every public tag route. */
 (function(){
-  const dkd_tag=(new URLSearchParams(location.search).get('tag')||'').trim();
+  const dkd_tag=(new URLSearchParams(location.search).get('tag')||globalThis.DKDBP_PATH_TAG||'').trim();
   if(!dkd_tag)return;
 
   const dkd_escape=dkd_value=>String(dkd_value??'').replace(/[&<>'"]/g,dkd_char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[dkd_char]));
