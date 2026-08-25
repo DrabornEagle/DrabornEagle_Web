@@ -79,9 +79,13 @@
     const dkdRemainder=String(dkdSeconds%60).padStart(2,'0');
     return `${dkdMinutes}:${dkdRemainder}`;
   }
+  function dkdSetText(dkdNode,dkdValue){if(dkdNode&&dkdNode.textContent!==dkdValue)dkdNode.textContent=dkdValue;}
   function dkdArrangeComposer(){
     const dkdSuccess=document.getElementById('dp-success');
-    if(dkdSuccess){dkdSuccess.hidden=true;dkdSuccess.setAttribute('aria-hidden','true');}
+    if(dkdSuccess){
+      if(!dkdSuccess.hidden)dkdSuccess.hidden=true;
+      if(dkdSuccess.getAttribute('aria-hidden')!=='true')dkdSuccess.setAttribute('aria-hidden','true');
+    }
     const dkdHistory=document.querySelector('.dp-direct-history');
     const dkdTextarea=document.getElementById('dp-direct-text');
     if(dkdHistory&&dkdTextarea&&dkdTextarea.parentNode&&dkdHistory.nextElementSibling!==dkdTextarea){
@@ -90,11 +94,11 @@
     const dkdHead=dkdHistory?.querySelector('.dp-direct-history-head');
     if(dkdHead){
       const dkdTitle=dkdHead.querySelector('span');
-      if(dkdTitle)dkdTitle.textContent='GÜVENLİ MESAJLAŞMA';
+      dkdSetText(dkdTitle,'GÜVENLİ MESAJLAŞMA');
       let dkdCountdown=dkdHead.querySelector('.dkd-session-countdown');
       if(!dkdCountdown){dkdCountdown=document.createElement('b');dkdCountdown.className='dkd-session-countdown';dkdHead.appendChild(dkdCountdown);}
       const dkdHasSession=Boolean(localStorage.getItem(dkdSessionKey));
-      dkdCountdown.textContent=dkdHasSession?`OTURUM ${dkdFormatRemaining()}`:'30 DK OTURUM';
+      dkdSetText(dkdCountdown,dkdHasSession?`OTURUM ${dkdFormatRemaining()}`:'30 DK OTURUM');
     }
   }
 
