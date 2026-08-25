@@ -17,6 +17,11 @@
     return{plate,color,model,title,username,avatar};
   }
 
+  function openMarketplace(){
+    document.getElementById('dp-market-modal')?.classList.add('open');
+    document.body.classList.add('dp-market-open');
+  }
+
   function enhance(){
     const card=document.querySelector('.dp-vehicle');
     if(!card||card.dataset.dkdPremiumCard==='1')return false;
@@ -62,7 +67,7 @@
         <span class="dkd107-owner-safe"><i class="ri-lock-2-line"></i> Gizli iletişim</span>
       </div>`;
 
-    card.querySelector('#dp-protect')?.addEventListener('click',()=>alert('DraBornPark etiket seçenekleri yakında burada listelenecek.'));
+    card.querySelector('#dp-protect')?.addEventListener('click',openMarketplace);
     return true;
   }
 
