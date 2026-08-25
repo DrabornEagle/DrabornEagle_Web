@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="tr">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050816"><title>DraBornEagle</title></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050816"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>DraBornEagle • DraBornPark v1.0.7</title></head>
 <body>
 <script>
+(() => { addEventListener('pageshow', event => { if (event.persisted) location.reload(); }); })();
 (async () => {
   const path = location.pathname + location.search + location.hash;
   const tagMatch = location.pathname.match(/^\/DraBornPark\/tag\/([^/]+)\/?$/i);
   if (tagMatch) {
     try {
-      const response = await fetch('/DraBornPark/tag/index.html', {cache:'no-store'});
+      const response = await fetch('/DraBornPark/tag/index.html?v=1070&ts=' + Date.now(), {cache:'no-store',headers:{'Cache-Control':'no-cache'}});
       if (!response.ok) throw new Error('tag_shell_unavailable');
       const html = await response.text();
       document.open();
@@ -16,7 +17,7 @@
       document.close();
       return;
     } catch (_) {
-      document.body.textContent = 'DraBornPark etiket sayfası şu anda açılamadı.';
+      document.body.textContent = 'DraBornPark v1.0.7 etiket sayfası şu anda açılamadı.';
       return;
     }
   }
@@ -28,15 +29,16 @@
       const response = await fetch('https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/drabornpark-public-contact', {
         method:'POST',
         headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({action:'lookup',tagCode:token})
+        body:JSON.stringify({action:'lookup',tagCode:token}),
+        cache:'no-store'
       });
       const data = await response.json();
       const code = String(data?.snapshot?.nfcConnectionCode || data?.snapshot?.shortCode || '').trim();
       if (!response.ok || !/^\d{4}-\d{4}$/.test(code)) throw new Error('legacy_tag_unresolved');
-      location.replace('/DraBornPark/tag/' + encodeURIComponent(code));
+      location.replace('/DraBornPark/tag/' + encodeURIComponent(code) + '?v=1070');
       return;
     } catch (_) {
-      location.replace('/DraBornPark/tag/');
+      location.replace('/DraBornPark/tag/?v=1070');
       return;
     }
   }
