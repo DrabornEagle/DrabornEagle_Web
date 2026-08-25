@@ -1,0 +1,70 @@
+name: DraBornPark v1.0.7 Privacy Cache Bust
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/DRABORNPARK_V107_PRIVACY_CACHE_BUST'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish-fresh-privacy:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Publish versioned privacy route and refresh links
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p DraBornPark/privacy-v107
+          cp DraBornPark/privacy/index.html DraBornPark/privacy-v107/index.html
+
+          python3 - <<'PY'
+          from pathlib import Path
+
+          old = Path('DraBornPark/privacy/index.html')
+          s = old.read_text(encoding='utf-8')
+          redirect = "<script>(function(){var u='/DraBornPark/privacy-v107/?v=1071';if(location.pathname!='/DraBornPark/privacy-v107/'&&location.pathname!='/DraBornPark/privacy-v107'){location.replace(u);}})();</script>"
+          if redirect not in s:
+              s = s.replace('</head>', redirect + '</head>', 1)
+          old.write_text(s, encoding='utf-8')
+
+          fresh = Path('DraBornPark/privacy-v107/index.html')
+          s = fresh.read_text(encoding='utf-8')
+          s = s.replace('href="../styles.css"', 'href="../styles.css?v=1071"')
+          if '<link rel="canonical"' not in s:
+              s = s.replace('</head>', '<link rel="canonical" href="https://www.draborneagle.com/DraBornPark/privacy-v107/"></head>', 1)
+          fresh.write_text(s, encoding='utf-8')
+
+          for filename in ['DraBornPark/index.html','DraBornPark/terms/index.html','DraBornPark/data-safety/index.html','DraBornPark/account-deletion/index.html']:
+              p=Path(filename)
+              if not p.exists():
+                  continue
+              t=p.read_text(encoding='utf-8')
+              t=t.replace('href="./privacy/"', 'href="./privacy-v107/?v=1071"')
+              t=t.replace('href="../privacy/"', 'href="../privacy-v107/?v=1071"')
+              p.write_text(t, encoding='utf-8')
+          PY
+
+          grep -q 'v1.0.7' DraBornPark/privacy-v107/index.html
+          grep -q '25 AĞUSTOS 2026' DraBornPark/privacy-v107/index.html
+          grep -q 'privacy-v107' DraBornPark/privacy/index.html
+      - name: Commit and push
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add DraBornPark/privacy/index.html DraBornPark/privacy-v107/index.html DraBornPark/index.html DraBornPark/terms/index.html DraBornPark/data-safety/index.html DraBornPark/account-deletion/index.html
+          if git diff --cached --quiet; then
+            echo 'No changes needed.'
+            exit 0
+          fi
+          git commit -m 'fix: serve DraBornPark privacy v1.0.7 from fresh Pages route'
+          git push
