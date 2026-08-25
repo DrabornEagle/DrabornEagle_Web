@@ -20,7 +20,10 @@
     {
       "source": "/DraBornPark",
       "headers": [
-        {"key": "Cache-Control", "value": "no-store, no-cache, max-age=0, must-revalidate"},
+        {"key": "Cache-Control", "value": "private, no-store, no-cache, max-age=0, must-revalidate"},
+        {"key": "CDN-Cache-Control", "value": "no-store"},
+        {"key": "Vercel-CDN-Cache-Control", "value": "no-store"},
+        {"key": "Surrogate-Control", "value": "no-store"},
         {"key": "Pragma", "value": "no-cache"},
         {"key": "Expires", "value": "0"}
       ]
@@ -28,7 +31,10 @@
     {
       "source": "/DraBornPark/:path*",
       "headers": [
-        {"key": "Cache-Control", "value": "no-store, no-cache, max-age=0, must-revalidate"},
+        {"key": "Cache-Control", "value": "private, no-store, no-cache, max-age=0, must-revalidate"},
+        {"key": "CDN-Cache-Control", "value": "no-store"},
+        {"key": "Vercel-CDN-Cache-Control", "value": "no-store"},
+        {"key": "Surrogate-Control", "value": "no-store"},
         {"key": "Pragma", "value": "no-cache"},
         {"key": "Expires", "value": "0"}
       ]
@@ -36,7 +42,9 @@
     {
       "source": "/api/drabornpark-contact",
       "headers": [
-        {"key": "Cache-Control", "value": "no-store, max-age=0"}
+        {"key": "Cache-Control", "value": "no-store, max-age=0"},
+        {"key": "CDN-Cache-Control", "value": "no-store"},
+        {"key": "Vercel-CDN-Cache-Control", "value": "no-store"}
       ]
     }
   ]
