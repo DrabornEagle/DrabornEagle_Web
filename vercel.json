@@ -18,6 +18,30 @@
       ]
     },
     {
+      "source": "/DraBornPark/tag/:path*",
+      "headers": [
+        {"key": "Cache-Control", "value": "private, no-store, no-cache, max-age=0, must-revalidate"},
+        {"key": "CDN-Cache-Control", "value": "no-store"},
+        {"key": "Vercel-CDN-Cache-Control", "value": "no-store"},
+        {"key": "Surrogate-Control", "value": "no-store"},
+        {"key": "Clear-Site-Data", "value": "\"cache\""},
+        {"key": "Pragma", "value": "no-cache"},
+        {"key": "Expires", "value": "0"}
+      ]
+    },
+    {
+      "source": "/DraBornPark/t/:path*",
+      "headers": [
+        {"key": "Cache-Control", "value": "private, no-store, no-cache, max-age=0, must-revalidate"},
+        {"key": "CDN-Cache-Control", "value": "no-store"},
+        {"key": "Vercel-CDN-Cache-Control", "value": "no-store"},
+        {"key": "Surrogate-Control", "value": "no-store"},
+        {"key": "Clear-Site-Data", "value": "\"cache\""},
+        {"key": "Pragma", "value": "no-cache"},
+        {"key": "Expires", "value": "0"}
+      ]
+    },
+    {
       "source": "/DraBornPark",
       "headers": [
         {"key": "Cache-Control", "value": "private, no-store, no-cache, max-age=0, must-revalidate"},
