@@ -1,0 +1,105 @@
+name: DraBornPark v1.0.7 Legal Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/drabornpark-v107-legal-sync.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-legal-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Update visible DraBornPark version/date labels
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+
+          root = Path('DraBornPark')
+          files = [p for p in root.rglob('*') if p.is_file() and p.suffix.lower() in {'.html', '.js'}]
+
+          replacements = {
+              'v0.5.6': 'v1.0.7',
+              'V0.5.6': 'V1.0.7',
+              'v1.0.5': 'v1.0.7',
+              'V1.0.5': 'V1.0.7',
+              'v1.0.6': 'v1.0.7',
+              'V1.0.6': 'V1.0.7',
+              '20 AĞUSTOS 2026': '25 AĞUSTOS 2026',
+              '23 AĞUSTOS 2026': '25 AĞUSTOS 2026',
+              '24 AĞUSTOS 2026': '25 AĞUSTOS 2026',
+          }
+
+          changed = []
+          for path in files:
+              try:
+                  text = path.read_text(encoding='utf-8')
+              except UnicodeDecodeError:
+                  continue
+              original = text
+              for old, new in replacements.items():
+                  text = text.replace(old, new)
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  changed.append(str(path))
+
+          # Legal pages are current v1.0.7 release documents.
+          legal_pages = [
+              root / 'privacy' / 'index.html',
+              root / 'data-safety' / 'index.html',
+              root / 'terms' / 'index.html',
+          ]
+          for path in legal_pages:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              original = text
+              if 'http-equiv="Cache-Control"' not in text:
+                  marker = '<meta name="viewport" content="width=device-width,initial-scale=1">'
+                  inject = marker + '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">'
+                  text = text.replace(marker, inject, 1)
+              if text != original:
+                  path.write_text(text, encoding='utf-8')
+                  if str(path) not in changed:
+                      changed.append(str(path))
+
+          print('Updated files:')
+          for item in changed:
+              print(' -', item)
+
+          # Guard: current legal pages must not expose stale release labels.
+          for path in legal_pages:
+              if not path.exists():
+                  continue
+              text = path.read_text(encoding='utf-8')
+              stale = ['v0.5.6', 'V0.5.6', 'v1.0.5', 'V1.0.5', 'v1.0.6', 'V1.0.6', '23 AĞUSTOS 2026', '20 AĞUSTOS 2026']
+              bad = [token for token in stale if token in text]
+              if bad:
+                  raise SystemExit(f'Stale legal labels remain in {path}: {bad}')
+          PY
+
+      - name: Commit and push legal sync
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git diff --quiet; then
+            echo 'No changes required.'
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add DraBornPark
+          git commit -m 'fix: update DraBornPark legal pages to v1.0.7'
+          git push origin HEAD:main
