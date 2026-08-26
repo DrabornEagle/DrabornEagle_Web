@@ -25,6 +25,7 @@ jobs:
           node --check DraBornPark/tag-app-v106.js
           node --check DraBornPark/tag-detail-v106.js
           node --check DraBornPark/tag-runtime-v1065.js
+          node --check DraBornPark/tag-v114.js
 
       - name: Required public pages
         run: |
@@ -36,15 +37,19 @@ jobs:
           test -f DraBornPark/data-safety/index.html
           test -f DraBornPark/account-deletion/index.html
           test -f DraBornPark/support/index.html
+          test -f DraBornPark/tag-v114.css
+          test -f DraBornPark/tag-v114.js
 
-      - name: DraBornPark v1.0.9 route contract
+      - name: DraBornPark v1.0.14 route contract
         run: |
-          grep -q "DraBornPark v1.0.9" DraBornPark/tag/index.html
-          grep -q "BUILD='1090'" DraBornPark/tag/index.html
-          grep -q "v1.0.9 • NFC + QR • AKTİF" DraBornPark/tag/index.html
-          grep -q "DraBornPark v1.0.9" DraBornPark/t/index.html
-          grep -q "tag-runtime-v1065.css?v=1090" DraBornPark/tag/index.html
-          grep -q "tag-app-v106.js?v=1090" DraBornPark/tag/index.html
+          grep -q "DraBornPark v1.0.14" DraBornPark/tag/index.html
+          grep -q "BUILD='1140'" DraBornPark/tag/index.html
+          grep -q "v1.0.14 • NFC + QR • AKTİF" DraBornPark/tag/index.html
+          grep -q "DraBornPark v1.0.14" DraBornPark/t/index.html
+          grep -q "tag-runtime-v1065.css?v=1140" DraBornPark/tag/index.html
+          grep -q "tag-app-v106.js?v=1140" DraBornPark/tag/index.html
+          grep -q "tag-v114.css?v=1140" DraBornPark/tag/index.html
+          grep -q "tag-v114.js?v=1140" DraBornPark/tag/index.html
 
       - name: Secure message scrolling contract
         run: |
@@ -54,6 +59,16 @@ jobs:
           grep -q 'max-height:340px' DraBornPark/tag-runtime-v1065.css
           grep -q 'min-height:230px' DraBornPark/tag-runtime-v1065.css
           grep -q 'GÜVENLİ MESAJLAŞMA' DraBornPark/tag-runtime-v1065.js
+
+      - name: v1.0.14 visual polish contract
+        run: |
+          grep -q 'Galeriden seçim yok • tarih/saat damgalı' DraBornPark/tag-v114.js
+          grep -q 'el.remove()' DraBornPark/tag-v114.js
+          grep -q 'dkd114-camera-pulse' DraBornPark/tag-v114.css
+          grep -q 'dkd107-protect-cta>b' DraBornPark/tag-v114.css
+          grep -q 'dkd107-color .dkd107-data-copy b' DraBornPark/tag-v114.css
+          grep -q 'dkd107-model .dkd107-data-copy b' DraBornPark/tag-v114.css
+          grep -q 'prefers-reduced-motion' DraBornPark/tag-v114.css
 
       - name: Direct messaging and privacy essentials
         run: |
@@ -66,5 +81,5 @@ jobs:
 
       - name: Legacy visible route versions are gone
         run: |
-          ! grep -Eq 'DraBornPark v1\.0\.[0-8]' DraBornPark/tag/index.html
-          ! grep -Eq 'DraBornPark v1\.0\.[0-8]' DraBornPark/t/index.html
+          ! grep -Eq 'DraBornPark v1\.0\.(?:[0-9]|1[0-3])' DraBornPark/tag/index.html
+          ! grep -Eq 'DraBornPark v1\.0\.(?:[0-9]|1[0-3])' DraBornPark/t/index.html
