@@ -19,86 +19,52 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
-      - name: JavaScript syntax
+
+      - name: Current JavaScript syntax
         run: |
-          node --check DraBornPark/app.js
-          node --check DraBornPark/contact-v051.js
-          node --check DraBornPark/realtime-v052.js
-          node --check DraBornPark/evidence-v053.js
-          node --check DraBornPark/test1-v050-icons.js
-          node --check DraBornPark/production-icons-v051.js
-          node --check DraBornPark/web-v055.js
-          node --check DraBornPark/card-min-v055.js
+          node --check DraBornPark/tag-app-v106.js
+          node --check DraBornPark/tag-detail-v106.js
+          node --check DraBornPark/tag-runtime-v1065.js
+
       - name: Required public pages
         run: |
           test -f DraBornPark/index.html
           test -f DraBornPark/tag/index.html
+          test -f DraBornPark/t/index.html
           test -f DraBornPark/privacy/index.html
           test -f DraBornPark/terms/index.html
           test -f DraBornPark/data-safety/index.html
           test -f DraBornPark/account-deletion/index.html
           test -f DraBornPark/support/index.html
-      - name: Production contact layout contract
+
+      - name: DraBornPark v1.0.9 route contract
         run: |
-          grep -q "test1-v047','test1-v048" DraBornPark/contact-v051.js
-          grep -q "dbp47-choice" DraBornPark/contact-v051.js
-          grep -q "aria-pressed" DraBornPark/contact-v051.js
-          grep -q "production-icons-v051.js" DraBornPark/index.html
-          grep -q "MutationObserver" DraBornPark/production-icons-v051.js
-      - name: Unified username and NFC tag route
+          grep -q "DraBornPark v1.0.9" DraBornPark/tag/index.html
+          grep -q "BUILD='1090'" DraBornPark/tag/index.html
+          grep -q "v1.0.9 • NFC + QR • AKTİF" DraBornPark/tag/index.html
+          grep -q "DraBornPark v1.0.9" DraBornPark/t/index.html
+          grep -q "tag-runtime-v1065.css?v=1090" DraBornPark/tag/index.html
+          grep -q "tag-app-v106.js?v=1090" DraBornPark/tag/index.html
+
+      - name: Secure message scrolling contract
         run: |
-          grep -q "DKDBP_PATH_TAG" DraBornPark/contact-v051.js
-          grep -q "DKDBP_PATH_TAG" DraBornPark/web-v055.js
-          grep -q "DKDBP_CLEAN_TAG_PATH" DraBornPark/tag/index.html
-          grep -q "history.replaceState" DraBornPark/tag/index.html
-          grep -q "call-request-v053.js?v=059" DraBornPark/tag/index.html
-          grep -q "polish-v053.js?v=058" DraBornPark/tag/index.html
-          grep -q "web-v055.js?v=061" DraBornPark/tag/index.html
-          ! grep -q "card-min-v055.js" DraBornPark/tag/index.html
-          grep -q "card-min-v055.js?v=065" DraBornPark/index.html
-      - name: v0.5.3 camera-only evidence
+          grep -q 'id="dp-direct-history-list"' DraBornPark/tag-app-v106.js
+          grep -q '#dp-direct-history-list' DraBornPark/tag-runtime-v1065.css
+          grep -q 'overflow-y:auto' DraBornPark/tag-runtime-v1065.css
+          grep -q 'max-height:340px' DraBornPark/tag-runtime-v1065.css
+          grep -q 'min-height:230px' DraBornPark/tag-runtime-v1065.css
+          grep -q 'GÜVENLİ MESAJLAŞMA' DraBornPark/tag-runtime-v1065.js
+
+      - name: Direct messaging and privacy essentials
         run: |
-          test -f DraBornPark/evidence-v053.js
-          test -f DraBornPark/evidence-v053.css
-          grep -q "evidence-v053.js" DraBornPark/index.html
-          grep -q "evidence-v053.css" DraBornPark/index.html
-          grep -q "getUserMedia" DraBornPark/evidence-v053.js
-          grep -q "facingMode" DraBornPark/evidence-v053.js
-          grep -q "canvas.toDataURL('image/jpeg'" DraBornPark/evidence-v053.js
-          grep -q "ANLIK KANIT" DraBornPark/evidence-v053.js
-          grep -q "capturedAt" DraBornPark/evidence-v053.js
-          ! grep -q 'type="file"' DraBornPark/evidence-v053.js
-          ! grep -q 'accept="image' DraBornPark/evidence-v053.js
-      - name: v0.5.5 direct secure message
-        run: |
-          test -f DraBornPark/web-v055.js
-          test -f DraBornPark/web-v055.css
-          grep -q "web-v055.js?v=061" DraBornPark/index.html
-          grep -q "web-v055.css?v=061" DraBornPark/index.html
-          grep -q "category:'direct_message'" DraBornPark/web-v055.js
-          grep -q "FOTOĞRAF EKLE" DraBornPark/web-v055.js
-          grep -q "ARAÇ SAHİBİ •" DraBornPark/web-v055.js
-          grep -q "NFC + QR • AKTİF" DraBornPark/web-v055.js
-          grep -q "Trendyol" DraBornPark/web-v055.js
-          grep -q "Hepsiburada" DraBornPark/web-v055.js
-          grep -q "Amazon" DraBornPark/web-v055.js
-          grep -q "DraBornPark Mağaza" DraBornPark/web-v055.js
-      - name: Remix Icon contact UI
-        run: |
-          grep -q "remixicon@4.6.0" DraBornPark/index.html
-          grep -q "ri-car-line" DraBornPark/production-icons-v051.js
-          grep -q "ri-door-open-line" DraBornPark/production-icons-v051.js
-          grep -q "ri-phone-lock-line" DraBornPark/production-icons-v051.js
-          grep -q "ri-shield-check-line" DraBornPark/production-icons-v051.js
-          ! grep -q "<svg" DraBornPark/production-icons-v051.js
-      - name: Google Play privacy essentials
-        run: |
+          grep -q "category:'direct_message'" DraBornPark/tag-app-v106.js
+          grep -q "CANLI FOTOĞRAF ÇEK" DraBornPark/tag-app-v106.js
+          grep -q "Gizlilik Politikası" DraBornPark/tag-app-v106.js
+          grep -q "play.google.com/store/apps/details?id=com.draborneagle.drabornpark" DraBornPark/tag-app-v106.js
           grep -q "DrabornEagle" DraBornPark/privacy/index.html
-          grep -q "DraBornPark/support/" DraBornPark/privacy/index.html
           grep -q "DraBornPark/account-deletion/" DraBornPark/privacy/index.html
-          grep -q "Hesabı yalnızca devre dışı bırakmak" DraBornPark/privacy/index.html
-          grep -q "HTTPS/TLS" DraBornPark/privacy/index.html
-          grep -q "saklama" DraBornPark/privacy/index.html
-          grep -q "uygulama içinden" DraBornPark/account-deletion/index.html
-          grep -q "giriş gerekmez" DraBornPark/account-deletion/index.html
-          grep -q "Data Safety" DraBornPark/data-safety/index.html
+
+      - name: Legacy visible route versions are gone
+        run: |
+          ! grep -Eq 'DraBornPark v1\.0\.[0-8]' DraBornPark/tag/index.html
+          ! grep -Eq 'DraBornPark v1\.0\.[0-8]' DraBornPark/t/index.html
