@@ -1,0 +1,33 @@
+/* DraBornPark public tag UI v1.0.14 — targeted polish and motion. */
+
+/* Marketplace CTA: keep the compact layout but make the message easier to read. */
+.dkd107-protect-cta{transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.dkd107-protect-cta>b{font-size:11px!important;line-height:1.1;letter-spacing:.15px;font-weight:950}
+.dkd107-protect-cta:active{transform:scale(.975)}
+
+/* Vehicle detail values requested to be more legible. */
+.dkd107-color .dkd107-data-copy b,
+.dkd107-model .dkd107-data-copy b{font-size:15px!important;line-height:1.2!important;font-weight:900!important}
+
+/* Live camera action: soft pulse + passing sheen + camera micro-motion. */
+.dp-camera-btn{position:relative;isolation:isolate;overflow:hidden;will-change:transform;animation:dkd114-camera-pulse 2.25s ease-in-out infinite;transition:transform .18s ease,border-color .18s ease,background .18s ease}
+.dp-camera-btn::after{content:"";position:absolute;z-index:-1;top:-45%;bottom:-45%;left:-38%;width:27%;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);transform:skewX(-18deg);animation:dkd114-camera-sheen 2.9s ease-in-out infinite}
+.dp-camera-btn>i{animation:dkd114-camera-icon 2.25s ease-in-out infinite}
+.dp-camera-btn:active{transform:scale(.985)}
+@keyframes dkd114-camera-pulse{0%,100%{transform:translateY(0);border-color:rgba(53,228,255,.42);background:rgba(53,228,255,.075)}50%{transform:translateY(-2px);border-color:rgba(53,228,255,.72);background:rgba(53,228,255,.12)}}
+@keyframes dkd114-camera-sheen{0%,28%{left:-38%;opacity:0}42%{opacity:1}66%,100%{left:118%;opacity:0}}
+@keyframes dkd114-camera-icon{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(1.08) rotate(-3deg)}}
+
+@media(max-width:620px){
+  .dkd107-protect-cta>b{font-size:9.5px!important}
+  .dkd107-color .dkd107-data-copy b,
+  .dkd107-model .dkd107-data-copy b{font-size:13.5px!important}
+}
+@media(max-width:390px){
+  .dkd107-protect-cta>b{display:block!important;font-size:8.5px!important}
+  .dkd107-protect-cta{width:auto!important;min-width:146px!important;padding:0 8px!important}
+  .dkd107-protect-cta>i:last-child{display:block!important}
+}
+@media(prefers-reduced-motion:reduce){
+  .dp-camera-btn,.dp-camera-btn::after,.dp-camera-btn>i{animation:none!important}
+}
