@@ -1,4 +1,4 @@
-name: DraBornPark v1.0.7 Legal Sync
+name: DraBornPark v1.0.21 Web Version Sync
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
   contents: write
 
 jobs:
-  sync-legal-version:
+  sync-web-version:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,7 +20,7 @@ jobs:
           ref: main
           fetch-depth: 0
 
-      - name: Update visible DraBornPark version/date labels
+      - name: Update every visible DraBornPark version/date label
         shell: bash
         run: |
           set -euo pipefail
@@ -31,15 +31,45 @@ jobs:
           files = [p for p in root.rglob('*') if p.is_file() and p.suffix.lower() in {'.html', '.js'}]
 
           replacements = {
-              'v0.5.6': 'v1.0.7',
-              'V0.5.6': 'V1.0.7',
-              'v1.0.5': 'v1.0.7',
-              'V1.0.5': 'V1.0.7',
-              'v1.0.6': 'v1.0.7',
-              'V1.0.6': 'V1.0.7',
-              '20 AĞUSTOS 2026': '25 AĞUSTOS 2026',
-              '23 AĞUSTOS 2026': '25 AĞUSTOS 2026',
-              '24 AĞUSTOS 2026': '25 AĞUSTOS 2026',
+              'v0.5.6': 'v1.0.21',
+              'V0.5.6': 'V1.0.21',
+              'v1.0.5': 'v1.0.21',
+              'V1.0.5': 'V1.0.21',
+              'v1.0.6': 'v1.0.21',
+              'V1.0.6': 'V1.0.21',
+              'v1.0.7': 'v1.0.21',
+              'V1.0.7': 'V1.0.21',
+              'v1.0.14': 'v1.0.21',
+              'V1.0.14': 'V1.0.21',
+              'v1.0.15': 'v1.0.21',
+              'V1.0.15': 'V1.0.21',
+              "'1.0.14'": "'1.0.21'",
+              '"1.0.14"': '"1.0.21"',
+              "'1.0.15'": "'1.0.21'",
+              '"1.0.15"': '"1.0.21"',
+              '20 AĞUSTOS 2026': '27 AĞUSTOS 2026',
+              '23 AĞUSTOS 2026': '27 AĞUSTOS 2026',
+              '24 AĞUSTOS 2026': '27 AĞUSTOS 2026',
+              '25 AĞUSTOS 2026': '27 AĞUSTOS 2026',
+              '26 AĞUSTOS 2026': '27 AĞUSTOS 2026',
+              '20 Ağustos 2026': '27 Ağustos 2026',
+              '23 Ağustos 2026': '27 Ağustos 2026',
+              '24 Ağustos 2026': '27 Ağustos 2026',
+              '25 Ağustos 2026': '27 Ağustos 2026',
+              '26 Ağustos 2026': '27 Ağustos 2026',
+              'v=1140': 'v=1210',
+              'v=1150': 'v=1210',
+              'v=1071': 'v=1210',
+              "BUILD='1140'": "BUILD='1210'",
+              'BUILD="1140"': 'BUILD="1210"',
+              "dkdVersion='114'": "dkdVersion='121'",
+              'dkdVersion="114"': 'dkdVersion="121"',
+              "dataset.dkdVersion='114'": "dataset.dkdVersion='121'",
+              'dataset.dkdVersion="114"': 'dataset.dkdVersion="121"',
+              "(?:[0-9]|1[0-3])": "(?:[0-9]|1[0-9]|20)",
+              '../privacy-v107/?v=1210': '../privacy/',
+              '../privacy-v107/?v=1071': '../privacy/',
+              'https://www.draborneagle.com/DraBornPark/privacy-v107/': 'https://www.draborneagle.com/DraBornPark/privacy/',
           }
 
           changed = []
@@ -55,21 +85,26 @@ jobs:
                   path.write_text(text, encoding='utf-8')
                   changed.append(str(path))
 
-          # Legal pages are current v1.0.7 release documents.
-          legal_pages = [
+          # Current public/legal documents should always bypass stale browser caches.
+          current_pages = [
+              root / 'index.html',
+              root / 'tag' / 'index.html',
+              root / 't' / 'index.html',
               root / 'privacy' / 'index.html',
+              root / 'privacy-v107' / 'index.html',
               root / 'data-safety' / 'index.html',
               root / 'terms' / 'index.html',
           ]
-          for path in legal_pages:
+          for path in current_pages:
               if not path.exists():
                   continue
               text = path.read_text(encoding='utf-8')
               original = text
               if 'http-equiv="Cache-Control"' not in text:
                   marker = '<meta name="viewport" content="width=device-width,initial-scale=1">'
-                  inject = marker + '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">'
-                  text = text.replace(marker, inject, 1)
+                  if marker in text:
+                      inject = marker + '<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0">'
+                      text = text.replace(marker, inject, 1)
               if text != original:
                   path.write_text(text, encoding='utf-8')
                   if str(path) not in changed:
@@ -79,18 +114,35 @@ jobs:
           for item in changed:
               print(' -', item)
 
-          # Guard: current legal pages must not expose stale release labels.
-          for path in legal_pages:
+          # Guard the pages users and Google Play actually see.
+          guard_files = [
+              root / 'index.html',
+              root / 'tag' / 'index.html',
+              root / 't' / 'index.html',
+              root / 'privacy' / 'index.html',
+              root / 'data-safety' / 'index.html',
+              root / 'terms' / 'index.html',
+          ]
+          stale = ['v1.0.14', 'V1.0.14', 'v1.0.15', 'V1.0.15', 'v1.0.7', 'V1.0.7', '26 AĞUSTOS 2026', '25 AĞUSTOS 2026']
+          for path in guard_files:
               if not path.exists():
                   continue
               text = path.read_text(encoding='utf-8')
-              stale = ['v0.5.6', 'V0.5.6', 'v1.0.5', 'V1.0.5', 'v1.0.6', 'V1.0.6', '23 AĞUSTOS 2026', '20 AĞUSTOS 2026']
               bad = [token for token in stale if token in text]
               if bad:
-                  raise SystemExit(f'Stale legal labels remain in {path}: {bad}')
+                  raise SystemExit(f'Stale DraBornPark labels remain in {path}: {bad}')
+
+          tag_pages = [root / 'tag' / 'index.html', root / 't' / 'index.html']
+          for path in tag_pages:
+              if path.exists() and 'v1.0.21 • NFC + QR • AKTİF' not in path.read_text(encoding='utf-8'):
+                  raise SystemExit(f'Current tag badge missing from {path}')
+
+          privacy = (root / 'privacy' / 'index.html').read_text(encoding='utf-8')
+          if '27 AĞUSTOS 2026 • v1.0.21' not in privacy:
+              raise SystemExit('Current privacy date/version label is missing')
           PY
 
-      - name: Commit and push legal sync
+      - name: Commit and push web sync
         shell: bash
         run: |
           set -euo pipefail
@@ -101,5 +153,6 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add DraBornPark
-          git commit -m 'fix: update DraBornPark legal pages to v1.0.7'
+          git commit -m 'fix: update DraBornPark web to v1.0.21'
+          git pull --rebase origin main
           git push origin HEAD:main
