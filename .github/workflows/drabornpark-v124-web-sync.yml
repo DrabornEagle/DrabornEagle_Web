@@ -1,0 +1,70 @@
+name: DraBornPark v1.0.24 Web Version Sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/DRABORNPARK_V124_WEB_TRIGGER'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync-v124:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - name: Refresh all visible DraBornPark versions and cache keys
+        shell: bash
+        run: |
+          set -euo pipefail
+          node <<'NODE'
+          const fs=require('fs');
+          const path=require('path');
+          const root='DraBornPark';
+          const allowed=new Set(['.html','.js','.css','.json','.md']);
+          let changed=0;
+          function walk(dir){
+            for(const name of fs.readdirSync(dir)){
+              const file=path.join(dir,name);const st=fs.statSync(file);
+              if(st.isDirectory()){walk(file);continue;}
+              if(!allowed.has(path.extname(file)))continue;
+              let s=fs.readFileSync(file,'utf8');const before=s;
+              s=s.replace(/v1\.0\.23(?!\d)/g,'v1.0.24');
+              s=s.replace(/(?<![\d.])1\.0\.23(?!\d)/g,'1.0.24');
+              s=s.replace(/versionCode\s*23\b/g,'versionCode 24');
+              s=s.replace(/\?v=1230\b/g,'?v=1240');
+              s=s.replace(/BUILD='1230'/g,"BUILD='1240'");
+              s=s.replace(/dataset\.dkdVersion='123'/g,"dataset.dkdVersion='124'");
+              if(s!==before){fs.writeFileSync(file,s);changed++;console.log('updated',file);}
+            }
+          }
+          walk(root);
+          console.log('DraBornPark v1.0.24 files changed:',changed);
+          NODE
+          grep -F 'v1.0.24' DraBornPark/tag/index.html >/dev/null
+          grep -F "BUILD='1240'" DraBornPark/tag/index.html >/dev/null
+          grep -F 'v1.0.24' DraBornPark/privacy/index.html >/dev/null
+          grep -F '28 AĞUSTOS 2026' DraBornPark/privacy/index.html >/dev/null
+          if grep -R -nE 'v1\.0\.(14|15|16|17|18|19|20|21|22|23)([^0-9]|$)' DraBornPark --include='*.html' --include='*.js'; then
+            echo 'Old visible DraBornPark version remains.'
+            exit 1
+          fi
+      - name: Commit synchronized web version
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add DraBornPark
+          if git diff --cached --quiet; then
+            echo 'DraBornPark web already at v1.0.24.'
+          else
+            git commit -m 'release: sync DraBornPark web to v1.0.24'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
