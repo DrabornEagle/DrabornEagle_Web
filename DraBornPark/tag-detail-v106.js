@@ -1,4 +1,4 @@
-/* DraBornPark v1.0.21-web — premium protected vehicle card, single-pass enhancer. */
+/* DraBornPark v1.0.22-web — premium protected vehicle card, single-pass enhancer. */
 (()=>{
   const esc=value=>String(value??'').replace(/[&<>'"]/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[char]));
 
