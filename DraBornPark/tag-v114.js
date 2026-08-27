@@ -1,6 +1,6 @@
-/* DraBornPark public tag runtime v1.0.23 — visible version refresh and focused copy cleanup. */
+/* DraBornPark public tag runtime v1.0.24 — visible version refresh and focused copy cleanup. */
 (()=>{
-  const VERSION='1.0.23';
+  const VERSION='1.0.24';
   const VERSION_LINE=`v${VERSION} • NFC + QR • AKTİF`;
   const removeCameraSubtitle=()=>{
     document.querySelectorAll('.dp-camera-btn small').forEach(el=>{
@@ -15,13 +15,13 @@
       live.textContent='';
       if(icon)live.appendChild(icon);
       live.append(document.createTextNode(VERSION_LINE));
-      live.dataset.dkdVersion='123';
+      live.dataset.dkdVersion='124';
     }
     document.querySelectorAll('*').forEach(el=>{
       if(el.children.length)return;
       const text=(el.textContent||'').trim();
-      if(/^v1\.0\.(?:[0-9]|1[0-9]|20)$/i.test(text))el.textContent='v1.0.23';
-      if(/^DraBornPark v1\.0\.(?:[0-9]|1[0-9]|20) güvenli araç ağına bağlanılıyor/i.test(text))el.textContent='DraBornPark v1.0.23 güvenli araç ağına bağlanılıyor…';
+      if(/^v1\.0\.(?:[0-9]|1[0-9]|20)$/i.test(text))el.textContent='v1.0.24';
+      if(/^DraBornPark v1\.0\.(?:[0-9]|1[0-9]|20) güvenli araç ağına bağlanılıyor/i.test(text))el.textContent='DraBornPark v1.0.24 güvenli araç ağına bağlanılıyor…';
     });
   };
   const apply=()=>{refreshVersion();removeCameraSubtitle();};
