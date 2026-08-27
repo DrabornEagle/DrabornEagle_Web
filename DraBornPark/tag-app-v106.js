@@ -1,4 +1,4 @@
-/* DraBornPark public tag UI v1.0.7 — persistent live sessions, modern marketplace promo and unified footer. */
+/* DraBornPark public tag UI v1.0.21 — persistent live sessions, modern marketplace promo and unified footer. */
 (()=>{
   const TAG=(globalThis.DKDBP_PATH_TAG||globalThis.DKDBP_PATH_TOKEN||new URLSearchParams(location.search).get('token')||new URLSearchParams(location.search).get('tag')||'').trim();
   if(!TAG)return;
