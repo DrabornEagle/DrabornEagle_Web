@@ -1,4 +1,4 @@
-/* DraBornPark v1.0.22-web — premium protected vehicle identity card. */
+/* DraBornPark v1.0.23-web — premium protected vehicle identity card. */
 .dkd107-vehicle-card{position:relative!important;overflow:hidden!important;border:1px solid rgba(76,216,255,.38)!important;border-radius:32px!important;background:linear-gradient(148deg,rgba(8,34,58,.98),rgba(9,20,45,.99) 48%,rgba(24,15,48,.98))!important;padding:18px!important;box-shadow:none!important}
 .dkd107-vehicle-card:before{content:"";position:absolute;inset:auto -70px -110px auto;width:230px;height:230px;border-radius:50%;background:radial-gradient(circle,rgba(165,100,255,.13),transparent 69%);pointer-events:none}
 .dkd107-vehicle-card:after{content:"";position:absolute;inset:80px auto auto -90px;width:180px;height:180px;border-radius:50%;background:radial-gradient(circle,rgba(53,228,255,.11),transparent 70%);pointer-events:none}
