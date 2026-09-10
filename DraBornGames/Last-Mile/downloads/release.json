@@ -1,0 +1,11 @@
+{
+  "dkd_version": "0.7.1",
+  "dkd_versionCode": 1,
+  "dkd_filename": "DraBornGo-LastMile-v0.7.1-release-vc1.apk",
+  "dkd_sha256": "18b46d941d89cd85ec9dbdc7d98ca19dafcc22f85ee633c09d1fb0a2e04005d3",
+  "dkd_bytes": 43639666,
+  "dkd_assetId": 555909099,
+  "dkd_releaseUrl": "https://github.com/DrabornEagle/DraBornGames/releases/tag/lastmile-v0.7.1-7d8840ff7f48",
+  "dkd_minAndroid": "7.0",
+  "dkd_architecture": "arm64-v8a"
+}
