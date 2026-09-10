@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 permissions:
   contents: write
-  pages: write
+  actions: write
 concurrency:
   group: dkd-lastmile-web-sync
   cancel-in-progress: false
@@ -71,4 +71,4 @@ jobs:
         if: steps.dkd-publish.outputs.changed == 'true' || github.event_name == 'push'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
+        run: gh workflow run dkd_company_pages.yml --repo "$GITHUB_REPOSITORY" --ref main
