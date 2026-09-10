@@ -1,0 +1,11 @@
+{
+  "dkd_version": "0.7.1",
+  "dkd_versionCode": 1,
+  "dkd_sourceCommit": "447ee0207e558ee22c7cc8a955effab828bcafc0",
+  "dkd_nativeSha256": "230dd76800f4ecfe819ada75a0f003de11d34cb83a50b1d1ca2dfc9f3cb7cc26",
+  "dkd_webSha256": "7ab92b4f5ffb28fa2c0509075cad49c1f8255cbdec85050ec7fa5d9e16d91b63",
+  "dkd_platforms": [
+    "android",
+    "web"
+  ]
+}
