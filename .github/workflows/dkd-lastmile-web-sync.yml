@@ -1,0 +1,74 @@
+name: DKD Last Mile web and APK sync
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-lastmile-web-sync.yml'
+      - 'scripts/dkd-sync-lastmile-release.mjs'
+      - 'DraBornGames/dkd-platform.*'
+      - 'DraBornGames/index.html'
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+  pages: write
+concurrency:
+  group: dkd-lastmile-web-sync
+  cancel-in-progress: false
+jobs:
+  dkd-sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+      - uses: actions/checkout@v5
+        with:
+          repository: DrabornEagle/DraBornGames
+          ref: main
+          path: dkd-source
+          persist-credentials: false
+      - uses: actions/setup-node@v5
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: dkd-source/DraBornGo-LastMile/package-lock.json
+      - name: Check shared source revision
+        id: dkd-revision
+        run: |
+          dkd_sha="$(git -C dkd-source rev-parse HEAD)"
+          echo "DKD_SOURCE_COMMIT=$dkd_sha" >> "$GITHUB_ENV"
+          dkd_previous="$(node -e "try{console.log(require('./DraBornGames/Last-Mile/version.json').dkd_sourceCommit)}catch{}")"
+          if [[ "$dkd_sha" != "$dkd_previous" ]]; then echo 'changed=true' >> "$GITHUB_OUTPUT"; fi
+      - name: Build from Android game source
+        if: steps.dkd-revision.outputs.changed == 'true'
+        working-directory: dkd-source/DraBornGo-LastMile
+        env:
+          DKD_WEB_OUTPUT: ${{ github.workspace }}/DraBornGames/Last-Mile
+        run: |
+          npm ci --no-audit --no-fund
+          npm run build:web
+          npm test
+      - name: Copy verified APK release to website
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/dkd-sync-lastmile-release.mjs
+      - name: Commit synchronized game and download
+        id: dkd-publish
+        run: |
+          git config user.name 'DKD Games Sync'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add DraBornGames/Last-Mile
+          if ! git diff --cached --quiet; then
+            git commit -m "build(lastmile): sync shared source ${DKD_SOURCE_COMMIT:0:12} and signed APK"
+            git pull --rebase origin main
+            git push origin HEAD:main
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Publish GitHub Pages
+        if: steps.dkd-publish.outputs.changed == 'true' || github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds"
