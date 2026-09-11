@@ -7,6 +7,20 @@ let dkd_apkReturnFocus = null;
 function dkd_installApkUiHotfix() {
   const dkd_cardLabel = document.querySelector('.dkd-apk-spotlight b');
   if (dkd_cardLabel) dkd_cardLabel.textContent = 'APK İNDİR';
+  const dkd_browserButton = document.querySelector('.dkd-featured .dkd-button');
+  if (dkd_browserButton) dkd_browserButton.innerHTML = 'TARAYICIDA OYNA <span aria-hidden="true">↗</span>';
+  const dkd_downloadText = document.querySelector('#dkd-apk-link > span');
+  if (dkd_downloadText) dkd_downloadText.textContent = 'GÜNCEL APK HEMEN İNDİR';
+  const dkd_downloadSub = document.querySelector('#dkd-apk-link > small');
+  if (dkd_downloadSub) dkd_downloadSub.textContent = 'İmzalı Release APK · resmi yayın';
+  const dkd_githubButton = document.querySelector('.dkd-apk-github');
+  if (dkd_githubButton) {
+    dkd_githubButton.textContent = 'GITHUB’DAN RELEASE APK İNDİR ↗';
+    dkd_githubButton.hidden = true;
+    dkd_githubButton.removeAttribute('href');
+  }
+  const dkd_note = document.querySelector('.dkd-apk-note');
+  if (dkd_note) dkd_note.textContent = 'v0.7.4 Web ve Android aynı oyun kaynağından üretilir. Buradaki iki indirme seçeneği de yalnızca doğrulanmış Release APK dosyasını verir.';
   if (document.getElementById('dkd-apk-hotfix-style')) return;
   const dkd_style = document.createElement('style');
   dkd_style.id = 'dkd-apk-hotfix-style';
@@ -15,22 +29,30 @@ function dkd_installApkUiHotfix() {
     .dkd-apk-spotlight-icon{width:42px;height:42px;font-size:26px}
     .dkd-apk-spotlight b{font-size:16px;letter-spacing:.9px;line-height:1.1}
     .dkd-apk-spotlight small{font-size:11px;margin-top:5px;line-height:1.35}
+    .dkd-featured .dkd-button{position:relative;overflow:hidden;font-size:20px!important;font-weight:900!important;letter-spacing:.4px;min-height:76px;animation:dkd-browser-ready 1.8s ease-in-out infinite;transition:transform .18s ease,border-color .18s ease}
+    .dkd-featured .dkd-button:after{content:'';position:absolute;top:-45%;bottom:-45%;left:-35%;width:22%;transform:skewX(-18deg);background:rgba(255,255,255,.28);animation:dkd-browser-shine 2.5s ease-in-out infinite}
     .dkd-apk-hero p:last-child{font-size:17px;line-height:1.65}
     .dkd-apk-live{padding:14px 16px}.dkd-apk-live p{font-size:15px;line-height:1.45}
     .dkd-apk-specs div{padding:16px}.dkd-apk-specs small{font-size:10px;letter-spacing:1.2px}.dkd-apk-specs b{font-size:14px;margin-top:7px;line-height:1.4}
-    .dkd-apk-download,.dkd-apk-github{min-height:74px}.dkd-apk-download span{font-size:16px;letter-spacing:.7px}.dkd-apk-download small{font-size:11px;margin-top:4px}.dkd-apk-github{font-size:13px}
+    .dkd-apk-download,.dkd-apk-github{min-height:78px}.dkd-apk-download span{font-size:18px;letter-spacing:.5px}.dkd-apk-download small{font-size:11px;margin-top:4px}
     .dkd-apk-download{animation:dkd-release-ready 1.7s ease-in-out infinite;transition:transform .16s ease,background .16s ease,border-color .16s ease}
     .dkd-apk-download b{animation:dkd-release-arrow 1.05s ease-in-out infinite}
+    .dkd-apk-github{position:relative;overflow:hidden;display:grid;place-items:center;padding:18px;font-size:14px!important;font-weight:900!important;letter-spacing:.45px;border-color:#68dce4!important;background:#132c3a!important;animation:dkd-github-ready 2.1s ease-in-out infinite}
+    .dkd-apk-github:after{content:'APK';position:absolute;right:13px;top:9px;font-size:9px;letter-spacing:1px;color:#dfff4f}
     .dkd-apk-steps li{padding:15px}.dkd-apk-steps li>span{font-size:12px}.dkd-apk-steps b{font-size:14px}.dkd-apk-steps small{font-size:11px;line-height:1.5;margin-top:5px}
     .dkd-apk-verify{font-size:13px;padding:14px 16px}.dkd-apk-verify code{font-size:11px}.dkd-apk-note{font-size:12px;line-height:1.6;padding-left:12px}
+    @keyframes dkd-browser-ready{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+    @keyframes dkd-browser-shine{0%,55%{left:-35%;opacity:0}65%{opacity:1}88%,100%{left:125%;opacity:0}}
     @keyframes dkd-release-ready{0%,100%{transform:translateY(0) scale(1);background:#d7fc5c}50%{transform:translateY(-2px) scale(1.012);background:#e7ff8f}}
     @keyframes dkd-release-arrow{0%,100%{transform:translateY(-2px)}50%{transform:translateY(5px)}}
+    @keyframes dkd-github-ready{0%,100%{transform:translateY(0);border-color:#68dce4}50%{transform:translateY(-2px);border-color:#dfff4f}}
     @media(max-width:620px){
+      .dkd-featured .dkd-button{font-size:19px!important;min-height:72px}
       .dkd-apk-dialog{font-size:17px}.dkd-apk-hero p:last-child{font-size:16px}.dkd-apk-live p{font-size:14px}
       .dkd-apk-specs small{font-size:9px}.dkd-apk-specs b{font-size:13px}.dkd-apk-steps b{font-size:14px}.dkd-apk-steps small{font-size:12px}
-      .dkd-apk-note{font-size:12px}.dkd-apk-actions{grid-template-columns:1fr}.dkd-apk-download span{font-size:17px}.dkd-apk-github{font-size:14px}
+      .dkd-apk-note{font-size:12px}.dkd-apk-actions{grid-template-columns:1fr}.dkd-apk-download span{font-size:18px}.dkd-apk-github{font-size:14px}
     }
-    @media(prefers-reduced-motion:reduce){.dkd-apk-download,.dkd-apk-download b{animation:none!important}}
+    @media(prefers-reduced-motion:reduce){.dkd-featured .dkd-button,.dkd-featured .dkd-button:after,.dkd-apk-download,.dkd-apk-download b,.dkd-apk-github{animation:none!important}}
   `;
   document.head.appendChild(dkd_style);
 }
@@ -107,26 +129,31 @@ async function dkd_loadRelease() {
     const { dkd_release, dkd_root } = await dkd_fetchRelease();
     if (!dkd_validateRelease(dkd_release)) throw new Error('Sürüm bilgisi doğrulanamadı');
     const dkd_link = document.getElementById('dkd-apk-link');
+    const dkd_githubLink = document.querySelector('.dkd-apk-github');
     const dkd_version = String(dkd_release.dkd_version);
     const dkd_megabytes = Math.max(1, Math.round(Number(dkd_release.dkd_bytes) / 1024 / 1024));
     const dkd_minAndroid = String(dkd_release.dkd_minAndroid || '7.0');
-    dkd_link.href = `${dkd_root}downloads/${encodeURIComponent(dkd_release.dkd_filename)}`;
+    const dkd_localApk = `${dkd_root}downloads/${encodeURIComponent(dkd_release.dkd_filename)}`;
+    dkd_link.href = dkd_localApk;
     dkd_link.hidden = false;
-    dkd_status.textContent = dkd_version === '0.7.2'
-      ? `v${dkd_version} hazır · imzalı Release APK doğrulandı.`
-      : `Son yayın v${dkd_version} hazır · v0.7.2 Expo Go test aşamasında.`;
+    if (dkd_githubLink) {
+      dkd_githubLink.href = String(dkd_release.dkd_apkUrl || dkd_localApk);
+      dkd_githubLink.setAttribute('download', '');
+      dkd_githubLink.hidden = false;
+    }
+    dkd_status.textContent = `v${dkd_version} hazır · imzalı Release APK doğrulandı · Web + Android senkron.`;
     dkd_setText('dkd-apk-version', `v${dkd_version} · versionCode 1`);
     dkd_setText('dkd-apk-android', `Android ${dkd_minAndroid}+`);
     dkd_setText('dkd-apk-size', `${dkd_megabytes} MB`);
-    dkd_setText('dkd-apk-arch', String(dkd_release.dkd_arch || 'ARM64 / Android'));
+    dkd_setText('dkd-apk-arch', String(dkd_release.dkd_architecture || dkd_release.dkd_arch || 'ARM64 / Android'));
     dkd_setText('dkd-hash', String(dkd_release.dkd_sha256));
     document.getElementById('dkd-checksum').hidden = false;
   } catch {
-    dkd_status.textContent = 'v0.7.2 Expo Go test aşamasında. Yeni Release APK test onayından sonra burada açılacak.';
-    dkd_setText('dkd-apk-version', 'v0.7.2 · test');
-    dkd_setText('dkd-apk-android', 'Expo Go 57');
-    dkd_setText('dkd-apk-size', 'APK henüz üretilmedi');
-    dkd_setText('dkd-apk-arch', 'Android · hazırlık');
+    dkd_status.textContent = 'v0.7.4 Release APK hazırlanıyor. Web oyunu güncel ortak kaynaktan çalışıyor.';
+    dkd_setText('dkd-apk-version', 'v0.7.4 · versionCode 1');
+    dkd_setText('dkd-apk-android', 'Android · Release');
+    dkd_setText('dkd-apk-size', 'APK hazırlanıyor');
+    dkd_setText('dkd-apk-arch', 'ARM64 / Android');
   }
 }
 
