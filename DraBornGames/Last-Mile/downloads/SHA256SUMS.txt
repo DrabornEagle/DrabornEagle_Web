@@ -1,1 +1,0 @@
-18b46d941d89cd85ec9dbdc7d98ca19dafcc22f85ee633c09d1fb0a2e04005d3  dist-android/DraBornGo-LastMile-v0.7.1-release-vc1.apk

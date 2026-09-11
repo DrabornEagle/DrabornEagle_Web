@@ -1,2 +1,0 @@
-Alias name: dkd_lastmile_release
-	 SHA256: B3:04:2B:12:0C:61:C1:DE:EC:8C:C2:61:9C:55:13:C4:F7:B3:37:8D:81:C6:23:5E:92:85:CC:F6:06:96:09:BC
