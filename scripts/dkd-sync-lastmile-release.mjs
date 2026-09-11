@@ -51,3 +51,4 @@ console.log(`Doğrulanmış APK web'e kopyalandı: ${dkd_filename}`);
 // v0.7.4 signed Release refresh: keep Web and Android publication in the same release checkpoint.
 // Shared source refresh: payment flow/settings fixes come from DraBornGames main; no new APK build is requested.
 // Shared UI refresh: v0.7.4 idempotent version badge, fullscreen receipt viewer and seasonal reward notice.
+// Final reward-copy refresh: remove obsolete demo wording from the live seasonal prize selection screen.
