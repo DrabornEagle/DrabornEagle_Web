@@ -3,12 +3,12 @@ import { createHash as dkd_createHash } from 'node:crypto';
 import { execFileSync as dkd_execFileSync } from 'node:child_process';
 
 const dkd_repo = 'DrabornEagle/DraBornGames';
-const dkd_base = 'DraBornGames/Last-Mile';
+const dkd_base = 'DraBornGames/LastMile';
 const dkd_current = JSON.parse(await dkd_fs.readFile(`${dkd_base}/version.json`, 'utf8'));
 const dkd_releases = JSON.parse(dkd_execFileSync('gh', ['api', `repos/${dkd_repo}/releases?per_page=20`], { encoding: 'utf8' }));
 const dkd_release = dkd_releases.find(dkd_item => !dkd_item.draft && !dkd_item.prerelease && dkd_item.tag_name.startsWith(`lastmile-v${dkd_current.dkd_version}-`));
 if (!dkd_release) { console.log('Bu oyun sürümü için imzalı Release APK henüz tamamlanmadı.'); process.exit(0); }
-const dkd_filename = `DraBornGo-LastMile-v${dkd_current.dkd_version}-release-vc1.apk`;
+const dkd_filename = `LastMile-v${dkd_current.dkd_version}-release-vc1.apk`;
 const dkd_apk = dkd_release.assets.find(dkd_asset => dkd_asset.name === dkd_filename);
 const dkd_sums = dkd_release.assets.find(dkd_asset => dkd_asset.name === 'SHA256SUMS.txt');
 const dkd_signing = dkd_release.assets.find(dkd_asset => dkd_asset.name === 'SIGNING-IDENTITY.txt');
