@@ -39,7 +39,10 @@ for (const dkd_file of await dkd_fs.readdir(dkd_dir)) {
 await dkd_fs.writeFile(`${dkd_dir}/release.json`, JSON.stringify({
   dkd_version: dkd_current.dkd_version, dkd_versionCode: 1,
   dkd_filename, dkd_sha256: dkd_hash, dkd_bytes: dkd_bytes.length,
-  dkd_assetId: dkd_apk.id, dkd_releaseUrl: dkd_release.html_url,
+  dkd_assetId: dkd_apk.id,
+  dkd_apkUrl: dkd_apk.browser_download_url,
+  dkd_releaseUrl: dkd_release.html_url,
+  dkd_releaseTag: dkd_release.tag_name,
   dkd_minAndroid: dkd_androidNames[dkd_sdk] || `API ${dkd_sdk}`,
   dkd_architecture: 'arm64-v8a',
 }, null, 2) + '\n');
