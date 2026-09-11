@@ -4,6 +4,39 @@ const dkd_apkOpeners = [...document.querySelectorAll('[data-dkd-apk-open]')];
 const dkd_apkClosers = [...document.querySelectorAll('[data-dkd-apk-close]')];
 let dkd_apkReturnFocus = null;
 
+function dkd_installApkUiHotfix() {
+  const dkd_cardLabel = document.querySelector('.dkd-apk-spotlight b');
+  if (dkd_cardLabel) dkd_cardLabel.textContent = 'APK İNDİR';
+  if (document.getElementById('dkd-apk-hotfix-style')) return;
+  const dkd_style = document.createElement('style');
+  dkd_style.id = 'dkd-apk-hotfix-style';
+  dkd_style.textContent = `
+    .dkd-apk-spotlight{min-height:68px;grid-template-columns:44px 1fr 28px;padding:10px 14px}
+    .dkd-apk-spotlight-icon{width:42px;height:42px;font-size:26px}
+    .dkd-apk-spotlight b{font-size:16px;letter-spacing:.9px;line-height:1.1}
+    .dkd-apk-spotlight small{font-size:11px;margin-top:5px;line-height:1.35}
+    .dkd-apk-hero p:last-child{font-size:17px;line-height:1.65}
+    .dkd-apk-live{padding:14px 16px}.dkd-apk-live p{font-size:15px;line-height:1.45}
+    .dkd-apk-specs div{padding:16px}.dkd-apk-specs small{font-size:10px;letter-spacing:1.2px}.dkd-apk-specs b{font-size:14px;margin-top:7px;line-height:1.4}
+    .dkd-apk-download,.dkd-apk-github{min-height:74px}.dkd-apk-download span{font-size:16px;letter-spacing:.7px}.dkd-apk-download small{font-size:11px;margin-top:4px}.dkd-apk-github{font-size:13px}
+    .dkd-apk-download{animation:dkd-release-ready 1.7s ease-in-out infinite;transition:transform .16s ease,background .16s ease,border-color .16s ease}
+    .dkd-apk-download b{animation:dkd-release-arrow 1.05s ease-in-out infinite}
+    .dkd-apk-steps li{padding:15px}.dkd-apk-steps li>span{font-size:12px}.dkd-apk-steps b{font-size:14px}.dkd-apk-steps small{font-size:11px;line-height:1.5;margin-top:5px}
+    .dkd-apk-verify{font-size:13px;padding:14px 16px}.dkd-apk-verify code{font-size:11px}.dkd-apk-note{font-size:12px;line-height:1.6;padding-left:12px}
+    @keyframes dkd-release-ready{0%,100%{transform:translateY(0) scale(1);background:#d7fc5c}50%{transform:translateY(-2px) scale(1.012);background:#e7ff8f}}
+    @keyframes dkd-release-arrow{0%,100%{transform:translateY(-2px)}50%{transform:translateY(5px)}}
+    @media(max-width:620px){
+      .dkd-apk-dialog{font-size:17px}.dkd-apk-hero p:last-child{font-size:16px}.dkd-apk-live p{font-size:14px}
+      .dkd-apk-specs small{font-size:9px}.dkd-apk-specs b{font-size:13px}.dkd-apk-steps b{font-size:14px}.dkd-apk-steps small{font-size:12px}
+      .dkd-apk-note{font-size:12px}.dkd-apk-actions{grid-template-columns:1fr}.dkd-apk-download span{font-size:17px}.dkd-apk-github{font-size:14px}
+    }
+    @media(prefers-reduced-motion:reduce){.dkd-apk-download,.dkd-apk-download b{animation:none!important}}
+  `;
+  document.head.appendChild(dkd_style);
+}
+
+dkd_installApkUiHotfix();
+
 function dkd_openApkModal(dkd_event) {
   dkd_apkReturnFocus = dkd_event?.currentTarget instanceof HTMLElement ? dkd_event.currentTarget : document.activeElement;
   dkd_apkModal.hidden = false;
