@@ -1,6 +1,13 @@
 name: DKD Last Mile web and APK sync
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-lastmile-web-sync.yml'
+      - 'scripts/dkd-sync-lastmile-release.mjs'
+  schedule:
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 permissions:
@@ -38,33 +45,45 @@ jobs:
         run: |
           dkd_sha="$(git -C dkd-source rev-parse HEAD)"
           echo "DKD_SOURCE_COMMIT=$dkd_sha" >> "$GITHUB_ENV"
-          dkd_previous="$(node -e "try{console.log(require('./DraBornGames/Last-Mile/version.json').dkd_sourceCommit)}catch{}")"
+          dkd_previous="$(node -e "try{console.log(require('./DraBornGames/LastMile/version.json').dkd_sourceCommit)}catch{}")"
           if [[ "$dkd_sha" != "$dkd_previous" ]]; then echo 'changed=true' >> "$GITHUB_OUTPUT"; fi
 
-      - name: Build from approved Android game source
+      - name: Build Android-shared web game
         if: steps.dkd-revision.outputs.changed == 'true'
         working-directory: dkd-source/LastMile
         env:
-          DKD_WEB_OUTPUT: ${{ github.workspace }}/DraBornGames/Last-Mile
+          DKD_WEB_OUTPUT: ${{ github.workspace }}/DraBornGames/LastMile
+          DKD_SOURCE_COMMIT: ${{ env.DKD_SOURCE_COMMIT }}
         run: |
           npm ci --no-audit --no-fund
           npm run build:web
           npm test
           npm run typecheck
 
-      - name: Copy verified APK release to website
+      - name: Point DraBornGames platform to current LastMile web build
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          dkd_file = Path('DraBornGames/index.html')
+          dkd_text = dkd_file.read_text()
+          dkd_text = dkd_text.replace('./Last-Mile/', './LastMile/')
+          dkd_text = dkd_text.replace('LAST MILE APK İNDİR', 'APK İNDİR')
+          dkd_file.write_text(dkd_text)
+          PY
+
+      - name: Copy verified matching APK release when available
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/dkd-sync-lastmile-release.mjs
 
-      - name: Commit synchronized game and download
+      - name: Commit synchronized game and platform
         id: dkd-publish
         run: |
           git config user.name 'DKD Games Sync'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add DraBornGames/Last-Mile
+          git add DraBornGames/LastMile DraBornGames/index.html
           if ! git diff --cached --quiet; then
-            git commit -m "build(lastmile): sync approved shared source ${DKD_SOURCE_COMMIT:0:12} and signed APK"
+            git commit -m "build(lastmile): sync web source ${DKD_SOURCE_COMMIT:0:12}"
             git pull --rebase origin main
             git push origin HEAD:main
             echo 'changed=true' >> "$GITHUB_OUTPUT"
