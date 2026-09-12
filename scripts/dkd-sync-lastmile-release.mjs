@@ -54,3 +54,4 @@ console.log(`Doğrulanmış APK web'e kopyalandı: ${dkd_filename}`);
 // Final reward-copy refresh: remove obsolete demo wording from the live seasonal prize selection screen.
 // Seasonal payment refresh: per-login ACELE ET notice, selected-prize active card and clickable future-season details.
 // Season modal hotfix: use Reward Vault season catalogs and restore mobile viewport after every modal close.
+// Refresh restore hotfix: keep the premium payment UI and future-season click bindings after browser/Expo reload.
