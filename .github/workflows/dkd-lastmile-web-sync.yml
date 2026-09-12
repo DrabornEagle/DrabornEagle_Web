@@ -1,4 +1,4 @@
-name: DKD Last Mile web and APK sync
+name: DKD Last Mile v0.7.5 web sync
 
 on:
   push:
@@ -27,20 +27,17 @@ jobs:
         with:
           ref: main
           fetch-depth: 0
-
       - uses: actions/checkout@v5
         with:
           repository: DrabornEagle/DraBornGames
           ref: main
           path: dkd-source
           persist-credentials: false
-
       - uses: actions/setup-node@v5
         with:
           node-version: '24'
           cache: npm
           cache-dependency-path: dkd-source/LastMile/package-lock.json
-
       - name: Check shared source revision
         id: dkd-revision
         run: |
@@ -48,7 +45,6 @@ jobs:
           echo "DKD_SOURCE_COMMIT=$dkd_sha" >> "$GITHUB_ENV"
           dkd_previous="$(node -e "try{console.log(require('./DraBornGames/LastMile/version.json').dkd_sourceCommit)}catch{}")"
           if [[ "$dkd_sha" != "$dkd_previous" ]]; then echo 'changed=true' >> "$GITHUB_OUTPUT"; fi
-
       - name: Build Android-shared web game
         if: steps.dkd-revision.outputs.changed == 'true'
         working-directory: dkd-source/LastMile
@@ -60,7 +56,6 @@ jobs:
           npm run build:web
           npm test
           npm run typecheck
-
       - name: Point DraBornGames platform to current LastMile web build
         run: |
           python3 - <<'PY'
@@ -71,12 +66,10 @@ jobs:
           dkd_text = dkd_text.replace('LAST MILE APK İNDİR', 'APK İNDİR')
           dkd_file.write_text(dkd_text)
           PY
-
       - name: Copy verified matching APK release when available
         env:
           GH_TOKEN: ${{ github.token }}
         run: node scripts/dkd-sync-lastmile-release.mjs
-
       - name: Commit synchronized game and platform
         id: dkd-publish
         run: |
@@ -89,7 +82,6 @@ jobs:
             git push origin HEAD:main
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
-
       - name: Publish GitHub Pages
         if: steps.dkd-publish.outputs.changed == 'true'
         env:
