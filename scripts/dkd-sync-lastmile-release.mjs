@@ -7,19 +7,24 @@ const dkd_base = 'DraBornGames/LastMile';
 const dkd_current = JSON.parse(await dkd_fs.readFile(`${dkd_base}/version.json`, 'utf8'));
 const dkd_releases = JSON.parse(dkd_execFileSync('gh', ['api', `repos/${dkd_repo}/releases?per_page=20`], { encoding: 'utf8' }));
 const dkd_candidates = dkd_releases
-  .filter(dkd_item => !dkd_item.draft && !dkd_item.prerelease && dkd_item.tag_name.startsWith(`lastmile-v${dkd_current.dkd_version}-`))
+  .filter(dkd_item => !dkd_item.draft && !dkd_item.prerelease && (
+    dkd_item.tag_name.startsWith(`lastmine-v${dkd_current.dkd_version}-`) ||
+    dkd_item.tag_name.startsWith(`lastmile-v${dkd_current.dkd_version}-`)
+  ))
   .sort((dkd_first, dkd_second) => new Date(dkd_second.published_at || dkd_second.created_at || 0).getTime() - new Date(dkd_first.published_at || dkd_first.created_at || 0).getTime());
-// Multiple hotfix APKs can share one versionName. GitHub's release collection can put a
-// previously marked "latest" item before a newer publication, so never trust array order.
-// Prefer the APK built from this exact shared-source commit; otherwise use the newest
-// compatible publication until its matching signed build finishes.
-const dkd_release = dkd_candidates.find(dkd_item => String(dkd_item.target_commitish || '') === String(dkd_current.dkd_sourceCommit || '')) || dkd_candidates[0];
-if (!dkd_release) { console.log('Bu oyun sürümü için imzalı Release APK henüz tamamlanmadı.'); process.exit(0); }
-const dkd_filename = `LastMile-v${dkd_current.dkd_version}-release-vc1.apk`;
+
+// Never publish an APK from a different shared-source revision. Keep the currently
+// verified website APK until the signed build for this exact source commit finishes.
+const dkd_release = dkd_candidates.find(dkd_item => String(dkd_item.target_commitish || '') === String(dkd_current.dkd_sourceCommit || ''));
+if (!dkd_release) {
+  console.log(`Kaynak ${dkd_current.dkd_sourceCommit} için imzalı Last Mine APK henüz tamamlanmadı; mevcut doğrulanmış APK korunuyor.`);
+  process.exit(0);
+}
+const dkd_filename = `Last-Mine-v${dkd_current.dkd_version}-release-vc1.apk`;
 const dkd_apk = dkd_release.assets.find(dkd_asset => dkd_asset.name === dkd_filename);
 const dkd_sums = dkd_release.assets.find(dkd_asset => dkd_asset.name === 'SHA256SUMS.txt');
 const dkd_signing = dkd_release.assets.find(dkd_asset => dkd_asset.name === 'SIGNING-IDENTITY.txt');
-if (!dkd_apk || !dkd_sums || !dkd_signing) throw new Error('APK doğrulama dosyaları eksik.');
+if (!dkd_apk || !dkd_sums || !dkd_signing) throw new Error('Last Mine APK doğrulama dosyaları eksik.');
 const dkd_dir = `${dkd_base}/downloads`;
 await dkd_fs.mkdir(dkd_dir, { recursive: true });
 let dkd_previous;
@@ -38,29 +43,27 @@ if (dkd_hash !== dkd_expected) throw new Error('APK SHA256 eşleşmiyor.');
 const dkd_cert = await dkd_fs.readFile(`${dkd_dir}/SIGNING-IDENTITY.txt`, 'utf8');
 if (!dkd_cert.replaceAll(':', '').toLowerCase().includes('b3042b120c61c1deec8cc2619c5513c4f7b3378d81c6235e9285ccf6069609bc')) throw new Error('Kalıcı imza eşleşmiyor.');
 const dkd_info = await dkd_fs.readFile(`${dkd_dir}/BUILD-INFO.txt`, 'utf8');
+if (!dkd_info.includes("application-label:'Last Mine'")) throw new Error('APK uygulama adı Last Mine değil.');
+if (!dkd_info.includes('application-icon-')) throw new Error('APK launcher ikon kaydı bulunamadı.');
 const dkd_sdk = Number(dkd_info.match(/sdkVersion:'(\d+)'/)?.[1] || 24);
 const dkd_androidNames = { 24: '7.0', 25: '7.1', 26: '8.0', 27: '8.1', 28: '9', 29: '10', 30: '11', 31: '12', 32: '12L', 33: '13', 34: '14', 35: '15', 36: '16' };
 for (const dkd_file of await dkd_fs.readdir(dkd_dir)) {
   if (dkd_file.endsWith('.apk') && dkd_file !== dkd_filename) await dkd_fs.unlink(`${dkd_dir}/${dkd_file}`);
 }
 await dkd_fs.writeFile(`${dkd_dir}/release.json`, JSON.stringify({
-  dkd_version: dkd_current.dkd_version, dkd_versionCode: 1,
-  dkd_filename, dkd_sha256: dkd_hash, dkd_bytes: dkd_bytes.length,
+  dkd_appName: 'Last Mine',
+  dkd_version: dkd_current.dkd_version,
+  dkd_versionCode: 1,
+  dkd_filename,
+  dkd_sha256: dkd_hash,
+  dkd_bytes: dkd_bytes.length,
   dkd_assetId: dkd_apk.id,
   dkd_apkUrl: dkd_apk.browser_download_url,
   dkd_releaseUrl: dkd_release.html_url,
   dkd_releaseTag: dkd_release.tag_name,
   dkd_minAndroid: dkd_androidNames[dkd_sdk] || `API ${dkd_sdk}`,
   dkd_architecture: 'arm64-v8a',
+  dkd_hasLauncherIcon: true,
+  dkd_brandedSplash: true,
 }, null, 2) + '\n');
-console.log(`Doğrulanmış APK web'e kopyalandı: ${dkd_filename}`);
-
-// v0.7.4 signed Release refresh: keep Web and Android publication in the same release checkpoint.
-// Shared source refresh: payment flow/settings fixes come from DraBornGames main; no new APK build is requested.
-// Shared UI refresh: v0.7.4 idempotent version badge, fullscreen receipt viewer and seasonal reward notice.
-// Final reward-copy refresh: remove obsolete demo wording from the live seasonal prize selection screen.
-// Seasonal payment refresh: per-login ACELE ET notice, selected-prize active card and clickable future-season details.
-// Season modal hotfix: use Reward Vault season catalogs and restore mobile viewport after every modal close.
-// Refresh restore hotfix: keep the premium payment UI and future-season click bindings after browser/Expo reload.
-// Login-payment notice release: sync signed APK lastmile-v0.7.4-3fa3c3fada98 and show ACELE ET once per authenticated payment session.
-// Gameplay/account refresh: stable Final progress, smaller drive utilities, tighter visible-obstacle collisions, durable account progress and new-registration-only ACELE ET notice.
+console.log(`Doğrulanmış Last Mine APK web'e kopyalandı: ${dkd_filename}`);
