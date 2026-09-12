@@ -1,0 +1,5 @@
+DraBornGo / Last Mile v0.7.5
+Android versionCode: 1
+Shared source commit: 8926a60b3bd939f6d0a6545355c96b2e4223569f
+Web sync commit: 307ae8cf008f90d9db5273da8548a990df2d2bae
+Purpose: deployment marker for the synchronized Android/Web source.
