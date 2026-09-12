@@ -1,5 +1,0 @@
-Last Mile v0.7.5 Pages deployment marker.
-Shared source: 220d851abd329796ebef3b3543b5b5b7b9d7f9f9
-Web sync: 7586cccf8af5a5c3c63842709aa3a0100bae91e5
-Purpose: force GitHub Pages to publish the synchronized Courier Center UI build.
-No APK is created or modified.
