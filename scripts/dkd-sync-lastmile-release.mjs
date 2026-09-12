@@ -6,7 +6,14 @@ const dkd_repo = 'DrabornEagle/DraBornGames';
 const dkd_base = 'DraBornGames/LastMile';
 const dkd_current = JSON.parse(await dkd_fs.readFile(`${dkd_base}/version.json`, 'utf8'));
 const dkd_releases = JSON.parse(dkd_execFileSync('gh', ['api', `repos/${dkd_repo}/releases?per_page=20`], { encoding: 'utf8' }));
-const dkd_release = dkd_releases.find(dkd_item => !dkd_item.draft && !dkd_item.prerelease && dkd_item.tag_name.startsWith(`lastmile-v${dkd_current.dkd_version}-`));
+const dkd_candidates = dkd_releases
+  .filter(dkd_item => !dkd_item.draft && !dkd_item.prerelease && dkd_item.tag_name.startsWith(`lastmile-v${dkd_current.dkd_version}-`))
+  .sort((dkd_first, dkd_second) => new Date(dkd_second.published_at || dkd_second.created_at || 0).getTime() - new Date(dkd_first.published_at || dkd_first.created_at || 0).getTime());
+// Multiple hotfix APKs can share one versionName. GitHub's release collection can put a
+// previously marked "latest" item before a newer publication, so never trust array order.
+// Prefer the APK built from this exact shared-source commit; otherwise use the newest
+// compatible publication until its matching signed build finishes.
+const dkd_release = dkd_candidates.find(dkd_item => String(dkd_item.target_commitish || '') === String(dkd_current.dkd_sourceCommit || '')) || dkd_candidates[0];
 if (!dkd_release) { console.log('Bu oyun sürümü için imzalı Release APK henüz tamamlanmadı.'); process.exit(0); }
 const dkd_filename = `LastMile-v${dkd_current.dkd_version}-release-vc1.apk`;
 const dkd_apk = dkd_release.assets.find(dkd_asset => dkd_asset.name === dkd_filename);
@@ -56,3 +63,4 @@ console.log(`Doğrulanmış APK web'e kopyalandı: ${dkd_filename}`);
 // Season modal hotfix: use Reward Vault season catalogs and restore mobile viewport after every modal close.
 // Refresh restore hotfix: keep the premium payment UI and future-season click bindings after browser/Expo reload.
 // Login-payment notice release: sync signed APK lastmile-v0.7.4-3fa3c3fada98 and show ACELE ET once per authenticated payment session.
+// Gameplay/account refresh: stable Final progress, smaller drive utilities, tighter visible-obstacle collisions, durable account progress and new-registration-only ACELE ET notice.
