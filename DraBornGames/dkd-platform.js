@@ -20,7 +20,7 @@ function dkd_installApkUiHotfix() {
     dkd_githubButton.removeAttribute('href');
   }
   const dkd_note = document.querySelector('.dkd-apk-note');
-  if (dkd_note) dkd_note.textContent = 'v0.7.4 Web ve Android aynı oyun kaynağından üretilir. Buradaki iki indirme seçeneği de yalnızca doğrulanmış Release APK dosyasını verir.';
+  if (dkd_note) dkd_note.textContent = 'v0.7.5 Web ve Android aynı oyun kaynağından üretilir. Last Mine APK yalnızca doğrulanmış imzalı Release dosyasından yayınlanır.';
   if (document.getElementById('dkd-apk-hotfix-style')) return;
   const dkd_style = document.createElement('style');
   dkd_style.id = 'dkd-apk-hotfix-style';
@@ -118,7 +118,7 @@ async function dkd_fetchRelease() {
 
 function dkd_validateRelease(dkd_release) {
   if (!dkd_release || typeof dkd_release !== 'object') return false;
-  if (!/^(?:DraBornGo-LastMile|LastMile)-v[0-9.]+-release-vc1\.apk$/.test(String(dkd_release.dkd_filename || ''))) return false;
+  if (!/^(?:DraBornGo-LastMile|LastMile|Last-Mine)-v[0-9.]+-release-vc1\.apk$/.test(String(dkd_release.dkd_filename || ''))) return false;
   if (!/^[a-f0-9]{64}$/.test(String(dkd_release.dkd_sha256 || ''))) return false;
   return Number(dkd_release.dkd_bytes) > 0 && /^\d+(?:\.\d+){1,3}$/.test(String(dkd_release.dkd_version || ''));
 }
@@ -141,7 +141,7 @@ async function dkd_loadRelease() {
       dkd_githubLink.setAttribute('download', '');
       dkd_githubLink.hidden = false;
     }
-    dkd_status.textContent = `v${dkd_version} hazır · imzalı Release APK doğrulandı · Web + Android senkron.`;
+    dkd_status.textContent = `v${dkd_version} hazır · Last Mine imzalı Release APK doğrulandı · Web + Android senkron.`;
     dkd_setText('dkd-apk-version', `v${dkd_version} · versionCode 1`);
     dkd_setText('dkd-apk-android', `Android ${dkd_minAndroid}+`);
     dkd_setText('dkd-apk-size', `${dkd_megabytes} MB`);
@@ -149,8 +149,8 @@ async function dkd_loadRelease() {
     dkd_setText('dkd-hash', String(dkd_release.dkd_sha256));
     document.getElementById('dkd-checksum').hidden = false;
   } catch {
-    dkd_status.textContent = 'v0.7.4 Release APK hazırlanıyor. Web oyunu güncel ortak kaynaktan çalışıyor.';
-    dkd_setText('dkd-apk-version', 'v0.7.4 · versionCode 1');
+    dkd_status.textContent = 'v0.7.5 Last Mine Release APK hazırlanıyor. Web oyunu güncel ortak kaynaktan çalışıyor.';
+    dkd_setText('dkd-apk-version', 'v0.7.5 · versionCode 1');
     dkd_setText('dkd-apk-android', 'Android · Release');
     dkd_setText('dkd-apk-size', 'APK hazırlanıyor');
     dkd_setText('dkd-apk-arch', 'ARM64 / Android');
