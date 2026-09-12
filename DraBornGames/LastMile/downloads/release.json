@@ -1,13 +1,13 @@
 {
-  "dkd_version": "0.7.4",
+  "dkd_version": "0.7.5",
   "dkd_versionCode": 1,
-  "dkd_filename": "LastMile-v0.7.4-release-vc1.apk",
-  "dkd_sha256": "12cc7721c73a718cb1f078b2feb12000847a809a2bdc699250ea6376deb71a2a",
-  "dkd_bytes": 36246346,
-  "dkd_assetId": 558779961,
-  "dkd_apkUrl": "https://github.com/DrabornEagle/DraBornGames/releases/download/lastmile-v0.7.4-a912170c4ff6/LastMile-v0.7.4-release-vc1.apk",
-  "dkd_releaseUrl": "https://github.com/DrabornEagle/DraBornGames/releases/tag/lastmile-v0.7.4-a912170c4ff6",
-  "dkd_releaseTag": "lastmile-v0.7.4-a912170c4ff6",
+  "dkd_filename": "LastMile-v0.7.5-release-vc1.apk",
+  "dkd_sha256": "4f754ae6844a97ac7f36f1ffb29144f392297f5ecf5527864cdfa32a47bffb01",
+  "dkd_bytes": 36356790,
+  "dkd_assetId": 560120712,
+  "dkd_apkUrl": "https://github.com/DrabornEagle/DraBornGames/releases/download/lastmile-v0.7.5-f1faf3d52540/LastMile-v0.7.5-release-vc1.apk",
+  "dkd_releaseUrl": "https://github.com/DrabornEagle/DraBornGames/releases/tag/lastmile-v0.7.5-f1faf3d52540",
+  "dkd_releaseTag": "lastmile-v0.7.5-f1faf3d52540",
   "dkd_minAndroid": "7.0",
   "dkd_architecture": "arm64-v8a"
 }
