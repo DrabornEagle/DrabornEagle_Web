@@ -1,4 +1,4 @@
-name: DKD Last Mile v0.7.5 web sync
+name: DKD Last Mile v0.7.5 web and APK sync
 
 on:
   push:
@@ -66,16 +66,18 @@ jobs:
           dkd_text = dkd_text.replace('LAST MILE APK İNDİR', 'APK İNDİR')
           dkd_file.write_text(dkd_text)
           PY
-      - name: Keep APK publication untouched for v0.7.5
-        run: echo 'v0.7.5 Web sync only; no APK is built, copied, replaced, or published.'
-      - name: Commit synchronized game and platform
+      - name: Sync verified signed APK and release metadata
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: node scripts/dkd-sync-lastmile-release.mjs
+      - name: Commit synchronized game APK and platform
         id: dkd-publish
         run: |
           git config user.name 'DKD Games Sync'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add DraBornGames/LastMile DraBornGames/index.html
           if ! git diff --cached --quiet; then
-            git commit -m "build(lastmile): sync v0.7.5 web source ${DKD_SOURCE_COMMIT:0:12}"
+            git commit -m "build(lastmile): sync v0.7.5 web/APK source ${DKD_SOURCE_COMMIT:0:12}"
             git pull --rebase origin main
             git push origin HEAD:main
             echo 'changed=true' >> "$GITHUB_OUTPUT"
