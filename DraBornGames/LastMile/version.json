@@ -1,9 +1,9 @@
 {
   "dkd_version": "0.7.5",
   "dkd_versionCode": 1,
-  "dkd_sourceCommit": "220d851abd329796ebef3b3543b5b5b7b9d7f9f9",
-  "dkd_nativeSha256": "d457184c397e1c6ac47ad06275b1a87ab5caee21657478275d670ffd2da16efd",
-  "dkd_webSha256": "3f6468ceda4fb6773829ecbe952ec1361b85035209394d2888a4baf326b432c9",
+  "dkd_sourceCommit": "fd554e69089aac5c4d96be046f43da0c396f7743",
+  "dkd_nativeSha256": "b2ac552e1fd74c9642609202891fef4febb0c2e03b60013fe9d5d005a0a94a53",
+  "dkd_webSha256": "1e803bf2c557091525322560d2666026853c6f8d729d1a9ddbc71aa2873fdf34",
   "dkd_platforms": [
     "android",
     "web"
