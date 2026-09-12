@@ -1,1 +1,1 @@
-f8a3fe79e46d7a5ef8c4d71c980bac5ed22b50934de23c7b2aa46cd688a0fdf3  dist-android/LastMile-v0.7.4-release-vc1.apk
+12cc7721c73a718cb1f078b2feb12000847a809a2bdc699250ea6376deb71a2a  dist-android/LastMile-v0.7.4-release-vc1.apk
