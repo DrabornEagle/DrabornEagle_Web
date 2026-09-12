@@ -55,3 +55,4 @@ console.log(`Doğrulanmış APK web'e kopyalandı: ${dkd_filename}`);
 // Seasonal payment refresh: per-login ACELE ET notice, selected-prize active card and clickable future-season details.
 // Season modal hotfix: use Reward Vault season catalogs and restore mobile viewport after every modal close.
 // Refresh restore hotfix: keep the premium payment UI and future-season click bindings after browser/Expo reload.
+// Login-payment notice release: sync signed APK lastmile-v0.7.4-3fa3c3fada98 and show ACELE ET once per authenticated payment session.
