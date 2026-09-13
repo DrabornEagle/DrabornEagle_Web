@@ -1,0 +1,5 @@
+Last Mine v0.7.5 · Android versionCode 1
+Web/APK source: 257faf17cb3432b52ecd0960e68c3a203ed94127
+Signed release: lastmine-v0.7.5-257faf17cb34
+APK SHA-256: 5b84828ef67e745de4335ddf1f21260f2da984b01412757da481503f0628a9a5
+Purpose: publish the synchronized LastMile web build and Vardiyan Cebinde APK metadata via a fresh GitHub Pages run.
