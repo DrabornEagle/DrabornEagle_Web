@@ -1,7 +1,7 @@
 {
   "dkd_version": "0.7.5",
   "dkd_versionCode": 1,
-  "dkd_sourceCommit": "3aa4f97c3ccb01c937f44bc7f71afd0e52f26d4e",
+  "dkd_sourceCommit": "c1836d7d236b6d0c6658492bfac63d1024a214d4",
   "dkd_nativeSha256": "2326de120e1cd9491e0383803fd397bdbdeb92ae528e0a54811b15d6a4248bae",
   "dkd_webSha256": "c136aea27453f033d5bea5f1e7a3cd291d471e4c6b730f568567d994c188a4e8",
   "dkd_platforms": [
