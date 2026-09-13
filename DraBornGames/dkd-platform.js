@@ -1,3 +1,4 @@
+// Last Mine v0.7.5 signed APK is published and verified against the synchronized web source.
 const dkd_apkModal = document.getElementById('dkd-apk-modal');
 const dkd_apkDialog = dkd_apkModal?.querySelector('.dkd-apk-dialog');
 const dkd_apkOpeners = [...document.querySelectorAll('[data-dkd-apk-open]')];
