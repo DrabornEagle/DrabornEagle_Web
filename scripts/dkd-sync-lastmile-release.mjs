@@ -2,6 +2,7 @@ import * as dkd_fs from 'node:fs/promises';
 import { createHash as dkd_createHash } from 'node:crypto';
 import { execFileSync as dkd_execFileSync } from 'node:child_process';
 
+// Final v0.7.5 sync: website APK must match the exact signed Last Mine source revision.
 const dkd_repo = 'DrabornEagle/DraBornGames';
 const dkd_base = 'DraBornGames/LastMile';
 const dkd_current = JSON.parse(await dkd_fs.readFile(`${dkd_base}/version.json`, 'utf8'));
