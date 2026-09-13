@@ -1,13 +1,16 @@
 {
+  "dkd_appName": "Last Mine",
   "dkd_version": "0.7.5",
   "dkd_versionCode": 1,
-  "dkd_filename": "LastMile-v0.7.5-release-vc1.apk",
-  "dkd_sha256": "4f754ae6844a97ac7f36f1ffb29144f392297f5ecf5527864cdfa32a47bffb01",
-  "dkd_bytes": 36356790,
-  "dkd_assetId": 560120712,
-  "dkd_apkUrl": "https://github.com/DrabornEagle/DraBornGames/releases/download/lastmile-v0.7.5-f1faf3d52540/LastMile-v0.7.5-release-vc1.apk",
-  "dkd_releaseUrl": "https://github.com/DrabornEagle/DraBornGames/releases/tag/lastmile-v0.7.5-f1faf3d52540",
-  "dkd_releaseTag": "lastmile-v0.7.5-f1faf3d52540",
+  "dkd_filename": "Last-Mine-v0.7.5-release-vc1.apk",
+  "dkd_sha256": "0bdfd556a4585cd2409dd78bb6e35a2e008e13653c41c00e73083a6d02441738",
+  "dkd_bytes": 36348239,
+  "dkd_assetId": 560202716,
+  "dkd_apkUrl": "https://github.com/DrabornEagle/DraBornGames/releases/download/lastmine-v0.7.5-8bd0e67ed026/Last-Mine-v0.7.5-release-vc1.apk",
+  "dkd_releaseUrl": "https://github.com/DrabornEagle/DraBornGames/releases/tag/lastmine-v0.7.5-8bd0e67ed026",
+  "dkd_releaseTag": "lastmine-v0.7.5-8bd0e67ed026",
   "dkd_minAndroid": "7.0",
-  "dkd_architecture": "arm64-v8a"
+  "dkd_architecture": "arm64-v8a",
+  "dkd_hasLauncherIcon": true,
+  "dkd_brandedSplash": true
 }
