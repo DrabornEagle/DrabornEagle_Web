@@ -1,1 +1,1 @@
-bf0d74478930df64e444b2e0da2a81c4940e56d8a8f479741f27c7d3ca7121d6  dist-android/Last-Mine-v0.7.5-release-vc1.apk
+3764fb79d2345a169903d2c0d578db28c955c1d1996b7a14c21135029aed0a20  dist-android/Last-Mine-v0.7.5-release-vc1.apk
