@@ -24,16 +24,16 @@ async function analyze(){
   if(!state.file)return;
   $('analyzeBtn').disabled=true;$('error').textContent='';state.blocks=[];renderPlainText();renderOverlay();
   try{
-    progress(10,'Görüntü DraBornEagle çeviri motoru için hazırlanıyor');
+    progress(10,'Görüntü DrabornEagle çeviri motoru için hazırlanıyor');
     const prepared=await prepareGeminiImage(state.file);
-    progress(28,'DraBornEagle oyun metinlerini okuyor ve Türkçeleştiriyor');
+    progress(28,'DrabornEagle oyun metinlerini okuyor ve Türkçeleştiriyor');
     const response=await fetch(DKD_TRANSLATE_ENDPOINT,{
       method:'POST',
       headers:{'content-type':'application/json','x-drabornportal-client':'web'},
       body:JSON.stringify({mode:'image',mime_type:prepared.mimeType,image_base64:prepared.base64})
     });
     const payload=await response.json().catch(()=>({}));
-    if(!response.ok||!payload?.ok)throw new Error('DraBornEagle çeviri servisine ulaşılamadı. Tekrar dene.');
+    if(!response.ok||!payload?.ok)throw new Error('DrabornEagle çeviri servisine ulaşılamadı. Tekrar dene.');
     progress(82,'Türkçe metinler görüntüye yerleştiriliyor');
     const iw=state.sourceWidth||$('preview').naturalWidth||1,ih=state.sourceHeight||$('preview').naturalHeight||1;
     state.blocks=(Array.isArray(payload.items)?payload.items:[]).map(item=>{
@@ -88,7 +88,7 @@ function setFile(file){
   if(!file?.type?.startsWith('image/'))return;state.file=file;state.blocks=[];state.showOriginal=false;renderPlainText();
   if(state.imageUrl)URL.revokeObjectURL(state.imageUrl);state.imageUrl=URL.createObjectURL(file);
   $('preview').onload=()=>{state.sourceWidth=$('preview').naturalWidth||1;state.sourceHeight=$('preview').naturalHeight||1;$('viewerSection').hidden=false;$('fullImage').src=state.imageUrl;renderOverlay()};
-  $('preview').src=state.imageUrl;$('analyzeBtn').disabled=false;progress(0,'Görsel hazır • DraBornEagle ile Türkçeleştir');$('fileName').textContent=file.name||'Oyun ekran görüntüsü'
+  $('preview').src=state.imageUrl;$('analyzeBtn').disabled=false;progress(0,'Görsel hazır • DrabornEagle ile Türkçeleştir');$('fileName').textContent=file.name||'Oyun ekran görüntüsü'
 }
 function openFullscreen(){
   if(!$('preview').src)return;
