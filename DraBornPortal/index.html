@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#080a12" />
+  <meta name="description" content="DraBornPortal oyun ekran görüntülerini OCR ile okuyup Türkçeye çevirir." />
+  <title>DraBornPortal — Oyun Çeviri Merkezi</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-a"></div><div class="ambient ambient-b"></div>
+  <main class="shell">
+    <header class="topbar">
+      <div class="brand-mark">DP</div>
+      <div><div class="eyebrow">DRABORNEAGLE ECOSYSTEM</div><h1>DraBornPortal</h1></div>
+      <div class="version">v0.1 • WEB SYNC</div>
+    </header>
+
+    <section class="hero panel">
+      <div class="hero-copy">
+        <div class="status-pill"><span class="dot"></span> ÇEVİRİ MOTORU HAZIR</div>
+        <h2>Oyundaki İngilizceyi<br><span>Türkçeye taşı.</span></h2>
+        <p>PlayStation Portal hedef akışı için hızlı test merkezi. Ekran görüntüsünü seç, metni algıla, oyun terimlerini koru ve Türkçe sonucu gör.</p>
+        <div class="flow"><b>PORTAL</b><i>→</i><b>CAPTURE</b><i>→</i><b>OCR</b><i>→</i><b>TR</b></div>
+      </div>
+      <div class="orb"><div class="orb-core">TR</div><span>ON-DEVICE HEDEF</span></div>
+    </section>
+
+    <section class="grid">
+      <article class="panel capture-card">
+        <div class="section-title"><span>01</span><div><h3>Ekran Görüntüsü</h3><p>İngilizce oyun ekranını yükle</p></div></div>
+        <label class="dropzone" id="dropzone">
+          <input id="fileInput" type="file" accept="image/*" />
+          <div id="emptyPreview"><strong>＋</strong><h4>Görsel seç</h4><p>PNG • JPG • WEBP</p></div>
+          <img id="preview" alt="Oyun ekran görüntüsü önizleme" />
+        </label>
+        <div class="actions">
+          <button class="primary" id="analyzeBtn" disabled>METNİ ALGILA</button>
+          <button class="ghost" id="demoBtn">DEMO METİN</button>
+        </div>
+      </article>
+
+      <article class="panel result-card">
+        <div class="section-title"><span>02</span><div><h3>Canlı Çeviri</h3><p>Android ile aynı temizleme ve sözlük kuralları</p></div></div>
+        <div class="progress-wrap" id="progressWrap"><div class="progress"><i id="progressBar"></i></div><small id="progressText">Hazır</small></div>
+        <div class="result-box tr"><label>TÜRKÇE</label><div id="translatedText" class="big-result">Bir ekran görüntüsü seç.</div></div>
+        <div class="result-box en"><label>ORİJİNAL / OCR</label><div id="originalText">Henüz metin algılanmadı.</div></div>
+        <div class="metric-row"><div><b id="charCount">0</b><span>Karakter</span></div><div><b id="termCount">0</b><span>Korunan terim</span></div><div><b id="historyCount">0</b><span>Geçmiş</span></div></div>
+      </article>
+    </section>
+
+    <section class="panel glossary-panel">
+      <div class="section-title"><span>03</span><div><h3>Oyun Terimi Koruması</h3><p>Özel isimler ve terimler çeviride bozulmaz</p></div></div>
+      <div id="chips" class="chips"></div>
+    </section>
+
+    <section class="panel history-panel">
+      <div class="history-head"><div class="section-title"><span>04</span><div><h3>Son Çeviriler</h3><p>Tarayıcıda yerel saklanır</p></div></div><button class="ghost small" id="clearBtn">TEMİZLE</button></div>
+      <div id="history" class="history"><p class="muted">Henüz çeviri yok.</p></div>
+    </section>
+
+    <footer>DRABORNPORTAL • ANDROID ↔ WEB ORTAK DENEYİM • <span id="engineLabel">OCR motoru yükleniyor</span></footer>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
