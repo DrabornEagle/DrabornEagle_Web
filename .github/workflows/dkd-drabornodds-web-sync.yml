@@ -6,7 +6,7 @@ on:
       - '.github/workflows/dkd-drabornodds-web-sync.yml'
   workflow_dispatch:
   schedule:
-    - cron: '17 * * * *'
+    - cron: '*/15 * * * *'
 permissions:
   contents: write
 concurrency:
@@ -42,6 +42,7 @@ jobs:
           mkdir -p DraBornOdds
           cp -a "$RUNNER_TEMP/DraBornOdds-dist/." DraBornOdds/
           cp -a "$RUNNER_TEMP/DraBornOdds-source/web-legal/." DraBornOdds/
+          sed -i 's#href="../../"#href="../"#g' DraBornOdds/privacy/index.html DraBornOdds/terms/index.html DraBornOdds/data-safety/index.html DraBornOdds/support/index.html
           printf '%s\n' "$(git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD)" > DraBornOdds/dkd-source-commit.txt
       - name: Commit synchronized website
         shell: bash
