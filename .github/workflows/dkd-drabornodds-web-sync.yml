@@ -21,13 +21,11 @@ jobs:
         with:
           fetch-depth: 0
       - name: Checkout canonical Android/Web source
-        run: git clone --depth 30 https://github.com/DrabornEagle/DraBornOdds.git "$RUNNER_TEMP/DraBornOdds-source"
-      - name: Install Expo source dependencies
-        working-directory: ${{ runner.temp }}/DraBornOdds-source
-        run: npm ci --no-audit --no-fund
-      - name: Verify canonical source before publishing
+        run: git clone --depth 50 https://github.com/DrabornEagle/DraBornOdds.git "$RUNNER_TEMP/DraBornOdds-source"
+      - name: Install and verify canonical source
         working-directory: ${{ runner.temp }}/DraBornOdds-source
         run: |
+          npm ci --no-audit --no-fund
           npm run typecheck
           npm test
           npx expo install --check
@@ -43,43 +41,49 @@ jobs:
           cp -a "$RUNNER_TEMP/DraBornOdds-dist/." DraBornOdds/
           cp -a "$RUNNER_TEMP/DraBornOdds-source/web-legal/." DraBornOdds/
           sed -i 's#href="../../"#href="../"#g' DraBornOdds/privacy/index.html DraBornOdds/terms/index.html DraBornOdds/data-safety/index.html DraBornOdds/support/index.html
-          printf '%s\n' "$(git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD)" > DraBornOdds/dkd-source-commit.txt
-      - name: Download and verify signed Android APK
+          git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD > DraBornOdds/dkd-source-commit.txt
+      - name: Download and verify matching signed Android APK
         shell: bash
         run: |
           set -euo pipefail
+          dkd_source_repo="$RUNNER_TEMP/DraBornOdds-source"
+          dkd_version="$(node -p "require('$dkd_source_repo/app.json').expo.version")"
+          dkd_code="$(node -p "require('$dkd_source_repo/app.json').expo.android.versionCode")"
+          dkd_tag="drabornodds-v${dkd_version}-code${dkd_code}"
+          dkd_apk="DraBornOdds-v${dkd_version}-code${dkd_code}-release.apk"
+          dkd_release_base="https://github.com/DrabornEagle/DraBornGo/releases/download/${dkd_tag}"
           mkdir -p DraBornOdds/App
-          dkd_release_base='https://github.com/DrabornEagle/DraBornGo/releases/download/drabornodds-v0.7.2-code1'
-          curl --retry 60 --retry-delay 10 --retry-all-errors -fL "$dkd_release_base/DraBornOdds-v0.7.2-code1-release.apk" -o DraBornOdds/App/DraBornOdds-v0.7.2-code1-release.apk
-          curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/SHA256.txt" -o DraBornOdds/App/SHA256.txt
-          curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/CERTIFICATE.txt" -o DraBornOdds/App/CERTIFICATE.txt
-          curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/SOURCE_COMMIT.txt" -o DraBornOdds/App/SOURCE_COMMIT.txt
+          curl --retry 60 --retry-delay 10 --retry-all-errors -fL "$dkd_release_base/$dkd_apk" -o "DraBornOdds/App/$dkd_apk"
+          for dkd_name in SHA256.txt CERTIFICATE.txt SOURCE_COMMIT.txt; do
+            curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/$dkd_name" -o "DraBornOdds/App/$dkd_name"
+          done
           (cd DraBornOdds/App && sha256sum -c SHA256.txt)
           dkd_signed_source="$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt)"
-          dkd_source_repo="$RUNNER_TEMP/DraBornOdds-source"
           if ! git -C "$dkd_source_repo" cat-file -e "$dkd_signed_source^{commit}" 2>/dev/null; then
             git -C "$dkd_source_repo" fetch origin "$dkd_signed_source" --depth=1
           fi
           if ! git -C "$dkd_source_repo" diff --quiet "$dkd_signed_source" HEAD -- . ':(exclude).github/**'; then
-            echo 'DKD ERROR: application source differs from signed APK source.'
+            echo 'DKD ERROR: web source differs from the signed Android application source.'
             git -C "$dkd_source_repo" diff --name-only "$dkd_signed_source" HEAD -- . ':(exclude).github/**'
             exit 1
           fi
           grep -q 'Signer #1 certificate SHA-256 digest' DraBornOdds/App/CERTIFICATE.txt
-          echo "DKD signed APK matches application source $dkd_signed_source"
+          printf '%s\n' "$dkd_version" > DraBornOdds/App/VERSION.txt
+          printf '%s\n' "$dkd_code" > DraBornOdds/App/VERSION_CODE.txt
+          printf '%s\n' "$dkd_apk" > DraBornOdds/App/APK_NAME.txt
       - name: Create standalone APK download page
         shell: bash
         run: |
           set -euo pipefail
+          dkd_version="$(cat DraBornOdds/App/VERSION.txt)"
+          dkd_code="$(cat DraBornOdds/App/VERSION_CODE.txt)"
+          dkd_apk="$(cat DraBornOdds/App/APK_NAME.txt)"
           dkd_sha="$(cut -d' ' -f1 DraBornOdds/App/SHA256.txt)"
           dkd_source="$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt)"
           cat > DraBornOdds/App/index.html <<DKD_HTML
-          <!doctype html>
-          <html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0B1020"><title>DraBornOdds Android APK</title>
-          <style>*{box-sizing:border-box}body{margin:0;background:#0B1020;color:#f5f7ff;font-family:system-ui,-apple-system,sans-serif}.wrap{max-width:760px;margin:auto;padding:42px 22px}.brand{font-size:34px;font-weight:900}.brand b{color:#a8f35d}.card{margin-top:26px;padding:26px;border:1px solid #2b3654;border-radius:24px;background:#141c31}.tag{display:inline-block;padding:7px 12px;border-radius:999px;background:#213323;color:#a8f35d;font-weight:800}.btn{display:block;margin-top:22px;padding:17px 20px;border-radius:16px;background:#a8f35d;color:#08101d;text-align:center;text-decoration:none;font-size:18px;font-weight:900}.meta{margin-top:18px;color:#a9b4cb;line-height:1.65}.code{word-break:break-all;background:#0d1425;border-radius:12px;padding:12px;font-family:monospace;font-size:12px}.links a{color:#74bfff;margin-right:16px}</style></head>
-          <body><main class="wrap"><div class="brand">⚡ DraBorn<b>Odds</b></div><div class="card"><span class="tag">Android · v0.7.2 · code 1</span><h1>İmzalı Android APK</h1><p class="meta">Web ve Android aynı DraBornOdds uygulama kaynağından senkron üretilir. Bu APK GitHub Actions üzerinde korumalı DraBornEagle release anahtarıyla imzalanmış ve yayınlanmadan önce SHA-256 ile doğrulanmıştır.</p><a class="btn" href="DraBornOdds-v0.7.2-code1-release.apk" download>APK'YI İNDİR</a><p class="meta">SHA-256</p><div class="code">${dkd_sha}</div><p class="meta">Kaynak commit</p><div class="code">${dkd_source}</div><p class="meta">Android kurulumunda tarayıcı, bilinmeyen uygulama kaynağı için izin isteyebilir. Yalnızca bu resmi DraBornOdds sayfasından indirdiğiniz paketi kurun.</p><div class="links"><a href="../">Web uygulaması</a><a href="../privacy/">Gizlilik</a><a href="SHA256.txt">SHA-256 dosyası</a><a href="CERTIFICATE.txt">İmza bilgisi</a></div></div></main></body></html>
+          <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0B1020"><title>DraBornOdds Android APK</title><style>*{box-sizing:border-box}body{margin:0;background:#0B1020;color:#f5f7ff;font-family:system-ui,-apple-system,sans-serif}.wrap{max-width:760px;margin:auto;padding:42px 22px}.brand{font-size:34px;font-weight:900}.brand b{color:#a8f35d}.card{margin-top:26px;padding:26px;border:1px solid #2b3654;border-radius:24px;background:#141c31}.tag{display:inline-block;padding:7px 12px;border-radius:999px;background:#213323;color:#a8f35d;font-weight:800}.btn{display:block;margin-top:22px;padding:17px 20px;border-radius:16px;background:#a8f35d;color:#08101d;text-align:center;text-decoration:none;font-size:18px;font-weight:900}.meta{margin-top:18px;color:#a9b4cb;line-height:1.65}.code{word-break:break-all;background:#0d1425;border-radius:12px;padding:12px;font-family:monospace;font-size:12px}.links a{color:#74bfff;margin-right:16px}</style></head><body><main class="wrap"><div class="brand">⚡ DraBorn<b>Odds</b></div><div class="card"><span class="tag">Android · v${dkd_version} · code ${dkd_code}</span><h1>İmzalı Android APK</h1><p class="meta">Web ve Android aynı DraBornOdds uygulama kaynağından senkron üretilir. APK korumalı DraBornEagle release anahtarıyla imzalanır ve SHA-256 ile doğrulanır.</p><a class="btn" href="${dkd_apk}" download>APK'YI İNDİR</a><p class="meta">SHA-256</p><div class="code">${dkd_sha}</div><p class="meta">Kaynak commit</p><div class="code">${dkd_source}</div><p class="meta">Android kurulumunda tarayıcı bilinmeyen uygulama kaynağı için izin isteyebilir. Yalnızca bu resmi DraBornOdds sayfasından indirdiğiniz paketi kurun.</p><div class="links"><a href="../">Web uygulaması</a><a href="../privacy/">Gizlilik</a><a href="SHA256.txt">SHA-256</a><a href="CERTIFICATE.txt">İmza bilgisi</a></div></div></main></body></html>
           DKD_HTML
-      - name: Keep requested APK URL alias
+      - name: Keep requested DraBornOdss APK URL alias
         shell: bash
         run: |
           set -euo pipefail
@@ -98,7 +102,7 @@ jobs:
             echo 'DraBornOdds web and APK are already synchronized.'
             exit 0
           fi
-          git commit -m 'deploy(DraBornOdds): sync web and signed v0.7.2 APK'
+          git commit -m 'deploy(DraBornOdds): synchronize web and signed Android APK'
           for dkd_try in 1 2 3; do
             git pull --rebase origin main && git push && exit 0
             sleep 3
