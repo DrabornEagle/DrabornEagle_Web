@@ -1,4 +1,4 @@
-const VERSION='0.3.1';
+const VERSION='0.3.2';
 const GLOSSARY=['PlayStation Portal','PlayStation','PSN','RuneScape','Dragonwilds','Wise Old Man','Ghostspeak','Kettan','Cathan','Oculus','Void'];
 const $=id=>document.getElementById(id);
 const state={file:null,blocks:[],showOriginal:false,imageUrl:null,zoom:1,panX:0,panY:0,pointers:new Map(),gesture:null,sourceWidth:1,sourceHeight:1};
@@ -42,6 +42,21 @@ async function translateChunk(text){
   return restoreTerms(raw,p.terms).replace(/\s+([,.!?;:])/g,'$1').trim()
 }
 async function translate(text){const chunks=splitForTranslation(text),translated=[];for(const chunk of chunks)translated.push(await translateChunk(chunk));return translated.filter(Boolean).join('\n')}
+function polishTranslation(source,fallback){
+  const key=source.toLowerCase().replace(/\s+/g,' ').trim();
+  if(key==='dragon slayer')return 'Ejderha Avcısı';
+  if(key==='restless ghosts'||key==='restless ghost')return 'Huzursuz Hayaletler';
+  if(key==='growing pains')return 'Büyüme Sancıları';
+  if(key.includes('investigate the blue-flame door')&&key.includes('swamp'))return "Bataklıktaki mavi alevli kapıyı araştır. Cathan'ın ne yaptığını öğren.";
+  if(key.includes('search for a purpose')&&key.includes('amulet of ghostspeak'))return 'Ghostspeak Muskasının amacını araştır.';
+  if(key.includes('grow and harvest your first crop')&&key.includes('farming plot'))return 'Bir tarım alanında ilk mahsulünü yetiştir ve hasat et.';
+  return fallback
+}
+async function mapConcurrent(items,limit,task){
+  const out=new Array(items.length);let cursor=0;
+  async function worker(){while(true){const i=cursor++;if(i>=items.length)return;out[i]=await task(items[i],i)}}
+  await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));return out
+}
 
 function collectNested(data){
   const paragraphs=[];for(const block of data?.blocks||[])for(const paragraph of block?.paragraphs||[])if(paragraph?.bbox)paragraphs.push(paragraph);
@@ -55,7 +70,7 @@ function mapBBox(bbox,sx,sy){return{x0:bbox.x0*sx,y0:bbox.y0*sy,x1:bbox.x1*sx,y1
 
 async function makeEnhancedCanvas(file){
   const url=URL.createObjectURL(file),img=new Image();await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url});URL.revokeObjectURL(url);
-  const maxSide=Math.max(img.naturalWidth,img.naturalHeight),scale=Math.max(1.35,Math.min(2.35,3200/maxSide));
+  const maxSide=Math.max(img.naturalWidth,img.naturalHeight),scale=Math.max(1.2,Math.min(1.55,2600/maxSide));
   const canvas=document.createElement('canvas');canvas.width=Math.round(img.naturalWidth*scale);canvas.height=Math.round(img.naturalHeight*scale);
   const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(img,0,0,canvas.width,canvas.height);
   const image=ctx.getImageData(0,0,canvas.width,canvas.height),d=image.data;
@@ -78,10 +93,15 @@ async function analyze(){
       const all=cleanText(result.data.text||'');if(all){const lines=all.split('\n').map(cleanText).filter(v=>useful(v,50)).slice(0,24);const step=Math.max(1,state.sourceHeight/Math.max(lines.length,1));lines.forEach((line,i)=>candidates.push({text:line,confidence:50,bbox:{x0:0,y0:i*step,x1:state.sourceWidth,y1:(i+1)*step},overlay:false}))}
     }
     if(!candidates.length)throw new Error('Okunabilir İngilizce oyun metni bulunamadı. Daha net bir ekran görüntüsü dene.');
-    for(let i=0;i<candidates.length;i++){
-      progress(58+Math.round(((i+1)/candidates.length)*38),`Türkçeye çevriliyor • ${i+1}/${candidates.length}`);
-      try{const translated=await translate(candidates[i].text);if(translated)state.blocks.push({...candidates[i],translated})}catch(e){console.warn('Bölge çevrilemedi',e)}
-    }
+    let completed=0;
+    const translatedBlocks=await mapConcurrent(candidates,4,async candidate=>{
+      try{
+        const raw=await translate(candidate.text);completed++;
+        progress(58+Math.round((completed/candidates.length)*38),`Türkçeye çevriliyor • ${completed}/${candidates.length}`);
+        return raw?{...candidate,translated:polishTranslation(candidate.text,raw)}:null
+      }catch(e){completed++;console.warn('Bölge çevrilemedi',e);return null}
+    });
+    state.blocks=translatedBlocks.filter(Boolean);
     if(!state.blocks.length)throw new Error('Metin bulundu ancak web çeviri servisi yanıt vermedi. Birkaç saniye sonra tekrar dene.');
     renderPlainText();renderOverlay();$('viewerSection').hidden=false;progress(100,'Hazır • Görsele dokun, Türkçe katmanı tam ekranda aç');
   }catch(e){$('error').textContent=e.message||String(e);progress(0,'Tekrar deneyebilirsin')}
@@ -101,12 +121,10 @@ function renderOverlay(){
   state.blocks.filter(b=>b.overlay!==false&&!uiNoise(b.text)).forEach(b=>{
     const el=document.createElement('div');el.className='tr-block';el.textContent=b.translated;
     const bw=Math.max(1,b.bbox.x1-b.bbox.x0),bh=Math.max(1,b.bbox.y1-b.bbox.y0);
-    const chars=Math.max(1,b.translated.length),displayArea=Math.max(4,bw*sx*bh*sy);
-    const byArea=Math.sqrt(displayArea/chars*1.12),byHeight=Math.max(3,bh*sy*.52);
-    const fitted=Math.max(3.2,Math.min(11,byArea,byHeight));
     el.style.left=`${b.bbox.x0/iw*100}%`;el.style.top=`${b.bbox.y0/ih*100}%`;
     el.style.width=`${bw/iw*100}%`;el.style.height=`${bh/ih*100}%`;
-    el.style.fontSize=`${fitted}px`;el.style.lineHeight='1.04';layer.appendChild(el)
+    let fitted=Math.max(2.4,Math.min(10,bh*sy*.48));el.style.fontSize=`${fitted}px`;el.style.lineHeight='1.02';layer.appendChild(el);
+    while(fitted>2.4&&(el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1)){fitted-=.25;el.style.fontSize=`${fitted}px`}
   })
 }
 
@@ -130,4 +148,4 @@ function bindZoom(){
 
 $('fileInput').addEventListener('change',e=>setFile(e.target.files[0]));$('analyzeBtn').addEventListener('click',analyze);$('viewer').addEventListener('click',openFullscreen);$('closeFull').addEventListener('click',closeFullscreen);$('fullscreen').addEventListener('click',e=>{if(e.target===$('fullscreen'))closeFullscreen()});
 $('toggleBtn').addEventListener('click',()=>{state.showOriginal=!state.showOriginal;$('toggleBtn').textContent=state.showOriginal?'TÜRKÇEYİ GÖSTER':'ORİJİNALİ GÖSTER';renderOverlay()});$('zoomIn').addEventListener('click',()=>setZoom(state.zoom*1.35));$('zoomOut').addEventListener('click',()=>setZoom(state.zoom/1.35));$('zoomReset').addEventListener('click',resetZoom);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('fullscreen').hidden)closeFullscreen()});
-bindZoom();renderPlainText();progress(0,'Hazır • oyun ekran görüntüsünü seç');if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js?v=0.3.1').catch(()=>{});
+bindZoom();renderPlainText();progress(0,'Hazır • oyun ekran görüntüsünü seç');if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js?v=0.3.2').catch(()=>{});
