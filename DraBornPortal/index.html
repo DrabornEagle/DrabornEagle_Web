@@ -3,53 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#080b14" />
-  <meta name="description" content="DraBornPortal oyun ekran görüntülerini Türkçe olarak görüntünün üzerinde çevirir." />
-  <title>DraBornPortal v0.2</title>
+  <meta name="theme-color" content="#071226" />
+  <meta name="description" content="DraBornPortal v0.3 oyun ekran görüntülerindeki İngilizce metinleri okuyup anlaşılır Türkçe katman olarak gösterir." />
+  <title>DraBornPortal v0.3</title>
   <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="stylesheet" href="./styles.css?v=20260918-1" />
+  <link rel="stylesheet" href="./styles.css?v=20260918-v03" />
 </head>
 <body>
+  <div class="ambient a1"></div><div class="ambient a2"></div>
   <main class="app">
-    <header><h1>DraBornPortal</h1><b>PLAY • CAPTURE • TÜRKÇE</b></header>
+    <header class="hero">
+      <div class="brand-line"><h1>DraBornPortal</h1><span class="version">v0.3</span></div>
+      <b>PLAY • CAPTURE • TÜRKÇE</b>
+      <div class="chips"><span>GELİŞMİŞ OCR</span><span>0 TL API</span><span>EN → TR</span></div>
+    </header>
 
-    <section class="status card"><strong>Yerel OCR motoru hazır</strong><span>Web test sürümü • v0.2</span></section>
+    <section class="status card glass">
+      <div class="status-dot"></div>
+      <div><strong>Web çeviri motoru hazır</strong><span>Yüksek çözünürlüklü OCR + akıllı Türkçe katman</span></div>
+      <em>WEB</em>
+    </section>
 
-    <section class="card control">
-      <h2>v0.2 • Tam ekran görüntü çevirisi</h2>
-      <p>Oyun ekran görüntüsünü seç. Ana sayfada görüntü temiz kalır; çeviri tamamlanınca görüntüye dokunarak tam ekranda Türkçe metinleri açabilir ve yakınlaştırabilirsin.</p>
-      <label class="pick"><input id="fileInput" type="file" accept="image/*" />OYUN EKRAN GÖRÜNTÜSÜ SEÇ</label>
-      <button id="analyzeBtn" disabled>GÖRÜNTÜYÜ TÜRKÇELEŞTİR</button>
-      <div class="progress"><i id="progressBar"></i></div><small id="progressText">Hazır</small>
+    <section class="card control glass">
+      <div class="eyebrow">YENİ • v0.3</div>
+      <h2>Oyun ekranını daha net oku</h2>
+      <p>Görüntü önce büyütülüp kontrastı iyileştirilir, ardından oyun metinleri taranır. Çeviri kartları artık küçük kutulara sıkışmaz; tam ekranda okunabilir boyutta açılır.</p>
+      <label class="pick"><input id="fileInput" type="file" accept="image/*" /><span>＋</span> OYUN EKRAN GÖRÜNTÜSÜ SEÇ</label>
+      <div class="selected"><span>SEÇİLEN</span><b id="fileName">Henüz görsel seçilmedi</b></div>
+      <button id="analyzeBtn" disabled>GÖRÜNTÜYÜ TÜRKÇELEŞTİR <span>→</span></button>
+      <div class="progress-row"><div class="progress"><i id="progressBar"></i></div><b id="progressPercent">0%</b></div>
+      <small id="progressText">Hazır</small>
     </section>
 
     <p id="error" class="error"></p>
 
     <section id="viewerSection" class="viewer-section" hidden>
-      <div class="viewer-head"><div><b>OYUN GÖRÜNTÜSÜ</b><span id="regionCount">0 metin bölgesi</span></div><span class="tap-label">TAM EKRAN İÇİN DOKUN</span></div>
-      <button id="viewer" class="viewer" type="button" aria-label="Çeviriyi tam ekranda aç"><img id="preview" alt="Oyun ekran görüntüsü" /><span class="viewer-cta">TAM EKRAN ÇEVİRİ • DOKUN</span></button>
+      <div class="viewer-head"><div><b>OYUN GÖRÜNTÜSÜ</b><span id="regionCount">0 okunabilir metin</span></div><span class="tap-label">TAM EKRAN • DOKUN</span></div>
+      <button id="viewer" class="viewer" type="button" aria-label="Çeviriyi tam ekranda aç">
+        <img id="preview" alt="Oyun ekran görüntüsü" />
+        <span class="viewer-shade"></span><span class="viewer-cta">TÜRKÇE KATMANI AÇ <i>›</i></span>
+      </button>
     </section>
 
-    <section class="translation-head"><b>ÇEVİRİ METNİ</b><span>Görüntüde bulunan Türkçe çevirinin düz metin hali</span></section>
-    <section class="translation-text card"><p id="translationText">Henüz çeviri yok.</p></section>
+    <section class="translation-head"><b>TÜRKÇE METİNLER</b><span>OCR ile güvenle okunabilen metinlerin sade çevirisi</span></section>
+    <section id="translationText" class="translation-text card glass"><div class="empty-translation">Henüz çeviri yok.</div></section>
 
-    <section class="safe card"><b>PSN GÜVENLİ MOD</b><p>Sony hesabı veya tokenı bu web uygulamasına girilmez. Android uygulamada PlayStation App'in resmi Paylaş akışı kullanılır.</p></section>
-    <footer>DRABORNPORTAL • ANDROID ↔ WEB • v0.2</footer>
+    <section class="safe card glass"><b>PSN GÜVENLİ MOD</b><p>Sony hesabı veya tokenı bu web uygulamasına girilmez. Android uygulamada PlayStation App'in resmi Paylaş akışı kullanılır.</p></section>
+    <footer>DRABORNPORTAL • ANDROID ↔ WEB • v0.3</footer>
   </main>
 
   <section id="fullscreen" class="fullscreen" hidden aria-label="Tam ekran çeviri görüntüleyici">
     <div class="full-topbar">
       <button id="closeFull" class="compact">KAPAT</button>
-      <div><b>TAM EKRAN ÇEVİRİ</b><span>İki parmakla yakınlaştır • sürükleyerek gez</span></div>
-      <button id="toggleBtn" class="compact">ORİJİNALİ GÖSTER</button>
+      <div><b id="modeBadge">TÜRKÇE KATMAN</b><span>Yakınlaştır • sürükle • rahat oku</span></div>
+      <button id="toggleBtn" class="compact gold">ORİJİNALİ GÖSTER</button>
     </div>
     <div id="zoomStage" class="zoom-stage">
       <div id="zoomCanvas" class="zoom-canvas"><img id="fullImage" alt="Tam ekran oyun görüntüsü" /><div id="fullOverlay" class="overlay"></div></div>
     </div>
+    <div class="full-hint">AKILLI KARTLAR • ÇEVİRİLER OKUNABİLİR BOYUTA GENİŞLER</div>
     <div class="zoom-tools"><button id="zoomOut">−</button><button id="zoomReset"><span id="zoomValue">100%</span></button><button id="zoomIn">+</button></div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-  <script src="./app.js?v=20260918-1"></script>
+  <script src="./app.js?v=20260918-v03"></script>
 </body>
 </html>
