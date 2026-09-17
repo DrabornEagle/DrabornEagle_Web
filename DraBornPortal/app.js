@@ -1,10 +1,20 @@
-const VERSION='0.3';
+const VERSION='0.3.1';
 const GLOSSARY=['PlayStation Portal','PlayStation','PSN','RuneScape','Dragonwilds','Wise Old Man','Ghostspeak','Kettan','Cathan','Oculus','Void'];
 const $=id=>document.getElementById(id);
 const state={file:null,blocks:[],showOriginal:false,imageUrl:null,zoom:1,panX:0,panY:0,pointers:new Map(),gesture:null,sourceWidth:1,sourceHeight:1};
 
 function cleanText(text=''){return text.replace(/\r/g,'').split('\n').map(v=>v.replace(/\s+/g,' ').trim()).filter(Boolean).filter((v,i,a)=>i===0||v!==a[i-1]).join('\n')}
+function uiNoise(text=''){
+  const normalized=text.toLowerCase().replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim();if(!normalized)return true;
+  const words=normalized.split(' ').filter(Boolean);
+  const ui=new Set(['quests','quest','active','completed','map','skills','skill','spell','book','journal','navigate','set','unset','marker','ping','move','zoom','back','inventory','crafting','settings','menu','close','open','select','cancel','confirm','x','a','b','l','r']);
+  if(words.length&&words.length<=12&&words.every(w=>ui.has(w)))return true;
+  const geo=new Set(['valley','woods','forest','river','lake','mountain','mountains']);
+  if(words.length>=1&&words.length<=4&&geo.has(words[words.length-1]))return true;
+  return false
+}
 function useful(text,confidence=100){
+  if(uiNoise(text))return false;
   const compact=text.replace(/\s/g,'');if(text.length<3||text.length>1300||!compact||confidence<30)return false;
   const letters=(compact.match(/[A-Za-zÀ-ž]/g)||[]).length;
   const words=(text.match(/[A-Za-z]{2,}/g)||[]),singles=(text.match(/(?:^|\s)[A-Za-z](?=\s|$)/g)||[]);
@@ -83,13 +93,20 @@ function renderPlainText(){
   host.innerHTML=state.blocks.map((x,i)=>`<article class="text-result"><span>${String(i+1).padStart(2,'0')}</span><p>${escapeHtml(x.translated)}</p></article>`).join('')
 }
 function renderOverlay(){
-  const img=$('fullImage'),layer=$('fullOverlay');layer.innerHTML='';$('regionCount').textContent=`${state.blocks.length} okunabilir metin`;
+  const img=$('fullImage'),layer=$('fullOverlay');layer.innerHTML='';$('regionCount').textContent=`${state.blocks.length} anlamlı metin çevrildi`;
   $('modeBadge').textContent=state.showOriginal?'ORİJİNAL':'TÜRKÇE KATMAN';if(state.showOriginal)return;
   const iw=state.sourceWidth||$('preview').naturalWidth||img.naturalWidth||1,ih=state.sourceHeight||$('preview').naturalHeight||img.naturalHeight||1;
-  state.blocks.filter(b=>b.overlay!==false).forEach((b,i)=>{
-    const el=document.createElement('div');el.className='tr-block';el.dataset.index=String(i+1);el.textContent=b.translated;
-    const left=b.bbox.x0/iw*100,top=b.bbox.y0/ih*100,originalWidth=(b.bbox.x1-b.bbox.x0)/iw*100,width=Math.min(72,Math.max(43,originalWidth)),safeLeft=Math.max(0,Math.min(left,100-width));
-    el.style.left=`${safeLeft}%`;el.style.top=`${Math.max(0,Math.min(96,top))}%`;el.style.width=`${width}%`;layer.appendChild(el)
+  const displayW=img.clientWidth||$('preview').clientWidth||iw,displayH=img.clientHeight||$('preview').clientHeight||ih;
+  const sx=displayW/iw,sy=displayH/ih;
+  state.blocks.filter(b=>b.overlay!==false&&!uiNoise(b.text)).forEach(b=>{
+    const el=document.createElement('div');el.className='tr-block';el.textContent=b.translated;
+    const bw=Math.max(1,b.bbox.x1-b.bbox.x0),bh=Math.max(1,b.bbox.y1-b.bbox.y0);
+    const chars=Math.max(1,b.translated.length),displayArea=Math.max(4,bw*sx*bh*sy);
+    const byArea=Math.sqrt(displayArea/chars*1.12),byHeight=Math.max(3,bh*sy*.52);
+    const fitted=Math.max(3.2,Math.min(11,byArea,byHeight));
+    el.style.left=`${b.bbox.x0/iw*100}%`;el.style.top=`${b.bbox.y0/ih*100}%`;
+    el.style.width=`${bw/iw*100}%`;el.style.height=`${bh/ih*100}%`;
+    el.style.fontSize=`${fitted}px`;el.style.lineHeight='1.04';layer.appendChild(el)
   })
 }
 
@@ -113,4 +130,4 @@ function bindZoom(){
 
 $('fileInput').addEventListener('change',e=>setFile(e.target.files[0]));$('analyzeBtn').addEventListener('click',analyze);$('viewer').addEventListener('click',openFullscreen);$('closeFull').addEventListener('click',closeFullscreen);$('fullscreen').addEventListener('click',e=>{if(e.target===$('fullscreen'))closeFullscreen()});
 $('toggleBtn').addEventListener('click',()=>{state.showOriginal=!state.showOriginal;$('toggleBtn').textContent=state.showOriginal?'TÜRKÇEYİ GÖSTER':'ORİJİNALİ GÖSTER';renderOverlay()});$('zoomIn').addEventListener('click',()=>setZoom(state.zoom*1.35));$('zoomOut').addEventListener('click',()=>setZoom(state.zoom/1.35));$('zoomReset').addEventListener('click',resetZoom);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('fullscreen').hidden)closeFullscreen()});
-bindZoom();renderPlainText();progress(0,'Hazır • oyun ekran görüntüsünü seç');if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js?v=0.3').catch(()=>{});
+bindZoom();renderPlainText();progress(0,'Hazır • oyun ekran görüntüsünü seç');if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js?v=0.3.1').catch(()=>{});
