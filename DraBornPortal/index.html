@@ -4,30 +4,30 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#071226" />
-  <meta name="description" content="DraBornPortal v0.4 oyun ekran görüntülerindeki İngilizce metinleri okuyup anlaşılır Türkçe katman olarak gösterir." />
-  <title>DraBornPortal v0.4</title>
+  <meta name="description" content="DraBornPortal v0.4.1 oyun ekran görüntülerindeki İngilizce metinleri okuyup anlaşılır Türkçe katman olarak gösterir." />
+  <title>DraBornPortal v0.4.1</title>
   <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="stylesheet" href="./styles.css?v=20260918-v04" />
+  <link rel="stylesheet" href="./styles.css?v=20260918-v041" />
 </head>
 <body>
   <div class="ambient a1"></div><div class="ambient a2"></div>
   <main class="app">
     <header class="hero">
-      <div class="brand-line"><h1>DraBornPortal</h1><span class="version">v0.4</span></div>
+      <div class="brand-line"><h1>DraBornPortal</h1><span class="version">v0.4.1</span></div>
       <b>PLAY • CAPTURE • TÜRKÇE</b>
-      <div class="chips"><span>GEMINI VISION</span><span>GEMINI 3.1</span><span>EN → TR</span></div>
+      <div class="chips"><span>DRABORNEAGLE AI</span><span>OYUN ÇEVİRİSİ</span><span>EN → TR</span></div>
     </header>
 
     <section class="status card glass">
       <div class="status-dot"></div>
-      <div><strong>Web çeviri motoru hazır</strong><span>Gemini Vision OCR + Gemini 3.1 Flash-Lite</span></div>
+      <div><strong>DraBornEagle çeviri motoru hazır</strong><span>Oyun ekranı algılama + doğal Türkçe çeviri</span></div>
       <em>WEB</em>
     </section>
 
     <section class="card control glass">
-      <div class="eyebrow">YENİ • v0.4 • GEMINI 3.1</div>
-      <h2>Oyun ekranını daha net oku</h2>
-      <p>Görüntü doğrudan Gemini Vision tarafından okunur. Görev başlıkları ve açıklamaları bağlama uygun Türkçeye çevrilir; gereksiz menü yazıları elenir ve çeviri orijinal metnin üzerine yerleşir.</p>
+      <div class="eyebrow">YENİ • v0.4.1 • DRABORNEAGLE</div>
+      <h2>DraBornEagle Oyun Çevirisi</h2>
+      <p>Oyun ekranındaki görev başlıkları ve açıklamaları doğal Türkçeye çevrilir; çeviriler orijinal metinlerin üzerine temiz ve okunabilir biçimde yerleşir.</p>
       <label class="pick"><input id="fileInput" type="file" accept="image/*" /><span>＋</span> OYUN EKRAN GÖRÜNTÜSÜ SEÇ</label>
       <div class="selected"><span>SEÇİLEN</span><b id="fileName">Henüz görsel seçilmedi</b></div>
       <button id="analyzeBtn" disabled>GÖRÜNTÜYÜ TÜRKÇELEŞTİR <span>→</span></button>
@@ -49,7 +49,7 @@
     <section id="translationText" class="translation-text card glass"><div class="empty-translation">Henüz çeviri yok.</div></section>
 
     <section class="safe card glass"><b>PSN GÜVENLİ MOD</b><p>Sony hesabı veya tokenı bu web uygulamasına girilmez. Android uygulamada PlayStation App'in resmi Paylaş akışı kullanılır.</p></section>
-    <footer>DRABORNPORTAL • ANDROID ↔ WEB • v0.4</footer>
+    <footer>DRABORNPORTAL • ANDROID ↔ WEB • v0.4.1</footer>
   </main>
 
   <section id="fullscreen" class="fullscreen" hidden aria-label="Tam ekran çeviri görüntüleyici">
@@ -61,9 +61,9 @@
     <div id="zoomStage" class="zoom-stage">
       <div id="zoomCanvas" class="zoom-canvas"><img id="fullImage" alt="Tam ekran oyun görüntüsü" /><div id="fullOverlay" class="overlay"></div></div>
     </div>
-    <div class="full-hint">GEMINI KATMAN • GÖREV METİNLERİ DOĞAL TÜRKÇEYE ÇEVRİLİR</div>
+    <div class="full-hint">DRABORNEAGLE • OYUN ÇEVİRİSİ</div>
     <div class="zoom-tools"><button id="zoomOut">−</button><button id="zoomReset"><span id="zoomValue">100%</span></button><button id="zoomIn">+</button></div>
   </section>
-  <script src="./app.js?v=20260918-v04"></script>
+  <script src="./app.js?v=20260918-v041"></script>
 </body>
 </html>
