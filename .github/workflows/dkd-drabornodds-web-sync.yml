@@ -44,21 +44,40 @@ jobs:
           cp -a "$RUNNER_TEMP/DraBornOdds-source/web-legal/." DraBornOdds/
           sed -i 's#href="../../"#href="../"#g' DraBornOdds/privacy/index.html DraBornOdds/terms/index.html DraBornOdds/data-safety/index.html DraBornOdds/support/index.html
           printf '%s\n' "$(git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD)" > DraBornOdds/dkd-source-commit.txt
-      - name: Commit synchronized website
+      - name: Download and verify signed Android APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p DraBornOdds/App
+          dkd_release_base='https://github.com/DrabornEagle/DraBornGo/releases/download/drabornodds-v0.7.2-code1'
+          curl --retry 60 --retry-delay 10 --retry-all-errors -fL "$dkd_release_base/DraBornOdds-v0.7.2-code1-release.apk" -o DraBornOdds/App/DraBornOdds-v0.7.2-code1-release.apk
+          curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/SHA256.txt" -o DraBornOdds/App/SHA256.txt
+          curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/CERTIFICATE.txt" -o DraBornOdds/App/CERTIFICATE.txt
+          curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/SOURCE_COMMIT.txt" -o DraBornOdds/App/SOURCE_COMMIT.txt
+          (cd DraBornOdds/App && sha256sum -c SHA256.txt)
+          test "$(cat DraBornOdds/App/SOURCE_COMMIT.txt)" = "$(cat DraBornOdds/dkd-source-commit.txt)"
+      - name: Keep requested APK URL alias
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p DraBornOdss/App
+          cat > DraBornOdss/App/index.html <<'DKD_HTML'
+          <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DraBornOdds Android APK</title><meta http-equiv="refresh" content="0;url=/DraBornOdds/App/"><link rel="canonical" href="https://www.draborneagle.com/DraBornOdds/App/"><script>location.replace('/DraBornOdds/App/');</script></head><body><p>DraBornOdds Android APK sayfasına yönlendiriliyorsunuz. <a href="/DraBornOdds/App/">Devam et</a></p></body></html>
+          DKD_HTML
+      - name: Commit synchronized website and APK
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A DraBornOdds
+          git add -A DraBornOdds DraBornOdss/App
           if git diff --cached --quiet; then
-            echo 'DraBornOdds web is already synchronized.'
+            echo 'DraBornOdds web and APK are already synchronized.'
             exit 0
           fi
-          git commit -m 'deploy(DraBornOdds): sync Expo web from canonical app'
+          git commit -m 'deploy(DraBornOdds): sync web and signed v0.7.2 APK'
           for dkd_try in 1 2 3; do
             git pull --rebase origin main && git push && exit 0
             sleep 3
           done
           exit 1
-# v0.7.2 public mirror deployment checkpoint
