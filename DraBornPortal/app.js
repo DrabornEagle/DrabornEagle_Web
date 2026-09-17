@@ -1,130 +1,81 @@
-const VERSION='0.3.2';
-const GLOSSARY=['PlayStation Portal','PlayStation','PSN','RuneScape','Dragonwilds','Wise Old Man','Ghostspeak','Kettan','Cathan','Oculus','Void'];
+const VERSION='0.4';
+const GEMINI_ENDPOINT='https://guuwomvszlwhkmstewfl.supabase.co/functions/v1/dkd-portal-gemini-translate';
 const $=id=>document.getElementById(id);
 const state={file:null,blocks:[],showOriginal:false,imageUrl:null,zoom:1,panX:0,panY:0,pointers:new Map(),gesture:null,sourceWidth:1,sourceHeight:1};
 
-function cleanText(text=''){return text.replace(/\r/g,'').split('\n').map(v=>v.replace(/\s+/g,' ').trim()).filter(Boolean).filter((v,i,a)=>i===0||v!==a[i-1]).join('\n')}
-function uiNoise(text=''){
-  const normalized=text.toLowerCase().replace(/[^a-z ]/g,' ').replace(/\s+/g,' ').trim();if(!normalized)return true;
-  const words=normalized.split(' ').filter(Boolean);
-  const ui=new Set(['quests','quest','active','completed','map','skills','skill','spell','book','journal','navigate','set','unset','marker','ping','move','zoom','back','inventory','crafting','settings','menu','close','open','select','cancel','confirm','x','a','b','l','r']);
-  if(words.length&&words.length<=12&&words.every(w=>ui.has(w)))return true;
-  const geo=new Set(['valley','woods','forest','river','lake','mountain','mountains']);
-  if(words.length>=1&&words.length<=4&&geo.has(words[words.length-1]))return true;
-  return false
-}
-function useful(text,confidence=100){
-  if(uiNoise(text))return false;
-  const compact=text.replace(/\s/g,'');if(text.length<3||text.length>1300||!compact||confidence<30)return false;
-  const letters=(compact.match(/[A-Za-zÀ-ž]/g)||[]).length;
-  const words=(text.match(/[A-Za-z]{2,}/g)||[]),singles=(text.match(/(?:^|\s)[A-Za-z](?=\s|$)/g)||[]);
-  if(!words.length||letters/compact.length<.55)return false;
-  if(singles.length>Math.max(3,words.length*2))return false;
-  return true
-}
-function protectTerms(text){let out=text;const terms=[];[...GLOSSARY].sort((a,b)=>b.length-a.length).forEach((term,i)=>{const rx=new RegExp(term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&'),'gi');out=out.replace(rx,m=>{const token=`QZX${i}ZXQ`;terms.push([token,m]);return token})});return {text:out,terms}}
-function restoreTerms(text,terms){let out=text;terms.forEach(([token,value])=>{out=out.replace(new RegExp(token,'gi'),value);const relaxed=token.split('').join('\\s*');out=out.replace(new RegExp(relaxed,'gi'),value)});return out}
-function decodeHtml(v){const d=document.createElement('textarea');d.innerHTML=v;return d.value}
 function progress(v,t){$('progressBar').style.width=`${v}%`;$('progressText').textContent=t;$('progressPercent').textContent=`${Math.round(v)}%`}
-function escapeHtml(s){return s.replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function escapeHtml(s=''){return String(s).replace(/[&<>'"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]))}
+function cleanText(s=''){return String(s).replace(/\s+/g,' ').trim()}
 
-function splitForTranslation(text,max=420){
-  const input=cleanText(text);if(!input)return[];const pieces=[];
-  for(const raw of input.split('\n')){let part=raw.trim();while(part.length>max){let cut=part.lastIndexOf(' ',max);if(cut<Math.floor(max*.6))cut=max;pieces.push(part.slice(0,cut).trim());part=part.slice(cut).trim()}if(part)pieces.push(part)}
-  const chunks=[];let current='';for(const piece of pieces){const next=current?`${current}\n${piece}`:piece;if(next.length<=max)current=next;else{if(current)chunks.push(current);current=piece}}if(current)chunks.push(current);return chunks
-}
-async function translateChunk(text){
-  const p=protectTerms(text),url=`https://api.mymemory.translated.net/get?q=${encodeURIComponent(p.text)}&langpair=en|tr`;
-  const r=await fetch(url,{cache:'no-store'});if(!r.ok)throw new Error('Ücretsiz web çeviri servisine ulaşılamadı');
-  const j=await r.json(),raw=decodeHtml(j?.responseData?.translatedText||'').trim();
-  if(!raw)throw new Error('Web çeviri servisi boş yanıt verdi.');
-  if(/QUERY LENGTH LIMIT EXCEEDED|MAX ALLOWED QUERY/i.test(raw))throw new Error('Çeviri servis sınırına ulaştı. Daha küçük bir görüntüyle tekrar dene.');
-  return restoreTerms(raw,p.terms).replace(/\s+([,.!?;:])/g,'$1').trim()
-}
-async function translate(text){const chunks=splitForTranslation(text),translated=[];for(const chunk of chunks)translated.push(await translateChunk(chunk));return translated.filter(Boolean).join('\n')}
-function polishTranslation(source,fallback){
-  const key=source.toLowerCase().replace(/\s+/g,' ').trim();
-  if(key==='dragon slayer')return 'Ejderha Avcısı';
-  if(key==='restless ghosts'||key==='restless ghost')return 'Huzursuz Hayaletler';
-  if(key==='growing pains')return 'Büyüme Sancıları';
-  if(key.includes('investigate the blue-flame door')&&key.includes('swamp'))return "Bataklıktaki mavi alevli kapıyı araştır. Cathan'ın ne yaptığını öğren.";
-  if(key.includes('search for a purpose')&&key.includes('amulet of ghostspeak'))return 'Ghostspeak Muskasının amacını araştır.';
-  if(key.includes('grow and harvest your first crop')&&key.includes('farming plot'))return 'Bir tarım alanında ilk mahsulünü yetiştir ve hasat et.';
-  return fallback
-}
-async function mapConcurrent(items,limit,task){
-  const out=new Array(items.length);let cursor=0;
-  async function worker(){while(true){const i=cursor++;if(i>=items.length)return;out[i]=await task(items[i],i)}}
-  await Promise.all(Array.from({length:Math.min(limit,items.length)},worker));return out
-}
-
-function collectNested(data){
-  const paragraphs=[];for(const block of data?.blocks||[])for(const paragraph of block?.paragraphs||[])if(paragraph?.bbox)paragraphs.push(paragraph);
-  if(paragraphs.length)return paragraphs;
-  const lines=[];for(const block of data?.blocks||[])for(const paragraph of block?.paragraphs||[])for(const line of paragraph?.lines||[])if(line?.bbox)lines.push(line);
-  if(lines.length)return lines;
-  if(data?.lines?.length)return data.lines;if(data?.paragraphs?.length)return data.paragraphs;if(data?.blocks?.length)return data.blocks;return []
-}
-function avgConfidence(item){if(Number.isFinite(item?.confidence))return item.confidence;const lines=item?.lines||[];const nums=lines.map(x=>x.confidence).filter(Number.isFinite);return nums.length?nums.reduce((a,b)=>a+b,0)/nums.length:70}
-function mapBBox(bbox,sx,sy){return{x0:bbox.x0*sx,y0:bbox.y0*sy,x1:bbox.x1*sx,y1:bbox.y1*sy}}
-
-async function makeEnhancedCanvas(file){
-  const url=URL.createObjectURL(file),img=new Image();await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url});URL.revokeObjectURL(url);
-  const maxSide=Math.max(img.naturalWidth,img.naturalHeight),scale=Math.max(1.2,Math.min(1.55,2600/maxSide));
-  const canvas=document.createElement('canvas');canvas.width=Math.round(img.naturalWidth*scale);canvas.height=Math.round(img.naturalHeight*scale);
-  const ctx=canvas.getContext('2d',{willReadFrequently:true});ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';ctx.drawImage(img,0,0,canvas.width,canvas.height);
-  const image=ctx.getImageData(0,0,canvas.width,canvas.height),d=image.data;
-  for(let i=0;i<d.length;i+=4){const lum=.2126*d[i]+.7152*d[i+1]+.0722*d[i+2];const v=Math.max(0,Math.min(255,(lum-128)*1.42+128));d[i]=d[i+1]=d[i+2]=v}
-  ctx.putImageData(image,0,0);return{canvas,scaleX:img.naturalWidth/canvas.width,scaleY:img.naturalHeight/canvas.height,width:img.naturalWidth,height:img.naturalHeight}
+async function prepareGeminiImage(file){
+  const url=URL.createObjectURL(file),img=new Image();
+  await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url});
+  URL.revokeObjectURL(url);
+  const maxSide=1800,ratio=Math.min(1,maxSide/Math.max(img.naturalWidth,img.naturalHeight));
+  const canvas=document.createElement('canvas');
+  canvas.width=Math.max(1,Math.round(img.naturalWidth*ratio));canvas.height=Math.max(1,Math.round(img.naturalHeight*ratio));
+  const ctx=canvas.getContext('2d');ctx.imageSmoothingEnabled=true;ctx.imageSmoothingQuality='high';
+  ctx.drawImage(img,0,0,canvas.width,canvas.height);
+  const dataUrl=canvas.toDataURL('image/jpeg',.9);
+  return {base64:dataUrl.split(',')[1],mimeType:'image/jpeg'}
 }
 
 async function analyze(){
-  if(!state.file)return;$('analyzeBtn').disabled=true;$('error').textContent='';state.blocks=[];renderPlainText();renderOverlay();progress(3,'Görüntü yüksek kalite OCR için hazırlanıyor');let worker;
+  if(!state.file)return;
+  $('analyzeBtn').disabled=true;$('error').textContent='';state.blocks=[];renderPlainText();renderOverlay();
   try{
-    if(!window.Tesseract)throw new Error('OCR motoru yüklenemedi. İnternet bağlantısını kontrol edip sayfayı yenile.');
-    const enhanced=await makeEnhancedCanvas(state.file);state.sourceWidth=enhanced.width;state.sourceHeight=enhanced.height;progress(8,'Görüntü keskinleştirildi • oyun metinleri aranıyor');
-    worker=await Tesseract.createWorker('eng',undefined,{logger:m=>{if(m.status==='recognizing text')progress(10+Math.round((m.progress||0)*45),`Gelişmiş OCR taraması • %${Math.round((m.progress||0)*100)}`)}});
-    await worker.setParameters({tessedit_pageseg_mode:'11',preserve_interword_spaces:'1'});
-    const result=await worker.recognize(enhanced.canvas,{}, {text:true,blocks:true});
-    const regions=collectNested(result.data);
-    let candidates=regions.map(item=>({text:cleanText(item.text||''),confidence:avgConfidence(item),bbox:item.bbox?mapBBox(item.bbox,enhanced.scaleX,enhanced.scaleY):null})).filter(x=>x.bbox&&useful(x.text,x.confidence));
-    candidates.sort((a,b)=>a.bbox.y0-b.bbox.y0||a.bbox.x0-b.bbox.x0);candidates=candidates.slice(0,24);
-    if(!candidates.length){
-      const all=cleanText(result.data.text||'');if(all){const lines=all.split('\n').map(cleanText).filter(v=>useful(v,50)).slice(0,24);const step=Math.max(1,state.sourceHeight/Math.max(lines.length,1));lines.forEach((line,i)=>candidates.push({text:line,confidence:50,bbox:{x0:0,y0:i*step,x1:state.sourceWidth,y1:(i+1)*step},overlay:false}))}
-    }
-    if(!candidates.length)throw new Error('Okunabilir İngilizce oyun metni bulunamadı. Daha net bir ekran görüntüsü dene.');
-    let completed=0;
-    const translatedBlocks=await mapConcurrent(candidates,4,async candidate=>{
-      try{
-        const raw=await translate(candidate.text);completed++;
-        progress(58+Math.round((completed/candidates.length)*38),`Türkçeye çevriliyor • ${completed}/${candidates.length}`);
-        return raw?{...candidate,translated:polishTranslation(candidate.text,raw)}:null
-      }catch(e){completed++;console.warn('Bölge çevrilemedi',e);return null}
+    progress(10,'Görüntü Gemini için hazırlanıyor');
+    const prepared=await prepareGeminiImage(state.file);
+    progress(28,'Gemini 3.1 Flash-Lite oyun metinlerini okuyor ve çeviriyor');
+    const response=await fetch(GEMINI_ENDPOINT,{
+      method:'POST',
+      headers:{'content-type':'application/json','x-drabornportal-client':'web'},
+      body:JSON.stringify({mode:'image',mime_type:prepared.mimeType,image_base64:prepared.base64})
     });
-    state.blocks=translatedBlocks.filter(Boolean);
-    if(!state.blocks.length)throw new Error('Metin bulundu ancak web çeviri servisi yanıt vermedi. Birkaç saniye sonra tekrar dene.');
-    renderPlainText();renderOverlay();$('viewerSection').hidden=false;progress(100,'Hazır • Görsele dokun, Türkçe katmanı tam ekranda aç');
+    const payload=await response.json().catch(()=>({}));
+    if(!response.ok||!payload?.ok)throw new Error('Gemini çeviri servisine ulaşılamadı. Tekrar dene.');
+    progress(82,'Türkçe metinler görüntüye yerleştiriliyor');
+    const iw=state.sourceWidth||$('preview').naturalWidth||1,ih=state.sourceHeight||$('preview').naturalHeight||1;
+    state.blocks=(Array.isArray(payload.items)?payload.items:[]).map(item=>{
+      const left=Math.max(0,Math.min(1000,Number(item.left)||0)),top=Math.max(0,Math.min(1000,Number(item.top)||0));
+      const right=Math.max(left+1,Math.min(1000,Number(item.right)||0)),bottom=Math.max(top+1,Math.min(1000,Number(item.bottom)||0));
+      return {
+        text:cleanText(item.source),translated:cleanText(item.translated),
+        bbox:{x0:left/1000*iw,y0:top/1000*ih,x1:right/1000*iw,y1:bottom/1000*ih}
+      }
+    }).filter(x=>x.text&&x.translated&&x.bbox.x1>x.bbox.x0&&x.bbox.y1>x.bbox.y0)
+      .sort((a,b)=>a.bbox.y0-b.bbox.y0||a.bbox.x0-b.bbox.x0);
+    if(!state.blocks.length)throw new Error('Gemini bu görüntüde çevrilecek anlamlı görev metni bulamadı.');
+    renderPlainText();renderOverlay();$('viewerSection').hidden=false;progress(100,`Hazır • ${state.blocks.length} anlamlı oyun metni çevrildi`);
   }catch(e){$('error').textContent=e.message||String(e);progress(0,'Tekrar deneyebilirsin')}
-  finally{if(worker)await worker.terminate();$('analyzeBtn').disabled=!state.file}
+  finally{$('analyzeBtn').disabled=!state.file}
 }
 
 function renderPlainText(){
-  const host=$('translationText');if(!state.blocks.length){host.innerHTML='<div class="empty-translation">Henüz çeviri yok.</div>';return}
+  const host=$('translationText');
+  if(!state.blocks.length){host.innerHTML='<div class="empty-translation">Henüz çeviri yok.</div>';return}
   host.innerHTML=state.blocks.map((x,i)=>`<article class="text-result"><span>${String(i+1).padStart(2,'0')}</span><p>${escapeHtml(x.translated)}</p></article>`).join('')
 }
+
+function fitOverlayText(el,start){
+  let fitted=Math.max(3,Math.min(13,start));el.style.fontSize=`${fitted}px`;el.style.lineHeight='1.03';
+  let guard=0;
+  while(fitted>2.5&&(el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1)&&guard++<50){fitted-=.25;el.style.fontSize=`${fitted}px`}
+}
+
 function renderOverlay(){
-  const img=$('fullImage'),layer=$('fullOverlay');layer.innerHTML='';$('regionCount').textContent=`${state.blocks.length} anlamlı metin çevrildi`;
+  const img=$('fullImage'),layer=$('fullOverlay');layer.innerHTML='';
+  $('regionCount').textContent=`${state.blocks.length} anlamlı metin çevrildi`;
   $('modeBadge').textContent=state.showOriginal?'ORİJİNAL':'TÜRKÇE KATMAN';if(state.showOriginal)return;
   const iw=state.sourceWidth||$('preview').naturalWidth||img.naturalWidth||1,ih=state.sourceHeight||$('preview').naturalHeight||img.naturalHeight||1;
-  const displayW=img.clientWidth||$('preview').clientWidth||iw,displayH=img.clientHeight||$('preview').clientHeight||ih;
-  const sx=displayW/iw,sy=displayH/ih;
-  state.blocks.filter(b=>b.overlay!==false&&!uiNoise(b.text)).forEach(b=>{
+  const displayH=img.clientHeight||$('preview').clientHeight||ih,sy=displayH/ih;
+  state.blocks.forEach(b=>{
     const el=document.createElement('div');el.className='tr-block';el.textContent=b.translated;
     const bw=Math.max(1,b.bbox.x1-b.bbox.x0),bh=Math.max(1,b.bbox.y1-b.bbox.y0);
-    el.style.left=`${b.bbox.x0/iw*100}%`;el.style.top=`${b.bbox.y0/ih*100}%`;
-    el.style.width=`${bw/iw*100}%`;el.style.height=`${bh/ih*100}%`;
-    let fitted=Math.max(2.4,Math.min(10,bh*sy*.48));el.style.fontSize=`${fitted}px`;el.style.lineHeight='1.02';layer.appendChild(el);
-    while(fitted>2.4&&(el.scrollHeight>el.clientHeight+1||el.scrollWidth>el.clientWidth+1)){fitted-=.25;el.style.fontSize=`${fitted}px`}
+    const padX=Math.min(bw*.02,3),padY=Math.min(bh*.08,2);
+    el.style.left=`${Math.max(0,b.bbox.x0-padX)/iw*100}%`;el.style.top=`${Math.max(0,b.bbox.y0-padY)/ih*100}%`;
+    el.style.width=`${Math.min(iw, bw+padX*2)/iw*100}%`;el.style.height=`${Math.min(ih,bh+padY*2)/ih*100}%`;
+    layer.appendChild(el);fitOverlayText(el,bh*sy*.62)
   })
 }
 
@@ -132,20 +83,27 @@ function setFile(file){
   if(!file?.type?.startsWith('image/'))return;state.file=file;state.blocks=[];state.showOriginal=false;renderPlainText();
   if(state.imageUrl)URL.revokeObjectURL(state.imageUrl);state.imageUrl=URL.createObjectURL(file);
   $('preview').onload=()=>{state.sourceWidth=$('preview').naturalWidth||1;state.sourceHeight=$('preview').naturalHeight||1;$('viewerSection').hidden=false;$('fullImage').src=state.imageUrl;renderOverlay()};
-  $('preview').src=state.imageUrl;$('analyzeBtn').disabled=false;progress(0,'Görsel hazır • Türkçeleştir düğmesine dokun');$('fileName').textContent=file.name||'Oyun ekran görüntüsü'
+  $('preview').src=state.imageUrl;$('analyzeBtn').disabled=false;progress(0,'Görsel hazır • Gemini ile Türkçeleştir');$('fileName').textContent=file.name||'Oyun ekran görüntüsü'
 }
-function openFullscreen(){if(!$('preview').src)return;$('fullImage').src=$('preview').src;$('fullscreen').hidden=false;document.body.classList.add('modal-open');resetZoom();renderOverlay()}
+function openFullscreen(){if(!$('preview').src)return;$('fullImage').src=$('preview').src;$('fullscreen').hidden=false;document.body.classList.add('modal-open');resetZoom();requestAnimationFrame(renderOverlay)}
 function closeFullscreen(){$('fullscreen').hidden=true;document.body.classList.remove('modal-open');state.pointers.clear();state.gesture=null}
 function applyTransform(){$('zoomCanvas').style.transform=`translate3d(${state.panX}px,${state.panY}px,0) scale(${state.zoom})`;$('zoomValue').textContent=`${Math.round(state.zoom*100)}%`}
 function resetZoom(){state.zoom=1;state.panX=0;state.panY=0;applyTransform()}
 function setZoom(next){const old=state.zoom;state.zoom=Math.max(1,Math.min(8,next));if(state.zoom===1){state.panX=0;state.panY=0}else if(old>0){const ratio=state.zoom/old;state.panX*=ratio;state.panY*=ratio}applyTransform()}
-function pointerDistance(a,b){return Math.hypot(a.x-b.x,a.y-b.y)}function pointerMid(a,b){return{x:(a.x+b.x)/2,y:(a.y+b.y)/2}}
+function pointerDistance(a,b){return Math.hypot(a.x-b.x,a.y-b.y)}
+function pointerMid(a,b){return{x:(a.x+b.x)/2,y:(a.y+b.y)/2}}
 function bindZoom(){
-  const stage=$('zoomStage');stage.addEventListener('pointerdown',e=>{stage.setPointerCapture(e.pointerId);state.pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(state.pointers.size===2){const[a,b]=[...state.pointers.values()];state.gesture={distance:pointerDistance(a,b),mid:pointerMid(a,b),zoom:state.zoom,panX:state.panX,panY:state.panY}}});
+  const stage=$('zoomStage');
+  stage.addEventListener('pointerdown',e=>{stage.setPointerCapture(e.pointerId);state.pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(state.pointers.size===2){const[a,b]=[...state.pointers.values()];state.gesture={distance:pointerDistance(a,b),mid:pointerMid(a,b),zoom:state.zoom,panX:state.panX,panY:state.panY}}});
   stage.addEventListener('pointermove',e=>{const prev=state.pointers.get(e.pointerId);if(!prev)return;state.pointers.set(e.pointerId,{x:e.clientX,y:e.clientY});if(state.pointers.size===1&&state.zoom>1){state.panX+=e.clientX-prev.x;state.panY+=e.clientY-prev.y;applyTransform();return}if(state.pointers.size===2){const[a,b]=[...state.pointers.values()];if(!state.gesture)state.gesture={distance:pointerDistance(a,b),mid:pointerMid(a,b),zoom:state.zoom,panX:state.panX,panY:state.panY};const distance=Math.max(1,pointerDistance(a,b)),mid=pointerMid(a,b);state.zoom=Math.max(1,Math.min(8,state.gesture.zoom*(distance/Math.max(1,state.gesture.distance))));state.panX=state.gesture.panX+(mid.x-state.gesture.mid.x);state.panY=state.gesture.panY+(mid.y-state.gesture.mid.y);if(state.zoom===1){state.panX=0;state.panY=0}applyTransform()}});
-  const end=e=>{state.pointers.delete(e.pointerId);state.gesture=null};stage.addEventListener('pointerup',end);stage.addEventListener('pointercancel',end);stage.addEventListener('wheel',e=>{e.preventDefault();setZoom(state.zoom*(e.deltaY<0?1.16:.86))},{passive:false});stage.addEventListener('dblclick',()=>state.zoom>1?resetZoom():setZoom(2.5))
+  const end=e=>{state.pointers.delete(e.pointerId);state.gesture=null};stage.addEventListener('pointerup',end);stage.addEventListener('pointercancel',end);
+  stage.addEventListener('wheel',e=>{e.preventDefault();setZoom(state.zoom*(e.deltaY<0?1.16:.86))},{passive:false});stage.addEventListener('dblclick',()=>state.zoom>1?resetZoom():setZoom(2.5))
 }
 
-$('fileInput').addEventListener('change',e=>setFile(e.target.files[0]));$('analyzeBtn').addEventListener('click',analyze);$('viewer').addEventListener('click',openFullscreen);$('closeFull').addEventListener('click',closeFullscreen);$('fullscreen').addEventListener('click',e=>{if(e.target===$('fullscreen'))closeFullscreen()});
-$('toggleBtn').addEventListener('click',()=>{state.showOriginal=!state.showOriginal;$('toggleBtn').textContent=state.showOriginal?'TÜRKÇEYİ GÖSTER':'ORİJİNALİ GÖSTER';renderOverlay()});$('zoomIn').addEventListener('click',()=>setZoom(state.zoom*1.35));$('zoomOut').addEventListener('click',()=>setZoom(state.zoom/1.35));$('zoomReset').addEventListener('click',resetZoom);document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('fullscreen').hidden)closeFullscreen()});
-bindZoom();renderPlainText();progress(0,'Hazır • oyun ekran görüntüsünü seç');if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js?v=0.3.2').catch(()=>{});
+$('fileInput').addEventListener('change',e=>setFile(e.target.files[0]));$('analyzeBtn').addEventListener('click',analyze);$('viewer').addEventListener('click',openFullscreen);$('closeFull').addEventListener('click',closeFullscreen);
+$('fullscreen').addEventListener('click',e=>{if(e.target===$('fullscreen'))closeFullscreen()});
+$('toggleBtn').addEventListener('click',()=>{state.showOriginal=!state.showOriginal;$('toggleBtn').textContent=state.showOriginal?'TÜRKÇEYİ GÖSTER':'ORİJİNALİ GÖSTER';renderOverlay()});
+$('zoomIn').addEventListener('click',()=>setZoom(state.zoom*1.35));$('zoomOut').addEventListener('click',()=>setZoom(state.zoom/1.35));$('zoomReset').addEventListener('click',resetZoom);
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('fullscreen').hidden)closeFullscreen()});
+bindZoom();renderPlainText();progress(0,'Hazır • oyun ekran görüntüsünü seç');
+if('serviceWorker'in navigator)navigator.serviceWorker.register('./sw.js?v=0.4').catch(()=>{});
