@@ -4,16 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <meta name="theme-color" content="#071226" />
-  <meta name="description" content="DraBornPortal v0.3.1 oyun ekran görüntülerindeki İngilizce metinleri okuyup anlaşılır Türkçe katman olarak gösterir." />
-  <title>DraBornPortal v0.3.1</title>
+  <meta name="description" content="DraBornPortal v0.3.2 oyun ekran görüntülerindeki İngilizce metinleri okuyup anlaşılır Türkçe katman olarak gösterir." />
+  <title>DraBornPortal v0.3.2</title>
   <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="stylesheet" href="./styles.css?v=20260918-v031" />
+  <link rel="stylesheet" href="./styles.css?v=20260918-v032" />
 </head>
 <body>
   <div class="ambient a1"></div><div class="ambient a2"></div>
   <main class="app">
     <header class="hero">
-      <div class="brand-line"><h1>DraBornPortal</h1><span class="version">v0.3.1</span></div>
+      <div class="brand-line"><h1>DraBornPortal</h1><span class="version">v0.3.2</span></div>
       <b>PLAY • CAPTURE • TÜRKÇE</b>
       <div class="chips"><span>GELİŞMİŞ OCR</span><span>0 TL API</span><span>EN → TR</span></div>
     </header>
@@ -25,7 +25,7 @@
     </section>
 
     <section class="card control glass">
-      <div class="eyebrow">YENİ • v0.3.1</div>
+      <div class="eyebrow">YENİ • v0.3.2</div>
       <h2>Oyun ekranını daha net oku</h2>
       <p>Görüntü iyileştirilip oyun metinleri taranır. Gereksiz menü ve kontrol yazıları elenir; Türkçe çeviri orijinal İngilizce metnin bulunduğu kutunun tam üzerine aynı ölçülerde yerleşir.</p>
       <label class="pick"><input id="fileInput" type="file" accept="image/*" /><span>＋</span> OYUN EKRAN GÖRÜNTÜSÜ SEÇ</label>
@@ -49,7 +49,7 @@
     <section id="translationText" class="translation-text card glass"><div class="empty-translation">Henüz çeviri yok.</div></section>
 
     <section class="safe card glass"><b>PSN GÜVENLİ MOD</b><p>Sony hesabı veya tokenı bu web uygulamasına girilmez. Android uygulamada PlayStation App'in resmi Paylaş akışı kullanılır.</p></section>
-    <footer>DRABORNPORTAL • ANDROID ↔ WEB • v0.3.1</footer>
+    <footer>DRABORNPORTAL • ANDROID ↔ WEB • v0.3.2</footer>
   </main>
 
   <section id="fullscreen" class="fullscreen" hidden aria-label="Tam ekran çeviri görüntüleyici">
@@ -61,11 +61,11 @@
     <div id="zoomStage" class="zoom-stage">
       <div id="zoomCanvas" class="zoom-canvas"><img id="fullImage" alt="Tam ekran oyun görüntüsü" /><div id="fullOverlay" class="overlay"></div></div>
     </div>
-    <div class="full-hint">HASSAS KATMAN • ÇEVİRİ ORİJİNAL METİN ALANINA OTURUR</div>
+    <div class="full-hint">HASSAS KATMAN • METİNLER KUTUYA OTOMATİK SIĞDIRILIR</div>
     <div class="zoom-tools"><button id="zoomOut">−</button><button id="zoomReset"><span id="zoomValue">100%</span></button><button id="zoomIn">+</button></div>
   </section>
 
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-  <script src="./app.js?v=20260918-v031"></script>
+  <script src="./app.js?v=20260918-v032"></script>
 </body>
 </html>
