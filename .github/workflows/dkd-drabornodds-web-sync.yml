@@ -21,7 +21,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Checkout canonical Android/Web source
-        run: git clone --depth 1 https://github.com/DrabornEagle/DraBornOdds.git "$RUNNER_TEMP/DraBornOdds-source"
+        run: git clone --depth 30 https://github.com/DrabornEagle/DraBornOdds.git "$RUNNER_TEMP/DraBornOdds-source"
       - name: Install Expo source dependencies
         working-directory: ${{ runner.temp }}/DraBornOdds-source
         run: npm ci --no-audit --no-fund
@@ -55,7 +55,18 @@ jobs:
           curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/CERTIFICATE.txt" -o DraBornOdds/App/CERTIFICATE.txt
           curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/SOURCE_COMMIT.txt" -o DraBornOdds/App/SOURCE_COMMIT.txt
           (cd DraBornOdds/App && sha256sum -c SHA256.txt)
-          test "$(cat DraBornOdds/App/SOURCE_COMMIT.txt)" = "$(cat DraBornOdds/dkd-source-commit.txt)"
+          dkd_signed_source="$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt)"
+          dkd_source_repo="$RUNNER_TEMP/DraBornOdds-source"
+          if ! git -C "$dkd_source_repo" cat-file -e "$dkd_signed_source^{commit}" 2>/dev/null; then
+            git -C "$dkd_source_repo" fetch origin "$dkd_signed_source" --depth=1
+          fi
+          if ! git -C "$dkd_source_repo" diff --quiet "$dkd_signed_source" HEAD -- . ':(exclude).github/**'; then
+            echo 'DKD ERROR: application source differs from signed APK source.'
+            git -C "$dkd_source_repo" diff --name-only "$dkd_signed_source" HEAD -- . ':(exclude).github/**'
+            exit 1
+          fi
+          grep -q 'Signer #1 certificate SHA-256 digest' DraBornOdds/App/CERTIFICATE.txt
+          echo "DKD signed APK matches application source $dkd_signed_source"
       - name: Keep requested APK URL alias
         shell: bash
         run: |
