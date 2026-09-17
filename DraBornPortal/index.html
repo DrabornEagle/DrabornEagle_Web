@@ -7,7 +7,7 @@
   <meta name="description" content="DraBornPortal oyun ekran görüntülerini Türkçe olarak görüntünün üzerinde çevirir." />
   <title>DraBornPortal v0.2</title>
   <link rel="manifest" href="./manifest.webmanifest" />
-  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="./styles.css?v=20260918-1" />
 </head>
 <body>
   <main class="app">
@@ -16,8 +16,8 @@
     <section class="status card"><strong>Yerel OCR motoru hazır</strong><span>Web test sürümü • v0.2</span></section>
 
     <section class="card control">
-      <h2>v0.2 • Görüntü üstü çeviri</h2>
-      <p>Oyun ekran görüntüsünü seç. İngilizce metin bölgeleri bulunur ve Türkçesi aynı alanların üzerine yerleştirilir.</p>
+      <h2>v0.2 • Tam ekran görüntü çevirisi</h2>
+      <p>Oyun ekran görüntüsünü seç. Ana sayfada görüntü temiz kalır; çeviri tamamlanınca görüntüye dokunarak tam ekranda Türkçe metinleri açabilir ve yakınlaştırabilirsin.</p>
       <label class="pick"><input id="fileInput" type="file" accept="image/*" />OYUN EKRAN GÖRÜNTÜSÜ SEÇ</label>
       <button id="analyzeBtn" disabled>GÖRÜNTÜYÜ TÜRKÇELEŞTİR</button>
       <div class="progress"><i id="progressBar"></i></div><small id="progressText">Hazır</small>
@@ -26,17 +26,30 @@
     <p id="error" class="error"></p>
 
     <section id="viewerSection" class="viewer-section" hidden>
-      <div class="viewer-head"><div><b>OYUN GÖRÜNTÜSÜ</b><span id="regionCount">0 metin bölgesi</span></div><button id="toggleBtn">ORİJİNALİ GÖSTER</button></div>
-      <div id="viewer" class="viewer"><img id="preview" alt="Oyun ekran görüntüsü" /><div id="overlay" class="overlay"></div></div>
+      <div class="viewer-head"><div><b>OYUN GÖRÜNTÜSÜ</b><span id="regionCount">0 metin bölgesi</span></div><span class="tap-label">TAM EKRAN İÇİN DOKUN</span></div>
+      <button id="viewer" class="viewer" type="button" aria-label="Çeviriyi tam ekranda aç"><img id="preview" alt="Oyun ekran görüntüsü" /><span class="viewer-cta">TAM EKRAN ÇEVİRİ • DOKUN</span></button>
     </section>
 
-    <section class="history-head"><b>GEÇMİŞ</b><button id="clearBtn">Temizle</button></section>
-    <section id="history" class="history"><p>Henüz çeviri yok.</p></section>
+    <section class="translation-head"><b>ÇEVİRİ METNİ</b><span>Görüntüde bulunan Türkçe çevirinin düz metin hali</span></section>
+    <section class="translation-text card"><p id="translationText">Henüz çeviri yok.</p></section>
 
     <section class="safe card"><b>PSN GÜVENLİ MOD</b><p>Sony hesabı veya tokenı bu web uygulamasına girilmez. Android uygulamada PlayStation App'in resmi Paylaş akışı kullanılır.</p></section>
     <footer>DRABORNPORTAL • ANDROID ↔ WEB • v0.2</footer>
   </main>
+
+  <section id="fullscreen" class="fullscreen" hidden aria-label="Tam ekran çeviri görüntüleyici">
+    <div class="full-topbar">
+      <button id="closeFull" class="compact">KAPAT</button>
+      <div><b>TAM EKRAN ÇEVİRİ</b><span>İki parmakla yakınlaştır • sürükleyerek gez</span></div>
+      <button id="toggleBtn" class="compact">ORİJİNALİ GÖSTER</button>
+    </div>
+    <div id="zoomStage" class="zoom-stage">
+      <div id="zoomCanvas" class="zoom-canvas"><img id="fullImage" alt="Tam ekran oyun görüntüsü" /><div id="fullOverlay" class="overlay"></div></div>
+    </div>
+    <div class="zoom-tools"><button id="zoomOut">−</button><button id="zoomReset"><span id="zoomValue">100%</span></button><button id="zoomIn">+</button></div>
+  </section>
+
   <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
-  <script src="./app.js"></script>
+  <script src="./app.js?v=20260918-1"></script>
 </body>
 </html>
