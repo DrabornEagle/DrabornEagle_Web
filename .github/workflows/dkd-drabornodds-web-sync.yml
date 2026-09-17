@@ -1,0 +1,62 @@
+name: DraBornOdds synchronized web
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-drabornodds-web-sync.yml'
+  workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
+permissions:
+  contents: write
+concurrency:
+  group: dkd-drabornodds-web-sync
+  cancel-in-progress: true
+jobs:
+  dkd-sync-web:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout website repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Checkout canonical Android/Web source
+        run: git clone --depth 1 https://github.com/DrabornEagle/DraBornOdds.git "$RUNNER_TEMP/DraBornOdds-source"
+      - name: Install Expo source dependencies
+        working-directory: ${{ runner.temp }}/DraBornOdds-source
+        run: npm ci --no-audit --no-fund
+      - name: Verify canonical source before publishing
+        working-directory: ${{ runner.temp }}/DraBornOdds-source
+        run: |
+          npm run typecheck
+          npm test
+          npx expo install --check
+      - name: Export the same Expo app for web
+        working-directory: ${{ runner.temp }}/DraBornOdds-source
+        run: npx expo export --platform web --output-dir "$RUNNER_TEMP/DraBornOdds-dist"
+      - name: Replace DraBornOdds website from canonical export
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf DraBornOdds
+          mkdir -p DraBornOdds
+          cp -a "$RUNNER_TEMP/DraBornOdds-dist/." DraBornOdds/
+          cp -a "$RUNNER_TEMP/DraBornOdds-source/web-legal/." DraBornOdds/
+          printf '%s\n' "$(git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD)" > DraBornOdds/dkd-source-commit.txt
+      - name: Commit synchronized website
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornOdds
+          if git diff --cached --quiet; then
+            echo 'DraBornOdds web is already synchronized.'
+            exit 0
+          fi
+          git commit -m 'deploy(DraBornOdds): sync Expo web from canonical app'
+          for dkd_try in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 3
+          done
+          exit 1
