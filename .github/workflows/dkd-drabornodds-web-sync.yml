@@ -1,4 +1,4 @@
-# DraBornOdds APK/web immediate sync trigger.
+# DraBornOdds APK/web immediate sync trigger. v0.7.3 deployment checkpoint.
 name: DraBornOdds synchronized web
 on:
   push:
