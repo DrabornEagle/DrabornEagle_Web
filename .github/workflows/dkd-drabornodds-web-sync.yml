@@ -1,4 +1,4 @@
-# DraBornOdds APK/web immediate sync trigger. v0.7.3 deployment checkpoint.
+# DraBornOdds APK/web immediate sync trigger. v0.7.4 deployment.
 name: DraBornOdds synchronized web
 on:
   push:
@@ -54,20 +54,28 @@ jobs:
           dkd_apk="DraBornOdds-v${dkd_version}-code${dkd_code}-release.apk"
           dkd_release_base="https://github.com/DrabornEagle/DraBornGo/releases/download/${dkd_tag}"
           mkdir -p DraBornOdds/App
-          curl --retry 60 --retry-delay 10 --retry-all-errors -fL "$dkd_release_base/$dkd_apk" -o "DraBornOdds/App/$dkd_apk"
+          dkd_signed_source=''
+          for dkd_try in $(seq 1 90); do
+            dkd_candidate="$(curl -fsL "$dkd_release_base/SOURCE_COMMIT.txt" 2>/dev/null | tr -d '\r\n' || true)"
+            if [ -n "$dkd_candidate" ]; then
+              if ! git -C "$dkd_source_repo" cat-file -e "$dkd_candidate^{commit}" 2>/dev/null; then
+                git -C "$dkd_source_repo" fetch origin "$dkd_candidate" --depth=1 || true
+              fi
+              if git -C "$dkd_source_repo" cat-file -e "$dkd_candidate^{commit}" 2>/dev/null && git -C "$dkd_source_repo" diff --quiet "$dkd_candidate" HEAD -- . ':(exclude).github/**'; then
+                dkd_signed_source="$dkd_candidate"
+                break
+              fi
+            fi
+            echo "Waiting for matching signed Android source ($dkd_try/90)."
+            sleep 30
+          done
+          test -n "$dkd_signed_source" || { echo 'DKD ERROR: matching signed Android source was not published in time.'; exit 1; }
+          curl --retry 20 --retry-delay 8 --retry-all-errors -fL "$dkd_release_base/$dkd_apk" -o "DraBornOdds/App/$dkd_apk"
           for dkd_name in SHA256.txt CERTIFICATE.txt SOURCE_COMMIT.txt; do
             curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/$dkd_name" -o "DraBornOdds/App/$dkd_name"
           done
           (cd DraBornOdds/App && sha256sum -c SHA256.txt)
-          dkd_signed_source="$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt)"
-          if ! git -C "$dkd_source_repo" cat-file -e "$dkd_signed_source^{commit}" 2>/dev/null; then
-            git -C "$dkd_source_repo" fetch origin "$dkd_signed_source" --depth=1
-          fi
-          if ! git -C "$dkd_source_repo" diff --quiet "$dkd_signed_source" HEAD -- . ':(exclude).github/**'; then
-            echo 'DKD ERROR: web source differs from the signed Android application source.'
-            git -C "$dkd_source_repo" diff --name-only "$dkd_signed_source" HEAD -- . ':(exclude).github/**'
-            exit 1
-          fi
+          test "$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt)" = "$dkd_signed_source"
           grep -q 'Signer #1 certificate SHA-256 digest' DraBornOdds/App/CERTIFICATE.txt
           printf '%s\n' "$dkd_version" > DraBornOdds/App/VERSION.txt
           printf '%s\n' "$dkd_code" > DraBornOdds/App/VERSION_CODE.txt
