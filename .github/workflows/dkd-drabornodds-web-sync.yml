@@ -1,3 +1,4 @@
+# DraBornOdds APK/web immediate sync trigger.
 name: DraBornOdds synchronized web
 on:
   push:
