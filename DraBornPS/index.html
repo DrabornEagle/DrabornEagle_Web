@@ -731,6 +731,118 @@ body.dkd-mobile-ui .project-strip{padding:13px 2px 2px;font-size:10px;gap:8px;fl
 body.dkd-mobile-ui .project-strip strong{font-size:13px}
 @media(max-width:370px){body.dkd-mobile-ui .main-nav{gap:10px}body.dkd-mobile-ui .main-nav button{font-size:15px}body.dkd-mobile-ui .topbar{padding-left:13px;padding-right:13px}}
 </style>
+<style id="dkd-v05-projects-modern-refresh">
+/* DraBornPS v0.5 — Projects visual refresh: realistic app mockup tiles + richer glass color system */
+.project-feature-go,.project-tile.go{--tone-a:#27d8ff;--tone-b:#ffc33d;--tone-c:#086d9d}
+.project-feature-park,.project-tile.park{--tone-a:#61f0b2;--tone-b:#1b9d70;--tone-c:#0a6e55}
+.project-feature-sea,.project-tile.sea{--tone-a:#55e9ff;--tone-b:#2a87ff;--tone-c:#046d9b}
+.project-feature-gate,.project-tile.gate{--tone-a:#b7c6ff;--tone-b:#6d79ff;--tone-c:#344b91}
+.project-feature-odds,.project-tile.odds{--tone-a:#ff6ee5;--tone-b:#9a63ff;--tone-c:#5c2aa0}
+.project-feature-portal,.project-tile.portal{--tone-a:#65edff;--tone-b:#5478ff;--tone-c:#2450b9}
+
+.project-rail{gap:20px;height:170px;padding-top:14px}
+.project-tile{width:92px;height:92px;min-width:92px;border-radius:21px;background:#09111e;box-shadow:0 13px 30px #0008,0 0 0 1px #ffffff10;transition:width .2s,height .2s,transform .2s,box-shadow .2s!important}
+.project-tile:hover{transform:translateY(-4px);box-shadow:0 18px 38px #0009,0 0 24px color-mix(in srgb,var(--tone-a) 28%,transparent)}
+.project-tile.selected{width:116px;height:116px;min-width:116px;border-radius:25px;outline:2px solid #fff;outline-offset:5px;box-shadow:0 20px 45px #0009,0 0 40px color-mix(in srgb,var(--tone-a) 36%,transparent)}
+.project-tile-art{position:absolute;inset:0;border-radius:inherit;overflow:hidden;background:
+ radial-gradient(circle at 82% 14%,color-mix(in srgb,var(--tone-a) 85%,transparent),transparent 34%),
+ radial-gradient(circle at 8% 94%,color-mix(in srgb,var(--tone-b) 58%,transparent),transparent 42%),
+ linear-gradient(145deg,#07101c 8%,color-mix(in srgb,var(--tone-c) 72%,#08111e) 58%,#08101a 100%)!important;
+box-shadow:inset 0 0 0 1px #ffffff16,inset 0 -20px 38px #0005}
+.project-tile-art:before{content:'';position:absolute;inset:0;width:auto;height:auto;border-radius:inherit;right:auto;top:auto;background:linear-gradient(120deg,#ffffff18,transparent 32%,transparent 70%,#ffffff0c);filter:none}
+.project-tile-art i{position:static;width:auto;height:auto;border-radius:0;background:none}
+.project-tile-aura{position:absolute;width:78%;height:78%;right:-25%;top:-22%;border-radius:50%;background:var(--tone-a);opacity:.18;filter:blur(16px)}
+.project-mini-device{position:absolute;left:50%;top:55%;width:58px;height:88px;transform:translate(-50%,-50%) rotate(6deg);border:3px solid #05080d;border-radius:12px;background:linear-gradient(180deg,#131e2d,#09111b);box-shadow:0 11px 22px #000b,0 0 0 1px #ffffff2e;padding:6px 5px 5px;display:flex;flex-direction:column;gap:4px;overflow:hidden}
+.project-tile.selected .project-mini-device{width:72px;height:106px;border-width:4px;border-radius:15px;padding:7px 6px 6px}
+.project-mini-device:before{content:'';position:absolute;top:2px;left:50%;width:18px;height:4px;transform:translateX(-50%);border-radius:5px;background:#020406}
+.project-mini-status{height:4px;display:flex;gap:2px;justify-content:flex-end;align-items:center;opacity:.8}
+.project-mini-status i{display:block!important;width:2px!important;height:2px!important;border-radius:50%!important;background:#dceaff!important}
+.project-mini-head{display:flex;align-items:center;gap:3px;min-width:0}
+.project-mini-head b{display:grid;place-items:center;width:12px;height:12px;border-radius:4px;background:#ffffff17;border:1px solid #ffffff1f;font-size:4px;line-height:1;color:#fff;letter-spacing:.1px}
+.project-mini-head small{font-size:4px;font-weight:600;color:#f5f8ff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:31px}
+.project-tile.selected .project-mini-head small{font-size:5px;max-width:41px}
+.project-mini-scene{min-height:26px;border-radius:7px;padding:5px 4px;background:linear-gradient(145deg,color-mix(in srgb,var(--tone-a) 18%,#ffffff08),#ffffff08);border:1px solid #ffffff12;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;position:relative}
+.project-mini-scene:after{content:'';position:absolute;width:22px;height:22px;right:-7px;top:-7px;border-radius:50%;background:var(--tone-a);opacity:.19;filter:blur(3px)}
+.project-mini-scene small{font-size:3px;letter-spacing:.35px;color:#bcd0e6;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;z-index:1}
+.project-mini-scene strong{font-size:8px;font-weight:500;line-height:1.1;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:relative;z-index:1}
+.project-tile.selected .project-mini-scene{min-height:34px;padding:6px 5px}
+.project-tile.selected .project-mini-scene small{font-size:4px}
+.project-tile.selected .project-mini-scene strong{font-size:10px}
+.project-mini-list{display:flex;flex-direction:column;gap:3px}
+.project-mini-list i{display:block!important;height:5px!important;border-radius:4px!important;background:linear-gradient(90deg,#ffffff1b,#ffffff08)!important;border:1px solid #ffffff0a}
+.project-mini-list i:nth-child(2){width:82%!important}
+.project-mini-list i:nth-child(3){width:67%!important}
+.project-tile-badge{position:absolute;left:7px;top:7px;display:flex;align-items:center;justify-content:center;min-width:18px;height:15px;padding:0 4px;border-radius:6px;background:#06101bdc;border:1px solid #ffffff1d;backdrop-filter:blur(8px);font-size:6px;font-weight:800;letter-spacing:.65px;color:#fff;text-shadow:0 1px 4px #000}
+.project-tile.selected .project-tile-badge{left:9px;top:9px;min-width:22px;height:18px;font-size:7px}
+.project-tile .tile-label{top:131px;font-size:18px;text-shadow:0 3px 14px #000}
+.project-tile.selected .tile-label{display:block}
+
+.projects-body{padding-top:2px}
+.project-feature{--tone-a:#63cfff;--tone-b:#6578ff;--tone-c:#154b78;isolation:isolate;border:1px solid color-mix(in srgb,var(--tone-a) 25%,#ffffff18);border-radius:34px;background:
+ radial-gradient(circle at 83% 13%,color-mix(in srgb,var(--tone-a) 44%,transparent),transparent 28%),
+ radial-gradient(circle at 9% 88%,color-mix(in srgb,var(--tone-b) 35%,transparent),transparent 34%),
+ linear-gradient(138deg,#111c2ad9 0%,color-mix(in srgb,var(--tone-c) 30%,#0b1522e8) 48%,#07101ce8 100%);
+box-shadow:0 30px 90px #0007,0 0 0 1px #ffffff05 inset}
+.project-feature:before{background:
+ linear-gradient(115deg,#ffffff0d,transparent 28%,transparent 68%,#ffffff08),
+ repeating-linear-gradient(90deg,#ffffff05 0 1px,transparent 1px 64px),
+ repeating-linear-gradient(0deg,#ffffff04 0 1px,transparent 1px 64px);mask-image:linear-gradient(90deg,#000b,transparent 78%)}
+.project-feature:after{content:'';position:absolute;right:-120px;bottom:-180px;width:540px;height:540px;border-radius:50%;border:1px solid color-mix(in srgb,var(--tone-a) 30%,transparent);box-shadow:0 0 0 48px color-mix(in srgb,var(--tone-a) 4%,transparent),0 0 0 96px color-mix(in srgb,var(--tone-b) 3%,transparent);pointer-events:none}
+.project-copy .tag{display:inline-flex;align-items:center;min-height:34px;padding:7px 13px;border-radius:999px;background:color-mix(in srgb,var(--tone-a) 12%,#07101bbb);border:1px solid color-mix(in srgb,var(--tone-a) 28%,#ffffff10);box-shadow:0 8px 28px #0003;color:#e9fbff!important}
+.project-copy .tag:before{content:'';width:7px;height:7px;border-radius:50%;background:var(--tone-a);box-shadow:0 0 16px var(--tone-a);margin-right:8px}
+.project-copy h1{font-weight:280;letter-spacing:-1.8px;text-shadow:0 8px 34px #0006;background:linear-gradient(92deg,#fff 15%,color-mix(in srgb,var(--tone-a) 70%,#fff));-webkit-background-clip:text;background-clip:text;color:transparent}
+.project-subtitle{color:#f5f9ff}
+.project-description{color:#b7c7db}
+.project-actions .pill{box-shadow:0 12px 30px #0004}
+.project-actions .pill.primary{background:linear-gradient(135deg,#fff,color-mix(in srgb,var(--tone-a) 28%,#fff));color:#0a1420}
+.project-play{background:linear-gradient(135deg,color-mix(in srgb,var(--tone-b) 16%,#ffffff0b),#ffffff0b);border-color:color-mix(in srgb,var(--tone-b) 30%,#ffffff18)}
+.project-showcase{position:relative}
+.project-showcase:before{content:'';position:absolute;width:78%;height:78%;border-radius:50%;background:radial-gradient(circle,color-mix(in srgb,var(--tone-a) 26%,transparent),transparent 65%);filter:blur(10px);animation:dkdProjectPulse 5s ease-in-out infinite}
+.project-visual{transform:perspective(1100px) rotateY(-4deg);border-color:color-mix(in srgb,var(--tone-a) 24%,#ffffff12);box-shadow:inset 0 0 90px #ffffff08,0 35px 80px #0007}
+.project-device{transform:rotate(4deg) translateY(-3px);box-shadow:0 30px 70px #000c,0 0 0 1px #ffffff35,0 0 44px color-mix(in srgb,var(--tone-a) 18%,transparent)}
+.project-visual-caption{display:inline-flex;align-items:center;padding:7px 10px;border-radius:999px;background:#06101bb5;border:1px solid #ffffff18;backdrop-filter:blur(10px)}
+.project-strip{margin-top:12px;padding:16px 20px;border:1px solid #ffffff12;border-radius:18px;background:linear-gradient(90deg,#ffffff09,#ffffff04);backdrop-filter:blur(14px)}
+.project-strip strong{padding:6px 12px;border-radius:999px;background:#ffffff0d;border:1px solid #ffffff10}
+@keyframes dkdProjectPulse{0%,100%{transform:scale(.94);opacity:.72}50%{transform:scale(1.04);opacity:1}}
+.reduced-motion .project-showcase:before{animation:none}
+
+body.dkd-mobile-ui .project-rail{height:124px;padding:11px 16px 23px;gap:13px}
+body.dkd-mobile-ui .project-tile{width:72px;height:72px;min-width:72px;border-radius:17px}
+body.dkd-mobile-ui .project-tile.selected{width:84px;height:84px;min-width:84px;border-radius:20px}
+body.dkd-mobile-ui .project-mini-device{width:46px;height:66px;border-width:3px;border-radius:10px;padding:5px 4px 4px;gap:3px}
+body.dkd-mobile-ui .project-tile.selected .project-mini-device{width:54px;height:76px;border-width:3px;border-radius:12px;padding:5px 4px 4px}
+body.dkd-mobile-ui .project-mini-device:before{width:14px;height:3px}
+body.dkd-mobile-ui .project-mini-head b{width:10px;height:10px;font-size:3px}
+body.dkd-mobile-ui .project-mini-head small{font-size:3px;max-width:25px}
+body.dkd-mobile-ui .project-tile.selected .project-mini-head small{font-size:4px;max-width:31px}
+body.dkd-mobile-ui .project-mini-scene{min-height:20px;padding:4px 3px;border-radius:6px}
+body.dkd-mobile-ui .project-mini-scene small{font-size:2.5px}
+body.dkd-mobile-ui .project-mini-scene strong{font-size:6px}
+body.dkd-mobile-ui .project-tile.selected .project-mini-scene{min-height:24px;padding:4px}
+body.dkd-mobile-ui .project-tile.selected .project-mini-scene strong{font-size:7px}
+body.dkd-mobile-ui .project-mini-list{gap:2px}
+body.dkd-mobile-ui .project-mini-list i{height:4px!important}
+body.dkd-mobile-ui .project-tile-badge{left:5px;top:5px;min-width:16px;height:13px;font-size:5px}
+body.dkd-mobile-ui .project-tile.selected .project-tile-badge{left:6px;top:6px;min-width:18px;height:14px;font-size:5px}
+body.dkd-mobile-ui .project-tile .tile-label{top:96px;font-size:11px}
+body.dkd-mobile-ui .projects-body{top:194px;padding:0 14px 24px}
+body.dkd-mobile-ui .project-feature{gap:16px;padding:22px 18px 19px;border-radius:25px}
+body.dkd-mobile-ui .project-copy .tag{min-height:27px;padding:5px 9px;font-size:9px}
+body.dkd-mobile-ui .project-copy .tag:before{width:5px;height:5px;margin-right:6px}
+body.dkd-mobile-ui .project-copy h1{font-size:39px;letter-spacing:-1px;margin-top:12px}
+body.dkd-mobile-ui .project-subtitle{font-size:17px}
+body.dkd-mobile-ui .project-description{font-size:13px}
+body.dkd-mobile-ui .project-showcase{min-height:286px}
+body.dkd-mobile-ui .project-visual{height:286px;border-radius:22px;transform:none}
+body.dkd-mobile-ui .project-strip{margin-top:10px;padding:12px 14px;border-radius:15px}
+@media(max-width:370px){
+ body.dkd-mobile-ui .project-rail{gap:10px;padding-left:13px;padding-right:13px}
+ body.dkd-mobile-ui .project-tile{width:66px;height:66px;min-width:66px}
+ body.dkd-mobile-ui .project-tile.selected{width:78px;height:78px;min-width:78px}
+ body.dkd-mobile-ui .project-tile .tile-label{top:90px}
+ body.dkd-mobile-ui .projects-body{top:188px}
+}
+</style>
 </head>
 <body>
   <div id="viewport"><div id="console" role="application" aria-label="PS5 browser simulator">
@@ -1069,7 +1181,16 @@ DKD.projectMockup=function projectMockup(project,compact=false){return `<div cla
   </div>
   <span class="project-visual-caption">${project.eyebrow}</span>
  </div>`;};
-DKD.projectTile=function projectTile(project){return `<span class="project-tile-art project-${project.theme}"><span class="project-tile-mark">${project.mark}</span><i></i><i></i><i></i></span><span class="tile-label">${project.title}</span>`;};
+DKD.projectTile=function projectTile(project){return `<span class="project-tile-art project-${project.theme}">
+ <span class="project-tile-aura"></span>
+ <span class="project-mini-device" aria-hidden="true">
+  <span class="project-mini-status"><i></i><i></i><i></i></span>
+  <span class="project-mini-head"><b>${project.mark}</b><small>${project.title}</small></span>
+  <span class="project-mini-scene"><small>${project.mockMeta}</small><strong>${project.mockValue}</strong></span>
+  <span class="project-mini-list"><i></i><i></i><i></i></span>
+ </span>
+ <span class="project-tile-badge">${project.mark}</span>
+ </span><span class="tile-label">${project.title}</span>`;};
 DKD.projectsView=function projectsView(){const project=DKD.project(DKD.projectSelection)||DKD.projects[0];return `<nav class="project-rail" aria-label="DraBornEagle Projects">${DKD.projects.map(item=>`<button class="project-tile ${item.theme} ${item.id===project.id?'selected':''}" data-action="project-select" data-id="${item.id}" aria-label="${item.title}" aria-pressed="${item.id===project.id}">${DKD.projectTile(item)}</button>`).join('')}</nav>
  <div class="projects-body">
   <section class="project-feature project-feature-${project.theme}">
