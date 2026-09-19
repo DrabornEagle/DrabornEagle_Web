@@ -170,7 +170,9 @@ body.dkd-mobile-ui .game-hero:has(.home-game-rating) .hero-actions{margin-top:12
 
 /* v0.6.6 profile + reset polish */
 .profile-identity-copy{padding-top:0;transform:translateY(15px)}
-.profile-identity-copy h3{margin-top:0}
+.profile-identity-copy h3{margin:0!important;line-height:1.12}
+.profile-identity-subline{margin:5px 0 0!important;line-height:1.2;color:#d0c6df;font-size:15px;white-space:nowrap}
 .dkd-danger-action{margin-top:16px;border-color:#ff8e9f4d!important;background:linear-gradient(120deg,#5a2236a6,#2b1730c2)!important;color:#ffd9e1!important}
 .dkd-danger-action:hover{background:linear-gradient(120deg,#713046c9,#3b1d39d6)!important}
 body.dkd-mobile-ui .profile-identity-copy{padding-top:0;transform:translateY(16px)}
+body.dkd-mobile-ui .profile-identity-subline{margin-top:4px!important;font-size:12px;line-height:1.15}
