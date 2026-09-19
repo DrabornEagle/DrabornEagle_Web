@@ -2,8 +2,8 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#091322"><meta name="description" content="DraBornPS — mobil ve masaüstünde çalışan bağımsız PS5 esintili tarayıcı konsol simülatörü.">
-  <title>DraBornPS · Console Experience</title>
+  <meta name="theme-color" content="#02060d"><meta name="description" content="DraBornPS v0.3 Software Update — mobil ve masaüstünde çalışan bağımsız konsol deneyimi.">
+  <title>DraBornPS v0.3 · Software Update</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230045b5'/%3E%3Cpath d='M18 20h10v24H18zm18 0h10v24H36z' fill='white'/%3E%3C/svg%3E">
   <style data-source="css/console.css">*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#03070e;color:#f4f6fa;font-family:'Segoe UI',Arial,sans-serif;font-weight:300}button,input,select{font:inherit}button{color:inherit;border:0;background:none;cursor:pointer}button:disabled{opacity:.45;cursor:default}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #fff;outline-offset:5px;box-shadow:0 0 18px #ffffff50}button:not(:disabled){transition:background .16s,transform .16s,box-shadow .16s}button:hover:not(:disabled){background-color:#ffffff16}button:active:not(:disabled){transform:scale(.98)}[hidden]{display:none!important}.icon{width:28px;height:28px;flex-shrink:0;vertical-align:middle}.muted{color:#a8afbd}.small{font-size:18px}.tiny{font-size:16px}.gold{color:#d8bc77}.row{display:flex;align-items:center;gap:18px}.between{justify-content:space-between}.stack{display:flex;flex-direction:column;gap:12px}.grow{flex:1}.pill{display:inline-flex;align-items:center;gap:12px;min-height:58px;border-radius:32px;background:#ffffff15;padding:14px 30px;font-size:22px;font-weight:400}.pill.primary{background:#f4f5f7;color:#151820;min-width:232px;justify-content:center}.pill.primary:hover{background:#fff;box-shadow:0 0 0 3px #121827,0 0 0 5px #f7f7f7}.pill.dark{background:#111723d9}.icon-btn{display:grid;place-items:center;width:50px;height:50px;border-radius:50%}.circle-btn{display:grid;place-items:center;border-radius:50%;background:#ffffff19;width:60px;height:60px}.circle-btn.active{color:#ffadbd}.badge{border:1px solid #ffffff70;padding:3px 7px;font-size:14px;line-height:1.2;letter-spacing:1px;border-radius:2px}.tag{display:inline-block;font-size:15px;letter-spacing:1px;font-weight:500;text-transform:uppercase;color:#c3cbd8}.separator{height:1px;background:#ffffff14;margin:24px 0}.progress{height:5px;background:#ffffff20;border-radius:5px;overflow:hidden}.progress>span{display:block;height:100%;background:#a7c6ff;border-radius:5px}.avatar{display:grid;place-items:center;width:50px;height:50px;border-radius:50%;background:linear-gradient(140deg,#8097a4,#294768);font-size:20px;font-weight:500;position:relative;border:2px solid #ffffff3a}.avatar:after{content:'';position:absolute;width:9px;height:9px;border:2px solid #112032;background:#69be92;border-radius:50%;bottom:0;right:0}.avatar.large{width:72px;height:72px;font-size:28px}.key{display:inline-flex;align-items:center;justify-content:center;min-width:27px;height:27px;border:1px solid #a0a6af;border-radius:5px;font-size:14px;padding:0 5px}.key.round{border-radius:50%;padding:0;font-size:18px}#viewport{width:100%;height:100%;display:grid;place-items:center}#console{position:relative;width:1920px;height:1080px;flex-shrink:0;overflow:hidden;background:#08111f;transform-origin:center;isolation:isolate}#screen{position:absolute;inset:0;z-index:2}#wallpaper{position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 73% 18%,#2c506b99,transparent 60%),radial-gradient(ellipse at 30% 90%,#24375d,transparent 70%),#08111f}.wallpaper-layer{position:absolute;inset:-16px;background-size:cover;background-position:center;opacity:0;transform:scale(1.04);transition:opacity .7s ease,transform 5s ease}.wallpaper-layer.shown{opacity:1;transform:scale(1)}.wallpaper-shade{position:absolute;inset:0;background:linear-gradient(90deg,#070d18bf,transparent 75%),linear-gradient(0deg,#050a14e8 0%,transparent 65%,#0308118c)}.ambient{position:absolute;inset:0;pointer-events:none;opacity:.5;background-image:radial-gradient(circle at 12% 20%,#acc8ed44 0 1px,transparent 2px),radial-gradient(circle at 60% 70%,#b6d7ff44 0 1px,transparent 2px),radial-gradient(circle at 85% 23%,#ffffff44 0 1px,transparent 2px);background-size:280px 200px,440px 460px,330px 370px;mask-image:linear-gradient(0deg,black,transparent 70%)}.topbar{height:126px;padding:39px 94px;display:flex;align-items:center;justify-content:space-between}.main-nav{display:flex;gap:46px}.main-nav button{font-size:30px;line-height:1.2;font-weight:300;padding:6px 0;color:#939aa6;border-radius:3px}.main-nav button.active{color:white;text-shadow:0 0 20px #ffffff35}.top-right{display:flex;gap:36px;align-items:center}.top-right .avatar{width:40px;height:40px;font-size:14px}.top-right time{font-size:26px;font-variant-numeric:tabular-nums;min-width:102px;text-align:right}.game-rail{display:flex;gap:18px;align-items:flex-start;height:152px;padding:13px 100px 0}.game-tile{position:relative;display:flex;align-items:center;justify-content:center;width:76px;height:76px;border-radius:15px;background:#17263a;flex-shrink:0;box-shadow:0 3px 16px #0004;transition:width .2s,height .2s!important;overflow:visible}.game-tile>img{width:100%;height:100%;object-fit:cover;object-position:75% 50%;border-radius:13px}.game-tile .icon{width:38px;height:38px}.game-tile.selected{height:100px;width:100px;background-color:#264a66;outline:2px solid #fff;outline-offset:5px;box-shadow:0 0 28px #ffffff34}.tile-label{display:none;position:absolute;top:118px;left:0;font-size:21px;white-space:nowrap;font-weight:300}.game-tile.selected .tile-label{display:block}.game-tile .tile-title{position:absolute;bottom:10px;left:4px;right:4px;font-size:12px;text-align:center;text-shadow:0 2px 6px black;font-weight:700;letter-spacing:.5px}.game-tile.store{background:linear-gradient(140deg,#136de5,#063f98)}.game-tile.plus{background:linear-gradient(140deg,#e3cf8c,#a28028);color:#fff2b9}.game-tile.library{margin-left:12px;background:#b7bec91c}.tile-mini-status{position:absolute;right:6px;top:6px;width:7px;height:7px;background:#bcd8ff;border-radius:50%}.home-body{padding:0 100px}.welcome-heading{display:flex;align-items:center;justify-content:space-between;margin-top:52px;margin-bottom:30px}.welcome-heading h1{font-size:36px;font-weight:300;margin:0 0 11px}.welcome-heading p{color:#aeb8c8;font-size:21px;margin:0}.welcome-actions{display:flex;gap:12px}.welcome-actions .pill{font-size:18px;min-height:46px;padding:10px 22px}.welcome-actions .icon{width:22px;height:22px}.widgets{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:214px;gap:20px;max-height:535px;overflow:auto;padding:7px;margin:-7px;scrollbar-width:thin;scrollbar-color:#ffffff33 transparent}.widget{position:relative;grid-column:span var(--span);border:1px solid #ffffff12;border-radius:15px;background:linear-gradient(120deg,#1a2536d9,#101b2bdd);box-shadow:0 10px 20px #0001;overflow:hidden;min-width:0}.widget-main{padding:24px 26px;width:100%;height:100%;text-align:left;display:flex;flex-direction:column;align-items:flex-start}.widget-title{display:flex;align-items:center;gap:10px;font-size:19px;margin-bottom:23px;color:#d7dfe9;width:100%}.widget-title .icon{width:22px;height:22px}.widget-big{font-size:38px;font-weight:300}.widget-detail{font-size:17px;color:#acb8c8;margin-top:8px}.friend-avatars{display:flex;gap:12px;align-items:center}.friend-avatars .avatar{width:54px;height:54px}.friend-summary{margin-left:10px;font-size:20px}.battery-meter{display:flex;width:76px;height:34px;border:2px solid #d8e4f3;border-radius:6px;gap:5px;padding:5px;position:relative;margin:4px 0}.battery-meter:after{content:'';position:absolute;right:-7px;top:9px;width:5px;height:12px;background:#d8e4f3;border-radius:0 3px 3px 0}.battery-meter span{background:#d8e4f3;flex:1;border-radius:1px}.widget.storage .progress{width:100%;margin-top:16px;height:7px}.storage-stats{display:flex;align-items:baseline;gap:9px}.storage-stats small{font-size:17px;color:#c0cad8}.trophy-display{display:flex;align-items:center;gap:18px}.trophy-display>.icon{width:50px;height:50px;color:#d4bc82}.widget.wishlist img{width:73px;height:78px;object-fit:cover;object-position:73%;border-radius:8px}.widget.wishlist .widget-title{margin-bottom:16px}.widget.store{background:#102531}.widget.store:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,#152137 18%,#15213744 70%),url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxOTIwIDEwODAiPjxkZWZzPjxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj48c3RvcCBzdG9wLWNvbG9yPSIjMDcwYTFkIi8+PHN0b3Agb2Zmc2V0PSIuNDgiIHN0b3AtY29sb3I9IiMyNDNhNjciLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4OGI5YzciLz48L2xpbmVhckdyYWRpZW50PjxyYWRpYWxHcmFkaWVudCBpZD0ib3JiIj48c3RvcCBzdG9wLWNvbG9yPSIjZmZmIi8+PHN0b3Agb2Zmc2V0PSIuMTgiIHN0b3AtY29sb3I9IiNiOGZiZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM2OWE2ZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvcmFkaWFsR3JhZGllbnQ+PGZpbHRlciBpZD0iYmx1ciI+PGZlR2F1c3NpYW5CbHVyIHN0ZERldmlhdGlvbj0iMjIiLz48L2ZpbHRlcj48L2RlZnM+PHJlY3Qgd2lkdGg9IjE5MjAiIGhlaWdodD0iMTA4MCIgZmlsbD0idXJsKCNiZykiLz48Y2lyY2xlIGN4PSIxNDIwIiBjeT0iMjk1IiByPSIzMTAiIGZpbGw9InVybCgjb3JiKSIgb3BhY2l0eT0iLjY4Ii8+PHBhdGggZD0iTTAgNzkwQzMzMCA2NjAgNTIwIDcyMCA3ODAgNjYwczQxMC0yMTAgNjUwLTEyMCAzMzAgMjAwIDQ5MCAxNzB2MzcwSDB6IiBmaWxsPSIjMTExNjJlIi8+PHBhdGggZD0iTTAgODYwYzMyMC04NSA1MzAgNDUgNzkwLTIwczQyMC0xODAgNjQwLTcwIDMwMCAxMTUgNDkwIDgwdjIzMEgweiIgZmlsbD0iIzA5MGQxYyIvPjxnIGZpbGw9IiM5Y2Y5ZmYiIG9wYWNpdHk9Ii45Ij48Y2lyY2xlIGN4PSI4NzAiIGN5PSI1NDAiIHI9IjE2Ii8+PGNpcmNsZSBjeD0iOTU0IiBjeT0iNDg4IiByPSIxMCIvPjxjaXJjbGUgY3g9IjEwMzAiIGN5PSI0MzAiIHI9IjciLz48L2c+PGcgZmlsdGVyPSJ1cmwoI2JsdXIpIiBvcGFjaXR5PSIuNTUiPjxjaXJjbGUgY3g9Ijg3MCIgY3k9IjU0MCIgcj0iNTAiIGZpbGw9IiM4MGVkZmYiLz48Y2lyY2xlIGN4PSI5NTQiIGN5PSI0ODgiIHI9IjMyIiBmaWxsPSIjODBlZGZmIi8+PC9nPjxwYXRoIGQ9Ik04MTAgNzgwYzAtMTA1IDY4LTE4NSAxNDUtMTg1czE0NCA4MCAxNDQgMTg1IiBmaWxsPSJub25lIiBzdHJva2U9IiNjN2Y3ZmYiIHN0cm9rZS13aWR0aD0iMTAiIG9wYWNpdHk9Ii41NSIvPjx0ZXh0IHg9IjEwOCIgeT0iMjEwIiBmaWxsPSJ3aGl0ZSIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjEyMiIgZm9udC13ZWlnaHQ9IjMwMCIgbGV0dGVyLXNwYWNpbmc9IjI0Ij5MVU1FTjwvdGV4dD48dGV4dCB4PSIxMTciIHk9IjI2OCIgZmlsbD0iI2M5ZGNmNyIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjI2IiBsZXR0ZXItc3BhY2luZz0iOCI+VEhFIExJR0hUIEJFVFdFRU4gV09STERTPC90ZXh0Pjwvc3ZnPgo=') center 59%/cover;pointer-events:none}.widget.store .widget-main{position:relative;justify-content:center}.widget.store h3{font-size:29px;font-weight:300;margin:0 0 11px}.widget.store .widget-title{margin-bottom:18px}.widget.store .widget-detail{color:#cad8e5}.widget-edit-tools{display:flex;gap:6px;position:absolute;right:10px;top:10px;z-index:2;background:#080f20ee;border-radius:8px;padding:4px}.widget-edit-tools button{width:32px;height:32px;border-radius:4px}.widget-edit-tools .icon{width:19px;height:19px}.widgets.editing .widget{border:1px dashed #b0bfd8;cursor:grab}.widgets.editing .widget-main{pointer-events:none}.widget.drag-over{outline:3px solid white}.game-hero{position:absolute;left:100px;top:480px;width:720px}.game-wordmark{font-weight:300;font-size:80px;letter-spacing:9px;line-height:1.05;max-width:810px;text-shadow:0 3px 35px #0007;margin:0 0 18px}.game-wordmark.apex{font-style:italic;font-weight:800;letter-spacing:-2px}.game-wordmark.lumen{letter-spacing:16px}.game-wordmark.orbital{font-weight:600;letter-spacing:12px}.hero-subtitle{font-size:24px;color:#e0e6ef;margin:0 0 33px}.hero-actions{display:flex;gap:16px;align-items:center;margin-top:32px}.hero-meta{display:flex;gap:13px;align-items:center;font-size:19px;color:#bfc8d5}.hero-bottom{position:absolute;right:100px;bottom:151px;display:flex;gap:34px;align-items:center;color:#ccd4df}.hero-bottom strong{display:block;font-size:28px;font-weight:300;color:white;margin-top:10px}#system-footer{position:absolute;z-index:9;left:100px;right:100px;bottom:28px;display:flex;align-items:center;justify-content:space-between;color:#b3bdcc;font-size:16px}.footer-ps{display:flex;align-items:center;gap:13px;padding:8px 12px;border-radius:8px;font-size:17px}.footer-ps .icon{width:28px;height:28px}.footer-hints{display:flex;align-items:center;gap:24px}.footer-hints span{display:flex;align-items:center;gap:8px}.toast{position:absolute;z-index:80;right:54px;top:46px;min-width:360px;max-width:560px;background:#e8edf4f5;color:#151b26;box-shadow:0 15px 70px #0007;border-radius:12px;padding:23px 28px;display:flex;align-items:center;gap:18px;animation:toast-in .25s ease}.toast strong{font-size:21px;display:block;font-weight:500}.toast p{font-size:17px;margin:6px 0 0;color:#4d5767}@keyframes toast-in{from{transform:translateX(60px);opacity:0}to{transform:none;opacity:1}}.reduced-motion *{animation:none!important;transition:none!important}.high-contrast .widget,.high-contrast .panel,.high-contrast .modal{background:#05080e}.large-text .small,.large-text .tiny,.large-text .widget-detail{font-size:22px}.large-text .setting-row{font-size:26px}.ps-shapes{font-size:28px;letter-spacing:16px;color:#b8c6d548}.empty{text-align:center;padding:80px 20px;color:#bac6d7;font-size:24px}.empty>.icon{width:64px;height:64px;margin-bottom:20px}
 .welcome-heading{margin-top:98px}
@@ -417,6 +417,84 @@ body.dkd-mobile-ui .game-controls{padding:13px 14px;border-radius:13px;font-size
   body.dkd-mobile-ui #console{height:100dvh!important;min-height:100dvh!important}
 }
 </style>
+
+<style id="dkd-v03-software-update">
+/* DraBornPS v0.3 Software Update */
+html,body{min-height:100%;min-height:100dvh;background:#02060d}
+body.dkd-mobile-ui{min-height:100dvh;background:#02060d}
+body.dkd-mobile-ui #viewport{
+  position:fixed!important;inset:0!important;
+  width:100%!important;height:100dvh!important;min-height:100dvh!important;
+  padding:0!important;background:#02060d
+}
+body.dkd-mobile-ui #console{
+  position:fixed!important;inset:0!important;left:0!important;top:0!important;
+  width:100%!important;height:100dvh!important;min-width:100%!important;min-height:100dvh!important;
+  transform:none!important;background:#07111e
+}
+body.dkd-mobile-ui #screen,
+body.dkd-mobile-ui #game-host,
+body.dkd-mobile-ui #control-center{
+  position:absolute;inset:0;width:100%;height:100%;min-height:100%
+}
+body.dkd-mobile-ui .page,
+body.dkd-mobile-ui .product-screen{
+  height:100%;min-height:100%;padding-bottom:calc(92px + env(safe-area-inset-bottom))
+}
+body.dkd-mobile-ui .cc-overlay,
+body.dkd-mobile-ui .power-screen,
+body.dkd-mobile-ui .game-session{height:100%;min-height:100%}
+body.dkd-mobile-ui #system-footer{
+  bottom:0!important;
+  padding-bottom:calc(9px + env(safe-area-inset-bottom))
+}
+
+/* Wider game art cards: landscape artwork now fills the card cleanly. */
+body.dkd-mobile-ui .game-rail{
+  height:116px;padding:10px 16px 22px;gap:15px
+}
+body.dkd-mobile-ui .game-tile{
+  width:74px;height:68px;min-width:74px;min-height:68px;border-radius:15px
+}
+body.dkd-mobile-ui .game-tile>img{
+  width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;border-radius:14px
+}
+body.dkd-mobile-ui .game-tile.selected{
+  width:86px;height:78px;min-width:86px;min-height:78px
+}
+body.dkd-mobile-ui .tile-label{top:89px;max-width:116px}
+body.dkd-mobile-ui .game-tile .tile-title{font-size:9px;bottom:6px}
+body.dkd-mobile-ui .home-body{top:186px}
+body.dkd-mobile-ui .home-body:has(.game-hero){top:186px}
+
+/* LUMEN + ORBITAL touch clusters sit slightly lower on portrait phones. */
+body.dkd-mobile-ui .game-session.game-lumen .touch-pad,
+body.dkd-mobile-ui .game-session.game-orbital .touch-pad{bottom:112px}
+body.dkd-mobile-ui .game-session.game-lumen .touch-actions,
+body.dkd-mobile-ui .game-session.game-orbital .touch-actions{bottom:122px}
+
+/* In-app pull to refresh. */
+#dkd-pull-refresh{
+  position:fixed;z-index:250;left:50%;top:8px;
+  transform:translate(-50%,-72px);
+  min-width:132px;height:38px;padding:0 15px;border-radius:22px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:#e9f2ff;color:#0b1728;font:600 12px/1 ConsoleSans,'Segoe UI',sans-serif;
+  box-shadow:0 10px 34px #0008;opacity:0;pointer-events:none;
+  transition:transform .18s ease,opacity .18s ease
+}
+body.dkd-mobile-ui #dkd-pull-refresh.show{opacity:1}
+#dkd-pull-refresh.ready{background:#fff}
+#dkd-pull-refresh .dkd-refresh-mark{font-size:17px;line-height:1}
+#dkd-pull-refresh.refreshing .dkd-refresh-mark{animation:dkd-refresh-spin .7s linear infinite}
+@keyframes dkd-refresh-spin{to{transform:rotate(360deg)}}
+
+@media (max-height:720px){
+  body.dkd-mobile-ui #viewport,
+  body.dkd-mobile-ui #console{height:100dvh!important;min-height:100dvh!important}
+}
+</style>
+
 </head>
 <body>
   <div id="viewport"><div id="console" role="application" aria-label="PS5 browser simulator">
@@ -490,11 +568,17 @@ DKD.art = id => DKD.artMap[DKD.game(id)?.art || id] || DKD.artMap.apex;
 DKD.price = value => new Intl.NumberFormat('tr-TR',{style:'currency',currency:'TRY',maximumFractionDigits:2}).format(value);
 DKD.friends = [{name:'Nova',game:'LUMEN',color:'#729ac6'},{name:'Kai',game:'APEX DRIFT',color:'#c4887e'},{name:'Mira',game:'ORBITAL',color:'#a78cc5'}];
 </script><script data-source="js/state.js">(() => {
- const defaults = () => ({version:1,owned:['apex','lumen','orbital','last-mile','shift-error'],installed:['apex','lumen','orbital','last-mile','shift-error'],downloads:{},wishlist:['lumen-echoes','apex-nightfall'],recent:[],scores:{},trophies:[],notifications:[],settings:{volume:65,music:false,mic:false,reducedMotion:false,contrast:false,textSize:'Normal',network:true,status:'Online',resolution:'1920 × 1080',hdr:false,brightness:70,vibration:true,controllerSpeaker:50,autoRest:'20 minutes',privacy:'Friends only',parental:'No restrictions',difficulty:'Normal',subtitles:true},widgets:[{id:'friends',size:2},{id:'battery',size:1},{id:'storage',size:2},{id:'trophies',size:1},{id:'wishlist',size:2},{id:'store',size:4}],wallpaper:'default',profile:{name:'DrabornEagle',color:0},transactions:[]});
+ const defaults = () => ({version:3,owned:['last-mile','shift-error','apex','lumen','orbital'],installed:['last-mile','shift-error','apex','lumen','orbital'],downloads:{},wishlist:['lumen-echoes','apex-nightfall'],recent:[],scores:{},trophies:[],notifications:[],settings:{volume:65,music:true,mic:false,reducedMotion:false,contrast:false,textSize:'Normal',network:true,status:'Online',resolution:'1920 × 1080',hdr:false,brightness:70,vibration:true,controllerSpeaker:50,autoRest:'20 minutes',privacy:'Friends only',parental:'No restrictions',difficulty:'Normal',subtitles:true},widgets:[{id:'friends',size:2},{id:'battery',size:1},{id:'storage',size:2},{id:'trophies',size:1},{id:'wishlist',size:2},{id:'store',size:4}],wallpaper:'default',profile:{name:'DrabornEagle',color:0},transactions:[]});
  let saved; try {saved=JSON.parse(localStorage.getItem('dkd_ps5_state'));} catch {}
  const base=defaults();DKD.state={...base,...saved,settings:{...base.settings,...saved?.settings},profile:{...base.profile,...saved?.profile}};
+ const dkdV03Upgrade=(DKD.state.version||0)<3;
+ if(dkdV03Upgrade){DKD.state.version=3;DKD.state.settings.music=true;}
  ['last-mile','shift-error'].forEach(id=>{if(!DKD.state.owned.includes(id))DKD.state.owned.push(id);if(!DKD.state.installed.includes(id))DKD.state.installed.push(id);});
+ const dkdPriority=['last-mile','shift-error'];
+ DKD.state.installed=[...dkdPriority.filter(id=>DKD.state.installed.includes(id)),...DKD.state.installed.filter(id=>!dkdPriority.includes(id))];
+ DKD.state.owned=[...dkdPriority.filter(id=>DKD.state.owned.includes(id)),...DKD.state.owned.filter(id=>!dkdPriority.includes(id))];
  DKD.persist = () => {try {localStorage.setItem('dkd_ps5_state',JSON.stringify(DKD.state));}catch {DKD.toast?.('Storage is full. This session is still available.');}document.dispatchEvent(new CustomEvent('dkd-state'));};
+ if(dkdV03Upgrade)DKD.persist();
  DKD.notify = (title,body='') => {DKD.state.notifications.unshift({id:Date.now(),title,body,date:new Date().toISOString()});DKD.state.notifications=DKD.state.notifications.slice(0,30);DKD.persist();DKD.toast?.(title,body);};
  DKD.download = id => {if(DKD.state.installed.includes(id)||DKD.state.downloads[id]) return;DKD.state.downloads[id]={progress:0,paused:false};DKD.persist();DKD.notify('Added to Downloads',DKD.game(id).title);};
  DKD.buy = id => {if(DKD.state.owned.includes(id))return false;DKD.state.owned.push(id);DKD.state.transactions.push({id,date:new Date().toISOString(),amount:DKD.game(id).price,type:'demo'});DKD.persist();DKD.download(id);return true;};
@@ -503,20 +587,90 @@ DKD.friends = [{name:'Nova',game:'LUMEN',color:'#729ac6'},{name:'Kai',game:'APEX
  setInterval(()=>{let changed=false;for(const [id,download] of Object.entries(DKD.state.downloads)){if(download.paused||DKD.powerState==='off'||!DKD.state.settings.network)continue;download.progress=Math.min(100,download.progress+3+Math.random()*4);changed=true;if(download.progress>=100){if(!DKD.state.installed.includes(id))DKD.state.installed.push(id);delete DKD.state.downloads[id];DKD.notify('Ready to play',DKD.game(id).title);}}if(changed){DKD.persist();DKD.refreshDownloads?.();}},800);
 })();
 </script><script data-source="js/audio.js">DKD.audio = {
- context:null,musicTimer:null,
- init(){if(!this.context){try{this.context=new(window.AudioContext||window.webkitAudioContext)();}catch{}}if(this.context?.state==='suspended')this.context.resume();},
- tone(freq=440,duration=.09,type='sine',gain=.045){if(!this.context||!DKD.state.settings.volume)return;const now=this.context.currentTime;const osc=this.context.createOscillator(),amp=this.context.createGain();osc.type=type;osc.frequency.setValueAtTime(freq,now);amp.gain.setValueAtTime(gain*DKD.state.settings.volume/100,now);amp.gain.exponentialRampToValueAtTime(.0001,now+duration);osc.connect(amp).connect(this.context.destination);osc.start(now);osc.stop(now+duration);},
+ context:null,musicTimer:null,musicEl:null,musicUrl:null,musicTrack:null,musicLoadPromise:null,switching:false,
+ tracks:[
+  {name:'InnerLight',start:0,end:258.86},
+  {name:'SeMeNota',start:258.90,end:435.04}
+ ],
+ musicParts:Array.from({length:17},(_,index)=>`assets/audio/dkd-home-mix-${String(index).padStart(2,'0')}.b64`),
+ init(){
+  if(!this.context){try{this.context=new(window.AudioContext||window.webkitAudioContext)();}catch{}}
+  if(this.context?.state==='suspended')this.context.resume();
+ },
+ tone(freq=440,duration=.09,type='sine',gain=.045){
+  if(!this.context||!DKD.state.settings.volume)return;
+  const now=this.context.currentTime,osc=this.context.createOscillator(),amp=this.context.createGain();
+  osc.type=type;osc.frequency.setValueAtTime(freq,now);
+  amp.gain.setValueAtTime(gain*DKD.state.settings.volume/100,now);
+  amp.gain.exponentialRampToValueAtTime(.0001,now+duration);
+  osc.connect(amp).connect(this.context.destination);osc.start(now);osc.stop(now+duration);
+ },
  click(){this.tone(700,.055,'sine',.025);},
  collect(){this.tone(660,.12);setTimeout(()=>this.tone(990,.2),65);},
  hit(){this.tone(95,.22,'sawtooth',.07);if(DKD.state.settings.vibration){try{const actuator=navigator.getGamepads?.()?.[0]?.vibrationActuator;actuator?.playEffect('dual-rumble',{duration:150,strongMagnitude:.35,weakMagnitude:.55})?.catch(()=>{});}catch{}}},
- setMusic(on){clearInterval(this.musicTimer);this.musicTimer=null;if(on){this.init();let step=0;const notes=[130.81,164.81,196,261.63,196,164.81,146.83,196];this.musicTimer=setInterval(()=>{if(DKD.powerState)return;this.tone(notes[step++%notes.length],1.6,'sine',.025);},600);}}
+ async preload(){
+  if(this.musicEl)return this.musicEl;
+  if(this.musicLoadPromise)return this.musicLoadPromise;
+  this.musicLoadPromise=(async()=>{
+   const parts=await Promise.all(this.musicParts.map(url=>fetch(url,{cache:'force-cache'}).then(response=>{
+    if(!response.ok)throw new Error('Music asset '+response.status);
+    return response.text();
+   })));
+   const encoded=parts.join('').replace(/\s+/g,'');
+   const raw=atob(encoded),bytes=new Uint8Array(raw.length);
+   for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
+   this.musicUrl=URL.createObjectURL(new Blob([bytes],{type:'audio/webm'}));
+   const audio=new Audio(this.musicUrl);
+   audio.preload='auto';audio.volume=1;
+   audio.addEventListener('timeupdate',()=>{
+    if(this.musicTrack&&!audio.paused&&audio.currentTime>=this.musicTrack.end-.12)this.playRandomTrack();
+   });
+   audio.addEventListener('ended',()=>this.playRandomTrack());
+   audio.addEventListener('error',()=>{this.musicTrack=null;});
+   this.musicEl=audio;
+   return audio;
+  })().catch(error=>{this.musicLoadPromise=null;console.warn('DraBornPS music:',error);return null;});
+  return this.musicLoadPromise;
+ },
+ async playRandomTrack(){
+  if(this.switching||!DKD.state.settings.music||DKD.route!=='home'||DKD.powerState)return;
+  this.switching=true;
+  try{
+   const audio=await this.preload();if(!audio)return;
+   if(audio.readyState<1)await new Promise(resolve=>{
+    const done=()=>resolve();audio.addEventListener('loadedmetadata',done,{once:true});setTimeout(done,1800);
+   });
+   let next=this.tracks[Math.floor(Math.random()*this.tracks.length)];
+   if(this.musicTrack&&this.tracks.length>1&&next.name===this.musicTrack.name)next=this.tracks.find(track=>track.name!==next.name)||next;
+   this.musicTrack=next;
+   audio.volume=1;
+   try{audio.currentTime=next.start;}catch{}
+   await audio.play().catch(()=>{});
+  }finally{this.switching=false;}
+ },
+ async setMusic(on){
+  clearInterval(this.musicTimer);this.musicTimer=null;
+  if(!on||DKD.route!=='home'||DKD.powerState){this.pauseMusic();return;}
+  const audio=await this.preload();if(!audio)return;
+  audio.volume=1;
+  if(!this.musicTrack||audio.currentTime<this.musicTrack.start||audio.currentTime>=this.musicTrack.end-.12)return this.playRandomTrack();
+  if(audio.paused)await audio.play().catch(()=>{});
+ },
+ pauseMusic(){if(this.musicEl&&!this.musicEl.paused)this.musicEl.pause();},
+ bindUnlock(){
+  const unlock=()=>{this.init();if(DKD.state.settings.music&&DKD.route==='home')this.setMusic(true);};
+  document.addEventListener('pointerdown',unlock,{passive:true});
+  document.addEventListener('touchstart',unlock,{passive:true});
+ }
 };
+DKD.audio.preload();
+DKD.audio.bindUnlock();
 </script>
   <script data-source="games/engine.js">DKD.sessions={};DKD.engines={};
 DKD.input={keys:new Set(),pressed:new Set(),pointer:{x:800,y:300,down:false,active:false},pad:{x:0,y:0,aimX:0,aimY:0,fire:false,jump:false,boost:false,dash:false},down(...keys){return keys.some(key=>this.keys.has(key));},hit(...keys){return keys.some(key=>this.pressed.has(key));},clear(){this.keys.clear();this.pressed.clear();this.pointer.down=false;}};
 DKD.clamp=(value,min,max)=>Math.max(min,Math.min(max,value));
 DKD.GameSession=class{
- constructor(game){this.game=game;this.started=false;this.paused=true;this.over=false;this.running=true;this.last=0;this.hudTime=0;this.messageTimer=0;this.root=document.createElement('section');this.root.className='game-session';this.root.innerHTML=`<canvas width="1600" height="900" aria-label="${game.title} game canvas"></canvas><div class="game-hud" aria-live="off"></div><div class="game-message"></div><div class="game-help">${game.controls}</div><div class="game-toolbar"><button data-action="game-pause">${DKD.icon('pause')} Pause</button><button data-action="control-center">${DKD.icon('ps')} Control Center</button></div><div class="touch-pad"><button class="up" data-game-key="KeyW" aria-label="Move up">↑</button><button class="left" data-game-key="KeyA" aria-label="Move left">←</button><button class="down" data-game-key="KeyS" aria-label="Move down">↓</button><button class="right" data-game-key="KeyD" aria-label="Move right">→</button></div><div class="touch-actions"><button class="touch-jump" data-game-key="Space">${game.engine==='platformer'?'Jump':'Fire'}</button><button class="touch-boost" data-game-key="${game.engine==='shooter'?'KeyE':'ShiftLeft'}">${game.engine==='shooter'?'Dash':'Boost'}</button></div><div class="game-overlay"></div>`;
+ constructor(game){this.game=game;this.started=false;this.paused=true;this.over=false;this.running=true;this.last=0;this.hudTime=0;this.messageTimer=0;this.root=document.createElement('section');this.root.className='game-session game-'+game.id.replace(/[^a-z0-9-]/gi,'').toLowerCase();this.root.innerHTML=`<canvas width="1600" height="900" aria-label="${game.title} game canvas"></canvas><div class="game-hud" aria-live="off"></div><div class="game-message"></div><div class="game-help">${game.controls}</div><div class="game-toolbar"><button data-action="game-pause">${DKD.icon('pause')} Pause</button><button data-action="control-center">${DKD.icon('ps')} Control Center</button></div><div class="touch-pad"><button class="up" data-game-key="KeyW" aria-label="Move up">↑</button><button class="left" data-game-key="KeyA" aria-label="Move left">←</button><button class="down" data-game-key="KeyS" aria-label="Move down">↓</button><button class="right" data-game-key="KeyD" aria-label="Move right">→</button></div><div class="touch-actions"><button class="touch-jump" data-game-key="Space">${game.engine==='platformer'?'Jump':'Fire'}</button><button class="touch-boost" data-game-key="${game.engine==='shooter'?'KeyE':'ShiftLeft'}">${game.engine==='shooter'?'Dash':'Boost'}</button></div><div class="game-overlay"></div>`;
  this.canvas=this.root.querySelector('canvas');this.ctx=this.canvas.getContext('2d',{alpha:false});this.hud=this.root.querySelector('.game-hud');this.overlay=this.root.querySelector('.game-overlay');this.background=new Image();this.background.src=DKD.art(game.id);this.sim=DKD.engines[game.engine](this);this.sim.reset();this.renderMenu('start');this.sim.render(this.ctx);this.updateHUD();this.loop=this.loop.bind(this);this.frame=requestAnimationFrame(this.loop);this.root.querySelector('.game-help').hidden=!DKD.state.settings.subtitles;
  this.canvas.addEventListener('pointermove',event=>{const rect=this.canvas.getBoundingClientRect();DKD.input.pointer.x=(event.clientX-rect.left)/rect.width*1600;DKD.input.pointer.y=(event.clientY-rect.top)/rect.height*900;DKD.input.pointer.active=true;});this.canvas.addEventListener('pointerdown',()=>{DKD.input.pointer.down=true;DKD.audio.init();});
  }
@@ -534,7 +688,7 @@ DKD.GameSession=class{
  message(text,duration=2.4){this.root.querySelector('.game-message').textContent=text;this.messageTimer=duration;}
  destroy(){this.saveScore();this.running=false;cancelAnimationFrame(this.frame);this.root.remove();}
 };
-DKD.launch=id=>{const game=DKD.game(id);if(!game)return;if(game.external&&game.externalUrl){DKD.activeSession?.pause?.();DKD.activeSession=null;DKD.closeModal();DKD.closeCC(false);Object.values(DKD.sessions).forEach(session=>session.root.hidden=true);const host=document.getElementById('game-host');host.innerHTML=`<section class="external-game-session"><iframe class="external-game-frame" src="${game.externalUrl}" title="${DKD.escape(game.title)}" allow="fullscreen; autoplay; gamepad"></iframe><div class="external-game-bar"><button data-action="home" aria-label="DraBornPS Home">${DKD.icon('ps')}<span>DraBornPS</span></button><span class="external-game-brand">DraBorn<b>Games</b> · ${DKD.escape(game.title)}</span></div></section>`;host.hidden=false;DKD.route='game';DKD.screen.hidden=true;document.getElementById('system-footer').hidden=true;DKD.state.recent=[id,...DKD.state.recent.filter(value=>value!==id)].slice(0,6);DKD.persist();return;}if(!DKD.state.installed.includes(id)){DKD.navigate('product',id);return;}DKD.activeSession?.pause();DKD.closeModal();DKD.closeCC(false);Object.values(DKD.sessions).forEach(session=>session.root.hidden=true);let session=DKD.sessions[id];if(!session){session=new DKD.GameSession(game);DKD.sessions[id]=session;document.getElementById('game-host').append(session.root);}DKD.activeSession=session;session.root.hidden=false;document.getElementById('game-host').hidden=false;DKD.route='game';DKD.screen.hidden=true;document.getElementById('system-footer').hidden=true;if(session.started&&!session.over)session.resume();DKD.state.recent=[id,...DKD.state.recent.filter(value=>value!==id)].slice(0,6);DKD.persist();};
+DKD.launch=id=>{const game=DKD.game(id);if(!game)return;if(game.external&&game.externalUrl){if(!DKD.historyApplying)DKD.pushHistory?.('game',id);DKD.audio?.pauseMusic?.();DKD.activeSession?.pause?.();DKD.activeSession=null;DKD.closeModal();DKD.closeCC(false);Object.values(DKD.sessions).forEach(session=>session.root.hidden=true);const host=document.getElementById('game-host');host.innerHTML=`<section class="external-game-session"><iframe class="external-game-frame" src="${game.externalUrl}" title="${DKD.escape(game.title)}" allow="fullscreen; autoplay; gamepad"></iframe><div class="external-game-bar"><button data-action="home" aria-label="DraBornPS Home">${DKD.icon('ps')}<span>DraBornPS</span></button><span class="external-game-brand">DraBorn<b>Games</b> · ${DKD.escape(game.title)}</span></div></section>`;host.hidden=false;DKD.route='game';DKD.screen.hidden=true;document.getElementById('system-footer').hidden=true;DKD.state.recent=[id,...DKD.state.recent.filter(value=>value!==id)].slice(0,6);DKD.persist();return;}if(!DKD.state.installed.includes(id)){DKD.navigate('product',id);return;}if(!DKD.historyApplying)DKD.pushHistory?.('game',id);DKD.audio?.pauseMusic?.();DKD.activeSession?.pause();DKD.closeModal();DKD.closeCC(false);Object.values(DKD.sessions).forEach(session=>session.root.hidden=true);let session=DKD.sessions[id];if(!session){session=new DKD.GameSession(game);DKD.sessions[id]=session;document.getElementById('game-host').append(session.root);}DKD.activeSession=session;session.root.hidden=false;document.getElementById('game-host').hidden=false;DKD.route='game';DKD.screen.hidden=true;document.getElementById('system-footer').hidden=true;if(session.started&&!session.over)session.resume();DKD.state.recent=[id,...DKD.state.recent.filter(value=>value!==id)].slice(0,6);DKD.persist();};
 </script><script data-source="games/racer.js">DKD.engines.racer=session=>{
  const state={};const difficulty=DKD.state.settings.difficulty==='Easy'?.75:DKD.state.settings.difficulty==='Hard'?1.25:1;const variant=session.game.variant||0;
  function reset(){Object.assign(state,{time:0,distance:0,speed:0,position:0,score:0,lives:3,boost:100,stage:1,invincible:0,spawn:1,traffic:[],pickups:[],passed:0,flash:0});}
@@ -604,7 +758,7 @@ DKD.launch=id=>{const game=DKD.game(id);if(!game)return;if(game.external&&game.e
   <script data-source="js/home.js">DKD.homeSelection='welcome';DKD.homeTab='Games';DKD.editWidgets=false;
 DKD.avatar=(name=DKD.state.profile.name,large=false,color)=>`<span class="avatar ${large?'large':''}" style="${color?'background:linear-gradient(145deg,'+color+',#22334b)':''}">${DKD.escape(name.substring(0,2).toUpperCase())}</span>`;
 DKD.topbar=()=>`<header class="topbar"><nav class="main-nav" aria-label="Home sections"><button data-action="home-tab" data-id="Games" class="${DKD.homeTab==='Games'?'active':''}">Games</button><button data-action="home-tab" data-id="Media" class="${DKD.homeTab==='Media'?'active':''}">Media</button></nav><div class="top-right"><button class="icon-btn" data-action="search" aria-label="Search">${DKD.icon('search')}</button><button class="icon-btn" data-action="settings" aria-label="Settings">${DKD.icon('settings')}</button><button class="icon-btn" data-action="profile" aria-label="Profile">${DKD.avatar()}</button><time class="clock"></time></div></header>`;
-DKD.homeItems=()=>[{id:'store',title:'PlayStation Store',icon:'store'},{id:'welcome',title:'Welcome',icon:'welcome'},...DKD.state.installed.map(id=>({id,title:DKD.game(id).title,art:true})),{id:'plus',title:'PlayStation Plus',icon:'plus'},{id:'library',title:'Game Library',icon:'library'}];
+DKD.homeItems=()=>{const priority=['last-mile','shift-error'];const rank=id=>{const position=priority.indexOf(id);return position<0?99:position;};const installed=[...DKD.state.installed].sort((a,b)=>rank(a)-rank(b));return [{id:'store',title:'PlayStation Store',icon:'store'},{id:'welcome',title:'Welcome',icon:'welcome'},...installed.map(id=>({id,title:DKD.game(id).title,art:true})),{id:'plus',title:'PlayStation Plus',icon:'plus'},{id:'library',title:'Game Library',icon:'library'}];};
 DKD.renderHome=()=>{
  const items=DKD.homeItems();if(!items.some(item=>item.id===DKD.homeSelection))DKD.homeSelection='welcome';
  DKD.screen.innerHTML=DKD.topbar()+(DKD.homeTab==='Media'?DKD.mediaView():`<nav class="game-rail" aria-label="Games and apps">${items.map(item=>`<button class="game-tile ${item.id} ${DKD.homeSelection===item.id?'selected':''}" data-action="select-home" data-id="${item.id}" aria-label="${item.title}" aria-pressed="${DKD.homeSelection===item.id}">${item.art?`<img src="${DKD.art(item.id)}" alt=""><span class="tile-title">${DKD.game(item.id).art.toUpperCase()}</span>`:DKD.icon(item.icon)}<span class="tile-label">${item.title}</span></button>`).join('')}</nav><div class="home-body">${DKD.homeSelection==='welcome'?DKD.welcomeView():DKD.homeHero()}</div>`);
@@ -669,7 +823,7 @@ DKD.settingsContent=()=>{
  if(section==='Network')content=`${DKD.toggleRow('Connect to the Internet','network','Simulated console connection. Pauses downloads when disabled.')}<div class="setting-row"><span>Connection Status</span><span class="muted">${DKD.state.settings.network?'Connected':'Disconnected'}</span></div><div class="setting-row"><span>Connection Method</span><span class="muted">Wi-Fi · Console Lab</span></div><button class="list-button" data-action="network-test">${DKD.icon('network')} Test Internet Connection ${DKD.icon('arrow')}</button>`;
  if(section==='Users and Accounts')content=`<div class="row" style="margin:30px 0">${DKD.avatar(undefined,true)}<div><h3>${DKD.escape(DKD.state.profile.name)}</h3><p class="small">Local console profile</p></div></div><button class="list-button" data-action="edit-profile">${DKD.icon('edit')}Edit Profile</button>${DKD.selectRow('Online Status','status',['Online','Busy','Appear Offline'])}${DKD.selectRow('Privacy','privacy',['Friends only','Anyone','No one'],'Controls the visibility of your simulated profile.')}<button class="list-button" data-action="transactions">${DKD.icon('store')}Transaction History</button>`;
  if(section==='Family and Parental Controls')content=`<p>Local family settings for this browser console.</p>${DKD.selectRow('Age Level for Games','parental',['No restrictions','Teen and below','Everyone'])}<div class="setting-row"><span>Spending Limit<small>All purchases use demo credit.</small></span><span class="muted">No real payments</span></div>${DKD.selectRow('Play Time Reminder','playReminder',['Off','30 minutes','60 minutes'])}`;
- if(section==='System')content=`<div class="setting-row"><span>System Software</span><span class="muted">Console Experience 1.0</span></div><div class="setting-row"><span>Appearance and Sound<small>Classic Games / Media home layout with Welcome Hub.</small></span><span>Default</span></div><button class="list-button" data-action="wallpaper">${DKD.icon('image')}Welcome Hub Background${DKD.icon('arrow')}</button>${DKD.selectRow('Enter Rest Mode Automatically','autoRest',['Never','20 minutes','1 hour'],'Simulated inactivity timer.') }<button class="list-button" data-action="about">${DKD.icon('ps')}About this console experience</button>`;
+ if(section==='System')content=`<div class="setting-row"><span>System Software</span><span class="muted">DraBornPS v0.3 Software Update</span></div><div class="setting-row"><span>Appearance and Sound<small>Classic Games / Media home layout with Welcome Hub.</small></span><span>Default</span></div><button class="list-button" data-action="wallpaper">${DKD.icon('image')}Welcome Hub Background${DKD.icon('arrow')}</button>${DKD.selectRow('Enter Rest Mode Automatically','autoRest',['Never','20 minutes','1 hour'],'Simulated inactivity timer.') }<button class="list-button" data-action="about">${DKD.icon('ps')}About this console experience</button>`;
  if(section==='Storage'){const used=DKD.state.installed.reduce((sum,id)=>sum+DKD.game(id).size,0);content=`<div class="settings-storage"><div class="row between"><span>Console Storage</span><span>${(667-used).toFixed(1)} GB free</span></div><div class="progress"><span style="width:${used/667*100}%"></span></div><span class="small muted">${used.toFixed(1)} GB used / 667 GB · Simulated capacity</span></div>${DKD.state.installed.map(id=>`<div class="storage-game"><img src="${DKD.art(id)}" alt=""><div class="grow"><span class="small">${DKD.game(id).title}</span><div class="muted tiny" style="margin-top:8px">${DKD.game(id).external?'Web game':DKD.game(id).size+' GB'}</div></div><button class="pill" data-action="uninstall-confirm" data-id="${id}">Delete</button></div>`).join('')}`;}
  if(section==='Sound')content=`${DKD.rangeRow('Master Volume','volume')}${DKD.toggleRow('Home Screen Music','music','An original ambient soundtrack generated on this device.')}<div class="setting-row"><span>Output Device</span><span class="muted">Browser audio output</span></div>${DKD.selectRow('Audio Focus','audioFocus',['Off','Boost Low Pitch','Boost Voices','Boost High Pitch','Boost Quiet Sounds'],'Stored as a console preference; no system audio processing.')}<button class="list-button" data-action="audio-test">${DKD.icon('sound')}Play Test Sound</button>`;
  if(section==='Screen and Video')content=`${DKD.selectRow('Resolution','resolution',['1920 × 1080','1280 × 720','3840 × 2160'],'Display preference. The interface scales to your browser.')}${DKD.toggleRow('HDR','hdr','Simulated output setting.')}${DKD.rangeRow('Brightness','brightness')}<button class="list-button" data-action="fullscreen">${DKD.icon('resize')}Enter Full Screen</button><div class="setting-row"><span>Aspect Ratio</span><span class="muted">16:9</span></div>`;
@@ -706,13 +860,28 @@ DKD.wake=()=>{DKD.powerState=null;DKD.closeModal();DKD.navigate('home');DKD.audi
  DKD.isMobileUI=mobileMedia.matches&&!document.documentElement.classList.contains('capture-mode');
  DKD.syncUIMode=()=>{const mobile=mobileMedia.matches&&!document.documentElement.classList.contains('capture-mode');const changed=mobile!==DKD.isMobileUI;DKD.isMobileUI=mobile;document.body.classList.toggle('dkd-mobile-ui',mobile);document.body.classList.toggle('dkd-desktop-ui',!mobile);document.getElementById('console').classList.toggle('mobile-console',mobile);return changed;};
  DKD.syncUIMode();
+ DKD.historyApplying=false;
+ DKD.historySnapshot=(route=DKD.route,id=null)=>({dkdps:true,route,id:id||null});
+ DKD.pushHistory=(route,id=null)=>{
+  if(DKD.historyApplying)return;
+  try{
+   const next=DKD.historySnapshot(route,id),current=history.state;
+   if(current?.dkdps&&current.route===next.route&&current.id===next.id)return;
+   history.pushState(next,'',location.href);
+  }catch{}
+ };
+ try{
+  const base=DKD.historySnapshot('home',null);
+  history.replaceState({...base,base:true},'',location.href);
+  history.pushState({...base,guard:true},'',location.href);
+ }catch{}
  DKD.clock=()=>document.querySelectorAll('.clock').forEach(element=>element.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit'}).format(new Date()));
  DKD.setWallpaper=id=>{if(wallpaper===id)return;wallpaper=id;wallpaperIndex=1-wallpaperIndex;const next=document.getElementById(wallpaperIndex?'wallpaper-b':'wallpaper-a'),previous=document.getElementById(wallpaperIndex?'wallpaper-a':'wallpaper-b');next.style.backgroundImage=id==='default'?'radial-gradient(ellipse at 83% 25%, #527d9b66, transparent 58%), radial-gradient(ellipse at 42% 93%, #234372aa, transparent 66%)':`url('${DKD.art(id)}')`;next.classList.add('shown');previous.classList.remove('shown');};
  DKD.toast=(title,body='')=>{clearTimeout(toastTimer);const target=document.getElementById('toast-root');target.innerHTML=`<div class="toast">${DKD.icon(title.includes('Trophy')?'trophy':title.includes('play')?'controller':'bell')}<div><strong>${DKD.escape(title)}</strong>${body?`<p>${DKD.escape(body)}</p>`:''}</div></div>`;toastTimer=setTimeout(()=>target.innerHTML='',3300);};
  DKD.modal=(title,body,wide=false)=>{DKD.modalTitle=title;DKD.previousFocus=document.activeElement;document.getElementById('modal-root').innerHTML=`<div class="modal-backdrop"><section class="modal ${wide?'wide':''}" role="dialog" aria-modal="true" aria-label="${DKD.escape(title)}"><button class="icon-btn modal-close" data-action="close-modal" aria-label="Close dialog">${DKD.icon('close')}</button><h2>${title}</h2>${body}</section></div>`;setTimeout(()=>document.querySelector('.modal button:not(.modal-close),.modal input,.modal-close')?.focus(),25);};
  DKD.closeModal=()=>{document.getElementById('modal-root').innerHTML='';DKD.modalTitle=null;if(DKD.previousFocus?.isConnected)DKD.previousFocus.focus({preventScroll:true});};
  DKD.footer=()=>{const footer=document.getElementById('system-footer');if(DKD.isMobileUI){const active=route=>DKD.route===route?'active':'';footer.innerHTML=`<nav class="mobile-system-nav" aria-label="Mobile console navigation"><button class="mobile-nav-item ${active('home')}" data-action="home">${DKD.icon('home')}<span>Home</span></button><button class="mobile-nav-item ${active('store')}" data-action="store">${DKD.icon('store')}<span>Store</span></button><button class="mobile-nav-item mobile-ps" data-action="control-center" aria-label="Control Center">${DKD.icon('ps')}<span>PS</span></button><button class="mobile-nav-item ${active('library')}" data-action="library">${DKD.icon('library')}<span>Library</span></button><button class="mobile-nav-item ${active('settings')}" data-action="settings">${DKD.icon('settings')}<span>Settings</span></button></nav>`;return;}footer.innerHTML=`<button class="footer-ps" data-action="control-center" aria-label="Open Control Center">${DKD.icon('ps')} <span>Control Center</span><span class="key" style="margin-left:6px">F1</span></button><div class="footer-hints"><span><span class="key">↑↓←→</span> Navigate</span><span><span class="key round">×</span> Enter</span><span><span class="key round">○</span> Esc / Back</span><button class="icon-btn" data-action="fullscreen" aria-label="Full screen">${DKD.icon('resize')}</button></div>`;};
- DKD.navigate=(route,id)=>{DKD.activeSession?.pause();DKD.closeCC(false);DKD.closeModal();DKD.route=route;DKD.screen.hidden=false;document.getElementById('game-host').hidden=true;document.getElementById('system-footer').hidden=false;if(id)DKD.productId=id;DKD.render();};
+ DKD.navigate=(route,id,options={})=>{if(options.history!==false)DKD.pushHistory?.(route,id||null);DKD.activeSession?.pause();DKD.closeCC(false);DKD.closeModal();DKD.route=route;DKD.screen.hidden=false;document.getElementById('game-host').hidden=true;document.getElementById('system-footer').hidden=false;if(id)DKD.productId=id;if(route==='home')DKD.audio?.setMusic?.(DKD.state.settings.music);else DKD.audio?.pauseMusic?.();DKD.render();};
  DKD.render=()=>{if(DKD.route==='home')DKD.renderHome();if(DKD.route==='store')DKD.renderStore();if(DKD.route==='product')DKD.renderProduct(DKD.productId);if(DKD.route==='library')DKD.renderLibrary();if(DKD.route==='settings')DKD.renderSettings();DKD.footer();};
  DKD.showCCPanel=label=>{if(!DKD.ccOpen)DKD.toggleCC();DKD.ccPanel=label;DKD.renderCC();};
  DKD.showTrophies=()=>DKD.modal('Trophies',`<div class="row" style="font-size:29px;margin:30px 0">${DKD.icon('trophy')} ${DKD.state.trophies.length} trophies earned</div>${DKD.state.trophies.length?`<div class="modal-list">${DKD.state.trophies.map(trophy=>`<div class="list-button">${DKD.icon('trophy')}<span>${DKD.escape(trophy.title)}<small class="muted tiny" style="display:block;margin-top:6px">${new Date(trophy.date).toLocaleDateString()}</small></span></div>`).join('')}</div>`:'<p>Start your first game to earn “A new adventure”. Complete campaigns and reach milestones to grow your collection.</p>'}`);
@@ -759,9 +928,9 @@ DKD.wake=()=>{DKD.powerState=null;DKD.closeModal();DKD.navigate('home');DKD.audi
  'gallery':()=>DKD.modal('Media Gallery',`<div class="background-choices">${DKD.catalog.slice(0,3).map(game=>`<button class="background-choice" data-action="view-art" data-id="${game.id}" style="background-image:url('${DKD.art(game.id)}')">${game.title}</button>`).join('')}</div>`,true),
  'view-art':id=>DKD.modal(DKD.game(id).title,`<img src="${DKD.art(id)}" alt="${DKD.game(id).title} artwork" style="width:100%;border-radius:10px"><div class="modal-actions"><button class="pill" data-action="gallery">Back to Gallery</button><button class="pill primary" data-action="set-wallpaper" data-id="${DKD.game(id).art}">Set as Background</button></div>`,true),
  'trailer':()=>DKD.modal('Game Showcase',`<img src="${DKD.art('apex')}" alt="APEX DRIFT" style="width:100%;border-radius:12px"><p>APEX DRIFT · Five stages of midnight arcade racing.</p><button class="pill primary" data-action="launch" data-id="apex">Play the Demo</button>`),
- 'about':()=>DKD.modal('Console Experience',`<p>An independent browser simulation inspired by the documented PS5 Games / Media interface and Welcome Hub. Default appearance, with no experimental beta layout.</p><p>All nine catalog editions use three original playable game engines. Purchases, downloads, friends and hardware indicators are simulated. No connection to PlayStation Network.</p><p class="small muted">PlayStation, PS5 and DualSense are trademarks of Sony Interactive Entertainment. This project is not affiliated with or endorsed by Sony. Artwork and game audio were created for this project.</p>`)
+ 'about':()=>DKD.modal('DraBornPS v0.3 Software Update',`<p>An independent browser simulation inspired by the documented PS5 Games / Media interface and Welcome Hub. Default appearance, with no experimental beta layout.</p><p>All nine catalog editions use three original playable game engines. Purchases, downloads, friends and hardware indicators are simulated. No connection to PlayStation Network.</p><p class="small muted">PlayStation, PS5 and DualSense are trademarks of Sony Interactive Entertainment. This project is not affiliated with or endorsed by Sony. Artwork and game audio were created for this project.</p>`)
  };
- DKD.dispatch=(action,id)=>{lastInput=Date.now();DKD.audio.init();if(DKD.state.settings.music&&!DKD.audio.musicTimer)DKD.audio.setMusic(true);DKD.audio.click();const result=actions[action]?.(id);if(document.documentElement.classList.contains('capture-mode'))requestAnimationFrame(()=>window.scrollTo(0,0));if(result?.catch)result.catch(error=>DKD.toast('Something went wrong',error.message));};
+ DKD.dispatch=(action,id)=>{lastInput=Date.now();DKD.audio.init();if(DKD.state.settings.music&&DKD.route==='home')DKD.audio.setMusic(true);DKD.audio.click();const result=actions[action]?.(id);if(document.documentElement.classList.contains('capture-mode'))requestAnimationFrame(()=>window.scrollTo(0,0));if(result?.catch)result.catch(error=>DKD.toast('Something went wrong',error.message));};
  document.addEventListener('click',event=>{const button=event.target.closest('[data-action]');if(button&&!button.disabled)DKD.dispatch(button.dataset.action,button.dataset.id);});
  document.addEventListener('input',event=>{const target=event.target;if(target.id==='store-search'){DKD.storeQuery=target.value;document.getElementById('store-content').innerHTML=DKD.storeContent();}if(target.id==='global-search'){const query=target.value.toLowerCase();document.getElementById('global-results').innerHTML=DKD.catalog.filter(game=>game.title.toLowerCase().includes(query)).map(game=>DKD.gameCard(game)).join('')||'<p>No games found.</p>';}if(target.dataset.setting&&target.type==='range'){DKD.state.settings[target.dataset.setting]=Number(target.value);document.querySelectorAll(`[data-range-label="${target.dataset.setting}"]`).forEach(element=>element.textContent=target.value);DKD.persist();DKD.applySettings();}});
  document.addEventListener('change',event=>{if(event.target.matches('select[data-setting]')){DKD.state.settings[event.target.dataset.setting]=event.target.value;DKD.persist();DKD.applySettings();}});
@@ -778,11 +947,68 @@ DKD.wake=()=>{DKD.powerState=null;DKD.closeModal();DKD.navigate('home');DKD.audi
  document.addEventListener('pointercancel',()=>DKD.input.clear());window.addEventListener('blur',()=>{DKD.input.clear();if(DKD.route==='game'&&!DKD.ccOpen)DKD.activeSession?.pause(true);});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){DKD.input.clear();if(DKD.route==='game')DKD.activeSession?.pause(true);}});
  let lastPad=[],padCooldown=0;function pollPad(now){const pad=navigator.getGamepads?.()?.[0];if(pad){const buttons=pad.buttons.map(button=>button.pressed),edge=index=>buttons[index]&&!lastPad[index];DKD.input.pad={x:Math.abs(pad.axes[0])>.15?pad.axes[0]:0,y:Math.abs(pad.axes[1])>.15?pad.axes[1]:0,aimX:pad.axes[2]||0,aimY:pad.axes[3]||0,fire:buttons[7]||buttons[0],jump:edge(0),boost:buttons[7]||buttons[5],dash:edge(1)};if(edge(16))DKD.toggleCC();else if(edge(9)&&DKD.route==='game')actions['game-pause']();else if(DKD.route!=='game'||DKD.ccOpen||DKD.activeSession?.paused||DKD.modalTitle){if(edge(1))back();if(edge(0))document.activeElement?.click();if(now>padCooldown){const direction=buttons[12]||pad.axes[1]<-.6?'ArrowUp':buttons[13]||pad.axes[1]>.6?'ArrowDown':buttons[14]||pad.axes[0]<-.6?'ArrowLeft':buttons[15]||pad.axes[0]>.6?'ArrowRight':null;if(direction){DKD.moveFocus(direction);padCooldown=now+180;}}}lastPad=buttons;}requestAnimationFrame(pollPad);}requestAnimationFrame(pollPad);
+
+ window.addEventListener('popstate',event=>{
+  const state=event.state;
+  if(!state?.dkdps){
+   try{history.pushState({...DKD.historySnapshot(DKD.route,DKD.activeSession?.game?.id||DKD.productId||null),guard:true},'',location.href);}catch{}
+   return;
+  }
+  DKD.historyApplying=true;
+  try{
+   if(state.route==='game'&&state.id)DKD.launch(state.id);
+   else DKD.navigate(state.route||'home',state.id||null,{history:false});
+  }finally{DKD.historyApplying=false;}
+  if(state.base&&!state.guard){try{history.pushState({...state,guard:true},'',location.href);}catch{}}
+ });
+
+ const dkdPull=document.createElement('div');
+ dkdPull.id='dkd-pull-refresh';
+ dkdPull.innerHTML='<span class="dkd-refresh-mark">↻</span><span class="dkd-refresh-text">Yenilemek için çek</span>';
+ document.body.appendChild(dkdPull);
+ let dkdPullActive=false,dkdPullStartY=0,dkdPullStartX=0,dkdPullDistance=0,dkdPullScroller=null;
+ const dkdPullText=dkdPull.querySelector('.dkd-refresh-text');
+ const dkdFindScroller=target=>target.closest?.('.page,.product-screen,.home-body,.cc-panel,.modal,.widgets')||null;
+ document.addEventListener('touchstart',event=>{
+  if(!DKD.isMobileUI||DKD.route==='game'||DKD.modalTitle||DKD.ccOpen||event.touches.length!==1)return;
+  dkdPullScroller=dkdFindScroller(event.target);
+  if(dkdPullScroller&&dkdPullScroller.scrollTop>1)return;
+  const touch=event.touches[0];dkdPullStartY=touch.clientY;dkdPullStartX=touch.clientX;dkdPullDistance=0;dkdPullActive=true;
+ },{passive:true});
+ document.addEventListener('touchmove',event=>{
+  if(!dkdPullActive||event.touches.length!==1)return;
+  const touch=event.touches[0],dy=touch.clientY-dkdPullStartY,dx=touch.clientX-dkdPullStartX;
+  if(dy<=0||Math.abs(dx)>Math.abs(dy)*.8)return;
+  if(dkdPullScroller&&dkdPullScroller.scrollTop>1){dkdPullActive=false;return;}
+  dkdPullDistance=Math.min(116,dy*.58);
+  if(dkdPullDistance>7){
+   event.preventDefault();
+   dkdPull.classList.add('show');
+   dkdPull.classList.toggle('ready',dkdPullDistance>=68);
+   dkdPull.style.transform=`translate(-50%,${Math.max(-56,dkdPullDistance-58)}px)`;
+   dkdPullText.textContent=dkdPullDistance>=68?'Bırak ve yenile':'Yenilemek için çek';
+  }
+ },{passive:false});
+ const dkdEndPull=()=>{
+  if(!dkdPullActive)return;
+  const refresh=dkdPullDistance>=68;dkdPullActive=false;
+  if(refresh){
+   dkdPull.classList.add('show','refreshing');dkdPull.classList.remove('ready');
+   dkdPull.style.transform='translate(-50%,8px)';dkdPullText.textContent='Yenileniyor…';
+   setTimeout(()=>location.reload(),90);
+  }else{
+   dkdPull.classList.remove('show','ready');dkdPull.style.transform='translate(-50%,-72px)';
+  }
+  dkdPullDistance=0;dkdPullScroller=null;
+ };
+ document.addEventListener('touchend',dkdEndPull,{passive:true});
+ document.addEventListener('touchcancel',dkdEndPull,{passive:true});
+
  if(new URLSearchParams(location.search).get('capture')==='1080p')document.documentElement.classList.add('capture-mode');
- const resize=()=>{const viewport=document.getElementById('viewport'),consoleEl=document.getElementById('console');const changed=DKD.syncUIMode();const usableWidth=viewport.clientWidth||innerWidth,usableHeight=viewport.clientHeight||innerHeight;if(DKD.isMobileUI){consoleEl.style.width=usableWidth+'px';consoleEl.style.height=usableHeight+'px';consoleEl.style.minWidth=usableWidth+'px';consoleEl.style.minHeight=usableHeight+'px';consoleEl.style.transform='translate(-50%, -50%)';document.documentElement.style.setProperty('--dkd-console-scale',1);}else{const baseWidth=1920,baseHeight=1080;const scale=Math.min(usableWidth/baseWidth,usableHeight/baseHeight);consoleEl.style.width=baseWidth+'px';consoleEl.style.height=baseHeight+'px';consoleEl.style.minWidth='';consoleEl.style.minHeight='';consoleEl.style.transform=`translate(-50%, -50%) scale(${scale})`;document.documentElement.style.setProperty('--dkd-console-scale',scale);}if(changed){DKD.footer();if(DKD.ccOpen)DKD.renderCC();}};window.addEventListener('resize',resize);window.addEventListener('orientationchange',()=>setTimeout(resize,120));resize();
+ const resize=()=>{const viewport=document.getElementById('viewport'),consoleEl=document.getElementById('console');const changed=DKD.syncUIMode();const usableWidth=viewport.clientWidth||innerWidth,usableHeight=viewport.clientHeight||innerHeight;if(DKD.isMobileUI){consoleEl.style.left='0px';consoleEl.style.top='0px';consoleEl.style.width='100%';consoleEl.style.height='100dvh';consoleEl.style.minWidth='100%';consoleEl.style.minHeight='100dvh';consoleEl.style.transform='none';document.documentElement.style.setProperty('--dkd-console-scale',1);}else{const baseWidth=1920,baseHeight=1080;const scale=Math.min(usableWidth/baseWidth,usableHeight/baseHeight);consoleEl.style.left='50%';consoleEl.style.top='50%';consoleEl.style.width=baseWidth+'px';consoleEl.style.height=baseHeight+'px';consoleEl.style.minWidth='';consoleEl.style.minHeight='';consoleEl.style.transform=`translate(-50%, -50%) scale(${scale})`;document.documentElement.style.setProperty('--dkd-console-scale',scale);}if(changed){DKD.footer();if(DKD.ccOpen)DKD.renderCC();}};window.addEventListener('resize',resize);window.visualViewport?.addEventListener('resize',resize);window.addEventListener('orientationchange',()=>setTimeout(resize,120));resize();
  if(navigator.maxTouchPoints>0)document.getElementById('console').classList.add('touch-device');
  setInterval(()=>{DKD.clock();const rest=DKD.state.settings.autoRest,limit=rest==='20 minutes'?1200000:rest==='1 hour'?3600000:Infinity;if(!DKD.powerState&&Date.now()-lastInput>limit&&DKD.route!=='game')DKD.power('rest');if(DKD.route==='game'&&!DKD.activeSession?.paused){playTime++;const reminder=DKD.state.settings.playReminder;if(!reminderSent&&reminder&&reminder!=='Off'&&playTime>parseInt(reminder)*60){DKD.toast('Time for a break?',`You have played for ${reminder}.`);reminderSent=true;}}},1000);
- DKD.applySettings();DKD.render();
+ DKD.applySettings();DKD.render();if(DKD.state.settings.music)DKD.audio.setMusic(true);
 })();
 </script><script data-source="js/webmcp.js">(() => {
  const context=document.modelContext;if(!context?.registerTool)return;const lifecycle=new AbortController();window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true});
