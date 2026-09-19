@@ -543,6 +543,37 @@ body.dkd-mobile-ui #control-center:not([hidden]) .cc-panel{
 }
 </style>
 
+
+<style id="dkd-v04-touch-controls-hotfix">
+/* DraBornPS v0.4 — reliable mobile hold controls.
+   Stop Android/Chrome long-press selection/callouts from stealing game input. */
+body.dkd-mobile-ui .game-session,
+body.dkd-mobile-ui .game-session canvas,
+body.dkd-mobile-ui .game-session .touch-pad,
+body.dkd-mobile-ui .game-session .touch-actions,
+body.dkd-mobile-ui .game-session [data-game-key]{
+  -webkit-user-select:none!important;
+  user-select:none!important;
+  -webkit-touch-callout:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+body.dkd-mobile-ui .game-session .touch-pad,
+body.dkd-mobile-ui .game-session .touch-actions,
+body.dkd-mobile-ui .game-session [data-game-key]{
+  touch-action:none!important;
+  overscroll-behavior:none!important;
+}
+body.dkd-mobile-ui .game-session [data-game-key]{
+  -webkit-user-drag:none!important;
+  cursor:default!important;
+}
+body.dkd-mobile-ui .game-session [data-game-key]:active{
+  transform:scale(.94)!important;
+  background:#193252e8!important;
+  border-color:#d9ecff!important;
+}
+</style>
+
 </head>
 <body>
   <div id="viewport"><div id="console" role="application" aria-label="PS5 browser simulator">
@@ -1038,9 +1069,42 @@ DKD.wake=()=>{DKD.powerState=null;DKD.closeModal();DKD.navigate('home');DKD.audi
  if(event.code==='Tab'&&DKD.modalTitle){const buttons=visibleButtons(),position=buttons.indexOf(document.activeElement);if(event.shiftKey&&position<=0){event.preventDefault();buttons.at(-1)?.focus();}else if(!event.shiftKey&&position===buttons.length-1){event.preventDefault();buttons[0]?.focus();}return;}
  if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown'].includes(event.code)){event.preventDefault();if(DKD.route==='home'&&DKD.homeTab==='Games'&&!DKD.ccOpen&&!DKD.modalTitle&&['ArrowLeft','ArrowRight'].includes(event.code)&&(document.activeElement===document.body||document.activeElement.closest('.game-rail'))){const items=DKD.homeItems(),index=items.findIndex(item=>item.id===DKD.homeSelection);DKD.homeSelection=items[DKD.clamp(index+(event.code==='ArrowRight'?1:-1),0,items.length-1)].id;DKD.renderHome();document.querySelector('.game-tile.selected')?.focus();}else DKD.moveFocus(event.code);}
  });
- document.addEventListener('keyup',event=>DKD.input.keys.delete(event.code));document.addEventListener('pointerup',()=>{DKD.input.pointer.down=false;DKD.input.keys.clear();});
- document.addEventListener('pointerdown',event=>{lastInput=Date.now();const button=event.target.closest('[data-game-key]');if(button){event.preventDefault();DKD.input.keys.add(button.dataset.gameKey);DKD.input.pressed.add(button.dataset.gameKey);button.setPointerCapture?.(event.pointerId);}});
- document.addEventListener('pointercancel',()=>DKD.input.clear());window.addEventListener('blur',()=>{DKD.input.clear();if(DKD.route==='game'&&!DKD.ccOpen)DKD.activeSession?.pause(true);});
+ document.addEventListener('keyup',event=>DKD.input.keys.delete(event.code));
+ const dkdGamePointers=new Map();
+ const dkdReleaseGamePointer=event=>{
+  const key=dkdGamePointers.get(event.pointerId);
+  if(!key)return false;
+  dkdGamePointers.delete(event.pointerId);
+  if(![...dkdGamePointers.values()].includes(key))DKD.input.keys.delete(key);
+  return true;
+ };
+ document.addEventListener('pointerdown',event=>{
+  lastInput=Date.now();
+  const button=event.target.closest?.('[data-game-key]');
+  if(!button)return;
+  event.preventDefault();
+  event.stopPropagation();
+  const key=button.dataset.gameKey;
+  dkdGamePointers.set(event.pointerId,key);
+  DKD.input.keys.add(key);
+  DKD.input.pressed.add(key);
+  try{button.setPointerCapture?.(event.pointerId);}catch{}
+ },{passive:false});
+ document.addEventListener('pointermove',event=>{
+  if(dkdGamePointers.has(event.pointerId))event.preventDefault();
+ },{passive:false});
+ document.addEventListener('pointerup',event=>{
+  DKD.input.pointer.down=false;
+  if(dkdReleaseGamePointer(event)){event.preventDefault();event.stopPropagation();}
+ },{passive:false});
+ document.addEventListener('pointercancel',event=>{
+  DKD.input.pointer.down=false;
+  dkdReleaseGamePointer(event);
+ });
+ document.addEventListener('lostpointercapture',event=>{dkdReleaseGamePointer(event);});
+ document.addEventListener('contextmenu',event=>{if(event.target.closest?.('[data-game-key]'))event.preventDefault();});
+ document.addEventListener('selectstart',event=>{if(event.target.closest?.('.game-session'))event.preventDefault();});
+ window.addEventListener('blur',()=>{dkdGamePointers.clear();DKD.input.clear();if(DKD.route==='game'&&!DKD.ccOpen)DKD.activeSession?.pause(true);});
  document.addEventListener('visibilitychange',()=>{if(document.hidden){DKD.input.clear();if(DKD.route==='game')DKD.activeSession?.pause(true);}});
  let lastPad=[],padCooldown=0;function pollPad(now){const pad=navigator.getGamepads?.()?.[0];if(pad){const buttons=pad.buttons.map(button=>button.pressed),edge=index=>buttons[index]&&!lastPad[index];DKD.input.pad={x:Math.abs(pad.axes[0])>.15?pad.axes[0]:0,y:Math.abs(pad.axes[1])>.15?pad.axes[1]:0,aimX:pad.axes[2]||0,aimY:pad.axes[3]||0,fire:buttons[7]||buttons[0],jump:edge(0),boost:buttons[7]||buttons[5],dash:edge(1)};if(edge(16))DKD.toggleCC();else if(edge(9)&&DKD.route==='game')actions['game-pause']();else if(DKD.route!=='game'||DKD.ccOpen||DKD.activeSession?.paused||DKD.modalTitle){if(edge(1))back();if(edge(0))document.activeElement?.click();if(now>padCooldown){const direction=buttons[12]||pad.axes[1]<-.6?'ArrowUp':buttons[13]||pad.axes[1]>.6?'ArrowDown':buttons[14]||pad.axes[0]<-.6?'ArrowLeft':buttons[15]||pad.axes[0]>.6?'ArrowRight':null;if(direction){DKD.moveFocus(direction);padCooldown=now+180;}}}lastPad=buttons;}requestAnimationFrame(pollPad);}requestAnimationFrame(pollPad);
 
