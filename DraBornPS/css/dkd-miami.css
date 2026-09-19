@@ -146,9 +146,23 @@ body.dkd-mobile-ui #console.dkd-game-wallpaper .wallpaper-shade{background:linea
 
 
 /* v0.6 active-game Play CTA */
-.game-hero .game-play-cta{min-width:255px;min-height:64px;padding:16px 34px;font-size:23px;position:relative;isolation:isolate;animation:dkd-play-cta 2.2s ease-in-out infinite;will-change:transform,box-shadow,filter}
+.game-hero .game-play-cta{min-width:245px;min-height:61px;padding:15px 32px;font-size:22px;position:relative;isolation:isolate;animation:dkd-play-cta 2.2s ease-in-out infinite;will-change:transform,box-shadow,filter}
 .game-hero .game-play-cta:before{content:'';position:absolute;inset:-6px;border-radius:inherit;border:1px solid #ffd6ea66;opacity:.45;pointer-events:none;animation:dkd-play-ring 2.2s ease-in-out infinite}
 @keyframes dkd-play-cta{0%,100%{transform:scale(1);box-shadow:0 8px 30px #fc6db529;filter:saturate(1)}50%{transform:scale(1.045);box-shadow:0 12px 42px #ff79c36b,0 0 28px #7af3e92e;filter:saturate(1.12)}}
 @keyframes dkd-play-ring{0%,100%{transform:scale(.98);opacity:.25}50%{transform:scale(1.08);opacity:.72}}
-body.dkd-mobile-ui .game-hero .game-play-cta{min-width:154px;min-height:54px;padding:13px 25px;font-size:16px;border-radius:29px}
+body.dkd-mobile-ui .game-hero .game-play-cta{min-width:148px;min-height:52px;padding:12px 23px;font-size:15px;border-radius:28px}
 @media(prefers-reduced-motion:reduce){.game-hero .game-play-cta,.game-hero .game-play-cta:before{animation:none!important;transform:none!important}}
+
+
+/* v0.6 home game information */
+.home-game-description{max-width:720px;line-height:1.5;margin-bottom:14px;color:#f0e7f2}
+.home-game-rating{display:flex;align-items:center;gap:8px;width:max-content;color:#f5dfb5;font-size:18px;line-height:1;margin-top:2px}
+.home-game-rating .icon{width:20px;height:20px}
+.home-game-rating strong{font-size:19px;font-weight:650;color:#fff4da}
+.home-game-rating span{font-size:15px;color:#d5c8d8}
+body.dkd-mobile-ui .home-game-description{font-size:13px;line-height:1.48;margin:0 0 10px;max-width:none;color:#eee5f0}
+body.dkd-mobile-ui .home-game-rating{gap:6px;font-size:13px;margin-top:0}
+body.dkd-mobile-ui .home-game-rating .icon{width:15px;height:15px}
+body.dkd-mobile-ui .home-game-rating strong{font-size:14px}
+body.dkd-mobile-ui .home-game-rating span{font-size:12px}
+body.dkd-mobile-ui .game-hero:has(.home-game-rating) .hero-actions{margin-top:12px}
