@@ -53,7 +53,7 @@
  'wallpaper':()=>DKD.showBackgrounds(),'set-wallpaper':id=>{DKD.state.wallpaper=id;DKD.persist();DKD.closeModal();if(DKD.route==='home')DKD.renderHome();},
  'control-center':()=>DKD.toggleCC(),'cc-item':id=>{if(id==='Home')DKD.navigate('home');else{DKD.ccPanel=DKD.ccPanel===id?'':id;DKD.renderCC();}},
  'profile':()=>DKD.showCCPanel('Profile'),'friends':()=>DKD.showCCPanel('Game Base'),'accessories':()=>DKD.showCCPanel('Accessories'),'music':()=>DKD.showCCPanel('Music'),
- 'users-accounts':()=>{DKD.settingsSection='Users and Accounts';DKD.navigate('settings');},'profile-photo':()=>document.getElementById('dkd-profile-photo-input')?.click(),'profile-photo-remove':()=>{DKD.state.profile.photo='assets/profile/dkd-default-yacht.webp';DKD.persist();DKD.renderSettings();DKD.toast('Profile photo reset','The default yacht profile photo is active again.');},
+ 'users-accounts':()=>{DKD.settingsSection='Users and Accounts';DKD.navigate('settings');},'profile-photo':()=>document.getElementById('dkd-profile-photo-input')?.click(),'profile-photo-remove':()=>{DKD.state.profile.photo=DKD.defaultProfilePhoto;DKD.persist();DKD.renderSettings();DKD.toast('Profile photo reset','The default yacht profile photo is active again.');},
  'trophies':()=>DKD.showTrophies(),'storage':()=>{DKD.settingsSection='Storage';DKD.navigate('settings');},'sound-settings':()=>{DKD.settingsSection='Sound';DKD.navigate('settings');},
  'settings-section':id=>{DKD.settingsSection=id;DKD.renderSettings();},
  'toggle-setting':id=>{DKD.state.settings[id]=!DKD.state.settings[id];DKD.persist();DKD.applySettings();if(id==='music')DKD.audio.setMusic(DKD.state.settings.music);if(DKD.ccOpen)DKD.renderCC();else if(DKD.route==='settings')DKD.renderSettings();},
