@@ -23,7 +23,7 @@ DKD.projects=[
     "id": "drabornpark",
     "title": "DraBornPark",
     "theme": "park",
-    "mark": "P",
+    "mark": "PARK",
     "eyebrow": "GÜVENLİ ARAÇ İLETİŞİMİ",
     "subtitle": "Telefon numarası paylaşmadan araç sahibiyle güvenli iletişim kur.",
     "description": "Aracındaki NFC veya QR etiketini okutan kişiler, telefon numaranı görmeden sana ulaşsın. Bildirimleri, araç bilgilerini ve iletişim akışını tek yerden yönet.",
