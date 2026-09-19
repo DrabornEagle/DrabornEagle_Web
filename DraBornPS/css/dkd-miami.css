@@ -169,8 +169,8 @@ body.dkd-mobile-ui .game-hero:has(.home-game-rating) .hero-actions{margin-top:12
 
 
 /* v0.6.6 profile + reset polish */
-.profile-identity-copy{padding-top:9px}
+.profile-identity-copy{padding-top:0;transform:translateY(15px)}
 .profile-identity-copy h3{margin-top:0}
 .dkd-danger-action{margin-top:16px;border-color:#ff8e9f4d!important;background:linear-gradient(120deg,#5a2236a6,#2b1730c2)!important;color:#ffd9e1!important}
 .dkd-danger-action:hover{background:linear-gradient(120deg,#713046c9,#3b1d39d6)!important}
-body.dkd-mobile-ui .profile-identity-copy{padding-top:8px}
+body.dkd-mobile-ui .profile-identity-copy{padding-top:0;transform:translateY(16px)}
