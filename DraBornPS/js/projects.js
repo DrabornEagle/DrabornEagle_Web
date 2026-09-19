@@ -113,7 +113,7 @@ DKD.projects=[
 ];
 DKD.project = dkdId => DKD.projects.find(dkdProject => dkdProject.id === dkdId);
 DKD.projectTile = dkdProject => `<span class="project-tile-art"><img src="${dkdProject.image}" alt="" width="1536" height="1024" decoding="async"><span class="project-tile-mark">${dkdProject.mark}</span></span><span class="tile-label">${dkdProject.title}</span>`;
-DKD.projectMockup = dkdProject => `<figure class="project-showcase"><img src="${dkdProject.image}" alt="${dkdProject.title} uygulamasının projeye özel telefon mockup görseli" width="1536" height="1024" fetchpriority="high" decoding="async"><figcaption>Uygulama konsepti</figcaption></figure>`;
+DKD.projectMockup = dkdProject => `<figure class="project-showcase"><img src="${dkdProject.image}" alt="${dkdProject.title} uygulamasının projeye özel telefon mockup görseli" width="1536" height="1024" fetchpriority="high" decoding="async"></figure>`;
 DKD.projectsView = function dkdProjectsView() {
  const dkdProject = DKD.project(DKD.projectSelection) || DKD.projects[0];
  const dkdProjectNumber = DKD.projects.indexOf(dkdProject) + 1;
