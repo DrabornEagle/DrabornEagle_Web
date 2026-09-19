@@ -4,7 +4,7 @@
  let saved; try {saved=JSON.parse(localStorage.getItem('dkd_ps5_state'));} catch {}
  const base=defaults();DKD.state={...base,...saved,settings:{...base.settings,...saved?.settings},profile:{...base.profile,...saved?.profile}};
  const dkdDefaultProfilePhotoPatch=!saved?.uiPatchDefaultProfilePhoto20260919b;
- if(!DKD.state.profile.photo||DKD.state.profile.photo==='assets/profile/dkd-default-yacht.webp'){DKD.state.profile.photo=DKD.defaultProfilePhoto;DKD.state.uiPatchDefaultProfilePhoto20260919b=true;}
+ if(dkdDefaultProfilePhotoPatch){if(!DKD.state.profile.photo||DKD.state.profile.photo==='assets/profile/dkd-default-yacht.webp')DKD.state.profile.photo=DKD.defaultProfilePhoto;DKD.state.uiPatchDefaultProfilePhoto20260919b=true;}
  const dkdAccessoriesPatch=!saved?.uiPatchAccessories20260919;
  if(dkdAccessoriesPatch){
   const batteryIndex=DKD.state.widgets.findIndex(widget=>widget.id==='battery');
