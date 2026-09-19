@@ -286,7 +286,7 @@ body.dkd-mobile-ui .modal .modal-close{top:13px;right:13px}
 body.dkd-mobile-ui .modal-actions{gap:8px;margin-top:20px;flex-wrap:wrap}
 body.dkd-mobile-ui .checkout-item{gap:13px;margin:17px 0}
 body.dkd-mobile-ui .checkout-item img{width:72px;height:72px}
-body.dkd-mobile-ui .demo-notice{font-size:12px!important;padding:12px 13px}
+body.dkd-mobile-ui .purchase-notice{font-size:12px!important;padding:12px 13px}
 body.dkd-mobile-ui .background-choices{grid-template-columns:repeat(2,1fr);gap:9px}
 body.dkd-mobile-ui .background-choice{height:112px;padding:10px;font-size:13px;border-radius:12px}
 body.dkd-mobile-ui .panel{padding:17px;border-radius:16px}
