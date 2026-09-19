@@ -52,7 +52,7 @@ body.dkd-mobile-ui .top-right{gap:4px}
 body.dkd-mobile-ui .top-right .icon-btn{width:38px;height:38px}
 body.dkd-mobile-ui .top-right .avatar{width:34px;height:34px;font-size:11px}
 body.dkd-mobile-ui .top-right time{display:none}
-body.dkd-mobile-ui .top-right .icon-btn:nth-child(2){display:none}
+body.dkd-mobile-ui .top-right .icon-btn[data-action="settings"]{display:none}
 
 /* Mobile game/app rail */
 body.dkd-mobile-ui .game-rail{

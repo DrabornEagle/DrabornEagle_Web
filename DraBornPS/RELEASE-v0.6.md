@@ -1,6 +1,6 @@
 # DraBornPS v0.6 Software Update
 
-Source checkpoint: `37f014c8b5d41d41fdf9402d9432ffa5642e3388` (2026-09-19).
+Pre-update source checkpoint: `37f014c8b5d41d41fdf9402d9432ffa5642e3388` (2026-09-19).
 Full repository backup: `dkd-drabornps-pre-v0.6-20260919`.
 
 ## Changes
@@ -31,7 +31,13 @@ All listed project website URLs returned HTTP 200. The advertised DraBornPark Go
 - JavaScript syntax: passed for all 15 console/game scripts.
 - Six-project rendering and action destinations: passed.
 - All entry point assets exist locally.
-- Initial v0.6 source ready; live interface verification and final root synchronization in progress.
+- Live desktop: all six projects selected correctly; all seven project images (six covers + selected artwork) loaded; browser Back returned from Projects to Games.
+- Live 390 × 844 mobile: project selection and horizontal rail scrolling worked; project web/APK buttons were reachable above the footer after scrolling; no document overflow.
+- Live 360 × 800 mobile: Store featured button fits fully inside its hero at 48px height; APEX DRIFT opened its playable canvas and pause menu.
+- Live 844 × 390 landscape: no horizontal document overflow.
+- Root URL opened v0.6 with Games and Projects, retaining the root address.
+- Root synchronization and deployment workflow validation passed. Temporary responsive preview removed after verification.
+- Small final fix: preserve the mobile Search button when the version badge is present.
 
 ## Artwork provenance
 
@@ -39,3 +45,6 @@ Generated with the built-in imagegen tool. Mockups depict application concepts; 
 Project assets: `assets/projects/dkd-{go,park,sea,gate,odds,portal}-v06.webp`.
 Wallpaper: `assets/wallpapers/dkd-miami-v06.webp`.
 Prompt set is recorded in `assets/projects/dkd-artwork-prompts.json`.
+
+Implementation commit: `08e9f12f90ec21b8b5ff1ed9dc8f1c22f9201f09`.
+Root synchronization commit: `0ab927ca24420fc92b102a887266fc030680b4d0`.
