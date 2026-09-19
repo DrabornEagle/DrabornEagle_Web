@@ -587,12 +587,12 @@ DKD.friends = [{name:'Nova',game:'LUMEN',color:'#729ac6'},{name:'Kai',game:'APEX
  setInterval(()=>{let changed=false;for(const [id,download] of Object.entries(DKD.state.downloads)){if(download.paused||DKD.powerState==='off'||!DKD.state.settings.network)continue;download.progress=Math.min(100,download.progress+3+Math.random()*4);changed=true;if(download.progress>=100){if(!DKD.state.installed.includes(id))DKD.state.installed.push(id);delete DKD.state.downloads[id];DKD.notify('Ready to play',DKD.game(id).title);}}if(changed){DKD.persist();DKD.refreshDownloads?.();}},800);
 })();
 </script><script data-source="js/audio.js">DKD.audio = {
- context:null,musicTimer:null,musicEl:null,musicUrl:null,musicTrack:null,musicLoadPromise:null,switching:false,
+ context:null,musicTimer:null,musicEl:null,musicTrack:null,musicLoadPromise:null,switching:false,
  tracks:[
   {name:'InnerLight',start:0,end:258.86},
   {name:'SeMeNota',start:258.90,end:435.04}
  ],
- musicParts:Array.from({length:17},(_,index)=>`assets/audio/dkd-home-mix-${String(index).padStart(2,'0')}.b64`),
+ musicUrl:'assets/audio/dkd-home-mix.webm',
  init(){
   if(!this.context){try{this.context=new(window.AudioContext||window.webkitAudioContext)();}catch{}}
   if(this.context?.state==='suspended')this.context.resume();
@@ -612,22 +612,16 @@ DKD.friends = [{name:'Nova',game:'LUMEN',color:'#729ac6'},{name:'Kai',game:'APEX
   if(this.musicEl)return this.musicEl;
   if(this.musicLoadPromise)return this.musicLoadPromise;
   this.musicLoadPromise=(async()=>{
-   const parts=await Promise.all(this.musicParts.map(url=>fetch(url,{cache:'force-cache'}).then(response=>{
-    if(!response.ok)throw new Error('Music asset '+response.status);
-    return response.text();
-   })));
-   const encoded=parts.join('').replace(/\s+/g,'');
-   const raw=atob(encoded),bytes=new Uint8Array(raw.length);
-   for(let i=0;i<raw.length;i++)bytes[i]=raw.charCodeAt(i);
-   this.musicUrl=URL.createObjectURL(new Blob([bytes],{type:'audio/webm'}));
    const audio=new Audio(this.musicUrl);
-   audio.preload='auto';audio.volume=1;
+   audio.preload='auto';
+   audio.volume=1;
    audio.addEventListener('timeupdate',()=>{
     if(this.musicTrack&&!audio.paused&&audio.currentTime>=this.musicTrack.end-.12)this.playRandomTrack();
    });
    audio.addEventListener('ended',()=>this.playRandomTrack());
    audio.addEventListener('error',()=>{this.musicTrack=null;});
    this.musicEl=audio;
+   try{audio.load();}catch{}
    return audio;
   })().catch(error=>{this.musicLoadPromise=null;console.warn('DraBornPS music:',error);return null;});
   return this.musicLoadPromise;
