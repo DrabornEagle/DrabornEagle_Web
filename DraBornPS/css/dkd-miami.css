@@ -136,3 +136,10 @@ body.dkd-mobile-ui .home-body{bottom:calc(78px + env(safe-area-inset-bottom))}
 .high-contrast .project-description{color:#fff}
 .large-text .project-description,.large-text .project-features li{font-size:22px}
 body.dkd-mobile-ui.large-text .project-description,body.dkd-mobile-ui.large-text .project-features li{font-size:19px}
+
+
+/* v0.6.1 mobile game artwork framing */
+body.dkd-mobile-ui #console.dkd-game-wallpaper #wallpaper{background:linear-gradient(180deg,#10152a,#090d19 72%,#050711)}
+body.dkd-mobile-ui #console.dkd-game-wallpaper .wallpaper-layer{inset:0!important;background-size:auto 86%!important;background-position:center top!important;background-repeat:no-repeat!important;background-color:#090d19;transform:none!important}
+body.dkd-mobile-ui #console.dkd-game-wallpaper .wallpaper-layer.shown{transform:none!important}
+body.dkd-mobile-ui #console.dkd-game-wallpaper .wallpaper-shade{background:linear-gradient(180deg,#05071312 0%,#070a1714 36%,#080b18b5 70%,#050711f7 88%,#050711 100%),linear-gradient(90deg,#110a2457,transparent 70%)}
