@@ -148,10 +148,11 @@
  document.body.appendChild(dkdPull);
  let dkdPullActive=false,dkdPullStartY=0,dkdPullStartX=0,dkdPullDistance=0,dkdPullScroller=null;
  const dkdPullText=dkdPull.querySelector('.dkd-refresh-text');
- const dkdFindScroller=target=>target.closest?.('.page,.product-screen,.home-body,.projects-body,.project-rail,.cc-panel,.modal,.widgets')||null;
+ const dkdFindScroller=target=>target.closest?.('.page,.product-screen,.home-body,.projects-body,.cc-panel,.modal')||null;
+ const dkdPrimaryScroller=()=>{if(DKD.route==='home')return DKD.homeTab==='Projects'?DKD.screen.querySelector('.projects-body'):DKD.screen.querySelector('.home-body');if(DKD.route==='product')return DKD.screen.querySelector('.product-screen');if(['store','library','settings'].includes(DKD.route))return DKD.screen.querySelector('.page');return null;};
  document.addEventListener('touchstart',event=>{
   if(!DKD.isMobileUI||DKD.route==='game'||DKD.modalTitle||DKD.ccOpen||event.touches.length!==1)return;
-  dkdPullScroller=dkdFindScroller(event.target);
+  dkdPullScroller=dkdPrimaryScroller()||dkdFindScroller(event.target);
   if(dkdPullScroller&&dkdPullScroller.scrollTop>1)return;
   const touch=event.touches[0];dkdPullStartY=touch.clientY;dkdPullStartX=touch.clientX;dkdPullDistance=0;dkdPullActive=true;
  },{passive:true});
