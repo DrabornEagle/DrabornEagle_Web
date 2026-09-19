@@ -1,0 +1,388 @@
+/* DraBornPS Mobile UI
+   Mobile is a dedicated portrait interface. Desktop remains the original 1920×1080 console. */
+
+body.dkd-mobile-ui{
+  background:#02060d;
+  overscroll-behavior:none;
+  touch-action:manipulation;
+}
+body.dkd-mobile-ui #viewport{
+  position:fixed;inset:0;
+  width:100dvw;height:100dvh;min-height:100dvh;
+  overflow:hidden;padding:0;
+}
+body.dkd-mobile-ui #console{
+  width:100dvw;height:100dvh;
+  min-width:100dvw;min-height:100dvh;
+  overflow:hidden;
+  border-radius:0;
+  background:#07111e;
+  box-shadow:none;
+}
+body.dkd-mobile-ui #screen{overflow:hidden}
+body.dkd-mobile-ui #wallpaper{background:radial-gradient(circle at 78% 10%,#29557b88,transparent 42%),linear-gradient(160deg,#071424,#050b14 60%,#02060d)}
+body.dkd-mobile-ui .wallpaper-layer{inset:-4px;background-position:center top}
+body.dkd-mobile-ui .wallpaper-shade{background:linear-gradient(180deg,#02071155 0%,#07111f77 34%,#030812f7 78%,#02060d 100%)}
+body.dkd-mobile-ui .ambient{opacity:.24;background-size:150px 130px,220px 250px,190px 210px}
+body.dkd-mobile-ui button,body.dkd-mobile-ui input,body.dkd-mobile-ui select{touch-action:manipulation}
+body.dkd-mobile-ui button:focus-visible,body.dkd-mobile-ui input:focus-visible,body.dkd-mobile-ui select:focus-visible{outline:2px solid #fff;outline-offset:2px;box-shadow:0 0 18px #ffffff45}
+body.dkd-mobile-ui .icon{width:22px;height:22px}
+body.dkd-mobile-ui .small{font-size:13px}
+body.dkd-mobile-ui .tiny{font-size:12px}
+body.dkd-mobile-ui .pill{min-height:44px;padding:10px 17px;border-radius:24px;font-size:14px;gap:8px}
+body.dkd-mobile-ui .pill.primary{min-width:0;padding-inline:22px}
+body.dkd-mobile-ui .icon-btn{width:42px;height:42px}
+body.dkd-mobile-ui .circle-btn{width:46px;height:46px}
+body.dkd-mobile-ui .avatar{width:38px;height:38px;font-size:13px}
+body.dkd-mobile-ui .avatar.large{width:58px;height:58px;font-size:20px}
+body.dkd-mobile-ui .badge{font-size:10px;padding:2px 5px}
+body.dkd-mobile-ui .tag{font-size:10px;letter-spacing:1.1px}
+body.dkd-mobile-ui .row{gap:10px}
+
+/* Mobile home header */
+body.dkd-mobile-ui .topbar{
+  height:70px;padding:15px 18px 8px;
+  align-items:center;
+  background:linear-gradient(180deg,#06101bd9,transparent);
+}
+body.dkd-mobile-ui .main-nav{gap:22px}
+body.dkd-mobile-ui .main-nav button{font-size:19px;padding:7px 0;color:#8f9bae}
+body.dkd-mobile-ui .main-nav button.active{font-weight:500;color:#fff}
+body.dkd-mobile-ui .top-right{gap:4px}
+body.dkd-mobile-ui .top-right .icon-btn{width:38px;height:38px}
+body.dkd-mobile-ui .top-right .avatar{width:34px;height:34px;font-size:11px}
+body.dkd-mobile-ui .top-right time{display:none}
+body.dkd-mobile-ui .top-right .icon-btn:nth-child(2){display:none}
+
+/* Mobile game/app rail */
+body.dkd-mobile-ui .game-rail{
+  height:110px;padding:10px 16px 20px;gap:14px;
+  overflow-x:auto;overflow-y:hidden;
+  scroll-snap-type:x proximity;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+body.dkd-mobile-ui .game-rail::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .game-tile{
+  width:66px;height:66px;min-width:66px;min-height:66px;
+  border-radius:14px;scroll-snap-align:center;overflow:visible;
+  box-shadow:0 6px 20px #0007;
+}
+body.dkd-mobile-ui .game-tile>img{border-radius:12px}
+body.dkd-mobile-ui .game-tile .icon{width:27px;height:27px}
+body.dkd-mobile-ui .game-tile.selected{
+  width:76px;height:76px;min-width:76px;min-height:76px;
+  outline:2px solid #fff;outline-offset:3px;
+}
+body.dkd-mobile-ui .tile-label{
+  top:86px;left:50%;transform:translateX(-50%);
+  font-size:11px;max-width:104px;overflow:hidden;text-overflow:ellipsis;
+}
+body.dkd-mobile-ui .game-tile .tile-title{font-size:9px;bottom:6px;letter-spacing:0}
+body.dkd-mobile-ui .game-tile.library{margin-left:0}
+
+/* Welcome Hub becomes a native vertical mobile dashboard */
+body.dkd-mobile-ui .home-body{
+  position:absolute;left:0;right:0;top:180px;bottom:78px;
+  padding:0 16px 20px;
+  overflow-y:auto;overflow-x:hidden;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+body.dkd-mobile-ui .home-body::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .welcome-heading{
+  display:block;margin:7px 0 14px;
+}
+body.dkd-mobile-ui .welcome-heading h1{font-size:25px;line-height:1.12;margin:0 0 7px;font-weight:400}
+body.dkd-mobile-ui .welcome-heading p{font-size:13px;line-height:1.45;margin:0;color:#aab8cb}
+body.dkd-mobile-ui .welcome-actions{
+  margin-top:13px;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:3px;
+}
+body.dkd-mobile-ui .welcome-actions::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .welcome-actions .pill{font-size:12px;min-height:39px;padding:8px 13px;white-space:nowrap}
+body.dkd-mobile-ui .welcome-actions .icon{width:17px;height:17px}
+body.dkd-mobile-ui .widgets{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  grid-auto-rows:144px;gap:10px;
+  max-height:none;overflow:visible;padding:2px;margin:0;
+}
+body.dkd-mobile-ui .widget{
+  grid-column:span 1;
+  min-height:144px;border-radius:18px;
+  border:1px solid #ffffff16;
+  background:linear-gradient(145deg,#18263bd9,#0c1728e8);
+  box-shadow:0 10px 30px #0003;
+}
+body.dkd-mobile-ui .widget-main{padding:15px 15px 14px}
+body.dkd-mobile-ui .widget-title{font-size:13px;margin-bottom:12px;gap:7px;font-weight:500}
+body.dkd-mobile-ui .widget-title .icon{width:17px;height:17px}
+body.dkd-mobile-ui .widget-big{font-size:27px}
+body.dkd-mobile-ui .widget-detail{font-size:11px;line-height:1.35;margin-top:7px}
+body.dkd-mobile-ui .friend-avatars{gap:5px}
+body.dkd-mobile-ui .friend-avatars .avatar{width:34px;height:34px;font-size:10px}
+body.dkd-mobile-ui .friend-summary{font-size:12px;margin-left:3px}
+body.dkd-mobile-ui .battery-meter{width:58px;height:27px;padding:4px;gap:3px}
+body.dkd-mobile-ui .trophy-display>.icon{width:36px;height:36px}
+body.dkd-mobile-ui .widget.wishlist img{width:48px;height:52px}
+body.dkd-mobile-ui .widget.store,body.dkd-mobile-ui .widget.storage,body.dkd-mobile-ui .widget.friends{grid-column:span 2}
+body.dkd-mobile-ui .widget.store h3{font-size:21px;margin-bottom:7px}
+body.dkd-mobile-ui .widget-edit-tools{right:7px;top:7px}
+body.dkd-mobile-ui .widget-edit-tools button{width:28px;height:28px}
+body.dkd-mobile-ui .widget-edit-tools .icon{width:15px;height:15px}
+
+/* Selected title hero on mobile */
+body.dkd-mobile-ui .home-body:has(.game-hero){top:180px;padding:0}
+body.dkd-mobile-ui .game-hero{
+  position:absolute;left:18px;right:18px;top:auto;bottom:122px;width:auto;
+  padding:18px;border-radius:20px;
+  background:linear-gradient(145deg,#07111fd8,#0b1729b8);
+  border:1px solid #ffffff14;
+  backdrop-filter:blur(10px);
+}
+body.dkd-mobile-ui .game-wordmark{font-size:37px;letter-spacing:4px;line-height:1.05;margin:12px 0 8px;max-width:100%}
+body.dkd-mobile-ui .game-wordmark.apex{letter-spacing:-1px}
+body.dkd-mobile-ui .game-wordmark.lumen{letter-spacing:8px}
+body.dkd-mobile-ui .game-wordmark.orbital{letter-spacing:6px}
+body.dkd-mobile-ui .hero-subtitle{font-size:14px;line-height:1.45;margin:0 0 14px}
+body.dkd-mobile-ui .hero-meta{font-size:11px;gap:7px;flex-wrap:wrap}
+body.dkd-mobile-ui .hero-actions{margin-top:14px;gap:9px}
+body.dkd-mobile-ui .hero-bottom{
+  position:absolute;left:18px;right:18px;bottom:78px;
+  justify-content:space-between;gap:12px;padding:0 4px;
+}
+body.dkd-mobile-ui .hero-bottom strong{font-size:18px;margin-top:3px}
+body.dkd-mobile-ui .game-hero>div:first-child .icon{width:36px;height:36px}
+body.dkd-mobile-ui .game-hero>h1:not(.game-wordmark){font-size:34px!important;line-height:1.08!important;margin-bottom:12px!important}
+
+/* Media */
+body.dkd-mobile-ui .media-grid{grid-template-columns:1fr;gap:12px;margin-top:17px}
+body.dkd-mobile-ui .media-card{height:154px;padding:22px;border-radius:18px;font-size:22px;gap:10px}
+body.dkd-mobile-ui .media-card .icon{width:32px;height:32px}
+body.dkd-mobile-ui .media-card small{font-size:12px}
+
+/* Dedicated mobile footer/navigation */
+body.dkd-mobile-ui #system-footer{
+  left:0;right:0;bottom:0;height:74px;
+  padding:8px 12px 9px;
+  display:block;
+  background:linear-gradient(180deg,#07101aee,#02060dfc);
+  border-top:1px solid #ffffff14;
+  color:#9aa8ba;
+}
+body.dkd-mobile-ui #system-footer::before{display:none}
+body.dkd-mobile-ui .footer-hints,body.dkd-mobile-ui .footer-ps{display:none!important}
+body.dkd-mobile-ui .mobile-system-nav{height:100%;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:3px}
+body.dkd-mobile-ui .mobile-nav-item{
+  height:55px;border-radius:15px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;
+  font-size:9px;color:#8f9caf;
+}
+body.dkd-mobile-ui .mobile-nav-item .icon{width:22px;height:22px}
+body.dkd-mobile-ui .mobile-nav-item.active{color:white;background:#ffffff12}
+body.dkd-mobile-ui .mobile-nav-item.mobile-ps{width:51px;height:51px;margin:auto;border-radius:50%;background:#e7edf6;color:#101722;box-shadow:0 8px 24px #0007}
+body.dkd-mobile-ui .mobile-nav-item.mobile-ps .icon{width:27px;height:27px}
+body.dkd-mobile-ui .mobile-nav-item.mobile-ps span{display:none}
+
+/* Pages: Store, Library, Settings */
+body.dkd-mobile-ui .page{
+  height:100%;padding:18px 16px 92px;
+  overflow-y:auto;overflow-x:hidden;
+  background:linear-gradient(180deg,#071220f5,#040a13f8);
+  scrollbar-width:none;
+}
+body.dkd-mobile-ui .page::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .page-header{margin-bottom:16px;gap:10px}
+body.dkd-mobile-ui .page-title{font-size:23px;gap:8px;min-width:0}
+body.dkd-mobile-ui .page-title>.icon{width:27px;height:27px}
+body.dkd-mobile-ui .page-title .icon-btn{width:38px;height:38px}
+body.dkd-mobile-ui .page-header>.row .small{display:none}
+body.dkd-mobile-ui .store-toolbar{display:block;margin-bottom:14px}
+body.dkd-mobile-ui .tabs{gap:18px;overflow-x:auto;scrollbar-width:none;padding:0 1px 4px;white-space:nowrap}
+body.dkd-mobile-ui .tabs::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .tab{font-size:14px;padding:9px 0}
+body.dkd-mobile-ui .search-field{min-width:0;width:100%;margin-top:10px;padding:10px 14px;border-radius:22px}
+body.dkd-mobile-ui .search-field input{font-size:14px}
+body.dkd-mobile-ui .store-hero{
+  height:214px;padding:25px 22px;border-radius:18px;
+  background-position:65% center;
+}
+body.dkd-mobile-ui .store-hero h1{font-size:39px;letter-spacing:8px;margin:15px 0 7px}
+body.dkd-mobile-ui .store-hero p{font-size:13px;max-width:230px;margin-bottom:17px}
+body.dkd-mobile-ui .store-hero .pill{font-size:12px;min-height:39px;min-width:0;padding:9px 14px}
+body.dkd-mobile-ui .store-section-title{margin:20px 0 12px;gap:8px}
+body.dkd-mobile-ui .store-section-title h2{font-size:19px;line-height:1.2}
+body.dkd-mobile-ui .game-grid,body.dkd-mobile-ui .game-grid[style]{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;max-width:none!important}
+body.dkd-mobile-ui .game-card-title{font-size:13px;margin-top:9px}
+body.dkd-mobile-ui .card-meta{font-size:11px;gap:5px;margin-top:5px;flex-wrap:wrap}
+body.dkd-mobile-ui .card-meta del{font-size:10px}
+body.dkd-mobile-ui .cover{border-radius:13px;aspect-ratio:.84}
+body.dkd-mobile-ui .cover img{object-position:72% center}
+body.dkd-mobile-ui .cover-wordmark{font-size:15px;bottom:14px;left:8px;right:8px;letter-spacing:1px}
+body.dkd-mobile-ui .cover-wordmark small{font-size:8px;margin-top:4px;letter-spacing:1px}
+body.dkd-mobile-ui .cover .badge{font-size:8px;left:8px;top:8px}
+body.dkd-mobile-ui .cover .discount{font-size:9px;right:7px;top:7px}
+body.dkd-mobile-ui .library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+body.dkd-mobile-ui .library-grid .game-card-title{font-size:13px}
+body.dkd-mobile-ui .filter-pills{gap:7px;margin:13px 0 17px;overflow-x:auto;scrollbar-width:none}
+body.dkd-mobile-ui .filter-pills button{font-size:12px;padding:8px 13px;white-space:nowrap}
+
+/* Product page */
+body.dkd-mobile-ui .product-screen{height:100%;padding:16px 16px 92px;overflow-y:auto;background:linear-gradient(180deg,#06101aaa,#04101bf6 54%,#02060d)}
+body.dkd-mobile-ui .product-screen>.row.between{position:relative;z-index:2}
+body.dkd-mobile-ui .product-screen .back-product{margin:0;font-size:12px;min-height:39px}
+body.dkd-mobile-ui .product-main{
+  position:relative;left:auto;top:auto;width:auto;margin-top:218px;
+  padding:18px;border-radius:20px;background:#07121fe6;border:1px solid #ffffff16;backdrop-filter:blur(11px)
+}
+body.dkd-mobile-ui .product-main h1{font-size:34px;line-height:1.08;letter-spacing:1px;margin:12px 0 9px}
+body.dkd-mobile-ui .product-main .description{font-size:13px;line-height:1.55;margin-top:13px;max-width:none}
+body.dkd-mobile-ui .product-price{font-size:23px;margin:16px 0 7px}
+body.dkd-mobile-ui .product-price del{font-size:13px;margin-left:8px}
+body.dkd-mobile-ui .stars{font-size:12px;gap:2px;flex-wrap:wrap}
+body.dkd-mobile-ui .stars .icon{width:15px;height:15px}
+body.dkd-mobile-ui .product-foot{
+  position:relative;left:auto;right:auto;bottom:auto;margin:12px 0 0;padding:0 5px 10px;
+  display:grid;grid-template-columns:1fr;gap:8px;font-size:12px
+}
+body.dkd-mobile-ui .product-foot .icon{width:18px;height:18px;margin-right:6px}
+
+/* Settings: category chips + full-width content */
+body.dkd-mobile-ui .settings-layout{display:block;height:auto}
+body.dkd-mobile-ui .settings-nav{
+  display:flex;gap:7px;overflow-x:auto;margin:0 -2px 14px;padding:2px 2px 8px;scrollbar-width:none
+}
+body.dkd-mobile-ui .settings-nav::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .settings-nav button{
+  width:auto;min-width:max-content;padding:9px 12px;gap:6px;font-size:12px;border-radius:18px;background:#ffffff08
+}
+body.dkd-mobile-ui .settings-nav button.active{box-shadow:none;background:#e9eef5;color:#111a29}
+body.dkd-mobile-ui .settings-nav .icon{width:17px;height:17px}
+body.dkd-mobile-ui .settings-content{padding:0;overflow:visible}
+body.dkd-mobile-ui .settings-content h2{font-size:22px;margin:6px 0 12px}
+body.dkd-mobile-ui .settings-content>p{font-size:13px;line-height:1.5}
+body.dkd-mobile-ui .setting-row{padding:15px 3px;gap:12px;font-size:14px;min-height:64px;align-items:center}
+body.dkd-mobile-ui .setting-row small{font-size:11px;line-height:1.35;margin-top:5px}
+body.dkd-mobile-ui .setting-row select{font-size:12px;padding:8px 10px;max-width:165px}
+body.dkd-mobile-ui .switch{width:48px;height:27px}
+body.dkd-mobile-ui .switch:after{width:19px;height:19px}
+body.dkd-mobile-ui .switch.on:after{left:25px}
+body.dkd-mobile-ui input[type=range]{width:128px}
+body.dkd-mobile-ui .settings-storage{padding:16px;border-radius:15px;font-size:14px}
+body.dkd-mobile-ui .storage-game{gap:10px;padding:12px 0}
+body.dkd-mobile-ui .storage-game img{width:48px;height:48px}
+body.dkd-mobile-ui .storage-game .pill{font-size:11px;min-height:34px;padding:7px 11px}
+body.dkd-mobile-ui .list-button{padding:13px 14px;gap:11px;border-radius:12px;font-size:14px}
+body.dkd-mobile-ui .list-button .icon{width:20px;height:20px}
+
+/* Modals are mobile sheets */
+body.dkd-mobile-ui .modal-backdrop{align-items:flex-end;padding:12px 10px 86px;background:#000a;backdrop-filter:blur(8px)}
+body.dkd-mobile-ui .modal,body.dkd-mobile-ui .modal.wide{
+  width:100%;max-width:410px;max-height:720px;padding:22px 18px 24px;border-radius:24px;
+  background:linear-gradient(145deg,#1b2a40,#0b1625);
+}
+body.dkd-mobile-ui .modal h2{font-size:23px;margin:0 38px 16px 0}
+body.dkd-mobile-ui .modal h3{font-size:16px}
+body.dkd-mobile-ui .modal p{font-size:13px;line-height:1.5}
+body.dkd-mobile-ui .modal .modal-close{top:13px;right:13px}
+body.dkd-mobile-ui .modal-actions{gap:8px;margin-top:20px;flex-wrap:wrap}
+body.dkd-mobile-ui .checkout-item{gap:13px;margin:17px 0}
+body.dkd-mobile-ui .checkout-item img{width:72px;height:72px}
+body.dkd-mobile-ui .demo-notice{font-size:12px!important;padding:12px 13px}
+body.dkd-mobile-ui .background-choices{grid-template-columns:repeat(2,1fr);gap:9px}
+body.dkd-mobile-ui .background-choice{height:112px;padding:10px;font-size:13px;border-radius:12px}
+body.dkd-mobile-ui .panel{padding:17px;border-radius:16px}
+body.dkd-mobile-ui .search-results{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:15px}
+body.dkd-mobile-ui .empty{padding:46px 14px;font-size:15px}
+body.dkd-mobile-ui .empty>.icon{width:44px;height:44px;margin-bottom:12px}
+
+/* Control Center: native mobile bottom sheet with horizontal activity cards */
+body.dkd-mobile-ui .cc-overlay{
+  background:linear-gradient(180deg,#02060d55,#02060dfb 30%);
+  backdrop-filter:blur(13px);
+}
+body.dkd-mobile-ui .cc-header{left:16px;right:16px;top:128px;font-size:14px}
+body.dkd-mobile-ui .activity-row{
+  left:16px;right:16px;top:164px;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;padding-bottom:8px
+}
+body.dkd-mobile-ui .activity-row::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .activity-card{min-width:218px;width:218px;height:148px;border-radius:16px}
+body.dkd-mobile-ui .activity-card[style]{width:190px!important;min-width:190px!important}
+body.dkd-mobile-ui .activity-info{left:14px;right:14px;bottom:13px}
+body.dkd-mobile-ui .activity-info strong{font-size:15px;margin:5px 0}
+body.dkd-mobile-ui .activity-info small{font-size:10px}
+body.dkd-mobile-ui .cc-dock{
+  left:0;right:0;bottom:74px;height:84px;padding:11px 12px 9px;
+  border-top:1px solid #ffffff16;gap:4px;
+  overflow-x:auto;scrollbar-width:none;background:#050b13f2
+}
+body.dkd-mobile-ui .cc-dock::-webkit-scrollbar{display:none}
+body.dkd-mobile-ui .cc-item{min-width:52px;width:52px;height:58px;border-radius:14px}
+body.dkd-mobile-ui .cc-item .icon{width:24px;height:24px}
+body.dkd-mobile-ui .cc-item span{display:block!important;top:auto;bottom:4px;font-size:7px;max-width:48px;overflow:hidden;text-overflow:ellipsis}
+body.dkd-mobile-ui .cc-item:first-child,body.dkd-mobile-ui .cc-item:last-child{margin:0}
+body.dkd-mobile-ui .cc-panel{
+  left:12px;right:12px;bottom:166px;width:auto;max-height:420px;padding:18px;overflow:auto;border-radius:22px
+}
+body.dkd-mobile-ui .cc-panel h2{font-size:21px;margin-bottom:14px}
+body.dkd-mobile-ui .cc-panel .setting-row{font-size:13px;padding:11px 0;min-height:54px}
+body.dkd-mobile-ui .cc-panel .list-button{font-size:13px}
+body.dkd-mobile-ui .cc-panel p{font-size:12px;line-height:1.45}
+body.dkd-mobile-ui .cc-panel .list-button img{width:44px;height:44px}
+
+/* Toasts */
+body.dkd-mobile-ui .toast{
+  top:14px;left:12px;right:12px;min-width:0;max-width:none;padding:13px 15px;border-radius:14px;gap:10px
+}
+body.dkd-mobile-ui .toast strong{font-size:14px}
+body.dkd-mobile-ui .toast p{font-size:11px;margin-top:3px}
+
+/* Power */
+body.dkd-mobile-ui .power-screen{padding:30px 22px;gap:18px}
+body.dkd-mobile-ui .power-screen>.icon{width:68px;height:68px}
+body.dkd-mobile-ui .power-screen h1{font-size:28px;margin:8px 0}
+body.dkd-mobile-ui .power-screen p{font-size:14px;line-height:1.5}
+
+/* Playable games: keep 16:9 scene undistorted, put large touch controls below it. */
+body.dkd-mobile-ui #game-host{background:linear-gradient(180deg,#02060d,#07111e)}
+body.dkd-mobile-ui .game-session{overflow:hidden}
+body.dkd-mobile-ui .game-session canvas{
+  position:absolute;left:0;top:115px;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#02060d;
+  border-top:1px solid #ffffff10;border-bottom:1px solid #ffffff12
+}
+body.dkd-mobile-ui .game-hud{left:14px;right:14px;top:28px;font-size:12px}
+body.dkd-mobile-ui .hud-title{font-size:11px;letter-spacing:2px;margin-bottom:6px}
+body.dkd-mobile-ui .hud-score{font-size:25px}
+body.dkd-mobile-ui .hud-label{font-size:9px;letter-spacing:1px}
+body.dkd-mobile-ui .hud-center{font-size:16px}
+body.dkd-mobile-ui .hud-hearts{font-size:16px;letter-spacing:5px}
+body.dkd-mobile-ui .hud-progress{width:110px;margin-top:7px}
+body.dkd-mobile-ui .game-message{top:368px;font-size:17px;letter-spacing:1px;padding:0 16px}
+body.dkd-mobile-ui .touch-pad{display:block!important;left:24px;bottom:145px;width:185px;height:185px;opacity:.95}
+body.dkd-mobile-ui .touch-pad button,body.dkd-mobile-ui .touch-actions button{
+  width:61px;height:61px;border-width:1px;background:#0b182ddd;box-shadow:0 7px 22px #0007;font-size:22px
+}
+body.dkd-mobile-ui .touch-pad .up{left:62px;top:0}
+body.dkd-mobile-ui .touch-pad .left{left:0;top:62px}
+body.dkd-mobile-ui .touch-pad .down{left:62px;top:62px}
+body.dkd-mobile-ui .touch-pad .right{left:124px;top:62px}
+body.dkd-mobile-ui .touch-actions{display:block!important;right:21px;bottom:155px;width:164px;height:164px}
+body.dkd-mobile-ui .touch-actions button{width:74px;height:74px;font-size:13px;font-weight:600}
+body.dkd-mobile-ui .touch-actions .touch-jump{right:0;bottom:0}
+body.dkd-mobile-ui .touch-actions .touch-boost{left:0;top:0}
+body.dkd-mobile-ui .game-help{left:18px;right:18px;bottom:89px;max-width:none;font-size:10px;line-height:1.35;text-align:center;color:#9fb0c4}
+body.dkd-mobile-ui .game-toolbar{right:14px;bottom:28px;gap:7px}
+body.dkd-mobile-ui .game-toolbar button{padding:9px 12px;font-size:11px;border-radius:22px}
+body.dkd-mobile-ui .game-toolbar .icon{width:17px;height:17px}
+body.dkd-mobile-ui .game-overlay{align-items:flex-start;padding-top:84px;background:#020711e8}
+body.dkd-mobile-ui .game-menu{width:100%;padding:28px 20px;text-align:center}
+body.dkd-mobile-ui .game-menu h1{font-size:38px;letter-spacing:2px;margin:16px 0}
+body.dkd-mobile-ui .game-menu p{font-size:13px;line-height:1.5}
+body.dkd-mobile-ui .game-menu .buttons{gap:9px;margin-top:20px}
+body.dkd-mobile-ui .game-menu .pill{min-width:0}
+body.dkd-mobile-ui .game-controls{padding:13px 14px;border-radius:13px;font-size:11px;line-height:1.55;margin-top:18px}
+
+/* Never show the old rotate-phone gate. */
+#mobile-orientation{display:none!important}
+
+@media (max-height:720px){
+  body.dkd-mobile-ui #console{height:100dvh!important;min-height:100dvh!important}
+}

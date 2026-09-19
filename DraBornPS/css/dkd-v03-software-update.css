@@ -1,0 +1,74 @@
+/* DraBornPS v0.5 Software Update */
+html,body{min-height:100%;min-height:100dvh;background:#02060d}
+body.dkd-mobile-ui{min-height:100dvh;background:#02060d}
+body.dkd-mobile-ui #viewport{
+  position:fixed!important;inset:0!important;
+  width:100%!important;height:100dvh!important;min-height:100dvh!important;
+  padding:0!important;background:#02060d
+}
+body.dkd-mobile-ui #console{
+  position:fixed!important;inset:0!important;left:0!important;top:0!important;
+  width:100%!important;height:100dvh!important;min-width:100%!important;min-height:100dvh!important;
+  transform:none!important;background:#07111e
+}
+body.dkd-mobile-ui #screen,
+body.dkd-mobile-ui #game-host,
+body.dkd-mobile-ui #control-center{
+  position:absolute;inset:0;width:100%;height:100%;min-height:100%
+}
+body.dkd-mobile-ui .page,
+body.dkd-mobile-ui .product-screen{
+  height:100%;min-height:100%;padding-bottom:calc(92px + env(safe-area-inset-bottom))
+}
+body.dkd-mobile-ui .cc-overlay,
+body.dkd-mobile-ui .power-screen,
+body.dkd-mobile-ui .game-session{height:100%;min-height:100%}
+body.dkd-mobile-ui #system-footer{
+  bottom:0!important;
+  padding-bottom:calc(9px + env(safe-area-inset-bottom))
+}
+
+/* Wider game art cards: landscape artwork now fills the card cleanly. */
+body.dkd-mobile-ui .game-rail{
+  height:116px;padding:10px 16px 22px;gap:15px
+}
+body.dkd-mobile-ui .game-tile{
+  width:74px;height:68px;min-width:74px;min-height:68px;border-radius:15px
+}
+body.dkd-mobile-ui .game-tile>img{
+  width:100%;height:100%;max-width:none;object-fit:cover;object-position:center;border-radius:14px
+}
+body.dkd-mobile-ui .game-tile.selected{
+  width:86px;height:78px;min-width:86px;min-height:78px
+}
+body.dkd-mobile-ui .tile-label{top:89px;max-width:116px}
+body.dkd-mobile-ui .game-tile .tile-title{font-size:9px;bottom:6px}
+body.dkd-mobile-ui .home-body{top:186px}
+body.dkd-mobile-ui .home-body:has(.game-hero){top:186px}
+
+/* LUMEN + ORBITAL touch clusters sit slightly lower on portrait phones. */
+body.dkd-mobile-ui .game-session.game-lumen .touch-pad,
+body.dkd-mobile-ui .game-session.game-orbital .touch-pad{bottom:112px}
+body.dkd-mobile-ui .game-session.game-lumen .touch-actions,
+body.dkd-mobile-ui .game-session.game-orbital .touch-actions{bottom:122px}
+
+/* In-app pull to refresh. */
+#dkd-pull-refresh{
+  position:fixed;z-index:250;left:50%;top:8px;
+  transform:translate(-50%,-72px);
+  min-width:132px;height:38px;padding:0 15px;border-radius:22px;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  background:#e9f2ff;color:#0b1728;font:600 12px/1 ConsoleSans,'Segoe UI',sans-serif;
+  box-shadow:0 10px 34px #0008;opacity:0;pointer-events:none;
+  transition:transform .18s ease,opacity .18s ease
+}
+body.dkd-mobile-ui #dkd-pull-refresh.show{opacity:1}
+#dkd-pull-refresh.ready{background:#fff}
+#dkd-pull-refresh .dkd-refresh-mark{font-size:17px;line-height:1}
+#dkd-pull-refresh.refreshing .dkd-refresh-mark{animation:dkd-refresh-spin .7s linear infinite}
+@keyframes dkd-refresh-spin{to{transform:rotate(360deg)}}
+
+@media (max-height:720px){
+  body.dkd-mobile-ui #viewport,
+  body.dkd-mobile-ui #console{height:100dvh!important;min-height:100dvh!important}
+}

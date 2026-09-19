@@ -1,0 +1,44 @@
+/* DraBornPS v0.5 — mobile Control Center viewport hotfix.
+   The PS-button Control Center owns the whole app viewport while open,
+   so its dock is flush with the real bottom edge instead of reserving
+   space for the normal mobile navigation footer. */
+body.dkd-mobile-ui #control-center:not([hidden]){
+  position:fixed!important;
+  inset:0!important;
+  width:100%!important;
+  height:100dvh!important;
+  min-height:100dvh!important;
+  z-index:180!important;
+  overflow:hidden!important;
+  background:#02060d!important;
+}
+body.dkd-mobile-ui #control-center:not([hidden]) .cc-overlay{
+  position:fixed!important;
+  inset:0!important;
+  width:100%!important;
+  height:auto!important;
+  min-height:0!important;
+  overflow:hidden!important;
+  background:linear-gradient(180deg,#06101bd9 0%,#02060dfb 34%,#02060d 100%)!important;
+}
+body.dkd-mobile-ui #control-center:not([hidden]) ~ #system-footer{
+  display:none!important;
+}
+body.dkd-mobile-ui #control-center:not([hidden]) .cc-dock{
+  left:0!important;
+  right:0!important;
+  bottom:0!important;
+  height:calc(88px + env(safe-area-inset-bottom))!important;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom))!important;
+  background:#050b13fa!important;
+}
+body.dkd-mobile-ui #control-center:not([hidden]) .cc-panel{
+  bottom:calc(100px + env(safe-area-inset-bottom))!important;
+  max-height:min(420px,calc(100dvh - 300px))!important;
+}
+@supports (height:100svh){
+  body.dkd-mobile-ui #control-center:not([hidden]){
+    height:100svh!important;
+    min-height:100svh!important;
+  }
+}

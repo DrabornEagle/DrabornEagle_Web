@@ -1,0 +1,45 @@
+/* DraBornPS v0.5 — Media spacing + 7 online friends + headset accessory card. */
+body.dkd-mobile-ui .home-body.dkd-media-home{
+  top:70px!important;
+  bottom:78px!important;
+  padding:4px 16px 22px!important;
+}
+body.dkd-mobile-ui .dkd-media-home .welcome-heading{
+  margin:2px 0 10px!important;
+}
+body.dkd-mobile-ui .dkd-media-home .media-grid{
+  margin-top:10px!important;
+}
+.headset-meter{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:76px;
+  height:48px;
+  margin:0 0 2px;
+}
+.headset-meter .icon{width:58px;height:58px}
+body.dkd-mobile-ui .headset-meter{
+  width:58px;
+  height:34px;
+  margin:0 0 2px;
+}
+body.dkd-mobile-ui .headset-meter .icon{width:43px;height:43px}
+body.dkd-mobile-ui .widget.friends .widget-main{overflow:hidden}
+body.dkd-mobile-ui .widget.friends .friend-avatars{
+  width:100%;
+  gap:4px;
+  flex-wrap:nowrap;
+  min-width:0;
+}
+body.dkd-mobile-ui .widget.friends .friend-avatars .avatar{
+  width:31px;
+  height:31px;
+  flex:0 0 31px;
+  font-size:9px;
+}
+body.dkd-mobile-ui .widget.friends .friend-summary{
+  margin-left:4px;
+  font-size:11px;
+  white-space:nowrap;
+}

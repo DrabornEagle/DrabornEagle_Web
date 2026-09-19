@@ -1,0 +1,27 @@
+/* DraBornPS v0.5 — reliable mobile hold controls.
+   Stop Android/Chrome long-press selection/callouts from stealing game input. */
+body.dkd-mobile-ui .game-session,
+body.dkd-mobile-ui .game-session canvas,
+body.dkd-mobile-ui .game-session .touch-pad,
+body.dkd-mobile-ui .game-session .touch-actions,
+body.dkd-mobile-ui .game-session [data-game-key]{
+  -webkit-user-select:none!important;
+  user-select:none!important;
+  -webkit-touch-callout:none!important;
+  -webkit-tap-highlight-color:transparent!important;
+}
+body.dkd-mobile-ui .game-session .touch-pad,
+body.dkd-mobile-ui .game-session .touch-actions,
+body.dkd-mobile-ui .game-session [data-game-key]{
+  touch-action:none!important;
+  overscroll-behavior:none!important;
+}
+body.dkd-mobile-ui .game-session [data-game-key]{
+  -webkit-user-drag:none!important;
+  cursor:default!important;
+}
+body.dkd-mobile-ui .game-session [data-game-key]:active{
+  transform:scale(.94)!important;
+  background:#193252e8!important;
+  border-color:#d9ecff!important;
+}

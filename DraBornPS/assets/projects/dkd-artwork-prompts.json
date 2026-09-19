@@ -1,0 +1,37 @@
+{
+  "method": "built-in imagegen",
+  "date": "2026-09-19",
+  "assets": [
+    {
+      "dkdId": "go",
+      "dkdName": "DraBornGo",
+      "dkdScene": "A motorcycle delivery courier with helmet and yellow delivery box on a tropical urban coastal street at sunset. Foreground premium smartphone clearly showing a sophisticated dark courier logistics app: turquoise route map with a path and delivery pin, task card, buttons. Text on the phone only: DraBornGo, Sipariş Havuzu, Canlı Rota. Phone on right half; small courier motorcycle visible left. Amber and electric cyan accents."
+    },
+    {
+      "dkdId": "park",
+      "dkdName": "DraBornPark",
+      "dkdScene": "A midnight turquoise premium sedan parked on a palm-lined boulevard. Foreground premium smartphone showing a polished car owner contact app with vehicle illustration, notification and message controls. A small windshield tag with a clearly stylized NONFUNCTIONAL QR motif and NFC wave nearby illustrates scanning a car contact tag. Text on phone only: DraBornPark, Araç Sahibine Ulaş, Bildirim Gönder. Green mint and cyan accents."
+    },
+    {
+      "dkdId": "sea",
+      "dkdName": "DraBornSea",
+      "dkdScene": "A white tour yacht in exceptionally clear turquoise Antalya Mediterranean water, pine coast, sunlit limestone cliffs. Foreground premium smartphone shows an elegant boat tour booking app with three yacht tour photographic cards, map marker and booking button. Text on phone only: DraBornSea, Tekne Turları, Suluada, Rezervasyon. Aquamarine and warm coral accents."
+    },
+    {
+      "dkdId": "gate",
+      "dkdName": "DraBornGate",
+      "dkdScene": "A modern luxury residential entrance with gate barrier and glass security reception, landscaped palm trees at dusk. Foreground premium smartphone clearly displays a high quality access management app with luminous shield, AirPass active status, visitor code 482 691, gateway card. Text on phone only: DraBornGate, AirPass, Geçiş Hazır. Violet and cyan lighting."
+    },
+    {
+      "dkdId": "odds",
+      "dkdName": "DraBornOdds",
+      "dkdScene": "A dramatic illuminated football stadium at twilight with subtle field and ball. Foreground premium smartphone shows sophisticated sports analytics app, selected three matches, chart and risk profile selector. Text on phone only: DraBornOdds, Maç Analizi, Risk Profili, Dengeli. No money, coins, winnings, betting company logos or claims. Electric magenta and lime details."
+    },
+    {
+      "dkdId": "portal",
+      "dkdName": "DraBornPortal",
+      "dkdScene": "A stylish game desk in blue magenta light with large monitor showing a fictional cinematic fantasy video game landscape. Foreground smartphone showing a screenshot translation app, original game image and readable Turkish quest translation overlay with elegant EN to TR indicator. Text on phone only: DraBornPortal, EN → TR, Görevi tamamla. A minimal game controller rests near monitor. Purple and cyan accents."
+    }
+  ],
+  "wallpaper": "Cinematic Miami coastal city at sunset, palm silhouettes, art deco hotels and magenta/cyan lights reflected on ocean; darker open left area for console UI; no text, logo, people or UI."
+}
