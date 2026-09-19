@@ -37,12 +37,13 @@ body.dkd-mobile-ui{
   touch-action:manipulation;
 }
 body.dkd-mobile-ui #viewport{
-  width:100%;height:100%;
-  overflow:hidden;
-  padding:max(env(safe-area-inset-top),0px) max(env(safe-area-inset-right),0px) max(env(safe-area-inset-bottom),0px) max(env(safe-area-inset-left),0px);
+  position:fixed;inset:0;
+  width:100dvw;height:100dvh;min-height:100dvh;
+  overflow:hidden;padding:0;
 }
 body.dkd-mobile-ui #console{
-  width:430px;height:932px;
+  width:100dvw;height:100dvh;
+  min-width:100dvw;min-height:100dvh;
   overflow:hidden;
   border-radius:0;
   background:#07111e;
@@ -85,7 +86,7 @@ body.dkd-mobile-ui .top-right .icon-btn:nth-child(2){display:none}
 
 /* Mobile game/app rail */
 body.dkd-mobile-ui .game-rail{
-  height:95px;padding:10px 16px 18px;gap:13px;
+  height:110px;padding:10px 16px 20px;gap:14px;
   overflow-x:auto;overflow-y:hidden;
   scroll-snap-type:x proximity;
   scrollbar-width:none;
@@ -93,26 +94,26 @@ body.dkd-mobile-ui .game-rail{
 }
 body.dkd-mobile-ui .game-rail::-webkit-scrollbar{display:none}
 body.dkd-mobile-ui .game-tile{
-  width:58px;height:58px;min-width:58px;min-height:58px;
-  border-radius:13px;scroll-snap-align:center;overflow:visible;
-  box-shadow:0 5px 18px #0006;
+  width:66px;height:66px;min-width:66px;min-height:66px;
+  border-radius:14px;scroll-snap-align:center;overflow:visible;
+  box-shadow:0 6px 20px #0007;
 }
 body.dkd-mobile-ui .game-tile>img{border-radius:12px}
 body.dkd-mobile-ui .game-tile .icon{width:27px;height:27px}
 body.dkd-mobile-ui .game-tile.selected{
-  width:66px;height:66px;min-width:66px;min-height:66px;
+  width:76px;height:76px;min-width:76px;min-height:76px;
   outline:2px solid #fff;outline-offset:3px;
 }
 body.dkd-mobile-ui .tile-label{
-  top:74px;left:50%;transform:translateX(-50%);
-  font-size:10px;max-width:92px;overflow:hidden;text-overflow:ellipsis;
+  top:86px;left:50%;transform:translateX(-50%);
+  font-size:11px;max-width:104px;overflow:hidden;text-overflow:ellipsis;
 }
-body.dkd-mobile-ui .game-tile .tile-title{font-size:8px;bottom:5px;letter-spacing:0}
+body.dkd-mobile-ui .game-tile .tile-title{font-size:9px;bottom:6px;letter-spacing:0}
 body.dkd-mobile-ui .game-tile.library{margin-left:0}
 
 /* Welcome Hub becomes a native vertical mobile dashboard */
 body.dkd-mobile-ui .home-body{
-  position:absolute;left:0;right:0;top:165px;bottom:78px;
+  position:absolute;left:0;right:0;top:180px;bottom:78px;
   padding:0 16px 20px;
   overflow-y:auto;overflow-x:hidden;
   scrollbar-width:none;
@@ -160,7 +161,7 @@ body.dkd-mobile-ui .widget-edit-tools button{width:28px;height:28px}
 body.dkd-mobile-ui .widget-edit-tools .icon{width:15px;height:15px}
 
 /* Selected title hero on mobile */
-body.dkd-mobile-ui .home-body:has(.game-hero){top:165px;padding:0}
+body.dkd-mobile-ui .home-body:has(.game-hero){top:180px;padding:0}
 body.dkd-mobile-ui .game-hero{
   position:absolute;left:18px;right:18px;top:auto;bottom:122px;width:auto;
   padding:18px;border-radius:20px;
@@ -374,7 +375,7 @@ body.dkd-mobile-ui .power-screen p{font-size:14px;line-height:1.5}
 body.dkd-mobile-ui #game-host{background:linear-gradient(180deg,#02060d,#07111e)}
 body.dkd-mobile-ui .game-session{overflow:hidden}
 body.dkd-mobile-ui .game-session canvas{
-  position:absolute;left:0;top:115px;width:430px;height:242px;object-fit:contain;background:#02060d;
+  position:absolute;left:0;top:115px;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;background:#02060d;
   border-top:1px solid #ffffff10;border-bottom:1px solid #ffffff12
 }
 body.dkd-mobile-ui .game-hud{left:14px;right:14px;top:28px;font-size:12px}
@@ -413,7 +414,7 @@ body.dkd-mobile-ui .game-controls{padding:13px 14px;border-radius:13px;font-size
 #mobile-orientation{display:none!important}
 
 @media (max-height:720px){
-  body.dkd-mobile-ui #console{height:844px}
+  body.dkd-mobile-ui #console{height:100dvh!important;min-height:100dvh!important}
 }
 </style>
 </head>
@@ -778,7 +779,7 @@ DKD.wake=()=>{DKD.powerState=null;DKD.closeModal();DKD.navigate('home');DKD.audi
  document.addEventListener('visibilitychange',()=>{if(document.hidden){DKD.input.clear();if(DKD.route==='game')DKD.activeSession?.pause(true);}});
  let lastPad=[],padCooldown=0;function pollPad(now){const pad=navigator.getGamepads?.()?.[0];if(pad){const buttons=pad.buttons.map(button=>button.pressed),edge=index=>buttons[index]&&!lastPad[index];DKD.input.pad={x:Math.abs(pad.axes[0])>.15?pad.axes[0]:0,y:Math.abs(pad.axes[1])>.15?pad.axes[1]:0,aimX:pad.axes[2]||0,aimY:pad.axes[3]||0,fire:buttons[7]||buttons[0],jump:edge(0),boost:buttons[7]||buttons[5],dash:edge(1)};if(edge(16))DKD.toggleCC();else if(edge(9)&&DKD.route==='game')actions['game-pause']();else if(DKD.route!=='game'||DKD.ccOpen||DKD.activeSession?.paused||DKD.modalTitle){if(edge(1))back();if(edge(0))document.activeElement?.click();if(now>padCooldown){const direction=buttons[12]||pad.axes[1]<-.6?'ArrowUp':buttons[13]||pad.axes[1]>.6?'ArrowDown':buttons[14]||pad.axes[0]<-.6?'ArrowLeft':buttons[15]||pad.axes[0]>.6?'ArrowRight':null;if(direction){DKD.moveFocus(direction);padCooldown=now+180;}}}lastPad=buttons;}requestAnimationFrame(pollPad);}requestAnimationFrame(pollPad);
  if(new URLSearchParams(location.search).get('capture')==='1080p')document.documentElement.classList.add('capture-mode');
- const resize=()=>{const viewport=document.getElementById('viewport'),consoleEl=document.getElementById('console');const changed=DKD.syncUIMode();const baseWidth=DKD.isMobileUI?430:1920,baseHeight=DKD.isMobileUI?932:1080;const usableWidth=viewport.clientWidth||innerWidth,usableHeight=viewport.clientHeight||innerHeight;const scale=Math.min(usableWidth/baseWidth,usableHeight/baseHeight);consoleEl.style.width=baseWidth+'px';consoleEl.style.height=baseHeight+'px';consoleEl.style.transform=`translate(-50%, -50%) scale(${scale})`;document.documentElement.style.setProperty('--dkd-console-scale',scale);if(changed){DKD.footer();if(DKD.ccOpen)DKD.renderCC();}};window.addEventListener('resize',resize);window.addEventListener('orientationchange',()=>setTimeout(resize,120));resize();
+ const resize=()=>{const viewport=document.getElementById('viewport'),consoleEl=document.getElementById('console');const changed=DKD.syncUIMode();const usableWidth=viewport.clientWidth||innerWidth,usableHeight=viewport.clientHeight||innerHeight;if(DKD.isMobileUI){consoleEl.style.width=usableWidth+'px';consoleEl.style.height=usableHeight+'px';consoleEl.style.minWidth=usableWidth+'px';consoleEl.style.minHeight=usableHeight+'px';consoleEl.style.transform='translate(-50%, -50%)';document.documentElement.style.setProperty('--dkd-console-scale',1);}else{const baseWidth=1920,baseHeight=1080;const scale=Math.min(usableWidth/baseWidth,usableHeight/baseHeight);consoleEl.style.width=baseWidth+'px';consoleEl.style.height=baseHeight+'px';consoleEl.style.minWidth='';consoleEl.style.minHeight='';consoleEl.style.transform=`translate(-50%, -50%) scale(${scale})`;document.documentElement.style.setProperty('--dkd-console-scale',scale);}if(changed){DKD.footer();if(DKD.ccOpen)DKD.renderCC();}};window.addEventListener('resize',resize);window.addEventListener('orientationchange',()=>setTimeout(resize,120));resize();
  if(navigator.maxTouchPoints>0)document.getElementById('console').classList.add('touch-device');
  setInterval(()=>{DKD.clock();const rest=DKD.state.settings.autoRest,limit=rest==='20 minutes'?1200000:rest==='1 hour'?3600000:Infinity;if(!DKD.powerState&&Date.now()-lastInput>limit&&DKD.route!=='game')DKD.power('rest');if(DKD.route==='game'&&!DKD.activeSession?.paused){playTime++;const reminder=DKD.state.settings.playReminder;if(!reminderSent&&reminder&&reminder!=='Off'&&playTime>parseInt(reminder)*60){DKD.toast('Time for a break?',`You have played for ${reminder}.`);reminderSent=true;}}},1000);
  DKD.applySettings();DKD.render();
