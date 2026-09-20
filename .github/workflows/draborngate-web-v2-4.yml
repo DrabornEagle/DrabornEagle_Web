@@ -1,21 +1,6 @@
 name: DraBornGate Web v3.2.11 Verify
 
 on:
-  push:
-    branches:
-      - main
-      - 'agent/**'
-      - 'fix/**'
-      - 'codex/**'
-      - 'release/**'
-    paths:
-      - 'DraBornGate/**'
-      - '.github/workflows/draborngate-web-v2-4.yml'
-  pull_request:
-    branches: [main]
-    paths:
-      - 'DraBornGate/**'
-      - '.github/workflows/draborngate-web-v2-4.yml'
   workflow_dispatch:
 
 permissions:
