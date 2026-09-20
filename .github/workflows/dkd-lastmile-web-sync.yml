@@ -44,7 +44,9 @@ jobs:
           dkd_sha="$(git -C dkd-source rev-parse HEAD)"
           echo "DKD_SOURCE_COMMIT=$dkd_sha" >> "$GITHUB_ENV"
           dkd_previous="$(node -e "try{console.log(require('./DraBornGames/LastMile/version.json').dkd_sourceCommit)}catch{}")"
-          if [[ "$dkd_sha" != "$dkd_previous" ]]; then echo 'changed=true' >> "$GITHUB_OUTPUT"; fi
+          if [[ "$dkd_sha" != "$dkd_previous" || ! -s DraBornGames/LastMile/index.html ]]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
       - name: Build Android-shared v0.7.5 web game
         if: steps.dkd-revision.outputs.changed == 'true'
         working-directory: dkd-source/LastMile
@@ -56,6 +58,43 @@ jobs:
           npm run build:web
           npm test
           npm run typecheck
+      - name: DKD Ensure Last Mile SEO metadata
+        if: steps.dkd-revision.outputs.changed == 'true'
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const file = 'DraBornGames/LastMile/index.html';
+          let html = fs.readFileSync(file, 'utf8');
+          if (!html.trim()) throw new Error('LastMile index.html is empty after web build.');
+          const markerStart = '<!-- DKD LASTMILE SEO START -->';
+          const markerEnd = '<!-- DKD LASTMILE SEO END -->';
+          html = html.replace(new RegExp(markerStart + '[\\s\\S]*?' + markerEnd, 'g'), '');
+          const seo = `
+          ${markerStart}
+          <meta name="description" content="Last Mile, DraBornGames tarafından geliştirilen kurye ve teslimat kariyer simülasyonudur. Tarayıcı sürümünü keşfet ve oyuna başla.">
+          <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+          <link rel="canonical" href="https://www.draborneagle.com/DraBornGames/LastMile/">
+          <meta property="og:locale" content="tr_TR">
+          <meta property="og:type" content="website">
+          <meta property="og:site_name" content="DraBornEagle">
+          <meta property="og:title" content="Last Mile | DraBornGames Kurye Simülasyonu">
+          <meta property="og:description" content="Last Mile, DraBornGames tarafından geliştirilen kurye ve teslimat kariyer simülasyonudur.">
+          <meta property="og:url" content="https://www.draborneagle.com/DraBornGames/LastMile/">
+          <meta property="og:image" content="https://www.draborneagle.com/DraBornGames/assets/dkd-last-mile.webp">
+          <meta name="twitter:card" content="summary_large_image">
+          <meta name="twitter:title" content="Last Mile | DraBornGames Kurye Simülasyonu">
+          <meta name="twitter:description" content="DraBornGames Last Mile kurye ve teslimat kariyer simülasyonunu tarayıcıda keşfet.">
+          <meta name="twitter:image" content="https://www.draborneagle.com/DraBornGames/assets/dkd-last-mile.webp">
+          <script type="application/ld+json">{"@context":"https://schema.org","@type":"VideoGame","name":"Last Mile","url":"https://www.draborneagle.com/DraBornGames/LastMile/","publisher":{"@type":"Organization","name":"DraBornEagle"},"inLanguage":"tr-TR"}</script>
+          ${markerEnd}
+          `;
+          html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, '<title>Last Mile | DraBornGames Kurye Simülasyonu</title>');
+          if (!/<title/i.test(html)) html = html.replace(/<head[^>]*>/i, m => m + '\n<title>Last Mile | DraBornGames Kurye Simülasyonu</title>');
+          html = html.replace(/<\/head>/i, seo + '\n</head>');
+          fs.writeFileSync(file, html);
+          NODE
+
       - name: Point DraBornGames platform to LastMile web build
         run: |
           python3 - <<'PY'
