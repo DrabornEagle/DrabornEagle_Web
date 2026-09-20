@@ -40,16 +40,16 @@ jobs:
           test -f DraBornPark/tag-v114.css
           test -f DraBornPark/tag-v114.js
 
-      - name: DraBornPark v1.0.14 route contract
+      - name: DraBornPark v1.0.24 route contract
         run: |
-          grep -q "DraBornPark v1.0.14" DraBornPark/tag/index.html
-          grep -q "BUILD='1140'" DraBornPark/tag/index.html
-          grep -q "v1.0.14 • NFC + QR • AKTİF" DraBornPark/tag/index.html
-          grep -q "DraBornPark v1.0.14" DraBornPark/t/index.html
-          grep -q "tag-runtime-v1065.css?v=1140" DraBornPark/tag/index.html
-          grep -q "tag-app-v106.js?v=1140" DraBornPark/tag/index.html
-          grep -q "tag-v114.css?v=1140" DraBornPark/tag/index.html
-          grep -q "tag-v114.js?v=1140" DraBornPark/tag/index.html
+          grep -q "DraBornPark v1.0.24" DraBornPark/tag/index.html
+          grep -q "BUILD='1240'" DraBornPark/tag/index.html
+          grep -q "v1.0.24 • NFC + QR • AKTİF" DraBornPark/tag/index.html
+          grep -q "DraBornPark v1.0.24" DraBornPark/t/index.html
+          grep -q "tag-runtime-v1065.css?v=1240" DraBornPark/tag/index.html
+          grep -q "tag-app-v106.js?v=1240" DraBornPark/tag/index.html
+          grep -q "tag-v114.css?v=1240" DraBornPark/tag/index.html
+          grep -q "tag-v114.js?v=1240" DraBornPark/tag/index.html
 
       - name: Secure message scrolling contract
         run: |
@@ -60,7 +60,7 @@ jobs:
           grep -q 'min-height:230px' DraBornPark/tag-runtime-v1065.css
           grep -q 'GÜVENLİ MESAJLAŞMA' DraBornPark/tag-runtime-v1065.js
 
-      - name: v1.0.14 visual polish contract
+      - name: v1.0.24 visual polish contract
         run: |
           grep -q 'Galeriden seçim yok • tarih/saat damgalı' DraBornPark/tag-v114.js
           grep -q 'el.remove()' DraBornPark/tag-v114.js
