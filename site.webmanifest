@@ -1,7 +1,7 @@
 {
-  "name": "DraBornEagle",
+  "name": "DraBornEagle Ecosystem",
   "short_name": "DraBornEagle",
-  "description": "Oyun, teknoloji ve dijital projelerden oluşan DraBornEagle ekosistemi.",
+  "description": "DraBornEagle Ekosistem içinde geliştirdiğimiz PC-PS-XBOX-MOBILE oyunları ve Modern Her konuda işinize yarayacak Uygulamaları bulabilirsiniz",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
