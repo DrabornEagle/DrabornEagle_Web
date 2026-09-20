@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /AnyelaBorn/
+Disallow: /DraBornTest/
+Disallow: /DraBornOdss/
+Disallow: /Dubai/
+Disallow: /DraBornGate/Guvenlik-Sade-Tema/
+Disallow: /DraBornPark/t/
+Disallow: /DraBornPark/tag/
+
+Sitemap: https://draborneagleweb.vercel.app/sitemap.xml
