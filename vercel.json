@@ -183,7 +183,18 @@
           "value": "draborneagle.com"
         }
       ],
-      "destination": "https://www.draborneagle.com/:path*",
+      "destination": "https://draborneagleweb.vercel.app/:path*",
+      "statusCode": 301
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.draborneagle.com"
+        }
+      ],
+      "destination": "https://draborneagleweb.vercel.app/:path*",
       "statusCode": 301
     },
     {
@@ -194,7 +205,7 @@
           "value": "draborneagle.net"
         }
       ],
-      "destination": "https://www.draborneagle.com/:path*",
+      "destination": "https://draborneagleweb.vercel.app/:path*",
       "statusCode": 301
     },
     {
@@ -205,7 +216,7 @@
           "value": "www.draborneagle.net"
         }
       ],
-      "destination": "https://www.draborneagle.com/:path*",
+      "destination": "https://draborneagleweb.vercel.app/:path*",
       "statusCode": 301
     },
     {
@@ -216,7 +227,7 @@
           "value": "draborneagle.org"
         }
       ],
-      "destination": "https://www.draborneagle.com/:path*",
+      "destination": "https://draborneagleweb.vercel.app/:path*",
       "statusCode": 301
     },
     {
@@ -227,7 +238,7 @@
           "value": "www.draborneagle.org"
         }
       ],
-      "destination": "https://www.draborneagle.com/:path*",
+      "destination": "https://draborneagleweb.vercel.app/:path*",
       "statusCode": 301
     },
     {
