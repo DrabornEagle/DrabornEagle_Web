@@ -235,5 +235,13 @@
       "destination": "/DraBornGames/:path*",
       "permanent": true
     }
+  ],
+  "alias": [
+    "draborneagle.com",
+    "www.draborneagle.com",
+    "draborneagle.net",
+    "www.draborneagle.net",
+    "draborneagle.org",
+    "www.draborneagle.org"
   ]
 }
