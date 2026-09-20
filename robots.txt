@@ -9,4 +9,4 @@ Disallow: /DraBornGate/Guvenlik-Sade-Tema/
 Disallow: /DraBornPark/t/
 Disallow: /DraBornPark/tag/
 
-Sitemap: https://draborneagleweb.vercel.app/sitemap.xml
+Sitemap: https://www.draborneagle.com/sitemap.xml
