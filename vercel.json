@@ -184,7 +184,7 @@
         }
       ],
       "destination": "https://www.draborneagle.com/:path*",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/:path*",
@@ -195,7 +195,7 @@
         }
       ],
       "destination": "https://www.draborneagle.com/:path*",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/:path*",
@@ -206,7 +206,7 @@
         }
       ],
       "destination": "https://www.draborneagle.com/:path*",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/:path*",
@@ -217,7 +217,7 @@
         }
       ],
       "destination": "https://www.draborneagle.com/:path*",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/:path*",
@@ -228,7 +228,7 @@
         }
       ],
       "destination": "https://www.draborneagle.com/:path*",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/Games/:path*",
