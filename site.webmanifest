@@ -1,0 +1,11 @@
+{
+  "name": "DraBornEagle",
+  "short_name": "DraBornEagle",
+  "description": "Oyun, teknoloji ve dijital projelerden oluşan DraBornEagle ekosistemi.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "lang": "tr-TR",
+  "background_color": "#160d2a",
+  "theme_color": "#160d2a"
+}
