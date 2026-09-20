@@ -176,9 +176,72 @@
   ],
   "redirects": [
     {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "draborneagle.com"
+        }
+      ],
+      "destination": "https://www.draborneagle.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "draborneagle.net"
+        }
+      ],
+      "destination": "https://www.draborneagle.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.draborneagle.net"
+        }
+      ],
+      "destination": "https://www.draborneagle.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "draborneagle.org"
+        }
+      ],
+      "destination": "https://www.draborneagle.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.draborneagle.org"
+        }
+      ],
+      "destination": "https://www.draborneagle.com/:path*",
+      "permanent": true
+    },
+    {
       "source": "/Games/:path*",
       "destination": "/DraBornGames/:path*",
       "permanent": true
     }
+  ],
+  "alias": [
+    "draborneagle.com",
+    "www.draborneagle.com",
+    "draborneagle.net",
+    "www.draborneagle.net",
+    "draborneagle.org",
+    "www.draborneagle.org"
   ]
 }
