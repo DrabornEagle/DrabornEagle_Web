@@ -1,4 +1,4 @@
-# DraBornOdds APK/web sync: coupon-diversity/live-depth refresh 2ec8a27.
+# DraBornOdds APK/web sync: web-first publishing; signed APK follows when ready.
 name: DraBornOdds synchronized web
 on:
   push:
@@ -37,12 +37,37 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+          rm -rf "$RUNNER_TEMP/DraBornOdds-App-current"
+          if [ -d DraBornOdds/App ]; then
+            cp -a DraBornOdds/App "$RUNNER_TEMP/DraBornOdds-App-current"
+          fi
           rm -rf DraBornOdds
           mkdir -p DraBornOdds
           cp -a "$RUNNER_TEMP/DraBornOdds-dist/." DraBornOdds/
           cp -a "$RUNNER_TEMP/DraBornOdds-source/web-legal/." DraBornOdds/
+          if [ -d "$RUNNER_TEMP/DraBornOdds-App-current" ]; then
+            rm -rf DraBornOdds/App
+            cp -a "$RUNNER_TEMP/DraBornOdds-App-current" DraBornOdds/App
+          fi
           sed -i 's#href="../../"#href="../"#g' DraBornOdds/privacy/index.html DraBornOdds/terms/index.html DraBornOdds/data-safety/index.html DraBornOdds/support/index.html
           git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD > DraBornOdds/dkd-source-commit.txt
+      - name: Publish canonical web immediately
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornOdds
+          if git diff --cached --quiet; then
+            echo 'DraBornOdds web is already current.'
+            exit 0
+          fi
+          git commit -m 'deploy(DraBornOdds): publish canonical web immediately'
+          for dkd_try in 1 2 3; do
+            git pull --rebase origin main && git push && exit 0
+            sleep 3
+          done
+          exit 1
       - name: Download and verify matching signed Android APK
         shell: bash
         run: |
