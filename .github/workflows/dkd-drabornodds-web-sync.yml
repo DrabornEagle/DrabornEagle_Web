@@ -1,4 +1,4 @@
-# DraBornOdds APK/web immediate sync trigger. v0.7.4 final profile-correct deployment.
+# DraBornOdds APK/web sync: release-driven only, no periodic polling.
 name: DraBornOdds synchronized web
 on:
   push:
@@ -6,8 +6,6 @@ on:
     paths:
       - '.github/workflows/dkd-drabornodds-web-sync.yml'
   workflow_dispatch:
-  schedule:
-    - cron: '*/15 * * * *'
 permissions:
   contents: write
 concurrency:
@@ -61,7 +59,7 @@ jobs:
               if ! git -C "$dkd_source_repo" cat-file -e "$dkd_candidate^{commit}" 2>/dev/null; then
                 git -C "$dkd_source_repo" fetch origin "$dkd_candidate" --depth=1 || true
               fi
-              if git -C "$dkd_source_repo" cat-file -e "$dkd_candidate^{commit}" 2>/dev/null && git -C "$dkd_source_repo" diff --quiet "$dkd_candidate" HEAD -- . ':(exclude).github/**'; then
+              if git -C "$dkd_source_repo" cat-file -e "$dkd_candidate^{commit}" 2>/dev/null && git -C "$dkd_source_repo" diff --quiet "$dkd_candidate" HEAD -- app src app.json package.json package-lock.json plugins metro.config.js tsconfig.json assets/dkd-icon.png assets/dkd-adaptive-icon.png; then
                 dkd_signed_source="$dkd_candidate"
                 break
               fi
