@@ -1,4 +1,4 @@
-# DraBornOdds APK/web sync: web-first publishing; signed APK follows when ready.
+# DraBornOdds APK/web sync: plain-Turkish analysis refresh 301bed5; web-first, signed APK follows.
 name: DraBornOdds synchronized web
 on:
   push:
