@@ -111,12 +111,11 @@ jobs:
           dkd_expected="$(git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD)"
           test "$(tr -d '\r\n' < DraBornOdds/dkd-source-commit.txt)" = "$dkd_expected"
           test "$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt)" = "$dkd_expected"
-          dkd_bundle="$(find DraBornOdds/_expo/static/js/web -type f -name 'entry-*.js' | head -n 1)"
-          test -n "$dkd_bundle"
-          grep -q 'Seçim nedeni:' "$dkd_bundle"
-          grep -q 'Güncel oran:' "$dkd_bundle"
-          if grep -q 'bahis şirketinin payı çıkarıldıktan sonra' "$dkd_bundle"; then
-            echo 'DKD ERROR: legacy explanation remains in current web bundle.'
+          test -n "$(find DraBornOdds/_expo/static/js/web -type f -name 'entry-*.js' | head -n 1)"
+          grep -q 'Seçim nedeni:' "$RUNNER_TEMP/DraBornOdds-source/src/dkd-friendly-reason.ts"
+          grep -q 'Güncel oran:' "$RUNNER_TEMP/DraBornOdds-source/src/dkd-friendly-reason.ts"
+          if grep -q 'bahis şirketinin payı çıkarıldıktan sonra' "$RUNNER_TEMP/DraBornOdds-source/src/dkd-friendly-reason.ts"; then
+            echo 'DKD ERROR: legacy explanation remains in canonical source.'
             exit 1
           fi
           (cd DraBornOdds/App && sha256sum -c SHA256.txt)
