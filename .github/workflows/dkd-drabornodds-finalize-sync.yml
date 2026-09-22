@@ -1,0 +1,136 @@
+name: DraBornOdds final web and APK sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/dkd-drabornodds-finalize-sync.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dkd-drabornodds-finalize-sync
+  cancel-in-progress: true
+
+jobs:
+  dkd-finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    env:
+      CI: '1'
+      EXPO_NO_TELEMETRY: '1'
+    steps:
+      - name: Checkout current website
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Checkout canonical DraBornOdds source
+        run: git clone --depth 50 https://github.com/DrabornEagle/DraBornOdds.git "$RUNNER_TEMP/DraBornOdds-source"
+
+      - name: Verify canonical source
+        working-directory: ${{ runner.temp }}/DraBornOdds-source
+        run: |
+          npm ci --no-audit --no-fund
+          npm run typecheck
+          npm test
+
+      - name: Export canonical web build
+        working-directory: ${{ runner.temp }}/DraBornOdds-source
+        run: npx expo export --platform web --output-dir "$RUNNER_TEMP/DraBornOdds-dist"
+
+      - name: Wait for matching signed APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          dkd_source_repo="$RUNNER_TEMP/DraBornOdds-source"
+          dkd_source="$(git -C "$dkd_source_repo" rev-parse HEAD)"
+          dkd_version="$(node -p "require('$dkd_source_repo/app.json').expo.version")"
+          dkd_code="$(node -p "require('$dkd_source_repo/app.json').expo.android.versionCode")"
+          dkd_tag="drabornodds-v${dkd_version}-code${dkd_code}"
+          dkd_apk="DraBornOdds-v${dkd_version}-code${dkd_code}-release.apk"
+          dkd_release_base="https://github.com/DrabornEagle/DraBornGo/releases/download/${dkd_tag}"
+          mkdir -p "$RUNNER_TEMP/dkd-apk"
+          dkd_matched=0
+          for dkd_try in $(seq 1 100); do
+            dkd_candidate="$(curl -fsL "$dkd_release_base/SOURCE_COMMIT.txt" 2>/dev/null | tr -d '\r\n' || true)"
+            if [ "$dkd_candidate" = "$dkd_source" ]; then
+              dkd_matched=1
+              break
+            fi
+            echo "Waiting for APK built from $dkd_source ($dkd_try/100); release currently ${dkd_candidate:-unavailable}."
+            sleep 30
+          done
+          test "$dkd_matched" = 1 || { echo 'DKD ERROR: matching signed APK was not published in time.'; exit 1; }
+          curl --retry 20 --retry-delay 8 --retry-all-errors -fL "$dkd_release_base/$dkd_apk" -o "$RUNNER_TEMP/dkd-apk/$dkd_apk"
+          for dkd_name in SHA256.txt CERTIFICATE.txt SOURCE_COMMIT.txt; do
+            curl --retry 20 --retry-delay 5 --retry-all-errors -fL "$dkd_release_base/$dkd_name" -o "$RUNNER_TEMP/dkd-apk/$dkd_name"
+          done
+          (cd "$RUNNER_TEMP/dkd-apk" && sha256sum -c SHA256.txt)
+          grep -q 'Signer #1 certificate SHA-256 digest' "$RUNNER_TEMP/dkd-apk/CERTIFICATE.txt"
+          printf '%s\n' "$dkd_version" > "$RUNNER_TEMP/dkd-apk/VERSION.txt"
+          printf '%s\n' "$dkd_code" > "$RUNNER_TEMP/dkd-apk/VERSION_CODE.txt"
+          printf '%s\n' "$dkd_apk" > "$RUNNER_TEMP/dkd-apk/APK_NAME.txt"
+
+      - name: Apply latest web and APK onto newest main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main
+          git reset --hard origin/main
+          dkd_old_source="$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt 2>/dev/null || true)"
+          dkd_old_sha="$(cut -d' ' -f1 DraBornOdds/App/SHA256.txt 2>/dev/null || true)"
+          rm -rf "$RUNNER_TEMP/DraBornOdds-App-current"
+          if [ -d DraBornOdds/App ]; then cp -a DraBornOdds/App "$RUNNER_TEMP/DraBornOdds-App-current"; fi
+          rm -rf DraBornOdds
+          mkdir -p DraBornOdds
+          cp -a "$RUNNER_TEMP/DraBornOdds-dist/." DraBornOdds/
+          cp -a "$RUNNER_TEMP/DraBornOdds-source/web-legal/." DraBornOdds/
+          if [ -d "$RUNNER_TEMP/DraBornOdds-App-current" ]; then cp -a "$RUNNER_TEMP/DraBornOdds-App-current" DraBornOdds/App; else mkdir -p DraBornOdds/App; fi
+          find DraBornOdds/App -maxdepth 1 -type f -name 'DraBornOdds-v*-release.apk' -delete
+          cp -a "$RUNNER_TEMP/dkd-apk/." DraBornOdds/App/
+          dkd_source="$(git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD)"
+          printf '%s\n' "$dkd_source" > DraBornOdds/dkd-source-commit.txt
+          sed -i 's#href="../../"#href="../"#g' DraBornOdds/privacy/index.html DraBornOdds/terms/index.html DraBornOdds/data-safety/index.html DraBornOdds/support/index.html
+          dkd_new_sha="$(cut -d' ' -f1 DraBornOdds/App/SHA256.txt)"
+          if [ -f DraBornOdds/App/index.html ]; then
+            if [ -n "$dkd_old_source" ]; then sed -i "s/$dkd_old_source/$dkd_source/g" DraBornOdds/App/index.html; fi
+            if [ -n "$dkd_old_sha" ]; then sed -i "s/$dkd_old_sha/$dkd_new_sha/g" DraBornOdds/App/index.html; fi
+          fi
+          mkdir -p DraBornOdss/App
+          cat > DraBornOdss/App/index.html <<'DKD_HTML'
+          <!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DraBornOdds Android APK</title><meta http-equiv="refresh" content="0;url=/DraBornOdds/App/"><link rel="canonical" href="https://www.draborneagle.com/DraBornOdds/App/"><script>location.replace('/DraBornOdds/App/');</script></head><body><p>DraBornOdds Android APK sayfasına yönlendiriliyorsunuz. <a href="/DraBornOdds/App/">Devam et</a></p></body></html>
+          DKD_HTML
+
+      - name: Verify final source identity and wording
+        shell: bash
+        run: |
+          set -euo pipefail
+          dkd_expected="$(git -C "$RUNNER_TEMP/DraBornOdds-source" rev-parse HEAD)"
+          test "$(tr -d '\r\n' < DraBornOdds/dkd-source-commit.txt)" = "$dkd_expected"
+          test "$(tr -d '\r\n' < DraBornOdds/App/SOURCE_COMMIT.txt)" = "$dkd_expected"
+          dkd_bundle="$(find DraBornOdds/_expo/static/js/web -type f -name 'entry-*.js' | head -n 1)"
+          test -n "$dkd_bundle"
+          grep -q 'Seçim nedeni:' "$dkd_bundle"
+          grep -q 'Güncel oran:' "$dkd_bundle"
+          if grep -q 'bahis şirketinin payı çıkarıldıktan sonra' "$dkd_bundle"; then
+            echo 'DKD ERROR: legacy explanation remains in current web bundle.'
+            exit 1
+          fi
+          (cd DraBornOdds/App && sha256sum -c SHA256.txt)
+
+      - name: Publish synchronized web and APK
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornOdds DraBornOdss/App
+          if git diff --cached --quiet; then
+            echo 'DraBornOdds web and APK are already synchronized.'
+            exit 0
+          fi
+          git commit -m 'deploy(DraBornOdds): finalize plain-Turkish web and signed APK'
+          git push origin main
