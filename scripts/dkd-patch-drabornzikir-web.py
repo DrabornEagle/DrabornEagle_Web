@@ -17,6 +17,7 @@ HEAD = r'''
 <link rel="manifest" href="/DraBornZikir/manifest.webmanifest">
 <style>
 :root{color-scheme:dark;background:#071827}html,body,#root{min-height:100%;margin:0;background:#071827!important}html,body{overscroll-behavior:none}body{padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+.dkd-skip-loader #dkd-web-loader{display:none!important}
 #dkd-web-loader{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 12% 18%,rgba(117,86,255,.42),transparent 31%),radial-gradient(circle at 86% 22%,rgba(0,224,196,.30),transparent 30%),radial-gradient(circle at 50% 86%,rgba(255,117,163,.22),transparent 34%),linear-gradient(145deg,#06131f 0%,#0a1830 44%,#071827 100%);transition:opacity .58s ease,visibility .58s ease}
 #dkd-web-loader.dkd-hide{opacity:0;visibility:hidden;pointer-events:none}
 #dkd-web-loader:before,#dkd-web-loader:after{content:"";position:absolute;border-radius:999px;filter:blur(1px);animation:dkdAura 4.8s ease-in-out infinite alternate}
@@ -36,6 +37,17 @@ HEAD = r'''
 
 BEADS = ''.join('<i></i>' for _ in range(11))
 LOADER = f'''
+<script>
+(function(){{
+  try{{
+    if(sessionStorage.getItem('dkd-zikir-loaded')==='1'){{
+      document.documentElement.classList.add('dkd-skip-loader');
+    }}else{{
+      sessionStorage.setItem('dkd-zikir-loaded','1');
+    }}
+  }}catch(error){{}}
+}})();
+</script>
 <div id="dkd-web-loader" aria-hidden="true">
   <div class="dkd-load-card">
     <div class="dkd-orbit-wrap">
@@ -55,6 +67,10 @@ LOADER = f'''
 <script>
 (function(){{
   var loader=document.getElementById('dkd-web-loader');
+  if(document.documentElement.classList.contains('dkd-skip-loader')){{
+    if(loader) loader.remove();
+    return;
+  }}
   function closeLoader(){{
     if(!loader)return;
     loader.classList.add('dkd-hide');
@@ -64,23 +80,6 @@ LOADER = f'''
   else{{window.addEventListener('load',function(){{setTimeout(closeLoader,2200);}},{'{'}once:true{'}'});}}
   setTimeout(closeLoader,4800);
 }})();
-</script>
-'''
-
-HARD_LINKS = r'''
-<script>
-(function(){
-  document.addEventListener('click',function(event){
-    var node=event.target;
-    if(!node||!node.closest)return;
-    var anchor=node.closest('a[href]');
-    if(!anchor)return;
-    var href=anchor.getAttribute('href');
-    if(!href||href.indexOf('/DraBornZikir/')!==0)return;
-    event.preventDefault();
-    window.location.assign(href);
-  },true);
-})();
 </script>
 '''
 
@@ -94,7 +93,6 @@ def patch_html(path: Path) -> None:
     is_root_index = path.resolve() == (ROOT / 'index.html').resolve()
     if is_root_index:
         html = re.sub(r'(<body[^>]*>)', lambda match: match.group(1) + LOADER, html, count=1, flags=re.I)
-    html = html.replace('</body>', HARD_LINKS + '</body>', 1)
     path.write_text(html, encoding='utf-8')
 
 
@@ -131,7 +129,7 @@ def main() -> None:
         ],
     }
     (ROOT / 'manifest.webmanifest').write_text(json.dumps(manifest, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-    print(f'Patched {len(html_files)} DraBornZikir static HTML routes.')
+    print(f'Patched {len(html_files)} DraBornZikir static HTML routes for SPA navigation.')
 
 
 if __name__ == '__main__':
