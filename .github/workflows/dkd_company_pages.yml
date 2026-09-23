@@ -45,23 +45,29 @@ jobs:
           cd /tmp/DraBornZikir-source
           npm ci
           npx expo install react-dom react-native-web @expo/metro-runtime --npm
+          npm run typecheck
+          npm run lint
           npx expo export --platform web --output-dir "$GITHUB_WORKSPACE/DraBornZikir" --clear
           test -s "$GITHUB_WORKSPACE/DraBornZikir/index.html"
           printf 'Universal source commit: %s\n' "$(git rev-parse HEAD)" > "$GITHUB_WORKSPACE/DraBornZikir/DKD-SOURCE.txt"
 
-      - name: DKD Add immersive web loader and transparent browser chrome
+      - name: DKD Add immersive loader and mobile browser integration
         run: python scripts/dkd-patch-drabornzikir-web.py
 
-      - name: DKD Verify DraBornZikir universal web output
+      - name: DKD Verify DraBornZikir static routes
         shell: bash
         run: |
+          set -euo pipefail
           test -s DraBornZikir/index.html
           test -s DraBornZikir/manifest.webmanifest
-          grep -R '/DraBornZikir' DraBornZikir/index.html >/dev/null
-          grep -F 'name="theme-color" content="transparent"' DraBornZikir/index.html >/dev/null
+          test -s DraBornZikir/library/index.html
+          test -s DraBornZikir/radio/index.html
+          test -s DraBornZikir/progress/index.html
+          grep -F 'name="theme-color" content="#071827"' DraBornZikir/index.html >/dev/null
           grep -F 'id="dkd-web-loader"' DraBornZikir/index.html >/dev/null
           grep -F 'black-translucent' DraBornZikir/index.html >/dev/null
-          echo 'DraBornZikir web uses Android source + immersive colorful web loader.'
+          grep -F '/DraBornZikir/' DraBornZikir/library/index.html >/dev/null
+          echo 'DraBornZikir static routes, loader and dark mobile browser chrome verified.'
 
       - name: DKD Configure GitHub Pages
         uses: actions/configure-pages@v5
