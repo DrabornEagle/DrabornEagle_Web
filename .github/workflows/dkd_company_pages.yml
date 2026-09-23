@@ -1,4 +1,4 @@
-# DraBornOdds v0.7.4 final plain-Turkish web + signed APK publish 93264f3
+# DraBornEagle public website deployment
 name: DKD DrabornEagle public web
 
 on:
@@ -6,6 +6,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+  schedule:
+    - cron: '17 * * * *'
 
 permissions:
   contents: read
@@ -23,11 +25,36 @@ jobs:
       - name: DKD Checkout repository
         uses: actions/checkout@v4
 
+      - name: DKD Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: DKD Synchronize DraBornPS homepage
         run: node scripts/dkd-sync-drabornps-root.mjs
 
       - name: DKD Verify DraBornPS homepage
         run: node scripts/dkd-sync-drabornps-root.mjs --check
+
+      - name: DKD Build DraBornZikir web from universal Expo source
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/DraBornZikir-source "$GITHUB_WORKSPACE/DraBornZikir"
+          git clone --depth 1 https://github.com/DrabornEagle/DraBornZikir.git /tmp/DraBornZikir-source
+          cd /tmp/DraBornZikir-source
+          npm ci
+          npx expo install react-dom react-native-web @expo/metro-runtime --npm
+          npx expo export --platform web --output-dir "$GITHUB_WORKSPACE/DraBornZikir" --clear
+          test -s "$GITHUB_WORKSPACE/DraBornZikir/index.html"
+          printf 'Universal source commit: %s\n' "$(git rev-parse HEAD)" > "$GITHUB_WORKSPACE/DraBornZikir/DKD-SOURCE.txt"
+
+      - name: DKD Verify DraBornZikir universal web output
+        shell: bash
+        run: |
+          test -s DraBornZikir/index.html
+          grep -R '/DraBornZikir' DraBornZikir/index.html >/dev/null
+          echo 'DraBornZikir web is built from the same Expo source as Android.'
 
       - name: DKD Configure GitHub Pages
         uses: actions/configure-pages@v5
