@@ -1,26 +1,22 @@
 from pathlib import Path
 import json
 import re
+import shutil
 
-root = Path('DraBornZikir')
-path = root / 'index.html'
-html = path.read_text(encoding='utf-8')
+ROOT = Path('DraBornZikir')
+APP_BG = '#071827'
 
-html = re.sub(r'<meta\s+name=["\']theme-color["\'][^>]*>', '', html, flags=re.I)
-html = re.sub(r'<meta\s+name=["\']viewport["\'][^>]*>', '', html, flags=re.I)
-html = re.sub(r'<link\s+rel=["\']manifest["\'][^>]*>', '', html, flags=re.I)
-
-head = r'''
+HEAD = r'''
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
-<meta name="theme-color" content="transparent">
+<meta name="theme-color" content="#071827">
 <meta name="color-scheme" content="dark">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="msapplication-navbutton-color" content="transparent">
+<meta name="msapplication-navbutton-color" content="#071827">
 <link rel="manifest" href="/DraBornZikir/manifest.webmanifest">
 <style>
-:root{color-scheme:dark;background:#071827}html,body,#root{min-height:100%;margin:0;background:#071827}html,body{overscroll-behavior:none}body{padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+:root{color-scheme:dark;background:#071827}html,body,#root{min-height:100%;margin:0;background:#071827!important}html,body{overscroll-behavior:none}body{padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
 #dkd-web-loader{position:fixed;inset:0;z-index:2147483647;display:grid;place-items:center;overflow:hidden;background:radial-gradient(circle at 12% 18%,rgba(117,86,255,.42),transparent 31%),radial-gradient(circle at 86% 22%,rgba(0,224,196,.30),transparent 30%),radial-gradient(circle at 50% 86%,rgba(255,117,163,.22),transparent 34%),linear-gradient(145deg,#06131f 0%,#0a1830 44%,#071827 100%);transition:opacity .58s ease,visibility .58s ease}
 #dkd-web-loader.dkd-hide{opacity:0;visibility:hidden;pointer-events:none}
 #dkd-web-loader:before,#dkd-web-loader:after{content:"";position:absolute;border-radius:999px;filter:blur(1px);animation:dkdAura 4.8s ease-in-out infinite alternate}
@@ -37,17 +33,16 @@ head = r'''
 @keyframes dkdEnter{0%{opacity:0;transform:translateY(24px) scale(.86)}100%{opacity:1;transform:none}}@keyframes dkdSpin{to{transform:rotate(360deg)}}@keyframes dkdSpinBack{to{transform:rotate(-360deg)}}@keyframes dkdPulse{50%{transform:scale(1.045);box-shadow:0 28px 78px rgba(0,0,0,.52),0 0 52px rgba(181,157,255,.18)}}@keyframes dkdAura{to{transform:scale(1.12) rotate(16deg);opacity:.72}}@keyframes dkdLoad{0%{transform:translateX(-130%)}100%{transform:translateX(300%)}}
 </style>
 '''
-html = html.replace('</head>', head + '</head>', 1)
 
-beads = ''.join('<i></i>' for _ in range(11))
-body_loader = f'''
+BEADS = ''.join('<i></i>' for _ in range(11))
+LOADER = f'''
 <div id="dkd-web-loader" aria-hidden="true">
   <div class="dkd-load-card">
     <div class="dkd-orbit-wrap">
       <div class="dkd-orbit a"><span class="dkd-dot d1"></span></div>
       <div class="dkd-orbit b"><span class="dkd-dot d2"></span></div>
       <div class="dkd-orbit c"><span class="dkd-dot d3"></span></div>
-      <div class="dkd-core"><div class="dkd-crescent">☾</div><div class="dkd-beads">{beads}</div></div>
+      <div class="dkd-core"><div class="dkd-crescent">☾</div><div class="dkd-beads">{BEADS}</div></div>
     </div>
     <div class="dkd-kicker">DRABORN EAGLE</div>
     <h1>DraBornZikir</h1>
@@ -65,28 +60,79 @@ body_loader = f'''
     loader.classList.add('dkd-hide');
     setTimeout(function(){{loader.remove();}},650);
   }}
-  if(document.readyState==='complete'){{setTimeout(closeLoader,2850);}}
-  else{{window.addEventListener('load',function(){{setTimeout(closeLoader,2850);}},{'{'}once:true{'}'});}}
-  setTimeout(closeLoader,5200);
+  if(document.readyState==='complete'){{setTimeout(closeLoader,2200);}}
+  else{{window.addEventListener('load',function(){{setTimeout(closeLoader,2200);}},{'{'}once:true{'}'});}}
+  setTimeout(closeLoader,4800);
 }})();
 </script>
 '''
-html = re.sub(r'(<body[^>]*>)', lambda m: m.group(1) + body_loader, html, count=1, flags=re.I)
-path.write_text(html, encoding='utf-8')
 
-manifest = {
-    'name': 'DraBornZikir',
-    'short_name': 'DraBornZikir',
-    'start_url': '/DraBornZikir/',
-    'scope': '/DraBornZikir/',
-    'display': 'standalone',
-    'display_override': ['fullscreen', 'standalone', 'minimal-ui'],
-    'background_color': '#071827',
-    'theme_color': 'transparent',
-    'orientation': 'portrait',
-    'icons': [
-        {'src': '/DraBornZikir/favicon.png', 'sizes': 'any', 'type': 'image/png', 'purpose': 'any maskable'}
-    ],
-}
-(root / 'manifest.webmanifest').write_text(json.dumps(manifest, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
-print('DraBornZikir immersive web loader and browser chrome metadata patched.')
+HARD_LINKS = r'''
+<script>
+(function(){
+  document.addEventListener('click',function(event){
+    var node=event.target;
+    if(!node||!node.closest)return;
+    var anchor=node.closest('a[href]');
+    if(!anchor)return;
+    var href=anchor.getAttribute('href');
+    if(!href||href.indexOf('/DraBornZikir/')!==0)return;
+    event.preventDefault();
+    window.location.assign(href);
+  },true);
+})();
+</script>
+'''
+
+
+def patch_html(path: Path) -> None:
+    html = path.read_text(encoding='utf-8')
+    html = re.sub(r'<meta\s+name=["\']theme-color["\'][^>]*>', '', html, flags=re.I)
+    html = re.sub(r'<meta\s+name=["\']viewport["\'][^>]*>', '', html, flags=re.I)
+    html = re.sub(r'<link\s+rel=["\']manifest["\'][^>]*>', '', html, flags=re.I)
+    html = html.replace('</head>', HEAD + '</head>', 1)
+    is_root_index = path.resolve() == (ROOT / 'index.html').resolve()
+    if is_root_index:
+        html = re.sub(r'(<body[^>]*>)', lambda match: match.group(1) + LOADER, html, count=1, flags=re.I)
+    html = html.replace('</body>', HARD_LINKS + '</body>', 1)
+    path.write_text(html, encoding='utf-8')
+
+
+def make_pretty_route_aliases() -> None:
+    html_files = list(ROOT.rglob('*.html'))
+    for html_file in html_files:
+        if html_file.name == 'index.html':
+            continue
+        alias_dir = html_file.with_suffix('')
+        alias_dir.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(html_file, alias_dir / 'index.html')
+
+
+def main() -> None:
+    html_files = list(ROOT.rglob('*.html'))
+    if not html_files:
+        raise SystemExit('No DraBornZikir HTML output found')
+    for html_file in html_files:
+        patch_html(html_file)
+    make_pretty_route_aliases()
+
+    manifest = {
+        'name': 'DraBornZikir',
+        'short_name': 'DraBornZikir',
+        'start_url': '/DraBornZikir/',
+        'scope': '/DraBornZikir/',
+        'display': 'standalone',
+        'display_override': ['fullscreen', 'standalone', 'minimal-ui'],
+        'background_color': APP_BG,
+        'theme_color': APP_BG,
+        'orientation': 'portrait',
+        'icons': [
+            {'src': '/DraBornZikir/favicon.ico', 'sizes': 'any', 'type': 'image/x-icon', 'purpose': 'any'}
+        ],
+    }
+    (ROOT / 'manifest.webmanifest').write_text(json.dumps(manifest, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+    print(f'Patched {len(html_files)} DraBornZikir static HTML routes.')
+
+
+if __name__ == '__main__':
+    main()
