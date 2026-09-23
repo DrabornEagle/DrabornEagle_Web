@@ -49,11 +49,34 @@ jobs:
           test -s "$GITHUB_WORKSPACE/DraBornZikir/index.html"
           printf 'Universal source commit: %s\n' "$(git rev-parse HEAD)" > "$GITHUB_WORKSPACE/DraBornZikir/DKD-SOURCE.txt"
 
+      - name: DKD Force transparent mobile browser system bars
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          import re
+          path = Path('DraBornZikir/index.html')
+          html = path.read_text(encoding='utf-8')
+          html = re.sub(r'<meta\s+name=["\']theme-color["\'][^>]*>', '', html, flags=re.I)
+          html = re.sub(r'<meta\s+name=["\']viewport["\'][^>]*>', '', html, flags=re.I)
+          injection = (
+              '<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">'
+              '<meta name="theme-color" content="transparent">'
+              '<meta name="mobile-web-app-capable" content="yes">'
+              '<meta name="apple-mobile-web-app-capable" content="yes">'
+              '<meta name="color-scheme" content="dark">'
+              '<style>html,body,#root{min-height:100%;background:#071827;margin:0}body{padding:0 env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}</style>'
+          )
+          html = html.replace('</head>', injection + '</head>', 1)
+          path.write_text(html, encoding='utf-8')
+          PY
+
       - name: DKD Verify DraBornZikir universal web output
         shell: bash
         run: |
           test -s DraBornZikir/index.html
           grep -R '/DraBornZikir' DraBornZikir/index.html >/dev/null
+          grep -F 'name="theme-color" content="transparent"' DraBornZikir/index.html >/dev/null
           echo 'DraBornZikir web is built from the same Expo source as Android.'
 
       - name: DKD Configure GitHub Pages
