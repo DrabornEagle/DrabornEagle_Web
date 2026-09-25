@@ -63,9 +63,9 @@ async function dkdCheckWebhook() {
     const dkdResponse = await fetch(dkdWebhookUrl, { method: 'GET', cache: 'no-store' });
     const dkdPayload = await dkdResponse.json().catch(() => null);
     if (!dkdResponse.ok || !dkdPayload?.ok) throw new Error('health_check_failed');
-    dkdSetApiStatus('live', 'Webhook API aktif');
+    dkdSetApiStatus('live', 'Canlı bağlantı hazır');
   } catch {
-    dkdSetApiStatus('error', 'Webhook API bağlantısı yok');
+    dkdSetApiStatus('error', 'Bağlantı kontrol edilemiyor');
   }
 }
 
@@ -121,20 +121,24 @@ function dkdRenderRecent(dkdItems) {
   if (!Array.isArray(dkdItems) || !dkdItems.length) {
     const dkdEmpty = document.createElement('div');
     dkdEmpty.className = 'dkd-empty';
-    dkdEmpty.innerHTML = '<span>☕</span><strong>İlk destek burada görünecek.</strong><small>Gerçek bir Buy Me a Coffee desteği webhook üzerinden doğrulandığında bu alan otomatik güncellenir.</small>';
+    dkdEmpty.innerHTML = '<span aria-hidden="true">☕</span><strong>İlk destek burada görünecek.</strong><small>Destekçi paylaşım izni verdiğinde bu alan otomatik güncellenir.</small>';
     dkdList.appendChild(dkdEmpty);
+    dkdList.setAttribute('aria-busy', 'false');
     return;
   }
   dkdItems.forEach((dkdItem) => dkdList.appendChild(dkdSupportItem(dkdItem)));
+  dkdList.setAttribute('aria-busy', 'false');
 }
 
 async function dkdLoadDashboard() {
   if (dkdState.loading) return;
   dkdState.loading = true;
   const dkdButton = dkdElement('dkd-refresh');
+  const dkdList = dkdElement('dkd-support-list');
+  dkdList?.setAttribute('aria-busy', 'true');
   if (dkdButton) {
     dkdButton.disabled = true;
-    dkdButton.textContent = '↻ Yükleniyor';
+    dkdButton.innerHTML = '<span aria-hidden="true">↻</span> Yükleniyor';
   }
   try {
     const dkdResponse = await fetch(dkdDashboardUrl, {
@@ -150,23 +154,42 @@ async function dkdLoadDashboard() {
     const dkdPayload = await dkdResponse.json();
     dkdRenderStats(dkdPayload?.stats || {});
     dkdRenderRecent(dkdPayload?.recent || []);
+    dkdState.hasData = true;
     const dkdUpdated = dkdElement('dkd-updated');
     if (dkdUpdated) dkdUpdated.textContent = `Son güncelleme: ${dkdFormatDate(dkdPayload?.updated_at || new Date())}`;
   } catch (dkdError) {
     console.warn('DraBornEagle Support dashboard error', dkdError);
     const dkdUpdated = dkdElement('dkd-updated');
-    if (dkdUpdated) dkdUpdated.textContent = 'Canlı veriye şu an ulaşılamıyor';
+    if (dkdUpdated) dkdUpdated.textContent = dkdState.hasData ? 'Son alınan veriler gösteriliyor' : 'Canlı veriye şu an ulaşılamıyor';
+    if (!dkdState.hasData && dkdList) {
+      const dkdErrorView = document.createElement('div');
+      dkdErrorView.className = 'dkd-error';
+      dkdErrorView.innerHTML = '<span aria-hidden="true">☁</span><strong>Destekler şu an yüklenemiyor.</strong><small>Biraz sonra yeniden deneyebilirsin.</small>';
+      dkdList.replaceChildren(dkdErrorView);
+    }
   } finally {
     dkdState.loading = false;
+    dkdList?.setAttribute('aria-busy', 'false');
     if (dkdButton) {
       dkdButton.disabled = false;
-      dkdButton.textContent = '↻ Yenile';
+      dkdButton.innerHTML = '<span aria-hidden="true">↻</span> Yenile';
     }
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   dkdElement('dkd-refresh')?.addEventListener('click', dkdLoadDashboard);
+  if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const dkdObserver = new IntersectionObserver((dkdEntries, dkdObserverInstance) => {
+      dkdEntries.forEach((dkdEntry) => {
+        if (!dkdEntry.isIntersecting) return;
+        dkdEntry.target.classList.add('is-visible');
+        dkdObserverInstance.unobserve(dkdEntry.target);
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px 30px 0px' });
+    document.querySelectorAll('.dkd-reveal').forEach((dkdNode) => dkdObserver.observe(dkdNode));
+    document.body.classList.add('dkd-motion-ready');
+  }
   dkdCheckWebhook();
   dkdLoadDashboard();
   window.setInterval(dkdLoadDashboard, 30000);
