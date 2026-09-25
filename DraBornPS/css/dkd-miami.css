@@ -176,3 +176,22 @@ body.dkd-mobile-ui .game-hero:has(.home-game-rating) .hero-actions{margin-top:12
 .dkd-danger-action:hover{background:linear-gradient(120deg,#713046c9,#3b1d39d6)!important}
 body.dkd-mobile-ui .profile-identity-copy{padding-top:0;transform:translateY(16px)}
 body.dkd-mobile-ui .profile-identity-subline{margin-top:4px!important;font-size:12px;line-height:1.15}
+
+/* v0.6.10 — Support destination beside Media */
+.main-nav{align-items:center}
+.main-nav .dkd-support-tab{position:relative;display:inline-flex;align-items:center;justify-content:center;gap:8px;flex-shrink:0;min-height:46px;padding:10px 21px;border:1px solid #ff9fc780;border-radius:999px;background:linear-gradient(110deg,#ed6ea04a,#62e9e83b);color:#fff2fb;text-decoration:none;font-size:22px;font-weight:650;line-height:1;box-shadow:0 0 21px #fa7dba36,inset 0 1px #ffffff36;animation:dkd-support-breathe 3.2s ease-in-out infinite}
+.main-nav .dkd-support-tab span{color:#7cf4ed;font-size:15px}
+.main-nav .dkd-support-tab:hover,.main-nav .dkd-support-tab:focus-visible{background:linear-gradient(110deg,#ed6ea099,#62e9e877);box-shadow:0 0 33px #fa7dba6b}
+@keyframes dkd-support-breathe{50%{box-shadow:0 0 34px #fa7dba77,inset 0 1px #ffffff55}}
+body.dkd-mobile-ui .topbar{gap:2px}
+body.dkd-mobile-ui .main-nav{flex:1;min-width:0;gap:1px;white-space:nowrap}
+body.dkd-mobile-ui .main-nav button{flex-shrink:0;font-size:13.5px!important;padding:8px 6px!important}
+body.dkd-mobile-ui .main-nav .dkd-support-tab{min-height:33px;padding:7px 9px;gap:3px;font-size:13px;border-radius:18px}
+body.dkd-mobile-ui .main-nav .dkd-support-tab span{font-size:10px}
+body.dkd-mobile-ui .top-right{flex-shrink:0}
+@media(max-width:370px){
+  body.dkd-mobile-ui .main-nav button{font-size:12px!important;padding:7px 5px!important}
+  body.dkd-mobile-ui .main-nav .dkd-support-tab{font-size:12px;padding:6px}
+  body.dkd-mobile-ui .topbar{padding-left:9px;padding-right:9px}
+}
+@media(prefers-reduced-motion:reduce){.main-nav .dkd-support-tab{animation:none}}

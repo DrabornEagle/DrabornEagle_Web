@@ -1,0 +1,81 @@
+/* Miami Nights — Support v2.1 */
+:root{--bg:#0b0b24;--surface:#1b1740;--violet:#c986ff;--cyan:#74f4ee;--orange:#ffbc78;--pink:#ff79b6}
+body{background:#0b0b24}
+body::before{top:70px;height:940px;background:linear-gradient(90deg,rgba(10,9,32,.97) 0%,rgba(15,9,43,.88) 55%,rgba(14,9,43,.8)),linear-gradient(180deg,transparent 45%,#0b0b24 100%),url("/DraBornPS/assets/wallpapers/dkd-miami-v06.webp") center 43% / cover no-repeat;opacity:.85}
+.dkd-atmosphere span:nth-child(1){background:#d64caa;opacity:.3}
+.dkd-atmosphere span:nth-child(2){background:#37bfc8;opacity:.21}
+.dkd-atmosphere span:nth-child(3){background:#f96976;opacity:.15}
+.dkd-header{background:rgba(19,10,43,.82);border-bottom-color:rgba(255,159,210,.18)}
+.dkd-brand-mark,.dkd-footer-brand .dkd-brand-mark{width:52px;height:52px;display:grid;place-items:center;padding:0;background:none;border-radius:0;box-shadow:none;flex-shrink:0}
+.dkd-brand-mark img{width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 0 10px rgba(255,91,167,.55));transition:transform .35s,filter .35s}
+.dkd-brand:hover .dkd-brand-mark img{transform:scale(1.09) rotate(-4deg);filter:drop-shadow(0 0 17px rgba(255,133,195,.8))}
+.dkd-brand-name strong{font-weight:700;letter-spacing:-.045em}
+.dkd-brand-name small{color:#e8bbdb}
+.dkd-nav-cta{background:linear-gradient(115deg,rgba(244,103,166,.19),rgba(69,214,219,.13));border-color:rgba(255,152,209,.4)}
+.dkd-nav-cta:hover{background:linear-gradient(115deg,rgba(244,103,166,.36),rgba(69,214,219,.24))}
+.dkd-eyebrow{border-color:rgba(255,154,207,.42);background:rgba(126,59,147,.24);color:#ffd0ed}
+.dkd-spark{background:linear-gradient(130deg,#ff7bad,#feaf73);box-shadow:0 0 20px #ff8caa}
+.dkd-hero{min-height:630px;padding-top:43px;padding-bottom:76px}
+.dkd-hero h1 span{background:linear-gradient(95deg,#ff86bd,#ffb47e 60%,#79f0ed);background-clip:text;-webkit-background-clip:text}
+.dkd-hero-copy>p{color:#e2cfe4}
+.dkd-button-primary{background:linear-gradient(105deg,#ffcb7a,#ff82ac 62%,#ee76c6);box-shadow:0 15px 38px rgba(255,95,156,.28)}
+.dkd-button-primary:hover{box-shadow:0 18px 45px rgba(255,95,156,.47)}
+.dkd-button-ghost{border-color:rgba(255,165,214,.38);background:rgba(160,84,161,.15)}
+.dkd-button-ghost:hover{background:rgba(193,93,168,.22)}
+.dkd-payment-note{color:#b9a9c8}.dkd-payment-note span{color:#78eee2}
+.dkd-hero-visual{border-color:rgba(255,169,216,.4);box-shadow:0 35px 90px rgba(0,0,0,.39),0 0 90px rgba(255,100,168,.2)}
+.dkd-hero-visual::before{background:linear-gradient(180deg,rgba(62,14,81,.18),rgba(10,8,42,.06) 34%,rgba(10,8,42,.4) 68%,#19102b 100%),linear-gradient(130deg,rgba(243,78,173,.18),transparent 60%)}
+.dkd-visual-bottom{background:rgba(35,17,56,.76);border-color:rgba(255,169,216,.3)}
+.dkd-visual-seal{background:linear-gradient(135deg,#ff87a9,#7ee8eb)}
+.dkd-ticker{background:linear-gradient(90deg,#932c7b,#ad438c,#4a7a9b);border-color:rgba(255,185,222,.38)}
+.dkd-section-label{color:#ffaad4}
+.dkd-section h2 em{background:linear-gradient(90deg,#ff9ac7,#f9bd86 65%,#83e8e9);background-clip:text;-webkit-background-clip:text}
+.dkd-impact-card{min-height:238px;padding:22px 24px;border-color:rgba(255,188,225,.24)}
+.dkd-impact-violet{--card-glow:#d449bf;background:linear-gradient(145deg,#422755,#251c48 78%)}
+.dkd-impact-orange{--card-glow:#f77f87;background:linear-gradient(145deg,#673a50,#392440 78%)}
+.dkd-impact-blue{--card-glow:#36c9ce;background:linear-gradient(145deg,#1d586b,#1a3458 78%)}
+.dkd-impact-symbol{margin:23px 0 12px;font-size:48px;line-height:1}
+.dkd-impact-card h3{margin-bottom:5px}.dkd-impact-card p{color:#ead6e7}
+.dkd-stats article{border-color:rgba(255,178,221,.2)}
+.dkd-project:hover{border-color:var(--accent)}
+.dkd-contact{position:relative;display:flex;align-items:center;gap:26px;padding:30px 36px;margin-bottom:28px;border:1px solid rgba(128,244,232,.33);border-radius:27px;background:linear-gradient(115deg,rgba(27,80,91,.78),rgba(43,28,78,.94) 55%,rgba(95,39,88,.8));overflow:hidden}
+.dkd-contact::after{content:"";position:absolute;right:-58px;top:-115px;width:330px;height:330px;border:1px solid rgba(124,241,231,.23);border-radius:50%;box-shadow:0 0 0 40px rgba(102,219,224,.055),0 0 0 90px rgba(255,140,199,.04);pointer-events:none}
+.dkd-contact-icon{position:relative;z-index:1;display:grid;place-items:center;width:70px;height:70px;flex-shrink:0;border-radius:21px;background:linear-gradient(135deg,#fe83b5,#7dece9);color:#20203c;font-size:37px;box-shadow:0 12px 26px rgba(14,8,35,.25)}
+.dkd-contact-copy{position:relative;z-index:1;min-width:0;flex:1}
+.dkd-contact h2{font:700 clamp(28px,2.7vw,40px)/1.12 "Space Grotesk",sans-serif;letter-spacing:-.055em;margin:6px 0}
+.dkd-contact h2 em{font-style:normal;color:#81f5eb}
+.dkd-contact p{color:#e4d6e9;font-size:14px;line-height:1.55;margin:0 0 8px;max-width:580px}
+.dkd-contact-address{display:inline-block;color:#9df4e9;font-size:15px;font-weight:700;overflow-wrap:anywhere}
+.dkd-contact-address:hover{text-decoration:underline}
+.dkd-contact-button{position:relative;z-index:1;flex-shrink:0;background:#f8f2ff;color:#281b40;min-height:50px;border-radius:13px;box-shadow:0 12px 28px rgba(10,8,33,.22)}
+.dkd-contact-button:hover{background:#fff}
+.dkd-contact-button span{margin-left:5px}
+.dkd-final{background:linear-gradient(112deg,#372267,#8e3c86 54%,#ea797c)}
+.dkd-footer-brand .dkd-brand-mark{width:43px;height:43px}
+@media(max-width:850px){
+  .dkd-hero{min-height:0;padding-top:24px;padding-bottom:60px}
+  .dkd-impact-card:last-child{min-height:238px}
+  .dkd-contact{flex-wrap:wrap;gap:16px 19px}
+  .dkd-contact-button{margin-left:89px}
+}
+@media(max-width:580px){
+  body::before{top:70px;height:900px;background:linear-gradient(180deg,rgba(15,9,43,.78) 0%,rgba(14,9,39,.88) 55%,#0b0b24 100%),url("/DraBornPS/assets/wallpapers/dkd-miami-v06.webp") center top / auto 68% no-repeat}
+  .dkd-brand-mark{width:47px;height:47px}
+  .dkd-header-inner{height:66px}
+  .dkd-hero{padding-top:12px;padding-bottom:55px;gap:35px}
+  .dkd-hero h1{margin-top:21px}
+  .dkd-impact-card,.dkd-impact-card:last-child{min-height:200px;padding:19px 20px}
+  .dkd-impact-symbol{font-size:42px;margin:19px 0 9px}
+  .dkd-impact-card h3{font-size:20px}
+  .dkd-contact{padding:24px 20px;border-radius:22px;margin-bottom:17px}
+  .dkd-contact-icon{width:48px;height:48px;border-radius:14px;font-size:27px}
+  .dkd-contact-copy{flex-basis:calc(100% - 68px)}
+  .dkd-contact .dkd-section-label{font-size:9px}
+  .dkd-contact h2{font-size:27px}
+  .dkd-contact p{font-size:13px}
+  .dkd-contact-address{font-size:13px}
+  .dkd-contact-button{margin-left:0;width:100%;min-height:48px}
+  .dkd-footer-brand .dkd-brand-mark{width:42px;height:42px}
+}
+@media(max-width:375px){.dkd-brand-mark{width:42px;height:42px}.dkd-impact-card,.dkd-impact-card:last-child{min-height:205px}}
+@media(prefers-reduced-motion:reduce){.dkd-brand-mark img{transition:none}}
