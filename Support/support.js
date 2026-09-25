@@ -195,3 +195,14 @@ document.addEventListener('DOMContentLoaded', () => {
   window.setInterval(dkdLoadDashboard, 30000);
   window.setInterval(dkdCheckWebhook, 60000);
 });
+
+// Return to the still-playing console when Support is opened from its tab.
+document.addEventListener('click', (dkdEvent) => {
+  const dkdHomeLink = dkdEvent.target.closest?.('a[href="/"]');
+  if (!dkdHomeLink || window.parent === window) return;
+  try {
+    if (window.parent.location.origin !== window.location.origin) return;
+  } catch { return; }
+  dkdEvent.preventDefault();
+  window.parent.postMessage({ type: 'dkd-support-home' }, window.location.origin);
+});

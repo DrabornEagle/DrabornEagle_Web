@@ -19,6 +19,37 @@
   history.replaceState({...base,base:true},'',location.href);
   history.pushState({...base,guard:true},'',location.href);
  }catch{}
+ DKD.supportOpen=false;
+ DKD.openSupport=(options={})=>{
+  if(DKD.supportOpen)return;
+  const overlay=document.createElement('div');
+  overlay.id='dkd-support-overlay';
+  overlay.setAttribute('role','dialog');
+  overlay.setAttribute('aria-modal','true');
+  overlay.setAttribute('aria-label','DraBornEagle Support');
+  const frame=document.createElement('iframe');
+  frame.src='/Support/';
+  frame.title='DraBornEagle Support';
+  overlay.appendChild(frame);
+  document.body.appendChild(overlay);
+  document.getElementById('viewport').inert=true;
+  DKD.supportOpen=true;
+  document.title='DraBornEagle Support | Bir Kahve, Yeni Bir Evren';
+  if(options.history!==false){
+   try{history.pushState({...DKD.historySnapshot('support'),support:true},'','/Support/');}catch{}
+  }
+ };
+ DKD.closeSupport=()=>{
+  if(!DKD.supportOpen)return;
+  document.getElementById('dkd-support-overlay')?.remove();
+  document.getElementById('viewport').inert=false;
+  DKD.supportOpen=false;
+  document.title='DraBornEagle Ecosystem | Games & APPS';
+ };
+ window.addEventListener('message',event=>{
+  const frame=document.querySelector('#dkd-support-overlay iframe');
+  if(event.origin===location.origin&&event.source===frame?.contentWindow&&event.data?.type==='dkd-support-home')history.back();
+ });
  DKD.clock=()=>document.querySelectorAll('.clock').forEach(element=>element.textContent=new Intl.DateTimeFormat('en-GB',{hour:'2-digit',minute:'2-digit'}).format(new Date()));
  DKD.setWallpaper=id=>{document.getElementById('console')?.classList.toggle('dkd-game-wallpaper',id!=='default');if(wallpaper===id)return;wallpaper=id;wallpaperIndex=1-wallpaperIndex;const next=document.getElementById(wallpaperIndex?'wallpaper-b':'wallpaper-a'),previous=document.getElementById(wallpaperIndex?'wallpaper-a':'wallpaper-b');next.style.backgroundImage=id==='default'?"url('assets/wallpapers/dkd-miami-v06.webp')":`url('${DKD.art(id)}')`;next.classList.add('shown');previous.classList.remove('shown');};
  DKD.toast=(title,body='')=>{clearTimeout(toastTimer);const target=document.getElementById('toast-root');target.innerHTML=`<div class="toast">${DKD.icon(title.includes('Trophy')?'trophy':title.includes('play')?'controller':'bell')}<div><strong>${DKD.escape(title)}</strong>${body?`<p>${DKD.escape(body)}</p>`:''}</div></div>`;toastTimer=setTimeout(()=>target.innerHTML='',3300);};
@@ -81,6 +112,12 @@
  };
  DKD.dispatch=(action,id)=>{lastInput=Date.now();DKD.audio.init();const dkdLaunchingGame=action==='launch';if(dkdLaunchingGame)DKD.audio.pauseMusic();else if(DKD.state.settings.music&&DKD.route!=='game')DKD.audio.setMusic(true);DKD.audio.click();const result=actions[action]?.(id);if(document.documentElement.classList.contains('capture-mode'))requestAnimationFrame(()=>window.scrollTo(0,0));if(result?.catch)result.catch(error=>DKD.toast('Something went wrong',error.message));};
  document.addEventListener('click',event=>{const button=event.target.closest('[data-action]');if(button&&!button.disabled)DKD.dispatch(button.dataset.action,button.dataset.id);});
+ document.addEventListener('click',event=>{
+  const link=event.target.closest('a.dkd-support-tab');
+  if(!link||event.defaultPrevented||event.button!==0||event.metaKey||event.ctrlKey||event.shiftKey||event.altKey)return;
+  event.preventDefault();
+  DKD.openSupport();
+ });
  document.addEventListener('input',event=>{const target=event.target;if(target.id==='store-search'){DKD.storeQuery=target.value;document.getElementById('store-content').innerHTML=DKD.storeContent();}if(target.id==='global-search'){const query=target.value.toLowerCase();document.getElementById('global-results').innerHTML=DKD.catalog.filter(game=>game.title.toLowerCase().includes(query)).map(game=>DKD.gameCard(game)).join('')||'<p>No games found.</p>';}if(target.dataset.setting&&target.type==='range'){DKD.state.settings[target.dataset.setting]=Number(target.value);document.querySelectorAll(`[data-range-label="${target.dataset.setting}"]`).forEach(element=>element.textContent=target.value);DKD.persist();DKD.applySettings();}});
  document.addEventListener('change',event=>{const target=event.target;if(target.matches('select[data-setting]')){DKD.state.settings[target.dataset.setting]=target.value;DKD.persist();DKD.applySettings();return;}if(target.id==='dkd-profile-photo-input'&&target.files?.[0]){const file=target.files[0];target.value='';DKD.saveProfilePhoto(file).catch(error=>DKD.toast('Profile photo unavailable',error.message));}});
  const visibleButtons=()=>{const scope=DKD.modalTitle?document.querySelector('.modal'):DKD.ccOpen?document.getElementById('control-center'):DKD.route==='game'?DKD.activeSession.root:DKD.screen;return [...scope.querySelectorAll('button:not(:disabled),a[href],input,select')].filter(element=>element.getBoundingClientRect().width&&element.getBoundingClientRect().height);};
@@ -132,6 +169,11 @@
 
  window.addEventListener('popstate',event=>{
   const state=event.state;
+  if(state?.dkdps&&state.route==='support'){
+   DKD.openSupport({history:false});
+   return;
+  }
+  if(DKD.supportOpen)DKD.closeSupport();
   if(!state?.dkdps){
    try{history.pushState({...DKD.historySnapshot(DKD.route,DKD.activeSession?.game?.id||DKD.productId||null),guard:true},'',location.href);}catch{}
    return;
