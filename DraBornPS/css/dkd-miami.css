@@ -6,7 +6,7 @@ html,body{background:#120d24;color:#fff5fd}
 .wallpaper-shade{background:linear-gradient(90deg,#100a23b3,transparent 90%),linear-gradient(0deg,#0c0921ed,transparent 83%,#120c2699)}
 .ambient{opacity:.22}
 .topbar{background:linear-gradient(180deg,#170e34a6,transparent)}
-.main-nav{gap:20px}
+.main-nav{gap:26px}
 .main-nav button{padding:12px 25px;border-radius:40px;color:#ddd3e9;position:relative}
 .main-nav button.active{background:linear-gradient(110deg,#ff8cbd29,#8c7dff24);box-shadow:inset 0 0 0 1px #ffbbe442,0 8px 30px #05061930;color:#fff;text-shadow:none}
 .main-nav button.active:after{content:'';position:absolute;left:32%;right:32%;bottom:0;height:3px;border-radius:6px;background:linear-gradient(90deg,var(--dkd-pink),var(--dkd-cyan))}
@@ -180,19 +180,24 @@ body.dkd-mobile-ui .profile-identity-subline{margin-top:4px!important;font-size:
 /* v0.6.11 — matching tab sizes and uninterrupted Support music */
 .main-nav{align-items:center}
 .main-nav button,.main-nav .dkd-support-tab{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-height:64px;padding:12px 25px;font-size:34px;line-height:1}
-.main-nav .dkd-support-tab{position:relative;gap:8px;border:1px solid #ff9fc780;border-radius:40px;background:linear-gradient(110deg,#ed6ea04a,#62e9e83b);color:#fff2fb;text-decoration:none;font-weight:650;box-shadow:0 0 21px #fa7dba36,inset 0 1px #ffffff36;animation:dkd-support-breathe 3.2s ease-in-out infinite}
-.main-nav .dkd-support-tab span{color:#7cf4ed;font-size:20px}
-.main-nav .dkd-support-tab:hover,.main-nav .dkd-support-tab:focus-visible{background:linear-gradient(110deg,#ed6ea099,#62e9e877);box-shadow:0 0 33px #fa7dba6b}
+.main-nav .dkd-support-tab{position:relative;isolation:isolate;overflow:hidden;gap:8px;border:1px solid #ff9fc780;border-radius:40px;background:linear-gradient(125deg,#803e91,#52469d 48%,#187d88);background-size:220% 220%;color:#fff2fb;text-decoration:none;font-weight:700;text-shadow:0 1px 10px #160d34;box-shadow:0 0 21px #fa7dba36,inset 0 1px #ffffff36;animation:dkd-support-colors 5s ease-in-out infinite,dkd-support-breathe 3.2s ease-in-out infinite;transition:transform .25s,box-shadow .25s}
+.main-nav .dkd-support-tab::before{content:"";position:absolute;z-index:0;top:-80%;bottom:-80%;left:-55%;width:36%;transform:rotate(23deg);background:linear-gradient(90deg,transparent,#ffffff88 48%,transparent);animation:dkd-support-sweep 3.4s ease-in-out infinite;pointer-events:none}
+.main-nav .dkd-support-label,.main-nav .dkd-support-spark{position:relative;z-index:1}
+.main-nav .dkd-support-spark{display:inline-grid;place-items:center;color:#9efff1;font-size:20px;text-shadow:0 0 13px #75fff2;animation:dkd-support-star 5s linear infinite}
+.main-nav .dkd-support-tab:hover,.main-nav .dkd-support-tab:focus-visible{transform:translateY(-2px);box-shadow:0 0 33px #fa7dba75,inset 0 1px #ffffff66}
+@keyframes dkd-support-colors{50%{background-position:100% 100%}}
+@keyframes dkd-support-sweep{0%,18%{left:-55%;opacity:0}32%{opacity:1}65%,100%{left:125%;opacity:0}}
+@keyframes dkd-support-star{50%{transform:rotate(180deg) scale(1.22)}}
 @keyframes dkd-support-breathe{50%{box-shadow:0 0 34px #fa7dba77,inset 0 1px #ffffff55}}
 body.dkd-mobile-ui .topbar{gap:2px}
-body.dkd-mobile-ui .main-nav{flex:1;min-width:0;gap:2px;white-space:nowrap}
-body.dkd-mobile-ui .main-nav button,body.dkd-mobile-ui .main-nav .dkd-support-tab{min-height:40px;padding:7px 3px!important;font-size:clamp(15px,4.75vw,19px)!important}
+body.dkd-mobile-ui .main-nav{flex:1;min-width:0;gap:clamp(5px,2vw,8px);white-space:nowrap}
+body.dkd-mobile-ui .main-nav button,body.dkd-mobile-ui .main-nav .dkd-support-tab{min-height:40px;padding:7px 2px!important;font-size:clamp(15px,4.75vw,19px)!important}
 body.dkd-mobile-ui .main-nav .dkd-support-tab{gap:0;border-radius:22px}
-body.dkd-mobile-ui .main-nav .dkd-support-tab span{display:none}
+body.dkd-mobile-ui .main-nav .dkd-support-spark{display:none}
 body.dkd-mobile-ui .top-right{flex-shrink:0}
 @media(max-width:370px){
   body.dkd-mobile-ui .topbar{padding-left:9px;padding-right:9px}
 }
-@media(prefers-reduced-motion:reduce){.main-nav .dkd-support-tab{animation:none}}
+@media(prefers-reduced-motion:reduce){.main-nav .dkd-support-tab,.main-nav .dkd-support-tab::before,.main-nav .dkd-support-spark{animation:none}}
 #dkd-support-overlay{position:fixed;inset:0;z-index:10000;background:#0b0b24}
 #dkd-support-overlay iframe{display:block;width:100%;height:100%;height:100dvh;border:0;background:#0b0b24}
