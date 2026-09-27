@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090e15">
+  <meta name="description" content="DraBornNews: oyun, teknoloji, yapay zekâ ve donanım dünyasından güncel haberler. Kaynağı belli, kısa ve okunabilir gündem.">
+  <link rel="canonical" href="https://www.draborneagle.com/DraBornNews/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="DraBornNews">
+  <meta property="og:title" content="DraBornNews | Oyun ve Teknoloji Gündemi">
+  <meta property="og:description" content="Oyun ve teknoloji gündemini güvenilir kaynaklardan takip et.">
+  <meta property="og:url" content="https://www.draborneagle.com/DraBornNews/">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='17' fill='%230b1421'/%3E%3Cpath d='M17 44V20h9l12 14V20h9v24h-9L26 30v14z' fill='%23f4f7fa'/%3E%3Cpath d='M47 20v24' stroke='%235be7d5' stroke-width='4'/%3E%3C/svg%3E">
+  <title>DraBornNews | Oyun ve Teknoloji Gündemi</title>
+  <link rel="stylesheet" href="./css/dkd-news.css?v=1.0.0">
+  <script src="./js/dkd-news.js?v=1.0.0" defer></script>
+</head>
+<body>
+  <a class="dkd-skip" href="#dkd-main">Haberlere geç</a>
+  <header class="dkd-header">
+    <div class="dkd-header-inner">
+      <a class="dkd-brand" href="./" aria-label="DraBornNews ana sayfa"><span class="dkd-brand-symbol">N<span></span></span><span class="dkd-brand-name">DraBorn<span>News</span><small>BY DRABORNEAGLE</small></span></a>
+      <nav class="dkd-primary-nav" aria-label="Ana kategoriler">
+        <button type="button" class="dkd-nav-link dkd-active" data-dkd-category="Tümü">Gündem</button>
+        <button type="button" class="dkd-nav-link" data-dkd-category="Oyun">Oyun</button>
+        <button type="button" class="dkd-nav-link" data-dkd-category="Teknoloji">Teknoloji</button>
+        <button type="button" class="dkd-nav-link" data-dkd-category="Yapay Zeka">Yapay Zekâ</button>
+      </nav>
+      <div class="dkd-header-tools">
+        <button type="button" id="dkd-search-toggle" class="dkd-icon-button" aria-label="Haber ara" title="Haber ara"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5 5"/></svg></button>
+        <button type="button" id="dkd-saved-toggle" class="dkd-icon-button" aria-label="Kaydedilen haberler" title="Kaydedilen haberler"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5h12v17l-6-4-6 4z"/></svg><span id="dkd-saved-count" class="dkd-count" hidden>0</span></button>
+        <button type="button" id="dkd-theme-toggle" class="dkd-icon-button" aria-label="Açık temaya geç" title="Temayı değiştir"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.9 4.9l1.5 1.5m11.2 11.2 1.5 1.5M19.1 4.9l-1.5 1.5M6.4 17.6l-1.5 1.5"/></svg></button>
+        <a class="dkd-ecosystem" href="/">Ekosisteme dön <span aria-hidden="true">↗</span></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="dkd-main" class="dkd-page">
+    <div class="dkd-status-row"><span class="dkd-live"><span class="dkd-live-dot"></span> GÜNCEL AKIŞ</span><span id="dkd-updated">Kaynaklar yükleniyor…</span><span class="dkd-status-rule"></span><span>OYUN <span class="dkd-status-plus">+</span> TEKNOLOJİ</span></div>
+    <section class="dkd-intro" aria-labelledby="dkd-page-title"><div><p class="dkd-eyebrow">GÜNDEM / 01</p><h1 id="dkd-page-title">Haberin <em>içinde</em> kal.</h1></div><p>Oyun ve teknoloji dünyasında konuşulanları kısa sürede yakala. Her haberin kaynağı bir tık uzağında.</p></section>
+    <section class="dkd-featured-section" aria-label="Öne çıkan haberler"><div id="dkd-featured" class="dkd-featured"><div class="dkd-loading">Günün haberleri hazırlanıyor…</div></div></section>
+
+    <section class="dkd-discover" aria-labelledby="dkd-discover-title"><div class="dkd-section-title"><div><span class="dkd-section-index">01 / KEŞFET</span><h2 id="dkd-discover-title">Radarındaki konular</h2></div><span class="dkd-subtle">İlgini çeken alana dokun</span></div><div class="dkd-topic-list" aria-label="Hızlı konu filtreleri">
+      <button class="dkd-topic" data-dkd-topic="PlayStation"><span class="dkd-topic-art dkd-topic-ps">PS</span><span>PlayStation</span></button>
+      <button class="dkd-topic" data-dkd-topic="Xbox"><span class="dkd-topic-art dkd-topic-xbox">X</span><span>Xbox</span></button>
+      <button class="dkd-topic" data-dkd-topic="Yapay Zeka"><span class="dkd-topic-art dkd-topic-ai">AI</span><span>Yapay zekâ</span></button>
+      <button class="dkd-topic" data-dkd-topic="Donanım"><span class="dkd-topic-art dkd-topic-hw">▣</span><span>Donanım</span></button>
+      <button class="dkd-topic" data-dkd-topic="Mobil"><span class="dkd-topic-art dkd-topic-mobile">▤</span><span>Mobil</span></button>
+      <button class="dkd-topic" data-dkd-topic="Güvenlik"><span class="dkd-topic-art dkd-topic-sec">✳</span><span>Güvenlik</span></button>
+    </div></section>
+
+    <section class="dkd-news-section" aria-labelledby="dkd-news-title"><div class="dkd-section-title dkd-news-title"><div><span class="dkd-section-index">02 / AKIŞ</span><h2 id="dkd-news-title">Son haberler</h2></div><span id="dkd-result-count" class="dkd-subtle"></span></div>
+      <div class="dkd-filter-bar"><div class="dkd-filters" aria-label="Haber kategorileri"><button type="button" class="dkd-filter dkd-selected" data-dkd-category="Tümü">Tümü</button><button type="button" class="dkd-filter" data-dkd-category="Oyun">Oyun</button><button type="button" class="dkd-filter" data-dkd-category="Teknoloji">Teknoloji</button><button type="button" class="dkd-filter" data-dkd-category="Yapay Zeka">Yapay Zekâ</button><button type="button" class="dkd-filter" data-dkd-category="Donanım">Donanım</button><button type="button" class="dkd-filter" data-dkd-category="Mobil">Mobil</button><button type="button" class="dkd-filter" data-dkd-category="Güvenlik">Güvenlik</button></div><label class="dkd-sort-label">Sıralama <select id="dkd-sort"><option value="new">En yeni</option><option value="old">En eski</option></select></label></div>
+      <form id="dkd-search-form" class="dkd-search-form" role="search" hidden><label for="dkd-search-input">Haberlerde ara</label><div><input id="dkd-search-input" type="search" autocomplete="off" placeholder="Oyun, marka, konu veya kaynak ara…"><button type="button" id="dkd-search-close" aria-label="Aramayı kapat">✕</button></div></form>
+      <div id="dkd-articles" class="dkd-articles" aria-live="polite"></div><div id="dkd-empty" class="dkd-empty" hidden><span>◌</span><h3>Bu alanda haber bulunamadı.</h3><p>Başka bir kategori seç veya arama kelimeni değiştir.</p><button type="button" id="dkd-clear">Tüm haberlere dön</button></div><button type="button" id="dkd-more" class="dkd-more" hidden>Daha fazla haber göster <span aria-hidden="true">↓</span></button>
+    </section>
+  </main>
+
+  <footer class="dkd-footer"><div class="dkd-footer-top"><div class="dkd-brand dkd-footer-brand"><span class="dkd-brand-symbol">N<span></span></span><span class="dkd-brand-name">DraBorn<span>News</span><small>BY DRABORNEAGLE</small></span></div><p>Oyun ve teknoloji gündemi, kaynaklarıyla birlikte.</p><a href="/">DraBornEagle ↗</a></div><div class="dkd-footer-bottom"><span>© DraBornEagle · DraBornNews</span><span>Başlıklar ve kısa özetler kaynak bağlantısıyla sunulur. Ayrıntılar için yayıncıyı ziyaret edin.</span></div></footer>
+  <dialog id="dkd-reader" class="dkd-reader" aria-labelledby="dkd-reader-title"><div class="dkd-reader-shell"><div class="dkd-reader-top"><span class="dkd-reader-brand">DraBorn<span>News</span> <b> / HABER</b></span><button type="button" id="dkd-reader-close" aria-label="Haberi kapat">✕</button></div><div class="dkd-reader-scroll"><div id="dkd-reader-image" class="dkd-reader-image"></div><div class="dkd-reader-content"><div id="dkd-reader-tag" class="dkd-reader-tag"></div><h2 id="dkd-reader-title"></h2><div id="dkd-reader-meta" class="dkd-reader-meta"></div><div class="dkd-reader-line"></div><p id="dkd-reader-summary" class="dkd-reader-summary"></p><p id="dkd-reader-disclosure" class="dkd-reader-disclosure"></p><div class="dkd-reader-actions"><a id="dkd-reader-source" target="_blank" rel="noopener noreferrer">Kaynakta oku <span aria-hidden="true">↗</span></a><button type="button" id="dkd-reader-save">Kaydet</button><button type="button" id="dkd-reader-listen">Dinle</button><button type="button" id="dkd-reader-share">Paylaş</button></div></div></div></div></dialog>
+  <div id="dkd-toast" class="dkd-toast" role="status" aria-live="polite"></div>
+  <noscript><div class="dkd-noscript">Haber akışı için JavaScript'i açın. <a href="https://blog.playstation.com/">PlayStation Blog</a> ve <a href="https://news.xbox.com/en-us/">Xbox Wire</a> kaynaklarını doğrudan okuyabilirsiniz.</div></noscript>
+</body>
+</html>
