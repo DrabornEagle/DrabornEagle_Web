@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-27T21:06:27.634688Z",
+  "generatedAt": "2026-09-27T21:21:40.111Z",
   "sourceCount": 7,
   "items": [
     {
@@ -52,15 +52,15 @@
     },
     {
       "id": "41d291c6d16ea2a8c8",
-      "title": "Cloudflare’s 2026 Annual Founders’ Letter",
-      "summary": "The Internet is changing more today than at any point since Cloudflare launched back on September 27, 2010. As automated traffic surpasses human activity, we reflect on the rise of AI agents, new creators, and how we can help build a fair, sustainable future for the web.",
+      "title": "Cloudflare: İnternette otomatik trafik yeni dönemi başlatıyor",
+      "summary": "Cloudflare, 2026 kurucu mektubunda internetin şirketin 2010’daki kuruluşundan bu yana en hızlı değişimlerinden birini yaşadığını söylüyor. Mektuba göre otomatik trafik, insan etkinliğini geride bırakmış durumda.\n\nŞirket, yapay zekâ ajanları ve yeni içerik üreticileri etrafında şekillenen web için daha adil ve sürdürülebilir bir gelecek hedefini anlatıyor. Bu değerlendirme Cloudflare’ın kendi bakış açısını yansıtıyor.",
       "source": "Cloudflare Blog",
       "sourceUrl": "https://blog.cloudflare.com/cloudflares-2026-annual-founders-letter/",
       "publishedAt": "2026-09-27T17:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3G3F5ZSHVH0CSDBN2M4A43T.01M3G3F6KFD00H82BMWC8VN4TP.png",
-      "language": "en",
-      "editorial": false
+      "language": "tr",
+      "editorial": true
     },
     {
       "id": "3d2b0604ce9c48c05f",
@@ -292,15 +292,15 @@
     },
     {
       "id": "98866c25e8441fe1fd",
-      "title": "Minecraft Dungeons II’s New Dimension Coming to Minecraft Java & Bedrock Edition",
-      "summary": "We’ve visited the Overworld, the Nether, and the End. Now, prepare yourself for a journey to the Sift. First announced at Gamescom and showcased in more detail at Minecraft LIVE today, The Sift is the first new dimension in Minecraft in over 14 years, and players will be able to visit it in just a",
+      "title": "Minecraft’e 14 yıl sonra yeni boyut: The Sift geliyor",
+      "summary": "Overworld, Nether ve End’in ardından Minecraft oyuncularını The Sift adlı yeni bir boyut bekliyor. Xbox Wire’a göre Gamescom’da duyurulan bu alan, Minecraft LIVE’da daha ayrıntılı gösterildi.\n\nYayıncı, The Sift’i oyuna 14 yılı aşkın süredir eklenen ilk yeni boyut olarak tanıtıyor. Duyuru, Minecraft Dungeons II ile birlikte Java ve Bedrock sürümlerini de kapsıyor; çıkışın ayrıntıları için kaynak açıklaması izlenmeli.",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/09/26/minecraft-new-dimension-sift-dungeons-2/",
       "publishedAt": "2026-09-26T18:00:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/5-55752ac647c986ace32f-1024x576.jpg",
-      "language": "en",
-      "editorial": false
+      "language": "tr",
+      "editorial": true
     },
     {
       "id": "b6669bdefdd7894ea6",

@@ -16,3 +16,4 @@
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 .dkd-hero-card:after{background:linear-gradient(180deg,rgba(3,7,12,.05) 0%,rgba(3,7,12,.32) 37%,rgba(3,7,12,.83) 67%,rgba(3,7,12,.98) 100%)}
 .dkd-hero-card:not(:first-child):after{background:linear-gradient(180deg,rgba(3,7,12,.3) 0%,rgba(3,7,12,.78) 38%,rgba(3,7,12,.98) 100%)}
+@media(min-width:701px){.dkd-featured{grid-template-columns:1fr 1.85fr}.dkd-featured .dkd-hero-card:first-child{grid-column:2;grid-row:1/3}.dkd-featured .dkd-hero-card:nth-child(2){grid-column:1;grid-row:1}.dkd-featured .dkd-hero-card:nth-child(3){grid-column:1;grid-row:2}}
