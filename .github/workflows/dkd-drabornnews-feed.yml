@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: dkd-drabornnews-feed
@@ -28,6 +29,7 @@ jobs:
           DKD_NEWS_MODEL: gpt-4.1-mini
         run: python3 DraBornNews/scripts/dkd_collect.py
       - name: Publish changed feed
+        id: dkd_publish
         run: |
           if git diff --quiet -- DraBornNews/data/news.json; then
             echo 'News feed is unchanged.'
@@ -38,3 +40,9 @@ jobs:
           git add DraBornNews/data/news.json
           git commit -m 'data(DraBornNews): refresh sourced news digest'
           git push
+          echo 'changed=true' >> "$GITHUB_OUTPUT"
+      - name: Deploy updated news on company Pages
+        if: steps.dkd_publish.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run dkd_company_pages.yml --ref main
