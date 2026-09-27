@@ -72,8 +72,18 @@ jobs:
             echo "No news changes."
           else
             git commit -m "chore(DraBornNews): refresh automated news feed"
-            git pull --rebase origin main
-            git push origin main
+            for dkd_attempt in 1 2 3 4; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$dkd_attempt" -eq 4 ]; then
+                echo "Unable to push refreshed news after 4 attempts."
+                exit 1
+              fi
+              sleep $((dkd_attempt * 3))
+            done
           fi
 
       - name: Give public media URL time to refresh
@@ -90,6 +100,16 @@ jobs:
             echo "No social state changes."
           else
             git commit -m "chore(DraBornNews): update social publish state"
-            git pull --rebase origin main
-            git push origin main
+            for dkd_attempt in 1 2 3 4; do
+              git fetch origin main
+              git rebase origin/main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$dkd_attempt" -eq 4 ]; then
+                echo "Unable to push social state after 4 attempts."
+                exit 1
+              fi
+              sleep $((dkd_attempt * 3))
+            done
           fi
