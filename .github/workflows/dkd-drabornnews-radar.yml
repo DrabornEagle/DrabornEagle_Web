@@ -1,0 +1,95 @@
+name: DraBornNews Radar v0.1
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'DraBornNews/scripts/**'
+      - 'DraBornNews/config/**'
+      - 'DraBornNews/package.json'
+      - '.github/workflows/dkd-drabornnews-radar.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: dkd-drabornnews-radar
+  cancel-in-progress: false
+
+jobs:
+  dkd-news-radar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 18
+    defaults:
+      run:
+        working-directory: DraBornNews
+    env:
+      OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+      OPENAI_MODEL: ${{ vars.DRABORNNEWS_OPENAI_MODEL }}
+      SITE_URL: ${{ vars.DRABORNNEWS_SITE_URL }}
+      MAX_NEW_ARTICLES: ${{ vars.DRABORNNEWS_MAX_NEW_ARTICLES }}
+      SOCIAL_MIN_SCORE: ${{ vars.DRABORNNEWS_SOCIAL_MIN_SCORE }}
+      SOCIAL_COOLDOWN_MINUTES: ${{ vars.DRABORNNEWS_SOCIAL_COOLDOWN_MINUTES }}
+      X_USER_ACCESS_TOKEN: ${{ secrets.DRABORNNEWS_X_USER_ACCESS_TOKEN }}
+      TELEGRAM_BOT_TOKEN: ${{ secrets.DRABORNNEWS_TELEGRAM_BOT_TOKEN }}
+      TELEGRAM_CHAT_ID: ${{ secrets.DRABORNNEWS_TELEGRAM_CHAT_ID }}
+      META_IG_USER_ID: ${{ secrets.DRABORNNEWS_META_IG_USER_ID }}
+      META_ACCESS_TOKEN: ${{ secrets.DRABORNNEWS_META_ACCESS_TOKEN }}
+      META_GRAPH_VERSION: ${{ vars.DRABORNNEWS_META_GRAPH_VERSION }}
+      TIKTOK_ACCESS_TOKEN: ${{ secrets.DRABORNNEWS_TIKTOK_ACCESS_TOKEN }}
+      TIKTOK_PRIVACY_LEVEL: ${{ vars.DRABORNNEWS_TIKTOK_PRIVACY_LEVEL }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install --no-audit --no-fund
+
+      - name: Scan and rewrite news
+        run: npm run update
+
+      - name: Render TikTok-safe card
+        run: node scripts/tiktok-card.mjs
+
+      - name: Commit fresh news
+        shell: bash
+        run: |
+          git config user.name "DraBornNews Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/news.json social/latest.png social/tiktok-latest.png
+          if git diff --cached --quiet; then
+            echo "No news changes."
+          else
+            git commit -m "chore(DraBornNews): refresh automated news feed"
+            git pull --rebase origin main
+            git push origin main
+          fi
+
+      - name: Give public media URL time to refresh
+        run: sleep 35
+
+      - name: Publish important story to social channels
+        run: npm run publish
+
+      - name: Save social publishing state
+        shell: bash
+        run: |
+          git add data/social-state.json
+          if git diff --cached --quiet; then
+            echo "No social state changes."
+          else
+            git commit -m "chore(DraBornNews): update social publish state"
+            git pull --rebase origin main
+            git push origin main
+          fi
