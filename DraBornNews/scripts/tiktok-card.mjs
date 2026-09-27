@@ -1,0 +1,13 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
+import sharp from 'sharp';
+const dkdRoot=path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const dkdNews=JSON.parse(await fs.readFile(path.join(dkdRoot,'data','news.json'),'utf8'));
+const dkdItem=[...(dkdNews.items||[])].sort((dkdA,dkdB)=>(dkdB.score||0)-(dkdA.score||0))[0];
+if(!dkdItem)process.exit(0);
+const dkdEscape=dkdValue=>String(dkdValue).replace(/[&<>"']/g,dkdChar=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&apos;'}[dkdChar]));
+const dkdWords=String(dkdItem.title).split(/\s+/),dkdLines=[];let dkdLine='';for(const dkdWord of dkdWords){const dkdNext=`${dkdLine} ${dkdWord}`.trim();if(dkdNext.length>31&&dkdLine){dkdLines.push(dkdLine);dkdLine=dkdWord;if(dkdLines.length===3)break;}else dkdLine=dkdNext;}if(dkdLine&&dkdLines.length<4)dkdLines.push(dkdLine);
+const dkdTitle=dkdLines.map((dkdValue,dkdIndex)=>`<text x="82" y="${330+dkdIndex*88}" font-size="66" font-weight="800" fill="#f8fbff" font-family="Arial">${dkdEscape(dkdValue)}</text>`).join('');
+const dkdSvg=`<svg width="1080" height="1350" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="b"><stop stop-color="#07111d"/><stop offset=".55" stop-color="#12152d"/><stop offset="1" stop-color="#201126"/></linearGradient></defs><rect width="1080" height="1350" fill="url(#b)"/><text x="82" y="128" font-size="30" font-weight="800" letter-spacing="3" fill="#4fe7ff" font-family="Arial">${dkdEscape(dkdItem.category.toUpperCase())}</text>${dkdTitle}<rect x="82" y="1060" width="916" height="1" fill="#fff" opacity=".13"/><text x="82" y="1135" font-size="30" fill="#aebbd0" font-family="Arial">Güncel gelişme • ayrıntılar açıklamada</text></svg>`;
+const dkdOutput=path.join(dkdRoot,'social','tiktok-latest.png');await fs.mkdir(path.dirname(dkdOutput),{recursive:true});await sharp(Buffer.from(dkdSvg)).png().toFile(dkdOutput);
