@@ -94,9 +94,16 @@ def dkd_relevant(dkd_name, dkd_title):
     if dkd_name not in ("Webtekno", "DonanımHaber"):
         return True
     dkd_text = dkd_title.casefold()
-    dkd_unrelated = ("film", "dizi", "fragman", "netflix", "disney", "box office", "sinema", "booking.com", "otel", "tatil", "futbol", "maç", "transfer", "otomobil", "araba", "elektrikli araç", "tesla")
+    dkd_unrelated = ("film", "dizi", "fragman", "netflix", "disney", "star wars: episode", "box office", "sinema", "booking.com", "otel", "tatil", "futbol", "maç", "transfer", "otomobil", "araba", "elektrikli araç", "tesla")
     dkd_tech = ("oyun", "game", "playstation", "xbox", "yapay zeka", "yapay zekâ", "teknoloji", "telefon", "iphone", "android", "işlemci", "çip", "chip", "gpu", "bilgisayar", "yazılım", "internet", "robot", "tablet", "ekran", "kamera", "uygulama", "nasa", "3d yazıcı")
     return not any(dkd_word in dkd_text for dkd_word in dkd_unrelated) or any(dkd_word in dkd_text for dkd_word in dkd_tech)
+
+
+def dkd_excerpt(dkd_description):
+    dkd_description = dkd_re.split(r"(?:^|\s+)The post .{0,240}? appeared first on .*$", dkd_description, maxsplit=1, flags=dkd_re.I)[0]
+    dkd_description = dkd_re.split(r"\s+TRANSCRIPT\b", dkd_description, maxsplit=1, flags=dkd_re.I)[0]
+    dkd_description = dkd_re.sub(r"\s*(?:\[?…\]?|\[\.\.\.\])\s*$", "", dkd_description).strip()
+    return dkd_description if len(dkd_description) >= 35 else ""
 
 
 def dkd_parse_date(dkd_value):
@@ -125,6 +132,8 @@ def dkd_collect_source(dkd_source):
         dkd_title, _ = dkd_plain(dkd_item.findtext("title") or "")
         if not dkd_relevant(dkd_name, dkd_title):
             continue
+        if dkd_name in ("PlayStation Blog", "Xbox Wire") and ("podcast" in dkd_title.casefold() or "share of the week" in dkd_title.casefold()):
+            continue
         dkd_link = dkd_safe_url((dkd_item.findtext("link") or "").strip(), dkd_domain)
         dkd_date = dkd_parse_date(dkd_item.findtext("pubDate"))
         if not dkd_title or not dkd_link or not dkd_date:
@@ -132,6 +141,9 @@ def dkd_collect_source(dkd_source):
         dkd_description, dkd_description_image = dkd_plain(dkd_item.findtext("description") or "")
         dkd_content_text, dkd_content_image = dkd_plain(dkd_item.findtext(DKD_CONTENT + "encoded") or "")
         dkd_description = dkd_description or dkd_content_text
+        dkd_description = dkd_excerpt(dkd_description)
+        if not dkd_description:
+            continue
         dkd_description = dkd_description[:430].rsplit(" ", 1)[0] if len(dkd_description) > 430 else dkd_description
         dkd_media = dkd_item.find(DKD_MEDIA + "content")
         if dkd_media is None:

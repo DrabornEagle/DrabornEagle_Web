@@ -91,7 +91,7 @@
 
   function dkd_selectHeroes(dkd_items) {
     if (!dkd_items.length) return [];
-    const dkd_first = dkd_items.find((dkd_story) => dkd_story.category === 'Oyun' && dkd_story.image) || dkd_items.find((dkd_story) => dkd_story.image) || dkd_items[0];
+    const dkd_first = dkd_items.find((dkd_story) => dkd_story.category === 'Oyun' && ['PlayStation Blog', 'Xbox Wire'].includes(dkd_story.source) && dkd_story.image) || dkd_items.find((dkd_story) => dkd_story.image) || dkd_items[0];
     const dkd_remaining = dkd_items.filter((dkd_story) => dkd_story.id !== dkd_first.id);
     const dkd_second = dkd_remaining.find((dkd_story) => dkd_story.category !== dkd_first.category && dkd_story.image) || dkd_remaining[0];
     const dkd_third = dkd_remaining.find((dkd_story) => dkd_story.id !== dkd_second?.id && dkd_story.source !== dkd_first.source && dkd_story.image) || dkd_remaining.find((dkd_story) => dkd_story.id !== dkd_second?.id);
@@ -105,7 +105,7 @@
     dkd_cover.append(dkd_node('span', 'dkd-card-type', dkd_story.category));
     const dkd_body = dkd_node('div', 'dkd-card-body');
     const dkd_meta = dkd_node('div', 'dkd-card-meta');
-    dkd_meta.append(dkd_node('span', 'dkd-card-source', dkd_story.source), dkd_node('time', '', dkd_time(dkd_story.publishedAt)));
+    dkd_meta.append(dkd_node('span', 'dkd-card-source', `${dkd_story.source}${dkd_story.language === 'en' ? ' · EN' : ''}`), dkd_node('time', '', dkd_time(dkd_story.publishedAt)));
     const dkd_title = dkd_node('h3', '', dkd_story.title);
     const dkd_summary = dkd_node('p', 'dkd-card-summary', dkd_story.summary || 'Bu habere ait kısa özet henüz yok.');
     const dkd_footer = dkd_node('div', 'dkd-card-footer');
