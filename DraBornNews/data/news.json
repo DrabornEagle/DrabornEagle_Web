@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-09-27T21:21:40.111Z",
+  "generatedAt": "2026-09-28T04:53:09.542820Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "8b5cfc2e051861dcb7",
+      "title": "Tamamen Elektrikli Peugeot E-208 GTi'ın Ne Zaman Türkiye'ye Geleceği Açıklandı",
+      "summary": "Peugeot'nun tamamen elektrikli GTi modeli olacak E-208 GTi'ın ne zaman Türkiye'ye geleceği açıklandı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/peugeot-e-208-gti-ne-zaman-turkiye-gelecek-h225751.html",
+      "publishedAt": "2026-09-28T04:48:38Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689170/689170-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d68781f0fe3662d337",
+      "title": "Türk Strateji İçeriği Üreticileri, Paradox'u Boykotu Sürdürecek!",
+      "summary": "Türk strateji oyun içeriği üreticileri ortak açıklama yayımlayarak Paradox Interactive'i boykotu sürdüreceklerini açıkladı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/turk-strateji-ureticileri-paradox-boykot-surdurecek-h225745.html",
+      "publishedAt": "2026-09-28T04:23:09Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689161/689161-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "6195a72623a59b3fa6",
       "title": "Xiaomi'den yapay zekâ dünyasını şaşırtan model: 1 trilyon parametreli MiMo-V2.6 tanıtıldı",
@@ -579,30 +603,6 @@
       "editorial": false
     },
     {
-      "id": "447f87bed149f5d277",
-      "title": "Google'ın Telefon Uygulamasında Kişiler Sekmesi Geri Dönebilir: İşte Yeni Tasarım!",
-      "summary": "Google, Google Telefon uygulamasındaki tartışmalı tasarım değişikliğini yeniden ele alıyor. Yeni beta sürümünde ortaya çıkan değişiklik, kaybolan Kişiler sekmesinin ana ekrandaki alt menüye geri gelebileceğini gösteriyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/google-telefon-uygulamasi-kisiler-sekmesi-geri-donebilir-yeni-tasarim-h225670.html",
-      "publishedAt": "2026-09-25T14:01:57Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/689008/689008-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "68d0ebb3e9748623b2",
-      "title": "Google'dan Yapay Zekâda Yeni Dönem: Gemini 3.8 Live Avatar Duyuruldu!",
-      "summary": "Google, 97 dilde gerçek zamanlı görüntülü etkileşim ve özelleştirilebilir dijital temsilciler sunan Gemini 3.8 Live Avatar'ı tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/google-gemini-3-8-live-avatar-duyuruldu-h225673.html",
-      "publishedAt": "2026-09-25T14:01:12Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/688963/688963-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "1e599897591a233f26",
       "title": "How Ace Combat 8: Wings of Theve uses first-person to tell a more personal story",
       "summary": "The world of Strangereal, setting of the Ace Combat games, has developed a deep and storied history over the course of the series. But with Ace Combat 8: Wings of Theve, developer Project Aces has changed its approach to storytelling to create a more intimate and emotional tale than it has in the past. That",
@@ -624,18 +624,6 @@
       "category": "Oyun",
       "image": "https://store-images.s-microsoft.com/image/apps.26573.14360336411888409.72be7b12-25b1-41c9-b77e-0930c50aeaca.c2e7b502-2158-4de6-a16e-87d9a399582c?w=400&h=600",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "0db66f09cc24dfa824",
-      "title": "Tüm Tatilinizi Yapay Zeka Planlayacak: holidayheroes",
-      "summary": "Tüm tatilinizi yapay zeka planlayacak: Setur'un holidayheroes platformu, tatil fikrinizden uçuş ve otel seçeneklerine kadar süreci şekillendirecek.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/tatilinizi-yapay-zeka-planlayacak-h225721.html",
-      "publishedAt": "2026-09-25T13:24:44Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/689140/689140-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-09-01T12:59:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M1DADS947G87BAG8BQJ5RZN6.01M1DADSZ25WXKD5DG1M70HJR8.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "1e45d1b10f1436637f",
+      "title": "Introducing Adaptive Intelligence: Undermining the economics of every bot attack",
+      "summary": "Bot operators have historically had the economic advantage, bypassing static, deterministic detection rules with cheap proxies and retooling. Cloudflare's new Adaptive Intelligence engine flips this dynamic by autonomously learning from the meta-signals of live traffic and deploying disposable rules, making automated attacks too expensive to sustain.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/introducing-adaptive-intelligence/",
+      "publishedAt": "2026-08-31T12:59:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M15GS9CV1VMMQCAPHYE4AFD2.01M15GSA31CJVHRJCPHH7FBX77.png",
       "language": "en",
       "editorial": false
     }
