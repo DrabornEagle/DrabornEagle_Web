@@ -1,5 +1,6 @@
 name: DraBornBuy web sync
 
+# DraBornBuy v0.4 sync trigger
 on:
   push:
     branches: [main]
