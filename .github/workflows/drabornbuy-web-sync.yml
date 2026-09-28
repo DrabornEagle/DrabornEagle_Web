@@ -11,6 +11,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: drabornbuy-web-sync
@@ -67,3 +68,8 @@ jobs:
             git pull --rebase origin main
             git push origin HEAD:main
           fi
+      - name: Publish updated company pages
+        if: steps.source.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run dkd_company_pages.yml --repo "$GITHUB_REPOSITORY" --ref main
