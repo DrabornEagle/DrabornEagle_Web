@@ -1,4 +1,4 @@
-# DraBornEagle public website deployment - DraBornZikir v0.3 sync
+# DraBornEagle public website deployment - universal Expo apps
 name: DKD DrabornEagle public web
 
 on:
@@ -10,7 +10,7 @@ on:
     - cron: '17 * * * *'
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -68,6 +68,41 @@ jobs:
           grep -F 'black-translucent' DraBornZikir/index.html >/dev/null
           grep -F '/DraBornZikir/' DraBornZikir/library/index.html >/dev/null
           echo 'DraBornZikir static routes, loader and dark mobile browser chrome verified.'
+
+      - name: DKD Build DraBornBuy web from Android source
+        shell: bash
+        env:
+          EXPO_PUBLIC_MAPBOX_TOKEN: ${{ vars.DBB_MAPBOX_TOKEN }}
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/DraBornBuy-source "$GITHUB_WORKSPACE/DraBornBuy"
+          git clone --depth 1 https://github.com/DrabornEagle/DraBornBuy.git /tmp/DraBornBuy-source
+          cd /tmp/DraBornBuy-source
+          npm ci --legacy-peer-deps
+          npm run check
+          test -s .env.production
+          npx expo export --platform web --output-dir "$GITHUB_WORKSPACE/DraBornBuy" --clear
+          test -s "$GITHUB_WORKSPACE/DraBornBuy/index.html"
+          grep -F '/DraBornBuy/_expo/' "$GITHUB_WORKSPACE/DraBornBuy/index.html" >/dev/null
+          cp README.md "$GITHUB_WORKSPACE/DraBornBuy/README.md"
+          printf 'Universal source commit: %s\n' "$(git rev-parse HEAD)" > "$GITHUB_WORKSPACE/DraBornBuy/DKD-SOURCE.txt"
+
+      - name: DKD Commit synchronized DraBornBuy web files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornBuy
+          if ! git diff --cached --quiet; then
+            git commit -m 'build(DraBornBuy): sync Expo web from Android source'
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then break; fi
+              git fetch origin main
+              git rebase origin/main
+              if [ "$attempt" -eq 3 ]; then exit 1; fi
+            done
+          fi
 
       - name: DKD Configure GitHub Pages
         uses: actions/configure-pages@v5
