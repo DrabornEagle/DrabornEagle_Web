@@ -1,0 +1,69 @@
+name: DraBornBuy web sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/drabornbuy-web-sync.yml'
+  schedule:
+    - cron: '*/5 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: drabornbuy-web-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Compare Android source revision
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/DrabornEagle/DraBornBuy.git /tmp/drabornbuy-source
+          source_sha="$(git -C /tmp/drabornbuy-source rev-parse HEAD)"
+          current_sha="$(sed -n 's/^Universal source commit: //p' DraBornBuy/DKD-SOURCE.txt 2>/dev/null || true)"
+          echo "DBB_SOURCE_SHA=$source_sha" >> "$GITHUB_ENV"
+          if [[ "$source_sha" != "$current_sha" || ! -s DraBornBuy/index.html ]]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Verify and export shared Expo web app
+        if: steps.source.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd /tmp/drabornbuy-source
+          npm ci --legacy-peer-deps
+          npm run check
+          rm -rf "$GITHUB_WORKSPACE/DraBornBuy"
+          npx expo export --platform web --output-dir "$GITHUB_WORKSPACE/DraBornBuy" --clear
+          test -s "$GITHUB_WORKSPACE/DraBornBuy/index.html"
+          grep -F '/DraBornBuy/_expo/' "$GITHUB_WORKSPACE/DraBornBuy/index.html" >/dev/null
+          cp README.md "$GITHUB_WORKSPACE/DraBornBuy/README.md"
+          printf 'Universal source commit: %s\n' "$DBB_SOURCE_SHA" > "$GITHUB_WORKSPACE/DraBornBuy/DKD-SOURCE.txt"
+      - name: Commit synchronized web files
+        if: steps.source.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'DraBornBuy Sync'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornBuy
+          if ! git diff --cached --quiet; then
+            git commit -m "build(drabornbuy): sync Expo source ${DBB_SOURCE_SHA:0:12}"
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi
