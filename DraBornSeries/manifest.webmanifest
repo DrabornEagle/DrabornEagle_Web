@@ -1,0 +1,17 @@
+{
+  "name": "DraBornSeries",
+  "short_name": "DraBornSeries",
+  "start_url": "/DraBornSeries/",
+  "scope": "/DraBornSeries/",
+  "display": "standalone",
+  "background_color": "#09080f",
+  "theme_color": "#09080f",
+  "icons": [
+    {
+      "src": "/DraBornSeries/media/icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
