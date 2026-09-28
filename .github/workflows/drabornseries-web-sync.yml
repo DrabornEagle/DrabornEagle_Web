@@ -1,0 +1,71 @@
+name: DraBornSeries web sync
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/drabornseries-web-sync.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '42 * * * *'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: drabornseries-web-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch shared Android and web source
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/DrabornEagle/DraBornSeries.git "$RUNNER_TEMP/DraBornSeries-source"
+          SOURCE_SHA=$(git -C "$RUNNER_TEMP/DraBornSeries-source" rev-parse HEAD)
+          CURRENT_SHA=$(node -e 'try{console.log(require("./DraBornSeries/DBS-SOURCE.json").commit)}catch{console.log("missing")}' )
+          if [ "$SOURCE_SHA" != "$CURRENT_SHA" ]; then echo 'changed=true' >> "$GITHUB_OUTPUT"; fi
+      - name: Validate and export DraBornSeries
+        if: steps.source.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cd "$RUNNER_TEMP/DraBornSeries-source"
+          npm ci
+          npm run check
+          npm run lint
+          npm run build:web
+          test -s dist/index.html
+          test -s dist/DBS-SOURCE.json
+      - name: Commit only DraBornSeries output
+        if: steps.source.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          mkdir -p DraBornSeries
+          rsync -a --delete "$RUNNER_TEMP/DraBornSeries-source/dist/" DraBornSeries/
+          cp "$RUNNER_TEMP/DraBornSeries-source/README.md" DraBornSeries/README.md
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornSeries
+          if ! git diff --cached --quiet; then
+            git commit -m 'build(DraBornSeries): sync web from shared Expo source'
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then break; fi
+              git fetch origin main
+              git rebase origin/main
+              if [ "$attempt" -eq 3 ]; then exit 1; fi
+            done
+          fi
+      - name: Publish with existing company Pages workflow
+        if: steps.source.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run dkd_company_pages.yml --ref main
