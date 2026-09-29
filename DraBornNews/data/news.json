@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-09-28T23:46:58.705890Z",
+  "generatedAt": "2026-09-29T05:18:22.129105Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "745589307a9b394d8f",
+      "title": "Goolge, Gemini'ın Gem Özelliğini Kapatıyor! Peki Ne Olacak?",
+      "summary": "Google, Gemini kullanıcılarının özelleştirilmiş yapay zekâlar oluşturmasını sağlayan Gems sistemini kapatacağını açıkladı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/google-gemini-gem-ozelligin-kapatiyor-h225853.html",
+      "publishedAt": "2026-09-29T04:26:23Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/689422/689422-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0c0ae03ca9aef62424",
+      "title": "Anthropic, Claude Sonnet 5.5'i Duyurdu!",
+      "summary": "Anthropic, yeni modeli Claude Sonnet 5.5'i resmen duyurdu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/anthropic-claude-sonnet-5-5-duyurdu-h225851.html",
+      "publishedAt": "2026-09-29T03:51:19Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689416/689416-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "10eb416a02e2b1a265",
+      "title": "İnsanlığı Bir Gün Mars'a Taşıyacak Starship, İlk Kez Yörüngeye Çıktı!",
+      "summary": "SpaceX, Starship'in bir fırlatma testini daha gerçekleştirdi. Roket, ilk kez yörüngeye çıkmayı başardı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/starship-ilk-kez-yorungeye-cikti-video-h225850.html",
+      "publishedAt": "2026-09-29T03:42:45Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689413/689413-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0abd1efda23801fc51",
+      "title": "Samsung Galaxy A08 Türkiye'de! İşte Fiyatı",
+      "summary": "Samsung'un birkaç hafta önce tanıttığı Galaxy A08 modeli ülkemize geldi. İşte fiyatı ve özellikleri.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-a08-turkiye-fiyati-ozellikleri-h225847.html",
+      "publishedAt": "2026-09-29T03:27:31Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689410/689410-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "655f848e4bf70fbece",
+      "title": "(For SEA) God of War Laufey pre-orders available starting September 29, editions detailed",
+      "summary": "God of War Laufey is coming to PlayStation 5 consoles on February 16, 2027. We’re excited to announce that pre-orders are now live on PlayStation Store and at all participating retailers. To get you ready, we’re breaking down what comes with the God of War Laufey pre-order bonus and Digital Deluxe Edition. After that, we’ve",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/28/20260929-gow/",
+      "publishedAt": "2026-09-29T02:05:06Z",
+      "category": "Oyun",
+      "image": "https://blog.playstation.com/tachyon/2026/09/80456f7d6b73917ed6ac7162328b97d7e69df1b9-scaled.jpg",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "6be93457e5c0e9de50",
       "title": "İnsan eli boyutunda yeni robot eli geliştirildi: Fiyatı 6.500 dolar",
@@ -735,30 +795,6 @@
       "editorial": false
     },
     {
-      "id": "1e1077c2c19c843105",
-      "title": "Qualcomm Doğruladı: Gelecek Nesil Snapdragon Çipleri Samsung ile Ortaklaşa Üretilecek!",
-      "summary": "Qualcomm, gelecek nesil amiral gemisi Snapdragon çipleri ve LPDDR6 teknolojisi için Samsung Foundry ile 2nm sürecinde çalıştığını doğruladı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/qualcomm-snapdragon-cipleri-samsung-ile-ortaklasa-uretilecek-h225778.html",
-      "publishedAt": "2026-09-28T12:07:52Z",
-      "category": "Donanım",
-      "image": "https://imgrosetta.webtekno.com/file/689215/689215-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0a574a1cfa3d160481",
-      "title": "Türk Oyun Sektörü 2,76 Milyar Dolarla Küresel Pazarın %5'ine Ulaştı: Tam %450 Büyüme!",
-      "summary": "Türk oyun geliştiricileri, 2025'te 2,76 milyar dolar gelir elde ederek küresel mobil oyun pazarındaki payını %5'e yükseltti.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/turk-oyun-sektoru-tam-yuzde-450-buyume-kaydetti-h225772.html",
-      "publishedAt": "2026-09-28T12:07:44Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/689209/689209-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "5c2a28e99a207749d9",
       "title": "God of War Laufey pre-orders available starting September 29, editions detailed",
       "summary": "God of War Laufey is coming to PlayStation 5 consoles on February 16, 2027. We’re excited to announce that tomorrow, September 29 at 10:00am local time pre-orders officially go live. To get you ready, we’re breaking down what comes with the God of War Laufey pre-order bonus and Digital Deluxe Edition. After that, we’ve got",
@@ -768,42 +804,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/tachyon/2026/09/80456f7d6b73917ed6ac7162328b97d7e69df1b9-scaled.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "2e0bfa9e3c217a32c9",
-      "title": "WhatsApp'ın Android Tasarımı Değişiyor: İşte Yeni Tasarım",
-      "summary": "WhatsApp, yakında Android uygulamasının tasarımını değiştirecek. Yeni tasarımdan ekran görüntüleri de geldi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/whatsapp-android-tasarimi-degisiyor-h225760.html",
-      "publishedAt": "2026-09-28T11:03:09Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/689197/689197-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8ae39d595e6ab26d45",
-      "title": "En İyi Buzdolabı Markaları 2026 Fiyat-Performans Buzdolabı Önerileri",
-      "summary": "2026'nın en iyi buzdolabı markalarını keşfedin. No Frost, gardırop tipi, ankastre ve inverter buzdolabı seçeneklerini fiyat, enerji tüketimi ve teknik özellikleriyle karşılaştırın.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/en-iyi-buzdolabi-markalari-h224218.html",
-      "publishedAt": "2026-09-28T10:48:26Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/682963/682963-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0889fadf80d2e7ce1d",
-      "title": "En İyi Şofben Markaları 2026",
-      "summary": "2026'nın en iyi şofben markalarını keşfedin. Doğalgazlı, elektrikli ve LPG'li şofbenleri kapasite, güvenlik, enerji tüketimi ve fiyatlarına göre karşılaştırın.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/en-iyi-sofben-markalari-h224443.html",
-      "publishedAt": "2026-09-28T10:45:05Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/683626/683626-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1191,14 +1191,14 @@
       "editorial": false
     },
     {
-      "id": "6bf26506d43393de61",
-      "title": "Silent Hill: Townfall — 9 ways first-person changes the iconic horror formula",
-      "summary": "The Silent Hill franchise has evolved with its most recent entries, expanding into settings that go beyond the eponymous foggy American town. In Silent Hill: Townfall, it also taps into a new way to terrify players, shifting from a traditionally third-person perspective to first-person. The series has previously offered glimpses of first-person gameplay, including Silent",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/21/silent-hill-townfall-9-ways-first-person-changes-the-iconic-horror-formula/",
-      "publishedAt": "2026-09-21T07:00:18Z",
-      "category": "Oyun",
-      "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
+      "id": "eb5e0e2da34b5b5515",
+      "title": "Saving another 100TB of RAM with math (and Rust)",
+      "summary": "Cloudflare's global network is immense but not limitless. As we look for small ways to trim our resource usage, we sometimes get lucky and we can cut significantly more. Here’s how we reduced one of our Pingora-based service's RAM usage with statistics.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/saving-100-tb-of-ram-with-math/",
+      "publishedAt": "2026-09-18T17:23:58Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M2PFYDRYA8R4X8XVQJYTED8Q.01M2PFYEWJNSK872MVT1JSCHA4.png",
       "language": "en",
       "editorial": false
     }
