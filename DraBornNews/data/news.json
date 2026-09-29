@@ -1,7 +1,103 @@
 {
-  "generatedAt": "2026-09-29T16:58:26.555431Z",
+  "generatedAt": "2026-09-29T21:19:26.632366Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "5875e1f0ef85c7085a",
+      "title": "Yerli telefonda detaylar netleşiyor: Malatya’da üretim, yerli işletim sistemi",
+      "summary": "Aselsan ve Türk Telekom tarafından hazırlanan yerli akıllı telefon gelecek yıl piyasada olacak. Yonga seti ve işletim sisteminin yerli olması planlanıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yerli-akilli-telefon-geliyor--211052",
+      "publishedAt": "2026-09-29T19:45:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211052/1200x675yerli-akilli-telefon-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "29a83b3808d0f738d7",
+      "title": "Stanford ve NVIDIA'nın geliştirdiği CLM, yapay zekâyı çok daha hızlı hâle getirebilir",
+      "summary": "Yapay zekâ ajanlarının her karar için büyük dil modellerine başvurması gerekmeyebilir. JEV'in sunduğu yeni yaklaşım konuşulurken, Stanford ve NVIDIA'dan çok daha hızlı bir alternatif geldi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-ajanlarinda-jev-in-karsisina-yeni-rakip-cikti-clm--211037",
+      "publishedAt": "2026-09-29T18:45:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211037/1200x675yapay-zeka-ajanlarinda-jev-in-karsisina-yeni-rakip-cikti-clm.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "97be827b10e4b82f2b",
+      "title": "Çin bilim merkezi hâline gelmek için dünyanın en parlak bilimcilerine 15 yıllık fon sunuyor",
+      "summary": "Çin, bilim dünyasında dikkat çeken yeni bir fonlama modelini hayata geçiriyor. Ülke, seçtiği genç bilim insanlarına 15 yıl boyunca destek verecek ve kısa vadeli başarı beklentisi olmayacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-dunyanin-en-parlak-genc-bilimcilerine-15-yillik-fon-sunuyor--211043",
+      "publishedAt": "2026-09-29T18:22:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211043/1200x675cin-dunyanin-en-parlak-genc-bilimcilerine-15-yillik-fon-sunuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d7012b6da827c89173",
+      "title": "NBA The Run Kicks off its First Season with a Major Update",
+      "summary": "Today, Wave One – 2000s Legends arrives as NBA The Run’s first seasonal update, the biggest one yet since launch in June. The update is free for all players and adds five historic NBA stars, two new gameplay cameras – Drive Cam & Drive Flip Cam, the Championship Belts to showcase your mastery, Licensed music,",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/09/29/nba-the-run-kicks-off-its-first-season/",
+      "publishedAt": "2026-09-29T18:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/Wave-One-Anthems-4x5-v2-320a1478d17807e7d78f-546x683.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "29505f09b760cfc9bb",
+      "title": "Game on: Henry Cavill is putting Googlebook to the test",
+      "summary": "Henry Cavill is partnering with Googlebook to build a video game, coming this November.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/devices/googlebook/henry-cavill-googlebook-video-game/",
+      "publishedAt": "2026-09-29T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Cavill.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "fe0bf4ef16cfa2e4fb",
+      "title": "Volkswagen ve Gotion güçlerini birleştirdi: Avrupa’da LFP batarya üretimi başlıyor",
+      "summary": "Volkswagen, Çinli batarya üreticisi Gotion ile ortaklığını genişleterek Avrupa’da LFP batarya üretimine başlayacak. Anlaşma kapsamında İspanya, Slovakya ve Fas’ta yeni üretim yatırımları yapılacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/volkswagen-avrupa-da-lfp-batarya-uretimine-giriyor--211048",
+      "publishedAt": "2026-09-29T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211048/1200x675volkswagen-avrupa-da-lfp-batarya-uretimine-giriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6a316f2919fc28e0c8",
+      "title": "Copilot yeni bir skandala karıştı: Microsoft çalışanları kullanıcı fotoğraflarını görüyor",
+      "summary": "Microsoft Copilot'a yüklenen fotoğrafların insan çalışanlar tarafından incelendiği ortaya çıktı. Üstelik bazı çalışanlar, cinsel ve rahatsız edici içeriklerle karşılaşıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/microsoft-copilot-yeni-bir-skandalla-gundemde--211049",
+      "publishedAt": "2026-09-29T17:38:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211049/1200x675microsoft-copilot-yeni-bir-skandalla-gundemde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4319e7afc4d119539d",
+      "title": "Katlanabilir iPhone sınırlı stokla gelebilir: Üretimde sorunlar var!",
+      "summary": "Apple'ın ilk katlanabilir telefonu beklenenden hızlı tükenebilir. Yeni bir rapor, Apple'ın üretim zorlukları yaşadığını ve iPhone Duo'nun sınırlı stokla gelebileceğini söylüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iphone-duo-sinirli-stokla-gelebilir-uretimde-sorunlar-var--211051",
+      "publishedAt": "2026-09-29T17:15:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211051/1200x675iphone-duo-sinirli-stokla-gelebilir-uretimde-sorunlar-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "2054a72f234a237a22",
       "title": "Uzay teknolojisi seri üretimde: 30 bin döngü ömürlü su bazlı batarya",
@@ -435,18 +531,6 @@
       "editorial": false
     },
     {
-      "id": "4b75d48f2207210d8e",
-      "title": "Xiaomi 18'in özellikleri sızdırıldı: Çift 200MP kamera ve dev batarya",
-      "summary": "Xiaomi 18'in teknik özellikleri yeni bir sızıntıyla ortaya çıktı. Kompakt ekran, Snapdragon 8 Elite Gen 6 ve çift 200 MP kamera telefonun öne çıkan detayları arasında.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xiaomi-18-in-ozellikleri-sizdirildi-cift-200mp-kamera-ve-dev-pil--211028",
-      "publishedAt": "2026-09-29T11:54:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211028/1200x675xiaomi-18-in-ozellikleri-sizdirildi-cift-200mp-kamera-ve-dev-pil.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4f8f166b53e466cf27",
       "title": "HONOR Magic9 ve Magic9 Super Edition Tanıtıldı",
       "summary": "HONOR, harika özellikler sunan amiral gemisi modelleri Magic9 ve Magic9 Super Edition’ı tanıttı.",
@@ -507,42 +591,6 @@
       "editorial": false
     },
     {
-      "id": "9f56b57b94e036ac3b",
-      "title": "İtalyan bankasında büyük vurgun: Yapay zeka ile 95 milyon euro dolandırdılar",
-      "summary": "İtalya'nın en büyük bankalarından Intesa Sanpaolo'nun iştiraki Fideuram, yapay zeka destekli dolandırıcılıkta 95 milyon euro kaybetti. Paranın 53 milyon eurosu geri alındı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/italyan-bankasinda-buyuk-vurgun-yapay-zeka-ile-dolandirdilar--211031",
-      "publishedAt": "2026-09-29T11:32:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211031/1200x675italyan-bankasinda-buyuk-vurgun-yapay-zeka-ile-dolandirdilar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5f1ec0e078daa11c70",
-      "title": "Koç'tan Çinli üreticilerle anlaşma mesajı: \"1-1,5 aya kalmaz\"",
-      "summary": "Koç Holding Otomotiv Grubu Başkanı Haydar Yenigün, Çinlilerle kısa süre içinde anlaşmaya varılmasını beklediğini söyledi. Yenigün, bu konuyla alakalı tahmini bir süre de verdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/koc-tan-cinli-ureticilerle-anlasma-mesaji-1-1-5-aya-kalmaz--211029",
-      "publishedAt": "2026-09-29T11:10:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211029/1200x675koc-tan-cinli-ureticilerle-anlasma-mesaji-1-1-5-aya-kalmaz.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5305344b6022ca7d7b",
-      "title": "Windows 10 güncellemesinde yeni sorun: Masaüstünü çöküyor",
-      "summary": "Windows 10 için yayınlanan yeni güncelleme, bazı kullanıcıların dosyalara tıklarken Copilot'un arka planda çalışmasına ve Dosya Gezgini'nin çökmesine neden oluyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/windows-10-guncellemesinde-yeni-sorun-masaustunu-cokuyor--211024",
-      "publishedAt": "2026-09-29T10:52:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211024/1200x675windows-10-guncellemesinde-yeni-sorun-masaustunu-cokuyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "50fa8263257ccbd255",
       "title": "Çamaşır Makinesinin Beyni: Deterjanı ve Yumuşatıcıyı Çamaşırlara Özel Optimize Eden Teknolojiler",
       "summary": "Eskiden çamaşır makinesi dediğimiz şey, suyu ısıtıp kazanı döndüren basit bir motordan ibaretti. Ancak günümüzde bu cihazlar, içine attığınız çamaşır yükünün ağırlığından suyun sertliğine kadar her şeyi saniyeler içinde analiz eden birer \"yapay zeka\" merkezine dönüştü.",
@@ -551,18 +599,6 @@
       "publishedAt": "2026-09-29T10:46:17Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/688819/688819-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "bfc641fd0cdb91d65b",
-      "title": "AMD'den dev AI yatırımı: 8,2 milyar dolara World Labs'i satın alıyor",
-      "summary": "AMD, yapay zeka alanındaki en büyük satın almalarından birine hazırlanıyor. Şirket, Fei-Fei Li'nin World Labs girişimini 8,2 milyar dolarlık anlaşmayla bünyesine katacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amd-den-dev-ai-yatirimi-8-2-milyar-dolara-world-labs-i-aliyor--211018",
-      "publishedAt": "2026-09-29T10:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211018/1200x675amd-den-dev-ai-yatirimi-8-2-milyar-dolara-world-labs-i-aliyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -615,18 +651,6 @@
       "editorial": false
     },
     {
-      "id": "1c58b3bb56aea7b1b6",
-      "title": "Nvidia'dan kontrolden çıkan yapay zekalara karşı yeni sistem",
-      "summary": "Nvidia, kontrolden çıkan yapay zeka ajanlarını milisaniyeler içinde karantinaya alabilen yeni güvenlik platformunu duyurdu. Sistem, yazılım ve donanım tabanlı denetim sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-dan-kontrolden-cikan-yapay-zekalara-karsi-yeni-sistem--211019",
-      "publishedAt": "2026-09-29T10:08:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211019/1200x675nvidia-dan-kontrolden-cikan-yapay-zekalara-karsi-yeni-sistem.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "f62b0fb6b60020552c",
       "title": "Bir Aracın Çok Kullanıldığı Nasıl Anlaşılır?",
       "summary": "Bir araç alırken aracın ne kadar kullanıldığını anlamanın bazı püf noktaları vardır. Bu belirgin işaretleri tek tek açıklıyoruz.",
@@ -659,18 +683,6 @@
       "publishedAt": "2026-09-29T09:58:58Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/685009/685009-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d91a6e7e1670c3d8db",
-      "title": "iPhone'lar için acil güvenlik güncellemesi iOS 26.7.1 yayınlandı",
-      "summary": "Apple, iPhone 18 Pro için hata düzeltmeleri içeren iOS 27.0.1 ile birlikte iOS 27'ye geçmeyen iPhone kullanıcıları için güvenlik güncellemesi olan iOS 26.7.1'i yayınladı: İşte ayrıntılar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-lar-icin-acil-guvenlik-guncellemesi-ios-26-7-1-yayinlandi--211017",
-      "publishedAt": "2026-09-29T09:45:00Z",
-      "category": "Güvenlik",
-      "image": "https://www.donanimhaber.com/images/images/haber/211017/1200x675iphone-lar-icin-acil-guvenlik-guncellemesi-ios-26-7-1-yayinlandi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1019,18 +1031,6 @@
       "publishedAt": "2026-09-25T18:00:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/2-416c8016ebb73acd32b1.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "70b127a149537cfbc6",
-      "title": "Gears of War: E-Day x Liquid Death – Unlock a Legendary Pose and More",
-      "summary": "Gears of War: E-Day launches with a collab that puts a Legendary pose in your hands. We’re teaming up with Liquid Death from September 25 through November 30, bringing an in-game reward, a limited-edition merch drop, and a new way to gear up for Emergence Day. Unlock Chainsaw Flex Pick up Liquid Death Energy at",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/25/gears-of-war-e-day-liquid-death/",
-      "publishedAt": "2026-09-25T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/GoW_EDAY_LiquidDeath-1-ba9b306aa6e0fc70a9ff-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
