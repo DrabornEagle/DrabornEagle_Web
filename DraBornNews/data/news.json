@@ -1,16 +1,112 @@
 {
-  "generatedAt": "2026-09-30T18:20:27.411291Z",
+  "generatedAt": "2026-09-30T22:31:01.512303Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "8ff13f57dac4cfa311",
+      "title": "Google's AI ranks #1 for predicting flu hospitalizations.",
+      "summary": "Google’s science AI model was the best at forecasting flu-related hospital admissions, the Centers for Disease Control announced.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/google-science-ai-flu-forecasts/",
+      "publishedAt": "2026-09-30T21:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Flusight_socialhero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "6a603408c60e428910",
+      "title": "OpenAI 30 milyar dolarlık yatırım arıyor: Hedef 1,4 trilyon dolarlık değerleme",
+      "summary": "OpenAI, halka arz öncesinde en az 30 milyar dolarlık yeni yatırım toplamaya hazırlanıyor. Aktarılanlara göre şirketin bu turdaki değerlemesi yaklaşık 1,4 trilyon dolar olabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/openai-30-milyar-dolarlik-yatirim-ariyor-hedef-1-4-trilyon-dolar--211095",
+      "publishedAt": "2026-09-30T20:15:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211095/1200x675openai-30-milyar-dolarlik-yatirim-ariyor-hedef-1-4-trilyon-dolar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6381db252deeabb6b5",
+      "title": "Gemini 4 Argon: our next era of frontier intelligence",
+      "summary": "Announcing Gemini 4 Argon, our frontier model for real-world coding, enterprise knowledge work, and cyber defense, rolling out soon.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "publishedAt": "2026-09-30T20:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/g4_30-09-26_key-art_blog.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "8ebfd9b54bf74ef80f",
+      "title": "Samsung Galaxy SmartTag 3 tanıtıldı: Artık iPhone'larla da çalışıyor",
+      "summary": "Samsung'un yeni nesil takip cihazı Galaxy SmartTag 3'ü tanıttı. İlk kez iOS desteği getirilen model ayrıca dört kat uzun Compass View menzili ve belirlenen bölgeler için bildirim özelliğiyle geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/galaxy-smarttag-3-tanitildi-artik-iphone-larla-da-calisiyor--211094",
+      "publishedAt": "2026-09-30T19:52:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211094/1200x675galaxy-smarttag-3-tanitildi-artik-iphone-larla-da-calisiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "63c32d8a8d07be16c4",
+      "title": "Güneş ve rüzgar nükleeri ilk kez geride bıraktı: Enerjide dengeler değişiyor",
+      "summary": "Nükleer santraller 2025'te 2.703 TWh elektrik üretirken küresel payı %8,8'e geriledi. Aynı dönemde güneş ve rüzgar kapasitesindeki rekor artış, enerji üretimindeki dönüşümün hızlandığını ortaya koydu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gunes-ve-ruzgar-enerjisi-nukleeri-ilk-kez-geride-birakti--211083",
+      "publishedAt": "2026-09-30T19:29:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211083/1200x675gunes-ve-ruzgar-enerjisi-nukleeri-ilk-kez-geride-birakti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "3108edd58cab311ca3",
       "title": "Elektrikli Volvo ES90 Türkiye'de: İşte fiyatı ve özellikleri",
       "summary": "Volvo'nun teknoloji bakımından şimdiye kadarki en güçlü modeli olan elektrikli Volvo ES90 Türkiye'de satışa sunuldu. Yeni Volvo ES90 Türkiye fiyatı ve özellikleri haberimizde:",
       "source": "DonanımHaber",
       "sourceUrl": "https://www.donanimhaber.com/elektrikli-volvo-es90-turkiye-de-iste-fiyati-ve-ozellikleri--211074",
-      "publishedAt": "2026-09-30T18:15:01Z",
+      "publishedAt": "2026-09-30T18:45:27Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211074/1200x675elektrikli-volvo-es90-turkiye-de-iste-fiyati-ve-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "31bf65012a16a52d9d",
+      "title": "Apple’da dönüşüm başladı: İşte çıkarmalar, daha hızlı ürün tanıtma ve dahası",
+      "summary": "Apple'ın yeni CEO'su John Ternus, şirketi daha yalın hale getirmek ve ürün geliştirme süreçlerini hızlandırmak için yönetim kadrosunda küçülme ve daha sık lansman planını değerlendiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-in-yeni-ceo-su-daha-sik-urun-tanitmayi-hedefliyor--211070",
+      "publishedAt": "2026-09-30T18:45:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211070/1200x675apple-in-yeni-ceo-su-daha-sik-urun-tanitmayi-hedefliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d0594e3e3d8b36eb29",
+      "title": "Google is supporting water resilience in Chile.",
+      "summary": "Google is investing $1.2M to line Chile's Unidos de Buin canal, saving 1.9 billion gallons of water annually. See how we boost watershed health.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/sustainability/water-resilience-chile/",
+      "publishedAt": "2026-09-30T18:34:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/WaterChile_socialshare.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "7be8832e772d25ef59",
+      "title": "Intel işlemcilerin içine ışık yerleştirecek: İşte yeni patent",
+      "summary": "Intel, işlemci paketlerine MicroLED yerleştirmek için dikkat çeken bir patent aldı. Teknoloji, tanılama ışıklarından gelecekteki optik bağlantılara kadar uzanabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/intel-islemcilerin-icine-isik-yerlestirecek-iste-yeni-patent--211073",
+      "publishedAt": "2026-09-30T18:22:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211073/1200x675intel-islemcilerin-icine-isik-yerlestirecek-iste-yeni-patent.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -591,18 +687,6 @@
       "editorial": false
     },
     {
-      "id": "edb3fb60ac3deaeb4c",
-      "title": "Microsoft Windows 11 26H2 güncellemesini yayınladı: İşte yenilikler",
-      "summary": "Microsoft, Windows 11 26H2 güncellemesini yayınladı. Yeni sürüm, Dosya Gezgini ve Windows Search başta olmak üzere birçok araca yeni özellikler getiriyor. İşte yenilikler...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/windows-11-26h2-yayinlandi-iste-yeni-ozellikler--211067",
-      "publishedAt": "2026-09-30T12:17:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211067/1200x675windows-11-26h2-yayinlandi-iste-yeni-ozellikler.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "20671eb5b0380d78df",
       "title": "OpenAI'ın Tam 500 Dolarlık Yeni Pro Paketi Duyuruldu: Bu Fiyata Rağmen 200 Dolarlık Planın Limitleri Kısıldı!",
       "summary": "OpenAI, şimdiye kadarki en pahalı bireysel aboneliği olan 500 dolarlık Pro 500 paketini duyurdu.",
@@ -651,18 +735,6 @@
       "editorial": false
     },
     {
-      "id": "68c3da4e479a5440cd",
-      "title": "iPhone 18 Pro'larda şimdi de hoparlör sorunu!",
-      "summary": "Apple'ın yeni telefonlarında sorunlar bitmiyor! Yeni iPhone 18 Pro ve Pro Max kullanıcıları, hoparlörden cızırtı geldiğini ve son yayınlanan iOS 27.0.1 güncellemesinin sorunu çözmediğini söylüyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-18-pro-max-hoparlor-sorunu-ile-gundemde--211059",
-      "publishedAt": "2026-09-30T11:55:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211059/1200x675iphone-18-pro-max-hoparlor-sorunu-ile-gundemde.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4a8c1c48ca2fdeec95",
       "title": "Trump ve Teknoloji Devleri Yapay Zekâ Güvenliği İçin Anlaştı: Şirketler Kendilerini Denetleyecek!",
       "summary": "ABD Başkanı Donald Trump, yapay zekâ konusunda teknoloji dünyasının önde gelen isimleriyle bir araya geldi. Masadan, şirketlerin yapay zekâ güvenliğini kendi yöntemleriyle sağlamasını esas alan gönüllü bir anlaşma çıktı.",
@@ -687,18 +759,6 @@
       "editorial": false
     },
     {
-      "id": "02f18046d6afa33bf8",
-      "title": "Sosyal medyada kendine hakaret ettirip tazminat isteyenlere yargı freni",
-      "summary": "Sosyal medyadaki paylaşımlarla kendisine hakaret edilmesini sağlayarak tazminat talep edenlerle ilgili dikkat çeken bir karar verildi. Kararda, şikayet hakkının kötüye kullanılamayacağı vurgulandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kendine-hakaret-ettirip-tazminat-isteyenlere-yargidan-fren--211066",
-      "publishedAt": "2026-09-30T11:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211066/1200x675kendine-hakaret-ettirip-tazminat-isteyenlere-yargidan-fren.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "999144465777bae5ef",
       "title": "Elektrikli Range Rover Sport Tanıtıldı!",
       "summary": "Land Rover, amiral gemisi SUV serisinin yeni üyesi tamamen elektrikli Range Rover Sport Electric modelini resmi olarak tanıttı.",
@@ -707,18 +767,6 @@
       "publishedAt": "2026-09-30T11:32:44Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/689836/689836-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d547a7aa794eb841f6",
-      "title": "Samsung Türkiye'den güncelleme sürprizi: Galaxy S26 serisine One UI 9 geldi",
-      "summary": "Samsung, Galaxy S26, S26 Plus ve S26 Ultra için kararlı One UI 9.0 güncellemesini dağıtmaya başladı. Güncelleme, Android 17 tabanlı ve Eylül 2026 güvenlik yamasını içeriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/galaxy-s26-serisi-icin-one-ui-9-guncellemesi-yayinlandi--210533",
-      "publishedAt": "2026-09-30T11:28:48Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/210533/1200x675galaxy-s26-serisi-icin-one-ui-9-guncellemesi-yayinlandi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -735,18 +783,6 @@
       "editorial": false
     },
     {
-      "id": "b0db017b930143a70d",
-      "title": "Xbox'ta beklenen \"Platinum Trophy\" sistemi sonunda geliyor",
-      "summary": "Xbox, oyuncuların uzun süredir beklediği Mythic Achievements özelliğini duyurdu. Yeni sistem, PlayStation'daki Platinum Trophy'lere benzer şekilde çalışacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-ta-beklenen-platinum-trophy-sistemi-sonunda-geliyor--211063",
-      "publishedAt": "2026-09-30T11:11:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211063/1200x675xbox-ta-beklenen-platinum-trophy-sistemi-sonunda-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4413a4ca732c4d838b",
       "title": "iPhone 18 Pro ve Pro Max’te Sinir Bozucu Sorun: Hoparlörden Cızırtı Geliyor!",
       "summary": "Henüz çiçeği burnunda iPhone 18 Pro ve Pro Max modellerinde hoparlörden garip cızırtı sesleri geldiği bildirildi.",
@@ -755,18 +791,6 @@
       "publishedAt": "2026-09-30T11:02:08Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/689785/689785-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2c0ee719f182d861cc",
-      "title": "Kamerasız iPhone 18 Pro Max tanıtıldı: Fiyatı 11 bin dolardan başlıyor!",
-      "summary": "Caviar, yeni Black Edition koleksiyonunu duyurdu. iPhone 18 Pro, 18 Pro Max ve katlanabilir iPhone Duo'nun özel versiyonları, sınırlı sayıda üretildi ve yüksek fiyatlardan alıcı bekliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kamerasiz-iphone-18-pro-max-tanitildi-fiyati-11-bin-dolar--211064",
-      "publishedAt": "2026-09-30T10:49:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211064/1200x675kamerasiz-iphone-18-pro-max-tanitildi-fiyati-11-bin-dolar.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1177,30 +1201,6 @@
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/5-55752ac647c986ace32f-1024x576.jpg",
       "language": "tr",
       "editorial": true
-    },
-    {
-      "id": "1e599897591a233f26",
-      "title": "How Ace Combat 8: Wings of Theve uses first-person to tell a more personal story",
-      "summary": "The world of Strangereal, setting of the Ace Combat games, has developed a deep and storied history over the course of the series. But with Ace Combat 8: Wings of Theve, developer Project Aces has changed its approach to storytelling to create a more intimate and emotional tale than it has in the past. That",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/09/25/how-ace-combat-8-wings-of-theve-uses-first-person-to-tell-a-more-personal-story/",
-      "publishedAt": "2026-09-25T14:00:34Z",
-      "category": "Oyun",
-      "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f524e9886f009cfdc3",
-      "title": "Introducing the new Copilot with Home, Code and Autopilot",
-      "summary": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition. Today we’re introducing the new Copilot to connect the tools people rely on with the next generation of capabilities they’ll need to build, customize and scale AI...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
-      "publishedAt": "2026-09-25T12:03:50Z",
-      "category": "Yapay Zeka",
-      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Home-FINAL-2.png",
-      "language": "en",
-      "editorial": false
     }
   ]
 }
