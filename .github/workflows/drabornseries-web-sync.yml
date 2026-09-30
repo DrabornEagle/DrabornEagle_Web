@@ -69,4 +69,4 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run dkd_company_pages.yml --ref main
-# DraBornSeries source head: 819ea69c59048387980ac44d23d3a28b86d9cc73
+# DraBornSeries source head: 382ee05ff1dc6a653f47a1c1f71416948ecfb81e
