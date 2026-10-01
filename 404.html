@@ -44,6 +44,20 @@
     }
   }
 
+  if (location.pathname.startsWith('/DraBornSeries/DiziAd')) {
+    try {
+      const response = await fetch('/DraBornSeries/index.html?v=073&ts=' + Date.now(), {cache:'no-store'});
+      if (!response.ok) throw new Error('series_shell_unavailable');
+      const html = await response.text();
+      document.open();
+      document.write(html);
+      document.close();
+      return;
+    } catch (_) {
+      document.body.textContent = 'DraBornSeries şu anda açılamadı. Lütfen bağlantını kontrol edip tekrar dene.';
+      return;
+    }
+  }
   if (location.pathname.startsWith('/DraBornGate/')) {
     sessionStorage.setItem('dkd_gate_route', path);
     location.replace('/DraBornGate/');
