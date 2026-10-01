@@ -1,7 +1,139 @@
 {
-  "generatedAt": "2026-09-30T22:31:01.512303Z",
+  "generatedAt": "2026-10-01T07:38:54.648314Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "98114a4414841ef854",
+      "title": "A101 marketler Honor tablet ve JBL kulaklık satıyor",
+      "summary": "1 Ekim A101 Ekstra kataloğu teknoloji ürünleri arasında Honor markasına ait Pad 10 tablet modeli ve JBL Tour One M2 kablosuz kulaklık modeli yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/1-ekim-a101-ekstra-katalogunda-neler-var--211098",
+      "publishedAt": "2026-10-01T07:34:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211098/1200x6751-ekim-a101-ekstra-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cd71589eb709254856",
+      "title": "BDDK ve SPK’dan finans piyasalarında dikkat çeken kararlar: Ara ödeme yapılacak",
+      "summary": "BDDK, 3 banka ve 2 faktoring şirketinde yönetimi TMSF’ye devretti. SPK ise Tera Yatırım’ı durdurdu ve tasfiye sürecindeki fon yatırımcılarına 1 milyon liraya kadar ara ödeme kararı aldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bddk-ve-spk-dan-finans-piyasalarinda-dikkat-ceken-kararlar--211101",
+      "publishedAt": "2026-10-01T07:10:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211101/1200x675bddk-ve-spk-dan-finans-piyasalarinda-dikkat-ceken-kararlar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f9b5718d3d14db6120",
+      "title": "Ultra güncellendi, Plus çok değişti! ''Samsung Galaxy Tab S12 Ultra ve Plus'ı denedik''",
+      "summary": "14.6 inç Ultra'nın performansı arttı, artık 4 hoparlörlü ve daha hızlı şarj oluyor. Plus inceldi, ekranı büyüdü ve değişti, performansı ciddi arttı, biz de ilk elden görüp deneyimlerimizi aktardık.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ultra-guncellendi-plus-degisti-galaxy-tab-s12-ultra-ve-plus--211044",
+      "publishedAt": "2026-10-01T07:01:05Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211044/1200x675ultra-guncellendi-plus-degisti-galaxy-tab-s12-ultra-ve-plus.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "944ee562dffbd152a6",
+      "title": "BMW, En Güçlü i3 Olacak i3 M60'ı Duyurdu",
+      "summary": "BMW, içten yanmalı 3 Serisi’ne ek olarak bir de elektrikli i3’ün en güçlü versiyonu olacak i3 M60’ı duyurdu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/bmw-i3-m60-duyuruldu-h226072.html",
+      "publishedAt": "2026-10-01T06:43:20Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689989/689989-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fd2885acf994c41ac1",
+      "title": "ChatGPT Pro 500'ün Türkiye Fiyatı Belli Oldu!",
+      "summary": "ChatGPT'nin yeni üst düzey abonelik paketi ChatGPT Pro 500'ün cep yakan Türkiye fiyatı belli oldu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/chatgpt-pro-500-abonelik-paketi-turkiye-fiyati-h226069.html",
+      "publishedAt": "2026-10-01T06:43:14Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689986/689986-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "92624a8b8f8193d85e",
+      "title": "Red Dead Redemption 2 için Mexico modu yayınlandı",
+      "summary": "Oyun dünyasının halen en beğenilen yapımları arasında olan Red Dead Redemption 2 için yeni modlar gelmeye devam ediyor. Bu kez Mexico bölgesi oyuna dahil edildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/rdr-2-icin-yeni-mod--211099",
+      "publishedAt": "2026-10-01T06:18:35Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211099/1200x675rdr-2-icin-yeni-mod.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c6484d45950f9f2a83",
+      "title": "AirTag Rakibi Samsung Galaxy SmartTag 3 Tanıtıldı",
+      "summary": "Samsung, yeni nesil akıllı takip cihazı Galaxy SmartTag 3'ü duyurdu. iOS ile uyumluluk gibi birçok dikkat çeken özellikle geliyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-smarttag-3-tanitildi-h226066.html",
+      "publishedAt": "2026-10-01T04:39:05Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689980/689980-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0a00b827b2037fb0ed",
+      "title": "Samsung Galaxy Tab S12+ ve Tab S12 Ultra Duyuruldu",
+      "summary": "Samsung, amiral gemisi tablet modelleri Galaxy Tab S12+ ve Galaxy Tab S12 Ultra’yı resmi olarak duyurdu",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-tab-s12-plus-s12-ultra-duyuruldu-h226063.html",
+      "publishedAt": "2026-10-01T04:29:45Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689977/689977-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "382ecdbbd740dbe200",
+      "title": "WhatsApp'a Çocukları Korumaya Yönelik Yepyeni Ebeveyn Kontrolleri Geldi",
+      "summary": "WhatsApp, çocukların çok daha güvenli bir deneyim yaşaması için uygulamaya yepyeni ebeveyn kontrolleri getirdiğini açıkladı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/whatsapp-yeni-ebeveyn-kontrolleri-h226060.html",
+      "publishedAt": "2026-10-01T03:48:26Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689968/689968-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8f6674b387d525c91b",
+      "title": "Elektrikli Volvo ES90 Türkiye'de! İşte Fiyatı",
+      "summary": "Volvo’nun liftback tasarımıyla dikkat çeken tamamen elektrikli yeni modeli ES90, Türkiye'de satışa sunuldu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/volvo-es90-turkiye-fiyati-h226057.html",
+      "publishedAt": "2026-10-01T03:39:13Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/689956/689956-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1b69ba5a156e402cd2",
+      "title": "Google, Bugüne Kadarki En Güçlü Modeli Gemini 4 Argon'u Tanıttı",
+      "summary": "Google, şimdiye kadar piyasaya sürdüğü en güçlü yapay zekâ modeli olarak nitelendirdiği Gemini 4 Argon'u duyurdu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/google-gemini-4-argon-duyuruldu-h226055.html",
+      "publishedAt": "2026-10-01T03:28:21Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/689953/689953-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "8ff13f57dac4cfa311",
       "title": "Google's AI ranks #1 for predicting flu hospitalizations.",
@@ -435,18 +567,6 @@
       "editorial": false
     },
     {
-      "id": "37a96243385b7c2e7d",
-      "title": "Yapay zeka interneti yok ediyor: “Doom Loop” çağı başladı",
-      "summary": "Bot trafiği insanları geride bırakırken web sayfalarının yüzde 35'inden fazlasında AI izine rastlanıyor. Yapay zekanın interneti kendi kendine tükettiği bir “Doom Loop” çağı başlamış durumda.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-interneti-yok-ediyor-doom-loop-cagi-basladi--211084",
-      "publishedAt": "2026-09-30T13:55:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211084/1200x675yapay-zeka-interneti-yok-ediyor-doom-loop-cagi-basladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "a13cf80a4501ac0bdc",
       "title": "Amazon'da Bu Haftanın En Avantajlı Ürünleri",
       "summary": "Amazon'da fiyatı 500 TL ve altında olan ürünler arasından işinize yarayabilecek olanları sizler için seçtik.",
@@ -483,18 +603,6 @@
       "editorial": false
     },
     {
-      "id": "f9a4b45b135615b35e",
-      "title": "Amazon yerli yapımlarına bir yenisini daha ekliyor: Eşref Tek duyuruldu",
-      "summary": "Amazon, Eşref Rüya hayranlarını sevindirecek bir haberle karşımızda. Çağatay Ulusoy'un başrolünü üstleneceği yeni Amazon Prime Video dizisi Eşref Tek resmen duyuruldu. İşte paylaşılan ilk detaylar.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-yerli-yapimlarina-bir-yenisini-daha-ekliyor-esref-tek--211087",
-      "publishedAt": "2026-09-30T13:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211087/1200x675amazon-yerli-yapimlarina-bir-yenisini-daha-ekliyor-esref-tek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "704ba794a983fa598d",
       "title": "Galaxy S27 Serisi Daha Çıkmadan Zam İddiasıyla Gündemde: Başrolde Yine RAM Krizi Var!",
       "summary": "Galaxy S27 serisinin çıkış fiyatları, henüz telefonlar tanıtılmadan zam iddiasıyla gündeme geldi.",
@@ -516,18 +624,6 @@
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3RZ3WTX78RCB7KKEB1T8J44.01M3RZ3XRZSENAMJGQMGNWZDHZ.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "8ba2dc90da13bfd5d9",
-      "title": "AMD Adrenalin 26.9.2 yayınlandı: 6 yeni oyun için destek geldi",
-      "summary": "AMD, Radeon ekran kartları için Adrenalin 26.9.2 sürücüsünü yayınladı. Yeni sürüm 6 oyun için destek ve çeşitli hata düzeltmeleri getiriyor. İşte detaylar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amd-adrenalin-26-9-2-yayinlandi-6-yeni-oyun-icin-destek-geldi--211068",
-      "publishedAt": "2026-09-30T13:01:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211068/1200x675amd-adrenalin-26-9-2-yayinlandi-6-yeni-oyun-icin-destek-geldi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -651,18 +747,6 @@
       "editorial": false
     },
     {
-      "id": "e215e062976aec0246",
-      "title": "ChatGPT, ofis yazılımı oluyor: Space, Pages ve Slides geliyor",
-      "summary": "OpenAI, ChatGPT’yi iş dünyasına taşıyan yeni araçlarını duyurdu. Space, Pages ve Slides özellikleri ile ekipler belge, sunum ve yapay zeka ajanlarıyla ortak çalışma yapabilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/chatgpt-ofis-yazilimi-oluyor-space-pages-ve-slides-geliyor--211061",
-      "publishedAt": "2026-09-30T12:39:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211061/1200x675chatgpt-ofis-yazilimi-oluyor-space-pages-ve-slides-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "48e6083c4a864a33fb",
       "title": "8000 mAh Batarya ve Askeri Sınıf Dayanıklılık: OPPO K15s ve K15x Satışa Sunuldu!!",
       "summary": "OPPO, 8000 mAh bataryası ve dayanıklı yapısıyla öne çıkan K15s ile daha uygun fiyatlı K15x modellerini Çin'de satışa sundu.",
@@ -743,102 +827,6 @@
       "publishedAt": "2026-09-30T11:33:23Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/689848/689848-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "596254af35be909d0d",
-      "title": "Samsung Galaxy S26 Serisi İçin One UI 9 Güncellemesi Türkiye'de Kullanıma Sunuldu",
-      "summary": "Samsung, Galaxy S26 serisi için One UI 9.0 güncellemesini Türkiye'de de kullanıma sunmaya başladı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-s26-serisi-one-ui-9-turkiye-kullanima-sunuldu-h226015.html",
-      "publishedAt": "2026-09-30T11:33:08Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/689842/689842-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "999144465777bae5ef",
-      "title": "Elektrikli Range Rover Sport Tanıtıldı!",
-      "summary": "Land Rover, amiral gemisi SUV serisinin yeni üyesi tamamen elektrikli Range Rover Sport Electric modelini resmi olarak tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/elektrikli-range-rover-sport-tanitildi-h226003.html",
-      "publishedAt": "2026-09-30T11:32:44Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/689836/689836-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8155f90ffd1f30c3f5",
-      "title": "Süpürgeniz Halıya Geçtiğini Nereden Anlıyor?",
-      "summary": "Gelin, manuel ayarları tarihe karıştıran bu mühendislik sihrinin arkasında yatan sensör teknolojilerine kısaca göz atalım.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/supurgeniz-haliya-gectigini-nereden-anliyor-h226012.html",
-      "publishedAt": "2026-09-30T11:16:10Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/689851/689851-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4413a4ca732c4d838b",
-      "title": "iPhone 18 Pro ve Pro Max’te Sinir Bozucu Sorun: Hoparlörden Cızırtı Geliyor!",
-      "summary": "Henüz çiçeği burnunda iPhone 18 Pro ve Pro Max modellerinde hoparlörden garip cızırtı sesleri geldiği bildirildi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/iphone-18-pro-hoparlor-cizirti-sorunu-h225994.html",
-      "publishedAt": "2026-09-30T11:02:08Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/689785/689785-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e2ec07206142175560",
-      "title": "AI Hazır, Robotik Hazır: Peki İnsan Bu Dönüşüme Hazır mı?",
-      "summary": "Uzun zamandır yapay zekanın dünyayı nasıl değiştireceğini konuşuyoruz, ancak o gelecek çoktan geldi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/ai-hazir-robotik-hazir-biyoteknoloji-hazir-peki-insan-bu-donusume-hazir-mi-h225835.html",
-      "publishedAt": "2026-09-30T10:10:14Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/689389/689389-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d183243506df7ca837",
-      "title": "OpenAI CEO'su Sam Altman Açıkladı: \"Şu Anda Halka Arz Sürecini Başlatamayız Çünkü...\"",
-      "summary": "Sam Altman, OpenAI'ın yapay zekâ modellerinde tam güvenlik sağlamadan halka açılmayacağını ve zamanlamanın henüz netleşmediğini duyurdu.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/sam-altman-su-anda-halka-arz-surecini-baslatamayiz-h226001.html",
-      "publishedAt": "2026-09-30T10:08:44Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/689728/689728-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e8cbda6506db9d54af",
-      "title": "PS5 ve PS5 Pro İçin Yeni Jailbreak Yayınlandı",
-      "summary": "PS5 ve PS5 Pro konsolları kapsayan yeni 13.60 Relapse jailbreak yayınlandı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/ps5-ve-ps5-pro-icin-yeni-jailbreak-yayinlandi-h225997.html",
-      "publishedAt": "2026-09-30T10:07:36Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/689710/689710-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2a67079faaf40ed9f8",
-      "title": "SteelSeries'in Görünce \"Kesin Almam Lazım\" Diyeceğiniz İki Yeni Faresi Rival Pro ile Sensei Pro Tanıtıldı: İşte Özellikleri ve Fiyatı!",
-      "summary": "SteelSeries, ultra geniş bant teknolojisine ve değiştirilebilir pillere sahip yeni Rival Pro ve Sensei Pro oyuncu farelerini tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/steelseries-rival-pro-sensei-pro-ozellikleri-fiyati-h225985.html",
-      "publishedAt": "2026-09-30T09:38:40Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/689734/689734-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1201,6 +1189,18 @@
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/5-55752ac647c986ace32f-1024x576.jpg",
       "language": "tr",
       "editorial": true
+    },
+    {
+      "id": "1e599897591a233f26",
+      "title": "How Ace Combat 8: Wings of Theve uses first-person to tell a more personal story",
+      "summary": "The world of Strangereal, setting of the Ace Combat games, has developed a deep and storied history over the course of the series. But with Ace Combat 8: Wings of Theve, developer Project Aces has changed its approach to storytelling to create a more intimate and emotional tale than it has in the past. That",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/09/25/how-ace-combat-8-wings-of-theve-uses-first-person-to-tell-a-more-personal-story/",
+      "publishedAt": "2026-09-25T14:00:34Z",
+      "category": "Oyun",
+      "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
+      "language": "en",
+      "editorial": false
     }
   ]
 }
