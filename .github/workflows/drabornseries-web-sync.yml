@@ -1,4 +1,4 @@
-# DraBornSeries v0.7.4 source: 3335a4dca150a1a055c1e3f00038278f76903d29
+# DraBornSeries v0.7.4 Expo Go source: f052261e14a34eced236323f87b98b28263a03e2
 name: DraBornSeries web sync
 on:
   push:
