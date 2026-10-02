@@ -1,7 +1,91 @@
 {
-  "generatedAt": "2026-10-02T16:46:52.821511Z",
+  "generatedAt": "2026-10-02T21:14:24.835636Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "cd7cfe8fc02dcf9c9b",
+      "title": "ABD Donanması, 6. nesil savaş uçağı için Boeing'i seçti: Dev sözleşme imzalandı",
+      "summary": "Boeing, ABD Donanması’nın yeni nesil F/A-XX savaş uçağı için 20 milyar doları aşan geliştirme sözleşmesini kazandı. Uçağın 2030’larda hizmete girmesi bekleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/abd-donanmasi-6-nesil-savas-ucagi-icin-boeing-ile-anlasti--211179",
+      "publishedAt": "2026-10-02T19:28:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211179/1200x675abd-donanmasi-6-nesil-savas-ucagi-icin-boeing-ile-anlasti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "623a30c2e64425ef97",
+      "title": "Çin, \"yapay güneş\" projesinde kritik aşamaya geçti",
+      "summary": "Çin'in \"yapay güneş\" projesinde yıllardır beklenen aşamalardan biri geride kaldı. Füzyon enerjisinde yeni bir dönemin kapısını aralayabilecek proje artık sonuca bir adım daha yakın.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-yapay-gunes-projesinde-kritik-asamaya-gecti--211182",
+      "publishedAt": "2026-10-02T18:58:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211182/1200x675cin-yapay-gunes-projesinde-kritik-asamaya-gecti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1cc0740688ccc2df2e",
+      "title": "Ayırt etmek çok zor! İnsanlarla yüz yüze konuşabilen yapay zeka modeli Griffin",
+      "summary": "Tavus, insanlarla gerçek zamanlı yüz yüze iletişim kurabilen Griffin’i tanıttı. Model, video görüşmelerinde ses, görüntü, mimik ve jestleri analiz ederek insan benzeri anlık tepkiler üretiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/insanlarla-yuz-yuze-konusabilen-yapay-zeka-ayirt-etmek-cok-zor--211183",
+      "publishedAt": "2026-10-02T18:28:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211183/1200x675insanlarla-yuz-yuze-konusabilen-yapay-zeka-ayirt-etmek-cok-zor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7d64b1a720dec09ec9",
+      "title": "BDDK'dan cep telefonu kredilerinde yeni vade düzenlemesi",
+      "summary": "Bankacılık Düzenleme ve Denetleme Kurulu (BDDK), cep telefonu alımlarında tüketici kredisi vade sınırlarını değiştirirken, kredi kartlarında asgari ödeme tutarını yükseltti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bddk-dan-cep-telefonu-kredilerinde-yeni-vade-duzenlemesi--211185",
+      "publishedAt": "2026-10-02T18:17:11Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211185/1200x675bddk-dan-cep-telefonu-kredilerinde-yeni-vade-duzenlemesi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "aac4b077e040b85e02",
+      "title": "Warner Bros. ve Paramount birleşip Skydance olacak",
+      "summary": "Hollywood'da tüm dengeleri değiştirmesi beklenen 111 milyar dolarlık Warner Bros.-Paramount anlaşması bu hafta tamamlanacak. İki şirketin birleşip Skydance adlı bir medya devi oluşturacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/warner-bros-ve-paramount-birlesip-skydance-olacak--211172",
+      "publishedAt": "2026-10-02T17:58:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211172/1200x675warner-bros-ve-paramount-birlesip-skydance-olacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "58a86eae4b4ef8d5d0",
+      "title": "Samsung’un ilk yapay zeka gözlüğü kasım ayında satışa çıkabilir",
+      "summary": "Samsung’un ilk akıllı gözlüğü Intelligent Eyewear, gelecek ay satışa çıkmaya hazırlanıyor. Android XR işletim sistemiyle çalışacak cihazda yapay zeka merkezde olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-un-ilk-yapay-zeka-gozlugu-kasim-ayinda-satisa-cikabilir--211174",
+      "publishedAt": "2026-10-02T17:36:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211174/1200x675samsung-un-ilk-yapay-zeka-gozlugu-kasim-ayinda-satisa-cikabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b2f14358e58db047dd",
+      "title": "Forest of Deceit: Why Localisation Matters When Everyone is Lying",
+      "summary": "The last thing you want in a game about lying is to look suspicious just because you didn’t understand what exactly was happening. Forest of Deceit, the social deduction party game created by Ghost Camp and Thomas Mackinnon (The Corridor, It Takes a War) and narrated by Sylvester McCoy (“Doctor Who”, “The Hobbit”) is now",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/02/forest-of-deceit-why-localisation-matters-2/",
+      "publishedAt": "2026-10-02T17:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/Screenshot-22eb89d960d8a9e446d8-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "d020b40787abc76eab",
       "title": "One UI 9.0 bazı Samsung telefonlarda şarj hızını yavaşlattı",
@@ -543,18 +627,6 @@
       "editorial": false
     },
     {
-      "id": "4f388251081068036a",
-      "title": "VW destekli Gotion katı hal bataryada çıtayı yükseltti: Hedef fiyat açıklandı",
-      "summary": "Volkswagen destekli Gotion, katı hal bataryalarda enerji yoğunluğunu 400 Wh/kg seviyesine çıkarmayı ve uzun vadede maliyeti 150 dolar/kWh seviyesine indirmeyi hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/vw-destekli-gotion-kati-hal-bataryada-citayi-yukseltti--211150",
-      "publishedAt": "2026-10-02T11:58:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211150/1200x675vw-destekli-gotion-kati-hal-bataryada-citayi-yukseltti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "dc2091e3ed4f0e9d37",
       "title": "Çamaşır ve Kurutma Makinesi Birbiriyle Nasıl Haberleşiyor?",
       "summary": "Bir çamaşır makinesi ile kurutma makinesi arka planda nasıl haberleşiyor? Gelin, evimizdeki kapalı devre iletişim ağına (M2M) yakından bakalım.",
@@ -563,30 +635,6 @@
       "publishedAt": "2026-10-02T11:45:51Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/690410/690410-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "720f413f5170493e3d",
-      "title": "Yapay zeka, neredeyse tarihteki tüm teknolojilerden daha hızlı ucuzluyor",
-      "summary": "Yapay zekanın maliyeti tarihteki birçok teknolojiden daha hızlı düşüyor. Epoch AI verilerine göre belirli bir performans seviyesine ulaşmanın maliyeti 18 ayda yüzde 99,87 geriledi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-tarihteki-tum-teknolojilerden-daha-hizli-ucuzluyor--211160",
-      "publishedAt": "2026-10-02T11:36:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211160/1200x675yapay-zeka-tarihteki-tum-teknolojilerden-daha-hizli-ucuzluyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3e76d64c11476d050a",
-      "title": "ASELSAN'dan iki haftada 2,7 milyar Euro'luk satış sözleşmesi",
-      "summary": "ASELSAN, son 9 günde açıkladığı yeni sözleşmelerle toplam 2,7 milyar euro tutarında satış anlaşmasına imza attı. Anlaşmalar şirketin hava savunma sistemleri için tedarik ve ihracatı kapsıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/aselsan-dan-iki-haftada-2-7-milyar-euro-luk-satis-sozlesmesi--211159",
-      "publishedAt": "2026-10-02T11:14:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211159/1200x675aselsan-dan-iki-haftada-2-7-milyar-euro-luk-satis-sozlesmesi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -635,54 +683,6 @@
       "publishedAt": "2026-10-02T11:11:43Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/690310/690310-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b6ff8bbb284ef7b045",
-      "title": "Katlanabilir iPhone ile çekilen fotoğraflar paylaşıldı: İşte iPhone Duo'nun kamera kalitesi",
-      "summary": "Apple, iPhone Duo'nun kamera kalitesine dikkat çeken paylaşımda bulundu. \"Shot on iPhone Duo\" etiketli paylaşım, katlanabilir iPhone ile çekilen profesyonel fotoğrafları gösteriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-iphone-duo-ile-cekilen-fotograflari-paylasti--211147",
-      "publishedAt": "2026-10-02T10:52:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211147/1200x675apple-iphone-duo-ile-cekilen-fotograflari-paylasti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e9ef73ce87d9ee6505",
-      "title": "PS5 Slim'in yeni sürümü ortaya çıktı: Soğutma sistemi yenileniyor",
-      "summary": "Sony, PS5 Slim'in yeni donanım revizyonunu sessizce piyasaya sürdü. Yeni model, değiştirilebilir CMOS pili ve yenilenen sıvı metal soğutmasıyla geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ps5-slim-in-yeni-surumu-ortaya-cikti-sogutma-sistemi-yenileniyor--211153",
-      "publishedAt": "2026-10-02T10:31:01Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211153/1200x675ps5-slim-in-yeni-surumu-ortaya-cikti-sogutma-sistemi-yenileniyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "20da5a16b9f6ede02a",
-      "title": "Android telefonlarda APK dönemi sona eriyor: Kısıtlama yolda",
-      "summary": "Google, Android'de doğrulanmamış uygulamaların yüklenmesini zorlaştıran yeni sistemi dört ülkede devreye aldı. İşte yeni sideloading sürecinin detayları.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/android-telefonlarda-apk-donemi-sona-eriyor-kisitlama-yolda--211148",
-      "publishedAt": "2026-10-02T10:02:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211148/1200x675android-telefonlarda-apk-donemi-sona-eriyor-kisitlama-yolda.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b0971afb134b927e20",
-      "title": "Uncharted 5 geliyor: Naughty Dog hazırlıklara başladı",
-      "summary": "Nathan Drake yeni bir macerayla dönmeye hazırlanıyor. Naughty Dog'a yakın kaynaklardan gelen haberler, stüdyonun Uncharted 5 için hazırlıklara başladığını gösteriyor. İşte ilk detaylar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/uncharted-5-geliyor-iste-ilk-detaylar--211149",
-      "publishedAt": "2026-10-02T09:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211149/1200x675uncharted-5-geliyor-iste-ilk-detaylar.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1035,18 +1035,6 @@
       "editorial": false
     },
     {
-      "id": "eb5ba61a594bd6a358",
-      "title": "Microsoft Jewel Comes to Mobile with XBOX Achievements and Game Pass Benefits",
-      "summary": "For the first time in seven years, Microsoft Casual Games has launched a new mobile app – Microsoft Jewel is available now as a standalone app for iOS and Android. It becomes the fifth app in the Microsoft Casual Games mobile lineup. The launch gives players a new way to enjoy a familiar Match-3 favorite,",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/30/microsoft-jewel-game-pass-achievements-xbox/",
-      "publishedAt": "2026-09-30T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/AppleAppStore_03-1-64948456d60db4c44b57-385x683.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "68cbabc2cd02fa7918",
       "title": "Let skills in Gemini tackle your most repetitive tasks",
       "summary": "Now you can automate your most repetitive tasks more easily with reusable custom instructions through skills, which will be replacing gems.",
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-09-28T19:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/futurevisionxprize_social.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "86453700a8c091300d",
+      "title": "Google Arts & Culture turns 15 — and gives its app a makeover",
+      "summary": "Explore art and culture with visual-first conversation search, a redesigned home feed, AI experiments and 27 new city guides in the Google Arts & Culture app.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/new-arts-culture-app/",
+      "publishedAt": "2026-09-28T16:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Banner_15yrs.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     }
