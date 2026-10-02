@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-10-01T20:26:35.100677Z",
+  "generatedAt": "2026-10-02T00:04:43.120677Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "8fc038c2bf57541300",
+      "title": "Our Project Suncatcher prototype satellite is in orbit.",
+      "summary": "Google's prototype satellite for Project Suncatcher, built in partnership with Planet, launched into orbit aboard the Transporter-18 rideshare mission with SpaceX.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/project-suncatcher-prototype/",
+      "publishedAt": "2026-10-01T23:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_videos/wagtailvideo-fgyv69rc_thumb.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "e5d8de0704a8694a34",
+      "title": "Invincible VS Open Beta Begins October 13: What You Need to Know",
+      "summary": "One Angstrom Levy is more than enough. Unfortunately for “Invincible”, there are a whole lot more where he came from! Angstrom Levy is joining Invincible VS on October 13 as our third DLC fighter and 21st playable character, bringing his multiversal mayhem to the roster as part of Season 2. If you like thinking a",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/01/invincible-vs-open-beta-begins-october-13/",
+      "publishedAt": "2026-10-01T23:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/Angstrom-2-f3758d21e2a766eb8939-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "e1dbde081e08d4f56a",
+      "title": "Toyota Corolla'nın direksiyonuna yapay zekalar geçti: Biri hariç hepsi çuvalladı",
+      "summary": "Toyota Corolla'nın direksiyonuna geçen yapay zeka modelleri gerçek bir parkurda test edildi. Bazıları yönünü bulmakta ve karar vermekte zorlanırken yalnızca biri parkuru tamamlamayı başardı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/corolla-nin-direksiyonuna-yapay-zekalar-gecti-tek-biri-basardi--211130",
+      "publishedAt": "2026-10-01T21:43:22Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211130/1200x675corolla-nin-direksiyonuna-yapay-zekalar-gecti-tek-biri-basardi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b0f2ad4e64c4594b2a",
+      "title": "Geely, 8 dakikada şarj olan batarya teknolojisini detaylandırdı: Nasıl başardı?",
+      "summary": "Çinli Geely, 2,2 MW'lık şarj istasyonu yeni bataryasıyla elektrikli araçlarda şarj sürelerini dakikalara indiriyor. Şirket, bu yüksek hızlara ulaşabilmek için kullandığı teknolojileri açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/geely-8-dakikada-sarj-olan-batarya-teknolojisini-detaylandirdi--211138",
+      "publishedAt": "2026-10-01T21:22:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211138/1200x675geely-8-dakikada-sarj-olan-batarya-teknolojisini-detaylandirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "33e9d331a372cba4ad",
       "title": "Turn your existing social assets into high-impact YouTube ads.",
@@ -12,6 +60,18 @@
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/S2E5_thumbnail.max-600x600.format-webp.webp",
       "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "b749d77e25d4356cae",
+      "title": "Kia Seltos sonunda Türkiye'de satışa çıktı: İşte resmi fiyatlar",
+      "summary": "Kia yenilenen Seltos modelini Türkiye pazarında satışa sundu. Merakla beklenen kompakt SUV ülkemizde Cool, Elegance ve X-Line olmak üzere üç farklı donanım paketiyle tercih edilebilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kia-seltos-sonunda-turkiye-de-satisa-cikti-iste-resmi-fiyatlar--211140",
+      "publishedAt": "2026-10-01T20:29:53Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211140/1200x675kia-seltos-sonunda-turkiye-de-satisa-cikti-iste-resmi-fiyatlar.jpg",
+      "language": "tr",
       "editorial": false
     },
     {
@@ -47,18 +107,6 @@
       "publishedAt": "2026-10-01T18:24:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211135/1200x675cin-ticari-reaktorde-hidrojen-bor-fuzyonunu-gerceklestirdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e1dbde081e08d4f56a",
-      "title": "Toyota Corolla'nın direksiyonuna yapay zekalar geçti: Hepsi çuvalladı, sadece biri başardı",
-      "summary": "Toyota Corolla'nın direksiyonuna geçen yapay zeka modelleri gerçek bir parkurda test edildi. Bazıları yönünü bulmakta ve karar vermekte zorlanırken yalnızca biri parkuru tamamlamayı başardı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/corolla-nin-direksiyonuna-yapay-zekalar-gecti-tek-biri-basardi--211130",
-      "publishedAt": "2026-10-01T18:03:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211130/1200x675corolla-nin-direksiyonuna-yapay-zekalar-gecti-tek-biri-basardi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -495,18 +543,6 @@
       "editorial": false
     },
     {
-      "id": "bd7a6a16dac13ba8ae",
-      "title": "Otokar'dan 1,5 milyar dolarlık devasa zırhlı araç ihracatı",
-      "summary": "Otokar, farklı tiplerde tekerlekli zırhlı araçlar ve lojistik destek hizmetleri için 1,47 milyar dolarlık ihracat sözleşmesi imzaladı. Teslimatlar 2027'de başlayacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/otokar-dan-1-5-milyar-dolarlik-devasa-zirhli-arac-ihracati--211126",
-      "publishedAt": "2026-10-01T13:19:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211126/1200x675otokar-dan-1-5-milyar-dolarlik-devasa-zirhli-arac-ihracati.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "e49db2bcaae28158f2",
       "title": "Ekim 2026 Nissan Fiyat Listesi",
       "summary": "Nissan Qashqai, Qashqai Yeni e-POWER, Juke, X-Trail Mild Hybrid modellerinin Ekim 2026 fiyatları Webtekno’da!",
@@ -636,18 +672,6 @@
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KYQH7SRKMQZ9Z5K1ZQ41N12X.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f426dc60ff13552001",
-      "title": "ROKETSAN açıkladı: TAYFUN Blok-4 çok kısa sürede seri üretime geçecek",
-      "summary": "ROKETSAN Genel Müdürü Murat İkinci, TAYFUN Blok-4 füzesinin çok kısa süre içinde seri üretime geçeceğini açıkladı. İkinci, TAYFUN Blok-3’ün ise bu yıl envantere gireceğini söyledi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/roketsan-acikladi-tayfun-blok-4-seri-uretime-hazirlaniyor--211125",
-      "publishedAt": "2026-10-01T12:58:38Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211125/1200x675roketsan-acikladi-tayfun-blok-4-seri-uretime-hazirlaniyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1095,18 +1119,6 @@
       "editorial": false
     },
     {
-      "id": "abbafdee94c38c8672",
-      "title": "Available for XBOX Insiders: Mythic Achievements, One of our Most Player-Requested Features",
-      "summary": "Introducing Mythic Achievements Starting today, XBOX Insiders can get an early look at Mythic Achievements, a new way to celebrate the games you’ve completed and the milestones you’ve earned along the way. Whether you’ve spent years chasing every achievement, or are simply proud of the games you’ve finished, Mythic Achievements recognize some of the biggest",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/09/29/xbox-insiders-october-2026-console-features-4/",
-      "publishedAt": "2026-09-29T16:00:03Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/1.-Toast-Gears-E-Day-1e689e713ada7e9b3d37-1024x576.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "dcb956296f1e366dca",
       "title": "Experience two artists’ perspectives on philosophy, science, and AI",
       "summary": "Artists Xin Liu and Eunjo Lee used Google AI to create new artworks with LAS Art Foundation and Google Arts & Culture Lab.",
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-09-29T02:05:06Z",
       "category": "Oyun",
       "image": "https://blog.playstation.com/tachyon/2026/09/80456f7d6b73917ed6ac7162328b97d7e69df1b9-scaled.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "db713ef86bd59ea8f7",
-      "title": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-      "summary": "Watch the winning trailer from the Future Vision XPRIZE, The Gifted.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/ai/winner-future-vision-xprize/",
-      "publishedAt": "2026-09-28T19:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/futurevisionxprize_social.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     }
