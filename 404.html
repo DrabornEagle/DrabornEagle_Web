@@ -44,9 +44,9 @@
     }
   }
 
-  if (location.pathname.startsWith('/DraBornSeries/DiziAd')) {
+  if (location.pathname.startsWith('/DraBornSeries/')) {
     try {
-      const response = await fetch('/DraBornSeries/index.html?v=073&ts=' + Date.now(), {cache:'no-store'});
+      const response = await fetch('/DraBornSeries/index.html?v=074&ts=' + Date.now(), {cache:'no-store'});
       if (!response.ok) throw new Error('series_shell_unavailable');
       const html = await response.text();
       document.open();
