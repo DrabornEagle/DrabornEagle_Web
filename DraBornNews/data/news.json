@@ -1,7 +1,91 @@
 {
-  "generatedAt": "2026-10-02T21:14:24.835636Z",
+  "generatedAt": "2026-10-03T11:56:27.844899Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "04bc26749bb2bf8109",
+      "title": "Taşınabilir 4K ekran! LG StandbyME 2 Max'i evde, balkonda ve gölet kıyısında deneyimledik!",
+      "summary": "LG StandbyME 2 Max ile 32 inç 4K dokunmatik ekran artık peşimizden geliyor! Ula Göleti'nden mutfağa, balkondan yatak odasına bu taşınabilir ekranı gerçek hayatta deneyimledik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/tasinabilir-bataryali-4k-32-inc-ekran-iste-lg-standbyme-2-max--211202",
+      "publishedAt": "2026-10-03T11:53:11Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211202/1200x675tasinabilir-bataryali-4k-32-inc-ekran-iste-lg-standbyme-2-max.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "bcbe9e2ae25d7f1880",
+      "title": "Ugreen ClipBuds Pro 2 premium kulaklığını duyurdu",
+      "summary": "Ugreen ClipBuds Pro 2 açık tasarım kulaklık modeli 11mm çift mıknatıs sürücü, 75 desibele kadar arka plan gürültüsü engelleme, 130 dilde anlık çeviri gibi özellikler barındırıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ugreen-clipbuds-pro-2-tanitildi-iste-ozellikleri-ve-fiyati--211189",
+      "publishedAt": "2026-10-03T11:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211189/1200x675ugreen-clipbuds-pro-2-tanitildi-iste-ozellikleri-ve-fiyati.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3bcc28edd61a8111ac",
+      "title": "İkinci el Ryzen 7 5800X3D alan oyuncu şoke oldu: İşlemci Valorant'tan banlı çıktı",
+      "summary": "İkinci el Ryzen 7 5800X3D alan oyuncu, işlemcinin önceki sahibinin hilesi nedeniyle Valorant'ta donanım banıyla karşılaştı. Üstelik yeni sistemindeki bazı parçalar da kara listeye alındı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ikinci-el-islemci-valorant-tan-banli-cikti--211194",
+      "publishedAt": "2026-10-03T11:00:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211194/1200x675ikinci-el-islemci-valorant-tan-banli-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c2fe3ae82324de8a5e",
+      "title": "Apple, iPhone Duo'daki katlanma izine çözüm buldu",
+      "summary": "Apple, iPhone Duo'nun iç ekranındaki mat nano dokulu koruyucu katmanın yıpranması veya ekran katlama izinin belirginleşmesi halinde değiştirilebileceğini açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-iphone-duo-daki-katlanma-izine-cozum-buldu--211199",
+      "publishedAt": "2026-10-03T10:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211199/1200x675apple-iphone-duo-daki-katlanma-izine-cozum-buldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "86c9e487d60a3a0613",
+      "title": "Steam'de en popüler ekran kartları belli oldu: RTX 5070'ten sürpriz",
+      "summary": "Valve'ın Eylül 2026 Steam Donanım Anketi sonuçları açıklandı. RTX 5070 ekran kartı kullanımında zirveye çıkarken, 32 GB RAM de en yaygın bellek kapasitesi oldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/steam-de-en-populer-ekran-kartlari-rtx-5070-ten-surpriz--211193",
+      "publishedAt": "2026-10-03T08:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211193/1200x675steam-de-en-populer-ekran-kartlari-rtx-5070-ten-surpriz.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "babdf85f397c852198",
+      "title": "Kullanıcıların ortak tercihi: En çok satan 27 inç monitörler",
+      "summary": "27 inç monitör arayanlar için yüksek yenileme hızı, QHD çözünürlük ve düşük tepki süresi sunan en çok tercih edilen modelleri bir araya getirdik. İşte modeller",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kullanicilarin-ortak-tercihi-en-cok-satan-27-inc-monitorler--211175",
+      "publishedAt": "2026-10-03T07:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211175/1200x675kullanicilarin-ortak-tercihi-en-cok-satan-27-inc-monitorler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0782cd00709ddb56a7",
+      "title": "Kaçırılmayacak fırsat: Binlerce TL değerinde Ubisoft oyunları Xbox'ta ücretsiz",
+      "summary": "Xbox Game Pass kullanıcıları için ücretsiz oyun günleri başladı. Önümüzdeki günlerde FARCRY 6, Assassin’s Creed Odyssey dahil toplam 5 oyun hafta sonu boyunca ücretsiz erişilebilir olacak..",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kacirilmayacak-firsat-xbox-ta-6-500-tl-degerinde-5-oyun-ucretsiz--211192",
+      "publishedAt": "2026-10-03T06:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211192/1200x675kacirilmayacak-firsat-xbox-ta-6-500-tl-degerinde-5-oyun-ucretsiz.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "cd7cfe8fc02dcf9c9b",
       "title": "ABD Donanması, 6. nesil savaş uçağı için Boeing'i seçti: Dev sözleşme imzalandı",
@@ -231,30 +315,6 @@
       "editorial": false
     },
     {
-      "id": "2d9e054dc4ca0e330a",
-      "title": "Samsung çıldırdı: Galaxy A57 ve A37 modellerine de zam geldi!",
-      "summary": "Samsung, Galaxy S26 serisinin ardından popüler Galaxy A telefonlarının da Türkiye fiyatına zam yaptı. İşte Galaxy A57 ve Galaxy A37 5G modellerinin güncel fiyatı:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-a57-ve-a37-turkiye-fiyatlari-zamlandi--211176",
-      "publishedAt": "2026-10-02T14:22:31Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211176/1200x675samsung-galaxy-a57-ve-a37-turkiye-fiyatlari-zamlandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c5bf6843bb33d64713",
-      "title": "Vodafone ve Samsung 5G'ye geçişi hızlandırıyor: Galaxy A27 5G'ye yoğun ilgi",
-      "summary": "Vodafone ve Samsung, 5G'li telefonlara erişimi kolaylaştırmak için iş birliğini sürdürüyor. Vodafone FLEX'te 12 ay taksit avantajıyla sunulan Galaxy A27 5G, ilk üç ayda 60 bini aşkın müşteriye ulaştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/vodafone-5g-ye-gecisi-hizlandiriyor-samsung-galaxy-a27-firsati--211173",
-      "publishedAt": "2026-10-02T14:17:22Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211173/1200x675vodafone-5g-ye-gecisi-hizlandiriyor-samsung-galaxy-a27-firsati.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "60e2ae42ca0d08f743",
       "title": "Avrupa, Tarihin En Sıcak Yazlarından Birini Geçirdi: 2026’da İlk Dört Sıcak Dalgası Rekoru Kırıldı!",
       "summary": "Copernicus verilerine göre Avrupa'nın %52'si bu yaz rekor düzeyde sıcaklık stresine maruz kaldı ve tarihi kuraklık yaşandı.",
@@ -276,18 +336,6 @@
       "category": "Oyun",
       "image": "https://store-images.s-microsoft.com/image/apps.58579.14310770435065065.c8a1a91e-2c5b-498b-82e6-b6b66068ab7f.3a0cd049-41cd-417e-b194-ea9774b5f076?w=400&h=600",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "5ec504510aa90f792c",
-      "title": "SpaceX, Google’ın yapay zeka çiplerini uzaya taşıdı",
-      "summary": "SpaceX, Google’ın yapay zeka çiplerini taşıyan uyduları yörüngeye gönderdi. Fırlatma, Google’ın uzayda güneş enerjisiyle çalışan yapay zeka veri merkezleri geliştirme projesinin ilk testi oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/spacex-google-in-yapay-zeka-ciplerini-uzaya-tasidi--211162",
-      "publishedAt": "2026-10-02T13:48:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211162/1200x675spacex-google-in-yapay-zeka-ciplerini-uzaya-tasidi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -315,18 +363,6 @@
       "editorial": false
     },
     {
-      "id": "f4f48fef1056124422",
-      "title": "Intel Nova Lake işlemciler sızdı: 28 çekirdek ve 144 MB önbellek",
-      "summary": "Intel'in yeni nesil Nova Lake-S masaüstü işlemcilerinden yedi modelin teknik özellikleri sızdırıldı. Serinin zirvesinde 28 çekirdekli Core Ultra 9 4970K yer alıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-nova-lake-islemciler-sizdi-28-cekirdek-ve-144-mb-onbellek--211151",
-      "publishedAt": "2026-10-02T13:26:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211151/1200x675intel-nova-lake-islemciler-sizdi-28-cekirdek-ve-144-mb-onbellek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4ce58ae703407f5189",
       "title": "Sony Sessiz Sedasız Yeni PS5'lerin Üretiminde Değişiklik Yaptı: İşte Yenilikler!",
       "summary": "Sony, PS5 için sıvı metal soğutmasını geliştiren ve kolay değiştirilebilir pille sistem ömrünü uzatan yeni modelleri sessizce piyasaya sürdü.",
@@ -347,30 +383,6 @@
       "publishedAt": "2026-10-02T13:18:01Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/690391/690391-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eea5d0529dbec853c6",
-      "title": "Tasarım harika, 115W RTX5060'lı ''Lenovo LOQ 15''",
-      "summary": "Lenovo LOQ 15'in birçok farklı konfigrasyonu var, test masamıza Intel Core i7 13645HX ve RTX5060'lı versiyonu geldi. Tasarımı, malzeme kalitesi, ekranı, CPU'su GPU'su her şeyini sınadık, anlattık.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/tasarim-harika-115w-rtx5060-li-lenovo-loq-15--211123",
-      "publishedAt": "2026-10-02T13:06:56Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211123/1200x675tasarim-harika-115w-rtx5060-li-lenovo-loq-15.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d7e678ecf8e3490534",
-      "title": "ChatGPT'ye sanal kıyafet deneme özelliği geliyor",
-      "summary": "ChatGPT, kıyafetleri kendi fotoğrafınız üzerinde görmenizi sağlayan sanal deneme özelliğini kullanıma sundu. Yeni özellik, alışveriş deneyimini daha görsel hale getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/chatgpt-den-yeni-alisveris-ozelligi-kiyafetleri-deneyin--211161",
-      "publishedAt": "2026-10-02T13:04:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211161/1200x675chatgpt-den-yeni-alisveris-ozelligi-kiyafetleri-deneyin.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -507,18 +519,6 @@
       "editorial": false
     },
     {
-      "id": "5ad9c3dc86732a92c8",
-      "title": "Polislerin kilitli iPhone'a erişememesi tarihe karıştı: Apple'ın güvenlik özelliği aşıldı!",
-      "summary": "Kilidi 72 saat boyunca açılmayan iPhone'ları otomatik olarak yeniden başlatan güvenlik özelliğini aşmanın yolu bulundu. Polisler artık kilitli iPhone'daki verilere kolayca erişebilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/polislerin-kilitli-iphone-u-acamamasi-tarihe-karisti--211155",
-      "publishedAt": "2026-10-02T12:42:00Z",
-      "category": "Güvenlik",
-      "image": "https://www.donanimhaber.com/images/images/haber/211155/1200x675polislerin-kilitli-iphone-u-acamamasi-tarihe-karisti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "f690363033caf673cd",
       "title": "Redmi 17C 5G Duyuruldu!",
       "summary": "Xiaomi, devasa ekranı ve yüksek batarya kapasitesiyle öne çıkan yeni bütçe dostu akıllı telefonu Redmi 17C 5G’yi tanıttı.",
@@ -539,18 +539,6 @@
       "publishedAt": "2026-10-02T12:36:26Z",
       "category": "Güvenlik",
       "image": "https://imgrosetta.webtekno.com/file/690370/690370-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "939f464067ae20cc45",
-      "title": "Steam'de \"Sonbahar İndirimleri\" başladı: Yüzde 95'e varan indirim",
-      "summary": "Steam Sonbahar İndirimleri başladı. Bugünden itibaren binlerce oyunda 8 Ekim 2026 tarihine kadar %95'e varan indirim bulunuyor. İşte indirime giren oyunlar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/steam-de-sonbahar-indirimleri-basladi-yuzde-95-e-varan-indirim--211156",
-      "publishedAt": "2026-10-02T12:20:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211156/1200x675steam-de-sonbahar-indirimleri-basladi-yuzde-95-e-varan-indirim.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-09-28T16:30:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Banner_15yrs.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f524e9886f009cfdc3",
+      "title": "Introducing the new Copilot with Home, Code and Autopilot",
+      "summary": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition. Today we’re introducing the new Copilot to connect the tools people rely on with the next generation of capabilities they’ll need to build, customize and scale AI...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "publishedAt": "2026-09-25T12:03:50Z",
+      "category": "Yapay Zeka",
+      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Home-FINAL-2.png",
       "language": "en",
       "editorial": false
     }
