@@ -1,7 +1,103 @@
 {
-  "generatedAt": "2026-10-03T11:56:27.844899Z",
+  "generatedAt": "2026-10-03T16:03:17.452677Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "ec8c8bf6398d2dc00b",
+      "title": "Google Pixel 11a sızıntısı tasarım ve donanımı ortaya çıkardı",
+      "summary": "Google Pixel 11a için hazırlanan özel görseller, tasarımın Pixel 10a ile benzer kalacağını ve Tensor G6, MediaTek modem ile önemli donanım yenilikleri sunacağını gösteriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-pixel-11a-sizintisi-tasarim-ve-donanimi-ortaya-cikardi--211200",
+      "publishedAt": "2026-10-03T16:00:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211200/1200x675google-pixel-11a-sizintisi-tasarim-ve-donanimi-ortaya-cikardi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3dc9c3b2a463f2107a",
+      "title": "Bill Gates’e göre robotlar “SGK” primi ödemeli",
+      "summary": "Bill Gates, insanların işlerini devralan robotların FICA vergisi ödemesini öneriyor. ABD’deki FICA, Türkiye’deki SGK primlerine benzer şekilde sosyal güvenlik sistemini finanse ediyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bill-gates-e-gore-robotlar-sgk-primi-odemeli--211195",
+      "publishedAt": "2026-10-03T15:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211195/1200x675bill-gates-e-gore-robotlar-sgk-primi-odemeli.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "eb098765ed5ac34f89",
+      "title": "YouTube Shorts algoritması değişiyor: Öneriler, özgün içeriklere öncelik verecek",
+      "summary": "YouTube, Shorts öneri sistemini özgün içeriğe daha fazla öncelik verecek şekilde güncelliyor. Yeniden yüklenen ve katkı sunmayan videoların erişimi azaltılacak. İşte detaylar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/youtube-shorts-onerileri-ozgun-iceriklere-oncelik-verecek--211198",
+      "publishedAt": "2026-10-03T15:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211198/1200x675youtube-shorts-onerileri-ozgun-iceriklere-oncelik-verecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6e7ed0854dcc2263d9",
+      "title": "Android için Chrome kayıtlı şifreleri parmak iziyle koruyacak",
+      "summary": "Google, Chrome'da kayıtlı şifreler için biyometrik kontrolü test ediyor. Bu özellik, şifre otomatik doldurulmadan önce parmak izi, yüz tanıma veya başka bir yöntemle onay vermenizi gerektirecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/android-icin-chrome-kayitli-sifreleri-parmak-iziyle-koruyacak--211205",
+      "publishedAt": "2026-10-03T14:30:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211205/1200x675android-icin-chrome-kayitli-sifreleri-parmak-iziyle-koruyacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "168d5df374f30f5597",
+      "title": "Dünyanın en yüksek rüzgar türbini tamamlandı: 365 metre yükseklikte elektrik üretecek",
+      "summary": "Dünyanın en yüksek rüzgar türbini Almanya’da tam yüksekliğine ulaştı. 365 metre yüksekliğindeki dev yapı, daha güçlü rüzgarlardan yararlanarak iki kat fazla elektrik üretmeyi hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/almanya-da-dunyanin-en-yuksek-ruzgar-turbini-tamamlandi--211188",
+      "publishedAt": "2026-10-03T14:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211188/1200x675almanya-da-dunyanin-en-yuksek-ruzgar-turbini-tamamlandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5749712fc206d144d3",
+      "title": "Rockstar'dan jailbreak önlemi: GTA 6 korsan oynanamayacak!",
+      "summary": "PlayStation 5 ve PS5 Pro kırıldı ancak konsolun 14.10.00.00 yazılımına güncellenmesi jailbreak'i bozuyor. Rockstar, güncelleme zorunluluğuyla GTA 6'nın korsan olarak oynanmasını engelleyecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/rockstar-dan-jailbreak-onlemi-gta-6-korsan-oynanamayacak--211204",
+      "publishedAt": "2026-10-03T13:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211204/1200x675rockstar-dan-jailbreak-onlemi-gta-6-korsan-oynanamayacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ec20d535708008dbdc",
+      "title": "HDD’ler ölmedi: Toshiba üretimi ikiye katlayacak",
+      "summary": "Depolama ihtiyacındaki hızlı artış HDD teknolojisini yeniden gündeme taşırken Toshiba, üretim kapasitesini iki katına çıkararak 30 TB, 65 TB ve gelecekte 100 TB sınıfı sürücüler için hazırlık yapıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/hdd-ler-olmedi-toshiba-uretimi-ikiye-katlayacak--211187",
+      "publishedAt": "2026-10-03T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211187/1200x675hdd-ler-olmedi-toshiba-uretimi-ikiye-katlayacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b1e05bfc8af3d1b9f2",
+      "title": "Apple, video kaydetmeyen akıllı ev kamerası geliştiriyor",
+      "summary": "Apple’ın yapay zeka destekli yeni kamerası, eve kimin girdiğini ve hangi evcil hayvanın hareket ettiğini anlayabilecek. Ancak sistem görüntüleri saklamak yerine tespitlerini metin olarak raporlayacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-video-kaydetmeyen-akilli-ev-kamerasi-gelistiriyor--211186",
+      "publishedAt": "2026-10-03T12:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211186/1200x675apple-video-kaydetmeyen-akilli-ev-kamerasi-gelistiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "04bc26749bb2bf8109",
       "title": "Taşınabilir 4K ekran! LG StandbyME 2 Max'i evde, balkonda ve gölet kıyısında deneyimledik!",
@@ -171,18 +267,6 @@
       "editorial": false
     },
     {
-      "id": "d020b40787abc76eab",
-      "title": "One UI 9.0 bazı Samsung telefonlarda şarj hızını yavaşlattı",
-      "summary": "Bazı Samsung telefon kullanıcıları, sosyal medyadan One UI 9.0 güncellemesinin ardından şarj hızının düştüğünü bildirmeye başladı. Yavaş şarj sorunu Galaxy S25 ve daha eski modelleri etkiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/one-ui-9-0-bazi-samsung-telefonlarda-sarj-hizini-yavaslatti--211163",
-      "publishedAt": "2026-10-02T16:29:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211163/1200x675one-ui-9-0-bazi-samsung-telefonlarda-sarj-hizini-yavaslatti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "f947e9010dad4080ff",
       "title": "Streamline: custom video pipelines with Cloudflare Stream and Workers",
       "summary": "Streamline demonstrates how to build long-running, continuous video processing pipelines by pairing Cloudflare Workers and Durable Objects with a containerized media engine.",
@@ -195,18 +279,6 @@
       "editorial": false
     },
     {
-      "id": "befc48d1609992f93c",
-      "title": "Galaxy S27 işlemcisi Exynos 2700 seri üretime girdi: İddialı geliyor!",
-      "summary": "Samsung'un Galaxy S27 serisiyle birlikte Exynos 2700'ü tanıtması bekleniyor. Seri üretim aşamasına gelen yeni işlemcide Samsung Foundry'nin ikinci nesil 2nm SF2P teknolojisi kullanılacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/galaxy-s27-islemcisi-exynos-2700-seri-uretime-girdi--211168",
-      "publishedAt": "2026-10-02T16:07:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211168/1200x675galaxy-s27-islemcisi-exynos-2700-seri-uretime-girdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "750817dfe32404bc45",
       "title": "The Science Behind Best Friendship in The Jackbox Party Pack 12",
       "summary": "A word association game and a personality quiz walk into a bar. MegaPals is what happens next. The original concept for Jackbox Party Pack 12 pitched by Liz Anderson and Chase McClure drew from the classic game of Mind Meld – you get a word, then try to land on the same response as another",
@@ -216,30 +288,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/kings1-b8b071a15a37b42a06b6-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "9ad218a131cc06204d",
-      "title": "ABD, ilk küçük nükleer reaktör inşasına onay verdi: BWRX-300",
-      "summary": "ABD, 300 MW kapasiteli BWRX-300 küçük modüler nükleer reaktörün inşasına izin verdi. TVA, NRC'den aldığı onayla reaktör tasarımını ABD'de inşa etme yetkisi alan ilk şirket oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/abd-ilk-kucuk-nukleer-reaktor-insasina-onay-verdi-bwrx-300--211164",
-      "publishedAt": "2026-10-02T15:45:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211164/1200x675abd-ilk-kucuk-nukleer-reaktor-insasina-onay-verdi-bwrx-300.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ea0ed3de9eef6c4fdb",
-      "title": "EA FC27 Olmuş mu? Hayal Kırıklığı mı?",
-      "summary": "EA Sports FC 27, serinin birkaç yıldır süren geleneksel yapısını korurken saha içinde daha fazla kontrol, hassasiyet ve karar mekanizmasına odaklanan dengeli yeni bir oynanış deneyimi sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ea-fc27-inceleme--211170",
-      "publishedAt": "2026-10-02T15:00:28Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211170/1200x675ea-fc27-inceleme.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -275,30 +323,6 @@
       "publishedAt": "2026-10-02T14:57:51Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/690400/690400-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "84405ac3e20ee45ceb",
-      "title": "OpenAI, 100’den fazla şirketi yapay zeka ajanları konusunda uyardı",
-      "summary": "OpenAI, yapay zeka ajanlarıyla bağlantılı yetkisiz faaliyetler nedeniyle 100’den fazla kuruluşu uyardı. Şirket, olayları araştırmak için yaklaşık 50 petabaytlık veriyi inceliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/openai-100-den-fazla-sirketi-yapay-zeka-konusunda-uyardi--211167",
-      "publishedAt": "2026-10-02T14:54:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211167/1200x675openai-100-den-fazla-sirketi-yapay-zeka-konusunda-uyardi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e57cbadc94c86cb2ff",
-      "title": "Logo Yazılım’dan yapay zeka destekli yeni nesil bulut ve hibrit iş çözümleri",
-      "summary": "Yazılım, yeni Logo Cloud ve Logo Edge çözümlerini Logo Base çatısı altında bir araya getiriyor. Yeni platformlarda yapay zeka ve gelişmiş mobil özellikler dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/logo-yazilim-dan-yeni-nesil-bulut-ve-hibrit-is-cozumleri--211178",
-      "publishedAt": "2026-10-02T14:45:11Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211178/1200x675logo-yazilim-dan-yeni-nesil-bulut-ve-hibrit-is-cozumleri.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-09-28T19:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/futurevisionxprize_social.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "86453700a8c091300d",
-      "title": "Google Arts & Culture turns 15 — and gives its app a makeover",
-      "summary": "Explore art and culture with visual-first conversation search, a redesigned home feed, AI experiments and 27 new city guides in the Google Arts & Culture app.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/new-arts-culture-app/",
-      "publishedAt": "2026-09-28T16:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Banner_15yrs.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f524e9886f009cfdc3",
-      "title": "Introducing the new Copilot with Home, Code and Autopilot",
-      "summary": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition. Today we’re introducing the new Copilot to connect the tools people rely on with the next generation of capabilities they’ll need to build, customize and scale AI...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
-      "publishedAt": "2026-09-25T12:03:50Z",
-      "category": "Yapay Zeka",
-      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Home-FINAL-2.png",
       "language": "en",
       "editorial": false
     }
