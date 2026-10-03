@@ -1,4 +1,4 @@
-# DraBornSeries v0.7.4 source: 814caace4d2f2eeef78cd4da239c2fef9216d137
+# DraBornSeries v0.7.5 / code 2 / source 196fe88539b0745e8955bb00bd3481d7ec44a8f2.
 name: DraBornSeries web sync
 on:
   push:
@@ -70,4 +70,3 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run dkd_company_pages.yml --ref main
-# DraBornSeries source head: 436e216e7ecaca99c3d0614cd275ea44adea1c38
