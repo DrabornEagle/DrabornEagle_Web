@@ -24,7 +24,7 @@
       }
     </style>
   <link rel="icon" href="/DraBornSeries/favicon.ico"/><meta name="theme-color" content="#09080f"><meta name="description" content="DraBornSeries: kısa hikâyeler, BornCoins ve Android + Web senkron izleme deneyimi."><link rel="manifest" href="/DraBornSeries/manifest.webmanifest"><style>html,body,#root{background:#09080f;color:#faf5ff}body{overscroll-behavior-y:none}*{box-sizing:border-box}input,textarea{outline:none}input:focus,textarea:focus{border-color:#f143a1!important}::-webkit-scrollbar{width:5px;height:4px}::-webkit-scrollbar-thumb{background:#49304f;border-radius:5px}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}</style><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><script data-dbs-version-guard>(function(){
-    const running="0.7.6";let checking=false,lastCheck=0;
+    const running="0.7.7";let checking=false,lastCheck=0;
     function newer(next){const a=String(next).split('.'),b=running.split('.');if(a.length!==3||!a.every(x=>/^\d+$/.test(x)))return false;for(let i=0;i<3;i++){if(+a[i]!==+b[i])return +a[i]>+b[i];}return false;}
     async function check(){if(checking||document.hidden||Date.now()-lastCheck<15000)return;checking=true;lastCheck=Date.now();try{const response=await fetch('/DraBornSeries/DBS-SOURCE.json?check='+Date.now(),{cache:'no-store',signal:AbortSignal.timeout(10000)});if(response.ok){const release=await response.json();if(newer(release.version)){const url=new URL(location.href);url.searchParams.set('_dbs_release',release.version);location.replace(url.href);}}}catch{}finally{checking=false;}}
     if('serviceWorker' in navigator)navigator.serviceWorker.getRegistrations().then(items=>Promise.all(items.filter(item=>new URL(item.scope).pathname==='/DraBornSeries/').map(item=>item.unregister()))).catch(()=>{});
@@ -37,6 +37,6 @@
     <noscript> You need to enable JavaScript to run this app. </noscript>
     <!-- The root element for your Expo app. -->
     <div id="root"></div>
-  <script src="/DraBornSeries/_expo/static/js/web/index-16f6c4be7bec34ddd428b00f069a6116.js" defer></script>
+  <script src="/DraBornSeries/_expo/static/js/web/index-5116764408cc6fec98d8610517d15ecb.js" defer></script>
 </body>
 </html>
