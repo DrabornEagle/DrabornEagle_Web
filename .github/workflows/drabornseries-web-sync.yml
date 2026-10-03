@@ -1,4 +1,4 @@
-# DraBornSeries v0.7.4 source: 30549fa3275bd17b7067b81135ca266debf837c5
+# DraBornSeries v0.7.4 source: dfaebd1e4d7c647d8777ea8d2800fc36b2ae0a95
 name: DraBornSeries web sync
 on:
   push:
