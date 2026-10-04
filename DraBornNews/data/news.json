@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-10-03T22:22:05.107261Z",
+  "generatedAt": "2026-10-04T08:15:26.141059Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "1c082e6b6b3d5798ca",
+      "title": "Geniş ekranda çalışma ve multimedya: 32 inç monitör seçenekleri",
+      "summary": "32 inç monitör arayanlar için oyun, çalışma ve multimedya kullanımına uygun modelleri fiyatları ve öne çıkan özellikleriyle bir araya getirdik. İşte en popüler 32 inç monitörler",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/genis-ekranda-calisma-ve-multimedya-32-inc-monitor-secenekleri--211177",
+      "publishedAt": "2026-10-04T08:00:24Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211177/1200x675genis-ekranda-calisma-ve-multimedya-32-inc-monitor-secenekleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "06b211e26dbc8d5126",
+      "title": "GeForce Now'a Ekim ayında eklenecek yepyeni oyunlar açıklandı",
+      "summary": "Geforce Now hizmetine Ekim ayında eklenecek yeni oyunlar açıklandı. LEGO Total War: SHOGUN 2 – Complete Edition dahil çok sayıda oyun daha bulut üzerinden oynanabilir olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/geforce-now-a-ekim-ayinda-eklenecek-yepyeni-oyunlar-aciklandi--211218",
+      "publishedAt": "2026-10-04T07:45:05Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211218/1200x675geforce-now-a-ekim-ayinda-eklenecek-yepyeni-oyunlar-aciklandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "cd307d7423d4ae41ec",
       "title": "Son yılların en iyi oyunu bu ay Game Pass'e veda edecek",
@@ -227,30 +251,6 @@
       "publishedAt": "2026-10-03T10:00:00Z",
       "category": "Mobil",
       "image": "https://www.donanimhaber.com/images/images/haber/211199/1200x675apple-iphone-duo-daki-katlanma-izine-cozum-buldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "86c9e487d60a3a0613",
-      "title": "Steam'de en popüler ekran kartları belli oldu: RTX 5070'ten sürpriz",
-      "summary": "Valve'ın Eylül 2026 Steam Donanım Anketi sonuçları açıklandı. RTX 5070 ekran kartı kullanımında zirveye çıkarken, 32 GB RAM de en yaygın bellek kapasitesi oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/steam-de-en-populer-ekran-kartlari-rtx-5070-ten-surpriz--211193",
-      "publishedAt": "2026-10-03T08:30:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211193/1200x675steam-de-en-populer-ekran-kartlari-rtx-5070-ten-surpriz.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "babdf85f397c852198",
-      "title": "Kullanıcıların ortak tercihi: En çok satan 27 inç monitörler",
-      "summary": "27 inç monitör arayanlar için yüksek yenileme hızı, QHD çözünürlük ve düşük tepki süresi sunan en çok tercih edilen modelleri bir araya getirdik. İşte modeller",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kullanicilarin-ortak-tercihi-en-cok-satan-27-inc-monitorler--211175",
-      "publishedAt": "2026-10-03T07:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211175/1200x675kullanicilarin-ortak-tercihi-en-cok-satan-27-inc-monitorler.jpg",
       "language": "tr",
       "editorial": false
     },
