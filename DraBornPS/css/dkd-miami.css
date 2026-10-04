@@ -58,7 +58,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{ou
 .project-tile.selected .tile-label{display:block}
 .projects-body{height:calc(100% - 291px);overflow-y:auto;overflow-x:hidden;padding:8px 100px 100px;scrollbar-width:thin;scrollbar-color:#ed8bc852 transparent;overscroll-behavior:contain}
 .project-feature{--dkd-project-tone:#ffd099;position:relative;display:grid;grid-template-columns:minmax(0,.96fr) minmax(0,1.04fr);min-height:570px;overflow:hidden;border:1px solid #f7bad946;border-radius:30px;background:linear-gradient(125deg,#281835ed,#131d33f0);box-shadow:0 22px 70px #08041d70;isolation:isolate;animation:dkd-project-in .35s ease both}
-.project-feature-park{--dkd-project-tone:#8af7d7}.project-feature-sea{--dkd-project-tone:#92f5ff}.project-feature-gate{--dkd-project-tone:#d8b7ff}.project-feature-odds{--dkd-project-tone:#ffa8ed}.project-feature-portal{--dkd-project-tone:#a2dfff}
+.project-feature-series{--dkd-project-tone:#ff9acb}.project-feature-park{--dkd-project-tone:#8af7d7}.project-feature-sea{--dkd-project-tone:#92f5ff}.project-feature-gate{--dkd-project-tone:#d8b7ff}.project-feature-odds{--dkd-project-tone:#ffa8ed}.project-feature-portal{--dkd-project-tone:#a2dfff}
 .project-copy{position:relative;z-index:2;padding:48px 44px 42px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-width:0}
 .project-kicker{display:flex;align-items:center;gap:16px;flex-wrap:wrap;color:var(--dkd-project-tone);font-size:16px;letter-spacing:2px;font-weight:650}
 .project-status{font-size:14px;letter-spacing:.4px;color:#e1d4ed;border:1px solid #e5b5d838;border-radius:18px;padding:7px 11px}

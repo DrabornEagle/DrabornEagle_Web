@@ -1,4 +1,4 @@
-/* DraBornPS v0.6 — project catalog. Only confirmed public destinations. */
+/* DraBornPS v0.7 — project catalog. Only confirmed public destinations. */
 DKD.projectSelection="draborngo";
 DKD.projects=[
   {
@@ -18,6 +18,25 @@ DKD.projects=[
       "Kurye & işletme"
     ],
     "image": "assets/projects/dkd-go-v06.webp"
+  },
+  {
+    "id": "drabornseries",
+    "title": "DraBornSeries",
+    "theme": "series",
+    "mark": "SERIES",
+    "eyebrow": "HİKÂYEN BİR SONRAKİ BÖLÜMDE",
+    "subtitle": "Dizileri ve filmleri keşfet; kaldığın yerden Android ve web üzerinden izlemeye devam et.",
+    "description": "Keşfet akışı, dizi sayfaları, altyazılı oynatıcı, izleme listesi ve VIP ayrıcalıklarıyla sevdiğin hikâyeleri tek yerde takip et. Aynı hesabınla Android ve web deneyimini birlikte kullan.",
+    "web": "https://www.draborneagle.com/DraBornSeries/",
+    "play": "",
+    "status": "Android + Web",
+    "rows": [
+      "Dizi & film keşfi",
+      "İzleme listesi",
+      "Android + Web"
+    ],
+    "image": "assets/projects/dkd-series-v07.webp",
+    "imageAlt": "DraBornSeries dizi ve film platformunun aynı içerikleri gösteren Android telefon ve web ekranı mockup görseli"
   },
   {
     "id": "drabornpark",
@@ -113,7 +132,7 @@ DKD.projects=[
 ];
 DKD.project = dkdId => DKD.projects.find(dkdProject => dkdProject.id === dkdId);
 DKD.projectTile = dkdProject => `<span class="project-tile-art"><img src="${dkdProject.image}" alt="" width="1536" height="1024" decoding="async"><span class="project-tile-mark">${dkdProject.mark}</span></span><span class="tile-label">${dkdProject.title}</span>`;
-DKD.projectMockup = dkdProject => `<figure class="project-showcase"><img src="${dkdProject.image}" alt="${dkdProject.title} uygulamasının projeye özel telefon mockup görseli" width="1536" height="1024" fetchpriority="high" decoding="async"></figure>`;
+DKD.projectMockup = dkdProject => `<figure class="project-showcase"><img src="${dkdProject.image}" alt="${dkdProject.imageAlt || dkdProject.title + ' uygulamasının projeye özel telefon mockup görseli'}" width="1536" height="1024" fetchpriority="high" decoding="async"></figure>`;
 DKD.projectsView = function dkdProjectsView() {
  const dkdProject = DKD.project(DKD.projectSelection) || DKD.projects[0];
  const dkdProjectNumber = DKD.projects.indexOf(dkdProject) + 1;
