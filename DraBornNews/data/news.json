@@ -1,7 +1,43 @@
 {
-  "generatedAt": "2026-10-04T18:18:09.860787Z",
+  "generatedAt": "2026-10-04T21:50:05.306953Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "5f057422ae04223b96",
+      "title": "Amazon Prime Alışveriş Festivali başladı: İşte düşen ilk fırsatlar!",
+      "summary": "Amazon Prime üyelerine özel Prime Alışveriş Festivali başladı. Prime üyeleri çok sayıda ürünü yılın ve son aylarınn en düşük fiyatlarına satın alabilecek. İşte öne çıkan indirimli ürünler.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amazon-prime-alisveris-festivali-basladi-iste-dusen-ilk-firsatla--211235",
+      "publishedAt": "2026-10-04T21:38:19Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211235/1200x675amazon-prime-alisveris-festivali-basladi-iste-dusen-ilk-firsatla.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e511ba03bc3486e81f",
+      "title": "TÜİK, Türkiye'nin yapay zekâ raporunu paylaştı: Kullanım iki katına çıktı",
+      "summary": "TÜİK verileri, Türkiye’de yapay zekânın bireysel ve kurumsal kullanımında dikkat çekici bir artış yaşandığını ortaya koydu. Peki yapay zekâ en çok hangi amaçlarla kullanılıyor?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/turkiye-de-yapay-zeka-kullanimi-iki-katina-cikti--211234",
+      "publishedAt": "2026-10-04T20:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211234/1200x675turkiye-de-yapay-zeka-kullanimi-iki-katina-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c7c5a17067836b2c20",
+      "title": "RedMagic 12 Pro+ Geekbench'i salladı: Oyun canavarı geliyor!",
+      "summary": "RedMagic, yeni mobil oyun canavarını 15 Ekim'de piyasaya sürmeye hazırlanıyor ancak erken performans sızıntıları şimdiden büyük ses getirdi. İşte Geekbench test sonuçları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/redmagic-12-pro-geekbench-i-salladi-oyun-canavari-geliyor--211231",
+      "publishedAt": "2026-10-04T19:00:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211231/1200x675redmagic-12-pro-geekbench-i-salladi-oyun-canavari-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "eb96b4f70b1d7a4ce9",
       "title": "Huawei Mate 90 Pro Max’in performansı hayal kırıklığı yarattı: Kirin 9050 Pro rakiplerinin gerisinde kaldı",
@@ -231,39 +267,15 @@
       "editorial": false
     },
     {
-      "id": "06b211e26dbc8d5126",
-      "title": "GeForce Now'a Ekim ayında eklenecek yepyeni oyunlar açıklandı",
-      "summary": "Geforce Now hizmetine Ekim ayında eklenecek yeni oyunlar açıklandı. LEGO Total War: SHOGUN 2 – Complete Edition dahil çok sayıda oyun daha bulut üzerinden oynanabilir olacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/geforce-now-a-ekim-ayinda-eklenecek-yepyeni-oyunlar-aciklandi--211218",
-      "publishedAt": "2026-10-04T07:45:05Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211218/1200x675geforce-now-a-ekim-ayinda-eklenecek-yepyeni-oyunlar-aciklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "cd307d7423d4ae41ec",
-      "title": "Son yılların en iyi oyunu bu ay Game Pass'e veda edecek",
-      "summary": "Ekim ayında Xbox Game Pass'e eklenecek oyunlardan sonra, bu ay platforma veda edecek yapımlar da belli oldu. Game Pass, son yılların en iyi oyunlarından birine yakında veda edecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ekim-ayinda-game-pass-e-veda-edecek-oyunlar-belli-oldu--211211",
-      "publishedAt": "2026-10-03T19:30:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211211/1200x675ekim-ayinda-game-pass-e-veda-edecek-oyunlar-belli-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "502e382d9eed515390",
-      "title": "Galaxy S27 serisinin ekran koruyucuları ortaya çıktı: Dört model geliyor",
-      "summary": "Samsung'un 2027 başlarında dört telefon piyasaya sürmesi bekleniyor: Galaxy S27, Galaxy S27+, Galaxy S27 Pro ve Galaxy S27 Ultra. Yeni ekran koruyucu görselleri, cihazların boyutlarını ortaya çıkardı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-s27-serisinin-ekran-boyutlari-belli-oldu--211207",
-      "publishedAt": "2026-10-03T19:00:00Z",
+      "id": "cd838e82df4db660bf",
+      "title": "8 major updates to Cloudflare Observability",
+      "summary": "Cloudflare is launching eight major updates that bring logs, traces, analytics, alerts, dashboards, querying, and telemetry export into one observability platform, with simpler and more predictable pricing.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/one-observability-platform/",
+      "publishedAt": "2026-10-02T18:00:00Z",
       "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211207/1200x675samsung-galaxy-s27-serisinin-ekran-boyutlari-belli-oldu.jpg",
-      "language": "tr",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XHE6D45CDHQVM71QYA6EEJ.01M3XHE6YHC44V1DZB0VG3DCGV.png",
+      "language": "en",
       "editorial": false
     },
     {
@@ -431,18 +443,6 @@
       "publishedAt": "2026-10-02T13:00:05Z",
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "cd838e82df4db660bf",
-      "title": "8 major updates to Cloudflare Observability",
-      "summary": "Cloudflare is launching eight major updates that bring logs, traces, analytics, alerts, dashboards, querying, and telemetry export into one observability platform, with simpler and more predictable pricing.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/one-observability-platform/",
-      "publishedAt": "2026-10-02T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XHE6D45CDHQVM71QYA6EEJ.01M3XHE6YHC44V1DZB0VG3DCGV.png",
       "language": "en",
       "editorial": false
     },
