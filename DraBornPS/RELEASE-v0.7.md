@@ -26,4 +26,12 @@ Full prompt: `assets/projects/dkd-series-v07-prompt.json`.
 - JavaScript syntax passed for all 16 console/game scripts and the homepage synchronization helper.
 - Homepage synchronization and whitespace checks passed.
 - DraBornSeries website returned HTTP 200 with the DraBornSeries page title.
-- Live responsive verification is performed after publication; results recorded in the final release checkpoint.
+- Live root and `/DraBornPS/` layouts verified at 1920 × 1080, 1366 × 768, 768 × 1024, 390 × 844, 360 × 800, 844 × 390 and 320 × 740.
+- All seven layouts showed DraBornGo followed by DraBornSeries, the correct `02 / 07` counter, v0.7 and zero broken project images or horizontal document overflow.
+- Mobile, tablet and landscape action buttons were 48px tall and reachable above the system footer after scrolling/focusing.
+- Clicking the mobile project website button opened the actual DraBornSeries website.
+- Browser Back from Media restored Projects with DraBornSeries selected.
+- Production homepage showed the full DraBornSeries mockup and detail panel; GitHub Pages publication and Vercel deployment both succeeded.
+- Temporary responsive verification page removed after these checks.
+
+Implementation commit: `fa7f6f5cada12eea2e4f1b60aff86aa94b2bbe8b`.
