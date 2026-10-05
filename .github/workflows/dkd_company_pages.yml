@@ -1,4 +1,5 @@
 # DraBornEagle public website deployment - universal Expo apps
+# Pin the supported Ubuntu 22.04 runner pool; Node 22 is installed explicitly.
 name: DKD DrabornEagle public web
 
 on:
@@ -20,7 +21,7 @@ concurrency:
 
 jobs:
   dkd_build_pages:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: DKD Checkout repository
         uses: actions/checkout@v4
@@ -114,7 +115,7 @@ jobs:
 
   dkd_deploy_pages:
     needs: dkd_build_pages
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     environment:
       name: github-pages
       url: ${{ steps.dkd_deployment.outputs.page_url }}
