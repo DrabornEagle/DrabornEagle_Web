@@ -1,0 +1,101 @@
+name: DraBornLand web sync
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/drabornland-web-sync.yml'
+  schedule:
+    - cron: '2-59/15 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: drabornland-web-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+      actions: write
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/checkout@v5
+        with:
+          repository: DrabornEagle/DraBornGames
+          ref: main
+          path: drabornland-source
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Check game source revision
+        id: revision
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_sha="$(git -C drabornland-source log -1 --format=%H -- DraBornLand)"
+          test -n "$source_sha"
+          echo "DRABORNLAND_SOURCE_COMMIT=$source_sha" >> "$GITHUB_ENV"
+          previous_sha="$(node -e "try{console.log(require('./DraBornGames/DraBornLand/source.json').sourceCommit)}catch{}")"
+          if [[ "$source_sha" != "$previous_sha" || ! -s DraBornGames/DraBornLand/index.html ]]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-node@v5
+        if: steps.revision.outputs.changed == 'true'
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: drabornland-source/DraBornLand/package-lock.json
+      - name: Verify and build shared offline game
+        if: steps.revision.outputs.changed == 'true'
+        working-directory: drabornland-source/DraBornLand
+        run: |
+          npm ci --no-audit --no-fund
+          npm run check
+          EXPO_OFFLINE=1 npx expo install --check
+          EXPO_OFFLINE=1 npm run export:android
+          git diff --exit-code -- web generated
+          test -s web/index.html
+      - name: Copy only DraBornLand web files
+        if: steps.revision.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p DraBornGames/DraBornLand
+          rsync -a --delete drabornland-source/DraBornLand/web/ DraBornGames/DraBornLand/
+          node -e "const fs=require('fs');const webSHA256=require('crypto').createHash('sha256').update(fs.readFileSync('DraBornGames/DraBornLand/index.html')).digest('hex');fs.writeFileSync('DraBornGames/DraBornLand/source.json',JSON.stringify({sourceRepository:'DrabornEagle/DraBornGames',sourceCommit:process.env.DRABORNLAND_SOURCE_COMMIT,webSHA256},null,2)+'\n')"
+          test -s DraBornGames/DraBornLand/index.html
+      - name: Commit scoped web update
+        if: steps.revision.outputs.changed == 'true'
+        id: publish
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornGames/DraBornLand
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "build(drabornland): sync source ${DRABORNLAND_SOURCE_COMMIT:0:12}"
+          for attempt in 1 2 3; do
+            if git push origin HEAD:main; then
+              echo 'changed=true' >> "$GITHUB_OUTPUT"
+              exit 0
+            fi
+            git fetch origin main
+            git rebase origin/main
+          done
+          exit 1
+      - name: Publish with existing company Pages workflow
+        if: steps.publish.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run dkd_company_pages.yml --repo "$GITHUB_REPOSITORY" --ref main
