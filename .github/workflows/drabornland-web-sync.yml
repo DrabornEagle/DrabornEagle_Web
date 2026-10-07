@@ -72,6 +72,10 @@ jobs:
           rsync -a --delete drabornland-source/DraBornLand/web/ DraBornGames/DraBornLand/
           node -e "const fs=require('fs');const webSHA256=require('crypto').createHash('sha256').update(fs.readFileSync('DraBornGames/DraBornLand/index.html')).digest('hex');fs.writeFileSync('DraBornGames/DraBornLand/source.json',JSON.stringify({sourceRepository:'DrabornEagle/DraBornGames',sourceCommit:process.env.DRABORNLAND_SOURCE_COMMIT,webSHA256},null,2)+'\n')"
           test -s DraBornGames/DraBornLand/index.html
+      - name: Verify copied web provenance
+        if: steps.revision.outputs.changed == 'true'
+        run: |
+          node -e "const fs=require('fs');const meta=JSON.parse(fs.readFileSync('DraBornGames/DraBornLand/source.json','utf8'));const hash=require('crypto').createHash('sha256').update(fs.readFileSync('DraBornGames/DraBornLand/index.html')).digest('hex');if(meta.sourceCommit!==process.env.DRABORNLAND_SOURCE_COMMIT||meta.webSHA256!==hash){throw new Error('DraBornLand copied web provenance mismatch')}console.log('Verified source '+meta.sourceCommit+' and web SHA-256 '+hash)"
       - name: Commit scoped web update
         if: steps.revision.outputs.changed == 'true'
         id: publish
