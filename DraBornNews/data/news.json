@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-10-07T20:05:54.688488Z",
+  "generatedAt": "2026-10-08T00:07:56.131229Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "3fc6c28d446192a47f",
+      "title": "This winter, use Google Maps and Waze to find the best fuel prices in the UK.",
+      "summary": "Find the cheapest petrol and diesel prices in the UK using Google Maps and Waze. Search for fuel stations near you to save money. See the latest rates.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/google-maps-waze-fuel-prices-uk/",
+      "publishedAt": "2026-10-08T00:01:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GEO_navigation_in_car.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "439b22718de7a9ceb5",
+      "title": "Togg T10X'lere yeni TruOS güncellemesi geldi: İşte tüm yenilikler!",
+      "summary": "Togg T10X için yeni TruOS 2.1.3 güncellemesini yayınladı. Bilgi-eğlence sistemi, yüz tanıma, kamera, navigasyon ve sürüş özelliklerinde önemli iyileştirmeler geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/togg-t10x-lere-yeni-truos-guncellemesi-geldi-iste-yenilikler--211355",
+      "publishedAt": "2026-10-07T22:16:23Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211355/1200x675togg-t10x-lere-yeni-truos-guncellemesi-geldi-iste-yenilikler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "51bfb80dd3bf60db19",
+      "title": "Bataryalar elektrik fiyatını ucuzlatır mı? İşte bunu gösteren araç",
+      "summary": "Fraunhofer ISE'nin gerçek piyasa verileriyle geliştirdiği araç, batarya depolamanın elektrik fiyatlarını nasıl değiştireceğini gösteriyor. 20 GW batarya, fiyat farkını yüzde 60 azaltabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bataryalarin-elektrik-fiyatina-etkisini-gosteren-arac--211359",
+      "publishedAt": "2026-10-07T20:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211359/1200x675bataryalarin-elektrik-fiyatina-etkisini-gosteren-arac.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5a0f57c17a150ef937",
+      "title": "JBL parti hoparlörlerinde sınırları yeniden belirliyor",
+      "summary": "JBL PartyBox Ultimate 2 parti hoparlörü 1500W seviyesinde çıkış gücü ile geniş alanlarda müzik deneyimini katlamak isteyen tüketicilere hitap ediyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/jbl-partybox-ultimate-2-tanitildi-iste-ozellikleri-ve-fiyati--211317",
+      "publishedAt": "2026-10-07T20:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211317/1200x675jbl-partybox-ultimate-2-tanitildi-iste-ozellikleri-ve-fiyati.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "0c0e841e41d50103a8",
       "title": "Japonya batarya projelerinde frene bastı: Arazisi olmayan şebekeye bağlanamayacak",
@@ -71,18 +119,6 @@
       "publishedAt": "2026-10-07T18:08:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211357/1200x675ayni-agirlikta-daha-fazla-enerji-depolayan-batarya.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "439b22718de7a9ceb5",
-      "title": "Togg T10X'lere yeni TruOS güncellemesi geldi: İşte tüm yenilikler!",
-      "summary": "Togg T10X için yeni TruOS 1.7.2 güncellemesini yayınladı. Bilgi-eğlence sistemi, yüz tanıma, kamera, navigasyon ve sürüş özelliklerinde önemli iyileştirmeler geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/togg-t10x-lere-yeni-truos-guncellemesi-geldi-iste-yenilikler--211355",
-      "publishedAt": "2026-10-07T17:46:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211355/1200x675togg-t10x-lere-yeni-truos-guncellemesi-geldi-iste-yenilikler.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -507,30 +543,6 @@
       "editorial": false
     },
     {
-      "id": "fe2c3c2d1cc729507c",
-      "title": "Elon Musk'ın yonga devriminde Intel sürprizi: Resmi onay geldi",
-      "summary": "Elon Musk'ın dev çip fabrikası Terafab için TSMC ile görüşmeler sürerken Intel'den kritik açıklama geldi. Şirket, projedeki çalışmaların devam edeceğini doğruladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elon-musk-in-yonga-devriminde-intel-surprizi-resmi-onay-geldi--211340",
-      "publishedAt": "2026-10-07T12:38:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211340/1200x675elon-musk-in-yonga-devriminde-intel-surprizi-resmi-onay-geldi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "68ee12bcbe09280b11",
-      "title": "Tablet alacaklara en iyi Android & iPad tablet önerileri (2026)",
-      "summary": "Tablet önerisi arayanlar buraya! Oyun, eğitim, dizi&film izleme ve iş için en iyi tablet modellerini sıraladık. İşte fiyat/performanslı ve ucuz iPad & Android tablet bilgisayar modelleri ve fiyatları",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/en-iyi-tablet-onerileri--163841",
-      "publishedAt": "2026-10-07T12:33:38Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/163841/1200x675en-iyi-tablet-onerileri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "b6aec8c05cfc3e2f0f",
       "title": "Introducing Playground: Create and play custom games",
       "summary": "Playground is a new experimental gaming platform that lets you create, play, and share custom games.",
@@ -687,18 +699,6 @@
       "editorial": false
     },
     {
-      "id": "e6e1d2a9f0a4e91a5d",
-      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
-      "publishedAt": "2026-10-06T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "186442aeaf00c1e5da",
       "title": "Producers can now vibe code their own music production tools using Google Flow Music.",
       "summary": "Every artist, producer, and songwriter works differently. To match those individual creative workflows, Spaces in Google Flow Music lets creators build custom instrument",
@@ -707,6 +707,18 @@
       "publishedAt": "2026-10-06T16:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/119A6335_1.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "e6e1d2a9f0a4e91a5d",
+      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "publishedAt": "2026-10-06T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -831,26 +843,26 @@
       "editorial": false
     },
     {
-      "id": "cd0e05b27e96e3cea4",
-      "title": "I teach my students that in the AI era, critical thinking comes first.",
-      "summary": "A California teacher uses Gemini to streamline lesson planning in Google Drive. See how she prioritizes critical thinking in the AI era.",
+      "id": "e19c9e6ee550c24438",
+      "title": "My eighth-grade students built our school newscast from scratch with Gemini.",
+      "summary": "Eighth graders built The Cougar Rumble newscast using Gemini and Google Docs. See how these students streamlined their production workflow today.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/teacher-stories-gemini-middle-school/",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/gemini-student-newscast/",
       "publishedAt": "2026-10-05T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Kavita_1.max-600x600.format-webp.webp",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tori_1.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
     {
-      "id": "02712f54e967f63bf8",
-      "title": "Technology helps my students balance big creative ideas with tight deadlines.",
-      "summary": "Students use Google Drive for video assets and Sheets for production timelines to meet tight deadlines. See how these tools boost classroom output.",
+      "id": "1fc121c6836d1abed7",
+      "title": "Gemini helps me bring hands-on learning into the classroom.",
+      "summary": "A teacher uses Google Gemini to design interactive role-playing simulations and nutrition lessons. See how AI boosts classroom engagement.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/media-teacher-gemini/",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/english-teacher-gemini/",
       "publishedAt": "2026-10-05T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/7472.max-600x600.format-webp.webp",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Cheryl.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -879,26 +891,14 @@
       "editorial": false
     },
     {
-      "id": "366d9f4e5a40d0265e",
-      "title": "I replaced traditional coding tests with real conversations about how my students solve problems using AI.",
-      "summary": "Replace coding tests with AI-driven interviews using Google Gemini in Colab. See how this professor evaluates student judgment. Read the full report.",
+      "id": "02712f54e967f63bf8",
+      "title": "Technology helps my students balance big creative ideas with tight deadlines.",
+      "summary": "Students use Google Drive for video assets and Sheets for production timelines to meet tight deadlines. See how these tools boost classroom output.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/gemini-google-colab/",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/media-teacher-gemini/",
       "publishedAt": "2026-10-05T16:00:00Z",
       "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ProfMY2.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "1fc121c6836d1abed7",
-      "title": "Gemini helps me bring hands-on learning into the classroom.",
-      "summary": "A teacher uses Google Gemini to design interactive role-playing simulations and nutrition lessons. See how AI boosts classroom engagement.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/english-teacher-gemini/",
-      "publishedAt": "2026-10-05T16:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Cheryl.max-600x600.format-webp.webp",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/7472.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -915,14 +915,26 @@
       "editorial": false
     },
     {
-      "id": "e19c9e6ee550c24438",
-      "title": "My eighth-grade students built our school newscast from scratch with Gemini.",
-      "summary": "Eighth graders built The Cougar Rumble newscast using Gemini and Google Docs. See how these students streamlined their production workflow today.",
+      "id": "cd0e05b27e96e3cea4",
+      "title": "I teach my students that in the AI era, critical thinking comes first.",
+      "summary": "A California teacher uses Gemini to streamline lesson planning in Google Drive. See how she prioritizes critical thinking in the AI era.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/gemini-student-newscast/",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/teacher-stories-gemini-middle-school/",
       "publishedAt": "2026-10-05T16:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tori_1.max-600x600.format-webp.webp",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Kavita_1.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "366d9f4e5a40d0265e",
+      "title": "I replaced traditional coding tests with real conversations about how my students solve problems using AI.",
+      "summary": "Replace coding tests with AI-driven interviews using Google Gemini in Colab. See how this professor evaluates student judgment. Read the full report.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/gemini-google-colab/",
+      "publishedAt": "2026-10-05T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ProfMY2.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -935,18 +947,6 @@
       "publishedAt": "2026-10-05T16:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Rayna_1.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "ce114c8ceafbd37630",
-      "title": "Technology is helping my fellow math teachers trade weekend prep for personalized learning.",
-      "summary": "Teachers use Gemini to build custom K-6 math worksheets and save hours of prep time. See how Google AI transforms classroom instruction.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/education-officer-gemini/",
-      "publishedAt": "2026-10-05T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/KateThomas.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
