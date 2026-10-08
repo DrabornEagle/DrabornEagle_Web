@@ -68,9 +68,18 @@ jobs:
           fi
           git commit -m 'deploy(DraBornOdds): publish canonical web immediately'
           for dkd_try in 1 2 3; do
-            git pull --rebase origin main && git push && exit 0
+            # The exported source is authoritative for DraBornOdds. If a
+            # concurrent website commit changes this generated HTML, prefer
+            # this export while replaying our single Odds commit.
+            if git pull --rebase -X theirs origin main && git push origin HEAD:main; then
+              echo 'DraBornOdds exported website published.'
+              exit 0
+            fi
+            git rebase --abort 2>/dev/null || true
+            git fetch origin main
             sleep 3
           done
+          echo 'DraBornOdds publication exhausted conflict-safe retries.' >&2
           exit 1
       - name: Download and verify matching signed Android APK
         shell: bash
