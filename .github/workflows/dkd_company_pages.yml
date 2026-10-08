@@ -88,6 +88,18 @@ jobs:
           cp README.md "$GITHUB_WORKSPACE/DraBornBuy/README.md"
           printf 'Universal source commit: %s\n' "$(git rev-parse HEAD)" > "$GITHUB_WORKSPACE/DraBornBuy/DKD-SOURCE.txt"
 
+      # The Expo static export resets <title> and metadata. Restore it on every
+      # deployment, not only in the separate scheduled DraBornBuy sync workflow.
+      - name: DKD Restore DraBornBuy search metadata
+        run: node scripts/dkd-drabornbuy-seo.mjs
+
+      - name: DKD Verify DraBornBuy SEO before publishing
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'DraBornBuy | Market Alışverişi ve Fiyat Karşılaştırma' DraBornBuy/index.html >/dev/null
+          grep -F 'rel="canonical" href="https://www.draborneagle.com/DraBornBuy/"' DraBornBuy/index.html >/dev/null
+
       - name: DKD Commit synchronized DraBornBuy web files
         shell: bash
         run: |
