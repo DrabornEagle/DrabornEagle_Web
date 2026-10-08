@@ -56,8 +56,17 @@ jobs:
           grep -F '/DraBornBuy/_expo/' "$GITHUB_WORKSPACE/DraBornBuy/index.html" >/dev/null
           cp README.md "$GITHUB_WORKSPACE/DraBornBuy/README.md"
           printf 'Universal source commit: %s\n' "$DBB_SOURCE_SHA" > "$GITHUB_WORKSPACE/DraBornBuy/DKD-SOURCE.txt"
+      - name: Preserve DraBornBuy SEO metadata
+        id: seo
+        shell: bash
+        run: |
+          set -euo pipefail
+          node scripts/dkd-drabornbuy-seo.mjs
+          if ! git diff --quiet -- DraBornBuy/index.html; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
       - name: Commit synchronized web files
-        if: steps.source.outputs.changed == 'true'
+        if: steps.source.outputs.changed == 'true' || steps.seo.outputs.changed == 'true'
         shell: bash
         run: |
           set -euo pipefail
