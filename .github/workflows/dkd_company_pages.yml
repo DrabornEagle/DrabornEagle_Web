@@ -55,6 +55,17 @@ jobs:
       - name: DKD Add immersive loader and mobile browser integration
         run: python scripts/dkd-patch-drabornzikir-web.py
 
+      - name: DKD Ensure SEO for export-generated pages
+        run: node scripts/dkd-search-project-metadata.mjs
+
+      - name: DKD Verify SEO for Zikir and Odds
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'DraBornZikir | Günlük Zikir ve Dua Uygulaması' DraBornZikir/index.html >/dev/null
+          grep -F 'rel="canonical" href="https://www.draborneagle.com/DraBornZikir/"' DraBornZikir/index.html >/dev/null
+          grep -F 'rel="canonical" href="https://www.draborneagle.com/DraBornOdds/"' DraBornOdds/index.html >/dev/null
+
       - name: DKD Verify DraBornZikir static routes
         shell: bash
         run: |
