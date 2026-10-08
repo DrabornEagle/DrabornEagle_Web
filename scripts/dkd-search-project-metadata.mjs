@@ -19,7 +19,7 @@ const pages = [
 
 const onlyApp = process.argv.find(arg => arg.startsWith('--only='))?.slice(7) ?? null;
 for (const page of pages) {
-  if (onlyApp && !page.file.includes('/' + onlyApp + '/')) continue;
+  if (onlyApp && !page.file.startsWith(onlyApp + '/')) continue;
   if (!existsSync(page.file)) continue;
   const original = readFileSync(page.file, 'utf8');
   const headMatch = original.match(/<head\b[^>]*>[\s\S]*?<\/head>/i);
