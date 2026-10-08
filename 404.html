@@ -7,6 +7,17 @@
 (() => { addEventListener('pageshow', event => { if (event.persisted) location.reload(); }); })();
 (async () => {
   const path = location.pathname + location.search + location.hash;
+  // Retired /Apps/ pages must remain genuine 404s. Never silently forward
+  // crawlers or visitors to the homepage from removed legacy app URLs.
+  if (/^\/Apps(?:\/|$)/i.test(location.pathname)) {
+    document.title = 'DraBornEagle | Sayfa Kaldırıldı';
+    const main = document.createElement('main');
+    main.setAttribute('role', 'main');
+    main.style.cssText = 'box-sizing:border-box;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:28px;background:#080916;color:#f8f7ff;font:16px/1.65 system-ui,-apple-system,sans-serif;text-align:center';
+    main.innerHTML = '<h1 style="font-size:clamp(28px,6vw,48px);margin:0">Bu sayfa artık mevcut değil.</h1><p style="max-width:550px;margin:0;color:#c9c4da">Aradığın eski bağlantı kaldırıldı. Güncel oyunları, uygulamaları ve projeleri DraBornEagle ana sayfasından keşfedebilirsin.</p><a href="/" style="color:#79e9ff;font-weight:700;text-underline-offset:4px">DraBornEagle ana sayfasına git →</a>';
+    document.body.replaceChildren(main);
+    return;
+  }
   const tagMatch = location.pathname.match(/^\/DraBornPark\/tag\/([^/]+)\/?$/i);
   if (tagMatch) {
     try {
