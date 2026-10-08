@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-10-08T00:07:56.131229Z",
+  "generatedAt": "2026-10-08T06:32:15.103222Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "bf65d26fc971f0682a",
+      "title": "Ev bataryalarının gözden kaçan elektrik tüketimi",
+      "summary": "Ev bataryaları enerji tasarrufu sağlarken bekleme modunda ne kadar elektrik harcıyor? Test sonuçları, bazı sistemlerin bekleme modundaki tüketimi ile yılda 200 euro kaybettirdiğini gösteriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ev-bataryalarinin-gozden-kacan-elektrik-tuketimi--211362",
+      "publishedAt": "2026-10-08T05:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211362/1200x675ev-bataryalarinin-gozden-kacan-elektrik-tuketimi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "43fd62b31d4b8f450e",
+      "title": "Monster Hunter Stories 3: Twisted Reflection Heading to XBOX on PC November 18",
+      "summary": "The hit RPG Monster Hunter Stories 3: Twisted Reflection, currently available on XBOX Series X|S, will launch on XBOX on PC on November 18, 2026, with Xbox Play Anywhere support. This will allow players to enjoy the game on XBOX Series X|S, Windows 11 PCs, and compatible handheld gaming devices at no additional cost. Players",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/07/monster-hunter-stories-3-xbox-px-xbox-play-anywhere-announce/",
+      "publishedAt": "2026-10-08T04:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/MHST3_Pub03_view02-d0385e8b42ca87a59e08-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "3fc6c28d446192a47f",
       "title": "This winter, use Google Maps and Waze to find the best fuel prices in the UK.",
@@ -507,18 +531,6 @@
       "editorial": false
     },
     {
-      "id": "a3ca3577725ddb7b76",
-      "title": "Akıllı telefonlardaki yapay zeka çağ atlayacak: Google, yeni modeli tanıttı",
-      "summary": "Yapay zekayı internet bağımlılığından kurtaran EmbeddingGemma 2 duyuruldu. Google’ın yeni açık kaynaklı modeli metin, ses ve görüntüyü bir yapıda bir araya getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-dan-yerel-yapay-zekada-devrimsel-gelisme-embeddinggemma-2--211333",
-      "publishedAt": "2026-10-07T13:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211333/1200x675google-dan-yerel-yapay-zekada-devrimsel-gelisme-embeddinggemma-2.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "3823f691daef4e8f4c",
       "title": "Ekim 2026 Volkswagen Fiyat Listesi",
       "summary": "Volkswagen Taigo, T-Cross, Golf, Yeni T-Roc, Tiguan, Tayron, Passat, Golf GTI ve Golf R modellerinin Ekim 2026 fiyatları Webtekno’da!",
@@ -1019,18 +1031,6 @@
       "publishedAt": "2026-10-02T16:13:45Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XKCAN8X5Q5KQ1Q5EW20NBG.01M3XKCB43AH4EZPQE0QQ7MNND.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "750817dfe32404bc45",
-      "title": "The Science Behind Best Friendship in The Jackbox Party Pack 12",
-      "summary": "A word association game and a personality quiz walk into a bar. MegaPals is what happens next. The original concept for Jackbox Party Pack 12 pitched by Liz Anderson and Chase McClure drew from the classic game of Mind Meld – you get a word, then try to land on the same response as another",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/02/the-science-behind-best-friendship-in-the-jackbox-party-pack-12/",
-      "publishedAt": "2026-10-02T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/kings1-b8b071a15a37b42a06b6-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
