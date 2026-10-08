@@ -1,86 +1,402 @@
 <!doctype html>
 <html lang="tr">
 <head>
-  <meta name="robots" content="noindex,nofollow,noarchive"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050816"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><title>DraBornEagle | Sayfa Bulunamadı</title></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0a0821">
+  <meta name="color-scheme" content="dark">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>DraBornEagle | 404 — Rota Kayboldu</title>
+  <meta name="description" content="Bu DraBornEagle sayfası artık mevcut değil. Oyunları, uygulamaları ve projeleri keşfetmek için ana sayfaya dön.">
+  <link rel="icon" href="/Support/assets/dkd-miami-eagle.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Keep client-handled deep links from flashing the static 404 while their
+    // existing app-specific routing logic is running.
+    (function () {
+      var p = location.pathname;
+      if (/^\/DraBornPark\/(?:tag|t)\/[^/]+\/?$/i.test(p) ||
+          /^\/DraBornSeries\//i.test(p) ||
+          /^\/DraBornGate\//i.test(p) ||
+          /^\/DraBornGarage\//i.test(p)) {
+        document.documentElement.classList.add('dkd-route-handoff');
+      }
+    })();
+  </script>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #09071b;
+      --pink: #ff48ae;
+      --pink-bright: #ff79c6;
+      --orange: #ffb46a;
+      --cyan: #64edfa;
+      --lavender: #a88bff;
+      --text: #fff9ff;
+      --muted: #c6bbd9;
+      --line: rgba(255,255,255,.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { min-height: 100%; background: var(--bg); }
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      min-height: 100dvh;
+      font: 400 16px/1.6 "Outfit", system-ui, -apple-system, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--cyan); outline-offset: 4px; }
+    .page-shell {
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 17% 8%, rgba(116,54,189,.25), transparent 36%),
+        radial-gradient(ellipse at 87% 25%, rgba(249,50,143,.19), transparent 33%),
+        linear-gradient(155deg, #0c0a27 0%, #170e3b 44%, #080d26 100%);
+    }
+    .scene { position: absolute; inset: 0; overflow: hidden; z-index: -1; pointer-events: none; }
+    .scene::before {
+      content: ""; position: absolute; inset: 0; opacity: .6;
+      background: radial-gradient(ellipse at 50% 75%, rgba(255,91,160,.12), transparent 54%);
+    }
+    .scene::after {
+      content: ""; position: absolute; inset: 0; opacity: .17;
+      background-image: linear-gradient(rgba(255,255,255,.065) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.065) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: linear-gradient(to bottom, transparent 0%, #000 72%, transparent 100%);
+    }
+    .aurora {
+      position: absolute; border-radius: 50%; filter: blur(70px);
+      opacity: .45; animation: drift 15s ease-in-out infinite alternate;
+    }
+    .aurora.one { left: -230px; top: 8%; width: 410px; height: 410px; background: #e32d9a; }
+    .aurora.two { right: -180px; top: 28%; width: 380px; height: 380px; background: #2bc9ec; animation-delay: -8s; }
+    .sun {
+      position: absolute; width: clamp(280px, 47vw, 540px); aspect-ratio: 1; border-radius: 50%;
+      left: 50%; bottom: 8%; transform: translateX(-50%);
+      background: linear-gradient(180deg, #ffdcac 0%, #ff9b9e 34%, #ff57b1 65%, #a53eee 100%);
+      opacity: .75;
+      box-shadow: 0 0 82px rgba(255,79,156,.22), 0 0 210px rgba(235,56,130,.13);
+      mask-image: repeating-linear-gradient(to bottom, #000 0 53%, transparent 53.5% 55%, #000 55.5% 67%, transparent 67.5% 69%, #000 69.5% 76%, transparent 77% 79%, #000 79.5% 86%, transparent 87% 90%, #000 91% 100%);
+      animation: sun-breathe 10s ease-in-out infinite alternate;
+    }
+    .skyline {
+      position: absolute; width: 100%; min-width: 750px; height: min(37vh, 325px);
+      left: 50%; bottom: 0; transform: translateX(-50%);
+      opacity: .92; filter: drop-shadow(0 -10px 25px rgba(248,62,155,.14));
+    }
+    .palm { position: absolute; bottom: -10px; width: clamp(220px, 28vw, 350px); height: 390px; opacity: .65; }
+    .palm.left { left: -105px; transform: rotate(-6deg); }
+    .palm.right { right: -125px; transform: scaleX(-1) rotate(-9deg); opacity: .48; }
+    .horizon {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 25%;
+      background: linear-gradient(transparent, rgba(8,10,27,.83) 46%, #07091b);
+    }
+    .floor-grid {
+      position: absolute; bottom: -19%; left: -45%; width: 190%; height: 36%;
+      transform: perspective(350px) rotateX(62deg);
+      transform-origin: center top; opacity: .20;
+      background-image: linear-gradient(rgba(77,224,249,.75) 1px, transparent 1px), linear-gradient(90deg, rgba(255,99,190,.75) 1px, transparent 1px);
+      background-size: 65px 65px;
+      mask-image: linear-gradient(to bottom, #000, transparent 95%);
+    }
+    .spark { position: absolute; width: 3px; height: 3px; border-radius: 50%; background: #fff; box-shadow: 0 0 14px 3px rgba(171,172,255,.6); animation: twinkle 3.8s ease-in-out infinite; }
+    .spark.s1 { left: 12%; top: 24%; }.spark.s2 { left: 25%; top: 15%; animation-delay: -1.5s; }
+    .spark.s3 { left: 75%; top: 16%; animation-delay: -.7s; }.spark.s4 { left: 88%; top: 37%; animation-delay: -2s; }
+    .spark.s5 { left: 58%; top: 8%; animation-delay: -2.7s; }
+    .topbar, .bottom-bar { width: min(1180px, calc(100% - 40px)); margin: 0 auto; position: relative; z-index: 2; }
+    .topbar {
+      padding: max(25px, env(safe-area-inset-top)) 0 14px;
+      display: flex; align-items: center; justify-content: space-between; gap: 18px;
+    }
+    .brand { display: inline-flex; gap: 12px; align-items: center; text-decoration: none; min-width: 0; }
+    .brandmark {
+      display: grid; place-items: center; width: 46px; height: 46px; flex-shrink: 0; border-radius: 15px;
+      border: 1px solid rgba(255,255,255,.28); font: 900 21px/1 "Space Grotesk", sans-serif;
+      background: linear-gradient(135deg, #ff58a7 0%, #a855f7 56%, #32d9fa 100%);
+      box-shadow: 0 9px 32px rgba(238,52,170,.32), inset 0 1px 0 rgba(255,255,255,.48);
+    }
+    .brand-info { display: flex; flex-direction: column; line-height: 1.15; }
+    .brand-info strong { font: 800 clamp(16px, 3.2vw, 19px)/1.1 "Space Grotesk",sans-serif; letter-spacing: -.04em; }
+    .brand-info small { padding-top: 5px; font-size: 9px; letter-spacing: .22em; color: #c7b6de; font-weight: 800; }
+    .live-tag { display: inline-flex; align-items: center; gap: 9px; padding: 9px 13px; border: 1px solid var(--line); border-radius: 99px; background: rgba(16,12,40,.46); color: #dad2e9; font-size: 10px; font-weight: 800; letter-spacing: .18em; white-space: nowrap; }
+    .live-dot { width: 7px; height: 7px; background: var(--cyan); border-radius: 50%; box-shadow: 0 0 11px var(--cyan); animation: pulse 2.4s infinite; }
+    .content {
+      flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center;
+      position: relative; z-index: 2; padding: 34px 20px 78px; text-align: center;
+    }
+    .error-card {
+      width: min(760px, 100%); position: relative; padding: clamp(26px, 5.2vw, 56px);
+      border-radius: clamp(25px, 5vw, 36px);
+      border: 1px solid rgba(255,255,255,.21);
+      background: linear-gradient(135deg, rgba(30,18,67,.76), rgba(12,13,35,.68) 70%);
+      box-shadow: 0 38px 115px rgba(5,3,21,.5), 0 0 65px rgba(244,55,147,.11), inset 0 1px 0 rgba(255,255,255,.11);
+      -webkit-backdrop-filter: blur(18px); backdrop-filter: blur(18px);
+    }
+    .error-card::before {
+      content: ""; position: absolute; inset: 0; border-radius: inherit; padding: 1px;
+      background: linear-gradient(130deg, rgba(255,169,209,.55), transparent 33%, transparent 60%, rgba(90,225,250,.38));
+      mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite: exclude;
+      pointer-events: none;
+    }
+    .kicker { display: inline-flex; align-items: center; gap: 9px; padding: 7px 13px; border: 1px solid rgba(255,132,197,.28); border-radius: 99px; background: rgba(255,84,171,.09); color: #ffc3e1; font-size: 10px; font-weight: 900; letter-spacing: .19em; text-transform: uppercase; }
+    .kicker::before { content: "✦"; font-size: 14px; color: var(--orange); }
+    .error-code {
+      display: block; width: max-content; max-width: 100%; margin: 21px auto 18px;
+      font: 900 clamp(105px, 22vw, 195px)/.82 "Space Grotesk", "Outfit", sans-serif;
+      letter-spacing: -.115em; padding-right: .12em;
+      background: linear-gradient(156deg, #fff9dd 5%, #ffb7be 30%, #ff58b3 51%, #a07cff 73%, #4be9f7 100%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      filter: drop-shadow(0 11px 25px rgba(246,64,169,.24));
+      animation: error-enter 900ms cubic-bezier(.16,1,.3,1) both, flicker 9s ease-in-out 2s infinite;
+    }
+    h1 { margin: 0; font: 800 clamp(28px, 5vw, 43px)/1.13 "Space Grotesk","Outfit",sans-serif; letter-spacing: -.055em; text-wrap: balance; }
+    h1 .gradient { background: linear-gradient(90deg, #ff85b7, #ffbb9a 44%, #8feefe); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .description { max-width: 490px; margin: 18px auto 0; font-size: clamp(14px, 2.8vw, 16px); line-height: 1.7; color: var(--muted); text-wrap: pretty; }
+    .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .action {
+      min-height: 51px; padding: 13px 19px; border-radius: 16px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 11px;
+      text-decoration: none; font-size: 14px; font-weight: 850;
+      transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;
+    }
+    .action svg { width: 19px; height: 19px; flex: none; }
+    .action.primary {
+      color: #220d2b; background: linear-gradient(115deg, #ff8cc5, #ffaf9d 52%, #ffcf90);
+      box-shadow: 0 12px 32px rgba(248,89,163,.26), inset 0 1px 0 rgba(255,255,255,.65);
+    }
+    .action.secondary { color: #e5faff; border: 1px solid rgba(124,238,255,.38); background: rgba(72,207,239,.09); }
+    .action:hover { transform: translateY(-3px); }
+    .action.primary:hover { box-shadow: 0 16px 40px rgba(248,89,163,.4); }
+    .action.secondary:hover { border-color: var(--cyan); background: rgba(72,207,239,.16); }
+    .mini-links { display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 12px; margin-top: 26px; font-size: 12px; }
+    .mini-links .divider { width: 4px; height: 4px; background: rgba(255,255,255,.38); border-radius: 50%; }
+    .mini-links a { color: #bfc6eb; text-decoration: none; transition: color .2s; }
+    .mini-links a:hover { color: var(--cyan); }
+    .card-toplight { position: absolute; width: 160px; height: 3px; top: -1px; left: 50%; transform: translateX(-50%); border-radius: 0 0 9px 9px; background: linear-gradient(90deg, transparent, #ff82c5 36%, #61e9fa 67%, transparent); box-shadow: 0 0 30px rgba(255,101,187,.55); }
+    .bottom-bar { padding: 10px 0 max(21px, env(safe-area-inset-bottom)); display: flex; align-items: center; justify-content: space-between; gap: 18px; color: rgba(238,225,254,.72); font-size: 11px; font-weight: 700; letter-spacing: .13em; }
+    .bottom-bar .right { display: inline-flex; align-items: center; gap: 8px; }
+    .bottom-bar .right::before { content: ""; width: 23px; height: 1px; background: linear-gradient(90deg, var(--pink), var(--cyan)); }
+    .route-loading {
+      display: none; min-height: 100dvh; align-items: center; justify-content: center; gap: 12px;
+      padding: 30px; text-align: center; color: #d9d1ef; font: 700 15px/1.5 "Outfit",sans-serif;
+      background: radial-gradient(circle at 50% 40%, #261147, #09071b 70%);
+    }
+    .spinner { width: 28px; height: 28px; border: 3px solid rgba(255,255,255,.16); border-top-color: var(--pink); border-right-color: var(--cyan); border-radius: 50%; animation: spin .8s linear infinite; }
+    .dkd-route-handoff .page-shell { display: none; }
+    .dkd-route-handoff .route-loading { display: flex; }
+    @keyframes drift { to { transform: translate3d(60px,-30px,0) scale(1.12); } }
+    @keyframes pulse { 50% { opacity: .42; box-shadow: 0 0 3px var(--cyan); } }
+    @keyframes twinkle { 50% { opacity: .18; transform: scale(.55); } }
+    @keyframes sun-breathe { to { opacity: .5; filter: saturate(1.35); } }
+    @keyframes error-enter { from { opacity: 0; transform: translateY(14px) scale(.96); } to { opacity: 1; transform: translateY(0) scale(1); } }
+    @keyframes flicker { 0%,96%,100% { opacity:1; } 97% { opacity:.93; } 98% { opacity:1; } 99% { opacity:.96; } }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (max-width: 600px) {
+      .topbar, .bottom-bar { width: calc(100% - 32px); }
+      .topbar { padding-top: 20px; }
+      .brandmark { width: 40px; height: 40px; border-radius: 13px; font-size: 18px; }
+      .brand-info small { font-size: 8px; letter-spacing: .16em; }
+      .live-tag { font-size: 9px; letter-spacing: .1em; padding: 7px 9px; }
+      .content { padding: 22px 15px 46px; }
+      .error-card { padding: 29px 20px 27px; border-radius: 26px; }
+      .error-code { margin: 20px auto 20px; }
+      .description { margin-top: 17px; }
+      .actions { margin-top: 23px; flex-direction: column; }
+      .action { width: 100%; }
+      .mini-links { gap: 10px; }
+      .palm { opacity: .38; }
+      .bottom-bar { font-size: 9px; letter-spacing: .05em; }
+    }
+    @media (max-width: 380px) {
+      .brand-info strong { font-size: 14px; }
+      .brand-info small { font-size: 7px; }
+      .live-tag { font-size: 8px; gap: 6px; }
+      .content { padding-inline: 12px; }
+      .error-card { padding-inline: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
 <body>
-<script>
-(() => { addEventListener('pageshow', event => { if (event.persisted) location.reload(); }); })();
-(async () => {
-  const path = location.pathname + location.search + location.hash;
-  // Retired /Apps/ pages must remain genuine 404s. Never silently forward
-  // crawlers or visitors to the homepage from removed legacy app URLs.
-  if (/^\/Apps(?:\/|$)/i.test(location.pathname)) {
-    document.title = 'DraBornEagle | Sayfa Kaldırıldı';
-    const main = document.createElement('main');
-    main.setAttribute('role', 'main');
-    main.style.cssText = 'box-sizing:border-box;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:28px;background:#080916;color:#f8f7ff;font:16px/1.65 system-ui,-apple-system,sans-serif;text-align:center';
-    main.innerHTML = '<h1 style="font-size:clamp(28px,6vw,48px);margin:0">Bu sayfa artık mevcut değil.</h1><p style="max-width:550px;margin:0;color:#c9c4da">Aradığın eski bağlantı kaldırıldı. Güncel oyunları, uygulamaları ve projeleri DraBornEagle ana sayfasından keşfedebilirsin.</p><a href="/" style="color:#79e9ff;font-weight:700;text-underline-offset:4px">DraBornEagle ana sayfasına git →</a>';
-    document.body.replaceChildren(main);
-    return;
-  }
-  const tagMatch = location.pathname.match(/^\/DraBornPark\/tag\/([^/]+)\/?$/i);
-  if (tagMatch) {
-    try {
-      const response = await fetch('/DraBornPark/tag/index.html?v=1070&ts=' + Date.now(), {cache:'no-store',headers:{'Cache-Control':'no-cache'}});
-      if (!response.ok) throw new Error('tag_shell_unavailable');
-      const html = await response.text();
-      document.open();
-      document.write(html);
-      document.close();
-      return;
-    } catch (_) {
-      document.body.textContent = 'DraBornPark v1.0.7 etiket sayfası şu anda açılamadı.';
-      return;
-    }
-  }
+  <div class="route-loading" role="status"><span class="spinner" aria-hidden="true"></span> Uygulama açılıyor…</div>
+  <div class="page-shell" id="error-page">
+    <div class="scene" aria-hidden="true">
+      <span class="aurora one"></span><span class="aurora two"></span>
+      <span class="spark s1"></span><span class="spark s2"></span><span class="spark s3"></span><span class="spark s4"></span><span class="spark s5"></span>
+      <span class="sun"></span>
+      <svg class="skyline" viewBox="0 0 1280 340" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+        <defs>
+          <linearGradient id="city-build" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#25183e"/><stop offset="100%" stop-color="#080b1e"/>
+          </linearGradient>
+          <pattern id="windows-pink" width="16" height="22" patternUnits="userSpaceOnUse">
+            <rect x="4" y="4" width="3" height="5" rx="1" fill="#ff92bb" opacity=".58"/>
+            <rect x="11" y="13" width="3" height="5" rx="1" fill="#56ddec" opacity=".37"/>
+          </pattern>
+        </defs>
+        <path fill="#15112c" d="M0 231L40 231 40 185 80 185 80 215 115 215 115 159 165 159 165 221 202 221 202 129 235 129 235 193 267 193 267 158 304 158 304 212 341 212 341 172 377 172 377 112 412 112 412 186 456 186 456 227 490 227 490 171 529 171 529 206 564 206 564 135 602 135 602 90 637 90 637 192 679 192 679 160 724 160 724 210 764 210 764 135 807 135 807 220 845 220 845 175 885 175 885 119 929 119 929 205 975 205 975 160 1019 160 1019 204 1057 204 1057 137 1099 137 1099 190 1145 190 1145 162 1185 162 1185 213 1230 213 1230 182 1280 182 1280 340 0 340Z"/>
+        <path fill="url(#city-build)" d="M0 273H64V201H93V262H142V142H176V243H224V184H256V117H284V254H316V205H345V250H384V137H423V219H449V268H487V194H527V256H558V155H585V270H626V115H660V272H696V209H730V263H780V166H808V242H836V264H882V143H920V266H970V206H998V252H1028V173H1057V247H1092V203H1131V145H1167V251H1204V222H1244V265H1280V340H0Z"/>
+        <path fill="url(#windows-pink)" opacity=".47" d="M0 273H64V201H93V262H142V142H176V243H224V184H256V117H284V254H316V205H345V250H384V137H423V219H449V268H487V194H527V256H558V155H585V270H626V115H660V272H696V209H730V263H780V166H808V242H836V264H882V143H920V266H970V206H998V252H1028V173H1057V247H1092V203H1131V145H1167V251H1204V222H1244V265H1280V340H0Z"/>
+        <path d="M270 117V80 M640 114V73 M908 144V105 M1150 145V109" stroke="#ff9ecf" stroke-width="2" opacity=".48"/>
+        <path d="M0 272H1280" stroke="#e45ab3" stroke-width="2" opacity=".34"/>
+      </svg>
+      <svg class="palm left" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M100 425 Q158 243 177 115" stroke="#070b1c" stroke-width="21" fill="none" stroke-linecap="round"/>
+        <path d="M177 115 Q121 33 42 40 Q103 59 151 133Z M177 115 Q190 41 283 22 Q232 64 190 135Z M177 115 Q242 52 310 107 Q258 102 187 143Z M177 115 Q256 126 273 198 Q221 162 166 132Z M177 115 Q102 125 39 187 Q72 126 159 118Z M177 115 Q125 58 129 9 Q154 56 184 112Z" fill="#070b1c"/>
+        <path d="M178 113Q222 103 256 152 M171 117Q103 88 72 102" stroke="#130e29" stroke-width="6" fill="none"/>
+      </svg>
+      <svg class="palm right" viewBox="0 0 320 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M100 425 Q158 243 177 115" stroke="#070b1c" stroke-width="21" fill="none" stroke-linecap="round"/>
+        <path d="M177 115 Q121 33 42 40 Q103 59 151 133Z M177 115 Q190 41 283 22 Q232 64 190 135Z M177 115 Q242 52 310 107 Q258 102 187 143Z M177 115 Q256 126 273 198 Q221 162 166 132Z M177 115 Q102 125 39 187 Q72 126 159 118Z M177 115 Q125 58 129 9 Q154 56 184 112Z" fill="#070b1c"/>
+      </svg>
+      <span class="horizon"></span><span class="floor-grid"></span>
+    </div>
+    <header class="topbar">
+      <a href="/" class="brand" aria-label="DraBornEagle ana sayfa">
+        <span class="brandmark" aria-hidden="true">D</span>
+        <span class="brand-info"><strong>DraBornEagle</strong><small>GAMES · APPS · TECHNOLOGY</small></span>
+      </a>
+      <span class="live-tag"><span class="live-dot"></span> LOST CONNECTION / 404</span>
+    </header>
+    <main class="content" id="main-content">
+      <section class="error-card" aria-labelledby="page-title">
+        <span class="card-toplight" aria-hidden="true"></span>
+        <span class="kicker">MIAMI NIGHT DRIVE · ROUTE NOT FOUND</span>
+        <span class="error-code" aria-hidden="true">404</span>
+        <h1 id="page-title"><span class="gradient">Rota kayboldu.</span><br>Macera devam ediyor!</h1>
+        <p class="description" id="error-description">Aradığın bağlantı artık burada değil. Sorun yok, DraBornEagle evreninde keşfedilecek daha çok oyun, uygulama ve proje var.</p>
+        <nav class="actions" aria-label="Keşfetmeye devam et">
+          <a class="action primary" href="/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-7H9v7H4a1 1 0 0 1-1-1z"/></svg>
+            Ana sayfaya dön
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+          </a>
+          <a class="action secondary" href="/DraBornGames/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9h12a4 4 0 0 1 4 3.5L23 18a2.5 2.5 0 0 1-4.1 2.4L16 18H8l-2.9 2.4A2.5 2.5 0 0 1 1 18l1-5.5A4 4 0 0 1 6 9Z"/><path d="M7 12v4m-2-2h4m8-.5h.01m2 2h.01"/></svg>
+            Oyunları keşfet
+          </a>
+        </nav>
+        <div class="mini-links" aria-label="Diğer bağlantılar">
+          <a href="/DraBornSeries/">DraBornSeries</a><span class="divider" aria-hidden="true"></span>
+          <a href="/DogancanKartal/">Hakkımızda</a><span class="divider" aria-hidden="true"></span>
+          <a href="/Support/">Destek</a>
+        </div>
+      </section>
+    </main>
+    <footer class="bottom-bar">
+      <span>© DRABORNEAGLE ECOSYSTEM</span>
+      <span class="right">ERROR 404 <span aria-hidden="true">✦</span> KEEP EXPLORING</span>
+    </footer>
+  </div>
+  <script>
+    // GitHub Pages serves this file with an HTTP 404 for non-existing URLs.
+    // Keep retired /Apps/ pages here, rather than converting them to a soft
+    // 404 by sending visitors and search engines to the homepage.
+    addEventListener('pageshow', function (event) {
+      if (event.persisted) location.reload();
+    });
+    (async function () {
+      var path = location.pathname + location.search + location.hash;
+      var pathname = location.pathname;
 
-  const legacyMatch = location.pathname.match(/^\/DraBornPark\/t\/([^/]+)\/?$/i);
-  if (legacyMatch) {
-    try {
-      const token = decodeURIComponent(legacyMatch[1]);
-      const response = await fetch('https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/drabornpark-public-contact', {
-        method:'POST',
-        headers:{'Content-Type':'application/json'},
-        body:JSON.stringify({action:'lookup',tagCode:token}),
-        cache:'no-store'
-      });
-      const data = await response.json();
-      const code = String(data?.snapshot?.nfcConnectionCode || data?.snapshot?.shortCode || '').trim();
-      if (!response.ok || !/^\d{4}-\d{4}$/.test(code)) throw new Error('legacy_tag_unresolved');
-      location.replace('/DraBornPark/tag/' + encodeURIComponent(code) + '?v=1070');
-      return;
-    } catch (_) {
-      location.replace('/DraBornPark/tag/?v=1070');
-      return;
-    }
-  }
+      function showError(message) {
+        document.documentElement.classList.remove('dkd-route-handoff');
+        if (message) {
+          var description = document.getElementById('error-description');
+          if (description) description.textContent = message;
+        }
+      }
 
-  if (location.pathname.startsWith('/DraBornSeries/')) {
-    try {
-      const response = await fetch('/DraBornSeries/index.html?v=074&ts=' + Date.now(), {cache:'no-store'});
-      if (!response.ok) throw new Error('series_shell_unavailable');
-      const html = await response.text();
-      document.open();
-      document.write(html);
-      document.close();
-      return;
-    } catch (_) {
-      document.body.textContent = 'DraBornSeries şu anda açılamadı. Lütfen bağlantını kontrol edip tekrar dene.';
-      return;
-    }
-  }
-  if (location.pathname.startsWith('/DraBornGate/')) {
-    sessionStorage.setItem('dkd_gate_route', path);
-    location.replace('/DraBornGate/');
-    return;
-  }
-  if (location.pathname.startsWith('/DraBornGarage/')) {
-    sessionStorage.setItem('dkd_garage_route', path);
-    location.replace('/DraBornGarage/');
-    return;
-  }
-  location.replace('/');
-})();
-</script>
+      // These retired pages must stay 404. Never redirect to "/" here.
+      if (/^\/Apps(?:\/|$)/i.test(pathname)) {
+        document.title = 'DraBornEagle | 404 — Eski Sayfa Kaldırıldı';
+        showError('Bu eski bağlantı kaldırıldı. Yeni oyunları, uygulamaları ve projeleri DraBornEagle ana sayfasından keşfedebilirsin.');
+        return;
+      }
+
+      var tagMatch = pathname.match(/^\/DraBornPark\/tag\/([^/]+)\/?$/i);
+      if (tagMatch) {
+        try {
+          var response = await fetch('/DraBornPark/tag/index.html?v=1070&ts=' + Date.now(), {
+            cache: 'no-store', headers: {'Cache-Control': 'no-cache'}
+          });
+          if (!response.ok) throw new Error('tag_shell_unavailable');
+          var html = await response.text();
+          document.open();
+          document.write(html);
+          document.close();
+          return;
+        } catch (_) {
+          showError('DraBornPark etiket sayfası şu anda açılamadı. Lütfen bağlantıyı kontrol edip tekrar dene.');
+          return;
+        }
+      }
+
+      var legacyMatch = pathname.match(/^\/DraBornPark\/t\/([^/]+)\/?$/i);
+      if (legacyMatch) {
+        try {
+          var token = decodeURIComponent(legacyMatch[1]);
+          var response = await fetch('https://xpdiwyxnnrmyvpcqwuyb.supabase.co/functions/v1/drabornpark-public-contact', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({action: 'lookup', tagCode: token}),
+            cache: 'no-store'
+          });
+          var data = await response.json();
+          var code = String((data && data.snapshot && (data.snapshot.nfcConnectionCode || data.snapshot.shortCode)) || '').trim();
+          if (!response.ok || !/^\d{4}-\d{4}$/.test(code)) throw new Error('legacy_tag_unresolved');
+          location.replace('/DraBornPark/tag/' + encodeURIComponent(code) + '?v=1070');
+          return;
+        } catch (_) {
+          location.replace('/DraBornPark/tag/?v=1070');
+          return;
+        }
+      }
+
+      if (/^\/DraBornSeries\//i.test(pathname)) {
+        try {
+          var response = await fetch('/DraBornSeries/index.html?v=074&ts=' + Date.now(), {cache:'no-store'});
+          if (!response.ok) throw new Error('series_shell_unavailable');
+          var html = await response.text();
+          document.open();
+          document.write(html);
+          document.close();
+          return;
+        } catch (_) {
+          showError('DraBornSeries şu anda açılamadı. Lütfen bağlantını kontrol edip yeniden dene.');
+          return;
+        }
+      }
+      if (/^\/DraBornGate\//i.test(pathname)) {
+        try { sessionStorage.setItem('dkd_gate_route', path); } catch (_) {}
+        location.replace('/DraBornGate/');
+        return;
+      }
+      if (/^\/DraBornGarage\//i.test(pathname)) {
+        try { sessionStorage.setItem('dkd_garage_route', path); } catch (_) {}
+        location.replace('/DraBornGarage/');
+        return;
+      }
+      showError();
+    })();
+  </script>
 </body>
 </html>
