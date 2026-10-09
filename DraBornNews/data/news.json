@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-10-08T19:46:01.150297Z",
+  "generatedAt": "2026-10-09T00:13:26.046243Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "605cee19632e07cf4d",
+      "title": "Study in The Lancet suggests AI could improve patient-physician relationships.",
+      "summary": "A peer-reviewed study in The Lancet evaluates Google's AMIE medical AI in a real-world primary care clinic.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/health/amie-clinical-study-lancet/",
+      "publishedAt": "2026-10-08T22:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_could_improve_patient-physic.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "e1501ba73d07a80b1e",
+      "title": "Elektrik verilen turşu neden ışıl ışıl parlar? Yıllar sonra cevabı bulundu",
+      "summary": "Prize takıldığında sarı-turuncu renkte parlayan turşular, yıllardır ilginç bir bilim gösterisi olarak kullanılıyor. Yeni araştırma ise bu gizemli parıltının ardındaki nedeni açıklıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/elektrik-verilen-tursu-neden-parlar-cevabi-sonunda-bulundu--211395",
+      "publishedAt": "2026-10-08T19:48:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211395/1200x675elektrik-verilen-tursu-neden-parlar-cevabi-sonunda-bulundu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "30708fc626434a6383",
       "title": "Güneş, rüzgar ve su Türkiye’nin elektriğinin yarısından fazlasını karşıladı",
@@ -627,18 +651,6 @@
       "editorial": false
     },
     {
-      "id": "bd47cf55208b23d501",
-      "title": "Casio aksesuar olabilen yeni Baby-G serisi kol saatini duyurdu",
-      "summary": "Casio BGD-10KPM-7 kol saati Baby Molly karakterinin 20. yılına özel olarak Pop Mart oyuncak firması ile birlikte geliştirildi. Ekranda özel bir animasyon mevcut.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/casio-bgd-10kpm-7-tanitildi-iste-ozellikleri-ve-fiyati--211365",
-      "publishedAt": "2026-10-08T11:04:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211365/1200x675casio-bgd-10kpm-7-tanitildi-iste-ozellikleri-ve-fiyati.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "7fe24400f76656030b",
       "title": "Microsoft Mıknatıslı Type-C’yi Duyurdu: Kablo Çekilince Laptop Yere Düşmeyecek!",
       "summary": "Microsoft, Surface Laptop Ultra’da Type-C bağlantısına manyetik bir yapı kazandırıyor. Magnetic Connect adı verilen teknoloji, MagSafe’in güvenliğini Type-C’nin çok yönlülüğüyle bir araya getiriyor.",
@@ -855,18 +867,6 @@
       "editorial": false
     },
     {
-      "id": "e6e1d2a9f0a4e91a5d",
-      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
-      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
-      "publishedAt": "2026-10-06T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "186442aeaf00c1e5da",
       "title": "Producers can now vibe code their own music production tools using Google Flow Music.",
       "summary": "Every artist, producer, and songwriter works differently. To match those individual creative workflows, Spaces in Google Flow Music lets creators build custom instrument",
@@ -875,6 +875,18 @@
       "publishedAt": "2026-10-06T16:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/119A6335_1.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "e6e1d2a9f0a4e91a5d",
+      "title": "EmbeddingGemma 2: an open, lightweight multimodal embedding model",
+      "summary": "Introducing EmbeddingGemma 2, an open multimodal embedding model optimized for privacy-first use cases",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/embeddinggemma-2/",
+      "publishedAt": "2026-10-06T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/embeddinggemma2-banner_169.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -963,14 +975,14 @@
       "editorial": false
     },
     {
-      "id": "366d9f4e5a40d0265e",
-      "title": "I replaced traditional coding tests with real conversations about how my students solve problems using AI.",
-      "summary": "Replace coding tests with AI-driven interviews using Google Gemini in Colab. See how this professor evaluates student judgment. Read the full report.",
+      "id": "e19c9e6ee550c24438",
+      "title": "My eighth-grade students built our school newscast from scratch with Gemini.",
+      "summary": "Eighth graders built The Cougar Rumble newscast using Gemini and Google Docs. See how these students streamlined their production workflow today.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/gemini-google-colab/",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/gemini-student-newscast/",
       "publishedAt": "2026-10-05T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ProfMY2.max-600x600.format-webp.webp",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tori_1.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -995,18 +1007,6 @@
       "publishedAt": "2026-10-05T16:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Chanel.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "3b44381c0318cdccb4",
-      "title": "World Teachers’ Day 2026",
-      "summary": "To celebrate World Teachers’ Day 2026, educators share their stories about how they use tech in the classroom.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/world-teachers-day-2026/",
-      "publishedAt": "2026-10-05T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/World_Teachers_Day_collection_h.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
