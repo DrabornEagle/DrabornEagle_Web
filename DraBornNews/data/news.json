@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-10-09T19:22:47.588412Z",
+  "generatedAt": "2026-10-09T23:25:41.193623Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "6f6e77187fe516179c",
+      "title": "OpenAI’ın geliri beklentilerin 20 milyar dolar altında kaldı: Teknoloji hisseleri sarsıldı",
+      "summary": "OpenAI’ın gelirinin önceki tahminlerden 20 milyar dolar düşük kalması teknoloji hisselerini sarstı. Nasdaq yüzde 1,25 gerilerken Nvidia, AMD ve Oracle gibi şirketler de değer kaybetti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/openai-in-geliri-beklentilerin-20-milyar-dolar-altinda-kaldi--211440",
+      "publishedAt": "2026-10-09T19:50:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211440/1200x675openai-in-geliri-beklentilerin-20-milyar-dolar-altinda-kaldi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "83b6a49d165e00b252",
+      "title": "Laptoplarda ekran kartının önemi: Harici vs dahili GPU kıyaslaması",
+      "summary": "Ekran kartı veya GPU, laptop performansını doğrudan etkileyen bileşenlerden biri. Peki dahili ve harici GPU arasındaki farklar neler? veya Hangisini seçmeli? İşte detaylar.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dahili-ve-harici-ekran-karti-gpu-farklari--211283",
+      "publishedAt": "2026-10-09T19:37:47Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211283/1200x675dahili-ve-harici-ekran-karti-gpu-farklari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "3acbc899b927cca3a4",
       "title": "Dünyanın ilk RGB sıvı soğutmalı oyun telefonu geliyor",
@@ -89,7 +113,7 @@
     {
       "id": "2f85d30f46b0e9ba6a",
       "title": "DMZ — 5 Features to Get Excited for in Call of Duty: Modern Warfare 4’s New Mode",
-      "summary": "Call of Duty’s upcoming DMZ mode sounds like it’s shaping up to be something special. Set on the new Haijin map and inspired by the events and locations from Modern Warfare 4’s Campaign, this open-world combat environment will challenge you to loot, complete objectives, fight both enemies and rival Operators, and extract before everything you’ve",
+      "summary": "Call of Duty’s upcoming DMZ mode sounds like it’s shaping up to be something special. Set on the new Hajin map and inspired by the events and locations from Modern Warfare 4’s Campaign, this open-world combat environment will challenge you to loot, complete objectives, fight both enemies and rival Operators, and extract before everything you’ve",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/dmz-5-features-get-excited-for-mw4/",
       "publishedAt": "2026-10-09T17:00:00Z",
@@ -587,42 +611,6 @@
       "publishedAt": "2026-10-09T11:06:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211418/1200x675akinci-mgk-muhimmatiyla-ilk-atis-testini-tam-isabetle-tamamladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7929409320c601eeb9",
-      "title": "En çok satan bilgisayar markaları açıklandı: İşte PC pazarının lideri",
-      "summary": "IDC'ye göre, 2026 3. çeyreğinde küresel PC satışları %20.1 oranında düştü. Üreticiler, ikinci çeyreğe göre %9 daha az bilgisayar satışı gerçekleştirdi. Peki, en çok satan bilgisayar markası hangisi?",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/2026-da-en-cok-satan-bilgisayar-pc-markalari-aciklandi--211416",
-      "publishedAt": "2026-10-09T10:44:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211416/1200x6752026-da-en-cok-satan-bilgisayar-pc-markalari-aciklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d0a5ca38cce63e109d",
-      "title": "Apple'ın dokunmatik ekranlı MacBook'u için tarih verildi",
-      "summary": "Apple'ın dokunmatik ekranlı MacBook'u için yeni tarih gündeme geldi. Mark Gurman'a göre şirket, M6 işlemcili Mac modelleri ve OLED iPad mini'yi de yakında tanıtabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-in-dokunmatik-ekranli-macbook-u-icin-tarih-verildi--211413",
-      "publishedAt": "2026-10-09T10:22:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211413/1200x675apple-in-dokunmatik-ekranli-macbook-u-icin-tarih-verildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "77b78b726faefcbe6a",
-      "title": "Forza Horizon 6, PS5'e ne zaman geliyor? İşte çıkış tarihi",
-      "summary": "Forza Horizon 6'nın PS5 çıkış tarihi belli oldu. Yarış oyunu, PlayStation 5'e gelirken ilk genişleme paketiyle de oyuncuların karşısına çıkacak. İşte çıkış tarihi...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/forza-horizon-6-ps5-e-ne-zaman-geliyor-iste-cikis-tarihi--211415",
-      "publishedAt": "2026-10-09T10:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211415/1200x675forza-horizon-6-ps5-e-ne-zaman-geliyor-iste-cikis-tarihi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-02T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3W896Z08YJWZG5GH6T03D67.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "3a7c567dce310cad1a",
+      "title": "2026 Birthday week: network performance update",
+      "summary": "Cloudflare now ranks as the fastest provider across 74% of the top 1,000 global networks. By incorporating background telemetry from Cloudflare Challenge Pages, we have expanded our real-user measurement scale while maintaining user privacy.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/network-performance-birthday-week-2026/",
+      "publishedAt": "2026-10-02T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3T5G957VG05271ET71MQ7TS.png",
       "language": "en",
       "editorial": false
     }
