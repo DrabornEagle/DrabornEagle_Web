@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-09T23:25:41.193623Z",
+  "generatedAt": "2026-10-10T02:37:15.164437Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "a0905eb0be4e2886cf",
+      "title": "15 yaş altına sosyal medya yasaklandı: İşte tüm detaylar",
+      "summary": "Resmi Gazete’de yayımlanan yönetmelikle 15 yaş altına sosyal medya yasağı getirildi. Platformlar yaş doğrulaması yapacak, çocuk hesaplarına yönelik yeni kısıtlamalar 1 Kasım’da yürürlüğe girecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/15-yas-altina-sosyal-medya-yasaklandi-iste-tum-detaylar--211451",
+      "publishedAt": "2026-10-09T23:31:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211451/1200x67515-yas-altina-sosyal-medya-yasaklandi-iste-tum-detaylar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "6f6e77187fe516179c",
       "title": "OpenAI’ın geliri beklentilerin 20 milyar dolar altında kaldı: Teknoloji hisseleri sarsıldı",
@@ -599,18 +611,6 @@
       "publishedAt": "2026-10-09T11:28:00Z",
       "category": "Oyun",
       "image": "https://www.donanimhaber.com/images/images/haber/211421/1200x675xbox-film-ve-dizi-projeleri-icin-yeni-bir-bolum-kurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4da9a2078c7367a0f6",
-      "title": "AKINCI, MGK mühimmatıyla ilk atış testini tam isabetle tamamladı",
-      "summary": "Baykar’ın AKINCI TİHA’sı, ASELSAN tarafından geliştirilen Morfoz Güdüm Kiti ile ilk atış testinde hedefini tam isabetle vurdu. Test, Saros Körfezi’nde başarıyla tamamlandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/akinci-mgk-muhimmatiyla-ilk-atis-testini-tam-isabetle-tamamladi--211418",
-      "publishedAt": "2026-10-09T11:06:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211418/1200x675akinci-mgk-muhimmatiyla-ilk-atis-testini-tam-isabetle-tamamladi.jpg",
       "language": "tr",
       "editorial": false
     },
