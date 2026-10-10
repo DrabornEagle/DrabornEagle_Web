@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-10T19:55:54.986860Z",
+  "generatedAt": "2026-10-10T23:22:41.305940Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "2b7428a1c087e461f3",
+      "title": "Bu girişim, yapay zekâyı kullanarak orman yangınlarını NASA'dan bile hızlı tespit ediyor",
+      "summary": "2026 Earthshot Prize finalistleri arasına giren Satellites on Fire, yapay zekâ ve termal uydu görüntülerini kullanarak orman yangınlarını NASA'dan ortalama 35 dakika daha hızlı tespit edebiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bu-girisim-orman-yanginlarini-nasa-dan-bile-hizli-tespit-ediyor--211473",
+      "publishedAt": "2026-10-10T20:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211473/1200x675bu-girisim-orman-yanginlarini-nasa-dan-bile-hizli-tespit-ediyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "a61471b6076ba8d7fb",
       "title": "İlk Apple TV 4K resmen eskidi: Yeni model yakında geliyor",
@@ -323,18 +335,6 @@
       "publishedAt": "2026-10-10T07:00:02Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/687026/687026-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ea42828ee70315763e",
-      "title": "Sony'nin VR patentleri Meta'ya geçti: PSVR 3 tehlikede mi?",
-      "summary": "Sony'nin 419 VR, AR ve XR patentini Meta'ya devrettiği ortaya çıktı. Gelişme PSVR 3'ün geleceğini belirsizleştirirken Titanfall 2 için ücretsiz VR modu yayınlandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/sony-nin-vr-patentleri-meta-ya-gecti-psvr-3-tehlikede-mi--211452",
-      "publishedAt": "2026-10-10T06:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211452/1200x675sony-nin-vr-patentleri-meta-ya-gecti-psvr-3-tehlikede-mi.jpg",
       "language": "tr",
       "editorial": false
     },
