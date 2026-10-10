@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.expo/
+.env
+.env.local
+*.aab
+*.apk
+*.keystore
+supabase/.temp/
+dist-android/
