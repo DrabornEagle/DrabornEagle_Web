@@ -1,7 +1,163 @@
 {
-  "generatedAt": "2026-10-10T09:39:00.800420Z",
+  "generatedAt": "2026-10-10T15:48:04.150358Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "7b9fcdc3e4859e1085",
+      "title": "Honda’dan elektrikli araçları yolda giderken şarj edecek teknoloji",
+      "summary": "Honda, elektrikli araçları hareket halindeyken kablosuz şarj edecek yol teknolojisi geliştiriyor. İlk etapta ağır ticari araçlara odaklanan sistemin testleri 2027'de başlayacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/honda-dan-elektrikli-araclari-yolda-giderken-sarj-edecek-teknoloj--211455",
+      "publishedAt": "2026-10-10T15:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211455/1200x675honda-dan-elektrikli-araclari-yolda-giderken-sarj-edecek-teknoloj.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dff4759f628ce37531",
+      "title": "Google Chat, HDR emoji desteğiyle daha canlı görünebilir",
+      "summary": "Google Chat için geliştirilen HDR emoji desteği, uyumlu ekranlarda desteklenen emojilerin daha yüksek parlaklık ve kontrastla görüntülenmesini sağlayabilir. İşte detaylar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-chat-hdr-emoji-destegiyle-daha-canli-gorunebilir--211467",
+      "publishedAt": "2026-10-10T15:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211467/1200x675google-chat-hdr-emoji-destegiyle-daha-canli-gorunebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "75f42d124f85f8f165",
+      "title": "Samsung kulaklıklarda yeni güvenlik önlemi: Isındığında kapanacak!",
+      "summary": "Samsung, aşırı ısınan Galaxy Buds kulaklığın güvenlik için kutusundan çıkarılmasını, soğuyana kadar geri koyulmamasını tavsiye ediyordu. Güncellemeyle birlikte bu değişecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-buds-a-yeni-ozellik-isindiginda-kapanacak--211443",
+      "publishedAt": "2026-10-10T14:30:00Z",
+      "category": "Güvenlik",
+      "image": "https://www.donanimhaber.com/images/images/haber/211443/1200x675samsung-galaxy-buds-a-yeni-ozellik-isindiginda-kapanacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "76c652ae280ead88cb",
+      "title": "Oppo'nun yeni telefonu 16:9 ekrana ve 1 mm çerçevelere sahip olacak",
+      "summary": "OPPO'nun 16:9 ekran oranına sahip yeni bir amiral gemisi telefon geliştiriyor. Yaklaşık 81 mm genişliğinde olması beklenen cihaz, 1 mm'lik ince çerçeveleriyle dikkat çekecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/oppo-nun-yeni-telefonu-16-9-ekrana-sahip-olacak--211448",
+      "publishedAt": "2026-10-10T14:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211448/1200x675oppo-nun-yeni-telefonu-16-9-ekrana-sahip-olacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "59b73a6a33d7312547",
+      "title": "Yüksek RAM'e sahip en iyi laptop modelleri",
+      "summary": "Oyun, video edit ve ağır programları çalıştırabilecek 32 GB RAM'li laptop arayanlar buraya! İşte 32GB, 64GB, 128GB gibi yüksek RAM'e sahip en iyi dizüstü bilgisayar fiyatları ve modeller:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/en-guclu-laptoplar-32-gb-ram-li-laptop-fiyatlari--211364",
+      "publishedAt": "2026-10-10T13:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211364/1200x675en-guclu-laptoplar-32-gb-ram-li-laptop-fiyatlari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a159c00c8aa8620226",
+      "title": "Yeni BYD Seagull ön siparişe açıldı: 15 bin dolardan başlayacak",
+      "summary": "BYD, uygun fiyatlı elektrikli otomobili Seagull’un ikinci nesli için ön siparişleri açtı. Daha büyük gövde, daha güçlü motor ve LiDAR sensörüyle gelen yeni model neler sunuyor?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-byd-seagull-on-siparise-acildi-15-bin-dolardan-baslayacak--211444",
+      "publishedAt": "2026-10-10T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211444/1200x675yeni-byd-seagull-on-siparise-acildi-15-bin-dolardan-baslayacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c5b27bed50ccf0d53b",
+      "title": "Intel’in gelişmiş çip paketleme teknolojisi devlerin radarında: Beş şirket gündemde",
+      "summary": "Intel, yapay zeka çiplerine yönelik artan talebi fırsata çevirerek TSMC’ye gelişmiş paketleme alanında rakip olmayı hedefliyor. Amazon, Google, Microsoft ve Nvidia gibi devler Intel'i tercih edebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/intel-in-gelismis-cip-paketleme-teknolojisi-devlerin-radarinda--211442",
+      "publishedAt": "2026-10-10T12:00:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211442/1200x675intel-in-gelismis-cip-paketleme-teknolojisi-devlerin-radarinda.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fdeeada3e00edcd3c7",
+      "title": "Amazon'da indirimli fiyatlara ek indirim: Gıda ve günlük ihtiyaç ürünlerinde fırsat!",
+      "summary": "Amazon Prime Alışveriş Festivali’nde gıda, temizlik, bebek ürünleri ve kişisel bakım kategorilerinde sepette ek indirimler ve 365 günün en düşük fiyatları devam ediyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amazon-da-gida-ve-gunluk-ihtiyac-urunlerinde-ek-indirim-firsati--211465",
+      "publishedAt": "2026-10-10T11:48:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211465/1200x675amazon-da-gida-ve-gunluk-ihtiyac-urunlerinde-ek-indirim-firsati.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7407663808b1e023b5",
+      "title": "Şeytanın aklına gelmez: Ledger cüzdanları boşaltılıyor",
+      "summary": "Güvenli olduğu için kripto varlıklarını soğuk cüzdanlarda taşıyanlara soğuk duş. Ünlü LEdger markasının belirli cüzdan modellerine siber saldırı yapıldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bitcoin-varliklari-tehlikede--211461",
+      "publishedAt": "2026-10-10T11:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211461/1200x675bitcoin-varliklari-tehlikede.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5802d80ac684815b9a",
+      "title": "300 TL'lik tek bir cıvata yüzünden 1.7 milyon Skoda geri çağrıldı",
+      "summary": "Maliyeti sadece 6 euro olan bir cıvata, dev operasyona yol açtı. Skoda, direksiyon sistemindeki güvenlik riski nedeniyle dünya çapında 1.7 milyondan fazla aracını geri çağırdı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/300-tl-lik-tek-bir-civata-yuzunden-1-7-milyon-skoda-geri-cagrildi--211449",
+      "publishedAt": "2026-10-10T11:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211449/1200x675300-tl-lik-tek-bir-civata-yuzunden-1-7-milyon-skoda-geri-cagrildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "db9f433f5f63878b26",
+      "title": "Amazon Prime Alışveriş Festivali'nde Günün En İyi İndirimleri",
+      "summary": "Amazon'da büyük indirimler devam ediyor. Günün en iyi fırsatları burada!",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/amazon-prime-alisveris-festivali-gunun-en-iyi-indirimleri-h226786.html",
+      "publishedAt": "2026-10-10T10:50:44Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/691030/691030-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0c219d2dab7a01aa7a",
+      "title": "Korsan oyunlara darbe: Denuvo hamlesini yaptı",
+      "summary": "Star Wars: Galactic Racer oyunu ile birlikte yeni bir korsa koruması devreye girdi. Koruma bilindik bir yöntemi devre dışı bırakarak oyunun kırılmasını engelliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/denuvo-dan-yeni-koruma-yontemi--211460",
+      "publishedAt": "2026-10-10T10:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211460/1200x675denuvo-dan-yeni-koruma-yontemi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3196286408797ca772",
+      "title": "Microsoft, Intel, AMD ve NVIDIA'dan sürücülerini iyileştirmesini istiyor",
+      "summary": "Microsoft, Windows 11'de yaşanan sistem çökmelerini ve sürücü kaynaklı sorunları azaltmak için Intel, AMD ve NVIDIA'nın sürücü geliştirme ve test süreçlerini iyileştirmesini istiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/microsoft-windows-11-suruculerinin-iyilestirmesini-istiyor--211446",
+      "publishedAt": "2026-10-10T10:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211446/1200x675microsoft-windows-11-suruculerinin-iyilestirmesini-istiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "fa5c7db3f47b541138",
       "title": "BİM marketlerde 3D yazıcı ve lazer gravür cihazı satılacak",
@@ -219,42 +375,6 @@
       "editorial": false
     },
     {
-      "id": "1a52ed7fcd8d45b4a0",
-      "title": "LEGO Marvel Skyline seti duyuruldu",
-      "summary": "LEGO Marvel Skyline seti Marvel yapımlarında bugüne kadar gördüğümüz toplam 14 ikonik mekânı kompakt bir alana sığdırırken efsane araçları da unutmamış.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/lego-marvel-skyline-geliyor--211429",
-      "publishedAt": "2026-10-09T17:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211429/1200x675lego-marvel-skyline-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0b014e83572bc19368",
-      "title": "Ghost of Tsushima animesinin ne zaman yayınlanacağı belli oldu",
-      "summary": "Son yılların en sevilen oyunlarından olan Ghost of Tsushima animeye dönüşüyor. Crunchyroll tarafından hazırlanan Ghost of Tsushima animesinin ne zaman yayınlanacağı belli oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ghost-of-tsushima-animesinin-ne-zaman-cikacagi-belli-oldu--211437",
-      "publishedAt": "2026-10-09T17:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211437/1200x675ghost-of-tsushima-animesinin-ne-zaman-cikacagi-belli-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b89aa312f6d120d1f7",
-      "title": "Xbox'ta ücretsiz: ARC Raiders, S.T.A.L.K.E.R 2 ve dahası",
-      "summary": "Xbox Game Pass kullanıcıları için ücretsiz oyun günleri başladı. Önümüzdeki günlerde ARC Raiders, S.T.A.L.K.E.R 2 dahil toplam 7 oyun hafta sonu boyunca ücretsiz erişilebilir olacak..",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-ta-binlerce-tl-degerinde-7-oyun-ucretsiz--211422",
-      "publishedAt": "2026-10-09T17:11:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211422/1200x675xbox-ta-binlerce-tl-degerinde-7-oyun-ucretsiz.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "2f85d30f46b0e9ba6a",
       "title": "DMZ — 5 Features to Get Excited for in Call of Duty: Modern Warfare 4’s New Mode",
       "summary": "Call of Duty’s upcoming DMZ mode sounds like it’s shaping up to be something special. Set on the new Hajin map and inspired by the events and locations from Modern Warfare 4’s Campaign, this open-world combat environment will challenge you to loot, complete objectives, fight both enemies and rival Operators, and extract before everything you’ve",
@@ -264,30 +384,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/MW4_DMZDeepDive_General_01_BRANDED-2c427a0a198e8cefc2de-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f96c26278409aa6c18",
-      "title": "Cinayet kurbanının yapay zekâyla mahkemede konuşturulması yeni bir tartışma başlattı",
-      "summary": "ABD'de bir cinayet kurbanı yapay zekâ kullanılarak mahkemede konuşturuldu. Kurbanın dijital olarak yeniden oluşturulan görüntüsünün karara etki etmesi yeni bir tartışma başlattı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cinayet-kurbanini-yapay-zek-yla-mahkemede-konusturdular--211423",
-      "publishedAt": "2026-10-09T16:48:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211423/1200x675cinayet-kurbanini-yapay-zek-yla-mahkemede-konusturdular.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3e66c6644acd8104b9",
-      "title": "Avrupa’da elektrik bazı saatlerde bedavadan da ucuz, akşamları ise fiyatlar fırlıyor",
-      "summary": "Avrupa’da güneş enerjisi üretimi elektrik fiyatlarını negatife düşürürken aşırı sıcaklar fiyatları 600 euroya kadar çıkardı. İspanya ve Portekiz, negatif fiyatların en sık görüldüğü ülkeler oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/avrupa-da-elektrik-bazi-saatlerde-bedavadan-da-ucuz-oldu--211431",
-      "publishedAt": "2026-10-09T16:02:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211431/1200x675avrupa-da-elektrik-bazi-saatlerde-bedavadan-da-ucuz-oldu.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -347,54 +443,6 @@
       "publishedAt": "2026-10-09T15:47:16Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/691876/691876-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a0d08c10af4906d9aa",
-      "title": "YouTube Shorts nasıl kapatılır? İşte adım adım yapılması gerekenler",
-      "summary": "YouTube Shorts nasıl kapatılır? YouTube Shorts videoları arasında kaybolmadan uygulamayı kullanmak mümkün. Mobil uygulamadaki bir ayar sayesinde kısa video akışını tamamen kaldırabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/youtube-shorts-nasil-kapatilir-adim-adim-yapilacaklar--211438",
-      "publishedAt": "2026-10-09T15:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211438/1200x675youtube-shorts-nasil-kapatilir-adim-adim-yapilacaklar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e8a05054cc4d338b55",
-      "title": "AB’nin 2035 içten yanmalı motor yasağı daha da gevşeyebilir",
-      "summary": "Almanya ve Fransa, otomobillerde CO² emisyonlarını azaltma hedefinin yüzde 90 yerine yüzde 80'e çekilmesini ve üreticilere daha uzun süre tanınmasını istiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ab-nin-2035-icten-yanmali-motor-yasagi-daha-da-gevseyebilir--211424",
-      "publishedAt": "2026-10-09T15:18:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211424/1200x675ab-nin-2035-icten-yanmali-motor-yasagi-daha-da-gevseyebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "060c870d2f5bfaf5ee",
-      "title": "7 milyon liralık bütçeyle ne alınır? Volvo ES90 vs BMW i5, Mercedes EQE ve Porsche Taycan",
-      "summary": "Volvo ES90 Türkiye'de 7.027.440 TL'den satışa çıktı. Peki aynı bütçeyle BMW i5, Mercedes EQE veya Porsche Taycan almak daha mı mantıklı? Hepsini rakamlarla yan yana koyduk.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/7-milyon-liralik-butceyle-ne-alinir-volvo-es90-vs-bmw-mercedes--211410",
-      "publishedAt": "2026-10-09T15:01:22Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211410/1200x6757-milyon-liralik-butceyle-ne-alinir-volvo-es90-vs-bmw-mercedes.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "62538a5072e2db4140",
-      "title": "GPT-6, ChatGPT’nin tüm abonelik katmanlarına geliyor",
-      "summary": "OpenAI, GPT-6 modelini ChatGPT’nin tüm aboneliklerine getiriyor. Intelligent UI özelliği sayesinde sohbet botu, sorulara özel etkileşimli tablolar, grafikler ve kişisel araçlar oluşturabilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gpt-6-chatgpt-nin-tum-abonelik-katmanlarina-geliyor--211427",
-      "publishedAt": "2026-10-09T14:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211427/1200x675gpt-6-chatgpt-nin-tum-abonelik-katmanlarina-geliyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -483,18 +531,6 @@
       "editorial": false
     },
     {
-      "id": "6eacbcf490ca17968e",
-      "title": "Enerji devinin sistemlerine şifresiz erişim sağlayan açık bulundu",
-      "summary": "Sungrow’un iSolarCloud platformunda parolayı olmadan kullanıcı hesaplarına erişilmesine imkan tanıyan kritik bir güvenlik açığı bulundu. Şirket, açığı kısa sürede kapattı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/enerji-devinin-sistemlerine-sifresiz-erisim-saglayan-acik-bulundu--211433",
-      "publishedAt": "2026-10-09T14:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211433/1200x675enerji-devinin-sistemlerine-sifresiz-erisim-saglayan-acik-bulundu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "66eb3c0f6fc3856247",
       "title": "Süpürme ve Silme İşlemi Nasıl Aynı Anda Yapılabiliyor?",
       "summary": "Yüksek hızda hava emişi yapan bir sistemle, suyu zeminle buluşturan bir sistem birbirine karışmadan, aerodinamik olarak nasıl aynı başlıkta çalışabiliyor?",
@@ -539,30 +575,6 @@
       "publishedAt": "2026-10-09T14:18:07Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/691795/691795-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9d456e29e4ced38e45",
-      "title": "Claude Artık Canlı Gösterge Panelleri ve Hareketli Açıklamalar Üretebiliyor: İşte Yeni Dashboards ve Motion Özelliği!",
-      "summary": "Anthropic, Claude için gerçek zamanlı güncellenen gösterge panelleri oluşturan Dashboards ve video üreten Motion araçlarını tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/claude-artik-canli-gosterge-panelleri-ve-hareketli-aciklamalar-uretebiliyor-h226750.html",
-      "publishedAt": "2026-10-09T14:17:48Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/691771/691771-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "696eb2e5f8b4a24e88",
-      "title": "iPhone Air 2 daha ince gövde ve daha büyük pille gelebilir",
-      "summary": "Apple’ın gelecek yıl tanıtması beklenen iPhone Air 2 modelinin 5,2 mm kalınlığında olacağı iddia ediliyor. Yeni modelin daha ince tasarıma rağmen daha büyük pille gelmesi bekleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-air-2-daha-ince-govde-ve-daha-buyuk-pille-gelebilir--211425",
-      "publishedAt": "2026-10-09T14:12:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211425/1200x675iphone-air-2-daha-ince-govde-ve-daha-buyuk-pille-gelebilir.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-02T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3T5G957VG05271ET71MQ7TS.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "c0a0a5f5affd26928d",
-      "title": "Introducing Clef: our open-source decision models, and new RL fine-tuning platform",
-      "summary": "We are introducing Clef and Clef-flash, open-source decision models hosted on Workers AI for high-speed classification and agentic workflows. Also launching: a new reinforcement learning platform that allows developers to fine-tune decision models using their own data.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/clef-decision-models/",
-      "publishedAt": "2026-10-01T15:34:02Z",
-      "category": "Yapay Zeka",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3TJPKAE7MFBW626XHNC9QVA.png",
       "language": "en",
       "editorial": false
     }
