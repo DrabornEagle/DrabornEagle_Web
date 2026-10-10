@@ -144,7 +144,7 @@ v0.7 doğrulaması: TypeScript, lint, 29 birim testi, web export, Android JavaSc
 
 Supabase projesi: **DraBorn-Park-Garage-Series** (`xpdiwyxnnrmyvpcqwuyb`).
 
-DraBornStyle daha önce `public.dbs_profiles`, `public.dbs_notifications` ve başka `dbs_` tablolarını kullandığı için DraBornSeries ayrı **drabornseries** şemasına kuruldu. Böylece istenen adlar aynen korunur:
+DraBornSeries verileri diğer uygulamalardan bağımsız **drabornseries** şemasında tutulur. İstenen tablo adları bu şemada korunur:
 
 - `drabornseries.dbs_profiles`
 - `drabornseries.dbs_series`
