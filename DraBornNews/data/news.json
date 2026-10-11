@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-11T19:39:41.792416Z",
+  "generatedAt": "2026-10-11T23:32:27.532654Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "66c3ee3cf51ab8aec8",
+      "title": "Elon Musk, Donald Trump istedi diye SpaceXAI'ın ismini SpaceXSI yaptı",
+      "summary": "Donald Trump'ın bundan sonra \"yapay zekâ\" (artificial intelligence) değil, \"süper zekâ\" (super intelligence) diyelim çıkışına destek veren Elon Musk, SpaceXAI'ın ismini değiştirdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/elon-musk-donald-trump-icin-spacexai-ismini-degistirdi--211489",
+      "publishedAt": "2026-10-11T19:51:50Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211489/1200x675elon-musk-donald-trump-icin-spacexai-ismini-degistirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "ddbe1317777e0f336d",
       "title": "Apple HomeView geliyor: Akıllı evin komuta merkezi olacak",
@@ -227,30 +239,6 @@
       "publishedAt": "2026-10-11T07:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211475/1200x675yeni-zam-kapida-mi-amd-gddr6-bellek-fiyatlarini-artirdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "17d7680bb810f80f86",
-      "title": "Epic Games'in yeni ücretsiz oyunları belli oldu: İşte bu haftanın oyunları",
-      "summary": "Epic Games Store, 15-22 Ekim tarihleri arasında Agent A: A puzzle in disguise ve Bad Cheese oyunlarını ücretsiz olarak sunacak. İşte bu haftanın oyunları.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/epic-games-in-yeni-ucretsiz-oyunlari-belli-oldu--211474",
-      "publishedAt": "2026-10-11T06:30:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211474/1200x675epic-games-in-yeni-ucretsiz-oyunlari-belli-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2b7428a1c087e461f3",
-      "title": "Bu girişim, yapay zekâyı kullanarak orman yangınlarını NASA'dan bile hızlı tespit ediyor",
-      "summary": "2026 Earthshot Prize finalistleri arasına giren Satellites on Fire, yapay zekâ ve termal uydu görüntülerini kullanarak orman yangınlarını NASA'dan ortalama 35 dakika daha hızlı tespit edebiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bu-girisim-orman-yanginlarini-nasa-dan-bile-hizli-tespit-ediyor--211473",
-      "publishedAt": "2026-10-10T20:30:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211473/1200x675bu-girisim-orman-yanginlarini-nasa-dan-bile-hizli-tespit-ediyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-09-29T06:30:04Z",
       "category": "Yapay Zeka",
       "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f524e9886f009cfdc3",
+      "title": "Introducing the new Copilot with Home, Code and Autopilot",
+      "summary": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition. Today we’re introducing the new Copilot to connect the tools people rely on with the next generation of capabilities they’ll need to build, customize and scale AI...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "publishedAt": "2026-09-25T12:03:50Z",
+      "category": "Yapay Zeka",
+      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Home-FINAL-2.png",
       "language": "en",
       "editorial": false
     }
