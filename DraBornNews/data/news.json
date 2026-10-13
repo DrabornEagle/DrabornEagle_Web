@@ -1,7 +1,79 @@
 {
-  "generatedAt": "2026-10-12T19:43:36.322789Z",
+  "generatedAt": "2026-10-13T01:55:43.839613Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "70b4b82073d5e093e4",
+      "title": "TikTok Videosu Nasıl Hızlandırılır, Yavaşlatılır?",
+      "summary": "TikTok videosu nasıl hızlandırılır veya yavaşlatılır? Video çekerken hız değiştirme, ağır çekim kullanma ve izlenen videoların oynatma hızını ayarlama adımlarını anlattık.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/tiktok-videosu-hizlandirma-yavaslatma-h224644.html",
+      "publishedAt": "2026-10-12T22:27:05Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/684175/684175-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "789ce4ba324ba7333e",
+      "title": "Instagram Reels Taslakları Nerede, Nasıl Silinir?",
+      "summary": "Instagram Reels taslakları nerede bulunur ve istemediğiniz taslaklar nasıl silinir? Reels taslaklarını bulma, silme ve kaybolan taslaklarla ilgili bilmeniz gerekenleri anlatıyoruz.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/instagram-reels-taslaklari-nerede-nasil-silinir-h224657.html",
+      "publishedAt": "2026-10-12T22:26:54Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/684259/684259-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d40466cb688f06f0e0",
+      "title": "WorldPlay2, görselleri içinde özgürce dolaşabileceğiniz dünyalara dönüştürüyor",
+      "summary": "Tek bir görselden yola çıkarak, içinde özgürce dolaşabileceğiniz etkileşimli dünyalar oluşturabilen WorldPlay2 adlı yapay zekânın model ağırlıkları ve kodları yayımlandı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/worldplay2-tek-bir-gorselden-interaktif-3d-dunyalar-olusturuyor--211541",
+      "publishedAt": "2026-10-12T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211541/1200x675worldplay2-tek-bir-gorselden-interaktif-3d-dunyalar-olusturuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "63f3cbffa76a60542b",
+      "title": "Güneş panellerinde bilinen sınırlar aşılabilir: Yeni yöntem enerji kaybını azaltıyor",
+      "summary": "Güneş hücrelerinin verimliliğini sınırlayan fiziksel engellerden birini aşmayı hedefleyen İspanyol araştırmacılar, teorik verimlilik sınırını %33'ten %43'e çıkarabilecek yeni bir yöntem geliştirdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gunes-panellerinde-bilinen-sinirlar-asilabilir--211532",
+      "publishedAt": "2026-10-12T20:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211532/1200x675gunes-panellerinde-bilinen-sinirlar-asilabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c1e2316a53b3c3e475",
+      "title": "Ukrayna, Rusya’nın yapay zeka ve bulut altyapısını vurdu: Yandex çöktü",
+      "summary": "Ukrayna, Rusya’daki Yandex veri merkezlerine dronlar ile saldırılar düzenledi. Saldırılar sonucunda ülkenin yapay zeka ve bulut hizmetlerinde geniş çaplı kesintiler yaşandı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ukrayna-rusya-nin-yapay-zeka-altyapisini-vurdu-yandex-coktu--211536",
+      "publishedAt": "2026-10-12T20:07:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211536/1200x675ukrayna-rusya-nin-yapay-zeka-altyapisini-vurdu-yandex-coktu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2f42848596d8df5596",
+      "title": "Enerji depolama pazarında muazzam büyüme bekleniyor: Kapasite 7 TWh'ı aşacak",
+      "summary": "Küresel enerji depolama pazarının 2035'e kadar 7 kat büyümesi bekleniyor. Wood Mackenzie'ye göre bu büyümede, bugüne kadar gölgede kalan ticari ve endüstriyel batarya sistemleri önemli rol oynayacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kuresel-enerji-depolama-kapasitesi-2035-e-kadar-7-katina-cikacak--211538",
+      "publishedAt": "2026-10-12T19:45:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211538/1200x675kuresel-enerji-depolama-kapasitesi-2035-e-kadar-7-katina-cikacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "44dc4ca7d854cac720",
       "title": "Carl Pei, Apple'ı yerden yere vurdu: iPhone Duo para tuzağı!",
@@ -339,18 +411,6 @@
       "editorial": false
     },
     {
-      "id": "86502a8cc144482d2f",
-      "title": "5 dakikada yüzde 70 şarj: 7 kişilik BYD Atto 8 tanıtıldı",
-      "summary": "BYD, 7 kişilik elektrikli SUV modeli Atto 8’i tanıttı. 115 kWsa bataryasıyla 652 km’ye kadar menzil sunan model, özel şarj istasyonlarında yüzde 10’dan yüzde 70 doluluğa sadece 5 dakikada ulaşabiliyor",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/5-dakikada-yuzde-70-sarj-7-kisilik-byd-atto-8-tanitildi--211534",
-      "publishedAt": "2026-10-12T13:10:29Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211534/1200x6755-dakikada-yuzde-70-sarj-7-kisilik-byd-atto-8-tanitildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "b43fc89aefdae0f55a",
       "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
       "summary": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027 As we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, making Maia the primary inference system for Microsoft products and services. The multigenerational...",
@@ -459,18 +519,6 @@
       "editorial": false
     },
     {
-      "id": "0e4e90649955112bba",
-      "title": "Opel'den SUV'lara meydan okuyan elektrikli: STX Concept",
-      "summary": "Opel, elektrikli station wagon konsepti STX ile gelecekteki tasarım dilini sergiliyor. Dört tekerlekten çekişli model, hareketli aerodinamik parçaları ve 200 km/s’yi aşan azami hızıyla dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/opel-den-suv-lara-meydan-okuyan-elektrikli-stx-concept--211511",
-      "publishedAt": "2026-10-12T12:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211511/1200x675opel-den-suv-lara-meydan-okuyan-elektrikli-stx-concept.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "2a089bca0a95060410",
       "title": "Mercedes-Benz Ekim 2026 Fiyat Listesi, Güncel Kampanyalar ve Kredi Fırsatları",
       "summary": "Mercedes-Benz Ekim 2026 sıfır araç fiyatları ve kampanyaları! Güncel Mercedes fiyat listesini, indirimleri ve avantajlı kredi fırsatlarını inceleyin.",
@@ -491,18 +539,6 @@
       "publishedAt": "2026-10-12T12:30:36Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/692152/692152-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "858b677ed600fd0a91",
-      "title": "Geçmişten geldi, gelecekten gibi görünüyor: Alpine A310 Vision",
-      "summary": "Alpine, ikonik A310’u retro fütüristik bir konseptle yeniden yorumladı. Yalnızca 1,18 metre yüksekliğindeki A310 Vision, alüminyum gövdesi ve sıra dışı tasarımıyla markanın geçmişini geleceğe taşıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/alpine-a310-vision-tanitildi-iste-tasarimi-ve-ozellikleri--211516",
-      "publishedAt": "2026-10-12T12:17:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211516/1200x675alpine-a310-vision-tanitildi-iste-tasarimi-ve-ozellikleri.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -599,30 +635,6 @@
       "publishedAt": "2026-10-12T10:15:56Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/692090/692090-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b9e90135b10fdb4d62",
-      "title": "60 Yıllık Gizem Çözüldü: Sarman Kediler Neden Diğer Kedilerden Farklı?",
-      "summary": "Bilim insanları, sarman kedilerin kendilerine has kızıl kürk sırrını X kromozomundaki 5 kb'lık DNA eksilmesine bağlayarak 60 yıllık gizemi çözdü.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/sarman-kediler-neden-diger-kedilerden-farkli-h226837.html",
-      "publishedAt": "2026-10-12T10:15:39Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692032/692032-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b58a2dd574adf329ee",
-      "title": "Dondurucuyu Tek Tuşla Soğutucuya Çevirmek Mümkün mü? Sınırları Zorlayan Modüler İklimlendirme",
-      "summary": "Evinizdeki beyaz eşyaların sadece tek bir amaca hizmet ettiği, sınırları keskin çizgilerle belirlenmiş dönemler geride kalıyor. Özellikle mutfak teknolojilerinde yaşanan son gelişmeler, donanımların bizim anlık ihtiyaçlarımıza göre şekil değiştirebilmesine olanak tanıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/dondurucuyu-tek-tusla-sogutucuya-cevirmek-mumkun-mu-h226867.html",
-      "publishedAt": "2026-10-12T10:04:05Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692114/692114-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-01T15:34:02Z",
       "category": "Yapay Zeka",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3TJPKAE7MFBW626XHNC9QVA.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "01e99749322cbcc2d1",
-      "title": "Microsoft 365 and LinkedIn leadership update",
-      "summary": "Satya Nadella, Chairman and CEO, and Ryan Roslansky, Executive Vice President of LinkedIn and Microsoft 365, shared the below communications with Microsoft and LinkedIn employees this morning. SATYA NADELLA MESSAGE After nearly 18 years at LinkedIn and Microsoft, Ryan Roslansky has decided to leave Microsoft and embark on his next chapter. As Ryan and I...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/01/microsoft-365-and-linkedin-leadership-update/",
-      "publishedAt": "2026-10-01T15:03:27Z",
-      "category": "Teknoloji",
-      "image": "",
       "language": "en",
       "editorial": false
     }
