@@ -1,7 +1,187 @@
 {
-  "generatedAt": "2026-10-13T17:04:51.247345Z",
+  "generatedAt": "2026-10-13T21:47:44.267538Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "6ed7b44b48842a6a76",
+      "title": "Fransa, doğada yok olmayan “sonsuz kimyasallara” savaş açtı",
+      "summary": "İnsan kanından Arktik buzullarına kadar yayılan “sonsuz kimyasallara” karşı Fransa'da çıkarılan yasa, PFAS kirliliğini azaltmayı hedeflerken diğer ülkeler için de örnek oluşturuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/fransa-dogada-yok-olmayan-sonsuz-kimyasallara-savas-acti--211587",
+      "publishedAt": "2026-10-13T20:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211587/1200x675fransa-dogada-yok-olmayan-sonsuz-kimyasallara-savas-acti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e2065635bac98256bf",
+      "title": "AMD, 192 çekirdekli yeni EPYC Verano işlemcisini sergiledi",
+      "summary": "AMD, yapay zeka ajanlarına odaklanan yeni EPYC Verano işlemcisini sergiledi. 192 çekirdeğe kadar çıkan model, SOCAMM2 bellek desteğiyle birlikte 2027'de geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amd-192-cekirdekli-yeni-epyc-verano-islemcisini-sergiledi--211577",
+      "publishedAt": "2026-10-13T20:34:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211577/1200x675amd-192-cekirdekli-yeni-epyc-verano-islemcisini-sergiledi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "280b901398c45fc9e4",
+      "title": "Dizüstü bilgisayar konforunda en iyi klavyeli tablet modelleri",
+      "summary": "Klavyeli tablet modelleri, taşınabilirlik ve dizüstü bilgisayar konforunu bir araya getiriyor. En iyi klavyeli tablet önerilerini; ekran, performans, klavye ve fiyat açısından inceledik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/en-iyi-klavyeli-tablet-modelleri-ekim-2026--211184",
+      "publishedAt": "2026-10-13T20:27:05Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211184/1200x675en-iyi-klavyeli-tablet-modelleri-ekim-2026.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "64b788e9bdfa1ade74",
+      "title": "AMD RDNA 5 ekran kartları için tarih verildi: Nvidia'dan önce gelebilir",
+      "summary": "AMD'nin RDNA 5 ekran kartlarını ne zaman tanıtacağı ortaya çıktı. Yeni mimari, Nvidia GeForce RTX 6000 serisinden önce tanıtılabilir. İşte beklenen tarih...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amd-rdna-5-ekran-kartlari-icin-tarih-ortaya-cikti--211582",
+      "publishedAt": "2026-10-13T20:06:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211582/1200x675amd-rdna-5-ekran-kartlari-icin-tarih-ortaya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9457dfe623d6347abf",
+      "title": "No Man’s Sky, iPhone ve iPad’e geliyor: İşte çıkış tarihi",
+      "summary": "10 yıllık uzay keşif oyunu No Man’s Sky, iPhone ve iPad’e geliyor. Mobil sürüm, oyunun kapsamını büyük ölçüde korurken bazı özelliklerden ve çok oyunculu moddan yoksun olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/no-man-s-sky-iphone-ve-ipad-e-geliyor-iste-cikis-tarihi--211573",
+      "publishedAt": "2026-10-13T19:45:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211573/1200x675no-man-s-sky-iphone-ve-ipad-e-geliyor-iste-cikis-tarihi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "04543faa8ce795dfc5",
+      "title": "AI Günlükleri: Yapay zekâ dünyasında bu hafta (13 Ekim 2026)",
+      "summary": "Yapay zekâ dünyasında bu hafta neler yaşandı; yeni neler tanıtıldı? \"AI Günlükleri\" serimizde, hızla büyüyen bu alanda neler olup bittiğini haftalık olarak kayıt altına almaya devam ediyoruz.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-dunyasinda-bu-hafta-13-ekim-2026--211578",
+      "publishedAt": "2026-10-13T19:22:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211578/1200x675yapay-zeka-dunyasinda-bu-hafta-13-ekim-2026.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "60847ffddb1f6ba204",
+      "title": "Nothing OS 5.0 dağıtıma çıktı: İşte güncelleme alacak telefonlar",
+      "summary": "Nothing, Android 17 tabanlı Nothing OS 5.0 güncellemesini Phone (3) için dağıtmaya başladı. Yeni sürümün diğer Nothing ve CMF telefonlara geliş takvimi de belli oldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nothing-os-5-0-dagitima-cikti-iste-guncelleme-alacak-telefonlar--211586",
+      "publishedAt": "2026-10-13T19:02:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211586/1200x675nothing-os-5-0-dagitima-cikti-iste-guncelleme-alacak-telefonlar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "aba75e020b78753667",
+      "title": "Introducing XBOX LABS",
+      "summary": "This message was just sent to Team XBOX employees globally. Team, The first video games emerged some 75 years ago. In the time since, there have been booms and busts, but every year there are more great games to play, more devices to play them, and best of all, more people than ever playing. That",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/13/introducing-xbox-labs/",
+      "publishedAt": "2026-10-13T19:00:00Z",
+      "category": "Oyun",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "0d0e73873da3f45009",
+      "title": "Google, istediğiniz iş için enzim tasarlayan yapay zekâsını açık kaynak hâle getirdi",
+      "summary": "Google DeepMind’ın yeni yapay zekâ modeli AlphaProtein Novo, doğada bulunmayan enzimleri sıfırdan tasarlıyor. Kimyasal üretiminde istediğiniz işe uygun enzimler tasarlamak mümkün oluyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-dan-istediginiz-is-icin-enzim-tasarlayan-yapay-zeka--211566",
+      "publishedAt": "2026-10-13T18:41:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211566/1200x675google-dan-istediginiz-is-icin-enzim-tasarlayan-yapay-zeka.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3011ca8609139b6bcd",
+      "title": "Chevrolet Silverado sürücüsüz askeri araca dönüştü: 3,6 ton taşıyor",
+      "summary": "GM Defense, Chevrolet Silverado 3500HD tabanlı insansız askeri aracını tanıttı. 100 kWsa bataryalı ve 3,6 ton taşıma kapasiteli konsept, sessiz lojistik ve yaralı tahliye görevleri için geliştiriliyor",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/chevrolet-silverado-surucusuz-askeri-araca-donustu--211565",
+      "publishedAt": "2026-10-13T18:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211565/1200x675chevrolet-silverado-surucusuz-askeri-araca-donustu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f4a92ce8b35d2be878",
+      "title": "Warframe Sets Course for a Distant Star System in Epoch Operation: Taubound",
+      "summary": "Community is the nexus of everything we do and every choice we make as Warframe developers. We create games with players, not just for players, and build trust over time through actions that demonstrate we listen. Our players around the world in our XBOX community are a monumental part of that family portrait; they help",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/13/warframe-sets-course-epoch-operation-taubound/",
+      "publishedAt": "2026-10-13T18:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WF_EpochOperation_TauboundEvent_1920x1080-f36fd31c32b6049e48ab-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "624d8c9f06fd047f9d",
+      "title": "Developing Gemini 4 Argon responsibly and safely",
+      "summary": "Learn more about our approach to safety and security for Gemini 4 Argon.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/safety-security/gemini-4-model-safety-security/",
+      "publishedAt": "2026-10-13T18:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-argon_key-art_4_lockup.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "55b6dc8cbdfcef6ad6",
+      "title": "Eski kömür santrali Avrupa’nın en büyük doğal gaz santraline dönüşüyor",
+      "summary": "Romanya'da inşa edilen 1,7 GW kapasiteli Mintia doğal gaz santralinde ilk türbin çalıştırıldı. Tesis, tam kapasiteye ulaştığında yılda 5 milyon hanenin tüketimine denk elektrik üretebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/avrupa-nin-en-buyuk-dogal-gaz-santralinde-ilk-turbin-calisti--211543",
+      "publishedAt": "2026-10-13T17:58:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211543/1200x675avrupa-nin-en-buyuk-dogal-gaz-santralinde-ilk-turbin-calisti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "21f1fac475e6270df5",
+      "title": "X Abonelik hayata geçiyor, 5 yeni seviye geliyor",
+      "summary": "SpaceXSI şirketinin Grok Bot, Cursor, Cursor Origin gibi hizmetlerinden yararlanmak isteyenler için Elon Musk yeni abonelik programını erişime açıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/x-abonelik-geliyor--211576",
+      "publishedAt": "2026-10-13T17:38:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211576/1200x675x-abonelik-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e9c14c02f01daea142",
+      "title": "ColorOS 17 tanıtıldı: İşte özellikleri ve dağıtım takvimi",
+      "summary": "OPPO, Android 17 tabanlı ColorOS 17 arayüzünü tanıttı. Önemli performans iyileştirmeleri, yapay zeka destekli gelişmiş özelliklerle gelen yazılım hangi cihazlara sunulacak?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/coloros-17-tanitildi-iste-ozellikleri-ve-dagitim-takvimi--211570",
+      "publishedAt": "2026-10-13T17:17:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211570/1200x675coloros-17-tanitildi-iste-ozellikleri-ve-dagitim-takvimi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "e7522338db5c57ae79",
       "title": "Go All in on All-Out Warfare in Battlefield 6 with EA Play",
@@ -88,7 +268,7 @@
     },
     {
       "id": "c883d0dbfead6cfe74",
-      "title": "Under the hood, off the hot path: how D1 scales to millions of databases",
+      "title": "Under the hood, off the hot path: How D1 scales to millions of databases",
       "summary": "A deep dive into how D1 architected its control plane to scale and manage millions of databases, while keeping data plane query operations at the edge. We share guiding principles on how to build on the Developer Platform effectively.",
       "source": "Cloudflare Blog",
       "sourceUrl": "https://blog.cloudflare.com/d1-control-plane/",
@@ -303,18 +483,6 @@
       "editorial": false
     },
     {
-      "id": "435310a0bf7cb72533",
-      "title": "Yapay zekalı HomePod mini 2 tanıtıldı: İşte fiyatı ve özellikleri",
-      "summary": "Apple, yeni HomePod mini 2 akıllı hoparlörünü resmen duyurdu. Yeni ürün, HomeView akıllı ekran ve dördüncü nesil Apple TV 4K ile birlikte tanıtıldı. İşte 2. nesil HomePod mini fiyatı ve özellikleri:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-homepod-mini-2-tanitildi-iste-fiyati-ve-ozellikleri--211583",
-      "publishedAt": "2026-10-13T14:42:49Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211583/1200x675yeni-homepod-mini-2-tanitildi-iste-fiyati-ve-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "32d219c0d38a85a9cc",
       "title": "Apple'dan 350 dolarlık akıllı kilit: Kapıya yaklaşılınca otomatik açılıyor",
       "summary": "Apple, akıllı ev ekosisteminin kapsamını büyüttü. Teknoloji devi, LG işbirliğiyle kapıya yaklaşıldığında otomatik açılan Smart Deadbolt Lock adlı akıllı kapı kilidini tanıttı.",
@@ -323,18 +491,6 @@
       "publishedAt": "2026-10-13T14:42:14Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211590/1200x675apple-dan-kapiya-yaklasinca-kendiliginden-acilan-akilli-kilit.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0f47b4425cf86efed8",
-      "title": "Yeni Apple TV 4K tanıtıldı: İşte özellikleri ve fiyatı",
-      "summary": "Apple, Welcome Home ürün lansman etkinliğinde yeni Apple TV 4K modelini duyurdu. 4. nesil Apple TV 4K, Siri AI desteği, A19 çip, Bul özellikli daha akıllı uzaktan kumanda ile geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-apple-tv-4k-tanitildi-iste-ozellikleri-ve-fiyati--211581",
-      "publishedAt": "2026-10-13T14:42:14Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211581/1200x675yeni-apple-tv-4k-tanitildi-iste-ozellikleri-ve-fiyati.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -411,18 +567,6 @@
       "editorial": false
     },
     {
-      "id": "92c64d1c5d3c996727",
-      "title": "Micro RGB Artık Aramızda | Samsung R85H Televizyon İnceleme",
-      "summary": "Samsung Micro RGB R85H 4K Vision AI Smart TV modeli geleneksel LED ve Mini LED teknolojilerinin ötesine geçmeyi hedefleyen Micro RGB arka aydınlatma mimarisiyle geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-r85h-televizyon-inceleme--211526",
-      "publishedAt": "2026-10-13T14:12:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211526/1200x675samsung-r85h-televizyon-inceleme.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "566a53b0721e4984ba",
       "title": "Peugeot Ekim 2026 Güncel Kampanyalar, İndirimler ve Kredi Fırsatları",
       "summary": "Peugeot, Ekim 2026 döneminde otomobil modellerinde kampanya ve indirim fırsatı sunuyor. Sıfır araçlarda uygulanan kampanyaları inceliyoruz.",
@@ -471,18 +615,6 @@
       "editorial": false
     },
     {
-      "id": "17cd9c903716c3af5b",
-      "title": "Türkiye'deki havalimanları 9 ayda 193,1 milyon yolcu taşıdı",
-      "summary": "Türkiye'deki havalimanları 2026'nın ilk 9 ayında 193,1 milyon yolcuya hizmet verdi. Peki, en yoğun havalimanları hangileri oldu ve turizm merkezlerinde kaç yolcu ağırlandı?",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-deki-havalimanlari-9-ayda-193-1-milyon-yolcu-tasidi--211564",
-      "publishedAt": "2026-10-13T13:39:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211564/1200x675turkiye-deki-havalimanlari-9-ayda-193-1-milyon-yolcu-tasidi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "0aa79b8aec751b5fbe",
       "title": "Kıyafetler Kurutulurken Neden Yıpranır?",
       "summary": "Gelin, kıyafetlerimizin kururken yıpranmasının önüne geçerek onları hayatta tutan bu teknolojiye yakından bakalım.",
@@ -491,18 +623,6 @@
       "publishedAt": "2026-10-13T13:38:44Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/692428/692428-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e2bc7194e7e2022735",
-      "title": "Gece siyahı PS5 tanıtıldı: GTA 6 ile aynı gün satışa çıkacak!",
-      "summary": "Sony, PlayStation 5 Digital Edition Midnight Black modelini tanıttı. Ancak, siyah PS5 dijital sürüm, GTA 6 ile aynı gün 19 Kasım'da satışa sunulacak. İşte fiyatı ve diğer detaylar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/siyah-playstation-5-tanitildi-gta-6-ile-ayni-gun-satisa-cikacak--211568",
-      "publishedAt": "2026-10-13T13:18:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211568/1200x675siyah-playstation-5-tanitildi-gta-6-ile-ayni-gun-satisa-cikacak.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -627,30 +747,6 @@
       "editorial": false
     },
     {
-      "id": "bbee00cb7c89ced3b2",
-      "title": "Omoda 4 Avrupa'ya geliyor: Önce hibrit, sonra elektrikli",
-      "summary": "Omoda 4, hibrit ve elektrikli seçenekleriyle Avrupa’ya geliyor. Nissan Juke’a rakip olacak yeni küçük crossover için İngiltere’de 25 bin sterlinin altında fiyat ve 2027’nin başında satış hedefleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/omoda-4-avrupa-ya-geliyor-once-hibrit-sonra-elektrikli--211572",
-      "publishedAt": "2026-10-13T12:56:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211572/1200x675omoda-4-avrupa-ya-geliyor-once-hibrit-sonra-elektrikli.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f709c6debeff001e67",
-      "title": "Microsoft’tan Nvidia’ya büyük darbe: Yeni Maia 300 çipi fark yaratıyor",
-      "summary": "Microsoft, Nvidia GPU’larına bağımlılığı azaltmayı hedefleyen Maia 300 yapay zeka çipini duyurdu. Yeni çipin 2027’de devreye girmesiyle yapay zeka pazarında dengeler değişebilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/microsoft-tan-nvidia-ya-buyuk-darbe-maia-300-cipi-tanitildi--211557",
-      "publishedAt": "2026-10-13T12:34:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211557/1200x675microsoft-tan-nvidia-ya-buyuk-darbe-maia-300-cipi-tanitildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "1dea10714f31e740dc",
       "title": "Fiat Ekim 2026 Sıfır Araç Fiyat Listesi, İndirimler, Güncel Kampanyalar ve Kredi Fırsatları",
       "summary": "Fiat'ın Ekim 2026 döneminde sunduğu indirimli otomobilleri ve güncel kampanyalarını derledik.",
@@ -675,18 +771,6 @@
       "editorial": false
     },
     {
-      "id": "4304ba71983f5691a4",
-      "title": "Elon Musk uyarıyor: \"Yapay zeka intikam almak isteyebilir\"",
-      "summary": "Elon Musk, Anthropic'in yapay zekâ modellerine kötü muameleyi yasaklayan yeni politikasını destekledi. Musk'a göre süper zekâya eziyet etmek gelecekte insanlık için risk oluşturabilir",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elon-musk-uyariyor-yapay-zeka-intikam-almak-isteyebilir--211552",
-      "publishedAt": "2026-10-13T12:12:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211552/1200x675elon-musk-uyariyor-yapay-zeka-intikam-almak-isteyebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4438029080a8382834",
       "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
       "summary": "Hello Puzzlers and PlayStation fans! The team at Coin Crew Games is excited to share that Escape Academy 2: Back 2 School will be coming to PS5 on November 5. To celebrate, we are sharing some deep-dive information about what players can expect in this sequel that expands the first game from a more linear",
@@ -696,42 +780,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4429bb20435e133dcf",
-      "title": "Bursalı Dacia Striker, Avrupa'da siparişe açıldı: İşte motor seçenekleri ve fiyatlar",
-      "summary": "Bursa Oyak Renault fabrikasında üretimi başlayan Dacia Striker, Avrupa'da siparişe açıldı. Araç LPG'li hafif hibrit, tam hibrit ve 4x4 dahil üç elektrik destekli motor seçeneğiyle geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bursali-dacia-striker-avrupa-da-siparise-acildi-iste-fiyatlar--211567",
-      "publishedAt": "2026-10-13T11:50:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211567/1200x675bursali-dacia-striker-avrupa-da-siparise-acildi-iste-fiyatlar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a8832612cab888c50e",
-      "title": "Epic Games'ten çok tartışılacak karar: Oyun yapımında özellikle AI kullanılmasını istiyor",
-      "summary": "Oyun dünyasının büyük bölümünün yapay zekâ kullanmaktan özellikle kaçındığı bir dönemde Epic Games'ten sürpriz bir hamle geldi. Yeni oyununda AI kullanımını neredeyse zorunlu yaptı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/epic-games-oyunun-yapiminda-yapay-zekayi-zorunlu-yapti--211559",
-      "publishedAt": "2026-10-13T11:35:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211559/1200x675epic-games-oyunun-yapiminda-yapay-zekayi-zorunlu-yapti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b9929bb678cd60137b",
-      "title": "185FPS oyun moduyla OnePlus 16 tanıtıldı: İşte özellikleri",
-      "summary": "OnePlus, yeni amiral gemisi akıllı telefonu OnePlus 16'yı resmen tanıttı. Cihaz, mobil oyunlara yönelik önemli donanım geliştirmeleri, yüksek yenileme hızına sahip ekran ve pil kapasitesiyle geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/oneplus-16-tanitildi-iste-ozellikleri-ve-fiyati--211558",
-      "publishedAt": "2026-10-13T10:52:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211558/1200x675oneplus-16-tanitildi-iste-ozellikleri-ve-fiyati.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -891,18 +939,6 @@
       "editorial": false
     },
     {
-      "id": "0964a034855c402ca4",
-      "title": "Next Week on XBOX: New Games for October 12 to 16",
-      "summary": "Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X|S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! Castlevania: Belmont’s Curse",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/next-week-on-xbox-new-games-for-october-12-to-16/",
-      "publishedAt": "2026-10-09T14:01:46Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.11784.13809283243847908.3c8af19e-d1c8-4a13-81ef-c0bb985132a2.dfa4deee-a71c-4482-bebc-e77000827c12?w=400&h=600",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "38bfcb4310c98b8dd2",
       "title": "Introducing on-demand CPU and memory profiling with flamegraphs for Workers and Durable Objects",
       "summary": "On-demand CPU and memory profiling for Cloudflare Workers and Durable Objects is now available. Now you can generate interactive flamegraphs directly in production to quickly track down memory leaks and performance bottlenecks.",
@@ -951,18 +987,6 @@
       "editorial": false
     },
     {
-      "id": "3c16ceaf862292b033",
-      "title": "You Have Minutes to Live: Introducing Echo Weaver",
-      "summary": "“This is the best demo I’ve ever played.” Two years ago, a demo from a three-person team in northwest North America hit my email and I wasn’t really prepared for how special it would end up being. My name is Buddy Solá, I’m the Head of Publishing for Akupara Games and with a title like",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/08/you-have-minutes-to-live-introducing-echo-weaver/",
-      "publishedAt": "2026-10-08T16:30:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/EW_SS01_1920x1080_v2-a55a5ec9fcadcc00ff00-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "d4eed22af98dccbdc6",
       "title": "Win big at Play Fest: Epic prizes, gaming leagues, and daily deals start October 13",
       "summary": "Celebrate Play Fest starting October 13 with sweepstakes prizes, global gaming leagues, and major Google Play deals all week.",
@@ -971,18 +995,6 @@
       "publishedAt": "2026-10-08T15:30:00Z",
       "category": "Oyun",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/play_days_live_hero.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "60a24e836ad2679c44",
-      "title": "Free Play Days – ARC Raiders, S.T.A.L.K.E.R. 2: Heart of Chornobyl, Little Nightmares III, Screamer, and More",
-      "summary": "One Weekend. Seven Worlds. Endless Possibilities. Screamer and Family Man are available in Free Play Days this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday, October 8 until Sunday, October 11. Additionally, ARC Raiders is free for all XBOX members to try from October 8 until October 11 (XBOX Game",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/08/free-play-days-10-08-2026/",
-      "publishedAt": "2026-10-08T15:00:00Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.51084.13651910902324589.2a75a059-d116-4b63-bb94-8451d9b460a1.2a17b2b1-5888-4c9d-a88a-98d868ed79a2?w=400&h=600",
       "language": "en",
       "editorial": false
     },
@@ -1043,18 +1055,6 @@
       "publishedAt": "2026-10-08T12:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Dining_Fan_Favorite_hero_v2.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "3fc6c28d446192a47f",
-      "title": "This winter, use Google Maps and Waze to find the best fuel prices in the UK.",
-      "summary": "Find the cheapest petrol and diesel prices in the UK using Google Maps and Waze. Search for fuel stations near you to save money. See the latest rates.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/united-kingdom/google-maps-waze-fuel-prices-uk/",
-      "publishedAt": "2026-10-08T00:01:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GEO_navigation_in_car.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
