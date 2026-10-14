@@ -1,7 +1,79 @@
 {
-  "generatedAt": "2026-10-14T01:02:24.028443Z",
+  "generatedAt": "2026-10-14T05:58:59.720349Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "7e55890a4f5153e2ae",
+      "title": "1.000 km menzilli BYD Great Han satışa çıktı: 35.000 dolardan başlıyor",
+      "summary": "BYD, yeni amiral gemisi elektrikli sedanı Great Han'ı Çin'de satışa sundu. 35 bin dolardan başlayan fiyatlarla gelen model, 1.008 kilometreye varan menzili ve 9 dakika şarj süresiyle dikkat çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/1-000-km-menzilli-byd-great-han-satisa-cikti--211595",
+      "publishedAt": "2026-10-14T05:54:48Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211595/1200x6751-000-km-menzilli-byd-great-han-satisa-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8788a0f0e96d3a9655",
+      "title": "Bursa Üretimi Dacia Striker Avrupa'da Siparişe Açıldı: İşte Motor Seçenekleri ve Fiyat Listesi",
+      "summary": "Bursa'da üretilecek yeni SUV Dacia Striker, Avrupa pazarında ön siparişe açıldı. Fiyatları, donanımları ve motor seçenekleri belli oldu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/dacia-striker-avrupa-fiyati-motor-secenekleri-donanimlari-h227032.html",
+      "publishedAt": "2026-10-14T04:44:40Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/692482/692482-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ac7705670feae68b65",
+      "title": "OpenAI, Ofisine Gizli Bir Dinleme Cihazı Yerleştirildiğini Açıkladı!",
+      "summary": "OpenAI'ın San Francisco merkezindeki bir toplantı odasına gizli bir dinleme cihazı yerleştirildiği tespit edildi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/openai-ofis-dinleme-cihazi-tespit-edildi-h227030.html",
+      "publishedAt": "2026-10-14T04:35:54Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/692474/692474-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c97dc30238c1e0d1a6",
+      "title": "Turkcell ve TÜBİTAK'tan 6G İş Birliği",
+      "summary": "Turkcell ve TÜBİTAK, 6G teknolojileri konusunda stratejik bir iş birliğine imza attı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/turkcell-tubitak-6g-is-birligi-h227029.html",
+      "publishedAt": "2026-10-14T03:54:28Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/692468/692468-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "27e22d9f81f7d3ce06",
+      "title": "Google'ın En Güçlü Modeli Gemini 4 Argon, Kullanıma Sunuldu",
+      "summary": "Google'ın şimdiye kadarki en güçlü modeli olarak nitelendirdiği Gemini 4 Argon, geniş çapta kullanıma sunuldu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/google-gemini-4-argon-kullanima-sunuldu-h227026.html",
+      "publishedAt": "2026-10-14T03:47:26Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/692464/692464-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "358b876936d67d36be",
+      "title": "GTA 6'nın Ne Zaman PC'ye Geleceği Ortaya Çıktı!",
+      "summary": "Yeni bir iddia, GTA 6'nın PC'ye ne zaman geleceğini ortaya çıkardı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/gta-6-pc-cikis-tarihi-ortaya-cikti-h227024.html",
+      "publishedAt": "2026-10-14T03:38:59Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/692459/692459-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "6ed7b44b48842a6a76",
       "title": "Fransa, doğada yok olmayan “sonsuz kimyasallara” savaş açtı",
@@ -495,18 +567,6 @@
       "editorial": false
     },
     {
-      "id": "f3a1bfe546c3715efe",
-      "title": "Apple, yeni akıllı ev cihazı HomeView’u tanıttı: Ev kontrolü ve eğlence tek ekranda",
-      "summary": "Apple HomeView tanıtıldı: Akıllı ev yönetimi, müzik ve görüntülü görüşme özelliklerini tek cihazda buluşturan HomeView, 7 inç ekranı ve Siri desteğiyle geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-yeni-akilli-ev-cihazi-homeview-u-tanitti--211584",
-      "publishedAt": "2026-10-13T14:35:44Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211584/1200x675apple-yeni-akilli-ev-cihazi-homeview-u-tanitti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "c8a7a692ce4c898e4e",
       "title": "Siri Remote 4. nesil Türkiye'de satışa çıktı: İşte fiyatı ve özellikleri",
       "summary": "Apple, 4. nesil Apple TV 4K'yı tanıttı. Yeni modele geçmeye düşünmeyenler için Bul özellikli yerleşik hoparlöre sahip yeni Siri Remote, Apple Türkiye Online Store'da satışa sunuldu.",
@@ -735,42 +795,6 @@
       "editorial": false
     },
     {
-      "id": "97b526ab79c68a6449",
-      "title": "Peugeot Ekim 2026 Fiyat Listesi",
-      "summary": "Peugeot’nun Ekim 2026 fiyat listesi açıklandı. Markanın güncel binek otomobil listesinde E-208, 308, 2008, E-2008, 408, 3008, E-3008, 5008 ve E-5008 modelleri yer alıyor. Peugeot Satış Kampanyaları",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/ekim-2026-peugeot-fiyat-listesi-h226294.html",
-      "publishedAt": "2026-10-13T13:00:35Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/690499/690499-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1dea10714f31e740dc",
-      "title": "Fiat Ekim 2026 Sıfır Araç Fiyat Listesi, İndirimler, Güncel Kampanyalar ve Kredi Fırsatları",
-      "summary": "Fiat'ın Ekim 2026 döneminde sunduğu indirimli otomobilleri ve güncel kampanyalarını derledik.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/fiat-ekim-2026-fiyat-indirim-kampanya-kredi-h226975.html",
-      "publishedAt": "2026-10-13T12:12:13Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692360/692360-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f917aa492466dc4455",
-      "title": "Ekim 2026 Hyundai Fiyat Listesi, Güncel Kampanyalar ve İndirim Fırsatları",
-      "summary": "Hyundai Ekim 2026 sıfır araç fiyatları ve kampanyaları! Güncel Hyundai fiyat listesini, indirimleri ve avantajlı kredi fırsatlarını inceleyin.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/hyundai-ekim-2026-fiyat-indirim-kredi-kampanya-h226981.html",
-      "publishedAt": "2026-10-13T12:12:05Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692371/692371-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4438029080a8382834",
       "title": "Escape Academy 2: Back 2 School comes to PS5 on November 5",
       "summary": "Hello Puzzlers and PlayStation fans! The team at Coin Crew Games is excited to share that Escape Academy 2: Back 2 School will be coming to PS5 on November 5. To celebrate, we are sharing some deep-dive information about what players can expect in this sequel that expands the first game from a more linear",
@@ -780,30 +804,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "34bf4ddb40e0df90d3",
-      "title": "BMW Ekim 2026 Fiyat Listesi, Güncel Kampanyalar ve Kredi Fırsatları",
-      "summary": "BMW Ekim 2026 sıfır araç fiyatları, kampanyaları, indirimleri ve avantajlı kredi fırsatlarını inceliyoruz.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/bmw-ekim-2026-fiyatlar-kampanyalar-krediler-h226946.html",
-      "publishedAt": "2026-10-13T10:33:17Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692314/692314-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ec81e1480f3e1bff62",
-      "title": "Nothing’in Alt Markası CMF, İlk Hoparlörlerini Duyurdu",
-      "summary": "Nothing çatısı altındaki CMF, özgün tasarımlarıyla dikkat çeken ilk taşınabilir hoparlör modelleri CMF Speaker S ve CMF Speaker M'yi tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/nothing-cmf-ilk-hoparlorleri-speaker-s-speaker-m-duyurdu-h226954.html",
-      "publishedAt": "2026-10-13T10:32:37Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692317/692317-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
