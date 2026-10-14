@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-13T21:47:44.267538Z",
+  "generatedAt": "2026-10-14T01:02:24.028443Z",
   "sourceCount": 7,
   "items": [
     {
@@ -927,18 +927,6 @@
       "editorial": false
     },
     {
-      "id": "2f85d30f46b0e9ba6a",
-      "title": "DMZ — 5 Features to Get Excited for in Call of Duty: Modern Warfare 4’s New Mode",
-      "summary": "Call of Duty’s upcoming DMZ mode sounds like it’s shaping up to be something special. Set on the new Hajin map and inspired by the events and locations from Modern Warfare 4’s Campaign, this open-world combat environment will challenge you to loot, complete objectives, fight both enemies and rival Operators, and extract before everything you’ve",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/09/dmz-5-features-get-excited-for-mw4/",
-      "publishedAt": "2026-10-09T17:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/MW4_DMZDeepDive_General_01_BRANDED-2c427a0a198e8cefc2de-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "38bfcb4310c98b8dd2",
       "title": "Introducing on-demand CPU and memory profiling with flamegraphs for Workers and Durable Objects",
       "summary": "On-demand CPU and memory profiling for Cloudflare Workers and Durable Objects is now available. Now you can generate interactive flamegraphs directly in production to quickly track down memory leaks and performance bottlenecks.",
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-02T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XE9TZRDPWVKPPQNAVJDCYT.01M3XE9W5HREEF8Q70M7G034M2.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "6055c182a46aa56131",
+      "title": "Updates on our pledge to make Cloudflare features accessible to everyone",
+      "summary": "A year after pledging to eliminate two-tier product access, Cloudflare has expanded Logpush, multi-account governance, and higher platform limits to all accounts. Here is an update on our progress, how we dogfood these tools internally, and what is coming next.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/enterprise-for-all-update/",
+      "publishedAt": "2026-10-02T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XD0DHYHB54G3RT6GBMY2W5.png",
       "language": "en",
       "editorial": false
     }
