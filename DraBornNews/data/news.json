@@ -1,7 +1,91 @@
 {
-  "generatedAt": "2026-10-15T17:41:45.430160Z",
+  "generatedAt": "2026-10-15T21:11:14.379849Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "c43dfa851aaa9c7844",
+      "title": "Samsung katlanabilir telefon ailesini büyütüyor: İki yeni model gündemde",
+      "summary": "Yeni bir sızıntıya göre Samsung, 2027 yılında katlanabilir telefon ailesini genişleterek Galaxy Z Fold 9 Pro ve Galaxy Z Slide modellerini piyasaya sürebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-z-ailesini-buyutuyor-iki-yeni-model-gundemde--211688",
+      "publishedAt": "2026-10-15T20:40:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211688/1200x675samsung-galaxy-z-ailesini-buyutuyor-iki-yeni-model-gundemde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "55d53f106d428a0593",
+      "title": "Çip devi ASML'nin gelirleri rekor kırıyor: Siparişler 2030'a uzandı",
+      "summary": "ASML, 2026’nın üçüncü çeyreğinde 13,06 milyar dolarlık rekor gelir elde etti. Yapay zekaya talep nedeniyle şirket, mevcut üretim kapasitesinin 2027 ve 2028 yıllarında yetersiz kalabileceğini açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/asml-nin-gelirleri-rekor-kiriyor-siparisler-2030-a-uzandi--211685",
+      "publishedAt": "2026-10-15T20:15:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211685/1200x675asml-nin-gelirleri-rekor-kiriyor-siparisler-2030-a-uzandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8fd1147dcfe9e2e2e0",
+      "title": "NASA -170 dereceye dayanabilen katı hal batarya geliştirdi",
+      "summary": "NASA’nın geliştirdiği katı hal batarya prototipleri, eksi 170 dereceye kadar sıcaklıklara hasar görmeden dayanırken eksi 80 derecede çalışmayı başardı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nasa-170-dereceye-dayanabilen-kati-hal-batarya-gelistirdi--211686",
+      "publishedAt": "2026-10-15T19:45:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211686/1200x675nasa-170-dereceye-dayanabilen-kati-hal-batarya-gelistirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d428d564a61e4d5e83",
+      "title": "Kaliforniya'da ev tipi bataryalar rekor kırıyor: Şebekeye 745 MW güç sağladılar",
+      "summary": "Kaliforniya'da sıcak hava dalgası elektrik talebini artırırken ev tipi bataryalar devreye girdi. 745 MW'lık rekor güç, binlerce evin şebekeye nasıl destek olabildiğini gösterdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kaliforniya-da-ev-tipi-bataryalar-rekor-kiriyor--211679",
+      "publishedAt": "2026-10-15T19:22:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211679/1200x675kaliforniya-da-ev-tipi-bataryalar-rekor-kiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "79b52fad0888613d63",
+      "title": "Kabus senaryosu gerçek oldu: İsrail, reklamlar üzerinden telefonlara sızıyor",
+      "summary": "İsrailli şirketin internet reklamları üzerinden kullanıcıları takip ettiği ve cihazlara tıklama olmadan casus yazılım bulaştırdığı ortaya çıktı. Saldırının NATO ve BM ağlarına da uzandığı bildirildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/en-korkutucu-siber-saldiri-sadece-reklam-gormek-yeterli--211683",
+      "publishedAt": "2026-10-15T18:16:35Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211683/1200x675en-korkutucu-siber-saldiri-sadece-reklam-gormek-yeterli.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "30b77afd86fd20a8f0",
+      "title": "Bringing the magic: Google breaks open a bottleneck in quantum computing",
+      "summary": "In a paper published in Science, Google has shown that Magic State Cultivation works on Google Quantum AI hardware.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/quantum-computing/magic-state-cultivation-quantum-computing/",
+      "publishedAt": "2026-10-15T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/magic_state_still_2.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "1b9d80577b59a08416",
+      "title": "Check if a text message is a scam using Circle to Search.",
+      "summary": "Use Google Circle to Search to analyze suspicious texts for scams. Long-press your home button to get AI insights on messages. See how it works.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/safety-security/circle-to-search-android-text-message-scams/",
+      "publishedAt": "2026-10-15T17:30:00Z",
+      "category": "Güvenlik",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/CTS_check_scam_inline.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "662009d72c02589414",
       "title": "Kia'nın en ucuz elektriklisi EV2, Euro NCAP testine girdi: İşte sonuç",
@@ -202,7 +286,7 @@
       "sourceUrl": "https://blog.google/products-and-platforms/devices/pixel/international-repair-day-2026/",
       "publishedAt": "2026-10-15T15:00:00Z",
       "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Banner_IRD_width-2200_fo.max-600x600.format-webp.webp",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IRD_2026.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -472,7 +556,7 @@
     },
     {
       "id": "d05f789212e75b0389",
-      "title": "Cloudflare and OpenAI: making AI discovery better for everyone",
+      "title": "Cloudflare and OpenAI: Making AI discovery better for everyone",
       "summary": "How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer wasted requests — making the experience better for users and website owners alike.",
       "source": "Cloudflare Blog",
       "sourceUrl": "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/",
@@ -611,78 +695,6 @@
       "publishedAt": "2026-10-15T11:42:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211658/1200x675starlink-ukrayna-askerlerini-yari-yolda-birakti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c79618e771b3024430",
-      "title": "Samsung Galaxy A38 ve Galaxy A58’in kamera özellikleri sızdırıldı",
-      "summary": "Samsung’un 2027 yılında tanıtması beklenen Galaxy A38 ve Galaxy A58 modellerinin kamera özellikleri ortaya çıktı. Sızıntılara göre şirket, yeni telefonlarında kamera donanımını büyük ölçüde koruyacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-a38-ve-galaxy-a58-in-kamera-ozellikleri-sizdirildi--211664",
-      "publishedAt": "2026-10-15T11:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211664/1200x675samsung-galaxy-a38-ve-galaxy-a58-in-kamera-ozellikleri-sizdirildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ab2204aa8addb2bd4c",
-      "title": "Elon Musk’ın dev çip fabrikası için kritik geri sayım başladı: Ancak önemli bir sorun var",
-      "summary": "Elon Musk’ın çip fabrikası Terafab için kritik takvim ortaya çıktı. İlk üretim cihazı 2027’de geliyor ancak milyonlarca dolarlık teknoloji, fabrika hazır olmadığı için boşta bekleyecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elon-musk-in-dev-cip-fabrikasi-icin-kritik-geri-sayim-basladi--211663",
-      "publishedAt": "2026-10-15T10:58:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211663/1200x675elon-musk-in-dev-cip-fabrikasi-icin-kritik-geri-sayim-basladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "177211337bfdcab9ea",
-      "title": "Ticaret Bakanlığı, teknolojik ürünlerde taksit sınırlarını değiştirebilecek",
-      "summary": "Ticaret Bakanlığı, taksit sayısı ve koşullarını belirleme yetkisi aldı. Telefon, tablet, televizyon ve beyaz eşya gibi teknolojik ürünlerde taksit sayılarını değiştirebilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ticaret-bakanligi-taksit-sayilarini-degistirebilecek--211661",
-      "publishedAt": "2026-10-15T10:36:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211661/1200x675ticaret-bakanligi-taksit-sayilarini-degistirebilecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d248252422d66725eb",
-      "title": "1.008 km menzilli BYD DaHan, otoyolda menzilinin neredeyse yarısını kaybetti",
-      "summary": "BYD DaHan, Xiaomi SU7 ve Tesla Model 3 otoyol testinde karşılaştı. 1.008 km menzil açıklanan DaHan 566,4 km yol yaparken, testin en uzun mesafesini Xiaomi SU7 katetti. İşte üç elektriklinin sonuçları.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/1-008-km-menzilli-byd-dahan-in-otoyol-menzili-tartisma-yaratti--211657",
-      "publishedAt": "2026-10-15T10:13:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211657/1200x6751-008-km-menzilli-byd-dahan-in-otoyol-menzili-tartisma-yaratti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a3a6377b739d68e08e",
-      "title": "ABD'nin İran için beklettiği gizli silah: Daha önce sadece bir kez kullanıldı",
-      "summary": "ABD'nin 9,8 tonluk MOAB bombası İran'daki olası hedefler için gündemde. Dokuz şehir bloğuna kadar yıkıcı etki oluşturabilen bombanın yer altı nükleer tesisleri için kullanılacağı belirtiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/abd-nin-iran-icin-beklettigi-gizli-silah-iste-test-videosu--211656",
-      "publishedAt": "2026-10-15T09:53:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211656/1200x675abd-nin-iran-icin-beklettigi-gizli-silah-iste-test-videosu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ccfe519fbb5d0bdcb8",
-      "title": "Apple'ın 10 yıllık en hafif MacBook'u resmen tarih oldu!",
-      "summary": "Apple, 12 inç MacBook'a desteği tamamen sonlandırdı. 920 gr ağırlığı ve en ince noktasında 3.5 mm kalınlığında olan dizüstü bilgisayar, mevcut tüm MacBook'lardan daha ince ve daha hafifti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-2017-12-inc-macbook-a-servis-destegini-kesti--211654",
-      "publishedAt": "2026-10-15T09:32:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211654/1200x675apple-2017-12-inc-macbook-a-servis-destegini-kesti.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -891,18 +903,6 @@
       "editorial": false
     },
     {
-      "id": "e7522338db5c57ae79",
-      "title": "Go All in on All-Out Warfare in Battlefield 6 with EA Play",
-      "summary": "It’s showtime. Lock in unlimited access, a Season 5 EA Play Pack, recurring seasonal rewards, and more with EA Play. All-out war, fast-paced close-quarters combat, tactical destruction – Welcome to the definitive Battlefield experience. Members can gear up for the front lines with unlimited access and save a world on the brink of collapse. Game",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/13/ea-play-october/",
-      "publishedAt": "2026-10-13T17:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/EAP_Xbox_Group_Oct_Wire_ROW_1920x1080-1b4c285fd027c42619d7.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "61915a37127b98c442",
       "title": "New on Google Play: More ways to create, discover, and play",
       "summary": "Take a look at everything that’s new across Google Play.",
@@ -935,30 +935,6 @@
       "publishedAt": "2026-10-13T16:20:18Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KW45ADESEJPK73KY57K3T0NX.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "3f244126e9d6ab8745",
-      "title": "We're helping Indiana communities save with clean energy investments.",
-      "summary": "The Monroe-Gregg School District and Morgan County Public Library will benefit from Google’s $10M clean energy investment in Indiana.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/indiana-energy-imact-program/",
-      "publishedAt": "2026-10-13T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Indiana_social.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4a7c0627614787f810",
-      "title": "Build your data strength with October’s Demand Gen drop.",
-      "summary": "Boost your measurement and ROI with YouTube’s October Demand Gen Drop.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products/ads-commerce/demand-gen-drop-october-2026/",
-      "publishedAt": "2026-10-13T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Demand_Gen_Drop_-_October_2026.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-10-01T15:03:27Z",
       "category": "Teknoloji",
       "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "4607b4c4468386f7d7",
+      "title": "New Microsoft data innovations unlock what only your business knows",
+      "summary": "Every organization has knowledge that is uniquely its own: the way its business operates, the data it has built over time, the expertise of its people and the context behind thousands of everyday decisions. As powerful AI models become more widely available, that unique business intelligence matters more than ever. The difference will come from...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/28/new-microsoft-data-innovations-unlock-what-only-your-business-knows/",
+      "publishedAt": "2026-09-29T06:30:04Z",
+      "category": "Yapay Zeka",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f524e9886f009cfdc3",
+      "title": "Introducing the new Copilot with Home, Code and Autopilot",
+      "summary": "We’re reimagining Microsoft Copilot to enable work as it evolves and to help expand what every individual and every organization can accomplish in the flow of human ambition. Today we’re introducing the new Copilot to connect the tools people rely on with the next generation of capabilities they’ll need to build, customize and scale AI...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/25/introducing-the-new-copilot-with-home-code-and-autopilot/",
+      "publishedAt": "2026-09-25T12:03:50Z",
+      "category": "Yapay Zeka",
+      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Home-FINAL-2.png",
       "language": "en",
       "editorial": false
     }
