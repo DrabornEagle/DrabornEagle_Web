@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-15T21:11:14.379849Z",
+  "generatedAt": "2026-10-16T04:05:49.386452Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "7c3303f1e292961928",
+      "title": "YÖK'ten Ücretsiz Yapay Zekâ Eğitimini Kaçırmayın",
+      "summary": "Yükseköğretim Kurulu (YÖK) himayesinde hayata geçirilen Dijital Üniversite Platformu, yapay zekâ başta olmak üzere 3 farklı konuda ücretsiz eğitim sunacak.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/yuksekogretim-kurulu-ucretsiz-yapay-zeka-egitimi-h227275.html",
+      "publishedAt": "2026-10-16T04:02:27Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/693049/693049-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "c43dfa851aaa9c7844",
       "title": "Samsung katlanabilir telefon ailesini büyütüyor: İki yeni model gündemde",
@@ -627,42 +639,6 @@
       "editorial": false
     },
     {
-      "id": "7b972e94f3e6a484f8",
-      "title": "Samsung Galaxy A58’in Kamera Özellikleri Ortaya Çıktı",
-      "summary": "Samsung’un çok beklenen orta segment telefonu Galaxy A58’in kamera özellikleri şimdiden ortaya çıktı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-a58-kamera-ozellikleri-ortaya-cikti-h227206.html",
-      "publishedAt": "2026-10-15T12:42:10Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692842/692842-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "29f8eb7fa340865135",
-      "title": "Samsung'dan Üretim Gecikmelerine Karşı Yeni Hamle",
-      "summary": "Galaxy Z Fold 8'in üretiminde yaşandığı öne sürülen ekran çipi sıkıntısı, Samsung'u alternatif tedarikçi arayışına yöneltti. Şirketin, benzer gecikmelerin önüne geçmek için GlobalFoundries ile görüştüğü iddia ediliyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-uretim-gecikmelerine-karsi-yeni-hamle-h227191.html",
-      "publishedAt": "2026-10-15T12:41:44Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/692788/692788-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7855bef055f6700979",
-      "title": "Alfa Romeo Ekim 2026 Sıfır Araç Fiyat Listesi ve Güncel Kampanyalar",
-      "summary": "Alfa Romeo Ekim 2026 sıfır araç fiyatları, güncel indirimlerini ve kampanyalarını Webtekno'da inceliyoruz.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/alfa-romeo-ekim-2026-fiyat-indirim-kredi-kampanya-h227237.html",
-      "publishedAt": "2026-10-15T12:40:57Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/681886/681886-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "75aab0bb48640f1423",
       "title": "Yepyeni MacBook ve iPad mini, 28 Ekim'de tanıtılacak",
       "summary": "Apple, Mac etkinliği için davetiyeleri göndermeye başladı. 28 Ekimde OLED dokunmatik ekranlı MacBook Pro, M6 çipli Mac'ler ve yeni iPad mini modelinin tanıtılması bekleniyor.",
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-09-25T12:03:50Z",
       "category": "Yapay Zeka",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/09/OMB-Home-FINAL-2.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "e2cb1a36821a67ca59",
+      "title": "What we’ve learned from Microsoft’s own AI transformation",
+      "summary": "AI is reshaping work faster than any organization has fully mastered. Across industries, the conversation has shifted from what AI can do to how companies can use AI to create business value and expand what people are able to achieve. At Microsoft, we believe the organizations that succeed will be what we call Frontier Firms:...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/",
+      "publishedAt": "2026-09-17T14:00:05Z",
+      "category": "Yapay Zeka",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "5315c5c92343db1708",
+      "title": "Microsoft’s commitment for AI in education: Protecting students, strengthening learning",
+      "summary": "Microsoft has been in the business of education for five decades. Since the earliest days of this company, we have worked alongside educators, students, families and educational leaders through each new wave of technology — and we have learned what helps learning and what gets in the way. That commitment continues today, in a technological...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
+      "publishedAt": "2026-09-16T18:59:58Z",
+      "category": "Yapay Zeka",
+      "image": "",
       "language": "en",
       "editorial": false
     }
