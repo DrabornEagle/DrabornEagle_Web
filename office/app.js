@@ -201,3 +201,7 @@ raf=requestAnimationFrame(frame);
 setInterval(()=>world.save(),20000);
 window.addEventListener("pagehide",()=>world.save());
 document.addEventListener("visibilitychange",()=>{last=performance.now();if(document.hidden)world.save();});
+
+if("serviceWorker" in navigator && location.protocol==="https:"){
+ window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}),{once:true});
+}
