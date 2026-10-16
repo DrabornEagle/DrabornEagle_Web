@@ -1,0 +1,20 @@
+{
+  "id": "/office/",
+  "name": "DraBorn Office — Yaşayan Oyun Stüdyosu",
+  "short_name": "DraBorn Office",
+  "description": "API'siz, etkileşimli, çevrimdışı çalışabilen oyun stüdyosu simülasyonu.",
+  "lang": "tr",
+  "start_url": "./",
+  "scope": "/office/",
+  "display": "standalone",
+  "background_color": "#080b19",
+  "theme_color": "#090c1d",
+  "icons": [
+    {
+      "src": "../Support/assets/dkd-miami-eagle.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
