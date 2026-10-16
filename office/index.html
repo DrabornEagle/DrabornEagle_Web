@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090c1d">
+  <meta name="description" content="DraBorn Office: canlı hissettiren, tamamen tarayıcında çalışan ücretsiz oyun stüdyosu simülasyonu.">
+  <meta property="og:title" content="DraBorn Office | Yaşayan Oyun Stüdyosu">
+  <meta property="og:description" content="Karakterler, oyun projeleri, ilişki sistemi ve yaşayan ofis. Ücretsiz ve API'siz.">
+  <title>DraBorn Office · Yaşayan Stüdyo</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='15' fill='%2311172d'/%3E%3Ctext y='45' x='12' font-size='39'%3E%F0%9F%A6%85%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./style.css?v=1">
+  <link rel="manifest" href="./manifest.webmanifest">
+</head>
+<body>
+ <div class="app-shell">
+  <header class="topbar">
+   <a class="brand" href="./" aria-label="DraBorn Office ana ekran">
+    <div class="brand-icon">🦅</div>
+    <div><strong>DRABORN<span>OFFICE</span></strong><small>THE LIVING GAME STUDIO <i>V1.0</i></small></div>
+   </a>
+   <div class="top-status"><span class="pulse-dot"></span><span>SİMÜLASYON AKTİF</span><span class="top-dash">/</span><span id="topDay">GÜN 01</span><span id="topClock">09:00</span></div>
+   <div class="top-actions">
+     <button id="guideBtn" class="icon-btn" title="Nasıl oynanır?" aria-label="Yardım">?</button>
+     <button id="soundBtn" class="icon-btn" title="Ortam sesleri" aria-label="Sesleri aç veya kapat" aria-pressed="false">♫</button>
+     <button id="saveBtn" class="icon-btn" title="Kaydet" aria-label="Kaydet">⤓</button>
+     <a href="/" class="back-link">← ANA SİTE</a>
+   </div>
+  </header>
+
+  <main class="dashboard">
+   <div class="page-heading">
+    <div><p class="eyebrow">THE DRABORN UNIVERSE / INTERACTIVE EXPERIENCE</p><h1>Yaşayan <em>Stüdyo</em><span class="heading-star"> ✳</span></h1><p class="subheading">12 ekip üyesi. 6 farklı departman. Sonsuz hikâye. Her karar senin.</p></div>
+    <div class="time-panel"><span id="weatherIcon">☀</span><div><strong id="periodText">SABAH VARDİYASI</strong><small id="daySubtitle">Ofis yeni bir güne başlıyor</small></div></div>
+   </div>
+
+   <section class="metrics" aria-label="Stüdyo istatistikleri">
+    <div class="metric metric-a"><small>STÜDYO BÜTÇESİ <span>◈</span></small><strong id="budgetStat">₺185.000</strong><span id="budgetHint">Günlük net hareket</span></div>
+    <div class="metric metric-b"><small>TOPLULUK <span>✦</span></small><strong id="fansStat">3.250</strong><span>Hayran sayısı</span></div>
+    <div class="metric metric-c"><small>EKİP MORALİ <span>♡</span></small><strong id="moraleStat">%82</strong><div class="meter"><i id="moraleFill"></i></div></div>
+    <div class="metric metric-d"><small>STÜDYO İTİBARI <span>↗</span></small><strong id="repStat">38/100</strong><span id="repHint">Yükselen stüdyo</span></div>
+   </section>
+
+   <div class="workspace-grid">
+    <section class="studio-panel panel" aria-label="İnteraktif ofis">
+     <div class="panel-header studio-header">
+       <div><div class="panel-kicker"><span class="pulse-dot"></span> LIVE WORLD <span class="slash">/</span> PIXEL STUDIO</div><h2>Stüdyo Katı <span class="soft-text" id="activeCount">12/12 aktif</span></h2></div>
+       <div class="map-toolbar">
+        <button class="map-btn" id="zoomOut" title="Uzaklaştır" aria-label="Uzaklaştır">−</button><span id="zoomLabel">100%</span><button class="map-btn" id="zoomIn" title="Yakınlaştır" aria-label="Yakınlaştır">+</button>
+        <button class="map-btn" id="zoomFit" title="Haritaya sığdır" aria-label="Haritaya sığdır">⤢</button><button class="map-btn" id="fullscreenBtn" title="Tam ekran" aria-label="Tam ekran">⛶</button>
+       </div>
+     </div>
+     <div class="stage-shell" id="stageShell" tabindex="0" aria-label="Ofis haritası. Karakterlere ya da odalara tıklayabilirsin.">
+       <canvas id="officeCanvas" width="1152" height="768" role="img" aria-label="Kuşbakışı piksel sanat stüdyo ve yürüyen ekip üyeleri"></canvas>
+       <div class="canvas-stamp"><span class="pulse-dot"></span> DRABORN HQ <span>●</span> <span id="canvasTime">09:00</span></div>
+       <div class="canvas-legend">DOKUN: İNCELE <span>•</span> SÜRÜKLE: GEZ <span>•</span> KAYDIR: YAKINLAŞ</div>
+       <div class="map-float" id="mapToast" role="status" aria-live="polite"></div>
+       <div class="mini-map" id="miniMap" aria-hidden="true"></div>
+     </div>
+     <div class="studio-footer">
+       <div class="sim-buttons">
+         <button class="speed-btn" data-speed="0" title="Duraklat">Ⅱ</button><button class="speed-btn selected" data-speed="1">1×</button><button class="speed-btn" data-speed="2">2×</button><button class="speed-btn" data-speed="4">4×</button>
+         <span class="speed-caption">SİMÜLASYON HIZI</span>
+       </div>
+       <div class="foot-tip">✦ Her karakter kendi rutinine ve kişiliğine göre davranır.</div>
+     </div>
+    </section>
+
+    <aside class="right-col">
+     <section class="panel intel-panel">
+      <div class="panel-header compact"><div><p class="panel-kicker">DYNAMIC WORLD</p><h2 id="inspectorHeading">Canlı Kontrol</h2></div><span class="section-symbol">⌁</span></div>
+      <div id="inspector" class="inspector" aria-live="polite"><div class="inspector-empty"><div class="empty-glyph">◎</div><strong>Ofis seni bekliyor</strong><p>Bir karaktere, odaya veya projeye tıklayıp detaylarını keşfet.</p></div></div>
+     </section>
+     <section class="panel feed-panel">
+      <div class="panel-header compact"><div><p class="panel-kicker">STUDIO PULSE</p><h2>Olay Akışı</h2></div><span class="event-live">● CANLI</span></div>
+      <div id="eventFeed" class="event-feed" role="log" aria-live="off"></div>
+      <div class="feed-footer"><span>◷</span> Hikâyeler gerçek zamanlı simüle edilir <button id="clearFeed" class="text-btn">TEMİZLE</button></div>
+     </section>
+    </aside>
+   </div>
+
+   <div class="bottom-grid">
+    <section class="panel roster-panel">
+     <div class="panel-header"><div><p class="panel-kicker">THE PEOPLE BEHIND THE PIXELS</p><h2>Stüdyo Ekibi <span class="soft-text">12 ÜYE</span></h2></div><div class="header-switch"><button class="filter-btn active" data-filter="all">Tümü</button><button class="filter-btn" data-filter="busy">Çalışan</button><button class="filter-btn" data-filter="free">Molada</button></div></div>
+     <div id="teamRoster" class="team-roster"></div>
+    </section>
+    <section class="panel projects-panel">
+     <div class="panel-header"><div><p class="panel-kicker">PRODUCTION PIPELINE</p><h2>Aktif Projeler</h2></div><span class="project-count">03 PROJECTS</span></div>
+     <div id="projectList" class="project-list"></div>
+    </section>
+   </div>
+
+   <section class="decision-bar" id="decisionBar" hidden aria-live="polite">
+     <div><div class="panel-kicker">✦ YÖNETİM KARARI</div><strong id="decisionTitle"></strong><p id="decisionDesc"></p></div><div class="decision-options" id="decisionOptions"></div>
+   </section>
+   <footer class="footer"><span>© 2026 DRABORNEAGLE · LIVING OFFICE <span class="footer-dot">✦</span> 100% LOCAL ENGINE</span><span>Ücretli API yok · Hesap gerektirmez · İlerleme cihazında saklanır</span><button id="resetBtn" class="text-btn">YENİDEN BAŞLAT</button></footer>
+  </main>
+ </div>
+ <dialog id="modal" class="help-modal"><div class="modal-inner"><button class="modal-close" id="modalClose" aria-label="Kapat">✕</button><div id="modalContent"></div></div></dialog>
+ <script type="module" src="./app.js?v=1"></script>
+</body>
+</html>
