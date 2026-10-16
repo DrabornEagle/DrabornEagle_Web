@@ -56,7 +56,7 @@ export class OfficeWorld{
  get averageMorale(){return Math.round(this.employees.reduce((s,a)=>s+a.morale,0)/this.employees.length);}
  get activeCount(){return this.employees.filter(e=>!["break","idle"].includes(e.task)).length;}
  get employeeCount(){return this.employees.length;}
- get roomByPoint(x,y){return ROOMS.find(r=>x>=r.x*T&&x<(r.x+r.w)*T&&y>=r.y*T&&y<(r.y+r.h)*T)||ROOMS[0];}
+ getRoomByPoint(x,y){return ROOMS.find(r=>x>=r.x*T&&x<(r.x+r.w)*T&&y>=r.y*T&&y<(r.y+r.h)*T)||ROOMS[0];}
  findPerson(id){return this.employees.find(p=>p.id===id);}
  projectById(id){return this.projects.find(p=>p.id===id);}
  emit(){this.onUpdate?.();}
