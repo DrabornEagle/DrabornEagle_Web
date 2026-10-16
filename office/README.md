@@ -11,7 +11,7 @@ API ve ücretli servis kullanmadan çalışan bir oyun stüdyosu simülasyonu.
 ## Özellikler
 
 - Canvas 2D ile çizilen özgün stüdyo haritası (36×24 grid, 32px tile), yedi alan, ışıklandırma, masa ve dekorlar.
-- 12 özgün karakter: davranışlar, enerji ve moral, kişilik, uzmanlık, ilişkiler ve iş akışları.
+- 20 özgün karakter: davranışlar, enerji ve moral, kişilik, uzmanlık, ilişkiler ve iş akışları.
 - BFS yol bulma, görevler, mola, sohbet, toplantı ve gün döngüsü.
 - Üç aktif proje, üretim ilerlemesi, yatırım ve lansman döngüsü.
 - Oyun içi ekonomi, hayran, itibar ve ekip motivasyonu.
