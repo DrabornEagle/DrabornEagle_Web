@@ -1,7 +1,115 @@
 {
-  "generatedAt": "2026-10-16T17:55:03.650896Z",
+  "generatedAt": "2026-10-16T20:49:06.854131Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "eab48957700d784525",
+      "title": "A101 marketlerde akıllı ısıtıcı geçidi",
+      "summary": "15 Ekim A101 Ekstra teknoloji ürünleri arasında Xiaomi Mi Smart Space Heater S akıllı elektrikli ısıtıcı ve Philips 3000 seramik fanlı akıllı ısıtıcı yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/15-ekim-a101-ekstra-katalogunda-neler-var--211714",
+      "publishedAt": "2026-10-16T20:38:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211714/1200x67515-ekim-a101-ekstra-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6dc46b645b6b2a4fd6",
+      "title": "Çin’de kömür dönemi bitiyor: Güneş enerjisi ilk sıraya çıktı",
+      "summary": "Çin’de güneş enerjisi kurulu gücü kömürü geride bırakarak ilk sıraya çıktı. Ülkenin toplam elektrik kapasitesinin yüzde 60,8’i yenilenebilir kaynaklardan oluşuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-de-komur-donemi-bitiyor-gunes-enerjisi-ilk-siraya-cikti--211718",
+      "publishedAt": "2026-10-16T20:16:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211718/1200x675cin-de-komur-donemi-bitiyor-gunes-enerjisi-ilk-siraya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d065f2cb7e33c72944",
+      "title": "Yeni nesil kurşun-asit bataryalar Avustralya'da test edilmeye başlandı",
+      "summary": "Avustralya'da devreye alınan pilot proje, geleneksel kurşun-asit bataryaları daha uzun ömürlü ve ekonomik hâle getirmeyi hedefleyen yeni bir teknolojiyi gerçek kullanım koşullarında test edecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kursun-asit-bataryalar-geliyor-avustralya-da-ilk-testler-basladi--211726",
+      "publishedAt": "2026-10-16T19:54:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211726/1200x675kursun-asit-bataryalar-geliyor-avustralya-da-ilk-testler-basladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "00a2c6e38f656ea821",
+      "title": "Güney Kore ilk adımı attı: İnsansı robotlar, insanlarla yan yana çalışabilecek",
+      "summary": "Güney Kore, 20 insansı robotun dört sektörde çalışanlarla aynı ortamda görev yapmasına izin verdi. Testler, robotların güvenliği ve fabrikalardaki performansını ortaya koyacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/guney-kore-de-insansi-robotlar-insanlarla-yan-yana-calisacak--211715",
+      "publishedAt": "2026-10-16T19:32:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211715/1200x675guney-kore-de-insansi-robotlar-insanlarla-yan-yana-calisacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "93c3efdb2702da6d67",
+      "title": "Apple CEO'su: İlk katlanabilir telefonlar ucuz ve kalitesizdi!",
+      "summary": "Apple CEO'su John Ternus, rakip üreticilerin piyasaya sürdüğü ilk katlanabilir akıllı telefonları eleştirerek, bunları bir nevi ucuz ve kalitesiz olarak tanımladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-ceo-su-ilk-katlanabilir-telefonlar-ucuz-ve-kalitesizdi--211742",
+      "publishedAt": "2026-10-16T19:22:05Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211742/1200x675apple-ceo-su-ilk-katlanabilir-telefonlar-ucuz-ve-kalitesizdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0fba4f8726564ae181",
+      "title": "X Abonelik Türkiye fiyatları dudak uçuklatıyor",
+      "summary": "Grok, Grok Bot, Cursor, Cursor Origin gibi SpaceXSI çatısı altındaki bütün hizmetleri sunan X Abonelik programı TL cinsinden fiyatlarla ülkemizde de erişime açıldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/x-abonelik-turkiye-fiyatlari-belli-oldu--211716",
+      "publishedAt": "2026-10-16T19:11:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211716/1200x675x-abonelik-turkiye-fiyatlari-belli-oldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a65e31614887bcf3d1",
+      "title": "PlayStation'dan yeni Frame Generation patenti: Kare tahmini geliyor",
+      "summary": "PlayStation, kare oluşturma teknolojilerindeki en büyük sorunlardan biri olan giriş gecikmesini azaltabilecek yeni bir sistem için patent aldı. Teknoloji, oyuncu hareketlerini önceden tahmin edecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/playstation-dan-yeni-frame-generation-patenti-kare-tahmini--211725",
+      "publishedAt": "2026-10-16T18:48:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211725/1200x675playstation-dan-yeni-frame-generation-patenti-kare-tahmini.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "512ef2b559b018bbf5",
+      "title": "Sony yeni Walkman serisini tanıttı: Fiyatı 5.899 dolara kadar çıkıyor!",
+      "summary": "Sony'nin yeni nesil Walkman modelleri, üst düzey ses bileşenleri ve özel gövde tasarımlarıyla duyuruldu. Serinin en pahalı üyesi NW-WM1ZM3, 5.899 dolarlık fiyatıyla dikkat çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sony-yeni-walkman-serisini-tanitti-5-899-dolara-kadar-cikiyor--211721",
+      "publishedAt": "2026-10-16T18:26:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211721/1200x675sony-yeni-walkman-serisini-tanitti-5-899-dolara-kadar-cikiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "63427a48f50ab9e9b7",
+      "title": "Panasonic konutlar için yeni R454C havadan suya ısı pompasını duyurdu",
+      "summary": "Panasonic R454C yeni ısı pompası serisi farklı ısıtma kapasiteleri ile müstakil evlerden ziyade daire tabanlı konutlarda kullanılmak için tasarlanmış.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/panasonic-r454c-isi-pompasi-tanitildi--211720",
+      "publishedAt": "2026-10-16T18:04:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211720/1200x675panasonic-r454c-isi-pompasi-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "3b27bc1b7eb4e59b95",
       "title": "Yeşil hidrojende Çin farkı: Maliyet yarı yarıya düşebilir",
@@ -363,18 +471,6 @@
       "editorial": false
     },
     {
-      "id": "12b510c31af92599e3",
-      "title": "Black Friday ne zaman? İşte 2026 Efsane & Kara Cuma tarihi",
-      "summary": "Kara Cuma için geri sayım başladı! Peki Türkiye'de 2026 Black Friday indirimleri ne zaman? Efsane cumada indirime giren mağazalar ve kampanya yapan tüm markalar burada!",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/black-friday-ne-zaman-basliyor-kara-cuma-anlami-ne-demek--141235",
-      "publishedAt": "2026-10-16T13:08:09Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/141235/1200x675black-friday-ne-zaman-basliyor-kara-cuma-anlami-ne-demek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "1beb66d0b231d0b1c0",
       "title": "Continuous accountability for Verified bots",
       "summary": "Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, ensuring they remain accountable over time.",
@@ -384,30 +480,6 @@
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M51ZPERWNWYTD7Z36YMY80A8.01M51ZPFH7VV8EHQTMPJG9FHZ4.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "ef989a96176569874d",
-      "title": "“Made in Europe” pazarlığında İngiltere’ye kapı açılıyor: Türkiye taslakta yok",
-      "summary": "Fransa ve Almanya’nın otomotiv uzlaşması, İngiltere’ye “Made in Europe” kapısını açarken Türkiye’yi mevcut tanımın dışında bırakıyor. Ankara’nın kapsama girme çabaları sürüyor; plan kesinleşmiş değil.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/made-in-eu-icin-ingiltere-ye-kapi-aciliyor-turkiye-taslakta-yok--211701",
-      "publishedAt": "2026-10-16T12:52:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211701/1200x675made-in-eu-icin-ingiltere-ye-kapi-aciliyor-turkiye-taslakta-yok.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a09d1500dd8bc99876",
-      "title": "Meta’nın 1 TB RAM isteyen yapay zekası: Muse Spark Open",
-      "summary": "Meta, 816 milyar parametreli Muse Spark Open modelini yayımladı. Apple ile optimize edilen yapay zeka, iki M5 Ultra Mac Studio üzerinde 1 TB birleşik bellekle yerel çalışabiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/meta-nin-1-tb-ram-isteyen-yapay-zekasi-muse-spark-open--211702",
-      "publishedAt": "2026-10-16T12:30:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211702/1200x675meta-nin-1-tb-ram-isteyen-yapay-zekasi-muse-spark-open.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -435,54 +507,6 @@
       "editorial": false
     },
     {
-      "id": "2130ae90ca2d022f02",
-      "title": "BloombergNEF, 2026'da güneş enerjisi kurulumlarının düşmesini bekliyor: Sebebi ise Çin",
-      "summary": "BloombergNEF, küresel güneş enerjisi sektörünün geleceğine ilişkin yeni tahminlerini paylaştı. Raporda, Çin'deki yavaşlamanın sektördeki dengeleri nasıl değiştireceğine de dikkat çekiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bloombergnef-2026-da-gunes-enerjisi-kurulumlari-dusecek--211709",
-      "publishedAt": "2026-10-16T12:09:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211709/1200x675bloombergnef-2026-da-gunes-enerjisi-kurulumlari-dusecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "02c10a732030dc18c9",
-      "title": "Yapay zeka endişesi çip devlerini vurdu: 2 trilyon dolarlık kayıp kapıda",
-      "summary": "Yapay zeka yatırımlarının maliyeti, faiz artışı beklentileri ve Çin rekabeti çip hisselerini vurdu. ABD’li çip devlerinde son altı işlem günündeki kayıp 1,64 trilyon dolara ulaştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-cip-devlerini-vurdu-2-trilyon-dolarlik-kayip-kapida--211710",
-      "publishedAt": "2026-10-16T11:47:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211710/1200x675yapay-zeka-cip-devlerini-vurdu-2-trilyon-dolarlik-kayip-kapida.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5485115bd895dabb19",
-      "title": "League of Legends Classic için yolun sonu: Son tarih paylaşıldı",
-      "summary": "Riot Games, nostalji odaklı League of Legends Classic modunun geleceğiyle ilgili kararını verdi. Temmuz ayında başlayan deneyim, oyuncu ilgisinin azalması nedeniyle Ocak 2027'de sona erecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/league-of-legends-classic-icin-yolun-sonu-son-tarih-paylasildi--211706",
-      "publishedAt": "2026-10-16T11:26:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211706/1200x675league-of-legends-classic-icin-yolun-sonu-son-tarih-paylasildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0628ab24a1db574d03",
-      "title": "Avrupa'nın en değerli şirketleri belli oldu: ASELSAN da listede",
-      "summary": "Avrupa'nın en değerli şirketleri 2026 yılı verileriyle sıralandı. Listenin zirvesinde Hollandalı teknoloji devi yer alırken, Türkiye'den ASELSAN da ilk 20 şirket arasına girdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/avrupa-nin-en-degerli-sirketleri-aciklandi-aselsan-da-listede--211707",
-      "publishedAt": "2026-10-16T11:04:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211707/1200x675avrupa-nin-en-degerli-sirketleri-aciklandi-aselsan-da-listede.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "f3a70dfa0375000e31",
       "title": "Samsung, Galaxy S27 Ultra’da Snapdragon 8 Elite Extreme Gen 6 İşlemciden Vazgeçebilir! İyi de Neden?",
       "summary": "Samsung, Snapdragon 8 Elite Extreme Gen 6 işlemcisindeki sorunlar nedeniyle Galaxy S27 Ultra'da kendi Exynos 2700 işlemcisine geçmeyi değerlendiriyor.",
@@ -491,30 +515,6 @@
       "publishedAt": "2026-10-16T10:47:50Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/693178/693178-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8aff2cc468b5df05dd",
-      "title": "Amazon, Grok Bot’u engelledi: Elon Musk, rakip alışveriş platformu kurabilir",
-      "summary": "Elon Musk, Grok Bot’un Amazon’da engellenmesinin ardından şirkete rakip bir alışveriş platformu kurabileceklerini söyledi. Açıklama, X bünyesinde yeni bir alışveriş hizmeti ihtimalini gündeme getirdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-grok-bot-u-engelledi-elon-musk-rakip-platform-kurabilir--211708",
-      "publishedAt": "2026-10-16T10:42:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211708/1200x675amazon-grok-bot-u-engelledi-elon-musk-rakip-platform-kurabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5be6e3eff86ce0c274",
-      "title": "Microsoft Windows 11'i hızlandırdı: RAM kullanımı düşüyor",
-      "summary": "Microsoft, Windows 11'i özellikle düşük RAM'li bilgisayarlarda hızlandıran yeni optimizasyonlar yaptı. İşletim sistemi artık daha az bellek tüketirken uygulamalar arasında daha akıcı çalışacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/microsoft-windows-11-i-hizlandirdi-ram-kullanimi-dusuyor--211703",
-      "publishedAt": "2026-10-16T10:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211703/1200x675microsoft-windows-11-i-hizlandirdi-ram-kullanimi-dusuyor.jpg",
       "language": "tr",
       "editorial": false
     },
