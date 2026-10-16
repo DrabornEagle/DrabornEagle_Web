@@ -26,7 +26,7 @@ function zoomTo(value,cx=WORLD.width/2,cy=WORLD.height/2){
  const px=(cx-camera.x)/prev,py=(cy-camera.y)/prev;
  camera.scale=next;camera.x=cx-px*next;camera.y=cy-py*next;constrainCamera();updateZoom();
 }
-function canvasPoint(e){const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)/r.width*WORLD.width,y:(e.clientY-r.top)/r.height*WORLD.height};}
+function canvasPoint(e){const r=canvas.getBoundingClientRect(),fit=Math.min(r.width/WORLD.width,r.height/WORLD.height),ox=(r.width-WORLD.width*fit)/2,oy=(r.height-WORLD.height*fit)/2;return{x:(e.clientX-r.left-ox)/fit,y:(e.clientY-r.top-oy)/fit};}
 function worldPoint(e){const pos=canvasPoint(e);return{x:(pos.x-camera.x)/camera.scale,y:(pos.y-camera.y)/camera.scale};}
 function handlePick(e){
  const pt=worldPoint(e);
