@@ -1,6 +1,6 @@
 /* Scope: /office/ only. Versioned modules are cached as one atomic release. */
-const CACHE="draborn-office-static-v2.0.0";
-const CORE=["./","./index.html","./style.css?v=2.0.0","./app.js?v=2.0.0","./engine.js?v=2.0.0","./data.js?v=2.0.0","./renderer.js?v=2.0.0","./icons.js?v=2.0.0","./assets/eagle.svg","./manifest.webmanifest"];
+const CACHE="draborn-office-static-v0.3.0";
+const CORE=["./","./index.html","./style.css?v=0.3.0","./app.js?v=0.3.0","./engine.js?v=0.3.0","./data.js?v=0.3.0","./renderer.js?v=0.3.0","./coast.js?v=0.3.0","./miami.css?v=0.3.0","./icons.js?v=0.3.0","./assets/eagle.svg","./manifest.webmanifest"];
 self.addEventListener("install",e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(CORE)).then(()=>self.skipWaiting()));});
 self.addEventListener("activate",e=>{e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k.startsWith("draborn-office-static-")&&k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim()));});
 self.addEventListener("fetch",e=>{

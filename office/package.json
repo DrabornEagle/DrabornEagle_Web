@@ -1,1 +1,14 @@
-{"name":"draborn-office","version":"2.0.0","private":true,"type":"module","description":"Dependency-free living game studio simulation","scripts":{"test":"node --test tests/*.test.mjs","check":"node scripts/check.mjs"}}
+{
+  "name": "draborn-office",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "Original Miami coastal studio simulation; no runtime dependency or paid API",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check.mjs"
+  },
+  "devDependencies": {
+    "linkedom": "0.18.13"
+  }
+}

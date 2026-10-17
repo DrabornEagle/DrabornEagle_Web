@@ -86,7 +86,7 @@ export const DECOR = [
 export const ROOM_LABELS={creative:"GELİŞTİRME",art:"SANAT & TASARIM",studio:"SES & YAYIN",lounge:"COFFEE POINT",meeting:"TOPLANTI",server:"SERVER ROOM",lobby:"SHOWROOM"};
 
 
-export const VERSION="2.0.0";
+export const VERSION="0.3.0";
 export const RESEARCH=[
  {id:"workflow",name:"Akıllı iş akışı",desc:"Tüm projelerde üretim +%15.",cost:6500,icon:"workflow",requires:[]},
  {id:"ergonomics",name:"İnsan odaklı stüdyo",desc:"Enerji tüketimi %22 azalır.",cost:5500,icon:"heart",requires:[]},

@@ -13,8 +13,8 @@ function setup(){
  return{handlers,stores,calls,caches,setOffline:()=>net=false};
 }
 async function lifecycle(fn){let promise;fn({waitUntil:p=>promise=p});await promise;}
-test("Offline installation preloads the complete atomic V2 release",async()=>{
- const s=setup();await lifecycle(s.handlers.install);const m=s.stores.get("draborn-office-static-v2.0.0");assert.ok(m.has("https://example.test/office/app.js?v=2.0.0"));assert.ok(m.has("https://example.test/office/renderer.js?v=2.0.0"));assert.ok(m.has("https://example.test/office/assets/eagle.svg"));assert.equal(m.size,10);
+test("Offline installation preloads the complete atomic v0.3 release",async()=>{
+ const s=setup();await lifecycle(s.handlers.install);const m=s.stores.get("draborn-office-static-v0.3.0");assert.ok(m.has("https://example.test/office/app.js?v=0.3.0"));assert.ok(m.has("https://example.test/office/renderer.js?v=0.3.0"));assert.ok(m.has("https://example.test/office/assets/eagle.svg"));assert.ok(m.has("https://example.test/office/coast.js?v=0.3.0"));assert.ok(m.has("https://example.test/office/miami.css?v=0.3.0"));assert.equal(m.size,12);
 });
 test("Activation retires V1 caches while preserving every other app cache",async()=>{
  const s=setup();await s.caches.open("draborn-office-static-v1");await s.caches.open("another-app");await lifecycle(s.handlers.install);await lifecycle(s.handlers.activate);assert.equal(s.stores.has("draborn-office-static-v1"),false);assert.equal(s.stores.has("another-app"),true);
@@ -22,8 +22,8 @@ test("Activation retires V1 caches while preserving every other app cache",async
 test("Navigation works offline and scoped workers leave unrelated routes alone",async()=>{
  const s=setup();await lifecycle(s.handlers.install);s.setOffline();let p;s.handlers.fetch({request:{url:"https://example.test/office/",method:"GET",mode:"navigate"},respondWith:x=>p=x});assert.ok((await(await p).text()).startsWith("cached"));let handled=false;for(const url of ["https://example.test/DraBornStyle/","https://example.test/office-other/","https://remote.test/office/app.js"]){s.handlers.fetch({request:{url,method:"GET",mode:"navigate"},respondWith:()=>handled=true});}assert.equal(handled,false);
 });
-test("A V2 cache can never silently return a V1 or mismatched module",async()=>{
+test("A v0.3 cache can never silently return a V1 or mismatched module",async()=>{
  const s=setup();await lifecycle(s.handlers.install);let p;const event=url=>({request:{url,method:"GET",mode:"cors"},respondWith:x=>p=x,waitUntil:()=>{}});
- s.handlers.fetch(event("https://example.test/office/app.js?v=2.0.0"));assert.ok((await(await p).text()).includes("v=2.0.0"));assert.equal(s.calls.length,0);
+ s.handlers.fetch(event("https://example.test/office/app.js?v=0.3.0"));assert.ok((await(await p).text()).includes("v=0.3.0"));assert.equal(s.calls.length,0);
  s.handlers.fetch(event("https://example.test/office/app.js?v=1"));assert.equal(await(await p).text(),"network");assert.equal(s.calls.length,1);
 });

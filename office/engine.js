@@ -1,4 +1,4 @@
-import {WORLD,ROOMS,STAFF,PROJECTS,STATIONS,DIALOGUE,CHOICES,DECOR,RESEARCH,MILESTONES,SCENES,GENRES} from "./data.js?v=2.0.0";
+import {WORLD,ROOMS,STAFF,PROJECTS,STATIONS,DIALOGUE,CHOICES,DECOR,RESEARCH,MILESTONES,SCENES,GENRES} from "./data.js?v=0.3.0";
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const num=(v,f=0,a=0,b=1e9)=>Number.isFinite(v)?clamp(v,a,b):f;
 const text=(s,n=160)=>typeof s==="string"?s.slice(0,n):"";
@@ -81,7 +81,7 @@ export class OfficeWorld{
   if(!Number.isFinite(delta)||delta<=0||!this.speed)return;
   const dt=Math.min(delta,.1)*this.speed;this.simElapsed+=dt;this.minutes+=dt*2.75;
   if(this.minutes>=1080)this.newDay();
-  if(this.minutes>=this.nextDecision&&!this.pendingDecision){const template=this.pick(CHOICES);this.pendingDecision=CHOICES.indexOf(template);this.nextDecision=this.minutes+150;this.addEvent("bolt","Bir karar seni bekliyor",template.title,"decision");}
+  if(this.minutes>=this.nextDecision&&this.pendingDecision===null){const template=this.pick(CHOICES);this.pendingDecision=CHOICES.indexOf(template);this.nextDecision=this.minutes+150;this.addEvent("bolt","Bir karar seni bekliyor",template.title,"decision");}
   this.acc+=dt;while(this.acc>=1){this.acc--;this.updateProduction(1);this.updateSocial(1);this.checkMilestones();}
   for(const p of this.employees){
    p.dialogueLeft=Math.max(0,p.dialogueLeft-dt);
@@ -137,7 +137,8 @@ export class OfficeWorld{
   this.employees.forEach(e=>e.morale=clamp(e.morale+4,0,100));this.say(this.employees[0],"Yayınladık! Bu başarı hepimizin. 🎉",true);this.save();
  }
  get decision(){return this.pendingDecision===null?null:CHOICES[this.pendingDecision];}
- makeChoice(index){
+ makeChoice(index,expectedDecision=this.pendingDecision){
+  if(!Number.isInteger(index)||index<0||expectedDecision!==this.pendingDecision)return false;
   const choice=this.decision?.options[index];if(!choice)return false;const e=choice.effect;if(e.budget<0&&!this.canSpend(-e.budget))return false;
   if(e.budget)this.transact(e.budget,choice.label);this.fans=Math.max(0,this.fans+(e.fans||0));this.reputation=clamp(this.reputation+(e.rep||0),0,100);this.creativity=clamp(this.creativity+(e.creativity||0),0,100);
   this.employees.forEach(p=>p.morale=clamp(p.morale+(e.morale||0),0,100));if(e.boost)this.projects.forEach(p=>p.progress=clamp(p.progress+e.boost/this.projects.length,0,99));

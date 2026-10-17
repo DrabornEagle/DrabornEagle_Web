@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {OfficeWorld,findPath,blocked,getStorageKey} from "../engine.js";
-import {ROOMS,STATIONS,RESEARCH,MILESTONES,PROJECTS,STAFF} from "../data.js?v=2.0.0";
+import {ROOMS,STATIONS,RESEARCH,MILESTONES,PROJECTS,STAFF} from "../data.js?v=0.3.0";
 const memory=()=>{const m=new Map();return{getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)};};
 const rng=()=>{let seed=734921;return()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};};
 const make=(opts={})=>new OfficeWorld({storage:memory(),random:rng(),...opts});
@@ -83,4 +83,14 @@ test("The studio remains finite and bounded through 25 simulated days",()=>{
  const w=make();w.setSpeed(4);let decisions=0;
  for(let i=0;i<25000;i++){w.tick(.05);if(w.decision){w.makeChoice(0);decisions++;}if(i%1000===0)w.contract();}
  assert.ok(w.day>=25);assert.ok(decisions>20);for(const p of w.employees)for(const k of ["x","y","energy","morale"])assert.ok(Number.isFinite(p[k]),p.id+" "+k);assert.ok(w.feed.length<=80);assert.ok(w.chats.length<=100);assert.ok(w.ledger.length<=80);assert.ok(w.reports.length<=14);assert.ok(w.projects.every(p=>p.progress>=0&&p.progress<100));assert.ok(w.stats.releases>0);
+});
+
+test("Decision ID zero remains pending instead of being overwritten every frame",()=>{
+ const w=make();w.pendingDecision=0;w.minutes=760;w.nextDecision=700;w.rng=()=>.99;run(w,.5);assert.equal(w.pendingDecision,0);
+});
+test("A stale or invalid management choice cannot apply to a different decision",()=>{
+ const w=make();w.pendingDecision=1;const before=w.budget;assert.equal(w.makeChoice(0,0),false);assert.equal(w.makeChoice(.5,1),false);assert.equal(w.makeChoice(-1,1),false);assert.equal(w.budget,before);assert.ok(w.makeChoice(0,1));assert.equal(w.makeChoice(0,1),false);
+});
+test("The v0.3 release preserves V2 saved progress and pending decision zero",()=>{
+ const a=make();a.day=7;a.budget=208351;a.pendingDecision=0;a.rooms.art=3;a.save();const b=make({storage:a.storage});assert.equal(b.day,7);assert.equal(b.budget,208351);assert.equal(b.pendingDecision,0);assert.equal(b.rooms.art,3);
 });

@@ -1,11 +1,14 @@
-# DraBornOffice 2.0
+# DraBornOffice v0.3 · Miami Shores
 
 20 özgün karakterin yaşadığı, tamamen cihazda çalışan bir oyun stüdyosu simülasyonu.
 
 **Oyna:** https://www.draborneagle.com/office/
 
-## V2.0 ile gelenler
+## v0.3 ile gelenler
 
+- Miami esintili pembe, turkuaz ve gün batımı renkleri; daha büyük menü metinleri ve dokunma alanları.
+- Ofise bağlanan sahil dünyası: plaj, palmiyeli bulvar, deniz, iskele, tekneler, pastel oteller, havuz ve hareketli araçlar.
+- Yönetim kararları iki seçenek için de çalışır, sonuç onayı gösterir ve ilerlemeyi kaydeder. Kimliği 0 olan karar artık başka bir kararla değiştirilmez.
 - Baştan hazırlanmış izometrik stüdyo: 7 alan, kesit duvarlar, şehir pencereleri, parke, cam bölmeler, masalar, çift monitörler, bitkiler, toplantı masası, kahve köşesi, ses alanı, sunucular, resepsiyon ve arcade.
 - Ofisi öne çıkaran modern arayüz; masaüstünde sohbet paneli, telefonda alt menü ve açılır sohbet.
 - Birbirinden farklı 20 karakter; enerji, moral, uzmanlık, kişilik, görev, arkadaşlık ve küçük anlaşmazlıklar.
@@ -22,8 +25,8 @@
 - Gündüz, gün batımı, gece ve otomatik atmosfer seçimi.
 - Duraklatma, 1× / 2× / 4× hız, klavye ve dokunma kontrolleri, odak görünümü.
 - Cihazda çevrimdışı Türkçe ses varsa konuşma balonlarını seslendirme. Varsayılan kapalıdır; bulut ses servisi çağrılmaz.
-- Sürüm bazlı çevrimdışı önbellek; eski V1 modüllerinin V2 isteğine karışmasını engeller.
-- V1 yerel kaydını otomatik taşıma, otomatik kayıt, JSON dışa / içe aktarımı ve büyük yazı seçeneği.
+- Sürüm bazlı çevrimdışı önbellek; eski modüllerin v0.3 isteğine karışmasını engeller.
+- V1 / V2 yerel kayıtlarını koruma, otomatik kayıt, JSON dışa / içe aktarımı ve büyük yazı seçeneği.
 
 ## Kullanım
 
@@ -58,8 +61,8 @@ Repo zaten varsa proje kökünde `git pull --ff-only` yeterli.
 ## Kayıt
 
 - V2 anahtarı: `draborn-office-v2`.
-- V2 bulunmadığında `draborn-office-v1` okunur ve bilinen bilgiler korunarak dönüştürülür.
-- V1 kaydı yeni stüdyo oluşturulmadıkça silinmez.
+- Geçerli kayıt bulunmadığında `draborn-office-v1` okunur ve bilinen bilgiler korunarak dönüştürülür.
+- Eski kayıtlar yeni stüdyo oluşturulmadıkça silinmez. Kayıt şeması 2 olarak korunur; sürüm adının v0.3 olması ilerlemeyi sıfırlamaz.
 - Otomatik kayıt: 20 saniyede bir ve sekmeden ayrılırken.
 - Ayarlar → JSON yedeği indir / Yedeği içe aktar ile cihazlar arasında elle taşıma.
 - İçe aktarım verisi tür, boyut, değer aralığı ve bilinen kimliklerle denetlenir.
@@ -76,10 +79,14 @@ Repo zaten varsa proje kökünde `git pull --ff-only` yeterli.
 | `app.js` | Paneller, kontroller, klavye, dokunma, ses, yedek işlemleri |
 | `engine.js` | Bağımsız simülasyon, üretim, ekonomi, ilişkiler, kayıt |
 | `renderer.js` | İzometrik Canvas 2D çizimi, kamera, seçim, konuşma balonları |
+| `coast.js` | Kamera ile bütünleşen sahil dünyası, deniz, şehir ve ortam hareketleri |
+| `miami.css` | Miami renkleri, daha büyük tipografi, karar sonuç ekranı |
 | `data.js` | Özgün karakterler, mekanlar, projeler ve yazılmış senaryolar |
 | `icons.js` | Yerel SVG arayüz simgeleri |
 | `sw.js` | Yalnızca `/office/` kapsamında sürümlü çevrimdışı önbellek |
 | `tests/` | Simülasyon, kamera ve çevrimdışı çalışma testleri |
+
+Oynamak için paket kurulumu gerekmez; geliştirme testleri için ücretsiz linkedom yalnızca devDependency olarak kullanılır.
 
 Çizimler kodla üretilir; üçüncü taraf sanat paketi, dış SDK, font CDN'i veya çalışma zamanında ücretli API kullanılmaz. Simülasyon, render ve DOM durumu birbirinden ayrıdır. Statik ofis zemini önbelleğe çizilir; dünya çizimi 30 FPS ile sınırlanır, cihaz piksel oranı en fazla 2'dir.
 
@@ -88,11 +95,12 @@ Repo zaten varsa proje kökünde `git pull --ff-only` yeterli.
 Node.js 22 veya üzeri:
 
 ```sh
+npm install
 npm test
 npm run check
 ```
 
-32 otomatik test: kayıt geçişi, bozuk dosyalar, ekonomi, görev ataması, araştırma bağımlılıkları, ücret sınırları, günlük giderler, kararlar, ödüller, kamera / seçim koordinatları, sürümlü önbellek ve 25 oyun günü süren simülasyon.
+40 otomatik test: kayıt geçişi, bozuk dosyalar, ekonomi, görev ataması, araştırma bağımlılıkları, ücret sınırları, günlük giderler, kararlar, ödüller, kamera / seçim koordinatları, sürümlü önbellek ve 25 oyun günü süren simülasyon. Beş arayüz regresyon testi gerçek uygulama düğmelerine DOM emülasyonunda tıklayarak iki seçeneği, 0 kimlikli kararı, yetersiz bütçeyi ve ücretsiz seçeneği denetler.
 
 Ayrıca 16 arayüz akışı DOM emülasyonunda kontrol edildi; gündüz, gece ve mobil ofis çizimi ekran dışında rasterleştirilerek incelendi. Bunlar gerçek tarayıcı düzeni veya fiziksel cihazdaki dokunma / ses testinin yerine geçmez. Bu oturumda etkileşimli tarayıcı testi yapılamadı.
 
