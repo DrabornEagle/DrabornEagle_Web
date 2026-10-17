@@ -84,3 +84,40 @@ export const DECOR = [
  {kind:"screen",x:24,y:20},{kind:"arcade",x:31,y:20},{kind:"plant",x:2,y:22}
 ];
 export const ROOM_LABELS={creative:"GELİŞTİRME",art:"SANAT & TASARIM",studio:"SES & YAYIN",lounge:"COFFEE POINT",meeting:"TOPLANTI",server:"SERVER ROOM",lobby:"SHOWROOM"};
+
+
+export const VERSION="2.0.0";
+export const RESEARCH=[
+ {id:"workflow",name:"Akıllı iş akışı",desc:"Tüm projelerde üretim +%15.",cost:6500,icon:"workflow",requires:[]},
+ {id:"ergonomics",name:"İnsan odaklı stüdyo",desc:"Enerji tüketimi %22 azalır.",cost:5500,icon:"heart",requires:[]},
+ {id:"qa",name:"Otomatik test sistemi",desc:"Hata giderme hızı +%40, kalite +4.",cost:9000,icon:"shield",requires:["workflow"]},
+ {id:"marketing",name:"Topluluk laboratuvarı",desc:"Lansmanlarda kazanılan hayran +%30.",cost:8000,icon:"megaphone",requires:[]},
+ {id:"render",name:"Yeni nesil üretim",desc:"Üretim +%20. Sanat odası seviye 2 gerektirir.",cost:14000,icon:"spark",requires:["workflow"],room:"art"},
+ {id:"publishing",name:"Bağımsız yayıncılık",desc:"Lansman geliri +%25.",cost:18000,icon:"rocket",requires:["marketing","qa"]}
+];
+export const MILESTONES=[
+ {id:"firstLaunch",title:"İlk alkış",desc:"İlk proje sürümünü yayınla.",target:1,key:"releases",reward:3000,icon:"rocket"},
+ {id:"upgrader",title:"Bir adım ileri",desc:"Bir odayı geliştir.",target:1,key:"upgrades",reward:1500,icon:"home"},
+ {id:"researcher",title:"Geleceği tasarla",desc:"İlk araştırmayı tamamla.",target:1,key:"research",reward:2000,icon:"flask"},
+ {id:"people",title:"Önce insan",desc:"Ekip moralini %90'a çıkar.",target:90,key:"morale",reward:2500,icon:"heart"},
+ {id:"community",title:"Birlikte büyüyoruz",desc:"10.000 hayrana ulaş.",target:10000,key:"fans",reward:5000,icon:"users"},
+ {id:"veteran",title:"Stüdyonun ritmi",desc:"5 oyun günü tamamla.",target:6,key:"day",reward:4500,icon:"sun"},
+ {id:"indie",title:"Bağımsız bir ses",desc:"İtibarı 65'e çıkar.",target:65,key:"reputation",reward:6000,icon:"star"},
+ {id:"launchpad",title:"Lansman üssü",desc:"Toplam 10 sürüm yayınla.",target:10,key:"releases",reward:10000,icon:"trophy"}
+];
+export const SCENES=[
+ {topic:"Oynanış",lines:["Dün geceki prototipi denediniz mi? Hareket hissi çok daha iyi.","Evet! Zıplamadan sonra kamera biraz daha yumuşak olabilir.","Not aldım. Küçük bir ayar, büyük bir fark yaratacak."]},
+ {topic:"Kahve molası",lines:["Kahve makinesi bugün benden daha üretken.","O da her sabah aynı build'i alıyor.","Ama onun build'i hiç hata vermiyor! ☕"]},
+ {topic:"Görsel dünya",lines:["Gün batımı ışığını sahneye ekledim. Her şey değişti.","Bunu fragmanın açılışında kullanalım!","Tamam, yüksek çözünürlüklü bir kare hazırlıyorum."]},
+ {topic:"Oyuncu geri bildirimi",lines:["Bir oyuncu oyunumuzda ilk barınağını yapmış. Ekran görüntüsünü gönderdi.","İşte bu yüzden bu işi yapıyoruz.","Bir sonraki günlüğe ekleyelim. Topluluk buna bayılır."]},
+ {topic:"Küçük bir anlaşmazlık",lines:["Bu özellik bu sprinte yetişmeyebilir. Biraz fazla iş var.","Haklısın, önce mevcut sistemi sağlamlaştıralım.","Anlaştık. Kalanını sonraki sürüme taşıyorum."]},
+ {topic:"Ses tasarımı",lines:["Yağmur sesine birkaç gerçek ortam kaydı katmak istiyorum.","Kulaklıkla denedim; ormanın içindeymişim gibi.","O zaman doğru yoldayız. Bir katman daha ekliyorum."]},
+ {topic:"Öğleden sonra",lines:["Bazen iyi bir fikir, ekrandan uzaklaşınca geliyor.","Beş dakika balkona çıkalım mı?","Dönerken yeni mekaniğin çözümü de gelir belki."]},
+ {topic:"Lansman heyecanı",lines:["Geri sayım başladı. Son test listesi kimde?","Bende. Kontroller, kayıtlar, mobil görünüm... Hepsi sırada.","Bu sürümle gurur duyacağız."]}
+];
+export const GENRES=[
+ {id:"survival",label:"Survival / Craft",icon:"🌲",color:"#215e51",accent:"#85d8ad",audience:1.25},
+ {id:"story",label:"Sinematik / Hikâye",icon:"🌆",color:"#77517c",accent:"#eab3d0",audience:1.1},
+ {id:"arcade",label:"Arcade / Platform",icon:"👾",color:"#555a92",accent:"#b7b9ff",audience:.85},
+ {id:"sim",label:"Simülasyon / Yönetim",icon:"🏙",color:"#3d677e",accent:"#8ecce3",audience:1.05}
+];

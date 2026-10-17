@@ -1,207 +1,182 @@
-import {WORLD,ROOMS,STAFF} from "./data.js";
-import {OfficeWorld,drawWorld,formatCurrency} from "./engine.js";
-
-const $=id=>document.getElementById(id);
-const world=new OfficeWorld();
-const stage=$("stageShell"),canvas=$("officeCanvas"),ctx=canvas.getContext("2d",{alpha:false});
-const camera={scale:1,x:0,y:0};const touch=new Map();
-let selected=null,rosterFilter="all",full=false,last=performance.now(),raf=0,lastRender=0,dragged=false,origin=null,toastTimeout=0,soundOn=false,audioCtx=null,lastMusic=0;
-const fmt=n=>Math.round(n).toLocaleString("tr-TR");
-const escapeHtml=s=>String(s??"").replace(/[&<>"']/g,ch=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[ch]));
-function toast(str){
- const el=$("mapToast");el.textContent=str;el.classList.add("shown");clearTimeout(toastTimeout);toastTimeout=setTimeout(()=>el.classList.remove("shown"),2700);
+import {OfficeWorld,formatCurrency} from "./engine.js?v=2.0.0";
+import {OfficeRenderer,drawAvatar} from "./renderer.js?v=2.0.0";
+import {ROOMS,RESEARCH,MILESTONES,GENRES,VERSION} from "./data.js?v=2.0.0";
+import {icon} from "./icons.js?v=2.0.0";
+const $=id=>document.getElementById(id),esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])),fmt=n=>Math.round(n).toLocaleString("tr-TR");
+const world=new OfficeWorld(),renderer=new OfficeRenderer($("officeCanvas")),drawer=$("drawer"),content=$("drawerContent"),stage=$("officeStage");
+let panel=null,selected=null,teamFilter="all",teamQuery="",toastTimer,frameTime=performance.now(),drawTime=0,chatStamp="",feedStamp="",hudTime=0,rosterStamp="",tour=false,audioCtx=null,full=false;
+const portraits=new Map();
+function portrait(p){if(!portraits.has(p.id)){const canvas=document.createElement("canvas");canvas.width=80;canvas.height=80;drawAvatar(canvas.getContext("2d"),p,80);portraits.set(p.id,canvas.toDataURL());}return portraits.get(p.id);}
+const avatar=(p,cls="chat-avatar")=>'<span class="'+cls+'" style="color:'+p.color+'"><img src="'+portrait(p)+'" alt="" width="100%" height="100%" style="display:block;image-rendering:pixelated"></span>';
+function icons(root=document){root.querySelectorAll("[data-icon]").forEach(e=>{e.innerHTML=icon(e.dataset.icon);e.removeAttribute("data-icon");});}
+function toast(message){$("toast").textContent=message;$("toast").classList.add("shown");clearTimeout(toastTimer);toastTimer=setTimeout(()=>$("toast").classList.remove("shown"),3600);}
+function beep(f=660,d=.09){if(!world.settings.sound)return;try{audioCtx||=new(window.AudioContext||window.webkitAudioContext)();audioCtx.resume();const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type="sine";o.frequency.value=f;g.gain.setValueAtTime(.025,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(.001,audioCtx.currentTime+d);o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+d);}catch{}}
+function save(manual=false){const ok=world.save();$("saveStatus").textContent=ok?"Kaydedildi · "+new Date().toLocaleTimeString("tr-TR",{hour:"2-digit",minute:"2-digit"}):"Kayıt kullanılamıyor";if(manual){toast(ok?"İlerlemen bu cihaza kaydedildi.":"Tarayıcı depolaması kapalı. Ayarlardan JSON yedeği indirebilirsin.");beep();}return ok;}
+function soundToggle(){world.settings.sound=!world.settings.sound;save();renderSettingsFlags();if(world.settings.sound)beep(720,.12);toast(world.settings.sound?"Stüdyo sesleri açık.":"Stüdyo sesleri kapalı.");}
+function renderSettingsFlags(){$("soundBtn").innerHTML=icon(world.settings.sound?"volume":"mute");$("soundBtn").setAttribute("aria-pressed",String(world.settings.sound));$("soundBtn").setAttribute("aria-label",world.settings.sound?"Sesleri kapat":"Sesleri aç");$("labelsBtn").classList.toggle("selected",world.settings.labels);$("labelsBtn").setAttribute("aria-pressed",String(world.settings.labels));document.documentElement.style.setProperty("--font-scale",world.settings.fontScale);document.body.classList.toggle("large-text",world.settings.fontScale>1);}
+function renderHud(){
+ $("budgetStat").textContent=formatCurrency(world.budget);$("fansStat").textContent=fmt(world.fans);$("moraleStat").innerHTML="%"+world.averageMorale+' <em>'+(world.averageMorale>=80?"Harika":world.averageMorale>=60?"İyi":"İlgi bekliyor")+"</em>";
+ $("clock").textContent=world.clock;$("dayLabel").textContent="GÜN "+String(world.day).padStart(2,"0");$("daypart").textContent=world.daypart;$("feedDay").textContent="GÜN "+world.day;
+ $("weatherIcon").innerHTML=icon(renderer.theme(world)==="night"?"moon":"sun");$("workingCount").textContent=world.activeCount+" çalışıyor / "+world.employeeCount+" kişi";
+ $("simStatus").textContent=world.speed===0?"Bir nefes arası":"Hayat devam ediyor";$("simDot").style.background=world.speed===0?"#a695b9":"";
+ document.querySelectorAll("[data-speed]").forEach(b=>{const active=Number(b.dataset.speed)===world.speed;b.classList.toggle("active",active);b.setAttribute("aria-pressed",String(active));});
+ $("decisionChip").hidden=!world.decision;if(world.decision)$("decisionName").textContent=world.decision.title;
+ const ready=MILESTONES.filter(m=>world.achievements.includes(m.id)&&!world.claimed.includes(m.id));$("goalDot").hidden=!ready.length;
+ const next=ready[0]||MILESTONES.find(m=>!world.achievements.includes(m.id));$("goalTitle").textContent=ready.length?ready.length+" hedef ödülün hazır!":next?.title||"Güzel bir yolculuk oldu!";$("goalSubtitle").textContent=ready.length?"Hedefler panelinden ödüllerini al.":next?.desc||"Stüdyonun hikâyesini büyütmeye devam et.";
+ $("ambientText").textContent=world.speed===0?"Kısa bir mola":world.minutes<720?"Günün ilk fikirleri":world.minutes<960?"Birlikte üretiyoruz":"Bir gün daha, bin yeni fikir";
+ if(renderer.follow){$("followChip").hidden=false;$("followName").textContent=world.findPerson(renderer.follow)?.name+" takip ediliyor";}else $("followChip").hidden=true;
+ const newRoster=world.employees.map(p=>p.id+p.task).join("")+(selected?.id||"");if(newRoster!==rosterStamp){rosterStamp=newRoster;renderPeople();}
+ renderChat();renderFeed();renderMiniProjects();refreshLiveValues();
 }
-function save(){if(world.save()){toast("✓ İlerleme bu cihaza kaydedildi.");$("saveBtn").classList.add("active");setTimeout(()=>$("saveBtn").classList.remove("active"),650);}else toast("Tarayıcı depolamasına erişilemiyor.");}
-function selectStaff(id,follow=true){const p=world.findPerson(id);if(!p)return;selected={type:"staff",id};world.selectedId=id;renderInspector();renderRoster();if(follow)focusOn(p.x,p.y);beep(660,.055);}
-function selectRoom(id){const room=ROOMS.find(r=>r.id===id);if(!room)return;selected={type:"room",id};world.selectedId=null;renderInspector();renderRoster();beep(520,.06);}
-function selectProject(id){if(!world.projectById(id))return;selected={type:"project",id};world.selectedId=null;renderInspector();renderRoster();beep(620,.06);}
-function focusOn(x,y){const s=Math.max(1.35,camera.scale);camera.scale=s;camera.x=WORLD.width/2-x*s;camera.y=WORLD.height/2-y*s;constrainCamera();updateZoom();}
-function constrainCamera(){
- const minx=Math.min(0,WORLD.width-WORLD.width*camera.scale),miny=Math.min(0,WORLD.height-WORLD.height*camera.scale);
- camera.x=Math.max(minx,Math.min(0,camera.x));camera.y=Math.max(miny,Math.min(0,camera.y));
-}
-function updateZoom(){$("zoomLabel").textContent=Math.round(camera.scale*100)+"%";}
-function zoomTo(value,cx=WORLD.width/2,cy=WORLD.height/2){
- const prev=camera.scale,next=Math.max(1,Math.min(3.4,value));
- const px=(cx-camera.x)/prev,py=(cy-camera.y)/prev;
- camera.scale=next;camera.x=cx-px*next;camera.y=cy-py*next;constrainCamera();updateZoom();
-}
-function canvasPoint(e){const r=canvas.getBoundingClientRect(),fit=Math.min(r.width/WORLD.width,r.height/WORLD.height),ox=(r.width-WORLD.width*fit)/2,oy=(r.height-WORLD.height*fit)/2;return{x:(e.clientX-r.left-ox)/fit,y:(e.clientY-r.top-oy)/fit};}
-function worldPoint(e){const pos=canvasPoint(e);return{x:(pos.x-camera.x)/camera.scale,y:(pos.y-camera.y)/camera.scale};}
-function handlePick(e){
- const pt=worldPoint(e);
- const actor=[...world.employees].reverse().find(p=>Math.hypot(p.x-pt.x,p.y-pt.y+4)<23);
- if(actor){selectStaff(actor.id,false);return;}
- const room=world.getRoomByPoint(pt.x,pt.y);
- if(room)selectRoom(room.id);
-}
-stage.addEventListener("pointerdown",e=>{
- stage.setPointerCapture?.(e.pointerId);touch.set(e.pointerId,canvasPoint(e));
- if(touch.size===1){origin={pointer:e.pointerId,start:canvasPoint(e),last:canvasPoint(e)};dragged=false;}
-});
-stage.addEventListener("pointermove",e=>{
- if(!touch.has(e.pointerId))return;
- const current=canvasPoint(e),prev=touch.get(e.pointerId);touch.set(e.pointerId,current);
- if(touch.size===2){
-  const items=[...touch.entries()],a=items[0],b=items[1];
-  const oldA=a[0]===e.pointerId?prev:a[1],oldB=b[0]===e.pointerId?prev:b[1];
-  const before=Math.hypot(oldA.x-oldB.x,oldA.y-oldB.y)||1,after=Math.hypot(a[1].x-b[1].x,a[1].y-b[1].y);
-  zoomTo(camera.scale*after/before,(a[1].x+b[1].x)/2,(a[1].y+b[1].y)/2);dragged=true;return;
- }
- if(origin&&origin.pointer===e.pointerId){
-  if(Math.hypot(current.x-origin.start.x,current.y-origin.start.y)>8)dragged=true;
-  if(dragged){stage.classList.add("dragging");camera.x+=current.x-origin.last.x;camera.y+=current.y-origin.last.y;constrainCamera();}
-  origin.last=current;
- }
-});
-function releasePointer(e){
- if(!touch.has(e.pointerId))return;
- const click=!dragged&&touch.size===1&&origin?.pointer===e.pointerId;
- touch.delete(e.pointerId);if(touch.size===0){origin=null;stage.classList.remove("dragging");}
- if(click)handlePick(e);
-}
-stage.addEventListener("pointerup",releasePointer);
-stage.addEventListener("pointercancel",e=>{touch.delete(e.pointerId);origin=null;dragged=false;stage.classList.remove("dragging");});
-stage.addEventListener("wheel",e=>{e.preventDefault();const pos=canvasPoint(e);zoomTo(camera.scale*(e.deltaY<0?1.12:.89),pos.x,pos.y);},{passive:false});
-stage.addEventListener("keydown",e=>{
- if(e.key==="+"||e.key==="=")zoomTo(camera.scale+.2);
- if(e.key==="-")zoomTo(camera.scale-.2);
- const delta=40;
- if(e.key==="ArrowLeft")camera.x+=delta;if(e.key==="ArrowRight")camera.x-=delta;
- if(e.key==="ArrowUp")camera.y+=delta;if(e.key==="ArrowDown")camera.y-=delta;
- constrainCamera();if(["ArrowLeft","ArrowRight","ArrowUp","ArrowDown","+","-","="].includes(e.key))e.preventDefault();
-});
-$("zoomIn").onclick=()=>zoomTo(camera.scale+.25);
-$("zoomOut").onclick=()=>zoomTo(camera.scale-.25);
-$("zoomFit").onclick=()=>{camera.scale=1;camera.x=0;camera.y=0;updateZoom();toast("Bütün stüdyo görüntüleniyor.");};
-$("fullscreenBtn").onclick=toggleFull;
-function toggleFull(){
- full=!full;const panel=document.querySelector(".studio-panel");
- panel.classList.toggle("is-fullscreen",full);document.body.style.overflow=full?"hidden":"";$("fullscreenBtn").textContent=full?"✕":"⛶";
- setTimeout(()=>{constrainCamera();},20);
-}
-document.addEventListener("keydown",e=>{if(e.key==="Escape"&&full)toggleFull();});
-document.querySelectorAll(".speed-btn").forEach(button=>button.addEventListener("click",()=>{
- const speed=Number(button.dataset.speed);world.setSpeed(speed);
- document.querySelectorAll(".speed-btn").forEach(b=>b.classList.toggle("selected",b===button));
- toast(speed===0?"Simülasyon duraklatıldı.":"Simülasyon hızı "+speed+"×");
-}));
-$("saveBtn").onclick=save;
-$("resetBtn").onclick=()=>{if(confirm("Tüm yerel stüdyo ilerlemen silinsin mi? Bu işlem geri alınamaz.")){world.reset();location.reload();}};
-$("clearFeed").onclick=()=>{world.feed=[];renderFeed();toast("Olay geçmişi temizlendi.");};
-document.querySelectorAll(".filter-btn").forEach(b=>b.onclick=()=>{rosterFilter=b.dataset.filter;document.querySelectorAll(".filter-btn").forEach(x=>x.classList.toggle("active",x===b));renderRoster();});
-$("guideBtn").onclick=()=>openHelp();
-$("modalClose").onclick=()=>$("modal").close();
-$("modal").addEventListener("click",e=>{if(e.target===$("modal"))$("modal").close();});
-function openHelp(){
- $("modalContent").innerHTML='<p class="panel-kicker">DRABORN OFFICE / OYUN REHBERİ</p><h2>🦅 Stüdyona hoş geldin!</h2><p>Bu yaşayan ofiste her ekip üyesi programına, enerjisine, yeteneklerine ve sosyal ilişkilerine göre hareket eder. Oyun internet API hizmeti kullanmadan cihazında simüle edilir.</p><ul><li><b>Karaktere dokun:</b> Kişiliğini, istatistiklerini ve görevlerini incele. Kahve ısmarla, motive et veya odak görevine gönder.</li><li><b>Odaya dokun:</b> Departmanları, çalışanları ve odanın işlevini gör.</li><li><b>Projelere yatırım yap:</b> Bütçenle üretimi hızlandır. Yeterince ilerleyen projeler sürüm yayınlar ve hayran kazandırır.</li><li><b>Karar kartları:</b> Rastgele gelen yönetim kararlarının ekonomik ve sosyal sonuçları olur.</li><li><b>1× / 2× / 4×:</b> Zamanı hızlandır. Duraklat tuşuyla durdur.</li><li><b>Kaydet:</b> Otomatik kayıt da açıktır. İlerleme bu tarayıcının yerel depolamasında tutulur; cihazlar arasında paylaşılmaz.</li></ul><p><b>Not:</b> Bu gerçek bir çok oyunculu sunucu değildir. Konuşmalar, hikâyeler ve karakter davranışları lisanssız harici servislerle değil, yazılı simülasyon kurallarıyla üretilir. API anahtarı, hesap ve abonelik gerekmez.</p>';
- $("modal").showModal();
-}
-function renderMetrics(){
- $("topDay").textContent="GÜN "+String(world.day).padStart(2,"0");
- $("topClock").textContent=world.clock;$("canvasTime").textContent=world.clock;
- $("periodText").textContent=world.daypart;
- $("daySubtitle").textContent=world.minutes<12*60?"Günün ilk fikirleri şekilleniyor":world.minutes<16*60?"Üretim tüm hızıyla sürüyor":"Ekip günü tamamlamaya hazırlanıyor";
- $("weatherIcon").textContent=world.minutes<16*60?"☀️":"🌇";
- $("budgetStat").textContent=formatCurrency(world.budget);
- $("fansStat").textContent=fmt(world.fans);
- $("moraleStat").textContent="%"+world.averageMorale;
- $("moraleFill").style.width=world.averageMorale+"%";
- $("repStat").textContent=world.reputation+"/100";
- $("repHint").textContent=world.reputation>=70?"Tanınan stüdyo":world.reputation>=45?"Gelişen stüdyo":"Yükselen stüdyo";
- $("activeCount").textContent=world.activeCount+"/"+world.employeeCount+" aktif";
-}
-const personEmoji=p=>p.icon||"👤";
-function renderRoster(){
- const users=world.employees.filter(p=>rosterFilter==="all"||(rosterFilter==="busy"&&!["break","idle"].includes(p.task))||(rosterFilter==="free"&&["break","idle"].includes(p.task)));
- $("teamRoster").innerHTML=users.map(p=>'<button class="staff-chip '+(selected?.id===p.id?"active":"")+'" data-id="'+escapeHtml(p.id)+'" type="button"><span class="avatar-mini" style="border-left:2px solid '+escapeHtml(p.color)+'">'+personEmoji(p)+'</span><span class="chip-copy"><span class="chip-name">'+escapeHtml(p.name)+'</span><span class="chip-role">'+escapeHtml(p.role)+'</span></span><i class="chip-dot '+(p.task==="break"?"break":"")+'"></i></button>').join("")||'<div class="inspector-desc">Bu filtre için ekip üyesi bulunamadı.</div>';
-}
-$("teamRoster").addEventListener("click",e=>{const item=e.target.closest("[data-id]");if(item)selectStaff(item.dataset.id);});
-function renderProjects(){
- $("projectList").innerHTML=world.projects.map(p=>{
-  return '<article class="project-row" data-project-view="'+escapeHtml(p.id)+'"><div class="project-art" style="background:linear-gradient(135deg,'+p.color+',#182038)">'+p.icon+'</div><div class="project-main"><div class="project-head"><strong>'+escapeHtml(p.name)+'</strong><b>%'+Math.floor(p.progress)+'</b></div><div class="project-meta">'+escapeHtml(p.subtitle)+' · v'+(p.finished+1)+'.0</div><div class="progress-track"><i style="width:'+p.progress+'%;background:linear-gradient(90deg,'+p.color+','+p.accent+')"></i></div><div class="project-foot"><span>'+escapeHtml(p.genre)+'</span><button data-project="'+escapeHtml(p.id)+'" title="₺1.800 karşılığında +%7 ilerleme">+₺1.800 YATIRIM</button></div></div></article>';
+function renderPeople(){$("peopleStrip").innerHTML=world.employees.map(p=>'<button class="person-dot '+(selected?.id===p.id?"active":"")+'" data-staff="'+p.id+'" title="'+esc(p.name+" · "+p.role)+'" aria-label="'+esc(p.name+" karakterini incele")+'">'+avatar(p,"avatar-mini")+'<i class="'+(['break','idle'].includes(p.task)?"resting":"")+'"></i><span>'+esc(p.name)+'</span></button>').join("");$("teamCount").textContent=world.employeeCount;}
+function renderChat(force=false){
+ const stamp=world.chats.at(-1)?.id||"";if(!force&&stamp===chatStamp)return;chatStamp=stamp;
+ const list=$("chatList"),atBottom=list.scrollHeight-list.scrollTop-list.clientHeight<65;
+ list.innerHTML=world.chats.slice(-35).map(m=>{
+  const p=world.findPerson(m.personId);return '<article class="chat-message">'+(p?'<button type="button" class="chat-avatar" data-staff="'+p.id+'" aria-label="'+esc(p.name)+' karakterini incele">'+avatar(p,"chat-avatar")+"</button>":'<span class="chat-avatar" style="color:#d1b9ec">DE</span>')+'<div class="chat-copy"><div class="chat-name">'+(p?'<button data-staff="'+p.id+'" style="color:'+p.color+'">'+esc(p.name)+"</button>":"<b>Sen</b>")+'<time>'+esc(m.time)+'</time></div><small>'+esc(p?.role||"Stüdyo kurucusu")+'</small><p>'+(m.topic!=="genel"?'<span class="topic">'+esc(m.topic)+'</span>':"")+esc(m.text)+'</p></div></article>';
  }).join("");
+ if(atBottom||force)list.scrollTop=list.scrollHeight;$("chatCount").textContent=Math.min(99,world.chats.length);$("mobileChatCount").textContent=Math.min(99,world.chats.length);
 }
-$("projectList").addEventListener("click",e=>{
- const btn=e.target.closest("[data-project]");if(btn){const p=world.projectById(btn.dataset.project);if(!world.invest(btn.dataset.project)){toast("Yatırım için yeterli bütçe yok.");beep(230,.1);}else{toast(p.name+" ilerliyor!");beep(880,.09);renderAll();}return;}
- const row=e.target.closest("[data-project-view]");if(row)selectProject(row.dataset.projectView);
+function renderFeed(){const stamp=world.feed[0]?.id||"";if(stamp===feedStamp)return;feedStamp=stamp;$("eventList").innerHTML=world.feed.slice(0,35).map(e=>'<article class="event-item '+esc(e.kind)+'"><span class="event-symbol">'+icon(e.icon)+'</span><div><h4>'+esc(e.title)+'</h4><p>'+esc(e.detail)+'</p><time>Gün '+e.day+' · '+esc(e.time)+'</time></div></article>').join("");$("eventCount").textContent=world.feed.length;}
+function renderMiniProjects(){$("miniProjects").innerHTML=world.projects.slice(0,3).map(p=>'<button class="mini-project" data-project="'+esc(p.id)+'"><span class="mini-art" style="background:linear-gradient(145deg,'+p.color+',#1b2733)">'+p.icon+'</span><span class="mini-copy"><span class="mini-project-title"><b>'+esc(p.name)+'</b><span>%'+Math.floor(p.progress)+'</span></span><small>'+esc(p.genre)+' · '+world.employees.filter(e=>e.projectId===p.id).length+' kişi</small><span class="progress"><i style="width:'+p.progress+'%;background:'+p.accent+'"></i></span></span></button>').join("");}
+function live(key,value){content.querySelectorAll('[data-live="'+key+'"]').forEach(e=>{e.textContent=value;});}
+function refreshLiveValues(){
+ if(!drawer.open)return;live("budget",formatCurrency(world.budget));
+ if(panel?.type==="staff"){const p=world.findPerson(panel.id);if(!p)return;live("energy",Math.round(p.energy)+"%");live("morale",Math.round(p.morale)+"%");live("status",p.status);content.querySelectorAll("[data-action]").forEach(b=>{b.disabled=(p.cooldowns[b.dataset.action]??0)>world.simElapsed||(b.dataset.action==="coffee"&&world.budget<200);});}
+ if(panel?.type==="project"){const p=world.projectById(panel.id);if(p){live("progress","%"+p.progress.toFixed(1));live("quality",Math.round(p.quality));live("bugs",Math.ceil(p.bugs));live("releases",p.finished);content.querySelector("[data-project-progress]")?.style.setProperty("width",p.progress+"%");}}
+}
+function setDrawer(type,id){panel={type,id};const titles={team:["STÜDYONUN KALBİ","Bizim ekip"],staff:["HER KARAKTER BİR HİKÂYE","Ekip üyesi"],projects:["FİKİRDEN OYUNCUYA","Üretim masası"],project:["PROJE KONTROLÜ","Proje"],rooms:["BİRAZ DAHA İYİ BİR YER","Ofisi geliştir"],room:["YAŞAYAN MEKÂNLAR","Oda detayı"],research:["YARININ STÜDYOSU","Araştırma laboratuvarı"],goals:["KÜÇÜK ADIMLAR, BÜYÜK HAYALLER","Yolculuğun"],finances:["HER KARARIN BİR KARŞILIĞI VAR","Stüdyo raporu"],settings:["KENDİ RİTMİNİ BUL","Ayarlar & kayıtlar"],create:["HER ŞEY BİR FİKİRLE BAŞLAR","Yeni proje"],help:["DRABORN OFFICE / 2.0","Stüdyona hoş geldin"],decision:["SÖZ SIRA SENDE","Yönetim kararı"],reset:["YENİ BİR BAŞLANGIÇ","Yeni stüdyo oluştur"]};const [eyebrow,title]=titles[type]||titles.help;
+ $("drawerEyebrow").textContent=eyebrow;$("drawerTitle").textContent=title;
+ const views={team:renderTeam,staff:()=>renderStaff(id),projects:renderProjects,project:()=>renderProject(id),rooms:renderRooms,room:()=>renderRoom(id),research:renderResearch,goals:renderGoals,finances:renderFinances,settings:renderSettings,create:renderCreate,help:renderHelp,decision:renderDecision,reset:renderReset};content.innerHTML=views[type]?.()||"";icons(content);
+ document.querySelectorAll("[data-nav]").forEach(b=>b.classList.toggle("active",b.dataset.nav===type||(type==="staff"&&b.dataset.nav==="team")||(type==="project"&&b.dataset.nav==="projects")||(type==="room"&&b.dataset.nav==="rooms")));
+ if(type==="team")renderTeamRows();if(!drawer.open)drawer.showModal();content.scrollTop=0;refreshLiveValues();
+}
+function closeDrawer(){drawer.close();}
+drawer.addEventListener("close",()=>{panel=null;document.querySelectorAll("[data-nav]").forEach(b=>b.classList.toggle("active",b.dataset.nav==="office"));});
+$("closeDrawer").onclick=closeDrawer;
+drawer.addEventListener("click",e=>{if(e.target===drawer)closeDrawer();});
+function metric(label,value,key=""){return '<div class="detail-metric"><small>'+label+'</small><b'+(key?' data-live="'+key+'"':"")+'>'+value+'</b></div>';}
+function renderTeam(){return '<p class="drawer-intro">20 farklı karakter. 6 uzmanlık alanı. <strong>Aynı hayalin peşinde.</strong> Bir karakteri seç, projesini değiştir veya ofiste takip et.</p><div class="search-row"><span>'+icon("search")+'</span><input id="teamSearch" placeholder="İsim, rol veya kişilik ara..." value="'+esc(teamQuery)+'" aria-label="Ekipte ara"></div><div class="filters">'+["all",...new Set(world.employees.map(p=>p.team))].map(t=>'<button class="filter '+(t===teamFilter?"active":"")+'" data-filter="'+esc(t)+'">'+(t==="all"?"Tümü":esc(t))+'</button>').join("")+'</div><div id="teamRows"></div>';}
+function renderTeamRows(){const list=$("teamRows");if(!list)return;const q=teamQuery.toLocaleLowerCase("tr");const people=world.employees.filter(p=>(teamFilter==="all"||p.team===teamFilter)&&(p.name+" "+p.role+" "+p.trait).toLocaleLowerCase("tr").includes(q));
+ list.innerHTML=people.map(p=>'<button class="roster-row" data-staff="'+p.id+'">'+avatar(p,"chat-avatar")+'<span class="roster-copy"><b>'+esc(p.name)+'</b><small>'+esc(p.role)+'</small><small>'+esc(p.status)+'</small></span><span class="roster-meta"><span class="badge">'+esc(p.trait)+'</span><small>Enerji %'+Math.round(p.energy)+'</small><span class="progress"><i style="width:'+p.energy+'%;background:'+p.color+'"></i></span></span>'+icon("chevron",14)+'</button>').join("")||'<p class="empty-state">Bu aramayla eşleşen bir ekip üyesi yok.</p>';}
+function renderStaff(id){const p=world.findPerson(id);if(!p)return '<p>Karakter bulunamadı.</p>';$("drawerTitle").textContent=p.name;
+ const friends=Object.entries(p.friendships).sort((a,b)=>b[1]-a[1]).slice(0,4);
+ return '<div class="character-hero"><img class="portrait-large" src="'+portrait(p)+'" alt="'+esc(p.name)+'"><div><h3>'+esc(p.name)+'</h3><p>'+esc(p.role)+'</p><small>'+esc(p.team)+' · '+esc(p.trait)+'</small></div></div><div class="tag-row"><span class="badge green" data-live="status">'+esc(p.status)+'</span><span class="badge">Seviye '+Math.max(1,Math.floor(p.workCount/200)+1)+'</span></div><p class="drawer-intro">'+esc(p.bio)+'</p><div class="detail-metrics">'+metric("ENERJİ",Math.round(p.energy)+"%","energy")+metric("MORAL",Math.round(p.morale)+"%","morale")+metric("UZMANLIK",p.skill)+'</div>'+(p.dialogue?'<p class="quoted">“'+esc(p.dialogue)+'”</p>':"")+'<div class="actions"><button class="btn primary" data-follow="'+p.id+'">'+icon("eye")+' Ofiste takip et</button><button class="btn" data-locate="'+p.id+'">'+icon("pin")+' Yanına git</button></div><h3 class="subhead">Küçük bir dokunuş, güzel bir fark.</h3><div class="actions"><button class="btn soft" data-action="coffee" data-person="'+p.id+'">'+icon("coffee")+' Kahve · ₺200</button><button class="btn soft" data-action="motivate" data-person="'+p.id+'">'+icon("heart")+' Motive et</button><button class="btn soft" data-action="focus" data-person="'+p.id+'">'+icon("bolt")+' Odak görevi</button><button class="btn soft" data-action="talk" data-person="'+p.id+'">'+icon("message")+' Sohbet et</button></div><p class="priority-help">Etkileşimler kısa bir dinlenme süresinden sonra tekrar kullanılabilir.</p><label class="input-label" for="personProject">ÜZERİNDE ÇALIŞTIĞI PROJE</label><select class="field" id="personProject" data-assign-person="'+p.id+'">'+world.projects.map(a=>'<option value="'+esc(a.id)+'" '+(p.projectId===a.id?"selected":"")+'>'+esc(a.name)+'</option>').join("")+'</select><h3 class="subhead">Stüdyodaki bağları</h3>'+friends.map(([id,value])=>'<div class="relationship"><button class="text-btn" data-staff="'+id+'"><b>'+esc(world.findPerson(id)?.name)+'</b></button><span class="progress"><i style="width:'+value+'%"></i></span><small>'+Math.round(value)+'/100</small></div>').join("")+'<p class="priority-help">'+Math.round(p.workCount)+' üretim birimi · '+Math.round(p.socialCount)+' sosyal etkileşim. Yakınlaşmalar ve küçük anlaşmazlıklar ilişkileri etkiler.</p>';
+}
+function projectArt(p){return '<div class="project-card-art" style="background:linear-gradient(135deg,'+p.color+',#283149)"><small>DRABORN ORIGINAL / '+esc(p.genre.toUpperCase())+'</small><span>'+p.icon+'</span></div>';}
+function renderProjects(){return '<p class="drawer-intro">Fikirlerini oyuncularla buluştur. Ekip, enerji, oda seviyesi ve araştırmalar üretim hızını belirler. <strong>%100 olduğunda yeni bir sürüm yayınlanır.</strong></p>'+world.projects.map(p=>'<article class="card">'+projectArt(p)+'<div class="card-title-row"><h3>'+esc(p.name)+'</h3><span class="badge green">%'+p.progress.toFixed(1)+'</span></div><p>'+esc(p.genre)+' · '+world.employees.filter(a=>a.projectId===p.id).length+' ekip üyesi · '+p.finished+' sürüm</p><div class="progress"><i style="width:'+p.progress+'%;background:'+p.accent+'"></i></div><button class="btn wide soft" data-project="'+esc(p.id)+'">Projeyi yönet '+icon("arrow")+'</button></article>').join("")+'<button class="btn primary wide" data-open="create" '+(world.projects.length>=6?"disabled":"")+'>'+icon("plus")+' Yeni proje · ₺12.000</button><p class="priority-help">En fazla 6 eşzamanlı proje. Yeni bir proje açıldığında ona ekip atamayı unutma.</p>';}
+function renderProject(id){const p=world.projectById(id);if(!p)return "";$("drawerTitle").textContent=p.name;
+ return projectArt(p)+'<p class="drawer-intro">'+esc(p.subtitle)+' · '+esc(p.genre)+'</p><div class="card-title-row"><span class="badge green">v<span data-live="releases">'+p.finished+'</span>.0 yayında</span><b style="color:'+p.accent+'" data-live="progress">%'+p.progress.toFixed(1)+'</b></div><div class="progress" style="height:6px"><i data-project-progress style="width:'+p.progress+'%;background:'+p.accent+'"></i></div><div class="detail-metrics">'+metric("KALİTE",Math.round(p.quality),"quality")+metric("AÇIK HATA",Math.ceil(p.bugs),"bugs")+metric("TOPLAM GELİR",formatCurrency(p.income))+'</div><button class="btn primary wide" data-invest="'+esc(p.id)+'" '+(!world.canSpend(1800)?"disabled":"")+'>'+icon("bolt")+' Üretime yatırım yap · ₺1.800 / +%7</button><h3 class="subhead">Bu sprintin önceliği</h3><div class="priority-selector">'+[["quality","Kalite"],["balanced","Dengeli"],["speed","Hız"]].map(([key,label])=>'<button class="'+(key===p.priority?"active":"")+'" data-priority="'+key+'" data-id="'+esc(id)+'">'+label+'</button>').join("")+'</div><p class="priority-help">'+(p.priority==="quality"?"Daha yavaş üretim, daha yüksek kalite.":p.priority==="speed"?"%30 daha hızlı üretim; hata birikimi artar. Test uzmanı atamayı unutma.":"Üretim hızı, kalite ve sürdürülebilirlik dengede.")+'</p><h3 class="subhead">Proje ekibi</h3><p class="priority-help">İşaretlediğin kişi bu projeye geçer. Bir kişi aynı anda bir proje üzerinde çalışır.</p><div class="project-assignments">'+world.employees.map(a=>'<label class="assignment-label"><input type="checkbox" data-project-member="'+a.id+'" data-project-id="'+esc(id)+'" '+(a.projectId===id?"checked":"")+'><span>'+esc(a.name)+'<small style="display:block;color:#607f92;font-size:7px">'+esc(a.job)+'</small></span></label>').join("")+'</div><button class="btn wide" data-open="projects">'+icon("back")+' Tüm projeler</button>';
+}
+function renderCreate(){return '<p class="drawer-intro">Büyük bir fikrin ilk küçük adımı. Yeni projenin ismini ve türünü seç, ardından ona bir ekip kur.</p><form id="createProjectForm"><label class="input-label" for="projectName">PROJE İSMİ</label><input class="field" id="projectName" name="name" minlength="3" maxlength="32" required placeholder="Bir sonraki büyük fikrin..." autocomplete="off"><label class="input-label" for="projectGenre">TÜR</label><select class="field" id="projectGenre" name="genre">'+GENRES.map(g=>'<option value="'+g.id+'">'+g.icon+' '+esc(g.label)+'</option>').join("")+'</select><div class="card" style="margin-top:24px"><div class="card-title-row"><h3>Prototip bütçesi</h3><b>₺12.000</b></div><p>Mevcut bütçe: <strong data-live="budget">'+formatCurrency(world.budget)+'</strong><br>İlk kalite: 72 / 100 · Üretim: %0<br>Aktif proje: '+world.projects.length+' / 6</p></div><button class="btn primary wide" type="submit" '+(world.projects.length>=6||!world.canSpend(12000)?"disabled":"")+'>'+icon("spark")+' Bu fikri hayata geçir</button></form>';}
+function renderRooms(){return '<p class="drawer-intro">İyi fikirler, iyi hissettiren yerlerde doğar. Her oda <strong>4 seviyeye</strong> kadar gelişir. Çalışma odaları seviye başına %9 daha verimli olur; kahve köşesinde enerji daha hızlı toparlanır.</p>'+ROOMS.map(r=>'<article class="card"><div class="room-art"><span>'+esc(r.name.toUpperCase())+'</span>'+icon(r.id==="lounge"?"coffee":r.id==="server"?"workflow":"home")+'</div><div class="card-title-row"><h3>'+esc(r.name)+'</h3><div class="room-levels">'+[1,2,3,4].map(n=>'<i class="'+(world.rooms[r.id]>=n?"filled":"")+'"></i>').join("")+'</div></div><p>'+esc(r.desc)+'</p><div class="research-bottom"><span class="badge">Seviye '+world.rooms[r.id]+' / 4</span><button class="btn small soft" data-room="'+r.id+'">Odayı incele '+icon("arrow")+'</button></div></article>').join("");}
+function renderRoom(id){const r=ROOMS.find(r=>r.id===id);if(!r)return "";$("drawerTitle").textContent=r.name;const people=world.employees.filter(p=>p.room===id),lv=world.rooms[id],cost=world.upgradeCost(id);
+ return '<div class="room-art" style="height:110px"><span>'+esc(r.sub.toUpperCase())+'</span>'+icon(id==="lounge"?"coffee":"home",30)+'</div><p class="drawer-intro">'+esc(r.desc)+'</p><div class="detail-metrics">'+metric("SEVİYE",lv+" / 4")+metric("BU ALANDA",people.length+" kişi")+metric(id==="lounge"?"ENERJİ / SN":"ÜRETİM ETKİSİ",id==="lounge"?(2.1+lv*.15).toFixed(2):"+"+Math.round((lv-1)*9)+"%")+'</div><div class="card"><h3>'+["","Rahat bir başlangıç","Daha iyi donanım","Profesyonel dokunuş","Hayalimizdeki stüdyo"][lv]+'</h3><p>'+(lv<4?"Bir sonraki seviye: daha verimli ortam. Çalışma masalarında ek monitörler ve gelişmiş donanımlar görünür.":"Bu oda en yüksek seviyede. Ekibin için harika bir alan yarattın.")+'</p><button class="btn primary wide" data-upgrade="'+id+'" '+(lv>=4||!world.canSpend(cost)?"disabled":"")+'>'+icon("plus")+' '+(lv>=4?"En yüksek seviye":"Seviye "+(lv+1)+" · "+formatCurrency(cost))+'</button></div><button class="btn wide" data-room-locate="'+id+'">'+icon("pin")+' Ofiste bu alana git</button><h3 class="subhead">Bu alandaki ekip</h3>'+people.map(p=>'<button class="roster-row" data-staff="'+p.id+'">'+avatar(p,"chat-avatar")+'<span class="roster-copy"><b>'+esc(p.name)+'</b><small>'+esc(p.status)+'</small></span>'+icon("chevron",14)+'</button>').join("")+(people.length?"":'<p class="priority-help">Şu anda burada kimse yok. Birazdan ofisin ritmi değişebilir.</p>');
+}
+function renderResearch(){return '<p class="drawer-intro">Stüdyonun geleceğine yatırım yap. Her araştırma kalıcı bir fayda sağlar; bazıları önce başka bir araştırma veya gelişmiş oda ister.</p>'+RESEARCH.map(r=>{const done=world.research.includes(r.id),missing=r.requires.filter(id=>!world.research.includes(id)),roomMissing=r.room&&world.rooms[r.room]<2,can=world.canResearch(r.id);return '<article class="card '+(done?"complete":missing.length||roomMissing?"locked":"")+'"><div class="research-head"><span class="research-icon">'+icon(done?"check":r.icon)+'</span><div><h3>'+r.name+'</h3><small>'+formatCurrency(r.cost)+' yatırım</small></div></div><p>'+r.desc+'</p>'+(missing.length||roomMissing?'<p class="priority-help">Gereken: '+missing.map(id=>RESEARCH.find(a=>a.id===id).name).concat(roomMissing?["Tasarım Atölyesi seviye 2"]:[]).join(" + ")+'</p>':"")+'<div class="research-bottom"><small>'+(done?"Stüdyoda aktif":"Kalıcı stüdyo geliştirmesi")+'</small><button class="btn small '+(done?"":"soft")+'" data-research="'+r.id+'" '+(!can?"disabled":"")+'>'+(done?icon("check")+" Tamamlandı":"Araştır "+icon("arrow"))+'</button></div></article>';}).join("");}
+function renderGoals(){world.checkMilestones();return '<p class="drawer-intro">Büyük bir stüdyo bir günde kurulmaz. Küçük başarılarını kutla, ödüllerini al, kendi yolunu aç.</p>'+MILESTONES.map(m=>{const done=world.achievements.includes(m.id),claimed=world.claimed.includes(m.id),val=Math.min(m.target,world.milestoneValue(m));return '<article class="card '+(done?"complete":"")+'"><div class="research-head"><span class="research-icon">'+icon(m.icon)+'</span><div><h3>'+m.title+'</h3><small>'+m.desc+'</small></div></div><div class="goal-progress"><div class="progress"><i style="width:'+Math.min(100,val/m.target*100)+'%;background:'+(done?"#92cbb2":"#c4b2ec")+'"></i></div><small>'+fmt(val)+' / '+fmt(m.target)+'</small></div><div class="research-bottom"><small>'+formatCurrency(m.reward)+' stüdyo ödülü</small><button class="btn small '+(done&&!claimed?"primary":"")+'" data-claim="'+m.id+'" '+(!done||claimed?"disabled":"")+'>'+(claimed?"Ödül alındı":done?"Ödülünü al":"Yolculuk sürüyor")+'</button></div></article>';}).join("");}
+function renderFinances(){const last=world.reports[0];return '<p class="drawer-intro">Sanal stüdyonun ekonomisi. Gelirin, proje lansmanlarından ve müşteri işlerinden gelir. Maaş ve işletme gideri her oyun gününün sonunda ödenir.</p><div class="detail-metrics">'+metric("MEVCUT BÜTÇE",formatCurrency(world.budget),"budget")+metric("GÜNLÜK GİDER",formatCurrency(world.salary))+metric("İTİBAR",world.reputation+"/100")+'</div><div class="card"><h3>Küçük bir müşteri işi</h3><p>Ekibin becerileriyle günlük bir müşteri işini tamamla. +₺15.000 bütçe, her ekip üyesinde -12 enerji. Günde bir kez.</p><button class="btn soft wide" data-contract '+(world.contractDay===world.day?"disabled":"")+'>'+icon("wallet")+' '+(world.contractDay===world.day?"Bugünün işi tamamlandı":"Müşteri işini tamamla · +₺15.000")+'</button></div>'+(last?'<h3 class="subhead">Son tamamlanan gün · Gün '+last.day+'</h3><div class="card"><div class="research-bottom"><span>Gelir</span><b class="positive">+'+formatCurrency(last.income)+'</b></div><div class="research-bottom" style="margin-top:10px"><span>Gider</span><b class="negative">−'+formatCurrency(last.expenses)+'</b></div><p>Gün sonu moral: %'+last.morale+' · Toplam sürüm: '+last.releases+'</p></div>':"")+'<h3 class="subhead">Stüdyo özeti</h3><div class="detail-metrics">'+metric("TOPLAM GELİR",formatCurrency(world.stats.earned))+metric("TOPLAM HARCAMA",formatCurrency(world.stats.spent))+metric("YAYINLANAN SÜRÜM",world.stats.releases)+'</div><h3 class="subhead">Son işlemler</h3>'+(world.ledger.length?'<table class="ledger"><thead><tr><th>İŞLEM</th><th style="text-align:right">TUTAR</th></tr></thead><tbody>'+world.ledger.slice(0,30).map(e=>'<tr><td>'+esc(e.reason)+'<small>Gün '+e.day+' · '+esc(e.time)+'</small></td><td class="'+(e.amount>=0?"positive":"negative")+'">'+(e.amount>=0?"+":"−")+formatCurrency(Math.abs(e.amount))+'</td></tr>').join("")+'</tbody></table>':'<p class="empty-state">İlk işlemin burada görünecek.<br>Yeni fikirlerine yer açmaya hazırız.</p>');}
+function toggleRow(key,title,desc){return '<label class="settings-row"><span><b>'+title+'</b><small>'+desc+'</small></span><input class="toggle" type="checkbox" data-setting="'+key+'" '+(world.settings[key]?"checked":"")+' aria-label="'+title+'"></label>';}
+function renderSettings(){return '<div class="save-notice">'+icon("shield")+'<span>İlerleme otomatik olarak bu tarayıcıda saklanır. Cihaz değiştirirken JSON yedeğini indirip yeni cihazda içe aktarabilirsin. V1 kaydın varsa V2’ye otomatik taşınır.</span></div><h3 class="subhead">Stüdyonun atmosferi</h3><div class="theme-options">'+[["auto","clock","Otomatik"],["day","sun","Gündüz"],["sunset","sun","Gün batımı"],["night","moon","Gece"]].map(([v,i,l])=>'<button class="theme-choice '+(world.settings.theme===v?"active":"")+'" data-theme="'+v+'">'+icon(i)+l+'</button>').join("")+'</div>'+toggleRow("labels","Karakter ve oda isimleri","Haritadaki isim etiketlerini göster.")+toggleRow("effects","Ortam ayrıntıları","Kahve buharı ve ortam animasyonları.")+toggleRow("sound","Stüdyo sesleri","İşlemlerde yumuşak ses efektleri.")+toggleRow("voice","Konuşma seslendirmesi","Balona dokunduğunda cihazdaki Türkçe sesle oku.")+'<label class="settings-row"><span><b>Daha büyük yazılar</b><small>Panel ve konuşma metinlerini büyüt.</small></span><input class="toggle" type="checkbox" data-font '+(world.settings.fontScale>1?"checked":"")+' aria-label="Daha büyük yazılar"></label><h3 class="subhead">İlerlemen güvende olsun</h3><div class="actions"><button class="btn primary" data-save>'+icon("save")+' Şimdi kaydet</button><button class="btn" data-export>'+icon("download")+' JSON yedeği indir</button><button class="btn" data-import>'+icon("upload")+' Yedeği içe aktar</button></div><p class="priority-help">Yedek içe aktarmadan önce mevcut ilerleme otomatik olarak indirilir. Kayıt bu cihaza özeldir; ortak çevrimiçi sunucu kullanılmaz. Sekme arka plandayken zaman ilerlemez.</p><h3 class="subhead">Bağlantılar</h3><div class="actions"><button class="btn soft" data-open="help">'+icon("help")+' Oyun rehberi</button><a class="btn" href="/">DraBornEagle '+icon("arrow")+'</a></div><h3 class="subhead">Yeni bir sayfa</h3><button class="btn danger" data-open="reset">Yeni stüdyo oluştur</button><p class="priority-help">DraBornOffice '+VERSION+' · Tamamen yerel simülasyon.<br>Karakterler kurmaca; konuşmalar yazılmış içerik ve davranış kurallarıyla üretilir. Seslendirme için cihazında çevrimdışı Türkçe ses gerekir.</p>';}
+function renderHelp(){return '<p class="drawer-intro">Burası senin oyun stüdyon. <strong>20 karakterin kendi ritmi, uzmanlığı ve ilişkileri var.</strong> Sen hem hikâyelerini izle, hem geleceklerine yön ver.</p>'+[
+ ["eye","Önce biraz etrafına bak.","Karakterlere, odalara ve konuşma balonlarına dokun. Sürükleyerek gez; tekerlek ya da iki parmakla yakınlaş. + / − ile zoom yap, 0 ile ofisi sığdır."],
+ ["users","Ekibini tanı.","Kahve ısmarla, motive et, odak görevi ver. Bir karakteri takip ederek gününü izleyebilirsin. Düşük enerjili karakterler kendiliğinden mola verir."],
+ ["folder","Fikirleri hayata geçir.","Projeye ekip ata, kalite veya hız önceliğini seç. %100'e ulaşan projeler otomatik yeni sürüm yayınlar. Hatalar kaliteyi düşürür; test uzmanları hataları azaltır."],
+ ["home","Birlikte büyüyün.","Odalara yatırım yap, araştırmaları aç, hedef ödüllerini al. Günlük maaş giderlerini ve lansman gelirlerini rapordan izle."],
+ ["message","Hikâyenin bir parçası ol.","Stüdyo sohbetine katıl. Karakterler yazılmış senaryolar ve kelime kurallarıyla yanıt verir. Bu cihazında çalışan bir simülasyondur; canlı çok oyunculu sohbet değildir."],
+ ["save","Kendi ritminde oyna.","Boşluk ile duraklat; 1×, 2×, 4× ile zamanı değiştir. Kayıt otomatiktir. Ayarlardan JSON yedeği alıp başka cihazda devam edebilirsin."]
+ ].map(([i,t,d])=>'<div class="help-step"><span>'+icon(i,17)+'</span><div><h3>'+t+'</h3><p>'+d+'</p></div></div>').join("")+'<div class="card"><h3>Klavye kısayolları</h3><p><span class="key">1–6</span> Menü panelleri <span class="key">F</span> Odak görünümü<br><span class="key">Boşluk</span> Duraklat <span class="key">+/−</span> Yakınlaş<br><span class="key">0</span> Ofisi sığdır <span class="key">↑ ↓ ← →</span> Haritada gez<br><span class="key">Ctrl + S</span> Kaydet <span class="key">?</span> Rehber</p></div><div class="actions"><button class="btn primary" data-dismiss>Stüdyoya dön '+icon("arrow")+'</button><button class="btn soft" data-open="settings">'+icon("settings")+' Ayarlar & kayıt</button><button class="btn" data-open="finances">'+icon("chart")+' Rapor</button></div>';}
+function renderDecision(){const d=world.decision;if(!d)return '<p class="drawer-intro">Şu anda karar bekleyen bir konu yok. Ofis kendi ritminde ilerliyor.</p><button class="btn primary" data-dismiss>Stüdyoya dön</button>';
+ return '<p class="drawer-intro">Kararların hem bugünü hem yarını etkiler.</p><h3 style="font-size:22px;font-weight:500">'+esc(d.title)+'</h3><p class="drawer-intro">'+esc(d.desc)+'</p><div class="decision-options">'+d.options.map((o,i)=>'<button data-choice="'+i+'" '+(o.effect.budget<0&&!world.canSpend(-o.effect.budget)?"disabled":"")+'><b>'+esc(o.label)+'</b><small>'+Object.entries(o.effect).filter(([,v])=>v).map(([k,v])=>({budget:"Bütçe "+(v>=0?"+":"−")+formatCurrency(Math.abs(v)),fans:"Hayran +"+v,rep:"İtibar "+(v>0?"+":"")+v,morale:"Moral "+(v>0?"+":"")+v,creativity:"Yaratıcılık +"+v,boost:"Projelerde toplam +%"+v}[k]||"")).join(" · ")+'</small></button>').join("")+'</div><p class="priority-help">Bütçe: '+formatCurrency(world.budget)+'. Yeterli bütçe yoksa ücretli seçenek kullanılamaz. Karar sen seçene kadar bekler.</p>';}
+function renderReset(){return '<p class="drawer-intro">Yeni stüdyo, bütçe ve projeleri başlangıca döndürür. Mevcut ilerlemeyi korumak için önce bir yedek indirebilirsin.</p><button class="btn" data-export>'+icon("download")+' Mevcut ilerlemenin yedeğini indir</button><form id="resetForm"><label class="input-label" for="resetConfirm">YENİDEN BAŞLAMAK İÇİN SIFIRLA YAZ</label><input id="resetConfirm" class="field" autocomplete="off" pattern="SIFIRLA" required placeholder="SIFIRLA"><button class="btn danger wide" type="submit">Bu cihazda yeni bir stüdyo başlat</button></form>';}
+function selectStaff(id){if(!world.findPerson(id))return;selected={type:"staff",id};world.selectedId=id;rosterStamp="";setDrawer("staff",id);beep(580,.05);}
+function locatePerson(id,follow=false){const p=world.findPerson(id);if(!p)return;closeDrawer();world.selectedId=id;selected={type:"staff",id};renderer.focus(p.x,p.y);renderer.follow=follow?id:null;updateZoom();renderHud();}
+function actionResult(ok,success,fail="Yeterli bütçe yok veya bu işlem henüz tekrar kullanılamıyor."){if(ok){toast(success);beep();}else toast(fail);renderHud();return ok;}
+function downloadBackup(suffix=""){const blob=new Blob([JSON.stringify(world.snapshot(),null,2)],{type:"application/json"}),url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="DraBornOffice-v2-Gun"+world.day+suffix+".json";a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+document.addEventListener("click",e=>{
+ const t=e.target.closest("button,a");if(!t)return;
+ if(t.dataset.nav){if(t.dataset.nav==="office"){closeDrawer();renderer.fit();updateZoom();}else setDrawer(t.dataset.nav);return;}
+ if(t.dataset.open){setDrawer(t.dataset.open);return;}
+ if(t.dataset.staff){selectStaff(t.dataset.staff);return;}
+ if(t.dataset.project){setDrawer("project",t.dataset.project);return;}
+ if(t.dataset.room){selected={type:"room",id:t.dataset.room};world.selectedId=null;setDrawer("room",t.dataset.room);return;}
+ if(t.dataset.filter){teamFilter=t.dataset.filter;content.querySelectorAll("[data-filter]").forEach(b=>b.classList.toggle("active",b.dataset.filter===teamFilter));renderTeamRows();return;}
+ if(t.dataset.action){actionResult(world.interact(t.dataset.person,t.dataset.action),"Güzel bir dokunuş. Ekibin bunu hissetti.");refreshLiveValues();return;}
+ if(t.dataset.follow){locatePerson(t.dataset.follow,true);return;}
+ if(t.dataset.locate){locatePerson(t.dataset.locate);return;}
+ if(t.dataset.roomLocate){const r=ROOMS.find(r=>r.id===t.dataset.roomLocate);closeDrawer();renderer.follow=null;renderer.focus((r.x+r.w/2)*32,(r.y+r.h/2)*32);updateZoom();return;}
+ if(t.dataset.invest){if(actionResult(world.invest(t.dataset.invest),"Üretim +%7 ilerledi."))setDrawer("project",t.dataset.invest);return;}
+ if(t.dataset.priority){world.setPriority(t.dataset.id,t.dataset.priority);setDrawer("project",t.dataset.id);return;}
+ if(t.dataset.upgrade){if(actionResult(world.upgrade(t.dataset.upgrade),"Ofiste güzel bir değişim! Oda geliştirildi."))setDrawer("room",t.dataset.upgrade);return;}
+ if(t.dataset.research){if(actionResult(world.doResearch(t.dataset.research),"Araştırma tamamlandı. Yeni yetenek stüdyoda aktif."))setDrawer("research");return;}
+ if(t.dataset.claim){if(actionResult(world.claim(t.dataset.claim),"Hak edilmiş bir ödül! Bütçene eklendi."))setDrawer("goals");return;}
+ if(t.hasAttribute("data-contract")){if(actionResult(world.contract(),"Müşteri işi tamamlandı. +₺15.000 bütçe."))setDrawer("finances");return;}
+ if(t.dataset.theme){world.settings.theme=t.dataset.theme;save();setDrawer("settings");return;}
+ if(t.hasAttribute("data-save"))save(true);
+ if(t.hasAttribute("data-export"))downloadBackup();
+ if(t.hasAttribute("data-import"))$("importInput").click();
+ if(t.hasAttribute("data-dismiss"))closeDrawer();
+ if(t.dataset.speed!==undefined){world.setSpeed(Number(t.dataset.speed));renderHud();beep(440,.04);}
+ if(t.dataset.pulse){document.querySelectorAll("[data-pulse]").forEach(b=>{const a=b===t;b.classList.toggle("active",a);b.setAttribute("aria-selected",String(a));});$("chatContent").hidden=t.dataset.pulse!=="chat";$("eventContent").hidden=t.dataset.pulse!=="events";if(t.dataset.pulse==="chat")renderChat(true);}
 });
-function renderInspector(){
- const container=$("inspector");
- if(!selected)return;
- if(selected.type==="staff"){
-  const p=world.findPerson(selected.id);if(!p)return;
-  $("inspectorHeading").textContent="Ekip Üyesi";
-  const highest=Object.entries(p.friendships).sort((a,b)=>b[1]-a[1])[0],friend=highest&&world.findPerson(highest[0]);
-  container.innerHTML='<div class="inspector-head"><div class="portrait" style="border-color:'+p.color+'">'+personEmoji(p)+'</div><div><strong>'+escapeHtml(p.name)+'</strong><span>'+escapeHtml(p.role)+'</span></div></div><div class="inspector-tags"><span class="tag pink">✦ '+escapeHtml(p.trait)+'</span><span class="tag green">'+escapeHtml(p.team)+'</span><span class="tag">'+escapeHtml(p.status)+'</span></div><p class="inspector-desc">'+escapeHtml(p.bio)+'</p><div class="inspector-stat"><span>ENERJİ</span><b>'+Math.round(p.energy)+'%</b></div><div class="tiny-bar"><i style="width:'+p.energy+'%"></i></div><div class="inspector-stat"><span>MORAL</span><b>'+Math.round(p.morale)+'%</b></div><div class="tiny-bar"><i style="width:'+p.morale+'%;background:linear-gradient(90deg,#32bba4,#92e8bc)"></i></div><div class="inspector-stat"><span>UZMANLIK</span><b>'+p.skill+'/100</b></div><p class="inspector-desc">🤝 En güçlü bağ: '+escapeHtml(friend?.name||"Henüz yok")+' · '+(highest?.[1]||0)+'/100<br>⌘ '+Math.round(p.workCount)+' üretim birimi · '+p.socialCount+' sosyal etkileşim</p><div class="inspector-actions"><button class="action-btn primary" data-actor="'+p.id+'" data-action="focus">⚡ ODAK GÖREVİ</button><button class="action-btn" data-actor="'+p.id+'" data-action="coffee">☕ KAHVE ₺200</button><button class="action-btn" data-actor="'+p.id+'" data-action="motivate">♡ MOTİVE ET</button><button class="action-btn" data-actor="'+p.id+'" data-action="talk">💬 SOHBET ET</button></div>';
- }
- if(selected.type==="room"){
-  const r=ROOMS.find(v=>v.id===selected.id);if(!r)return;
-  $("inspectorHeading").textContent="Departman Detayı";
-  const coworkers=world.employees.filter(p=>p.room===r.id);
-  container.innerHTML='<div class="inspector-head"><div class="portrait">'+escapeHtml(r.icon)+'</div><div><strong>'+escapeHtml(r.name)+'</strong><span>'+escapeHtml(r.sub)+'</span></div></div><p class="inspector-desc">'+escapeHtml(r.desc)+'</p><div class="inspector-tags"><span class="tag green">'+coworkers.length+' KİŞİ</span><span class="tag">AKTİF DEPARTMAN</span></div><p class="inspector-desc">Şu anda burada: '+(coworkers.length?coworkers.map(p=>escapeHtml(p.name)).join(", "):"Henüz kimse yok")+'</p><div class="inspector-actions"><button class="action-btn primary" data-room-focus="'+r.id+'">◎ ODAYI GÖSTER</button><button class="action-btn" data-room-chat="'+r.id+'">✦ ODADAKİ EKİP</button></div>';
- }
- if(selected.type==="project"){
-  const p=world.projectById(selected.id);if(!p)return;
-  $("inspectorHeading").textContent="Proje Kontrolü";
-  container.innerHTML='<div class="inspector-head"><div class="portrait">'+p.icon+'</div><div><strong>'+escapeHtml(p.name)+'</strong><span>'+escapeHtml(p.subtitle)+'</span></div></div><div class="inspector-tags"><span class="tag pink">'+escapeHtml(p.genre)+'</span><span class="tag green">'+p.finished+' SÜRÜM</span></div><div class="inspector-stat"><span>ÜRETİM İLERLEMESİ</span><b>%'+p.progress.toFixed(1)+'</b></div><div class="tiny-bar"><i style="width:'+p.progress+'%"></i></div><div class="inspector-stat"><span>KALİTE PUANI</span><b>'+p.quality+'/100</b></div><p class="inspector-desc">Üretim otomatik ilerler. Ekip çalıştıkça proje gelişir; %100 olduğunda yeni sürüm yayınlanır ve oyun içi gelir ile hayran kazanılır.</p><div class="inspector-actions"><button class="action-btn primary" data-project="'+p.id+'">✦ YATIRIM YAP (₺1.800)</button><button class="action-btn" data-actor-tour="true">◎ EKİBİ GÖR</button></div>';
- }
-}
-$("inspector").addEventListener("click",e=>{
- const actor=e.target.closest("[data-actor]");if(actor){
-  const ok=world.interact(actor.dataset.actor,actor.dataset.action);
-  toast(ok?"Karakter ile etkileşim gerçekleşti.":"Yeterli bütçe yok.");if(ok)beep(750,.09);renderAll();return;
- }
- const room=e.target.closest("[data-room-focus]");if(room){const r=ROOMS.find(x=>x.id===room.dataset.roomFocus);if(r)focusOn((r.x+r.w/2)*32,(r.y+r.h/2)*32);return;}
- const team=e.target.closest("[data-room-chat]");if(team){const p=world.employees.find(p=>p.room===team.dataset.roomChat);if(p)selectStaff(p.id);else toast("Bu odada şu an kimse yok.");return;}
- const project=e.target.closest("[data-project]");if(project){const p=world.projectById(project.dataset.project);if(world.invest(p.id)){toast("Projeye yatırım yapıldı!");beep(880,.09);}else toast("Bütçe yetersiz.");renderAll();return;}
- if(e.target.closest("[data-actor-tour]"))selectStaff(world.employees[0].id);
+content.addEventListener("input",e=>{if(e.target.id==="teamSearch"){teamQuery=e.target.value;renderTeamRows();}});
+content.addEventListener("change",e=>{
+ const el=e.target;if(el.dataset.assignPerson){world.assign(el.dataset.assignPerson,el.value);toast("Proje görevi güncellendi.");renderHud();}
+ if(el.dataset.projectMember){const p=world.findPerson(el.dataset.projectMember);if(!el.checked){el.checked=true;toast("Başka bir projeye geçirmek için karakterin profilinden proje seç.");return;}world.assign(p.id,el.dataset.projectId);toast(p.name+" proje ekibine katıldı.");renderHud();}
+ if(el.dataset.setting){world.settings[el.dataset.setting]=el.checked;if(el.dataset.setting==="sound"&&el.checked)beep();save();renderSettingsFlags();}
+ if(el.hasAttribute("data-font")){world.settings.fontScale=el.checked?1.15:1;save();renderSettingsFlags();}
 });
-function renderFeed(){
- $("eventFeed").innerHTML=world.feed.slice(0,15).map(event=>'<article class="feed-item"><span class="feed-icon">'+escapeHtml(event.icon)+'</span><div class="feed-copy"><strong>'+escapeHtml(event.title)+'</strong><p>'+escapeHtml(event.detail)+'</p></div><time>G'+event.day+' '+event.time+'</time></article>').join("")||'<div class="inspector-empty"><p>Olaylar birazdan burada görünecek.</p></div>';
-}
-function renderDecision(){
- const decision=world.pendingDecision;
- $("decisionBar").hidden=!decision;if(!decision)return;
- $("decisionTitle").textContent=decision.title;$("decisionDesc").textContent=decision.desc;
- $("decisionOptions").innerHTML=decision.options.map((option,index)=>'<button type="button" data-choice="'+index+'">'+escapeHtml(option.label)+'</button>').join("");
-}
-$("decisionOptions").addEventListener("click",e=>{
- const b=e.target.closest("[data-choice]");if(b&&world.makeChoice(Number(b.dataset.choice))){beep(840,.12);toast("Kararın stüdyoyu etkiledi!");renderAll();}
+content.addEventListener("submit",e=>{
+ if(e.target.id==="createProjectForm"){e.preventDefault();const data=new FormData(e.target),p=world.createProject(String(data.get("name")),String(data.get("genre")));if(p){toast("Yeni fikir hazır. Şimdi ona bir ekip ata.");setDrawer("project",p.id);renderHud();}else toast("İsim en az 3 harf olmalı. Bütçeni ve proje sınırını kontrol et.");}
+ if(e.target.id==="resetForm"){e.preventDefault();if($("resetConfirm").value==="SIFIRLA"){if(world.reset())location.reload();else toast("Tarayıcı kaydına erişilemedi. Yeni stüdyo oluşturulamadı.");}}
 });
-function renderAll(){renderMetrics();renderRoster();renderProjects();renderInspector();renderFeed();renderDecision();}
-world.onUpdate=()=>{if(performance.now()-lastRender>900){lastRender=performance.now();renderAll();}};
-world.onEvent=event=>{if(event.kind==="launch"){beep(940,.14);toast("🚀 "+event.title);}renderFeed();renderDecision();};
-function beep(freq=550,len=.07){
- if(!soundOn)return;
- try{
-  if(!audioCtx)audioCtx=new (window.AudioContext||window.webkitAudioContext)();
-  if(audioCtx.state==="suspended")audioCtx.resume();
-  const osc=audioCtx.createOscillator(),g=audioCtx.createGain(),now=audioCtx.currentTime;
-  osc.type="sine";osc.frequency.setValueAtTime(freq,now);osc.frequency.exponentialRampToValueAtTime(freq*.76,now+len);
-  g.gain.setValueAtTime(.035,now);g.gain.exponentialRampToValueAtTime(.0001,now+len);
-  osc.connect(g);g.connect(audioCtx.destination);osc.start(now);osc.stop(now+len);
- }catch{}
-}
-$("soundBtn").onclick=()=>{
- soundOn=!soundOn;$("soundBtn").classList.toggle("active",soundOn);$("soundBtn").setAttribute("aria-pressed",String(soundOn));
- if(soundOn){beep(650,.13);toast("Prosedürel stüdyo sesleri açıldı.");}else toast("Stüdyo sesleri kapatıldı.");
-};
-function ambient(time){
- if(!soundOn||document.hidden||time-lastMusic<18000)return;
- lastMusic=time;beep([440,520,590,660][Math.floor(Math.random()*4)],.15);
-}
-function frame(time){
- const delta=Math.min(.08,(time-last)/1000||0);last=time;
- world.tick(delta);drawWorld(ctx,world,camera,time);ambient(time);
- raf=requestAnimationFrame(frame);
-}
-renderAll();
-raf=requestAnimationFrame(frame);
-setInterval(()=>world.save(),20000);
-window.addEventListener("pagehide",()=>world.save());
-document.addEventListener("visibilitychange",()=>{last=performance.now();if(document.hidden)world.save();});
+$("importInput").addEventListener("change",async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>2e6)throw Error("size");const data=JSON.parse(await file.text());const probe=new OfficeWorld({storage:null,restore:false});if(!probe.importSnapshot(data,false))throw Error("schema");downloadBackup("-Onceki-Kayit");world.importSnapshot(data);world.employees.forEach(p=>{p.path=[];p.phase="idle";p.cooldowns={};p.dialogue="";});world.planAll();renderer.bgKey="";renderer.fit();portraits.clear();chatStamp="";feedStamp="";rosterStamp="";setDrawer("settings");renderSettingsFlags();renderHud();toast("Yedek yüklendi. Önceki ilerleme de JSON olarak indirildi.");}catch{toast("Bu dosya geçerli bir DraBornOffice kaydı değil. Mevcut ilerlemen korundu.");}e.target.value="";});
+$("chatForm").addEventListener("submit",e=>{e.preventDefault();const input=$("chatInput");if(actionResult(world.postMessage(input.value),"Mesajın stüdyo sohbetine eklendi.","Yeni mesaj için birkaç saniye bekle.")){input.value="";renderChat(true);}});
+$("saveBtn").onclick=()=>save(true);$("soundBtn").onclick=soundToggle;$("helpBtn").onclick=()=>setDrawer("help");
+$("meetingBtn").onclick=()=>actionResult(world.meeting(),"Ekip buluşması: herkesin morali +7.");
+$("mobileChatBtn").onclick=()=>{$("pulsePanel").classList.toggle("mobile-open");renderChat(true);};$("closePulse").onclick=()=>$("pulsePanel").classList.remove("mobile-open");
+$("labelsBtn").onclick=()=>{world.settings.labels=!world.settings.labels;save();renderSettingsFlags();};
+function updateZoom(){$("zoomLabel").textContent=Math.round(renderer.zoom*100)+"%";}
+$("zoomIn").onclick=()=>{renderer.follow=null;renderer.zoomAt(renderer.zoom*1.2);updateZoom();};$("zoomOut").onclick=()=>{renderer.follow=null;renderer.zoomAt(renderer.zoom/1.2);updateZoom();};$("fitBtn").onclick=()=>{renderer.fit();updateZoom();};
+function toggleFull(){full=!full;document.body.classList.toggle("focus-mode",full);$("fullBtn").setAttribute("aria-pressed",String(full));$("fullBtn").setAttribute("aria-label",full?"Odak görünümünden çık":"Odak görünümü");resize();}
+$("fullBtn").onclick=toggleFull;
+$("tourBtn").onclick=()=>{tour=!tour;$("tourBtn").classList.toggle("selected",tour);$("tourBtn").setAttribute("aria-pressed",String(tour));if(tour){const p=world.employees[Math.floor(Math.random()*world.employees.length)];renderer.focus(p.x,p.y);renderer.follow=p.id;world.selectedId=p.id;toast(p.name+" karakterinin gününü izliyorsun.");}else renderer.follow=null;updateZoom();renderHud();};
+$("stopFollow").onclick=()=>{renderer.follow=null;tour=false;$("tourBtn").classList.remove("selected");$("tourBtn").setAttribute("aria-pressed","false");renderHud();};
+function speak(message){if(!("speechSynthesis" in window)){toast("Bu tarayıcı seslendirmeyi desteklemiyor.");return;}const voices=speechSynthesis.getVoices(),voice=voices.find(v=>v.localService&&v.lang.startsWith("tr"));if(!voice){toast("Cihazında çevrimdışı Türkçe ses bulunamadı. Telefonunun metin okuma ayarlarından ekleyebilirsin.");return;}speechSynthesis.cancel();const u=new SpeechSynthesisUtterance(message);u.lang="tr-TR";u.voice=voice;u.rate=.97;speechSynthesis.speak(u);}
+if("speechSynthesis" in window)speechSynthesis.getVoices();
+const pointers=new Map();let drag=null,moved=false;
+function point(e){const r=stage.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
+stage.addEventListener("pointerdown",e=>{if(e.button!==0&&e.pointerType!=="touch")return;stage.setPointerCapture(e.pointerId);const p=point(e);pointers.set(e.pointerId,p);if(pointers.size===1){drag={start:p,last:p,id:e.pointerId};moved=false;}else moved=true;});
+stage.addEventListener("pointermove",e=>{
+ const p=point(e);if(!pointers.has(e.pointerId)){renderer.hover=renderer.pick(p.x,p.y);stage.style.cursor=renderer.hover?"pointer":"grab";return;}
+ const prev=pointers.get(e.pointerId);pointers.set(e.pointerId,p);
+ if(pointers.size===2){renderer.follow=null;const a=[...pointers.entries()],one=a[0][1],two=a[1][1],beforeA=a[0][0]===e.pointerId?prev:one,beforeB=a[1][0]===e.pointerId?prev:two;const oldD=Math.hypot(beforeA.x-beforeB.x,beforeA.y-beforeB.y),newD=Math.hypot(one.x-two.x,one.y-two.y);if(oldD>0)renderer.zoomAt(renderer.zoom*newD/oldD,(one.x+two.x)/2,(one.y+two.y)/2);moved=true;updateZoom();return;}
+ if(drag?.id===e.pointerId){if(Math.hypot(p.x-drag.start.x,p.y-drag.start.y)>5)moved=true;if(moved){renderer.follow=null;renderer.pan.x+=p.x-drag.last.x;renderer.pan.y+=p.y-drag.last.y;renderer.clampPan();stage.classList.add("dragging");}drag.last=p;}
+});
+stage.addEventListener("pointerup",e=>{
+ if(!pointers.has(e.pointerId))return;const pick=!moved&&pointers.size===1,p=point(e);pointers.delete(e.pointerId);
+ if(!pointers.size){drag=null;stage.classList.remove("dragging");}
+ if(pick){const hit=renderer.pick(p.x,p.y);if(hit?.type==="staff")selectStaff(hit.id);if(hit?.type==="room"){selected=hit;world.selectedId=null;setDrawer("room",hit.id);}if(hit?.type==="speech"){if(world.settings.voice)speak(hit.text);else{selected={type:"staff",id:hit.id};world.selectedId=hit.id;selectStaff(hit.id);}}}
+});
+stage.addEventListener("pointercancel",e=>{pointers.delete(e.pointerId);drag=null;moved=true;stage.classList.remove("dragging");});
+stage.addEventListener("lostpointercapture",e=>{pointers.delete(e.pointerId);if(!pointers.size){drag=null;stage.classList.remove("dragging");}});
+stage.addEventListener("wheel",e=>{e.preventDefault();renderer.follow=null;const p=point(e);renderer.zoomAt(renderer.zoom*(e.deltaY<0?1.09:1/1.09),p.x,p.y);updateZoom();},{passive:false});
+document.addEventListener("keydown",e=>{
+ const input=/INPUT|SELECT|TEXTAREA/.test(e.target.tagName);if((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==="s"){e.preventDefault();save(true);return;}if(input)return;if(e.key==="Escape"){if(full&&!drawer.open)toggleFull();$("pulsePanel").classList.remove("mobile-open");return;}if(drawer.open)return;
+ const nav={"1":"office","2":"team","3":"projects","4":"rooms","5":"research","6":"goals"};
+ if(nav[e.key]){if(e.key==="1"){renderer.fit();updateZoom();}else setDrawer(nav[e.key]);}
+ if(e.key===" "){e.preventDefault();world.setSpeed(world.speed===0?1:0);renderHud();}
+ if(e.key==="f"||e.key==="F")toggleFull();if(e.key==="?")setDrawer("help");
+ if(e.key==="+"||e.key==="="){e.preventDefault();renderer.zoomAt(renderer.zoom*1.15);updateZoom();}if(e.key==="-"){renderer.zoomAt(renderer.zoom/1.15);updateZoom();}if(e.key==="0"){renderer.fit();updateZoom();}
+ const delta=35;if(e.key.startsWith("Arrow")){e.preventDefault();renderer.follow=null;if(e.key==="ArrowLeft")renderer.pan.x+=delta;if(e.key==="ArrowRight")renderer.pan.x-=delta;if(e.key==="ArrowUp")renderer.pan.y+=delta;if(e.key==="ArrowDown")renderer.pan.y-=delta;renderer.clampPan();}
+});
+function resize(){const r=stage.getBoundingClientRect();if(r.width&&r.height)renderer.resize(r.width,r.height,window.devicePixelRatio||1);}
+new ResizeObserver(resize).observe(stage);window.addEventListener("resize",resize);
+world.onUpdate=()=>{if(performance.now()-hudTime>750){hudTime=performance.now();renderHud();}};
+world.onEvent=e=>{if(e.kind==="launch"||e.kind==="achievement"){toast(e.title);beep(e.kind==="launch"?880:1040,.14);}feedStamp="";};
+function frame(t){const dt=Math.max(0,(t-frameTime)/1000);frameTime=t;if(!document.hidden){world.tick(dt);if(t-drawTime>32){drawTime=t;renderer.render(world,t);}}requestAnimationFrame(frame);}
+icons();renderSettingsFlags();renderHud();resize();if(innerWidth<600){renderer.zoom=1.6;updateZoom();}
+requestAnimationFrame(frame);setInterval(()=>{if(!document.hidden)save();},20000);
+window.addEventListener("pagehide",()=>save());document.addEventListener("visibilitychange",()=>{frameTime=performance.now();if(document.hidden){save();if("speechSynthesis" in window)speechSynthesis.cancel();}});
+setTimeout(()=>{if(!world.save())toast("Tarayıcı kaydına erişilemiyor. Ayarlardan JSON yedeği alabilirsin.");},1000);
 
-if("serviceWorker" in navigator && location.protocol==="https:"){
- window.addEventListener("load",()=>navigator.serviceWorker.register("./sw.js",{scope:"./"}).catch(()=>{}),{once:true});
-}

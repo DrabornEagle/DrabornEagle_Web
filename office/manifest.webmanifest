@@ -1,20 +1,13 @@
 {
-  "id": "/office/",
-  "name": "DraBorn Office — Yaşayan Oyun Stüdyosu",
-  "short_name": "DraBorn Office",
-  "description": "API'siz, etkileşimli, çevrimdışı çalışabilen oyun stüdyosu simülasyonu.",
-  "lang": "tr",
-  "start_url": "./",
-  "scope": "/office/",
-  "display": "standalone",
-  "background_color": "#080b19",
-  "theme_color": "#090c1d",
-  "icons": [
-    {
-      "src": "../Support/assets/dkd-miami-eagle.png",
-      "sizes": "any",
-      "type": "image/png",
-      "purpose": "any"
-    }
-  ]
+ "id":"/office/",
+ "name":"DraBornOffice 2.0 · Yaşayan Oyun Stüdyosu",
+ "short_name":"DraBornOffice",
+ "description":"20 karakter, 7 alan ve senin kararların. Ücretsiz, API'siz oyun stüdyosu simülasyonu.",
+ "lang":"tr",
+ "start_url":"./",
+ "scope":"/office/",
+ "display":"standalone",
+ "background_color":"#121924",
+ "theme_color":"#151b26",
+ "icons":[{"src":"./assets/eagle.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
 }

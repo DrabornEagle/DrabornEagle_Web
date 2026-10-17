@@ -1,347 +1,200 @@
-import {WORLD,ROOMS,STAFF,PROJECTS,STATIONS,DIALOGUE,CHOICES,DECOR,ROOM_LABELS} from "./data.js";
-
-const T=WORLD.tile;
-const clamp=(v,a,b)=>Math.min(b,Math.max(a,v));
-const chance=(p)=>Math.random()<p;
-const pick=(a)=>a[Math.floor(Math.random()*a.length)];
-const pad=(v)=>String(v).padStart(2,"0");
-const STORAGE_KEY="draborn-office-v1";
-const palette={sky:"#10182b",white:"#f5f5ff"};
-const neutralRooms={creative:"code",art:"art",studio:"sound",lounge:"break",meeting:"meeting",server:"qa",lobby:"idle"};
-const toPoint=(c,r)=>({x:c*T+T/2,y:r*T+T/2});
-function colorMix(hex,amount){
- const raw=hex.replace("#","");if(raw.length!==6)return hex;
- const bits=[0,2,4].map(i=>parseInt(raw.slice(i,i+2),16));
- const out=bits.map(v=>clamp(Math.round(v+amount),0,255).toString(16).padStart(2,"0"));
- return "#"+out.join("");
-}
-function seededHash(a,b){let n=((a+1)*73856093)^((b+1)*19349663);n=((n^n>>>13)*1274126177)|0;return ((n^n>>>16)>>>0)/4294967295;}
-const obstacles=new Set(DECOR.filter(d=>d.kind!=="plant").map(d=>d.x+","+d.y));
-function findPath(from,goal){
- const sc=clamp(Math.floor(from.x/T),1,WORLD.cols-2),sr=clamp(Math.floor(from.y/T),1,WORLD.rows-2);
- const gc=clamp(goal[0],1,WORLD.cols-2),gr=clamp(goal[1],1,WORLD.rows-2);
- const key=(c,r)=>r*WORLD.cols+c,start=key(sc,sr),end=key(gc,gr);
- if(start===end)return [];
- const queue=[start],came=new Int16Array(WORLD.cols*WORLD.rows).fill(-1);came[start]=start;
- const deltas=[1,-1,WORLD.cols,-WORLD.cols];
- let found=false;
- for(let i=0;i<queue.length&&i<950&&!found;i++){
-  const cur=queue[i],c=cur%WORLD.cols,r=Math.floor(cur/WORLD.cols);
-  for(const d of deltas){
-   const next=cur+d,nc=next%WORLD.cols,nr=Math.floor(next/WORLD.cols);
-   if(nc<1||nc>WORLD.cols-2||nr<1||nr>WORLD.rows-2||Math.abs(nc-c)+Math.abs(nr-r)!==1||came[next]!==-1)continue;
-   if(obstacles.has(nc+","+nr)&&next!==end)continue;
-   came[next]=cur;
-   if(next===end){found=true;break;} queue.push(next);
+import {WORLD,ROOMS,STAFF,PROJECTS,STATIONS,DIALOGUE,CHOICES,DECOR,RESEARCH,MILESTONES,SCENES,GENRES} from "./data.js?v=2.0.0";
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const num=(v,f=0,a=0,b=1e9)=>Number.isFinite(v)?clamp(v,a,b):f;
+const text=(s,n=160)=>typeof s==="string"?s.slice(0,n):"";
+const T=WORLD.tile,KEY="draborn-office-v2",LEGACY="draborn-office-v1";
+const safeStorage=()=>{try{return globalThis.localStorage;}catch{return null;}};
+const center=([x,y])=>({x:x*T+T/2,y:y*T+T/2});
+const uid=()=>globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+const preferred={Yönetim:"meeting",Geliştirme:"creative",Sanat:"art",Prodüksiyon:"studio",Teknoloji:"server",Topluluk:"lounge"};
+const tasks={creative:"code",art:"art",studio:"sound",lounge:"break",meeting:"meeting",server:"qa",lobby:"idle"};
+const status={code:"Oynanış geliştiriyor",art:"Görsel tasarlıyor",sound:"Sesleri düzenliyor",break:"Kahve molasında",meeting:"Sprint planlıyor",qa:"Hata test ediyor",idle:"Ofisi geziyor",community:"Geri bildirim okuyor"};
+export const blocked=new Set();
+for(const d of DECOR){const w=d.kind==="meeting"?3:d.kind==="reception"||d.kind==="couch"?2:1;for(let i=0;i<w;i++)blocked.add((d.x+i)+","+d.y);}
+// The cutaway walls have actual doorways, shared by the navigation mesh.
+for(let y=0;y<11;y++)if(![5,6,9].includes(y))blocked.add("18,"+y);
+for(let x=0;x<36;x++)if(![5,6,14,15,22,23,30,31].includes(x))blocked.add(x+",11");
+for(const x of [11,19,27])for(let y=12;y<19;y++)if(![15,16,18].includes(y))blocked.add(x+","+y);
+for(let x=0;x<36;x++)if(![5,6,14,15,22,23,30,31].includes(x))blocked.add(x+",19");
+export function findPath(from,goal){
+ const sc=clamp(Math.floor(from.x/T),1,34),sr=clamp(Math.floor(from.y/T),1,22),gc=clamp(goal[0],1,34),gr=clamp(goal[1],1,22);
+ const start=sr*36+sc,end=gr*36+gc;if(start===end)return [];
+ const queue=[start],came=new Int16Array(864).fill(-1);came[start]=start;
+ for(let i=0;i<queue.length;i++){
+  const cur=queue[i];if(cur===end)break;const c=cur%36,r=Math.floor(cur/36);
+  for(const [dx,dy] of [[1,0],[-1,0],[0,1],[0,-1]]){
+   const nx=c+dx,ny=r+dy,n=ny*36+nx;
+   if(nx<1||nx>34||ny<1||ny>22||came[n]!==-1||(blocked.has(nx+","+ny)&&n!==end))continue;
+   came[n]=cur;queue.push(n);
   }
  }
- if(!found)return [toPoint(gc,gr)];
- let cur=end,arr=[];
- while(cur!==start&&arr.length<250){arr.push(toPoint(cur%WORLD.cols,Math.floor(cur/WORLD.cols)));cur=came[cur];}
- return arr.reverse();
+ if(came[end]===-1)return [];
+ const path=[];for(let n=end;n!==start;n=came[n])path.push(center([n%36,Math.floor(n/36)]));return path.reverse();
 }
 export class OfficeWorld{
- constructor(){
-  this.day=1;this.minutes=9*60+10;this.speed=1;this.budget=185000;this.fans=3250;this.reputation=38;this.creativity=64;
-  this.projects=PROJECTS.map(p=>({...p,finished:0,quality:83}));
-  this.employees=STAFF.map((a,i)=>({...a,...toPoint(...a.home),path:[],phase:"idle",status:"İşe hazırlanıyor",room:"creative",task:"idle",energy:78+Math.floor(Math.random()*19),morale:76+Math.floor(Math.random()*18),workCount:0,socialCount:0,timer:1+i*.6,wait:2,dialogue:"",dialogueLeft:0,friendships:{},walkFrame:0}));
-  for(const person of this.employees)for(const other of this.employees)if(person.id!==other.id)person.friendships[other.id]=45+Math.floor(Math.random()*35);
-  this.feed=[];this.achievements=[];this.pendingDecision=null;this.nextDecision=9*60+160;this.nextSocial=14;this.lastDay=1;this.acc=0;this.simElapsed=0;this.onUpdate=null;this.onEvent=null;this._nextStats=0;this._ended=false;
-  this.addEvent("🏢","Kapılar açıldı","DraBorn stüdyosunda yeni bir gün başladı.","info",false);
-  if(this.restore())this.addEvent("↺","Tekrar hoş geldin","Kayıtlı stüdyo ilerlemen yüklendi.","info",false);
+ constructor({storage=safeStorage(),random=Math.random,restore=true}={}){
+  this.storage=storage;this.rng=random;this.day=1;this.minutes=550;this.speed=1;this.budget=185000;this.fans=3250;this.reputation=38;this.creativity=64;
+  this.projects=PROJECTS.map(p=>({...p,finished:0,quality:83,bugs:9,priority:"balanced",income:0}));
+  this.employees=STAFF.map((p,i)=>({...p,...center(p.home),phase:"idle",room:preferred[p.team],task:"idle",status:"Güne hazırlanıyor",energy:82+this.rng()*14,morale:80+this.rng()*12,workCount:0,socialCount:0,path:[],timer:3+i*.5,dialogue:"",dialogueLeft:0,walkFrame:0,friendships:{},projectId:PROJECTS[i%3].id,cooldowns:{}}));
+  for(const p of this.employees)for(const q of this.employees)if(p!==q)p.friendships[q.id]=45+Math.round(this.rng()*30);
+  this.rooms=Object.fromEntries(ROOMS.map(r=>[r.id,1]));this.research=[];this.achievements=[];this.claimed=[];this.feed=[];this.chats=[];this.ledger=[];this.reports=[];this.settings={theme:"auto",labels:true,effects:true,sound:false,voice:false,fontScale:1};
+  this.stats={releases:0,upgrades:0,investments:0,earned:0,spent:0};this.pendingDecision=null;this.nextDecision=650;this.nextSocial=5;this.simElapsed=0;this.acc=0;this._nextStats=0;this.meetingAt=-1;this.contractDay=0;this.selectedId=null;this.sequence=null;this.lastSave=0;this.onUpdate=null;this.onEvent=null;
+  const restored=restore&&this.restore();
+  this.addEvent("home",restored?"Stüdyona tekrar hoş geldin":"Yeni bir hikâye başlıyor",restored?"Kayıtlı ilerleme güvenle yüklendi.":"20 yaratıcı insan, bir stüdyo, sayısız fikir. Bugün ne üreteceğiz?","system");
+  if(!this.chats.length){this.chat("dogancan","Günaydın ekip! Bugün harika bir şey üretelim. 🦅");this.chat("ada","Yeni konsept çizimleri hazır. Yorumlarınızı bekliyorum!");this.chat("arda","Prototip çalışıyor. Kahveler hazırsa başlayalım. ☕");}
   this.planAll();
  }
- get clock(){const min=Math.floor(this.minutes);return pad(Math.floor(min/60))+":"+pad(min%60);}
- get daypart(){return this.minutes<12*60?"SABAH VARDİYASI":this.minutes<16*60?"ÖĞLEDEN SONRA":"AKŞAM VARDİYASI";}
- get averageMorale(){return Math.round(this.employees.reduce((s,a)=>s+a.morale,0)/this.employees.length);}
- get activeCount(){return this.employees.filter(e=>!["break","idle"].includes(e.task)).length;}
+ pick(a){return a[Math.floor(this.rng()*a.length)];}
+ get clock(){const m=Math.floor(this.minutes);return String(Math.floor(m/60)).padStart(2,"0")+":"+String(m%60).padStart(2,"0");}
+ get averageMorale(){return Math.round(this.employees.reduce((s,p)=>s+p.morale,0)/this.employees.length);}
+ get averageEnergy(){return Math.round(this.employees.reduce((s,p)=>s+p.energy,0)/this.employees.length);}
+ get activeCount(){return this.employees.filter(p=>p.phase==="busy"&&!['break','idle'].includes(p.task)).length;}
  get employeeCount(){return this.employees.length;}
- getRoomByPoint(x,y){return ROOMS.find(r=>x>=r.x*T&&x<(r.x+r.w)*T&&y>=r.y*T&&y<(r.y+r.h)*T)||ROOMS[0];}
+ get daypart(){return this.minutes<720?"Sabah vardiyası":this.minutes<960?"Öğleden sonra":"Gün batımı";}
+ get salary(){return 7500+this.employees.length*230;}
+ get level(){return 1+Math.floor(this.reputation/15);}
  findPerson(id){return this.employees.find(p=>p.id===id);}
  projectById(id){return this.projects.find(p=>p.id===id);}
+ getRoomByPoint(x,y){return ROOMS.find(r=>x>=r.x*T&&x<(r.x+r.w)*T&&y>=r.y*T&&y<(r.y+r.h)*T);}
  emit(){this.onUpdate?.();}
- addEvent(icon,title,detail,kind="info",notify=true){
-  const item={id:Date.now()+"-"+Math.round(Math.random()*1e5),icon,title,detail,kind,time:this.clock,day:this.day};
-  this.feed.unshift(item);if(this.feed.length>60)this.feed.length=60;
-  this.onEvent?.(item);if(notify)this.emit();return item;
+ addEvent(icon,title,detail,kind="info"){
+  const e={id:uid(),icon,title,detail,kind,time:this.clock,day:this.day};this.feed.unshift(e);this.feed.length=Math.min(this.feed.length,80);this.onEvent?.(e);return e;
  }
- say(p,text){p.dialogue=text;p.dialogueLeft=4.8;if(chance(.3))this.addEvent("💬",p.name+" konuşuyor",text,"social",false);}
+ chat(personId,message,topic="genel",replyTo=null){const e={id:uid(),personId,text:text(message,280),topic,time:this.clock,day:this.day,replyTo};this.chats.push(e);if(this.chats.length>100)this.chats.shift();return e;}
+ say(p,message,log=false){p.dialogue=message;p.dialogueLeft=7;if(log)this.chat(p.id,message);}
+ transact(amount,reason,day=this.day){this.budget+=amount;if(amount>0)this.stats.earned+=amount;else this.stats.spent-=amount;this.ledger.unshift({day,time:this.clock,amount,reason});this.ledger.length=Math.min(80,this.ledger.length);}
+ canSpend(cost){return this.budget>=cost;}
  chooseTask(p,forced){
-  const low=p.energy<34||p.morale<35,work=this.minutes>9*60&&this.minutes<17*60+30;
-  const preference=(p.team==="Sanat"?"art":p.team==="Geliştirme"?"creative":p.team==="Prodüksiyon"?"studio":p.team==="Teknoloji"?"server":p.team==="Topluluk"?"lounge":"meeting");
-  let room=preference;
-  if(forced==="break"||low)room="lounge";
-  else if(forced==="meeting"||chance(.12))room="meeting";
-  else if(forced==="social"||chance(.11))room="lounge";
-  else if(!work||chance(.07))room="lobby";
-  else if(forced==="focus")room=preference;
-  const pool=STATIONS[room],slot=pick(pool);
-  p.room=room;p.task=room==="lounge"?"break":neutralRooms[room];p.status=room==="lounge"?"Kahve molasında":room==="lobby"?"Ofisi geziyor":room==="meeting"?"Planlama yapıyor":room==="server"?"Hata test ediyor":room==="studio"?"Sesleri düzenliyor":room==="art"?"Görsel üretiyor":"Üzerinde çalışıyor";
-  if(forced==="focus"){p.task=p.team==="Sanat"?"art":p.team==="Teknoloji"?"qa":p.team==="Prodüksiyon"?"sound":"code";p.status="Odak modunda";}
-  p.path=findPath(p,slot);p.wait=3+Math.random()*8;p.timer=8+Math.random()*13;
-  if(p.path.length){p.phase="walk";p.status="Hareket ediyor";}else p.phase="busy";
-  if(chance(.17))this.say(p,pick(DIALOGUE[p.task]||DIALOGUE.idle));
+  let room=preferred[p.team];
+  if(forced==="break"||p.energy<30||p.morale<30)room="lounge";
+  else if(forced==="meeting")room="meeting";
+  else if(forced!=="focus"){const r=this.rng();if(r<.1)room="lounge";else if(r<.16)room="lobby";else if(r<.24)room="meeting";}
+  const slots=[...STATIONS[room]],reserved=this.employees.filter(q=>q!==p&&q.target&&q.room===room).map(q=>q.target.join(","));
+  const free=slots.filter(s=>!reserved.includes(s.join(",")));const target=this.pick(free.length?free:slots);
+  p.target=target;p.room=room;p.task=forced==="focus"&&p.team==="Topluluk"?"community":tasks[room];
+  if(p.team==="Topluluk"&&room==="lounge"&&forced!=="break"&&p.energy>40&&this.rng()>.3)p.task="community";
+  p.path=findPath(p,target);p.phase=p.path.length?"walk":"busy";p.status=p.path.length?"Yürüyüşte":status[p.task];p.timer=12+this.rng()*18;
  }
- planAll(){for(const person of this.employees){if(person.phase==="idle")this.chooseTask(person);}}
- setSpeed(speed){this.speed=[0,1,2,4].includes(speed)?speed:1;this.emit();}
+ planAll(){this.employees.forEach(p=>{if(p.phase==="idle")this.chooseTask(p);});}
+ setSpeed(speed){if([0,1,2,4].includes(speed))this.speed=speed;this.emit();}
  tick(delta){
-  delta=clamp(delta,0,.08);if(this.speed===0)return;
-  this.simElapsed+=delta*this.speed;this.minutes+=delta*2.75*this.speed;
-  if(this.minutes>=18*60){
-   const leftover=this.minutes-18*60;this.day++;this.minutes=9*60+leftover;
-   const salaries=7500+this.employees.length*230;
-   this.budget-=salaries;
-   this.fans+=Math.round(35+Math.random()*70);
-   for(const p of this.employees){p.energy=clamp(p.energy+35,0,100);p.morale=clamp(p.morale+4,0,100);p.phase="idle";p.path=[];}
-   this.addEvent("🌅","Yeni bir gün: "+this.day,"Maaş ve işletme gideri: -₺"+salaries.toLocaleString("tr-TR")+". Ekip yenilendi.","system");
-  }
-  if(this.minutes>=this.nextDecision&&!this.pendingDecision){
-   this.nextDecision=this.minutes+140+Math.random()*150;
-   const template=CHOICES[(this.day+this.achievements.length+Math.floor(Math.random()*CHOICES.length))%CHOICES.length];
-   this.pendingDecision={...template};this.addEvent("⚡","Yönetim kararı bekleniyor",template.title,"decision");
-  }
-  this.acc+=delta*this.speed;
-  if(this.acc>=1){
-   const n=Math.min(4,Math.floor(this.acc));this.acc-=n;
-   this.updateProduction(n);this.updateSocial(n);
-  }
+  if(!Number.isFinite(delta)||delta<=0||!this.speed)return;
+  const dt=Math.min(delta,.1)*this.speed;this.simElapsed+=dt;this.minutes+=dt*2.75;
+  if(this.minutes>=1080)this.newDay();
+  if(this.minutes>=this.nextDecision&&!this.pendingDecision){const template=this.pick(CHOICES);this.pendingDecision=CHOICES.indexOf(template);this.nextDecision=this.minutes+150;this.addEvent("bolt","Bir karar seni bekliyor",template.title,"decision");}
+  this.acc+=dt;while(this.acc>=1){this.acc--;this.updateProduction(1);this.updateSocial(1);this.checkMilestones();}
   for(const p of this.employees){
-   if(p.dialogueLeft>0)p.dialogueLeft=Math.max(0,p.dialogueLeft-delta*this.speed);
-   if(p.phase==="walk"&&p.path.length){
-    const next=p.path[0],dx=next.x-p.x,dy=next.y-p.y,dist=Math.hypot(dx,dy);
-    const step=clamp((44+p.skill*.4)*delta*this.speed,0,12);
-    if(dist<=step){p.x=next.x;p.y=next.y;p.path.shift();}
-    else{p.x+=dx/dist*step;p.y+=dy/dist*step;}
-    p.walkFrame+=delta*9*this.speed;
-    if(!p.path.length){p.phase="busy";p.status=p.task==="break"?"Kahve molasında":p.task==="meeting"?"Toplantıda":p.task==="qa"?"Hata test ediyor":p.task==="sound"?"Prodüksiyonda":p.task==="art"?"Tasarım yapıyor":"Üzerinde çalışıyor";p.wait=4+Math.random()*6;}
-   }else{
-    p.timer-=delta*this.speed;
-    if(p.timer<=0){this.chooseTask(p);if(chance(.28))this.say(p,pick(DIALOGUE[p.task]||DIALOGUE.idle));}
-   }
+   p.dialogueLeft=Math.max(0,p.dialogueLeft-dt);
+   if(p.path.length){const n=p.path[0],dx=n.x-p.x,dy=n.y-p.y,d=Math.hypot(dx,dy),step=(43+p.skill*.3)*dt;p.walkFrame+=dt*8;
+    p.facing=dx<0?"left":dy<0?"up":dx>0?"right":"down";
+    if(d<=step){p.x=n.x;p.y=n.y;p.path.shift();}else{p.x+=dx/d*step;p.y+=dy/d*step;}
+    if(!p.path.length){p.phase="busy";p.status=status[p.task];}
+   }else{p.timer-=dt;if(p.timer<=0){this.chooseTask(p);if(this.rng()<.25)this.say(p,this.pick(DIALOGUE[p.task]||DIALOGUE.idle));}}
   }
-  if(this.simElapsed>=this._nextStats){this._nextStats=this.simElapsed+1.3;this.emit();}
+  if(this.simElapsed>=this._nextStats){this._nextStats=this.simElapsed+1;this.emit();}
+ }
+ newDay(){
+  const oldDay=this.day;this.day++;this.minutes=540+(this.minutes-1080);this.nextDecision=this.minutes+100;
+  const entries=this.ledger.filter(e=>e.day===oldDay),income=entries.filter(e=>e.amount>0).reduce((s,e)=>s+e.amount,0),out=entries.filter(e=>e.amount<0).reduce((s,e)=>s-e.amount,0);
+  this.reports.unshift({day:oldDay,income,expenses:out+this.salary,morale:this.averageMorale,releases:this.stats.releases});this.reports.length=Math.min(14,this.reports.length);
+  this.transact(-this.salary,"Gün "+oldDay+" • maaş ve işletme gideri",oldDay);this.fans+=Math.round(35+this.rng()*40);
+  for(const p of this.employees){p.energy=clamp(p.energy+40,0,100);p.morale=clamp(p.morale+3,0,100);}
+  this.addEvent("sun","Gün "+this.day+" · Yeni bir başlangıç",formatCurrency(this.salary)+" işletme gideri ödendi. Ekip dinlendi.","system");this.save();
  }
  updateProduction(dt){
-  const active=this.employees.filter(e=>e.phase==="busy"&&e.task!=="break"&&e.task!=="idle");
-  for(const p of this.employees){
-   if(p.phase==="busy"&&p.task==="break"){p.energy=clamp(p.energy+dt*2.2,0,100);p.morale=clamp(p.morale+dt*.48,0,100);}
-   else if(p.phase==="busy"){p.energy=clamp(p.energy-dt*(.24+.08*this.speed),0,100);p.workCount+=dt;p.morale=clamp(p.morale-dt*.035,0,100);}
+  for(const p of this.employees)if(p.phase==="busy"){
+   if(p.task==="break"){p.energy=clamp(p.energy+dt*(2.1+this.rooms.lounge*.15),0,100);p.morale=clamp(p.morale+dt*.45,0,100);}
+   else if(p.task!=="idle"){p.energy=clamp(p.energy-dt*.27*(this.research.includes("ergonomics")?.78:1),0,100);p.morale=clamp(p.morale-dt*.035,0,100);p.workCount+=dt;}
   }
-  if(active.length===0)return;
-  const ratio=(active.reduce((s,p)=>s+(p.skill/90)*(.48+p.energy/200)*(.55+p.morale/220),0)/active.length);
   for(const project of this.projects){
-   const gain=(.085+active.length*.017)*ratio*dt*(this.creativity/75)*(project.type==="game"?1:.92);
-   project.progress=clamp(project.progress+gain,0,100);
-   if(project.progress>=99.999)this.release(project);
+   const active=this.employees.filter(p=>p.projectId===project.id&&p.phase==="busy"&&!['break','idle'].includes(p.task));if(!active.length)continue;
+   const power=active.reduce((s,p)=>s+(p.skill/90)*(.45+p.energy/200)*(.55+p.morale/220)*(1+(this.rooms[p.room]-1)*.09),0);
+   const mult=(1+(this.research.includes("workflow")?.15:0)+(this.research.includes("render")?.2:0))*(project.priority==="speed"?1.3:project.priority==="quality"?.83:1);
+   project.progress=clamp(project.progress+(.035+power*.055)*dt*mult,0,100);
+   const testers=active.filter(p=>p.task==="qa").length;
+   project.bugs=clamp(project.bugs+dt*(project.priority==="speed"?.025:.008)-testers*dt*.08*(this.research.includes("qa")?1.4:1),0,40);
+   project.quality=clamp(project.quality+dt*(project.priority==="quality"?.016:.004),20,99);
+   if(project.progress>=100)this.release(project);
   }
-  if(chance(.04)){this.creativity=clamp(this.creativity+1,0,100);}
  }
  updateSocial(dt){
-  this.nextSocial-=dt;
-  if(this.nextSocial>0)return;
-  this.nextSocial=8+Math.random()*8;
-  const candidate=pick(this.employees);
-  const near=this.employees.filter(p=>p!==candidate&&Math.hypot(p.x-candidate.x,p.y-candidate.y)<160);
-  if(!near.length)return;
-  const friend=pick(near),delta=2+Math.round(Math.random()*4);
-  candidate.friendships[friend.id]=clamp((candidate.friendships[friend.id]||50)+delta,0,100);
-  friend.friendships[candidate.id]=clamp((friend.friendships[candidate.id]||50)+delta,0,100);
-  candidate.socialCount++;friend.socialCount++;candidate.morale=clamp(candidate.morale+1,0,100);friend.morale=clamp(friend.morale+1,0,100);
-  this.say(candidate,pick(DIALOGUE.greet));
-  if(chance(.55))this.say(friend,pick(DIALOGUE.greet));
-  if(chance(.37))this.addEvent("🤝",candidate.name+" & "+friend.name,"Koridorda karşılaştı; ekip bağları güçleniyor.","social",false);
+  if(this.sequence){this.sequence.left-=dt;if(this.sequence.left<=0){const s=this.sequence,p=this.findPerson(s.people[s.index%s.people.length]),msg=s.lines[s.index];this.say(p,msg);this.chat(p.id,msg,s.topic,s.lastId);s.lastId=this.chats.at(-1).id;s.index++;s.left=5;if(s.index>=s.lines.length)this.sequence=null;}return;}
+  this.nextSocial-=dt;if(this.nextSocial>0)return;this.nextSocial=12+this.rng()*10;
+  const a=this.pick(this.employees),near=this.employees.filter(p=>p!==a&&Math.hypot(p.x-a.x,p.y-a.y)<220);
+  if(!near.length){this.say(a,this.pick(DIALOGUE[a.task]||DIALOGUE.idle),true);return;}
+  const b=this.pick(near),scene=this.pick(SCENES),relation=scene.topic.includes("anlaşmazlık")?-3:3;
+  a.friendships[b.id]=clamp(a.friendships[b.id]+relation,0,100);b.friendships[a.id]=clamp(b.friendships[a.id]+relation,0,100);a.socialCount++;b.socialCount++;
+  this.say(a,scene.lines[0]);const first=this.chat(a.id,scene.lines[0],scene.topic);
+  this.sequence={people:[a.id,b.id],lines:scene.lines,topic:scene.topic,index:1,left:5,lastId:first.id};
+  this.addEvent("message",a.name+" & "+b.name,scene.topic,"social");
  }
- release(project){
-  project.finished++;
-  const income=Math.round((12000+Math.random()*19000)*(1+this.reputation/100)*project.audience);
-  const fans=Math.round((360+Math.random()*590)*project.audience);
-  this.budget+=income;this.fans+=fans;this.reputation=clamp(this.reputation+3,0,100);this.creativity=clamp(this.creativity+2,0,100);
-  project.progress=12+Math.round(Math.random()*8);
-  project.quality=clamp(project.quality+Math.round(Math.random()*5-1),20,99);
-  this.addEvent("🚀",project.name+" güncellendi!","Gelir +₺"+income.toLocaleString("tr-TR")+", +"+fans+" hayran. "+project.finished+". başarılı sürüm.","launch");
-  if(!this.achievements.includes("firstLaunch")){this.achievements.push("firstLaunch");this.addEvent("🏆","İlk büyük başarı!","Stüdyonun ilk yeni sürümünü yayınladın.","achievement");}
-  this.employees.forEach(e=>e.morale=clamp(e.morale+4,0,100));
+ release(p){
+  p.finished++;this.stats.releases++;
+  const quality=clamp(p.quality-p.bugs*.6,20,99),income=Math.round((18000+this.rng()*16000)*(1+this.reputation/120)*p.audience*(.65+quality/200)*(this.research.includes("publishing")?1.25:1));
+  const fans=Math.round((350+this.rng()*500)*p.audience*(this.research.includes("marketing")?1.3:1));
+  this.transact(income,p.name+" • v"+p.finished+".0 lansmanı");this.fans+=fans;this.reputation=clamp(this.reputation+(quality>75?4:2),0,100);p.income+=income;p.progress=0;p.bugs=4+this.rng()*5;
+  this.addEvent("rocket",p.name+" yayında!","v"+p.finished+".0 · "+formatCurrency(income)+" gelir · +"+fans+" hayran · "+Math.round(quality)+" kalite","launch");
+  this.employees.forEach(e=>e.morale=clamp(e.morale+4,0,100));this.say(this.employees[0],"Yayınladık! Bu başarı hepimizin. 🎉",true);this.save();
  }
+ get decision(){return this.pendingDecision===null?null:CHOICES[this.pendingDecision];}
  makeChoice(index){
-  if(!this.pendingDecision||!this.pendingDecision.options[index])return false;
-  const choice=this.pendingDecision.options[index],effect=choice.effect;
-  this.adjust(effect);this.pendingDecision=null;
-  this.addEvent("✨","Karar uygulandı",choice.text,"decision");this.save();this.emit();return true;
+  const choice=this.decision?.options[index];if(!choice)return false;const e=choice.effect;if(e.budget<0&&!this.canSpend(-e.budget))return false;
+  if(e.budget)this.transact(e.budget,choice.label);this.fans=Math.max(0,this.fans+(e.fans||0));this.reputation=clamp(this.reputation+(e.rep||0),0,100);this.creativity=clamp(this.creativity+(e.creativity||0),0,100);
+  this.employees.forEach(p=>p.morale=clamp(p.morale+(e.morale||0),0,100));if(e.boost)this.projects.forEach(p=>p.progress=clamp(p.progress+e.boost/this.projects.length,0,99));
+  this.pendingDecision=null;this.addEvent("check","Kararın uygulandı",choice.text,"decision");this.save();this.emit();return true;
  }
- adjust(e){
-  this.budget+=e.budget||0;this.fans=Math.max(0,this.fans+(e.fans||0));
-  this.reputation=clamp(this.reputation+(e.rep||0),0,100);this.creativity=clamp(this.creativity+(e.creativity||0),0,100);
-  for(const p of this.employees)p.morale=clamp(p.morale+(e.morale||0),0,100);
-  if(e.boost){for(const project of this.projects)project.progress=clamp(project.progress+e.boost/this.projects.length,0,99);}
+ interact(id,action){
+  const p=this.findPerson(id),cost=action==="coffee"?200:0;if(!p||!['coffee','focus','motivate','talk'].includes(action)||!this.canSpend(cost))return false;
+  if((p.cooldowns[action]??-1)>this.simElapsed)return false;
+  p.cooldowns[action]=this.simElapsed+({coffee:15,focus:10,motivate:30,talk:8}[action]);
+  if(cost)this.transact(-cost,p.name+" • kahve");
+  if(action==="coffee"){p.energy=clamp(p.energy+23,0,100);p.morale=clamp(p.morale+6,0,100);this.chooseTask(p,"break");this.say(p,"Tam zamanında! Bu kahve bana çok iyi gelecek. ☕",true);}
+  if(action==="motivate"){p.morale=clamp(p.morale+12,0,100);this.say(p,"Bana güvendiğini bilmek güzel. Birlikte başaracağız!",true);}
+  if(action==="focus"){this.chooseTask(p,"focus");this.say(p,"Kulaklıklar takıldı. Bir süre odaklanıyorum.",true);}
+  if(action==="talk"){this.say(p,this.pick(DIALOGUE.greet),true);p.morale=clamp(p.morale+2,0,100);}
+  this.addEvent(action==="coffee"?"coffee":"spark",p.name+" ile etkileşim",{coffee:"Kahve ısmarladın. Enerji ve moral yükseldi.",motivate:"Ekibini cesaretlendirdin.",focus:"Odak görevi başladı.",talk:"Kısa bir sohbet ettiniz."}[action],"action");this.save();this.emit();return true;
  }
- interact(personId,action){
-  const p=this.findPerson(personId);if(!p)return false;
-  if(action==="coffee"){if(this.budget<200)return false;this.budget-=200;p.energy=clamp(p.energy+23,0,100);p.morale=clamp(p.morale+7,0,100);this.chooseTask(p,"break");this.say(p,"Tam zamanında bir kahve! Teşekkürler ☕");this.addEvent("☕",p.name+" kahve molasında","Enerjisi ve morali arttı.","action");}
-  if(action==="motivate"){p.morale=clamp(p.morale+13,0,100);this.say(p,"Bunu duymak iyi geldi! Hadi işe!");this.addEvent("♡",p.name+" motive oldu","Motivasyon konuşman olumlu sonuç verdi.","action");}
-  if(action==="focus"){this.chooseTask(p,"focus");p.energy=clamp(p.energy-3,0,100);this.say(p,"Tamam, odak moduna geçiyorum.");this.addEvent("⚡",p.name+" odaklandı","Yeni bir işe başladı.","action");}
-  if(action==="talk"){this.say(p,pick(DIALOGUE.greet));p.morale=clamp(p.morale+2,0,100);}
-  this.save();this.emit();return true;
+ invest(id){const p=this.projectById(id);if(!p||!this.canSpend(1800))return false;this.transact(-1800,p.name+" • üretim yatırımı");p.progress=clamp(p.progress+7,0,99);this.stats.investments++;this.addEvent("bolt","Üretime destek",p.name+" ilerlemesi +%7.","project");this.save();this.emit();return true;}
+ setPriority(id,priority){const p=this.projectById(id);if(!p||!['balanced','quality','speed'].includes(priority))return false;p.priority=priority;this.save();this.emit();return true;}
+ assign(id,projectId){const p=this.findPerson(id);if(!p||!this.projectById(projectId))return false;p.projectId=projectId;this.save();this.emit();return true;}
+ createProject(name,genre){
+  name=text(name,32).trim();const g=GENRES.find(g=>g.id===genre);if(!g||name.length<3||this.projects.length>=6||!this.canSpend(12000))return false;
+  const p={id:"custom-"+uid(),name,genre:g.label,subtitle:"Bağımsız stüdyo projesi",icon:g.icon,color:g.color,accent:g.accent,type:"game",audience:g.audience,progress:0,finished:0,quality:72,bugs:8,priority:"balanced",income:0};
+  this.projects.push(p);this.transact(-12000,name+" • prototip bütçesi");this.addEvent("spark","Yeni bir dünya doğuyor",name+" üretim planına eklendi. Proje panelinden ekip atayabilirsin.","project");this.save();this.emit();return p;
  }
- invest(projectId){
-  const p=this.projectById(projectId);if(!p||this.budget<1800)return false;
-  this.budget-=1800;p.progress=clamp(p.progress+7,0,99);this.creativity=clamp(this.creativity+1,0,100);
-  this.addEvent("✦","Projeye yatırım",p.name+" üretimi +%7 ilerledi.","project");this.save();this.emit();return true;
- }
- reset(){try{localStorage.removeItem(STORAGE_KEY);}catch{}}
- save(){
-  try{localStorage.setItem(STORAGE_KEY,JSON.stringify({
-   version:1,day:this.day,minutes:this.minutes,budget:this.budget,fans:this.fans,reputation:this.reputation,creativity:this.creativity,
-   projects:this.projects.map(p=>({id:p.id,progress:p.progress,finished:p.finished,quality:p.quality})),
-   employees:this.employees.map(p=>({id:p.id,energy:p.energy,morale:p.morale,workCount:p.workCount,socialCount:p.socialCount,friendships:p.friendships})),
-   achievements:this.achievements,pendingDecision:this.pendingDecision,nextDecision:this.nextDecision,storedAt:Date.now()
-  }));return true;}catch{return false;}
- }
- restore(){
-  try{
-   const raw=localStorage.getItem(STORAGE_KEY);if(!raw)return false;
-   const s=JSON.parse(raw);if(s.version!==1||!Number.isFinite(s.day)||s.day<1)return false;
-   this.day=clamp(s.day,1,9999);this.minutes=clamp(s.minutes||550,540,1079);this.budget=clamp(s.budget||0,-1e8,1e9);
-   this.fans=clamp(s.fans||0,0,1e9);this.reputation=clamp(s.reputation||0,0,100);this.creativity=clamp(s.creativity||0,0,100);
-   for(const p of this.projects){const saved=s.projects?.find(v=>v.id===p.id);if(saved){p.progress=clamp(saved.progress||0,0,99);p.finished=clamp(saved.finished||0,0,999);p.quality=clamp(saved.quality||75,0,100);}}
-   for(const p of this.employees){const saved=s.employees?.find(v=>v.id===p.id);if(saved){p.energy=clamp(saved.energy||60,0,100);p.morale=clamp(saved.morale||60,0,100);p.workCount=clamp(saved.workCount||0,0,1e7);p.socialCount=clamp(saved.socialCount||0,0,1e7);p.friendships={...p.friendships,...saved.friendships};}}
-   this.achievements=Array.isArray(s.achievements)?s.achievements.slice(0,30):[];this.pendingDecision=s.pendingDecision||null;
-   this.nextDecision=Number.isFinite(s.nextDecision)&&s.nextDecision>this.minutes?s.nextDecision:this.minutes+160;
-   // Offline progression is intentionally paused: simulated time never claims to run while the tab is closed.
-   return true;
-  }catch{return false;}
- }
-}
-
-const pixel=(c,x,y,w,h,color)=>{c.fillStyle=color;c.fillRect(Math.round(x),Math.round(y),w,h);};
-const panel=(c,x,y,w,h,fill,stroke="#ffffff22",radius=4)=>{
- c.beginPath();c.roundRect(x,y,w,h,radius);c.fillStyle=fill;c.fill();if(stroke){c.strokeStyle=stroke;c.lineWidth=1;c.stroke();}
-};
-function furniture(c,d,tick){
- const x=d.x*T,y=d.y*T,kind=d.kind;
- c.save();
- if(kind==="desk"||kind==="console"){
-  pixel(c,x-7,y+9,60,28,"#090f20a0");
-  panel(c,x-8,y+1,59,27,kind==="console"?"#705287":"#987088","#1d1939",4);
-  panel(c,x-5,y-3,53,21,kind==="console"?"#544577":"#b78478","#ffffff22",3);
-  panel(c,x+10,y-11,25,19,"#1b2544","#10172b",3);
-  panel(c,x+12,y-9,21,14,kind==="console"?"#f292bd":"#489bc8",null,1);
-  pixel(c,x+16,y-6,14,2,"#e5f4ff88");pixel(c,x+16,y-2,9,1,"#dff4ff88");
-  panel(c,x+15,y+12,17,3,"#e5dce3",null,1);
-  pixel(c,x+40,y+1,4,6,"#f5c7a4");
-  panel(c,x+14,y+27,17,10,"#47425d",null,3);
- }
- if(kind==="couch"){
-  pixel(c,x+1,y+8,77,39,"#0a111e92");
-  panel(c,x-6,y+1,78,33,"#2d797b","#163d50",7);
-  panel(c,x+2,y+3,61,21,"#5a9f9b",null,5);
-  panel(c,x+2,y+20,61,10,"#367a82",null,3);
-  panel(c,x+10,y+7,17,13,"#f5bdc5",null,4);panel(c,x+37,y+7,17,13,"#a6a9f6",null,4);
- }
- if(kind==="coffee"){
-  panel(c,x-4,y+4,45,27,"#75564a","#3a3337",4);
-  panel(c,x+5,y+6,27,14,"#c79877",null,2);
-  panel(c,x+8,y+8,8,8,"#e1e8f0",null,3);
-  panel(c,x+19,y+8,8,8,"#eed8a4",null,3);
-  pixel(c,x+33,y-4,9,12,"#545468");pixel(c,x+34,y-7,7,5,"#a1d8dd");
- }
- if(kind==="meeting"){
-  pixel(c,x+4,y+11,94,41,"#080d1b88");
-  panel(c,x-6,y+2,90,42,"#694d75","#372741",10);
-  panel(c,x-2,y+5,82,32,"#9c7196","#d0a3a522",8);
-  for(let i=0;i<3;i++){panel(c,x+8+i*25,y-10,15,9,"#42445e",null,4);panel(c,x+8+i*25,y+42,15,9,"#42445e",null,4);}
-  pixel(c,x+35,y+13,13,17,"#c8d2ed");
- }
- if(kind==="rack"){
-  pixel(c,x-3,y+13,34,43,"#080e18aa");
-  panel(c,x-6,y-9,31,51,"#303d53","#151e37",4);
-  panel(c,x-2,y-6,23,41,"#131e31",null,2);
-  for(let j=0;j<4;j++){pixel(c,x+1,y-2+j*9,18,6,"#3b5874");pixel(c,x+3,y+j*9,4,2,j===2?"#e9b0ff":"#4efac0");pixel(c,x+11,y+j*9,6,2,"#73b8ff");}
- }
- if(kind==="plant"){
-  pixel(c,x+6,y+13,22,9,"#15252b80");
-  panel(c,x+8,y+5,18,18,"#bd7c7a","#5a414d",3);
-  for(let i=0;i<7;i++){let a=i*2.399+tick*.03;pixel(c,x+16+Math.cos(a)*9,y+4+Math.sin(a)*8,8,8,i%2?"#3fd2a4":"#258f87");}
-  pixel(c,x+15,y+1,5,6,"#66f0b9");
- }
- if(kind==="reception"){
-  panel(c,x-5,y+5,105,30,"#997d9a","#5d536e",5);panel(c,x+2,y+7,90,22,"#c8a3ab",null,2);
-  panel(c,x+33,y-12,29,24,"#24395a","#131a35",2);pixel(c,x+37,y-9,21,17,"#6cece8");
-  pixel(c,x+42,y-4,12,2,"#efffff");
- }
- if(kind==="screen"){
-  panel(c,x-2,y-16,86,52,"#242944","#161b37",4);
-  panel(c,x+3,y-11,76,39,"#4a3576",null,2);
-  panel(c,x+6,y+3,70,15,"#ec64b2",null,3);
-  c.font="bold 12px system-ui";c.fillStyle="#fff";c.fillText("DRABORN",x+9,y+15);
-  pixel(c,x+36,y+37,9,7,"#75809c");
- }
- if(kind==="arcade"){
-  panel(c,x+1,y-16,34,61,"#ad60bc","#322848",5);
-  panel(c,x+5,y-10,26,27,"#19263b",null,3);
-  panel(c,x+7,y-7,22,20,"#4b83b8",null,2);
-  pixel(c,x+11,y+2,6,6,"#ffcb6b");pixel(c,x+20,y-1,5,5,"#8df3e1");
-  pixel(c,x+8,y+22,8,3,"#f0adcb");pixel(c,x+22,y+24,4,4,"#f7d98c");
- }
- c.restore();
-}
-function drawPortrait(c,p,x,y,t,selected){
- const walking=p.phase==="walk";const step=walking?Math.sin(p.walkFrame*1.5)*3:0;
- const bob=walking?Math.abs(step)*.45:Math.sin(t*.002+p.skill)*.7;
- const cy=y-bob;
- c.save();
- c.fillStyle="#05091566";c.beginPath();c.ellipse(x,cy+13,12,4,0,0,Math.PI*2);c.fill();
- if(selected){c.shadowBlur=12;c.shadowColor=p.color;c.strokeStyle=p.color;c.lineWidth=2;c.beginPath();c.ellipse(x,cy+12,16,6,0,0,Math.PI*2);c.stroke();c.shadowBlur=0;}
- panel(c,x-7,cy-1,14,15,p.top,"#251e38",4);
- pixel(c,x-9,cy+3,3,8,p.skin);pixel(c,x+6,cy+3,3,8,p.skin);
- pixel(c,x-6,cy+11,5,7+step,"#23314d");pixel(c,x+1,cy+11,5,7-step,"#263451");
- panel(c,x-7,cy-16,14,17,p.skin,"#4c3741",4);
- panel(c,x-8,cy-18,16,8,p.hair,null,4);
- pixel(c,x-6,cy-13,2,6,p.hair);pixel(c,x+4,cy-13,2,6,p.hair);
- pixel(c,x-4,cy-9,2,2,"#302336");pixel(c,x+3,cy-9,2,2,"#302336");
- pixel(c,x-1,cy-5,3,1,"#a65b68");
- c.font="bold 10px system-ui";c.textAlign="center";c.fillStyle="#10152b";panel(c,x-27,cy+20,54,15,"#11172ae3","#ffffff25",4);
- c.fillStyle=selected?"#ffe4fa":"#e8efff";c.fillText(p.name,x,cy+31);
- if(p.dialogue&&p.dialogueLeft>0){
-  let msg=p.dialogue.length>34?p.dialogue.slice(0,33)+"…":p.dialogue;
-  c.font="10px system-ui";const tw=Math.min(190,c.measureText(msg).width+18);
-  let sx=clamp(x-tw/2,4,WORLD.width-tw-4),sy=cy-56;
-  panel(c,sx,sy,tw,25,"#101628ed",p.color,7);
-  c.fillStyle="#eef4ff";c.textAlign="center";c.fillText(msg,sx+tw/2,sy+16);
-  pixel(c,x-2,sy+24,5,4,p.color);
- }
- c.restore();
-}
-export function drawWorld(c,w,camera,elapsed){
- const scale=camera.scale||1,x=camera.x||0,y=camera.y||0;
- c.clearRect(0,0,WORLD.width,WORLD.height);c.fillStyle="#08101f";c.fillRect(0,0,WORLD.width,WORLD.height);
- c.save();c.translate(x,y);c.scale(scale,scale);
- const dark=w.minutes>=16*60;
- for(const room of ROOMS){
-  const rx=room.x*T,ry=room.y*T,rw=room.w*T,rh=room.h*T;
-  const g=c.createLinearGradient(rx,ry,rx+rw,ry+rh);g.addColorStop(0,colorMix(room.color,8));g.addColorStop(1,colorMix(room.color,-15));
-  c.fillStyle=g;c.fillRect(rx,ry,rw,rh);
-  for(let yy=room.y;yy<room.y+room.h;yy++)for(let xx=room.x;xx<room.x+room.w;xx++){
-   const f=seededHash(xx,yy);
-   if((xx+yy)%2===0){c.fillStyle="#ffffff06";c.fillRect(xx*T,yy*T,T,T);}
-   if(f>.77){pixel(c,xx*T+5,yy*T+6,2,2,"#ffffff10");pixel(c,xx*T+23,yy*T+23,4,1,"#00000012");}
+ upgradeCost(id){return this.rooms[id]>=4?0:Math.round(3500*Math.pow(this.rooms[id],1.6));}
+ upgrade(id){if(!ROOMS.some(r=>r.id===id)||this.rooms[id]>=4)return false;const cost=this.upgradeCost(id);if(!this.canSpend(cost))return false;this.transact(-cost,ROOMS.find(r=>r.id===id).name+" • geliştirme");this.rooms[id]++;this.stats.upgrades++;this.addEvent("home","Ofis bir seviye daha iyi",ROOMS.find(r=>r.id===id).name+" artık seviye "+this.rooms[id]+". Üretim ve ortam gelişti.","upgrade");this.save();this.emit();return true;}
+ canResearch(id){const r=RESEARCH.find(r=>r.id===id);return !!r&&!this.research.includes(id)&&r.requires.every(x=>this.research.includes(x))&&(!r.room||this.rooms[r.room]>=2)&&this.canSpend(r.cost);}
+ doResearch(id){if(!this.canResearch(id))return false;const r=RESEARCH.find(r=>r.id===id);this.transact(-r.cost,r.name+" • araştırma");this.research.push(id);if(id==="qa")this.projects.forEach(p=>p.quality=clamp(p.quality+4,0,99));this.addEvent("flask",r.name+" tamamlandı",r.desc,"research");this.save();this.emit();return true;}
+ meeting(){if(!this.canSpend(1200)||this.simElapsed<this.meetingAt)return false;this.meetingAt=this.simElapsed+90;this.transact(-1200,"Ekip buluşması");this.employees.forEach((p,i)=>{p.morale=clamp(p.morale+7,0,100);if(i<5)this.chooseTask(p,"meeting");});this.addEvent("users","Birlikte düşünmek iyi geldi","Ekip morali +7. Toplantı odasında yeni fikirler konuşuluyor.","action");this.chat("dogancan","Herkese teşekkürler! Ortak hedefimiz çok daha net şimdi.","toplantı");this.save();this.emit();return true;}
+ contract(){if(this.contractDay===this.day)return false;this.contractDay=this.day;this.transact(15000,"Günlük küçük müşteri işi");this.employees.forEach(p=>p.energy=clamp(p.energy-12,0,100));this.addEvent("wallet","Müşteri işi tamamlandı","+₺15.000 gelir. Ekip enerjisi -12. Günde bir kez yapılabilir.","project");this.save();this.emit();return true;}
+ postMessage(message){const msg=text(message,180).trim();if(!msg||this.simElapsed<(this.messageAt??-1))return false;this.messageAt=this.simElapsed+4;this.chat("you",msg);const p=this.pick(this.employees),low=msg.toLocaleLowerCase("tr"),answer=/kahve|mola/.test(low)?"Bir mola çok iyi olur! Kahve köşesinde buluşalım. ☕":/merhaba|selam|günaydın/.test(low)?"Selam! Stüdyoya hoş geldin. Bugün çok güzel fikirler var.":/oyun|proje|bug/.test(low)?"Not aldım! Bir sonraki sprintte bu fikre bakalım.":/teşekkür|harika|güzel/.test(low)?"Teşekkürler! Bunu ekipçe başardık. 💜":"Fikrini duymak güzel! Bunu ekip toplantısına taşıyalım.";this.chat(p.id,answer,"genel",this.chats.at(-1).id);this.say(p,answer);this.save();this.emit();return true;}
+ milestoneValue(m){return m.key==="morale"?this.averageMorale:m.key==="research"?this.research.length:this.stats[m.key]??this[m.key]??0;}
+ checkMilestones(){for(const m of MILESTONES)if(!this.achievements.includes(m.id)&&this.milestoneValue(m)>=m.target){this.achievements.push(m.id);this.addEvent("trophy",m.title,"Hedef tamamlandı. "+formatCurrency(m.reward)+" ödülünü Hedefler panelinden alabilirsin.","achievement");}}
+ claim(id){const m=MILESTONES.find(m=>m.id===id);if(!m||!this.achievements.includes(id)||this.claimed.includes(id))return false;this.claimed.push(id);this.transact(m.reward,m.title+" • hedef ödülü");this.save();this.emit();return true;}
+ snapshot(){return {schema:"draborn-office",version:2,day:this.day,minutes:this.minutes,budget:this.budget,fans:this.fans,reputation:this.reputation,creativity:this.creativity,projects:this.projects,employees:this.employees.map(({id,energy,morale,workCount,socialCount,friendships,projectId})=>({id,energy,morale,workCount,socialCount,friendships,projectId})),rooms:this.rooms,research:this.research,achievements:this.achievements,claimed:this.claimed,feed:this.feed,chats:this.chats,ledger:this.ledger,reports:this.reports,settings:this.settings,stats:this.stats,pendingDecision:this.pendingDecision,nextDecision:this.nextDecision,contractDay:this.contractDay,storedAt:Date.now()};}
+ save(){try{this.storage?.setItem(KEY,JSON.stringify(this.snapshot()));return !!this.storage;}catch{return false;}}
+ restore(){try{const raw=this.storage?.getItem(KEY)||this.storage?.getItem(LEGACY);return raw?this.importSnapshot(JSON.parse(raw),false):false;}catch{return false;}}
+ importSnapshot(s,persist=true){
+  if(!s||![1,2].includes(s.version)||(s.version===2&&s.schema!=="draborn-office")||!Number.isInteger(s.day)||s.day<1||!Array.isArray(s.employees)||!Array.isArray(s.projects))return false;
+  const projectList=PROJECTS.map(p=>({...p,finished:0,quality:83,bugs:9,priority:"balanced",income:0}));
+  for(const saved of s.projects.slice(0,6)){
+   if(!saved||typeof saved.id!=="string")continue;let p=projectList.find(p=>p.id===saved.id);
+   if(!p&&saved.id.startsWith("custom-")&&typeof saved.name==="string"&&saved.name.trim().length>=3){const g=GENRES.find(g=>g.label===saved.genre)||GENRES[0];p={...g,id:text(saved.id,60),name:text(saved.name,32),genre:g.label,subtitle:"Bağımsız stüdyo projesi",type:"game"};projectList.push(p);}
+   if(p)Object.assign(p,{progress:num(saved.progress,0,0,99.99),finished:num(saved.finished,0,0,9999),quality:num(saved.quality,75,20,99),bugs:num(saved.bugs,8,0,40),priority:['balanced','speed','quality'].includes(saved.priority)?saved.priority:"balanced",income:num(saved.income)});
   }
-  c.lineWidth=5;c.strokeStyle="#11162e";c.strokeRect(rx+2,ry+2,rw-4,rh-4);
-  c.lineWidth=2;c.strokeStyle="#d1d4fa2e";c.strokeRect(rx+6,ry+6,rw-12,rh-12);
-  c.font="bold 12px system-ui";c.textAlign="left";c.fillStyle="#f5f3ffad";c.fillText(ROOM_LABELS[room.id],rx+16,ry+23);
-  c.fillStyle="#ffffff4a";c.font="9px system-ui";c.fillText(room.sub,rx+16,ry+37);
+  const state={day:num(s.day,1,1,9999),minutes:num(s.minutes,550,540,1079),budget:num(s.budget,185000,-1e8,1e9),fans:num(s.fans,0),reputation:num(s.reputation,38,0,100),creativity:num(s.creativity,64,0,100),projects:projectList};
+  Object.assign(this,state);
+  for(const p of this.employees){const v=s.employees.find(x=>x?.id===p.id);if(!v)continue;for(const k of ["energy","morale"])p[k]=num(v[k],80,0,100);p.workCount=num(v.workCount);p.socialCount=num(v.socialCount);if(this.projectById(v.projectId))p.projectId=v.projectId;for(const q of this.employees)if(q!==p)p.friendships[q.id]=num(v.friendships?.[q.id],55,0,100);}
+  this.rooms=Object.fromEntries(ROOMS.map(r=>[r.id,Math.round(num(s.rooms?.[r.id],1,1,4))]));this.research=RESEARCH.filter(r=>Array.isArray(s.research)&&s.research.includes(r.id)).map(r=>r.id);this.achievements=MILESTONES.filter(m=>Array.isArray(s.achievements)&&s.achievements.includes(m.id)).map(m=>m.id);this.claimed=MILESTONES.filter(m=>Array.isArray(s.claimed)&&s.claimed.includes(m.id)).map(m=>m.id);
+  const arrays={feed:80,chats:100,ledger:80,reports:14};
+  for(const [key,max] of Object.entries(arrays))this[key]=Array.isArray(s[key])?s[key].slice(-max).filter(e=>e&&typeof e==="object").map(e=>key==="ledger"?{day:num(e.day,1,1,9999),time:text(e.time,5),amount:num(e.amount,0,-1e8,1e9),reason:text(e.reason)}:key==="reports"?{day:num(e.day,1,1,9999),income:num(e.income),expenses:num(e.expenses),morale:num(e.morale,80,0,100),releases:num(e.releases)}:key==="chats"?{id:text(e.id,80),personId:this.findPerson(e.personId)?e.personId:e.personId==="you"?"you":"dogancan",text:text(e.text,280),topic:text(e.topic,40),time:text(e.time,5),day:num(e.day,1,1,9999)}:{id:text(e.id,80),icon:text(e.icon,20),title:text(e.title,100),detail:text(e.detail,240),kind:text(e.kind,20),time:text(e.time,5),day:num(e.day,1,1,9999)}):[];
+  const opts=s.settings||{};this.settings={theme:['auto','day','sunset','night'].includes(opts.theme)?opts.theme:"auto",labels:opts.labels!==false,effects:opts.effects!==false,sound:opts.sound===true,voice:opts.voice===true,fontScale:opts.fontScale===1.15?1.15:1};
+  this.stats={releases:Math.round(num(s.stats?.releases,this.projects.reduce((n,p)=>n+p.finished,0))),upgrades:num(s.stats?.upgrades),investments:num(s.stats?.investments),earned:num(s.stats?.earned),spent:num(s.stats?.spent)};
+  this.pendingDecision=Number.isInteger(s.pendingDecision)&&CHOICES[s.pendingDecision]?s.pendingDecision:s.version===1&&s.pendingDecision?CHOICES.findIndex(c=>c.title===s.pendingDecision.title):null;if(this.pendingDecision===-1)this.pendingDecision=null;
+  this.nextDecision=num(s.nextDecision,this.minutes+100,this.minutes+1,1200);this.contractDay=num(s.contractDay);if(persist){this.save();this.emit();}return true;
  }
- // Floor markers, glass doors, and atmosphere lights.
- for(let i=0;i<10;i++){
-  const xx=((i*141+67)%1080)+25,yy=((i*191+53)%665)+40;
-  c.fillStyle=i%2?"#ffffff0b":"#90d0ff0c";c.beginPath();c.arc(xx,yy,11+Math.sin(elapsed*.0005+i)*3,0,Math.PI*2);c.fill();
- }
- for(const d of DECOR)furniture(c,d,elapsed*.001);
- // Show the office entrance and visitor walkway.
- for(let i=0;i<9;i++){c.fillStyle=i%2?"#ddc8f30e":"#fcd6ff16";c.fillRect(10*T+i*55,22*T+5,25,2);}
- const agents=[...w.employees].sort((a,b)=>a.y-b.y);
- for(const p of agents)drawPortrait(c,p,p.x,p.y,elapsed,w.selectedId===p.id);
- if(dark){c.fillStyle="rgba(10,12,37,.16)";c.fillRect(0,0,WORLD.width,WORLD.height);}
- c.restore();
+ reset(){try{this.storage?.removeItem(KEY);this.storage?.removeItem(LEGACY);return true;}catch{return false;}}
 }
-export function formatCurrency(num){return "₺"+Math.round(num).toLocaleString("tr-TR");}
-export function getStorageKey(){return STORAGE_KEY;}
+export function formatCurrency(n){return "₺"+Math.round(n).toLocaleString("tr-TR");}
+export function getStorageKey(){return KEY;}
