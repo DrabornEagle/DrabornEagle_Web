@@ -1,0 +1,8 @@
+{
+  "repository": "DrabornEagle/DraBornStyle",
+  "commit": "1a82b03170a43b13d9c0afa525f99d736ad37f90",
+  "version": "0.4.0",
+  "basePath": "/DraBornStyle",
+  "backend": "xpdiwyxnnrmyvpcqwuyb",
+  "source": "Same Expo components, RPCs, Auth, Storage and Realtime as Android"
+}
