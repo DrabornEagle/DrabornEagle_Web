@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-10-17T16:56:13.422341Z",
+  "generatedAt": "2026-10-17T19:09:34.852339Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "d5da3b641e16becaa2",
+      "title": "Koleksiyonculara özel GTA 6 diski Çin'de satışa çıktı",
+      "summary": "GTA 6, Xbox veya PS5 konsollarına 19 Kasım'da çıkış yaptığında yalnızca dijital olarak oynanabilecek ancak Çinli satıcılar, fiziksel disk isteyenler için koleksiyon sürümü çıkardı bile.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/koleksiyonculara-ozel-gta-6-diski-cin-de-satisa-cikti--211763",
+      "publishedAt": "2026-10-17T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211763/1200x675koleksiyonculara-ozel-gta-6-diski-cin-de-satisa-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7c822c8f4be920ef69",
+      "title": "True Detective'in 5. sezonu iki yıldız oyuncuyu bir araya getirecek",
+      "summary": "True Detective'in 5. sezonu için hazırlıkların hız kazanmasıyla birlikte başrol oyuncuları da belli oldu HBO, yeni sezon için sinema dünyasından tanıdığımız iki ünlü isimle anlaştı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/true-detective-5-sezon-iki-yildiz-oyuncuyu-bir-araya-getirecek--211771",
+      "publishedAt": "2026-10-17T18:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211771/1200x675true-detective-5-sezon-iki-yildiz-oyuncuyu-bir-araya-getirecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9f1a1ceccf7ee58967",
+      "title": "Qualcomm’dan Snapdragon 8 Elite Extreme Gen 6’nın ısınma iddialarına yanıt",
+      "summary": "Samsung’un testlerinde ciddi performans kaybı yaşadığı öne sürülen Snapdragon 8 Elite Extreme Gen 6 için Qualcomm’dan açıklama geldi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/qualcomm-snapdragon-8-elite-extreme-gen-6-iddialarini-yalanladi--211760",
+      "publishedAt": "2026-10-17T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211760/1200x675qualcomm-snapdragon-8-elite-extreme-gen-6-iddialarini-yalanladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "40d812d765917d3578",
+      "title": "Füzyon enerjisinde ezber bozan hamle: Masaüstü reaktör geliyor",
+      "summary": "Cambridge Heavy Industries, masa üzerine sığan küçük bir füzyon reaktörü geliştiriyor. Şirket, iki ana lazerle enerji üretmeyi ve gelecekte kendi füzyon santralini kurmayı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/masaustu-nukleer-fuzyon-reaktoru-gelistiriliyor--211754",
+      "publishedAt": "2026-10-17T17:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211754/1200x675masaustu-nukleer-fuzyon-reaktoru-gelistiriliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "63cdd69d44fced0474",
+      "title": "Telegram, kişiselleştirilmiş haber akışı özelliği geliştiriyor",
+      "summary": "Telegram, macOS beta sürümünde ortaya çıkan yeni haber akışı özelliğiyle takip edilen kanalları ve kişiselleştirilmiş içerik önerilerini tek bir bölümde birleştirmeye hazırlanıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/telegram-kisisellestirilmis-haber-akisi-ozelligi-gelistiriyor--211768",
+      "publishedAt": "2026-10-17T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211768/1200x675telegram-kisisellestirilmis-haber-akisi-ozelligi-gelistiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "d3ba8712f8486abeed",
       "title": "Tüm mantar ilaçlarına dirençli ölümcül mantar geri döndü",
@@ -239,42 +299,6 @@
       "publishedAt": "2026-10-17T05:00:02Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/684995/684995-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "18ce40e0054a709576",
-      "title": "Küresel saat sisteminde tarihi değişim: Artık saniye uygulaması kaldırılıyor",
-      "summary": "Dünya’nın dönüş hızındaki değişimler nedeniyle artık saniye uygulaması 2027’de kaldırılıyor. Yeni sistemle dijital altyapılardaki kesintilerin önüne geçilmesi hedefleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kuresel-saat-sistemi-degisiyor-artik-saniye-uygulamasi-kalkiyor--211736",
-      "publishedAt": "2026-10-16T21:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211736/1200x675kuresel-saat-sistemi-degisiyor-artik-saniye-uygulamasi-kalkiyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "641aa68cded54c4ec2",
-      "title": "Honor MagicOS 11 küresel takvimi açıklandı: Güncelleme hangi modellere ne zaman geliyor?",
-      "summary": "Honor, geçen ay Çin'de düzenlenen geliştirici konferasında MagicOS 11'i tanıtmıştı. Marka, çok geçmeden global güncelleme takvimini de açıkladı. İşte Android 17 alacak Honor cihazlar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/honor-magicos-11-global-takvimi-aciklandi-iste-cihazlar-listesi--211713",
-      "publishedAt": "2026-10-16T20:59:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211713/1200x675honor-magicos-11-global-takvimi-aciklandi-iste-cihazlar-listesi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eab48957700d784525",
-      "title": "A101 marketlerde akıllı ısıtıcı geçidi",
-      "summary": "15 Ekim A101 Ekstra teknoloji ürünleri arasında Xiaomi Mi Smart Space Heater S akıllı elektrikli ısıtıcı ve Philips 3000 seramik fanlı akıllı ısıtıcı yer alıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/15-ekim-a101-ekstra-katalogunda-neler-var--211714",
-      "publishedAt": "2026-10-16T20:38:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211714/1200x67515-ekim-a101-ekstra-katalogunda-neler-var.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-10-02T13:28:10Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XMA3KN5CDQCSF0YHZ0WFBH.01M3XMA452ZT41JBXKRPY1HH3F.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "01e99749322cbcc2d1",
-      "title": "Microsoft 365 and LinkedIn leadership update",
-      "summary": "Satya Nadella, Chairman and CEO, and Ryan Roslansky, Executive Vice President of LinkedIn and Microsoft 365, shared the below communications with Microsoft and LinkedIn employees this morning. SATYA NADELLA MESSAGE After nearly 18 years at LinkedIn and Microsoft, Ryan Roslansky has decided to leave Microsoft and embark on his next chapter. As Ryan and I...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/01/microsoft-365-and-linkedin-leadership-update/",
-      "publishedAt": "2026-10-01T15:03:27Z",
-      "category": "Teknoloji",
-      "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4607b4c4468386f7d7",
-      "title": "New Microsoft data innovations unlock what only your business knows",
-      "summary": "Every organization has knowledge that is uniquely its own: the way its business operates, the data it has built over time, the expertise of its people and the context behind thousands of everyday decisions. As powerful AI models become more widely available, that unique business intelligence matters more than ever. The difference will come from...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/28/new-microsoft-data-innovations-unlock-what-only-your-business-knows/",
-      "publishedAt": "2026-09-29T06:30:04Z",
-      "category": "Yapay Zeka",
-      "image": "",
       "language": "en",
       "editorial": false
     }
