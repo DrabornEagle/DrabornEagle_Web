@@ -1,0 +1,82 @@
+name: DraBornStyle web sync
+on:
+  push:
+    branches: [main]
+    paths: ['.github/workflows/dkd-drabornstyle-web-sync.yml']
+  workflow_dispatch:
+  schedule:
+    - cron: '8,23,38,53 * * * *'
+permissions:
+  contents: write
+  actions: write
+concurrency:
+  group: dkd-drabornstyle-web-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-22.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
+        with:
+          node-version: '24'
+      - name: Compare shared Android source
+        id: source
+        shell: bash
+        run: |
+          set -euo pipefail
+          git clone --depth 1 https://github.com/DrabornEagle/DraBornStyle.git "$RUNNER_TEMP/DraBornStyle-source"
+          source_sha=$(git -C "$RUNNER_TEMP/DraBornStyle-source" rev-parse HEAD)
+          current_sha=$(node -e 'try{console.log(require("./DraBornStyle/DKD-SOURCE.json").commit)}catch{console.log("missing")}')
+          echo "DKD_STYLE_SOURCE_SHA=$source_sha" >> "$GITHUB_ENV"
+          if [ "$source_sha" != "$current_sha" ] || [ ! -s DraBornStyle/index.html ]; then
+            echo 'changed=true' >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check and export the same app for web
+        if: steps.source.outputs.changed == 'true'
+        working-directory: ${{ runner.temp }}/DraBornStyle-source
+        run: |
+          set -euo pipefail
+          npm ci
+          npm run check
+          npm run export:site
+          test -s dist-site/reset/index.html
+          grep -F '/DraBornStyle/_expo/' dist-site/index.html >/dev/null
+      - name: Verify mobile and desktop flows in the subdirectory
+        if: steps.source.outputs.changed == 'true'
+        working-directory: ${{ runner.temp }}/DraBornStyle-source
+        env:
+          DB_STYLE_WEB_ROOT: ../dist-site
+          DB_STYLE_WEB_BASE: /DraBornStyle
+        run: |
+          npx playwright install --with-deps chromium
+          node tests/ui-v04.cjs
+      - name: Update only DraBornStyle public files
+        if: steps.source.outputs.changed == 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          git pull --ff-only origin main
+          mkdir -p DraBornStyle
+          rsync -a --delete "$RUNNER_TEMP/DraBornStyle-source/dist-site/" DraBornStyle/
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A DraBornStyle
+          if ! git diff --cached --quiet; then
+            git commit -m "build(DraBornStyle): sync Android source ${DKD_STYLE_SOURCE_SHA:0:12}"
+            for attempt in 1 2 3; do
+              if git push origin HEAD:main; then break; fi
+              git fetch origin main
+              git rebase origin/main
+              if [ "$attempt" -eq 3 ]; then exit 1; fi
+            done
+          fi
+      - name: Publish using the existing company Pages workflow
+        if: steps.source.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run dkd_company_pages.yml --repo "$GITHUB_REPOSITORY" --ref main
