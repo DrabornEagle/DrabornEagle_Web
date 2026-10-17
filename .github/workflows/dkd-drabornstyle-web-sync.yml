@@ -33,7 +33,7 @@ jobs:
           source_sha=$(git -C "$RUNNER_TEMP/DraBornStyle-source" rev-parse HEAD)
           current_sha=$(node -e 'try{console.log(require("./DraBornStyle/DKD-SOURCE.json").commit)}catch{console.log("missing")}')
           echo "DKD_STYLE_SOURCE_SHA=$source_sha" >> "$GITHUB_ENV"
-          if [ "$source_sha" != "$current_sha" ] || [ ! -s DraBornStyle/index.html ]; then
+          if [ "$source_sha" != "$current_sha" ] || [ ! -s DraBornStyle/index.html ] || [ "${{ github.event_name }}" = "push" ]; then
             echo 'changed=true' >> "$GITHUB_OUTPUT"
           fi
       - name: Check and export the same app for web
@@ -47,6 +47,7 @@ jobs:
           test -s dist-site/reset/index.html
           grep -F '/DraBornStyle/_expo/' dist-site/index.html >/dev/null
       - name: Verify direct login, input focus, Miami home and recovery
+        id: ui
         if: steps.source.outputs.changed == 'true'
         working-directory: ${{ runner.temp }}/DraBornStyle-source
         env:
@@ -55,7 +56,20 @@ jobs:
         run: |
           npx playwright install --with-deps chromium
           node tests/ui-v04.cjs
+      - name: Save local fixture UI verification
+        if: steps.ui.conclusion == 'success'
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: drabornstyle-ui-verification
+          path: |
+            ${{ runner.temp }}/DraBornStyle-source/docs/screens/v04-entry.png
+            ${{ runner.temp }}/DraBornStyle-source/docs/screens/v04-login-input-414.png
+            ${{ runner.temp }}/DraBornStyle-source/docs/screens/v04-home-414.png
+            ${{ runner.temp }}/DraBornStyle-source/docs/ui-v04-results.json
+          retention-days: 7
+          if-no-files-found: error
       - name: Update only DraBornStyle public files
+        id: publish
         if: steps.source.outputs.changed == 'true'
         shell: bash
         run: |
@@ -68,6 +82,7 @@ jobs:
           git add -A DraBornStyle
           if ! git diff --cached --quiet; then
             git commit -m "build(DraBornStyle): sync Android source ${DKD_STYLE_SOURCE_SHA:0:12}"
+            echo 'published=true' >> "$GITHUB_OUTPUT"
             for attempt in 1 2 3; do
               if git push origin HEAD:main; then break; fi
               git fetch origin main
@@ -76,7 +91,7 @@ jobs:
             done
           fi
       - name: Publish using the existing company Pages workflow
-        if: steps.source.outputs.changed == 'true'
+        if: steps.publish.outputs.published == 'true'
         env:
           GH_TOKEN: ${{ github.token }}
         run: gh workflow run dkd_company_pages.yml --repo "$GITHUB_REPOSITORY" --ref main
