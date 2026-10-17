@@ -27,4 +27,11 @@ Generated with the built-in imagegen tool; device interfaces and game covers dep
 
 - JavaScript syntax and homepage synchronization passed.
 - Artwork is optimized as opaque WebP and existing project artwork is retained.
-- Live responsive checks are recorded in the final release checkpoint after publication.
+- Implementation commit: `51549f7d283217c75b27f14929ac4268920dacc8`; public deployment completed successfully.
+- Live browser checks passed at 1920 × 1080, 1366 × 768, 390 × 844, 360 × 800, 768 × 1024, 844 × 390 and 320 × 740 using viewport-sized frames.
+- Both entry points report v0.7.2. All ten tiles appear in the documented order, with Series selected first and the exact `Games` / `Portal` marks.
+- Both new project selections load their intended artwork without broken images or page-level horizontal overflow at all seven sizes. Counters are `04 / 10` for Games and `05 / 10` for Style.
+- Each new web action remains reachable above the footer and inside the viewport; mobile actions are 48 px tall. Actual clicks open the existing Games portal and Style application.
+- The mobile rail reaches Portal (`10 / 10`) and returns to Style. Tablet and landscape keyboard selection also reaches Portal.
+- Returning from Media to Projects retains the selected Games card.
+- The temporary responsive verification page was removed after these checks.
