@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-17T19:09:34.852339Z",
+  "generatedAt": "2026-10-17T21:39:43.858016Z",
   "sourceCount": 7,
   "items": [
     {
@@ -263,30 +263,6 @@
       "publishedAt": "2026-10-17T08:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211748/1200x675galaxy-s27-ultra-icin-surpriz-gelisme-exynos-2700-geri-donebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d4b0c51d4efecc5e12",
-      "title": "Apple Intelligence sonunda Çin'e geliyor: Siri AI yine yok",
-      "summary": "Apple, yapay zeka özelliklerini Çin'deki iPhone kullanıcılarına sunmaya hazırlanıyor. Ancak Apple Intelligence, ülkedeki yasal düzenlemeler nedeniyle bazı önemli özelliklerden yoksun olacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-intelligence-sonunda-cin-e-geliyor-siri-ai-yine-yok--211749",
-      "publishedAt": "2026-10-17T07:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211749/1200x675apple-intelligence-sonunda-cin-e-geliyor-siri-ai-yine-yok.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6959d1e99e9a6fb584",
-      "title": "GeForce Now'a 10 yeni oyun eklendi: İşte bu haftanın listesi",
-      "summary": "Nvidia, GeForce Now kütüphanesine eklenen yeni oyunları açıkladı. The Witcher 3: Wild Hunt - Remastered ve Warhammer 40,000: Boltgun 2 dahil 10 oyun platforma geldi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/geforce-now-a-10-yeni-oyun-eklendi-iste-bu-haftanin-listesi--211750",
-      "publishedAt": "2026-10-17T06:30:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211750/1200x675geforce-now-a-10-yeni-oyun-eklendi-iste-bu-haftanin-listesi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-10-02T13:28:10Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XMA3KN5CDQCSF0YHZ0WFBH.01M3XMA452ZT41JBXKRPY1HH3F.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "01e99749322cbcc2d1",
+      "title": "Microsoft 365 and LinkedIn leadership update",
+      "summary": "Satya Nadella, Chairman and CEO, and Ryan Roslansky, Executive Vice President of LinkedIn and Microsoft 365, shared the below communications with Microsoft and LinkedIn employees this morning. SATYA NADELLA MESSAGE After nearly 18 years at LinkedIn and Microsoft, Ryan Roslansky has decided to leave Microsoft and embark on his next chapter. As Ryan and I...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/01/microsoft-365-and-linkedin-leadership-update/",
+      "publishedAt": "2026-10-01T15:03:27Z",
+      "category": "Teknoloji",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "4607b4c4468386f7d7",
+      "title": "New Microsoft data innovations unlock what only your business knows",
+      "summary": "Every organization has knowledge that is uniquely its own: the way its business operates, the data it has built over time, the expertise of its people and the context behind thousands of everyday decisions. As powerful AI models become more widely available, that unique business intelligence matters more than ever. The difference will come from...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/28/new-microsoft-data-innovations-unlock-what-only-your-business-knows/",
+      "publishedAt": "2026-09-29T06:30:04Z",
+      "category": "Yapay Zeka",
+      "image": "",
       "language": "en",
       "editorial": false
     }
