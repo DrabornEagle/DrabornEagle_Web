@@ -1,23 +1,24 @@
-/* DraBornPS v0.7.1 — project catalog. Only confirmed public destinations. */
-DKD.projectSelection="draborngo";
+/* DraBornPS v0.7.2 — project catalog. Only confirmed public destinations. */
+DKD.projectSelection="drabornseries";
 DKD.projects=[
   {
-    "id": "draborngo",
-    "title": "DraBornGo",
-    "theme": "go",
-    "mark": "GO",
-    "eyebrow": "ŞEHRİN HAREKETİ",
-    "subtitle": "Kurye, işletme ve müşteri operasyonlarını tek akışta buluşturan teslimat ekosistemi.",
-    "description": "Sipariş havuzu, canlı rota, ödeme akışı, kurye durumu ve işletme operasyonlarını tek merkezde birleştiren DraBornEagle teslimat platformu.",
-    "web": "https://www.draborneagle.com/draborngo/",
+    "id": "drabornseries",
+    "title": "DraBornSeries",
+    "theme": "series",
+    "mark": "SERIES",
+    "eyebrow": "HİKÂYEN BİR SONRAKİ BÖLÜMDE",
+    "subtitle": "Dizileri ve filmleri keşfet; kaldığın yerden Android ve web üzerinden izlemeye devam et.",
+    "description": "Keşfet akışı, dizi sayfaları, altyazılı oynatıcı, izleme listesi ve VIP ayrıcalıklarıyla sevdiğin hikâyeleri tek yerde takip et. Aynı hesabınla Android ve web deneyimini birlikte kullan.",
+    "web": "https://www.draborneagle.com/DraBornSeries/",
     "play": "",
-    "status": "Web",
+    "status": "Android + Web",
     "rows": [
-      "Sipariş havuzu",
-      "Canlı rota",
-      "Kurye & işletme"
+      "Dizi & film keşfi",
+      "İzleme listesi",
+      "Android + Web"
     ],
-    "image": "assets/projects/dkd-go-v06.webp"
+    "image": "assets/projects/dkd-series-v07.webp",
+    "imageAlt": "DraBornSeries dizi ve film platformunun aynı içerikleri gösteren Android telefon ve web ekranı mockup görseli"
   },
   {
     "id": "drabornoffice",
@@ -39,59 +40,78 @@ DKD.projects=[
     "imageAlt": "DraBornOffice oyun stüdyosu yönetim simülasyonunun Miami sahilindeki ofisini gösteren bilgisayar ve telefon mockup görseli"
   },
   {
-    "id": "drabornseries",
-    "title": "DraBornSeries",
-    "theme": "series",
-    "mark": "SERIES",
-    "eyebrow": "HİKÂYEN BİR SONRAKİ BÖLÜMDE",
-    "subtitle": "Dizileri ve filmleri keşfet; kaldığın yerden Android ve web üzerinden izlemeye devam et.",
-    "description": "Keşfet akışı, dizi sayfaları, altyazılı oynatıcı, izleme listesi ve VIP ayrıcalıklarıyla sevdiğin hikâyeleri tek yerde takip et. Aynı hesabınla Android ve web deneyimini birlikte kullan.",
-    "web": "https://www.draborneagle.com/DraBornSeries/",
+    "id": "drabornodds",
+    "title": "DraBornOdds",
+    "theme": "odds",
+    "mark": "ODDS",
+    "eyebrow": "VERİYLE OYUNU OKU",
+    "subtitle": "Maç verilerini risk profiline göre analiz et ve açıklamalı kupon önerileri oluştur.",
+    "description": "Maç sayısı, bütçe ve risk tercihlerine göre analizleri incele. Seçim nedenlerini ve risk özetini gör. Öneriler tahmindir; kazanma garantisi içermez.",
+    "web": "https://www.draborneagle.com/DraBornOdds/",
+    "play": "",
+    "status": "Web",
+    "rows": [
+      "Maç analizi",
+      "Risk profili",
+      "Açıklamalı öneriler"
+    ],
+    "image": "assets/projects/dkd-odds-v06.webp"
+  },
+  {
+    "id": "draborngames",
+    "title": "DraBornGames",
+    "theme": "games",
+    "mark": "Games",
+    "eyebrow": "OYUNU SEÇ, MACERAYA BAŞLA",
+    "subtitle": "Last Mile’da kurye kariyerine başla; SHIFT//ERROR’da reflekslerini zorla.",
+    "description": "DraBornEagle oyunlarını tek yerden keşfet. Desteklenen oyunları telefon, tablet veya bilgisayar tarayıcısında aç; Last Mile’ın Android APK’sına DraBornGames üzerinden ulaş.",
+    "web": "https://www.draborneagle.com/DraBornGames/",
+    "play": "",
+    "status": "Web Oyunları",
+    "rows": [
+      "Last Mile",
+      "SHIFT//ERROR",
+      "Tarayıcı oyunları"
+    ],
+    "image": "assets/projects/dkd-games-v072.webp",
+    "imageAlt": "DraBornGames oyun platformunun Last Mile ve SHIFT ERROR kartlarını gösteren monitör ve telefon mockup görseli"
+  },
+  {
+    "id": "drabornstyle",
+    "title": "DraBornStyle",
+    "theme": "style",
+    "mark": "STYLE",
+    "eyebrow": "TARZINA UYGUN RANDEVU",
+    "subtitle": "Yakınındaki berberleri keşfet; çalışanını ve uygun saati seçerek randevunu oluştur.",
+    "description": "İşletme ve çalışanların müsaitliğini, hizmetlerini ve fiyatlarını incele. Randevularını, favorilerini ve mesajlarını Android ve web üzerinden aynı hesabınla yönet.",
+    "web": "https://www.draborneagle.com/DraBornStyle/",
     "play": "",
     "status": "Android + Web",
     "rows": [
-      "Dizi & film keşfi",
-      "İzleme listesi",
-      "Android + Web"
+      "Berber & usta seçimi",
+      "Uygun saatler",
+      "Randevu & mesajlar"
     ],
-    "image": "assets/projects/dkd-series-v07.webp",
-    "imageAlt": "DraBornSeries dizi ve film platformunun aynı içerikleri gösteren Android telefon ve web ekranı mockup görseli"
+    "image": "assets/projects/dkd-style-v072.webp",
+    "imageAlt": "DraBornStyle berber randevu platformunun Miami temalı berber ortamında telefon ve bilgisayar mockup görseli"
   },
   {
-    "id": "drabornpark",
-    "title": "DraBornPark",
-    "theme": "park",
-    "mark": "PARK",
-    "eyebrow": "GÜVENLİ ARAÇ İLETİŞİMİ",
-    "subtitle": "Telefon numarası paylaşmadan araç sahibiyle güvenli iletişim kur.",
-    "description": "Aracındaki NFC veya QR etiketini okutan kişiler, telefon numaranı görmeden sana ulaşsın. Bildirimleri, araç bilgilerini ve iletişim akışını tek yerden yönet.",
-    "web": "https://www.draborneagle.com/DraBornPark/",
-    "play": "https://play.google.com/store/apps/details?id=com.draborneagle.drabornpark",
-    "status": "Google Play",
-    "rows": [
-      "NFC / QR etiket",
-      "Gizli numara",
-      "Hızlı bildirim"
-    ],
-    "image": "assets/projects/dkd-park-v06.webp"
-  },
-  {
-    "id": "drabornsea",
-    "title": "DraBornSea",
-    "theme": "sea",
-    "mark": "SEA",
-    "eyebrow": "ROTANI DENİZE ÇEVİR",
-    "subtitle": "Antalya tekne turlarını, rotaları ve boş koltukları tek ekranda keşfet.",
-    "description": "Kalkış limanı, saat, koylar, yemek/içecek bilgisi, canlı boş koltuk ve rezervasyon akışıyla deniz turlarını karşılaştıran platform.",
-    "web": "",
+    "id": "draborngo",
+    "title": "DraBornGo",
+    "theme": "go",
+    "mark": "GO",
+    "eyebrow": "ŞEHRİN HAREKETİ",
+    "subtitle": "Kurye, işletme ve müşteri operasyonlarını tek akışta buluşturan teslimat ekosistemi.",
+    "description": "Sipariş havuzu, canlı rota, ödeme akışı, kurye durumu ve işletme operasyonlarını tek merkezde birleştiren DraBornEagle teslimat platformu.",
+    "web": "https://www.draborneagle.com/draborngo/",
     "play": "",
-    "status": "Geliştiriliyor",
+    "status": "Web",
     "rows": [
-      "Antalya koyları",
-      "Tur karşılaştırma",
-      "Rezervasyon"
+      "Sipariş havuzu",
+      "Canlı rota",
+      "Kurye & işletme"
     ],
-    "image": "assets/projects/dkd-sea-v06.webp"
+    "image": "assets/projects/dkd-go-v06.webp"
   },
   {
     "id": "draborngate",
@@ -112,28 +132,46 @@ DKD.projects=[
     "image": "assets/projects/dkd-gate-v06.webp"
   },
   {
-    "id": "drabornodds",
-    "title": "DraBornOdds",
-    "theme": "odds",
-    "mark": "ODDS",
-    "eyebrow": "VERİYLE OYUNU OKU",
-    "subtitle": "Maç verilerini risk profiline göre analiz et ve açıklamalı kupon önerileri oluştur.",
-    "description": "Maç sayısı, bütçe ve risk tercihlerine göre analizleri incele. Seçim nedenlerini ve risk özetini gör. Öneriler tahmindir; kazanma garantisi içermez.",
-    "web": "https://www.draborneagle.com/DraBornOdds/",
+    "id": "drabornsea",
+    "title": "DraBornSea",
+    "theme": "sea",
+    "mark": "SEA",
+    "eyebrow": "ROTANI DENİZE ÇEVİR",
+    "subtitle": "Antalya tekne turlarını, rotaları ve boş koltukları tek ekranda keşfet.",
+    "description": "Kalkış limanı, saat, koylar, yemek/içecek bilgisi, canlı boş koltuk ve rezervasyon akışıyla deniz turlarını karşılaştıran platform.",
+    "web": "",
     "play": "",
-    "status": "Web",
+    "status": "Geliştiriliyor",
     "rows": [
-      "Maç analizi",
-      "Risk profili",
-      "Açıklamalı öneriler"
+      "Antalya koyları",
+      "Tur karşılaştırma",
+      "Rezervasyon"
     ],
-    "image": "assets/projects/dkd-odds-v06.webp"
+    "image": "assets/projects/dkd-sea-v06.webp"
+  },
+  {
+    "id": "drabornpark",
+    "title": "DraBornPark",
+    "theme": "park",
+    "mark": "PARK",
+    "eyebrow": "GÜVENLİ ARAÇ İLETİŞİMİ",
+    "subtitle": "Telefon numarası paylaşmadan araç sahibiyle güvenli iletişim kur.",
+    "description": "Aracındaki NFC veya QR etiketini okutan kişiler, telefon numaranı görmeden sana ulaşsın. Bildirimleri, araç bilgilerini ve iletişim akışını tek yerden yönet.",
+    "web": "https://www.draborneagle.com/DraBornPark/",
+    "play": "https://play.google.com/store/apps/details?id=com.draborneagle.drabornpark",
+    "status": "Google Play",
+    "rows": [
+      "NFC / QR etiket",
+      "Gizli numara",
+      "Hızlı bildirim"
+    ],
+    "image": "assets/projects/dkd-park-v06.webp"
   },
   {
     "id": "drabornportal",
     "title": "DraBornPortal",
     "theme": "portal",
-    "mark": "TR",
+    "mark": "Portal",
     "eyebrow": "OYUNUN DİLİNİ DEĞİŞTİR",
     "subtitle": "Oyundaki metni yakala, bağlamı koruyarak Türkçeye çevir ve tam ekranda incele.",
     "description": "Oyun ekranlarını bağlama uygun Türkçe çeviriyle incele. Görsel üstündeki metni tam ekranda yakınlaştır; düz metin çevirilere de kolayca ulaş.",
