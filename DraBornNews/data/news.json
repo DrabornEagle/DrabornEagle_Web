@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-17T01:27:53.756337Z",
+  "generatedAt": "2026-10-17T06:01:05.140315Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "9219dd76768976599d",
+      "title": "Gemini YouTube ile Nasıl Kullanılır?",
+      "summary": "Gemini YouTube ile nasıl kullanılır? YouTube videosu bulma, videoları özetleme ve içerik hakkında Gemini'a soru sorma yöntemlerini anlatıyoruz.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/gemini-youtube-ile-nasil-kullanilir-h224836.html",
+      "publishedAt": "2026-10-17T05:00:02Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/684995/684995-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "18ce40e0054a709576",
       "title": "Küresel saat sisteminde tarihi değişim: Artık saniye uygulaması kaldırılıyor",
@@ -1185,18 +1197,6 @@
       "source": "Microsoft Blog",
       "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/",
       "publishedAt": "2026-09-17T14:00:05Z",
-      "category": "Yapay Zeka",
-      "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "5315c5c92343db1708",
-      "title": "Microsoft’s commitment for AI in education: Protecting students, strengthening learning",
-      "summary": "Microsoft has been in the business of education for five decades. Since the earliest days of this company, we have worked alongside educators, students, families and educational leaders through each new wave of technology — and we have learned what helps learning and what gets in the way. That commitment continues today, in a technological...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
-      "publishedAt": "2026-09-16T18:59:58Z",
       "category": "Yapay Zeka",
       "image": "",
       "language": "en",
