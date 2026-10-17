@@ -46,7 +46,7 @@ jobs:
           npm run export:site
           test -s dist-site/reset/index.html
           grep -F '/DraBornStyle/_expo/' dist-site/index.html >/dev/null
-      - name: Verify direct login, input focus, Miami home and recovery
+      - name: Verify direct login, themed fields, Miami home and recovery
         id: ui
         if: steps.source.outputs.changed == 'true'
         working-directory: ${{ runner.temp }}/DraBornStyle-source
