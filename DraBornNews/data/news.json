@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-10-16T20:49:06.854131Z",
+  "generatedAt": "2026-10-17T01:27:53.756337Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "18ce40e0054a709576",
+      "title": "Küresel saat sisteminde tarihi değişim: Artık saniye uygulaması kaldırılıyor",
+      "summary": "Dünya’nın dönüş hızındaki değişimler nedeniyle artık saniye uygulaması 2027’de kaldırılıyor. Yeni sistemle dijital altyapılardaki kesintilerin önüne geçilmesi hedefleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kuresel-saat-sistemi-degisiyor-artik-saniye-uygulamasi-kalkiyor--211736",
+      "publishedAt": "2026-10-16T21:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211736/1200x675kuresel-saat-sistemi-degisiyor-artik-saniye-uygulamasi-kalkiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "641aa68cded54c4ec2",
+      "title": "Honor MagicOS 11 küresel takvimi açıklandı: Güncelleme hangi modellere ne zaman geliyor?",
+      "summary": "Honor, geçen ay Çin'de düzenlenen geliştirici konferasında MagicOS 11'i tanıtmıştı. Marka, çok geçmeden global güncelleme takvimini de açıkladı. İşte Android 17 alacak Honor cihazlar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/honor-magicos-11-global-takvimi-aciklandi-iste-cihazlar-listesi--211713",
+      "publishedAt": "2026-10-16T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211713/1200x675honor-magicos-11-global-takvimi-aciklandi-iste-cihazlar-listesi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "eab48957700d784525",
       "title": "A101 marketlerde akıllı ısıtıcı geçidi",
@@ -327,18 +351,6 @@
       "editorial": false
     },
     {
-      "id": "f553876bd468b78c5f",
-      "title": "Razer, ANC özellikli kablosuz oyuncu kulaklığı Barracuda V2 Pro'yu tanıttı",
-      "summary": "Razer Barracuda V2 Pro, Bluetooth, Aktif Gürültü Engelleme (ANC) ve PC oyunları için THX Spatial Audio+ özelliklerine sahip, hem oyun hem de günlük kullanım odaklı kablosuz kulaklık olarak tanıtıldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/razer-barracuda-v2-pro-gaming-kulaklik-tanitildi-iste-fiyati--211704",
-      "publishedAt": "2026-10-16T14:19:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211704/1200x675razer-barracuda-v2-pro-gaming-kulaklik-tanitildi-iste-fiyati.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "961f4f34cb28b2930f",
       "title": "Lexus Ekim 2026 Sıfır Araç Fiyat Listesi: Güncel Kampanyalar ve Fırsatlar",
       "summary": "Lexus Ekim 2026 sıfır araç fiyatları ve kampanyaları! LBX, NX, RX ve LM güncel fiyatlarını, indirimleri ve satın alma fırsatlarını açıklıyoruz.",
@@ -384,30 +396,6 @@
       "category": "Oyun",
       "image": "https://store-images.s-microsoft.com/image/apps.4715.13559635275456449.72d1efe7-e297-4b01-9ff5-81f9541bc9a1.a25cb344-59ba-49dd-8858-37563c544636?w=400&h=600",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "d4df8ff24b9375cffd",
-      "title": "Audi Q7'den Euro NCAP'in \"kaza sonrası güvenlik\" kategorisinde %100 başarı",
-      "summary": "Yeni Audi Q7, Euro NCAP’in kaza sonrası güvenlik değerlendirmesinde yüzde 100 puana ulaştı. Marka, beş yıldız da alan SUV’nin bu kategoride tam puan kazanan ilk seri üretim otomobil olduğunu açıkladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/audi-q7-euro-ncap-testine-girdi-kaza-sonrasi-guvenlik-yuzde-100--211711",
-      "publishedAt": "2026-10-16T13:57:00Z",
-      "category": "Güvenlik",
-      "image": "https://www.donanimhaber.com/images/images/haber/211711/1200x675audi-q7-euro-ncap-testine-girdi-kaza-sonrasi-guvenlik-yuzde-100.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "62893febb7dea6c0b2",
-      "title": "Çekimleri durdurulan The Batman 2'yi farklı bir yönetmen tamamlayacak",
-      "summary": "Geçtiğimiz hafta sürpriz bir kararla çekimleri durdurulan The Batman 2, prodüksiyonu tamamlayabilmek için önemli bir değişikliğe gidiyor. İşte yönetmen koltuğunu devralacak yeni isim.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/the-batman-2-yi-farkli-bir-yonetmen-tamamlayacak--211697",
-      "publishedAt": "2026-10-16T13:35:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211697/1200x675the-batman-2-yi-farkli-bir-yonetmen-tamamlayacak.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1197,6 +1185,18 @@
       "source": "Microsoft Blog",
       "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/17/what-weve-learned-from-microsofts-own-ai-transformation/",
       "publishedAt": "2026-09-17T14:00:05Z",
+      "category": "Yapay Zeka",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "5315c5c92343db1708",
+      "title": "Microsoft’s commitment for AI in education: Protecting students, strengthening learning",
+      "summary": "Microsoft has been in the business of education for five decades. Since the earliest days of this company, we have worked alongside educators, students, families and educational leaders through each new wave of technology — and we have learned what helps learning and what gets in the way. That commitment continues today, in a technological...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/16/microsofts-commitment-for-ai-in-education/",
+      "publishedAt": "2026-09-16T18:59:58Z",
       "category": "Yapay Zeka",
       "image": "",
       "language": "en",
