@@ -24,4 +24,12 @@ Full prompt: `assets/projects/dkd-office-v071-prompt.json`.
 
 - JavaScript syntax passed for the three modified console scripts.
 - Homepage synchronization, structured data parsing and whitespace checks passed.
-- Live browser verification follows publication and is recorded in the final release checkpoint.
+- Live layouts passed at 1920 × 1080, 1366 × 768, 768 × 1024, 390 × 844, 360 × 800, 844 × 390 and 320 × 740 using both public entry points.
+- Every layout showed eight projects, DraBornGo → DraBornOffice → DraBornSeries, v0.7.1, the `02 / 08` counter and the correct Office link.
+- All project images loaded; no horizontal document overflow or action extending beyond its card was observed.
+- Mobile, tablet and landscape action buttons were 48px tall and reachable above the footer after scrolling/focusing.
+- The mobile rail reached DraBornPortal and returned to Office correctly; the Office button opened the actual DraBornOffice v0.3 Miami Shores game.
+- Browser Back from Media restored Projects with DraBornOffice selected on the production homepage.
+- Temporary responsive verification page removed after these checks.
+
+Implementation commit: `4e0f21427b7a4bb8a72f28b2a3ee00249b01a31f`.
