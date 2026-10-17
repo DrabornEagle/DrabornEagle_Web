@@ -1,13 +1,13 @@
 {
- "id":"/office/",
- "name":"DraBornOffice v0.3 · Miami Shores",
+ "id":"/DraBornLand/Office/",
+ "name":"DraBornOffice v0.4 · Miami Shores",
  "short_name":"DraBornOffice",
  "description":"20 karakter, 7 alan ve senin kararların. Ücretsiz, API'siz oyun stüdyosu simülasyonu.",
  "lang":"tr",
  "start_url":"./",
- "scope":"/office/",
+ "scope":"/DraBornLand/Office/",
  "display":"standalone",
  "background_color":"#160f2d",
  "theme_color":"#1a1235",
- "icons":[{"src":"./assets/eagle.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
+ "icons":[{"src":"./assets/office-logo.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]
 }

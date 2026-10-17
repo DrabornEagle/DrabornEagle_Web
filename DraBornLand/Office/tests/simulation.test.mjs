@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {OfficeWorld,findPath,blocked,getStorageKey} from "../engine.js";
-import {ROOMS,STATIONS,RESEARCH,MILESTONES,PROJECTS,STAFF} from "../data.js?v=0.3.0";
+import {ROOMS,STATIONS,RESEARCH,MILESTONES,PROJECTS,STAFF} from "../data.js?v=0.4.0";
 const memory=()=>{const m=new Map();return{getItem:k=>m.get(k)||null,setItem:(k,v)=>m.set(k,v),removeItem:k=>m.delete(k)};};
 const rng=()=>{let seed=734921;return()=>{seed=(seed*1664525+1013904223)>>>0;return seed/4294967296;};};
 const make=(opts={})=>new OfficeWorld({storage:memory(),random:rng(),...opts});
@@ -52,7 +52,7 @@ test("A customer contract is available only once per game day",()=>{
  const w=make(),budget=w.budget;assert.ok(w.contract());assert.equal(w.budget,budget+15000);assert.equal(w.contract(),false);w.minutes=1080;w.newDay();assert.ok(w.contract());
 });
 test("Day rollover pays salaries once and schedules decisions on every day",()=>{
- const w=make(),budget=w.budget;w.minutes=1080;w.newDay();assert.equal(w.day,2);assert.equal(w.minutes,540);assert.equal(w.budget,budget-w.salary);assert.equal(w.ledger[0].day,1);w.pendingDecision=null;w.nextDecision=541;run(w,1);assert.notEqual(w.pendingDecision,null);w.minutes=1080;w.newDay();assert.equal(w.day,3);assert.ok(w.nextDecision<1080);assert.equal(w.reports[0].expenses,w.salary);
+ const w=make(),budget=w.budget;w.minutes=1080;w.newDay();assert.equal(w.day,2);assert.equal(w.minutes,540);assert.equal(w.budget,budget-w.salary);assert.equal(w.ledger[0].day,1);w.pendingDecision=null;w.nextDecision=541;run(w,2);assert.notEqual(w.pendingDecision,null);w.minutes=1080;w.newDay();assert.equal(w.day,3);assert.ok(w.nextDecision<1080);assert.equal(w.reports[0].expenses,w.salary);
 });
 test("Management decisions cannot spend unavailable cash",()=>{
  const w=make();w.pendingDecision=1;w.budget=0;assert.equal(w.makeChoice(0),false);assert.equal(w.pendingDecision,1);w.budget=10000;assert.ok(w.makeChoice(0));assert.equal(w.pendingDecision,null);assert.equal(w.makeChoice(0),false);
@@ -81,7 +81,7 @@ test("Local chat responds and rate limits; authored conversations use real parti
 });
 test("The studio remains finite and bounded through 25 simulated days",()=>{
  const w=make();w.setSpeed(4);let decisions=0;
- for(let i=0;i<25000;i++){w.tick(.05);if(w.decision){w.makeChoice(0);decisions++;}if(i%1000===0)w.contract();}
+ for(let i=0;i<80000&&w.day<26;i++){w.tick(.05);if(w.decision){w.makeChoice(0);decisions++;}if(i%1000===0)w.contract();}
  assert.ok(w.day>=25);assert.ok(decisions>20);for(const p of w.employees)for(const k of ["x","y","energy","morale"])assert.ok(Number.isFinite(p[k]),p.id+" "+k);assert.ok(w.feed.length<=80);assert.ok(w.chats.length<=100);assert.ok(w.ledger.length<=80);assert.ok(w.reports.length<=14);assert.ok(w.projects.every(p=>p.progress>=0&&p.progress<100));assert.ok(w.stats.releases>0);
 });
 
@@ -91,6 +91,6 @@ test("Decision ID zero remains pending instead of being overwritten every frame"
 test("A stale or invalid management choice cannot apply to a different decision",()=>{
  const w=make();w.pendingDecision=1;const before=w.budget;assert.equal(w.makeChoice(0,0),false);assert.equal(w.makeChoice(.5,1),false);assert.equal(w.makeChoice(-1,1),false);assert.equal(w.budget,before);assert.ok(w.makeChoice(0,1));assert.equal(w.makeChoice(0,1),false);
 });
-test("The v0.3 release preserves V2 saved progress and pending decision zero",()=>{
+test("The v0.4 release preserves V2 saved progress and pending decision zero",()=>{
  const a=make();a.day=7;a.budget=208351;a.pendingDecision=0;a.rooms.art=3;a.save();const b=make({storage:a.storage});assert.equal(b.day,7);assert.equal(b.budget,208351);assert.equal(b.pendingDecision,0);assert.equal(b.rooms.art,3);
 });

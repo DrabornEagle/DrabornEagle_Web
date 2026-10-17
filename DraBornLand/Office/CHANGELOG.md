@@ -1,5 +1,16 @@
 # Sürüm notları
 
+## 0.4.0 · DraBornLand
+
+- Uygulama `DraBornLand/Office/` klasörüne ve `https://www.draborneagle.com/DraBornLand/Office/` adresine taşındı. Eski bağlantı, kayıtlar ve önbellek geçişi korundu.
+- Kısa komşu oteller kaldırıldı; 6 cam gökdelen, çatı bahçeleri, neon cepheler ve gece pencereleri eklendi.
+- 3 satılık arsa, 2 satılık ofis ve kulelerde 4 satılık konut; filtreli katalog, harita ilanları, detay, sanal satın alma ve kalıcı portföy.
+- Parklar, kafe, fıskiye, otopark, bisiklet şeridi ve bağlantılı yeni yollar. Daha fazla araç, tekne, yaya, güneşlenen insan ve yüzücü.
+- Saat ve gündüz/gece döngüsü yaklaşık 3.06 kat yavaşlatıldı. 1× hızda oyun günü yaklaşık 10 dakika.
+- Tüm bütçe ve fiyatlar USD ($); eski sanal bakiye sayısal olarak korunur.
+- Yeni pembe / turkuaz / mercan kartal ve şehir logosu.
+- USD, yavaş saat, mülk ekonomisi/kayıtları, ilan seçimi, gerçek uygulama mülk eylemleri, eski adres ve service worker geçişi testleri eklendi.
+
 ## 0.3.0 · Miami Shores
 
 - Kullanıcının istediği sürüm numarasına göre v0.3 olarak adlandırıldı. V1 / V2 kayıtları aynı kayıt şemasıyla korunur.

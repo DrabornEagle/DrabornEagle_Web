@@ -11,7 +11,7 @@ for(const [,ref] of html.matchAll(/(?:src|href)="(\.\/[^"]+)"/g)){await stat(res
 const app=await readFile(resolve(root,"app.js"),"utf8");
 const dynamic=["teamRows","teamSearch","resetConfirm"];
 for(const [,id] of app.matchAll(/\$\("([^"]+)"\)/g))if(!ids.includes(id)&&!dynamic.includes(id))throw Error("Missing DOM target: "+id);
-const manifest=JSON.parse(await readFile(resolve(root,"manifest.webmanifest"),"utf8"));for(const i of manifest.icons)await stat(resolve(root,i.src));if(manifest.scope!=="/office/")throw Error("Incorrect PWA scope");
+const manifest=JSON.parse(await readFile(resolve(root,"manifest.webmanifest"),"utf8"));for(const i of manifest.icons)await stat(resolve(root,i.src));if(manifest.scope!=="/DraBornLand/Office/")throw Error("Incorrect PWA scope");
 const sw=await readFile(resolve(root,"sw.js"),"utf8");
 const paths=sw.match(/const CORE=(\[[^;]+\]);/);for(const ref of JSON.parse(paths[1]))if(ref!=="./"){await stat(resolve(root,ref.split("?")[0]));checks++;}
 if(sw.includes("ignoreSearch:true"))throw Error("Unsafe cross-version asset matching");

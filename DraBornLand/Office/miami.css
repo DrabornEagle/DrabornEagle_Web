@@ -1,4 +1,4 @@
-/* DraBornOffice v0.3 — Miami Shores. Local, original UI; no external assets. */
+/* DraBornOffice v0.4 — Miami Shores. Local, original UI; no external assets. */
 :root{--bg:#140f2b;--panel:#21183d;--panel2:#2b2049;--line:#f1c0ff12;--line2:#e8b9ff26;--text:#fff1f5;--muted:#b9a7ca;--accent:#ff92cd;--mint:#65ead9;--rose:#ffb49f}
 body{background:radial-gradient(ellipse at 82% 0,#733c6836,transparent 46%),linear-gradient(140deg,#1b1232,#12162f 85%);font-size:14px}
 .app{background:linear-gradient(130deg,#411b5212,transparent 40%,#3cf5da05)}.rail{width:88px;background:linear-gradient(180deg,#231435,#171b37);border-color:#e9aff51b;padding-top:24px}

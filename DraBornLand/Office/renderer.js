@@ -1,5 +1,5 @@
-import {WORLD,ROOMS,DECOR,ROOM_LABELS} from "./data.js?v=0.3.0";
-import {CoastalWorld,projectPoint as P,PROJECTION} from "./coast.js?v=0.3.0";
+import {WORLD,ROOMS,DECOR,ROOM_LABELS} from "./data.js?v=0.4.0";
+import {CoastalWorld,projectPoint as P,PROJECTION} from "./coast.js?v=0.4.0";
 const IX=PROJECTION.x,IY=PROJECTION.y,T=32;
 const shade=(h,n)=>{const v=h.replace("#","");return "#"+[0,2,4].map(i=>Math.max(0,Math.min(255,parseInt(v.slice(i,i+2),16)+n)).toString(16).padStart(2,"0")).join("");};
 function poly(c,pts,fill,stroke){c.beginPath();pts.forEach((p,i)=>i?c.lineTo(p.x,p.y):c.moveTo(p.x,p.y));c.closePath();if(fill){c.fillStyle=fill;c.fill();}if(stroke){c.strokeStyle=stroke;c.lineWidth=.7;c.stroke();}}
@@ -127,6 +127,7 @@ export class OfficeRenderer{
  toWorld(x,y){const v=this.transform,px=(x-v.x)/v.s,py=(y-v.y)/v.s;return{x:(px/IX+py/IY)/2,y:(py/IY-px/IX)/2};}
  zoomAt(value,x=this.width/2,y=this.height/2){const p=this.toWorld(x,y);this.zoom=Math.max(.7,Math.min(3.2,value));const next=this.toScreen(p.x,p.y);this.pan.x+=x-next.x;this.pan.y+=y-next.y;this.clampPan();}
  clampPan(){const limitX=this.width*.85*this.zoom,limitY=this.height*.65*this.zoom;this.pan.x=Math.max(-limitX,Math.min(limitX,this.pan.x));this.pan.y=Math.max(-limitY,Math.min(limitY,this.pan.y));}
+ district(){this.zoom=.75;this.pan={x:0,y:35};this.follow=null;}
  fit(){this.zoom=1;this.pan={x:0,y:0};this.follow=null;}
  focus(x,y){this.zoom=Math.min(3.2,Math.max(1.65,this.zoom,.62/this.base));this.pan={x:0,y:0};const p=this.toScreen(x,y);this.pan.x=this.width/2-p.x;this.pan.y=this.height/2+20-p.y;this.clampPan();}
  theme(w){return w.settings.theme==="auto"?(w.minutes<930?"day":w.minutes<1020?"sunset":"night"):w.settings.theme;}
@@ -192,6 +193,7 @@ export class OfficeRenderer{
   if(w.settings.labels)for(const r of ROOMS){const p=P((r.x+r.w/2)*T,(r.y+.85)*T,2);const title=r.id==="creative"?"GELİŞTİRME":r.id==="art"?"SANAT & TASARIM":r.id==="studio"?"SES STÜDYOSU":r.id==="lounge"?"KAHVE KÖŞESİ":r.id==="meeting"?"TOPLANTI":r.id==="server"?"TEKNOLOJİ":"DRABORN  /  RECEPTION";label(c,title,p.x,p.y,10,"#e4e9dfc9",700);label(c,"LV."+w.rooms[r.id],p.x,p.y+12,7,"#e4e9df80",500);}
   c.restore();
   this.coast.foreground(c,this,w,time);
+  this.coast.labels(c,this,w);
   // Labels and speech render in screen pixels so zooming never makes them unreadable.
   const show=w.settings.labels;
   for(const p of w.employees){const q=this.toScreen(p.x,p.y);if(show&&(v.s>.48||p.id===w.selectedId)){const f=p.id===w.selectedId;const width=12+p.name.length*6;rounded(c,q.x-width/2,q.y+7,width,19,5,f?"#ff9bce":"#251a47e8");label(c,p.name,q.x,q.y+20,11,f?"#301b47":"#fff0f7",f?700:500);}}
@@ -205,7 +207,7 @@ export class OfficeRenderer{
   }
   if(!w.speed){rounded(c,W/2-72,20,144,30,15,"#172230ed","#8e7da9");label(c,"Ⅱ   SİMÜLASYON DURDU",W/2,40,10,"#d7c5f5",600);}
  }
- pick(x,y){const b=this.bubbles.find(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);if(b)return {type:"speech",...b};const p=[...this.hits].reverse().find(p=>Math.hypot(p.x-x,p.y-y)<p.r);if(p)return {type:"staff",id:p.id};const v=this.toWorld(x,y),room=ROOMS.find(r=>v.x>=r.x*T&&v.x<(r.x+r.w)*T&&v.y>=r.y*T&&v.y<(r.y+r.h)*T);return room?{type:"room",id:room.id}:null;}
+ pick(x,y){const b=this.bubbles.find(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);if(b)return {type:"speech",...b};const p=[...this.hits].reverse().find(p=>Math.hypot(p.x-x,p.y-y)<p.r);if(p)return {type:"staff",id:p.id};const v=this.toWorld(x,y),room=ROOMS.find(r=>v.x>=r.x*T&&v.x<(r.x+r.w)*T&&v.y>=r.y*T&&v.y<(r.y+r.h)*T);return room?{type:"room",id:room.id}:this.coast.pick(x,y);}
 }
 export function drawAvatar(c,p,size=64){
  c.clearRect(0,0,size,size);c.save();c.translate(size/2,size*.82);c.scale(size/48,size/48);actor(c,{...p,x:0,y:0,path:[],facing:"down",task:"idle"},0,false);c.restore();

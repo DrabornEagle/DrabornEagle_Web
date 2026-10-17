@@ -1,6 +1,6 @@
 {
   "name": "draborn-office",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "private": true,
   "type": "module",
   "description": "Original Miami coastal studio simulation; no runtime dependency or paid API",

@@ -28,7 +28,7 @@ DKD.projects=[
     "eyebrow": "STÜDYONU KUR, HAYALLERİNİ GELİŞTİR",
     "subtitle": "Miami sahilinde kendi oyun stüdyonu yönet; ekibini kur, projelerini geliştir ve şirketini büyüt.",
     "description": "Ekibinin enerjisini, moralini ve görevlerini takip et. Ofisini geliştir, araştırmaları aç, bütçeni yönet ve oyunlarını yayınla. Telefon ve bilgisayar tarayıcısında kendi stüdyonun başına geç.",
-    "web": "https://www.draborneagle.com/office/",
+    "web": "https://www.draborneagle.com/DraBornLand/Office/",
     "play": "",
     "status": "Web Oyunu",
     "rows": [

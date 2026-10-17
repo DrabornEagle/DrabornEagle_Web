@@ -1,4 +1,6 @@
-import {WORLD,ROOMS,STAFF,PROJECTS,STATIONS,DIALOGUE,CHOICES,DECOR,RESEARCH,MILESTONES,SCENES,GENRES} from "./data.js?v=0.3.0";
+import {WORLD,ROOMS,STAFF,PROJECTS,STATIONS,DIALOGUE,CHOICES,DECOR,RESEARCH,MILESTONES,SCENES,GENRES} from "./data.js?v=0.4.0";
+import {PROPERTIES,findProperty} from "./city.js?v=0.4.0";
+export const GAME_MINUTES_PER_SECOND=.9;
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 const num=(v,f=0,a=0,b=1e9)=>Number.isFinite(v)?clamp(v,a,b):f;
 const text=(s,n=160)=>typeof s==="string"?s.slice(0,n):"";
@@ -6,6 +8,7 @@ const T=WORLD.tile,KEY="draborn-office-v2",LEGACY="draborn-office-v1";
 const safeStorage=()=>{try{return globalThis.localStorage;}catch{return null;}};
 const center=([x,y])=>({x:x*T+T/2,y:y*T+T/2});
 const uid=()=>globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+Math.random().toString(36).slice(2,8);
+const legacyCurrency=s=>s.replace(/₺(-?[\d.]+)/g,(_,digits)=>formatCurrency(Number(digits.replaceAll(".",""))));
 const preferred={Yönetim:"meeting",Geliştirme:"creative",Sanat:"art",Prodüksiyon:"studio",Teknoloji:"server",Topluluk:"lounge"};
 const tasks={creative:"code",art:"art",studio:"sound",lounge:"break",meeting:"meeting",server:"qa",lobby:"idle"};
 const status={code:"Oynanış geliştiriyor",art:"Görsel tasarlıyor",sound:"Sesleri düzenliyor",break:"Kahve molasında",meeting:"Sprint planlıyor",qa:"Hata test ediyor",idle:"Ofisi geziyor",community:"Geri bildirim okuyor"};
@@ -37,7 +40,7 @@ export class OfficeWorld{
   this.projects=PROJECTS.map(p=>({...p,finished:0,quality:83,bugs:9,priority:"balanced",income:0}));
   this.employees=STAFF.map((p,i)=>({...p,...center(p.home),phase:"idle",room:preferred[p.team],task:"idle",status:"Güne hazırlanıyor",energy:82+this.rng()*14,morale:80+this.rng()*12,workCount:0,socialCount:0,path:[],timer:3+i*.5,dialogue:"",dialogueLeft:0,walkFrame:0,friendships:{},projectId:PROJECTS[i%3].id,cooldowns:{}}));
   for(const p of this.employees)for(const q of this.employees)if(p!==q)p.friendships[q.id]=45+Math.round(this.rng()*30);
-  this.rooms=Object.fromEntries(ROOMS.map(r=>[r.id,1]));this.research=[];this.achievements=[];this.claimed=[];this.feed=[];this.chats=[];this.ledger=[];this.reports=[];this.settings={theme:"auto",labels:true,effects:true,sound:false,voice:false,fontScale:1};
+  this.rooms=Object.fromEntries(ROOMS.map(r=>[r.id,1]));this.research=[];this.achievements=[];this.claimed=[];this.ownedProperties=[];this.feed=[];this.chats=[];this.ledger=[];this.reports=[];this.settings={theme:"auto",labels:true,effects:true,sound:false,voice:false,fontScale:1};
   this.stats={releases:0,upgrades:0,investments:0,earned:0,spent:0};this.pendingDecision=null;this.nextDecision=650;this.nextSocial=5;this.simElapsed=0;this.acc=0;this._nextStats=0;this.meetingAt=-1;this.contractDay=0;this.selectedId=null;this.sequence=null;this.lastSave=0;this.onUpdate=null;this.onEvent=null;
   const restored=restore&&this.restore();
   this.addEvent("home",restored?"Stüdyona tekrar hoş geldin":"Yeni bir hikâye başlıyor",restored?"Kayıtlı ilerleme güvenle yüklendi.":"20 yaratıcı insan, bir stüdyo, sayısız fikir. Bugün ne üreteceğiz?","system");
@@ -50,7 +53,7 @@ export class OfficeWorld{
  get averageEnergy(){return Math.round(this.employees.reduce((s,p)=>s+p.energy,0)/this.employees.length);}
  get activeCount(){return this.employees.filter(p=>p.phase==="busy"&&!['break','idle'].includes(p.task)).length;}
  get employeeCount(){return this.employees.length;}
- get daypart(){return this.minutes<720?"Sabah vardiyası":this.minutes<960?"Öğleden sonra":"Gün batımı";}
+ get daypart(){return this.minutes<720?"Sabah vardiyası":this.minutes<930?"Öğleden sonra":this.minutes<1020?"Gün batımı":"Akşam ışıkları";}
  get salary(){return 7500+this.employees.length*230;}
  get level(){return 1+Math.floor(this.reputation/15);}
  findPerson(id){return this.employees.find(p=>p.id===id);}
@@ -64,6 +67,8 @@ export class OfficeWorld{
  say(p,message,log=false){p.dialogue=message;p.dialogueLeft=7;if(log)this.chat(p.id,message);}
  transact(amount,reason,day=this.day){this.budget+=amount;if(amount>0)this.stats.earned+=amount;else this.stats.spent-=amount;this.ledger.unshift({day,time:this.clock,amount,reason});this.ledger.length=Math.min(80,this.ledger.length);}
  canSpend(cost){return this.budget>=cost;}
+ get propertyValue(){return PROPERTIES.filter(p=>this.ownedProperties.includes(p.id)).reduce((sum,p)=>sum+p.price,0);}
+ purchaseProperty(id){const p=findProperty(id);if(!p||this.ownedProperties.includes(id)||!this.canSpend(p.price))return false;this.transact(-p.price,p.name+" • mülk alımı");this.ownedProperties.push(id);this.addEvent("home","DraBornLand portföyün büyüdü",p.name+" "+formatCurrency(p.price)+" karşılığında portföyüne eklendi.","property");this.save();this.emit();return true;}
  chooseTask(p,forced){
   let room=preferred[p.team];
   if(forced==="break"||p.energy<30||p.morale<30)room="lounge";
@@ -79,7 +84,7 @@ export class OfficeWorld{
  setSpeed(speed){if([0,1,2,4].includes(speed))this.speed=speed;this.emit();}
  tick(delta){
   if(!Number.isFinite(delta)||delta<=0||!this.speed)return;
-  const dt=Math.min(delta,.1)*this.speed;this.simElapsed+=dt;this.minutes+=dt*2.75;
+  const dt=Math.min(delta,.1)*this.speed;this.simElapsed+=dt;this.minutes+=dt*GAME_MINUTES_PER_SECOND;
   if(this.minutes>=1080)this.newDay();
   if(this.minutes>=this.nextDecision&&this.pendingDecision===null){const template=this.pick(CHOICES);this.pendingDecision=CHOICES.indexOf(template);this.nextDecision=this.minutes+150;this.addEvent("bolt","Bir karar seni bekliyor",template.title,"decision");}
   this.acc+=dt;while(this.acc>=1){this.acc--;this.updateProduction(1);this.updateSocial(1);this.checkMilestones();}
@@ -168,12 +173,12 @@ export class OfficeWorld{
  canResearch(id){const r=RESEARCH.find(r=>r.id===id);return !!r&&!this.research.includes(id)&&r.requires.every(x=>this.research.includes(x))&&(!r.room||this.rooms[r.room]>=2)&&this.canSpend(r.cost);}
  doResearch(id){if(!this.canResearch(id))return false;const r=RESEARCH.find(r=>r.id===id);this.transact(-r.cost,r.name+" • araştırma");this.research.push(id);if(id==="qa")this.projects.forEach(p=>p.quality=clamp(p.quality+4,0,99));this.addEvent("flask",r.name+" tamamlandı",r.desc,"research");this.save();this.emit();return true;}
  meeting(){if(!this.canSpend(1200)||this.simElapsed<this.meetingAt)return false;this.meetingAt=this.simElapsed+90;this.transact(-1200,"Ekip buluşması");this.employees.forEach((p,i)=>{p.morale=clamp(p.morale+7,0,100);if(i<5)this.chooseTask(p,"meeting");});this.addEvent("users","Birlikte düşünmek iyi geldi","Ekip morali +7. Toplantı odasında yeni fikirler konuşuluyor.","action");this.chat("dogancan","Herkese teşekkürler! Ortak hedefimiz çok daha net şimdi.","toplantı");this.save();this.emit();return true;}
- contract(){if(this.contractDay===this.day)return false;this.contractDay=this.day;this.transact(15000,"Günlük küçük müşteri işi");this.employees.forEach(p=>p.energy=clamp(p.energy-12,0,100));this.addEvent("wallet","Müşteri işi tamamlandı","+₺15.000 gelir. Ekip enerjisi -12. Günde bir kez yapılabilir.","project");this.save();this.emit();return true;}
+ contract(){if(this.contractDay===this.day)return false;this.contractDay=this.day;this.transact(15000,"Günlük küçük müşteri işi");this.employees.forEach(p=>p.energy=clamp(p.energy-12,0,100));this.addEvent("wallet","Müşteri işi tamamlandı","+$15,000 gelir. Ekip enerjisi -12. Günde bir kez yapılabilir.","project");this.save();this.emit();return true;}
  postMessage(message){const msg=text(message,180).trim();if(!msg||this.simElapsed<(this.messageAt??-1))return false;this.messageAt=this.simElapsed+4;this.chat("you",msg);const p=this.pick(this.employees),low=msg.toLocaleLowerCase("tr"),answer=/kahve|mola/.test(low)?"Bir mola çok iyi olur! Kahve köşesinde buluşalım. ☕":/merhaba|selam|günaydın/.test(low)?"Selam! Stüdyoya hoş geldin. Bugün çok güzel fikirler var.":/oyun|proje|bug/.test(low)?"Not aldım! Bir sonraki sprintte bu fikre bakalım.":/teşekkür|harika|güzel/.test(low)?"Teşekkürler! Bunu ekipçe başardık. 💜":"Fikrini duymak güzel! Bunu ekip toplantısına taşıyalım.";this.chat(p.id,answer,"genel",this.chats.at(-1).id);this.say(p,answer);this.save();this.emit();return true;}
  milestoneValue(m){return m.key==="morale"?this.averageMorale:m.key==="research"?this.research.length:this.stats[m.key]??this[m.key]??0;}
  checkMilestones(){for(const m of MILESTONES)if(!this.achievements.includes(m.id)&&this.milestoneValue(m)>=m.target){this.achievements.push(m.id);this.addEvent("trophy",m.title,"Hedef tamamlandı. "+formatCurrency(m.reward)+" ödülünü Hedefler panelinden alabilirsin.","achievement");}}
  claim(id){const m=MILESTONES.find(m=>m.id===id);if(!m||!this.achievements.includes(id)||this.claimed.includes(id))return false;this.claimed.push(id);this.transact(m.reward,m.title+" • hedef ödülü");this.save();this.emit();return true;}
- snapshot(){return {schema:"draborn-office",version:2,day:this.day,minutes:this.minutes,budget:this.budget,fans:this.fans,reputation:this.reputation,creativity:this.creativity,projects:this.projects,employees:this.employees.map(({id,energy,morale,workCount,socialCount,friendships,projectId})=>({id,energy,morale,workCount,socialCount,friendships,projectId})),rooms:this.rooms,research:this.research,achievements:this.achievements,claimed:this.claimed,feed:this.feed,chats:this.chats,ledger:this.ledger,reports:this.reports,settings:this.settings,stats:this.stats,pendingDecision:this.pendingDecision,nextDecision:this.nextDecision,contractDay:this.contractDay,storedAt:Date.now()};}
+ snapshot(){return {schema:"draborn-office",version:2,currency:"USD",ownedProperties:[...this.ownedProperties],day:this.day,minutes:this.minutes,budget:this.budget,fans:this.fans,reputation:this.reputation,creativity:this.creativity,projects:this.projects,employees:this.employees.map(({id,energy,morale,workCount,socialCount,friendships,projectId})=>({id,energy,morale,workCount,socialCount,friendships,projectId})),rooms:this.rooms,research:this.research,achievements:this.achievements,claimed:this.claimed,feed:this.feed,chats:this.chats,ledger:this.ledger,reports:this.reports,settings:this.settings,stats:this.stats,pendingDecision:this.pendingDecision,nextDecision:this.nextDecision,contractDay:this.contractDay,storedAt:Date.now()};}
  save(){try{this.storage?.setItem(KEY,JSON.stringify(this.snapshot()));return !!this.storage;}catch{return false;}}
  restore(){try{const raw=this.storage?.getItem(KEY)||this.storage?.getItem(LEGACY);return raw?this.importSnapshot(JSON.parse(raw),false):false;}catch{return false;}}
  importSnapshot(s,persist=true){
@@ -188,8 +193,9 @@ export class OfficeWorld{
   Object.assign(this,state);
   for(const p of this.employees){const v=s.employees.find(x=>x?.id===p.id);if(!v)continue;for(const k of ["energy","morale"])p[k]=num(v[k],80,0,100);p.workCount=num(v.workCount);p.socialCount=num(v.socialCount);if(this.projectById(v.projectId))p.projectId=v.projectId;for(const q of this.employees)if(q!==p)p.friendships[q.id]=num(v.friendships?.[q.id],55,0,100);}
   this.rooms=Object.fromEntries(ROOMS.map(r=>[r.id,Math.round(num(s.rooms?.[r.id],1,1,4))]));this.research=RESEARCH.filter(r=>Array.isArray(s.research)&&s.research.includes(r.id)).map(r=>r.id);this.achievements=MILESTONES.filter(m=>Array.isArray(s.achievements)&&s.achievements.includes(m.id)).map(m=>m.id);this.claimed=MILESTONES.filter(m=>Array.isArray(s.claimed)&&s.claimed.includes(m.id)).map(m=>m.id);
+  this.ownedProperties=PROPERTIES.filter(p=>Array.isArray(s.ownedProperties)&&s.ownedProperties.includes(p.id)).map(p=>p.id);
   const arrays={feed:80,chats:100,ledger:80,reports:14};
-  for(const [key,max] of Object.entries(arrays))this[key]=Array.isArray(s[key])?s[key].slice(-max).filter(e=>e&&typeof e==="object").map(e=>key==="ledger"?{day:num(e.day,1,1,9999),time:text(e.time,5),amount:num(e.amount,0,-1e8,1e9),reason:text(e.reason)}:key==="reports"?{day:num(e.day,1,1,9999),income:num(e.income),expenses:num(e.expenses),morale:num(e.morale,80,0,100),releases:num(e.releases)}:key==="chats"?{id:text(e.id,80),personId:this.findPerson(e.personId)?e.personId:e.personId==="you"?"you":"dogancan",text:text(e.text,280),topic:text(e.topic,40),time:text(e.time,5),day:num(e.day,1,1,9999)}:{id:text(e.id,80),icon:text(e.icon,20),title:text(e.title,100),detail:text(e.detail,240),kind:text(e.kind,20),time:text(e.time,5),day:num(e.day,1,1,9999)}):[];
+  for(const [key,max] of Object.entries(arrays))this[key]=Array.isArray(s[key])?s[key].slice(-max).filter(e=>e&&typeof e==="object").map(e=>key==="ledger"?{day:num(e.day,1,1,9999),time:text(e.time,5),amount:num(e.amount,0,-1e8,1e9),reason:text(e.reason)}:key==="reports"?{day:num(e.day,1,1,9999),income:num(e.income),expenses:num(e.expenses),morale:num(e.morale,80,0,100),releases:num(e.releases)}:key==="chats"?{id:text(e.id,80),personId:this.findPerson(e.personId)?e.personId:e.personId==="you"?"you":"dogancan",text:text(e.text,280),topic:text(e.topic,40),time:text(e.time,5),day:num(e.day,1,1,9999)}:{id:text(e.id,80),icon:text(e.icon,20),title:text(e.title,100),detail:legacyCurrency(text(e.detail,240)),kind:text(e.kind,20),time:text(e.time,5),day:num(e.day,1,1,9999)}):[];
   const opts=s.settings||{};this.settings={theme:['auto','day','sunset','night'].includes(opts.theme)?opts.theme:"auto",labels:opts.labels!==false,effects:opts.effects!==false,sound:opts.sound===true,voice:opts.voice===true,fontScale:opts.fontScale===1.15?1.15:1};
   this.stats={releases:Math.round(num(s.stats?.releases,this.projects.reduce((n,p)=>n+p.finished,0))),upgrades:num(s.stats?.upgrades),investments:num(s.stats?.investments),earned:num(s.stats?.earned),spent:num(s.stats?.spent)};
   this.pendingDecision=Number.isInteger(s.pendingDecision)&&CHOICES[s.pendingDecision]?s.pendingDecision:s.version===1&&s.pendingDecision?CHOICES.findIndex(c=>c.title===s.pendingDecision.title):null;if(this.pendingDecision===-1)this.pendingDecision=null;
@@ -197,5 +203,6 @@ export class OfficeWorld{
  }
  reset(){try{this.storage?.removeItem(KEY);this.storage?.removeItem(LEGACY);return true;}catch{return false;}}
 }
-export function formatCurrency(n){return "₺"+Math.round(n).toLocaleString("tr-TR");}
+const dollarFormatter=new Intl.NumberFormat("en-US",{style:"currency",currency:"USD",maximumFractionDigits:0});
+export function formatCurrency(n){return dollarFormatter.format(n);}
 export function getStorageKey(){return KEY;}

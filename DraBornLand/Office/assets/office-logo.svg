@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+ <defs><linearGradient id="bg" x1="6" y1="3" x2="88" y2="96" gradientUnits="userSpaceOnUse"><stop stop-color="#493271"/><stop offset="1" stop-color="#17253f"/></linearGradient><linearGradient id="rim" x1="10" y1="5" x2="85" y2="91" gradientUnits="userSpaceOnUse"><stop stop-color="#ff94cc"/><stop offset=".47" stop-color="#d2b2ff"/><stop offset="1" stop-color="#62eadb"/></linearGradient><linearGradient id="wing" x1="18" y1="40" x2="81" y2="67" gradientUnits="userSpaceOnUse"><stop stop-color="#ff91c7"/><stop offset=".5" stop-color="#ffceb7"/><stop offset="1" stop-color="#70e7dd"/></linearGradient></defs>
+ <rect x="2" y="2" width="92" height="92" rx="26" fill="url(#bg)" stroke="url(#rim)" stroke-width="2"/>
+ <circle cx="50" cy="34" r="19" fill="#fcaac8" opacity=".2"/>
+ <path d="M32 28h13v26H32V28Zm16-9h14v35H48V19Zm17 15h10v20H65V34Z" fill="url(#rim)" opacity=".9"/>
+ <path d="M36 33h5m-5 6h5m11-14h6m-6 7h6m-6 7h6m11 1h3" stroke="#fff0ec" stroke-width="1.7" opacity=".8"/>
+ <path d="m16 41 27 10 7-7 9 5 22-8-15 19-13-1-6 12-9-14-11-1-11-15Z" fill="url(#wing)"/>
+ <path d="m51 48 8 2-6 5m-31 20c16-8 37-8 53 0m-46 6c12-5 26-5 38 0" stroke="url(#rim)" stroke-width="2.3" stroke-linecap="round"/>
+ <circle cx="53" cy="50" r="1.5" fill="#342147"/>
+</svg>
