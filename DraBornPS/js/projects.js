@@ -1,4 +1,4 @@
-/* DraBornPS v0.7 — project catalog. Only confirmed public destinations. */
+/* DraBornPS v0.7.1 — project catalog. Only confirmed public destinations. */
 DKD.projectSelection="draborngo";
 DKD.projects=[
   {
@@ -18,6 +18,25 @@ DKD.projects=[
       "Kurye & işletme"
     ],
     "image": "assets/projects/dkd-go-v06.webp"
+  },
+  {
+    "id": "drabornoffice",
+    "title": "DraBornOffice",
+    "theme": "office",
+    "mark": "OFFICE",
+    "eyebrow": "STÜDYONU KUR, HAYALLERİNİ GELİŞTİR",
+    "subtitle": "Miami sahilinde kendi oyun stüdyonu yönet; ekibini kur, projelerini geliştir ve şirketini büyüt.",
+    "description": "Ekibinin enerjisini, moralini ve görevlerini takip et. Ofisini geliştir, araştırmaları aç, bütçeni yönet ve oyunlarını yayınla. Telefon ve bilgisayar tarayıcısında kendi stüdyonun başına geç.",
+    "web": "https://www.draborneagle.com/office/",
+    "play": "",
+    "status": "Web Oyunu",
+    "rows": [
+      "Ekip & proje yönetimi",
+      "Ofis geliştirme",
+      "Bütçe & araştırma"
+    ],
+    "image": "assets/projects/dkd-office-v071.webp",
+    "imageAlt": "DraBornOffice oyun stüdyosu yönetim simülasyonunun Miami sahilindeki ofisini gösteren bilgisayar ve telefon mockup görseli"
   },
   {
     "id": "drabornseries",
