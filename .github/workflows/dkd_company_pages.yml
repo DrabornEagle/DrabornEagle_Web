@@ -111,13 +111,18 @@ jobs:
           grep -F 'DraBornBuy | Market Alışverişi ve Fiyat Karşılaştırma' DraBornBuy/index.html >/dev/null
           grep -F 'rel="canonical" href="https://www.draborneagle.com/DraBornBuy/"' DraBornBuy/index.html >/dev/null
 
-      - name: DKD Commit synchronized DraBornBuy web files
+      - name: DKD Update and verify public sitemap
+        run: |
+          node scripts/dkd-search-sitemap.mjs
+          node scripts/dkd-search-sitemap.mjs --check
+
+      - name: DKD Commit synchronized DraBornBuy web files and sitemap
         shell: bash
         run: |
           set -euo pipefail
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A DraBornBuy
+          git add -A DraBornBuy sitemap.xml
           if ! git diff --cached --quiet; then
             git commit -m 'build(DraBornBuy): sync Expo web from Android source'
             for attempt in 1 2 3; do

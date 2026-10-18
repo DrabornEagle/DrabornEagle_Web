@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.draborneagle.com/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://www.draborneagle.com/DogancanKartal/</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-18</lastmod>
+  </url>
+  <url>
+    <loc>https://www.draborneagle.com/Hakkimizda/</loc>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://www.draborneagle.com/Support/</loc>
@@ -14,11 +18,11 @@
   </url>
   <url>
     <loc>https://www.draborneagle.com/DraBornGames/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://www.draborneagle.com/DraBornGames/LastMile/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://www.draborneagle.com/DraBornGames/shifterror/</loc>
@@ -33,8 +37,12 @@
     <lastmod>2026-09-20</lastmod>
   </url>
   <url>
+    <loc>https://www.draborneagle.com/DraBornLand/Office/</loc>
+    <lastmod>2026-10-17</lastmod>
+  </url>
+  <url>
     <loc>https://www.draborneagle.com/DraBornNews/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://www.draborneagle.com/DraBornOdds/</loc>
@@ -57,27 +65,23 @@
     <lastmod>2026-09-20</lastmod>
   </url>
   <url>
-    <loc>https://www.draborneagle.com/draborngo/</loc>
-    <lastmod>2026-09-20</lastmod>
+    <loc>https://www.draborneagle.com/DraBornSeries/</loc>
+    <lastmod>2026-10-08</lastmod>
+  </url>
+  <url>
+    <loc>https://www.draborneagle.com/DraBornStyle/</loc>
+    <lastmod>2026-10-17</lastmod>
   </url>
   <url>
     <loc>https://www.draborneagle.com/DraBornBuy/</loc>
-    <lastmod>2026-10-08</lastmod>
-  </url>
-  <url>
-    <loc>https://www.draborneagle.com/DraBornSeries/</loc>
-    <lastmod>2026-10-08</lastmod>
+    <lastmod>2026-10-18</lastmod>
   </url>
   <url>
     <loc>https://www.draborneagle.com/DraBornZikir/</loc>
     <lastmod>2026-10-08</lastmod>
   </url>
   <url>
-    <loc>https://www.draborneagle.com/Hakkimizda/</loc>
-    <lastmod>2026-10-09</lastmod>
-  </url>
-  <url>
-    <loc>https://www.draborneagle.com/DraBornLand/Office/</loc>
-    <lastmod>2026-10-17</lastmod>
+    <loc>https://www.draborneagle.com/draborngo/</loc>
+    <lastmod>2026-09-20</lastmod>
   </url>
 </urlset>

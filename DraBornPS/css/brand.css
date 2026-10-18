@@ -1,0 +1,11 @@
+.welcome-heading:has(.dkd-brand-description){align-items:flex-start;margin-top:54px;margin-bottom:24px;gap:28px}
+.dkd-brand-copy{max-width:1120px;min-width:0}
+.welcome-heading .dkd-brand-description{font-size:21px;line-height:1.5;max-width:1000px}
+.dkd-brand-description a{color:#b9f1ff;text-underline-offset:4px}
+.dkd-brand-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:13px;font-size:16px;line-height:1.5}
+.dkd-brand-links a{color:#f6c7e3;text-decoration:underline;text-underline-offset:4px}
+.dkd-brand-links a:focus-visible{outline:2px solid #8defff;outline-offset:4px;border-radius:3px}
+.dkd-brand-links a:first-child{color:#b9f1ff}
+body.dkd-mobile-ui .welcome-heading:has(.dkd-brand-description){margin-top:7px;margin-bottom:14px}
+body.dkd-mobile-ui .welcome-heading .dkd-brand-description{font-size:13px;line-height:1.5}
+body.dkd-mobile-ui .dkd-brand-links{font-size:12px;gap:7px 14px;margin-top:11px}

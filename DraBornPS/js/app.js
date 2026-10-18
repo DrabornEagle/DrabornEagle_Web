@@ -1,4 +1,5 @@
 (() => {
+ const dkdHomeTitle=document.title;
  DKD.screen=document.getElementById('screen');DKD.route='home';DKD.modalTitle=null;DKD.powerState=null;DKD.lastInstalled=DKD.state.installed.join(',');let wallpaper='',wallpaperIndex=0,toastTimer,lastInput=Date.now(),playTime=0,reminderSent=false;
  const mobileMedia=window.matchMedia('(max-width: 900px)');
  DKD.isMobileUI=mobileMedia.matches&&!document.documentElement.classList.contains('capture-mode');
@@ -44,7 +45,7 @@
   document.getElementById('dkd-support-overlay')?.remove();
   document.getElementById('viewport').inert=false;
   DKD.supportOpen=false;
-  document.title='DraBornEagle Ecosystem | Games & APPS';
+  document.title=dkdHomeTitle;
  };
  window.addEventListener('message',event=>{
   const frame=document.querySelector('#dkd-support-overlay iframe');
