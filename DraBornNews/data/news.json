@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-18T19:21:05.074356Z",
+  "generatedAt": "2026-10-18T21:44:35.941287Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "5860dda718377ebfcc",
+      "title": "Google, kuantum bilgisayarların önündeki en önemli engellerden birini aşmaya yaklaştı",
+      "summary": "Kuantum bilgisayarların önündeki en büyük engellerden biri, Google'ın yeni yöntemiyle aşılmaya bir adım daha yaklaştı. Geleceğin bilgisayarları için kritik rol oynayabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-kuantum-bilgisayarlarda-yuzde-99-99-dogruluga-ulasti--211790",
+      "publishedAt": "2026-10-18T20:36:01Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211790/1200x675google-kuantum-bilgisayarlarda-yuzde-99-99-dogruluga-ulasti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "43213b8395ed6ccf67",
       "title": "PlayStation 6'nın RAM ve SSD maliyeti tartışma yarattı",
@@ -251,18 +263,6 @@
       "publishedAt": "2026-10-18T06:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/211666/1200x675en-iyi-1080p-full-hd-monitorler.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d5da3b641e16becaa2",
-      "title": "Koleksiyonculara özel GTA 6 diski Çin'de satışa çıktı",
-      "summary": "GTA 6, Xbox veya PS5 konsollarına 19 Kasım'da çıkış yaptığında yalnızca dijital olarak oynanabilecek ancak Çinli satıcılar, fiziksel disk isteyenler için koleksiyon sürümü çıkardı bile.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/koleksiyonculara-ozel-gta-6-diski-cin-de-satisa-cikti--211763",
-      "publishedAt": "2026-10-17T19:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211763/1200x675koleksiyonculara-ozel-gta-6-diski-cin-de-satisa-cikti.jpg",
       "language": "tr",
       "editorial": false
     },
