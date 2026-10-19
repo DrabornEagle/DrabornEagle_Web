@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { resolve } from 'node:path';
+import { dkdAssertStructuredData } from './dkd-search-structured-data.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const origin = 'https://www.draborneagle.com';
@@ -48,6 +49,7 @@ const entries = directories.map(directory => {
   const file = directory ? `${directory}/index.html` : 'index.html';
   if (!existsSync(resolve(root, file))) throw new Error(`Missing public page: ${file}`);
   const html = readFileSync(resolve(root, file), 'utf8');
+  dkdAssertStructuredData(html, file);
   if (noindex(html)) throw new Error(`Sitemap page is noindex: ${url}`);
   if (canonical(html) !== url) throw new Error(`Canonical mismatch: ${file}: ${canonical(html)} != ${url}`);
   const sources = directory ? [directory] : ['index.html', 'DraBornPS/index.html', 'DraBornPS/js', 'DraBornPS/css', 'DraBornPS/games'];
@@ -73,6 +75,7 @@ if (process.argv.includes('--check-live')) {
       if (response.status !== 200) throw new Error(`${entry.url}: HTTP ${response.status}`);
       if (/noindex/i.test(response.headers.get('x-robots-tag') ?? '')) throw new Error(`${entry.url}: HTTP noindex`);
       const html = await response.text();
+      dkdAssertStructuredData(html, entry.url);
       if (noindex(html) || canonical(html) !== entry.url) throw new Error(`${entry.url}: live canonical/indexing mismatch`);
       console.log(`200 indexable ${entry.url}`);
     }

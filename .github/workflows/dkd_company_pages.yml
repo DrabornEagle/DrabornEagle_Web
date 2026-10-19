@@ -40,6 +40,11 @@ jobs:
       - name: DKD Verify DraBornPS homepage
         run: node scripts/dkd-sync-drabornps-root.mjs --check
 
+      - name: DKD Verify structured data before deployment
+        run: |
+          node --test scripts/dkd-search-structured-data.test.mjs
+          node scripts/dkd-search-structured-data.mjs
+
       - name: DKD Build DraBornZikir web from universal Expo source
         shell: bash
         run: |
