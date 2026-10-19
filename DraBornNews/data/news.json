@@ -1,7 +1,163 @@
 {
-  "generatedAt": "2026-10-19T17:07:17.497521Z",
+  "generatedAt": "2026-10-19T21:42:08.002016Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "42900e32bc1ff47dc3",
+      "title": "Ekranın kendisi hoparlöre dönüşüyor: Ses, görüntüdeki nesneyi takip edecek",
+      "summary": "Güney Koreli araştırmacılar, ekran panelini titreştirerek ses üreten yeni bir teknoloji geliştirdi. Sistem ayrıca, sesin ekrandaki kişi veya nesnenin bulunduğu noktadan duyulmasını sağlıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ekrani-hoparlore-donusturen-teknoloji-gelistirildi--211834",
+      "publishedAt": "2026-10-19T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211834/1200x675ekrani-hoparlore-donusturen-teknoloji-gelistirildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2c9acc9536e9cd095f",
+      "title": "İspanya güneş panellerini denize taşıyor: 1 MW'lık sistemde testler başladı",
+      "summary": "İspanya, güneş enerjisi üretimi için bu kez deniz yüzeyini kullanıyor. İki yüzer platformun bir araya geldiği projede şimdi gözler, zorlu deniz koşullarında elde edilecek sonuçlara çevrildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ispanya-gunes-panellerini-denize-tasiyor-1-mw-lik-sistem-hazir--211833",
+      "publishedAt": "2026-10-19T20:45:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211833/1200x675ispanya-gunes-panellerini-denize-tasiyor-1-mw-lik-sistem-hazir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2da4a65d62f8598825",
+      "title": "Spotify, Aile Planı paylaşımına savaş açtı: Kullanıcılar QR kodla doğrulama yapacak",
+      "summary": "Spotify, Premium Aile aboneliğini aynı adreste yaşamayan kişilerle paylaşan kullanıcılara yönelik denetimlerini sıkılaştırıyor. Bazı kullanıcılar, QR kodla adres doğrulaması istendiğini raporluyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/spotify-ayni-evde-yasamayan-aile-plani-uyelerini-engelliyor--211830",
+      "publishedAt": "2026-10-19T20:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211830/1200x675spotify-ayni-evde-yasamayan-aile-plani-uyelerini-engelliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "92f044b92b6a9da899",
+      "title": "Partnering to strengthen the grid and support local communities in Arkansas",
+      "summary": "Since we first announced plans to build in West Memphis, Arkansas, we’ve continued to work with community members.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/arkansas-partnerships/",
+      "publishedAt": "2026-10-19T20:15:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Arkansas_Hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "68e2ee5d21f7dc1bf4",
+      "title": "Cutting our inference bill by 68% by being obsessive about optimization",
+      "summary": "When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/obsessive-inference-optimization/",
+      "publishedAt": "2026-10-19T19:12:53Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M58N5J1Y9HY8N3R115KEY6NE.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "31a14832728e611d67",
+      "title": "İspanya'da üzüm bağlarına güneş panelleri kuruldu: Sonuçlar dikkat çekici",
+      "summary": "Tarım arazilerinden hem ürün hem elektrik elde etmek mümkün mü? İspanya'da üzüm bağlarında test edilen agrivoltaik sistemler, arazi kullanım verimliliğini artırabilecek bir alternatif sunuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ispanya-da-uzum-baglarina-gunes-panelleri-kuruldu--211827",
+      "publishedAt": "2026-10-19T19:12:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211827/1200x675ispanya-da-uzum-baglarina-gunes-panelleri-kuruldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "206272385084c5cf37",
+      "title": "PS4'e özel Driveclub PC'ye taşındı! 4K ve 120 FPS desteği",
+      "summary": "Sony'nin PS4'e özel yarış oyunu Driveclub, mod geliştiriciler sayesinde artık Windows'ta native olarak çalışıyor. Oyun 4K, yüksek FPS ve modern grafik teknolojilerini destekliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ps4-e-ozel-driveclub-pc-ye-tasindi-4k-ve-120-fps-destegi--211807",
+      "publishedAt": "2026-10-19T18:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211807/1200x675ps4-e-ozel-driveclub-pc-ye-tasindi-4k-ve-120-fps-destegi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "396df130a7c26c9c4c",
+      "title": "Meta, okyanusun altına dünyanın en yüksek kapasiteli internet kablosunu döşüyor: Saniyede 125 TB",
+      "summary": "Meta, kıtalar arası internet trafiğini taşıyan deniz altı kablolarında yeni bir dönemin kapısını aralıyor. Şirketin yeni projesi, veri aktarım kapasitesini daha önce görülmemiş bir seviyeye taşıyacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/meta-okyanusa-dunyanin-en-hizli-internet-kablolarini-dosuyor--211820",
+      "publishedAt": "2026-10-19T18:28:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211820/1200x675meta-okyanusa-dunyanin-en-hizli-internet-kablolarini-dosuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0a3aef6df10f01063a",
+      "title": "Apple HomeView Max geliyor: Daha pahalı, daha üst model",
+      "summary": "Apple, yeni HomeView akıllı ev cihazının robotik kol üzerinde tam 360 derece dönebilen daha büyük, 9 inçlik ekrana sahip üst versiyonunu piyasaya sürmeyi planlıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-homeview-max-daha-pahali-daha-ust-model-geliyor--211819",
+      "publishedAt": "2026-10-19T18:06:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211819/1200x675apple-homeview-max-daha-pahali-daha-ust-model-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "37fe03701d712e9a75",
+      "title": "Apple, yeni lansman etkinliğini doğruladı: Dokunmatik MacBook geliyor",
+      "summary": "Apple, “Pro and Tell” adını verdiği yeni etkinliğini 28 Ekim’de düzenleyeceğini duyurdu. Etkinlikte OLED ekranlı dokunmatik MacBook modelleri, M6 Mac’ler ve OLED iPad mini’nin tanıtılması bekleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-yeni-lansman-etkinligini-dogruladi-neler-tanitilacak--211836",
+      "publishedAt": "2026-10-19T17:58:14Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211836/1200x675apple-yeni-lansman-etkinligini-dogruladi-neler-tanitilacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "40634a33b7feb1d3da",
+      "title": "Introducing Clairic, a new System One class of extraction models",
+      "summary": "Clairic is a new model from Cloudflare that is a System One extraction modeI, capable of extracting, computing, estimating, and forecasting data from unstructured inputs.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/clairic-extraction-model/",
+      "publishedAt": "2026-10-19T17:48:26Z",
+      "category": "Yapay Zeka",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AKCGDJHDMM9AVJKV73MJGX.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f45bb5033093ed8f0c",
+      "title": "Samsung, yeni nesil HBM çipleri için TSMC teknolojisini kullanacak",
+      "summary": "Samsung, Nvidia’nın yeni nesil HBM bellekleri için TSMC’nin 3 nm üretim sürecini kullanacak. Şirket, artan talebe karşı kendi 2 nm üretim seçeneğini de değerlendiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-yeni-hbm-cipleri-icin-tsmc-teknolojisini-kullanacak--211829",
+      "publishedAt": "2026-10-19T17:44:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211829/1200x675samsung-yeni-hbm-cipleri-icin-tsmc-teknolojisini-kullanacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "386d3a4e7cdcec8fd0",
+      "title": "Samsung Galaxy S27 serisi beklenenden erken tanıtılabilir",
+      "summary": "Galaxy S26 serisini şubat ayında tanıtan Samsung, Galaxy S27 ailesiyle takvim değişikliğine gidebilir. Güvenilir bir sızıntı kaynağı, yeni telefonlar için Ocak 2027'yi işaret ediyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-s27-serisi-beklenenden-erken-tanitilabilir--211821",
+      "publishedAt": "2026-10-19T17:22:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211821/1200x675samsung-galaxy-s27-serisi-beklenenden-erken-tanitilabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "52617e21810898c12b",
       "title": "How to shape your slides and videos with Gemini Notebook",
@@ -71,6 +227,18 @@
       "publishedAt": "2026-10-19T16:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/sydney_bodonaro_social_1.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "6bcd2a5d60e7816ce6",
+      "title": "See the top style searches from people in big fashion capitals.",
+      "summary": "We took a look at Google Trends to see what people in seven major fashion capitals are searching for to give them that je ne sais quoi when it comes to their sartorial s",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/search/fashion-capital-style-searches/",
+      "publishedAt": "2026-10-19T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/FashionTrends_social.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -274,7 +442,7 @@
       "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
       "publishedAt": "2026-10-19T13:00:02Z",
       "category": "Güvenlik",
-      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/Slide3-002.jpg",
+      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Secure-AI-Image-1-10_19.png.jpg",
       "language": "en",
       "editorial": false
     },
@@ -363,30 +531,6 @@
       "editorial": false
     },
     {
-      "id": "5f2b09e8cf599760b7",
-      "title": "Çin'in ihracatını yasaklamak istediği güneş enerjisi teknolojisi",
-      "summary": "Çin, güneş paneli üretiminde kullanılan 12 teknolojiye ihracat kısıtlaması getirmeyi planlıyor. Teklif, perovskit ve tandem güneş hücreleri gibi gelişmiş teknolojileri de kapsıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cin-in-ihracatini-yasaklamak-istedigi-gunes-enerjisi-teknolojisi--211813",
-      "publishedAt": "2026-10-19T12:17:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211813/1200x675cin-in-ihracatini-yasaklamak-istedigi-gunes-enerjisi-teknolojisi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8cf0e7f4442768c2ac",
-      "title": "Ödüllü Test Haftası'nda ikinci hafta tamamlandı: İşte kazananlar ve yeni haftanın ödülleri",
-      "summary": "DonanımHaber Ödüllü Test Haftası'nda ikinci haftanın yarışması tamamlandı. Teknoloji, otomobil ve sinema temalı testlerde dereceye giren kullanıcılar ve kazandıkları ödüller belli oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/odullu-test-haftasi-nda-ikinci-hafta-tamamlandi-iste-kazananlar--211824",
-      "publishedAt": "2026-10-19T12:07:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211824/1200x675odullu-test-haftasi-nda-ikinci-hafta-tamamlandi-iste-kazananlar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "3d4c03e02b95576022",
       "title": "The Saros: Zenith update out today, brings more ways to play for newcomers and veterans alike",
       "summary": "Starting today (October 19) the Saros: Zenith update is available to all Saros owners for no additional charge. We had two main goals for this update: add replayability for existing players who had already plumbed the depth of Carcosa, and make the game more accessible so Saros even more people can discover the addictive, explosive,",
@@ -423,30 +567,6 @@
       "editorial": false
     },
     {
-      "id": "49c33d0983728f23c0",
-      "title": "Tofaş, 7,5 milyonuncu aracını üretti",
-      "summary": "Türkiye otomotiv sanayisinin öncü kuruluşlarından Tofaş, Bursa Fabrikası’nda 7,5 milyonuncu aracını üreterek yarım asrı aşan üretim yolculuğunda yeni bir kilometre taşına daha ulaştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/tofas-7-5-milyonuncu-aracini-uretti--211816",
-      "publishedAt": "2026-10-19T11:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211816/1200x675tofas-7-5-milyonuncu-aracini-uretti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "29a2b77b77f2288656",
-      "title": "505 km menzil ve Lidar: 13.800 dolarlık Leapmotor A10s tanıtıldı",
-      "summary": "Leapmotor, küçük elektrikli SUV modeli A10’un daha sportif ve konforlu versiyonu A10s’i tanıttı. Çin’de 13.800 dolardan satışa çıkan model, 505 km menzil ve lidar destekli sürüş asistanları sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/505-km-menzil-ve-lidar-13-800-dolarlik-leapmotor-a10s-tanitildi--211806",
-      "publishedAt": "2026-10-19T11:11:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211806/1200x675505-km-menzil-ve-lidar-13-800-dolarlik-leapmotor-a10s-tanitildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "e5de916bd477c271a1",
       "title": "\"Yapay Zekâ İşimizi Elimizden Alacak mı?\" Sorusuna Örnek Bir Yanıt: Anthropic’in Çalışma Düzeni Baştan Aşağı Değişti!",
       "summary": "Anthropic'in çalışma düzeni değişti. Yapay zekâ, junior istihdamını azaltırken çalışanların toplantı saatlerini ve yönetim yükünü artırdı.",
@@ -471,30 +591,6 @@
       "editorial": false
     },
     {
-      "id": "fc72b6577592c3f7ea",
-      "title": "Katlanabilir iPhone'un batarya kapasitesi belli oldu",
-      "summary": "Katlanabilir iPhone Duo batarya kaç mAh merak edenler için resmi bilgilendirme geldi. Apple, cihazın gerçek batarya kapasitesini gözler önüne seren AB düzenleyici belgesini yayımladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/katlanabilir-iphone-duo-batarya-kac-mah-belli-oldu--211799",
-      "publishedAt": "2026-10-19T10:50:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211799/1200x675katlanabilir-iphone-duo-batarya-kac-mah-belli-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "febc806cb0c4b0918a",
-      "title": "Teslimat robotunun önünü kesen kadın tutuklandı",
-      "summary": "ABD’nin Philadelphia kentinde bir kadın, insanların işlerini ellerinden aldığını savunduğu Uber teslimat robotunun önünü kesti. Polislerin uyarılarına uymayan kadın tutuklandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/teslimat-robotunun-onunu-kesen-kadin-tutuklandi--211800",
-      "publishedAt": "2026-10-19T10:28:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211800/1200x675teslimat-robotunun-onunu-kesen-kadin-tutuklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "94a1afe1e9caf87178",
       "title": "Mitsubishi Logosunun Fark Etmedeğimiz Detayı",
       "summary": "Mitsubishi logosunun anlamını, üç elmasın nereden geldiğini ve markanın tarihini inceliyoruz.",
@@ -507,18 +603,6 @@
       "editorial": false
     },
     {
-      "id": "33a37331d5750f7be7",
-      "title": "Japonya, Mars'ın uydusundan örnek getirerek bir ilke imza atmaya hazırlanıyor",
-      "summary": "Japonya, Mars'ın uydusu Phobos'tan kaya ve toz örnekleri getirerek hem bu uyduların nasıl oluştuğunu hem de Güneş Sistemi'nin geçmişine dair soru işaretlerini aydınlatmayı hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/japonya-mars-in-uydusu-phobos-tan-ornek-getirecek--211801",
-      "publishedAt": "2026-10-19T10:06:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211801/1200x675japonya-mars-in-uydusu-phobos-tan-ornek-getirecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "800181e83b006100a7",
       "title": "Qualcomm'dan Snapdragon 8 Elite Extreme Gen 6 Hakkındaki Aşırı Isınma İddialarına Yanıt",
       "summary": "Qualcomm, Snapdragon 8 Elite Extreme Gen 6'nın çok ısındığı iddialarına ilişkin açıklama yaptı.",
@@ -527,42 +611,6 @@
       "publishedAt": "2026-10-19T09:48:31Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/679150/679150-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9f1873833f53283d27",
-      "title": "Opel, Astra’nın fiyatını düşürdü: Daha ucuz versiyonda neler eksildi?",
-      "summary": "Opel, yeni Start donanımıyla Astra ailesinin başlangıç fiyatını düşürdü. Almanya’da elektrikli Astra 36.490 eurodan sunulurken daha uygun fiyat için bazı konfor donanımlarından vazgeçilmesi gerekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/opel-astra-start-tanitildi-yaklasik-2-bin-euro-daha-ucuz--211802",
-      "publishedAt": "2026-10-19T09:43:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211802/1200x675opel-astra-start-tanitildi-yaklasik-2-bin-euro-daha-ucuz.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0275ae68074be61d94",
-      "title": "12 yıllık Intel işlemci yeniden tarih yazdı: Dünya rekoru kırıldı",
-      "summary": "2013 yılında çıkan Intel Core i5-4670K, yıllar sonra yeniden bir ilke imza attı. İşlemci sıvı nitrojenle 6,3 GHz’e hız aşırtılarak Cinebench R11.5 dünya rekorunu kırdı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/12-yillik-intel-islemci-yeniden-tarih-yazdi-dunya-rekoru-kirildi--211803",
-      "publishedAt": "2026-10-19T09:21:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211803/1200x67512-yillik-intel-islemci-yeniden-tarih-yazdi-dunya-rekoru-kirildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b673b05f02602de23a",
-      "title": "Her gün taşınacak laptop nasıl seçilir? Laptop dayanıklılık rehberi",
-      "summary": "Her gün taşınacak laptop seçerken nelere dikkat edilmeli? Casper Nirvana S100'ün alüminyum gövdesi ve 20.000 çevrimlik SGS menteşe testi, dayanıklılık değerlendirmesine ışık tutuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/her-gun-tasinacak-laptop-nasil-secilir-dayaniklilik-rehberi--211735",
-      "publishedAt": "2026-10-19T09:13:31Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211735/1200x675her-gun-tasinacak-laptop-nasil-secilir-dayaniklilik-rehberi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -819,18 +867,6 @@
       "editorial": false
     },
     {
-      "id": "dcaabf5e08f6a89425",
-      "title": "An intelligent new shopping cart",
-      "summary": "Universal Cart helps make holiday shopping easier. It’s now available in the U.S. across Search and the Gemini app.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
-      "publishedAt": "2026-10-15T13:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GlobalCart_Hero.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "7d0ed3cb5cb4581ac2",
       "title": "TIME has named Google SynthID one of the Best Inventions of 2026.",
       "summary": "TIME named Google SynthID a Best Invention of 2026 for its groundbreaking approach to AI watermarking and verification.",
@@ -851,6 +887,18 @@
       "publishedAt": "2026-10-15T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/When_to_buy_guide_resize.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "dcaabf5e08f6a89425",
+      "title": "An intelligent new shopping cart",
+      "summary": "Universal Cart helps make holiday shopping easier. It’s now available in the U.S. across Search and the Gemini app.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/shopping/universal-cart-launch/",
+      "publishedAt": "2026-10-15T13:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GlobalCart_Hero.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -899,18 +947,6 @@
       "publishedAt": "2026-10-14T16:15:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Research-at.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "d31eb6c39085051ad3",
-      "title": "Meet the XBOX Nano Controller",
-      "summary": "Today, we’re introducing the XBOX Nano Controller, designed to fit nearly every pocket and budget. Its compact design offers a great option for younger players, smaller hands, or anyone seeking something portable for play on the go. The XBOX Nano Controller, at a little over 5 inches in length and just 3.5 ounces, is our",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/14/xbox-nano-controller/",
-      "publishedAt": "2026-10-14T16:00:00Z",
-      "category": "Oyun",
-      "image": "",
       "language": "en",
       "editorial": false
     },
@@ -983,30 +1019,6 @@
       "publishedAt": "2026-10-14T12:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Frightgeist_BlogHero_2.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f0b80431f300200a94",
-      "title": "17 organizations using AI to accelerate scientific breakthroughs",
-      "summary": "These groups are receiving $36 million through the Google.org Impact Challenge: AI for Science.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/google-org/impact-challenge-ai-science-recipients/",
-      "publishedAt": "2026-10-14T09:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_for_Science_hero.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "18521ab849e45ccff7",
-      "title": "We’re powering European scientific discovery with advanced AI compute and frontier models.",
-      "summary": "Google DeepMind and Google Cloud are providing up to 200 top European scientific researchers with direct access to our frontier models, together with $3 million in compu",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/were-powering-european-scientific-discovery-with-advanced-ai-compute-and-frontier-models/",
-      "publishedAt": "2026-10-14T08:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ireland-innovation-companies-st.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1179,26 +1191,14 @@
       "editorial": false
     },
     {
-      "id": "cd838e82df4db660bf",
-      "title": "8 major updates to Cloudflare Observability",
-      "summary": "Cloudflare is launching eight major updates that bring logs, traces, analytics, alerts, dashboards, querying, and telemetry export into one observability platform, with simpler and more predictable pricing.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/one-observability-platform/",
-      "publishedAt": "2026-10-02T18:00:00Z",
+      "id": "01e99749322cbcc2d1",
+      "title": "Microsoft 365 and LinkedIn leadership update",
+      "summary": "Satya Nadella, Chairman and CEO, and Ryan Roslansky, Executive Vice President of LinkedIn and Microsoft 365, shared the below communications with Microsoft and LinkedIn employees this morning. SATYA NADELLA MESSAGE After nearly 18 years at LinkedIn and Microsoft, Ryan Roslansky has decided to leave Microsoft and embark on his next chapter. As Ryan and I...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/01/microsoft-365-and-linkedin-leadership-update/",
+      "publishedAt": "2026-10-01T15:03:27Z",
       "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XHE6D45CDHQVM71QYA6EEJ.01M3XHE6YHC44V1DZB0VG3DCGV.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f947e9010dad4080ff",
-      "title": "Streamline: custom video pipelines with Cloudflare Stream and Workers",
-      "summary": "Streamline demonstrates how to build long-running, continuous video processing pipelines by pairing Cloudflare Workers and Durable Objects with a containerized media engine.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/streamline/",
-      "publishedAt": "2026-10-02T16:13:45Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M3XKCAN8X5Q5KQ1Q5EW20NBG.01M3XKCB43AH4EZPQE0QQ7MNND.png",
+      "image": "",
       "language": "en",
       "editorial": false
     }
