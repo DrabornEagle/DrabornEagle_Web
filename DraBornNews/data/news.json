@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-10-18T21:44:35.941287Z",
+  "generatedAt": "2026-10-19T04:26:18.597116Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "12043cfe264f8e904b",
+      "title": "İddia: PS6'nın Bellek ve Depolama Maliyetleri PS5'ten Pahalı!",
+      "summary": "İddiaya göre PlayStation 6'nın bellek ve depolama bileşenlerinin toplam maliyeti 680 doları geride bıraktı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/ps6-bellek-depolama-maliyetleri-ps5-pahali-iddia-h227380.html",
+      "publishedAt": "2026-10-19T03:58:58Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693358/693358-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5fc502528dfcb74368",
+      "title": "1.169 Beygirlik Mercedes-AMG GT SUV Tanıtıldı",
+      "summary": "Mercedes-AMG, yeni elektrikli süper-SUV modeli GT SUV'u resmi olarak tanıttı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/mercedes-amg-gt-suv-tanitildi-h227377.html",
+      "publishedAt": "2026-10-19T03:46:40Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693355/693355-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "5860dda718377ebfcc",
       "title": "Google, kuantum bilgisayarların önündeki en önemli engellerden birini aşmaya yaklaştı",
@@ -587,30 +611,6 @@
       "publishedAt": "2026-10-16T09:31:20Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/693133/693133-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6868c9fb3526569522",
-      "title": "Meta, Yeni Yapay Zekâ Modeli Muse Spark Open’ı Duyurdu",
-      "summary": "Meta, bugüne kadarki en yetenekli açık ağırlıklı modeli olarak nitelendirdiği Muse Spark Open’ı tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/meta-muse-spark-open-h227302.html",
-      "publishedAt": "2026-10-16T09:30:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/693115/693115-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a2bffab9b2cf2c40c5",
-      "title": "Bütçe Dostu Huawei Nova Katlanabilir Telefon Baştan Aşağı Yenileniyor: İşte Şaşırtan Tasarım Değişikliği!",
-      "summary": "Huawei'nin yeni Nova katlanabilir telefonu, alışılmış dar ve dikey tasarım yerine daha geniş bir ekranla gelebilir.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/huawei-nova-katlanabilir-telefon-tasarim-degisikligi-h227299.html",
-      "publishedAt": "2026-10-16T09:29:41Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/693098/693098-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
