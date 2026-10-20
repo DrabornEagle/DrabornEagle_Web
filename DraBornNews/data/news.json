@@ -1,7 +1,271 @@
 {
-  "generatedAt": "2026-10-20T15:48:03.485223Z",
+  "generatedAt": "2026-10-20T19:56:18.261887Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e461ac568f7591dd65",
+      "title": "Avrupa, Ay’a enerji istasyonu kuruyor: 15 günlük geceye çözüm",
+      "summary": "Avrupa Uzay Ajansı, Ay’da 15 gün süren karanlık dönemde bilimsel cihazlara enerji sağlayacak OASIS sistemini geliştiriyor. Proje, Ay yüzeyindeki araştırmaların yıllarca sürmesini sağlayacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/avrupa-ay-a-enerji-istasyonu-kuruyor-15-gunluk-geceye-cozum--211865",
+      "publishedAt": "2026-10-20T19:39:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211865/1200x675avrupa-ay-a-enerji-istasyonu-kuruyor-15-gunluk-geceye-cozum.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dec436dee3be477dc6",
+      "title": "Meta seçim sonuçlarını manipüle mi ediyor? Brezilya'da ciddi suçlamalar gündemde",
+      "summary": "Brezilya'da seçim yarışı kızışırken Meta kendisini mahkemede buldu. Şirketin siyasi içeriklere eşit davrandığını kanıtlaması için yalnızca 24 saati var; aksi hâlde ağır bir ceza ödeyebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/meta-secim-sonuclarini-manipule-mi-ediyor--211868",
+      "publishedAt": "2026-10-20T19:17:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211868/1200x675meta-secim-sonuclarini-manipule-mi-ediyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1d1fc100d47ba42de4",
+      "title": "Grounded 2: 100 Reasons to Run in the Rot and Ruin Update",
+      "summary": "Survive the Rot and Ruin Update Brookhollow Park is getting a little more rotten. The Rot and Ruin Update expands Grounded 2 with a new area to explore, dangerous creatures to face, another Buggy to saddle up on, and new ways to customize both your gear and your home away from home. Explore the Woodpile",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/grounded-2-rot-and-ruin/",
+      "publishedAt": "2026-10-20T19:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/g2-env-woodpile-001-18652f49f318a5ee2034-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f462504c1c05100b59",
+      "title": "CATL’den dizel kamyonlara meydan okuma: Çift bataryalı çözüm",
+      "summary": "CATL, elektrikli ağır vasıtalar için değiştirilebilir ana bataryayı sabit yedek bataryayla birleştiren sistemini tanıttı. 5 dakikalık batarya değişimiyle uzun şarj molalarının azaltılması hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/catl-den-dizel-kamyonlara-meydan-okuma-cift-bataryali-cozum--211870",
+      "publishedAt": "2026-10-20T18:55:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211870/1200x675catl-den-dizel-kamyonlara-meydan-okuma-cift-bataryali-cozum.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "001d0289e07f396f5e",
+      "title": "Samsung, Galaxy S27 ve S28 serilerinde 5G modem verimliliğini artıracak",
+      "summary": "Samsung, Exynos işlemcili telefonlarda hücresel bağlantı verimliliğini artırmaya hazırlanıyor. Galaxy S27 serisinin daha hızlı M2700, Galaxy S28 ailesinin ise 2nm M2800 modem kullanacağı belirtiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/galaxy-s27-ve-s28-serisi-daha-verimli-5g-modemlerle-gelebilir--211878",
+      "publishedAt": "2026-10-20T18:39:23Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211878/1200x675galaxy-s27-ve-s28-serisi-daha-verimli-5g-modemlerle-gelebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8c710e46c4b2a595bc",
+      "title": "Intel Nova Lake-E için üzücü haber: Hibrit tasarım olmayacak",
+      "summary": "Intel'in yeni nesil Nova Lake-E işlemcileri için yeni bir iddia ortaya çıktı. Xeon E ailesinin P-core ve E-core modellerini aynı işlemcide birleştirmeyeceği söyleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/intel-nova-lake-e-icin-uzucu-haber-hibrit-tasarim-olmayacak--211877",
+      "publishedAt": "2026-10-20T18:33:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211877/1200x675intel-nova-lake-e-icin-uzucu-haber-hibrit-tasarim-olmayacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "07ee4c9bfd40884223",
+      "title": "ChatGPT artık eski yazılımları modern hale getirebiliyor",
+      "summary": "OpenAI, eski yazılımları modern programlama dillerine taşıma konusunda önemli ilerleme kaydetti. GPT-6.1 Sol, kod dönüşüm testinde yüzde 97,9 doğruluğa ulaştı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/chatgpt-artik-eski-yazilimlari-modern-hale-getirebiliyor--211871",
+      "publishedAt": "2026-10-20T18:21:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211871/1200x675chatgpt-artik-eski-yazilimlari-modern-hale-getirebiliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ecae17c02df9b9e5e3",
+      "title": "Matrix-Game 4.0, tek bir RTX 5090 ile gerçek zamanlı oyun dünyaları oluşturuyor",
+      "summary": "60 FPS hızında oyun dünyaları oluşturan bilen Matrix-Game 4.0 adlı yapay zekâ, açık kaynak olarak yayınlandı. Üstelik tek bir RTX 5090 üzerinde bile yerel olarak çalıştırılabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-ile-oyun-ureten-matrix-game-4-0-acik-kaynak-oldu--211872",
+      "publishedAt": "2026-10-20T17:59:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211872/1200x675yapay-zeka-ile-oyun-ureten-matrix-game-4-0-acik-kaynak-oldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "edf5b240a7eea58f97",
+      "title": "ID@XBOX x IGN Showcase Recap: All the News and Announcements",
+      "summary": "We’ve just wrapped up another fantastic ID@XBOX and IGN Showcase, bringing the latest news and updates on many brilliant indie titles heading to XBOX – from world premieres and long-awaited announcements to a fresh wave of titles making their way to Game Pass. We even threw in a surprise launch! The show included the reveal of",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/id-xbox-ign-showcase-october-2026/",
+      "publishedAt": "2026-10-20T17:45:48Z",
+      "category": "Oyun",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "8d10f0b8a36504d2c2",
+      "title": "Xiaomi'den 25.000 mAh kapasiteli ve 250W gücünde yeni powerbank",
+      "summary": "Xiaomi'nin yeni powerbank modeli, 25.000 mAh bataryası ve 250W'a ulaşan toplam çıkış gücüyle, dizüstü bilgisayar gibi yüksek güç isteyen cihazları dahi şarj edebiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/xiaomi-25-000-mah-bataryali-yeni-powerbank-modelini-tanitti--211873",
+      "publishedAt": "2026-10-20T17:38:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211873/1200x675xiaomi-25-000-mah-bataryali-yeni-powerbank-modelini-tanitti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "23ad71b76fd0f3998d",
+      "title": "Three CRITICAL REFLEX Hits Are Coming to XBOX, And One Arrives Today",
+      "summary": "The nights are getting darker, the weather is getting harsher… Can you feel it? Halloween is almost here, and there’s never been a better excuse to turn off the lights, lock the doors, and play something that fills your head with dread and despair. Luckily, we have you covered. From doomed spaceships and apocalyptic paranoia",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/critical-reflex-games-xbox-update/",
+      "publishedAt": "2026-10-20T17:27:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Mouthwashing-1-b606df57633f908a50b6-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "b1217b58ee5e2a5e1b",
+      "title": "Apple, iPhone için ABD'de üretimi genişletiyor: Yeni tedarikçiler açıklandı",
+      "summary": "Apple, iPhone Duo ve iPhone 18 Pro için kritik malzeme ve bileşenler tedarik eden Amerikalı şirketlerle yeni ve kapsamlı ortaklıklar kurduğunu duyurdu. İşte ayrıntılar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-iphone-icin-abd-de-uretimi-genisletiyor--211874",
+      "publishedAt": "2026-10-20T17:17:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211874/1200x675apple-iphone-icin-abd-de-uretimi-genisletiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c3a01280baad7f4712",
+      "title": "Magenta Down: A Journey Across a Hostile Exoplanet",
+      "summary": "Magenta Down is designed around a simple premise: you and your crew have crashed and are now scattered across the surface of a harsh, remote exoplanet. With limited supplies and surrounded by hostile terrain, can you find your crew and escape? We wanted to create an atmospheric journey about moving forward and enduring the consequences",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/magenta-down-reveal-xbox-ign-id/",
+      "publishedAt": "2026-10-20T17:02:16Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Magenta-Down-Image-1-862635bf330ff56f9283-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "0cc22308ce06ae42ad",
+      "title": "Call of Duty: Modern Warfare 4 – How to Get Started as an Operator in DMZ",
+      "summary": "Plan Your Next Visit to Hajin Check out the interactive Hajin DMZ Tac Map on Call of Duty Blog Call of Duty: Modern Warfare 4’s new DMZ mode is here! Following the release of Campaign Early Access last week, Modern Warfare 4’s new action extraction mode is arriving early ahead of its global launch of",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/call-of-duty-modern-warfare-4-how-to-get-started-operator-dmz/",
+      "publishedAt": "2026-10-20T17:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Hajin_Map-f1d023d7ff8e8bbac8de-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "3c30b119a09dde0e07",
+      "title": "Rüzgar enerjisinde dengeleri değiştirecek fikir: Denizde yapay zeka",
+      "summary": "Mingyang, yüzer rüzgar türbinlerine yapay zeka veri merkezleri kurmayı araştırıyor. Proje hayata geçerse deniz üstündeki rüzgar santralleri daha kârlı hale gelebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ruzgar-turbinleri-yapay-zeka-merkezine-donusuyor--211875",
+      "publishedAt": "2026-10-20T16:55:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211875/1200x675ruzgar-turbinleri-yapay-zeka-merkezine-donusuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f43122ecabc3085d0f",
+      "title": "Türkiye’nin yerli parçacık hızlandırıcısı TARLA’da ilk deney yapıldı",
+      "summary": "Türkiye’nin parçacık hızlandırıcısı TARLA’da ilk deney yapıldı. TARLA, uydu teknolojileri, savunma sanayisi ve kanser tedavisi araştırmalarına kadar birçok alanda kullanılacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/turkiye-nin-yerli-parcacik-hizlandiricisi-tarla-da-ilk-deney-yapi--211881",
+      "publishedAt": "2026-10-20T16:26:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211881/1200x675turkiye-nin-yerli-parcacik-hizlandiricisi-tarla-da-ilk-deney-yapi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "acfa06015d397c13f3",
+      "title": "Dünyada ilk kez yaralı bir asker cepheden dronla tahliye edildi",
+      "summary": "Ukrayna ordusu, cephede yaralanan askerini ateş hattından tahliye etmek için dron kullandı. Bu olay, yaralı bir askeri tahliye etmek için dronun kullanıldığı ilk operasyon olarak tarihe geçti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dunyada-ilk-kez-yarali-bir-asker-cepheden-dronla-kurtarildi--211879",
+      "publishedAt": "2026-10-20T16:12:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211879/1200x675dunyada-ilk-kez-yarali-bir-asker-cepheden-dronla-kurtarildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6b3409a4f31ac8ceb9",
+      "title": "Yapay zeka destekli yazılım geliştirmede asıl farkı ne yaratacak?",
+      "summary": "Yapay zeka yazılım geliştirmeyi hızlandırıyor ancak şirketlerin bu avantajı kalıcı hale getirmesi için kalite, güvenlik ve denetim süreçlerini de yeniden ele alması gerekiyor",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-destekli-yazilim-gelistirmede-asil-farki-ne-yaratacak--211883",
+      "publishedAt": "2026-10-20T16:08:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211883/1200x675yapay-zeka-destekli-yazilim-gelistirmede-asil-farki-ne-yaratacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "683e29d42531879293",
+      "title": "Coming to XBOX Game Pass: Final Fantasy VII Remake Intergrade, The Séance of Blake Manor, and More",
+      "summary": "Ghosts to question and a planet to save. Sounds like a perfectly reasonable few weeks to me! We have another batch of games coming soon to Game Pass, so clear a little room in that “Play Next List” and let’s get to it! Coming Soon Sandustry(Game Preview) (PC) – October 21Now with Game Pass Premium;",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/xbox-game-pass-october-2026-wave-2/",
+      "publishedAt": "2026-10-20T16:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/TSOBM_KeyArt_1920x1080-3da54ac5982b0b82cca0-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "2508ace600ddfdfca1",
+      "title": "Ask a Scientist: How can AI help doctors spend more time on collaborative care?",
+      "summary": "AMIE, an AI system people can chat with before doctor’s appointments, securely gathers patient information, and saves doctors time.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/amie-clinical-study/",
+      "publishedAt": "2026-10-20T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AskAScientist_AMIE_Thumb_003_ss.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "bdc0c47bb06abc625d",
+      "title": "New Gemini tools for small business owners",
+      "summary": "We’re announcing new tools for Gemini — including a dedicated business landing page — to help small business owners around the world.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/new-tools-small-business-owners/",
+      "publishedAt": "2026-10-20T16:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/October_Gemini_VSB_hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "88a0e06c65de9fc2b9",
+      "title": "Yeni BYD Seagull satışa çıktı: 9.800 dolara büyüyen gövde, daha fazla teknoloji",
+      "summary": "BYD, ikinci nesil Seagull’ı Çin’de yaklaşık 9.800 dolardan başlayan fiyatlarla satışa sundu. Büyüyen elektrikli hatchback; beş kişilik kabini, yeni Blade bataryası ve Lidar seçeneğiyle dikkat çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-nesil-byd-seagull-satisa-cikti-iste-fiyati-ve-ozellikleri--211876",
+      "publishedAt": "2026-10-20T15:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211876/1200x675yeni-nesil-byd-seagull-satisa-cikti-iste-fiyati-ve-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "ed1fba45a3bf621713",
       "title": "AI Günlükleri: Yapay zekâ dünyasında bu hafta (20 Ekim 2026)",
@@ -256,7 +520,7 @@
     },
     {
       "id": "bc34cbec3dd5a0fb15",
-      "title": "Introducing tsrs: a Port of TypeScript to Rust",
+      "title": "Introducing tsrs: A port of TypeScript to Rust",
       "summary": "Cloudflare is collaborating on tsrs, a Rust port of TypeScript that is up to 8x faster and uses 70% less memory.",
       "source": "Cloudflare Blog",
       "sourceUrl": "https://blog.cloudflare.com/typescript-rust-port/",
@@ -287,18 +551,6 @@
       "publishedAt": "2026-10-20T12:34:00Z",
       "category": "Yapay Zeka",
       "image": "https://www.donanimhaber.com/images/images/haber/211852/1200x675apple-yapay-zeka-girisimi-samplab-i-satin-aldi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a5d10939317bbcadc5",
-      "title": "MG HS'in Premium ve Luxury Plus donanımları Türkiye'de satışa sunuldu",
-      "summary": "Çinli SAIC bünyesindeki MG'nin güçlü temsilcisi HS, aileye eklenen yeni Premium ve Luxury Plus donanımlarıyla farklı tercihleri olan müşterilere de hitap ediyor. İşte MG HS fiyat listesi:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-mg-hs-premium-ve-luxury-plus-turkiye-de-satisa-sunuldu--211854",
-      "publishedAt": "2026-10-20T12:12:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211854/1200x675yeni-mg-hs-premium-ve-luxury-plus-turkiye-de-satisa-sunuldu.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -347,78 +599,6 @@
       "publishedAt": "2026-10-20T12:06:54Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/693709/693709-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9667d88c8405f7ff29",
-      "title": "Türkiye'de Made in EU alarmı: AB ile temaslar sürüyor",
-      "summary": "Türkiye, AB'nin Made in EU düzenlemesinde kapsam dışında kalmamak için harekete geçti. Bakanlık, bugüne kadar Gümrük Birliği ile oluşan üretim ve tedarik entegrasyonunun korunmasını istiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-de-made-in-eu-alarmi-ab-ile-temaslar-suruyor--211855",
-      "publishedAt": "2026-10-20T11:50:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211855/1200x675turkiye-de-made-in-eu-alarmi-ab-ile-temaslar-suruyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5125f150eff5431755",
-      "title": "Zorlu Enerji, Türkiye’nin en yaygın şarj ağı ZES’i elden çıkarıyor",
-      "summary": "Zorlu Enerji, ZES'in bağlı olduğu Electrip'teki yüzde 41,28'lik payını 147,6 milyon dolara satıyor. Türkiye'deki şarj istasyonlarında ise zamanla Electrip markasına geçilmesi bekleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/zorlu-enerji-turkiye-nin-en-yaygin-sarj-agi-zes-i-elden-cikardi--211861",
-      "publishedAt": "2026-10-20T11:30:44Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211861/1200x675zorlu-enerji-turkiye-nin-en-yaygin-sarj-agi-zes-i-elden-cikardi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "130875d681e3c8b25b",
-      "title": "Anthropic'ten 45 milyar dolarlık yeni veri merkezi hamlesi",
-      "summary": "Anthropic, Nscale ile ikinci kez 45 milyar dolarlık yapay zeka altyapısı anlaşması yapmaya hazırlanıyor. Anlaşma gerçekleşirse iki şirket arasındaki toplam tutar 90 milyar dolara ulaşabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/anthropic-ten-45-milyar-dolarlik-yeni-veri-merkezi-hamlesi--211856",
-      "publishedAt": "2026-10-20T11:28:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211856/1200x675anthropic-ten-45-milyar-dolarlik-yeni-veri-merkezi-hamlesi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e2ce06f366477fbe5e",
-      "title": "Xiaomi Redmi Band 4 tanıtıldı: 21 gün pil ömrü ve dahası",
-      "summary": "Redmi, yeni akıllı bilekliği Band 4'ü Çin'de satışa sundu. 21 güne varan pil ömrü ve 60 Hz ekranıyla gelen model, bazı özelliklerden ise feragat ediyor. İşte özellikleri...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xiaomi-redmi-band-4-tanitildi-21-gun-pil-omru-ve-dahasi--211847",
-      "publishedAt": "2026-10-20T11:06:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211847/1200x675xiaomi-redmi-band-4-tanitildi-21-gun-pil-omru-ve-dahasi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "32f43a10ce4235d903",
-      "title": "Avrupa’dan Starlink’e rakip uydu ağı hamlesi: Telefonlar uyduya bağlanacak",
-      "summary": "Avrupa’nın dört büyük operatörü Starlink’e rakip uydu ağı kurmak için harekete geçti. Plan hayata geçerse cep telefonları, baz istasyonlarına ihtiyaç duymadan doğrudan uydulara bağlanabilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/avrupa-starlink-e-rakip-uydu-agi-kurmak-icin-harekete-gecti--211849",
-      "publishedAt": "2026-10-20T10:44:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211849/1200x675avrupa-starlink-e-rakip-uydu-agi-kurmak-icin-harekete-gecti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f9d26f81e2fe4a1008",
-      "title": "Nintendo Switch 2'nin yeni V2 modeli çıktı: En büyük sorun hâlâ çözülmedi",
-      "summary": "Nintendo Switch 2'nin yeni V2 modeli donanım tarafında bazı değişikliklerle satışa çıktı. Ancak yeni modelin en çok eleştirilen ekran sorununu çözmediği ortaya çıktı. İşte detaylar",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nintendo-switch-2-yeni-v2-modeli-cikti-en-buyuk-sorun-suruyor--211845",
-      "publishedAt": "2026-10-20T10:22:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211845/1200x675nintendo-switch-2-yeni-v2-modeli-cikti-en-buyuk-sorun-suruyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -483,18 +663,6 @@
       "editorial": false
     },
     {
-      "id": "99995c0f94382e9c62",
-      "title": "iPhone Duo siparişi verenlere erken teslim sürprizi",
-      "summary": "Apple, bazı ülkelerde iPhone Duo siparişlerini erken teslim edecek gibi görünüyor. Katlanır iPhone'u ön sipariş verenler teslimat tarihlerinin öne çekildiğini fark etti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-duo-on-siparisi-verenlere-erken-teslim-surprizi--211846",
-      "publishedAt": "2026-10-20T10:00:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211846/1200x675iphone-duo-on-siparisi-verenlere-erken-teslim-surprizi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "7959a0ff4ef0ff314d",
       "title": "Casper Excalibur Oyuncu Bilgisayarı ile Oynamaya Başlamadan Önce Kontrol Etmeniz Gereken Ayarlar",
       "summary": "Casper Excalibur oyuncu bilgisayarında kasmayı önleyen ayarlar, modelinize göre değişir; çünkü G870, G915 ve G920 farklı ekran, ekran kartı ve işlemci seçenekleriyle geliyor.",
@@ -519,18 +687,6 @@
       "editorial": false
     },
     {
-      "id": "3cbaadf07d7bc61a6b",
-      "title": "WhatsApp çıkartmaları sesli hale geliyor: Sohbet ekranı da değişiyor",
-      "summary": "WhatsApp, fotoğraf ve videolardan oluşturulan çıkartmalara ses ekleme özelliğini test ediyor. Uygulama ayrıca mesaj yazma alanını iki satırlı yeni bir tasarıma kavuşturacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/whatsapp-cikartmalari-sesli-hale-geliyor--211848",
-      "publishedAt": "2026-10-20T09:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211848/1200x675whatsapp-cikartmalari-sesli-hale-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "575909bbb82cbf7ee2",
       "title": "Casper Excalibur G915, AAA Oyunları Oynatır mı?",
       "summary": "Intel işlemcili, RTX 50 serisi ekran kartına sahip ve alüminyum tasarımlı Casper Excalibur G915, ince yapısına rağmen oyun dünyasında yüksek performans vadediyor.",
@@ -539,42 +695,6 @@
       "publishedAt": "2026-10-20T09:05:05Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/690470/690470-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a2398a7c812b083eae",
-      "title": "Sık açılıp kapatılan laptoplarda menteşe dayanıklılığı nasıl anlaşılır?",
-      "summary": "Bir laptopun dayanıklılığını incelenirken menteşe dayanıklılığı ilk bakılacak yerler arasında. Casper Excalibur G870, sertifikalı menteşe dayanıklılığı ile öne çıkıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/laptoplarda-mentese-dayanikliligi-nasil-anlasilir--211739",
-      "publishedAt": "2026-10-20T08:58:40Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211739/1200x675laptoplarda-mentese-dayanikliligi-nasil-anlasilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b6a1c183308a382298",
-      "title": "Yapay zeka sektörünün borcu 3 trilyon doları aştı: Bir şirket herkesi korkutuyor",
-      "summary": "Yapay zeka yatırımları için alınan borçlar 3 trilyon doları aştı. Talebin yavaşlaması ve artan finansman maliyetleri, teknoloji şirketlerini ve finans piyasalarını riske atıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-sektorunun-borcu-3-trilyon-dolari-asti--211842",
-      "publishedAt": "2026-10-20T08:57:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211842/1200x675yapay-zeka-sektorunun-borcu-3-trilyon-dolari-asti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "441a6db0e2efeb214a",
-      "title": "Chery'nin 1.52 litre yakan SUV'u ön satışta: 20.800 dolarlık iCar V25",
-      "summary": "Chery’nin iCar markası, menzil uzatıcılı SUV modeli V25’i Çin’de ön satışa sundu. Yaklaşık 20.800 dolardan başlayan model, köşeli tasarımı ve 1.240 km’ye varan toplam menziliyle dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/chery-icar-v25-on-satista-20-800-dolar-fiyat-1-52-litre-tuketim--211844",
-      "publishedAt": "2026-10-20T08:35:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211844/1200x675chery-icar-v25-on-satista-20-800-dolar-fiyat-1-52-litre-tuketim.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -588,18 +708,6 @@
       "category": "Teknoloji",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Digital-Sovereignty-Image-2.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "0501ff95bbfb20ebb6",
-      "title": "Shadow of Mordor'un meşhur Nemesis sistemi Red Dead Redemption 2'ye eklendi",
-      "summary": "Yüzüklerin Efendisi oyunu Shadow of Mordor'da kullanılan ve epey beğenilen Nemesis sistemi, yeni bir mod sayesinde Red Dead Redemption 2'ye de eklendi. Oyun deneyimini tamamen değiştiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/red-dead-redemption-2-nemesis-sistemiyle-yeni-bir-boyuta-kavustu--211843",
-      "publishedAt": "2026-10-20T08:11:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211843/1200x675red-dead-redemption-2-nemesis-sistemiyle-yeni-bir-boyuta-kavustu.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -723,18 +831,6 @@
       "editorial": false
     },
     {
-      "id": "353ce93e3097e195e3",
-      "title": "Tenebris Somnia: Blood, Pixels, and Prosthetics",
-      "summary": "As I’m typing this, we’re in the final hellish days before the October 16 launch of TENEBRIS SOMNIA – the retro survival horror game with live-action cutscenes – coming at you from Andrés Borghi (The Black Heart) Saibot Studios (Hellbound), and published by New Blood Interactive. (FAITH: The Unholy Trinity, DUSK, Blood West). In Tenebris",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/16/tenebris-somnia-live-action-survival-horror/",
-      "publishedAt": "2026-10-16T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/image11-09fd993f2862db1a1a94-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "b9fbebb49a086aa401",
       "title": "We’re sharing 3 tips to study smarter with Gemini Notebook.",
       "summary": "Master your exams with Google Gemini Notebook’s new 60-second video overviews and interactive quiz formats. Try these study tools at notebook.google.",
@@ -743,30 +839,6 @@
       "publishedAt": "2026-10-16T16:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/3_Gemini_Notebook_social.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "da2ea1e577b325d1be",
-      "title": "Celebrating the Next Generation of Latin American Game Creators",
-      "summary": "Across Latin America, developers are creating some of gaming’s most distinctive new worlds by turning personal memories, local history, cultural traditions, and bold ideas into experiences that resonate far beyond the region. Games such as Despelote, Mexico, 1921: A Deep Slumber, and SOPA – Tale of the Stolen Potato show the remarkable breadth of this",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/16/xbox-latin-american-latam-game-camp-id-xbox/",
-      "publishedAt": "2026-10-16T15:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Collage-XBOX-Game-Camp-1920-x-1080-0055b55935f62dc5bfaa-1024x576.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "565254ea15053e458b",
-      "title": "Next Week on XBOX: New Games for October 19 to 23",
-      "summary": "Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X|S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! Call of Duty:",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/16/next-week-on-xbox-new-games-for-october-19-to-23/",
-      "publishedAt": "2026-10-16T14:00:00Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.4715.13559635275456449.72d1efe7-e297-4b01-9ff5-81f9541bc9a1.a25cb344-59ba-49dd-8858-37563c544636?w=400&h=600",
       "language": "en",
       "editorial": false
     },
@@ -831,14 +903,14 @@
       "editorial": false
     },
     {
-      "id": "4dd1ea4c812226392b",
-      "title": "Quarantine Zone’s Miami Zero DLC is the Perfect Excuse to Return to the Smash Hit Zombie Checkpoint Simulator",
-      "summary": "Earlier this year, zombie checkpoint simulator Quarantine Zone took the world by storm. Millions of you stepped up to protect this undead-ravaged outpost at the end of the world, screening survivors, weeding out the infected, and uncovering the mystery of the outbreak. But it’s been a while, right? You’ve probably moved on, hung up your",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/15/quarantine-zones-miami-zero-dlc/",
+      "id": "c08dc5794b018e368b",
+      "title": "Android earthquake alerts now available in more than 200 regions",
+      "summary": "Android earthquake alerts are now available in more than 200 countries and regions.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/platforms/android/android-earthquake-alerts-expansion-2026/",
       "publishedAt": "2026-10-15T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Unic-1-98b1036da276e2fd109b-1024x555.jpg",
+      "category": "Mobil",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/EA-Hero-Image.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -851,18 +923,6 @@
       "publishedAt": "2026-10-15T16:00:00Z",
       "category": "Teknoloji",
       "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "c08dc5794b018e368b",
-      "title": "Android earthquake alerts now available in more than 200 regions",
-      "summary": "Android earthquake alerts are now available in more than 200 countries and regions.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/platforms/android/android-earthquake-alerts-expansion-2026/",
-      "publishedAt": "2026-10-15T16:00:00Z",
-      "category": "Mobil",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/EA-Hero-Image.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -887,18 +947,6 @@
       "publishedAt": "2026-10-15T16:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Search_Hero_11msfEh.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "029f190ba42651c0c1",
-      "title": "Free Play Days – NBA 2K27, Crusader Kings III, The Alters, Bus Simulator 21, Soccer Story and Ravenswatch",
-      "summary": "Whether you’re chasing Championships or forging a legacy, there’s a new adventure waiting for this Free Plays Days. Crusader Kings III, Bus Simulator 21 Next Stop, Soccer Story, and Ravenswatch are available this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday ,October 15 until Sunday, October 18. NBA 2K27",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/15/free-play-days-10-15-2026/",
-      "publishedAt": "2026-10-15T15:01:00Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.31609.13934234425416393.c16fba18-9d46-4e2f-9891-5efae739df3f.356d4164-080b-449e-ae1e-3c7b8c5e8277?w=400&h=600",
       "language": "en",
       "editorial": false
     },
@@ -939,18 +987,6 @@
       "editorial": false
     },
     {
-      "id": "7d0ed3cb5cb4581ac2",
-      "title": "TIME has named Google SynthID one of the Best Inventions of 2026.",
-      "summary": "TIME named Google SynthID a Best Invention of 2026 for its groundbreaking approach to AI watermarking and verification.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synthid-time-best-inventions/",
-      "publishedAt": "2026-10-15T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Labs_SynthID_Social1920x1080.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "67ffc0a982f5d23d65",
       "title": "Data-backed secrets to smarter holiday shopping",
       "summary": "Learn the best times to buy. Our new When to Buy Guide uses Google Search and discount data to show when holiday deals peak.",
@@ -959,6 +995,18 @@
       "publishedAt": "2026-10-15T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/When_to_buy_guide_resize.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "7d0ed3cb5cb4581ac2",
+      "title": "TIME has named Google SynthID one of the Best Inventions of 2026.",
+      "summary": "TIME named Google SynthID a Best Invention of 2026 for its groundbreaking approach to AI watermarking and verification.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synthid-time-best-inventions/",
+      "publishedAt": "2026-10-15T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Labs_SynthID_Social1920x1080.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1023,18 +1071,6 @@
       "editorial": false
     },
     {
-      "id": "be6c37dce88bdd9925",
-      "title": "Guide your campaign spending with new priority and allocation features",
-      "summary": "New controls in Google Ads let marketers categorize channel groupings by priority and better control how budget is allocated",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products/ads-commerce/channel-prioritization-budget-allocation/",
-      "publishedAt": "2026-10-14T15:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Waterfall_Search_Chart_01_No_Li.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "84e5246913070e7051",
       "title": "Gran Turismo 7’s Spec IV (Part 1) launches today and a first look at DualSense wireless controller – Gran Turismo Limited Edition",
       "summary": "Hey everyone, we’re excited to share news on Gran Turismo with you today. For starters, we have full details on today’s Part 1 of the Gran Turismo 7 Spec IV update. Plus, we celebrate 30 years of Gran Turismo with the first look at the Gran Turismo Limited Edition DualSense wireless controller! Read on for",
@@ -1055,18 +1091,6 @@
       "publishedAt": "2026-10-14T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4VK1DV41VQ8EZCK68R7E0CS.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "3d4f03cc82948ccccc",
-      "title": "6 ways to trick-or-treat yourself to the ultimate Halloween with Search",
-      "summary": "Whether you need a last-minute costume or a scary movie watchlist, let Google handle heavy lifting for your Halloween prep.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/search/halloween-tips-2026/",
-      "publishedAt": "2026-10-14T12:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Frightgeist_BlogHero_2.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-10-09T12:50:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4EN399YDFNQMGM5VG6EHTNS.01M4EN39V1RNGJ3FBS356QEAB5.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "399e9316859634ebf3",
-      "title": "Bridging technical depth and usability: The story behind Radar’s redesign",
-      "summary": "We redesigned Cloudflare Radar to make real-time global traffic and outage data accessible to a wider audience — including journalists, less technical researchers, and everyday users. By introducing an interactive map and standardized components, we simplified navigation while preserving technical depth.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/radar-redesign/",
-      "publishedAt": "2026-10-08T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4DWXM8QH1FEK7XDTCR1RVA5.01M4DWXN5TGFT9XA1WXDCVYJ4B.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "ab59c26010b6f11d5b",
-      "title": "Building an evidence-grounded agentic security operations harness on Cloudflare",
-      "summary": "Cloudflare Managed Defense uses a team of specialized AI agents built on Workers and global network telemetry to analyze security alerts. By separating deterministic evidence collection from model inference, the system delivers grounded recommendations to Managed Defense Analysts.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/agentic-security-operations/",
-      "publishedAt": "2026-10-07T16:30:36Z",
-      "category": "Yapay Zeka",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M32R921QMDZ1S2MHB3M7Q85H.01M32R93AJ8Q0D22GYW0163M3F.png",
       "language": "en",
       "editorial": false
     }
