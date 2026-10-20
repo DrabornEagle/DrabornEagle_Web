@@ -1,7 +1,43 @@
 {
-  "generatedAt": "2026-10-19T21:42:08.002016Z",
+  "generatedAt": "2026-10-20T05:48:26.393345Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "bc8408da3815a10179",
+      "title": "Tofaş, Bursa Fabrikası’nda 7,5 Milyonuncu Aracını Üretti",
+      "summary": "tofas-bursa-fabrikasi-7-5-milyon-arac-uretti",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/tofas-bursa-fabrikasi-nda-7-5-milyonuncu-aracini-uretti-h227485.html",
+      "publishedAt": "2026-10-20T04:33:17Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693604/693604-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4ad1473f6e7273dd75",
+      "title": "Samsung Galaxy S27 Serisi Beklenenden Çok Daha Erken Tanıtılabilir",
+      "summary": "Samsung'un Galaxy S27 serisi için farklı bir strateji izleyerek telefonları beklenenden çok daha erken tanıtabileceği iddia edildi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-s27-serisi-beklenenden-erken-tanitilabilir-h227482.html",
+      "publishedAt": "2026-10-20T04:10:31Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693601/693601-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "03b304fd71f8666a14",
+      "title": "Resmen Açıklandı: Apple, 28 Ekim'de Lansman Düzenleyecek",
+      "summary": "Apple, 28 Ekim günü lansman düzenleyeceğini resmen açıkladı. Peki neler tanıtılacak?",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/apple-28-ekim-lansman-duyurdu-neler-tanitilacak-h227476.html",
+      "publishedAt": "2026-10-20T03:50:02Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693595/693595-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "42900e32bc1ff47dc3",
       "title": "Ekranın kendisi hoparlöre dönüşüyor: Ses, görüntüdeki nesneyi takip edecek",
@@ -615,54 +651,6 @@
       "editorial": false
     },
     {
-      "id": "304c443817a81599fb",
-      "title": "VALORANT'ın Dev Dünya Turu İstanbul'a Geliyor",
-      "summary": "VALORANT'ın dev dünya turu İstanbul'a geliyor. Riot Games, 2027 VCT takvimini ve Türkiye'deki oyuncuları ilgilendiren yenilikleri açıkladı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/valorant-dev-dunya-turu-istanbul-geliyor-h227413.html",
-      "publishedAt": "2026-10-19T08:20:09Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/693481/693481-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "bf82ec7d8bcde90398",
-      "title": "PAHALI VS UYGUN FİYATLI KULAKLIĞA KARŞI | Huawei Freebuds Neo VS AirPods Pro 3",
-      "summary": "Huawei FreeBuds Neo ve Apple AirPods Pro 3 karşılaştırmasıyla karşınızdayız. Aralarında yaklaşık 2,5 kat fiyat farkı bulunan bu iki kulaklığı tasarım, konfor, ses teknolojisi, aktif gürültü engelleme, mikrofon performansı ve pil ömrü başlıkları altında detaylıca kıyasladık.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/huawei-freebuds-neo-airpods-pro-3-karsilastirma-h227410.html",
-      "publishedAt": "2026-10-19T08:06:37Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/693466/693466-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f12ca7003d74b94c56",
-      "title": "Sudan Ucuz Oyuncu Monitörü Xiaomi Redmi G27Q 2026 Tanıtıldı",
-      "summary": "Xiaomi, oyunculara yönelik bütçe dostu REDMI serisine 240Hz yenileme hızı ve 2K çözünürlük sunan REDMI G27Q 2026 Standard Edition modelini ekledi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/xiaomi-redmi-g27q-2026-oyuncu-monitoru-h227405.html",
-      "publishedAt": "2026-10-19T07:56:45Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/693445/693445-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e2af289b8b8f6b5f3e",
-      "title": "Rockstar Açıkladı: GTA 6 Bekleyenleri Sevindirecek Haber",
-      "summary": "Rockstar'ın açıkladığına göre GTA 6'da içine girip keşfedilebilecek yüzlerce mekân bulunacak ve hepsi birbirinden farklı olacak.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/gta-6-bekleyenleri-sevindirecek-haber-h227398.html",
-      "publishedAt": "2026-10-19T07:55:39Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/693394/693394-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "353ce93e3097e195e3",
       "title": "Tenebris Somnia: Blood, Pixels, and Prosthetics",
       "summary": "As I’m typing this, we’re in the final hellish days before the October 16 launch of TENEBRIS SOMNIA – the retro survival horror game with live-action cutscenes – coming at you from Andrés Borghi (The Black Heart) Saibot Studios (Hellbound), and published by New Blood Interactive. (FAITH: The Unholy Trinity, DUSK, Blood West). In Tenebris",
@@ -1198,6 +1186,18 @@
       "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/01/microsoft-365-and-linkedin-leadership-update/",
       "publishedAt": "2026-10-01T15:03:27Z",
       "category": "Teknoloji",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "4607b4c4468386f7d7",
+      "title": "New Microsoft data innovations unlock what only your business knows",
+      "summary": "Every organization has knowledge that is uniquely its own: the way its business operates, the data it has built over time, the expertise of its people and the context behind thousands of everyday decisions. As powerful AI models become more widely available, that unique business intelligence matters more than ever. The difference will come from...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/09/28/new-microsoft-data-innovations-unlock-what-only-your-business-knows/",
+      "publishedAt": "2026-09-29T06:30:04Z",
+      "category": "Yapay Zeka",
       "image": "",
       "language": "en",
       "editorial": false
