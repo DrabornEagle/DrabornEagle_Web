@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-10-20T23:04:23.669275Z",
+  "generatedAt": "2026-10-21T06:27:10.344864Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e23e03350cb8427257",
+      "title": "Bakanlık Açıkladı: Ankara’da Devasa Yatırımla Veri Merkezi Kurulacak!",
+      "summary": "Sanayi ve Teknoloji Bakanlığı, Ankara’da 450 milyon dolarlık yatırım ile veri merkezi kurulacağını açıkladı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/ankara-veri-merkezi-kurulacak-h227554.html",
+      "publishedAt": "2026-10-21T05:10:36Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693847/693847-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c7c1db1d24f97b1693",
+      "title": "Southeast Asia’s digital economy to hit $368 billion",
+      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
+      "publishedAt": "2026-10-21T04:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/e-Conomy_SEA_hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "72591b1f8d5feffcee",
+      "title": "Samsung Galaxy A18 4G Türkiye'de: İşte Fiyatı",
+      "summary": "Samsung, bütçe dostu yeni telefonu Galaxy A18 4G'yi ülkemize getirdi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-a18-4g-turkiye-fiyati-h227551.html",
+      "publishedAt": "2026-10-21T03:55:18Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693844/693844-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0d3a017e6fafd0e797",
+      "title": "GTA 6'nın Ön Siparişte Ne Kadar Sattığı Belli Oldu",
+      "summary": "GTA 6'nın ön sipariş sürecinde şimdiye kadar ne kadar sattığı ve ne kadar para kazandığı belli oldu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/gta-6-on-siparis-ne-kadar-satti-aciklandi-h227548.html",
+      "publishedAt": "2026-10-21T03:44:34Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693835/693835-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dbc2db1872aa37c4cd",
+      "title": "Yeni Xbox'ın Çıkış Tarihi ve Fiyatı Sızdırıldı!",
+      "summary": "Yeni nesil Xbox'ın bekleyenleri üzecek çıkış tarihi ortaya çıktı. Fiyatı da inanılmaz yüksek seviyelerde olabilir.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/yeni-xbox-cikis-tarihi-muhtemel-fiyati-h227546.html",
+      "publishedAt": "2026-10-21T03:35:44Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/693832/693832-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "c78cf468160e1a4550",
       "title": "8 eMudhra certificates are compromised. Here's what you need to know",
@@ -675,66 +735,6 @@
       "editorial": false
     },
     {
-      "id": "0796bd4d2bae61ed94",
-      "title": "Microsoft Uyardı: \"Yapay Zekâ Ajanları, Şirketler İçin İç Tehdide Dönüşebilir\"",
-      "summary": "Microsoft, öngörülemez yapay zekâ ajanlarının kurumlar için iç tehdit oluşturabileceğini belirterek yeni güvenlik araçlarını duyurdu.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/microsoft-yapay-zeka-ajanlari-sirketler-icin-ic-tehdide-donusebilir-h227497.html",
-      "publishedAt": "2026-10-20T10:15:23Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/693625/693625-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ac6a285a3de77e6451",
-      "title": "Yalnızca 171 Km'deki Ferrari F50 Açık Artırmaya Çıkıyor (Tahmini Ederi Dudak Uçuklatacak Cinsten)",
-      "summary": "Yalnızca 171 km'de saklanan 1997 Ferrari F50, Las Vegas müzayedesinde 20 milyon doları aşması beklenen rekor tahminiyle satışa çıkıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/yalnizca-171-km-ferrari-f50-acik-artirmaya-cikiyor-h227507.html",
-      "publishedAt": "2026-10-20T10:15:21Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/693643/693643-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7959a0ff4ef0ff314d",
-      "title": "Casper Excalibur Oyuncu Bilgisayarı ile Oynamaya Başlamadan Önce Kontrol Etmeniz Gereken Ayarlar",
-      "summary": "Casper Excalibur oyuncu bilgisayarında kasmayı önleyen ayarlar, modelinize göre değişir; çünkü G870, G915 ve G920 farklı ekran, ekran kartı ve işlemci seçenekleriyle geliyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/casper-excalibur-oyuncu-bilgisayari-kontrol-etmeniz-gereken-ayarlar-h227470.html",
-      "publishedAt": "2026-10-20T09:57:26Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/690145/690145-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6b9e9eeda3256f6e8b",
-      "title": "Süpürgelerde Tek Doldurmayla Metrekarelerce Alanı Silebilen Akıllı Su Dozajlama Sistemi Nasıl Çalışır?",
-      "summary": "Ev temizliğinde devir değişti; artık sadece tozu çekmek yetmiyor, aynı anda silmek de bir standart haline geldi. Ancak işin içine su girince \"Zemin çok ıslak kaldı\" veya \"Su hemen bitti\" gibi dertler başlıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/supurgelerde-tek-doldurmayla-metrekarelerce-alani-silebilen-akilli-su-dozajlama-sistemi-nasil-calisir-h227519.html",
-      "publishedAt": "2026-10-20T09:55:21Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/691861/691861-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "575909bbb82cbf7ee2",
-      "title": "Casper Excalibur G915, AAA Oyunları Oynatır mı?",
-      "summary": "Intel işlemcili, RTX 50 serisi ekran kartına sahip ve alüminyum tasarımlı Casper Excalibur G915, ince yapısına rağmen oyun dünyasında yüksek performans vadediyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/casper-excalibur-g915-aaa-oyunlari-oynatir-mi-h227464.html",
-      "publishedAt": "2026-10-20T09:05:05Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/690470/690470-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "02ab68be675b3bf679",
       "title": "Advancing digital sovereignty with greater control and choice",
       "summary": "Across my conversations with leaders in government, critical infrastructure and regulated industries, one priority consistently rises to the top: putting technology to work on their most important systems while maintaining the control those systems require. This challenge is becoming more important as advanced cloud and AI capabilities move into public services, regulated processes and essential...",
@@ -939,6 +939,18 @@
       "editorial": false
     },
     {
+      "id": "fb9b71b9aeee89562a",
+      "title": "How we're helping the world prepare for natural disasters",
+      "summary": "Our north star is simple yet ambitious: No one should be surprised by a natural disaster.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/crisis-resilience-white-paper/",
+      "publishedAt": "2026-10-15T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "c08dc5794b018e368b",
       "title": "Android earthquake alerts now available in more than 200 regions",
       "summary": "Android earthquake alerts are now available in more than 200 countries and regions.",
@@ -975,18 +987,6 @@
       "editorial": false
     },
     {
-      "id": "fb9b71b9aeee89562a",
-      "title": "How we're helping the world prepare for natural disasters",
-      "summary": "Our north star is simple yet ambitious: No one should be surprised by a natural disaster.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-research/crisis-resilience-white-paper/",
-      "publishedAt": "2026-10-15T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "a4d56d187e5a9c78f5",
       "title": "Making your Pixel devices last longer through design, repair, and reuse",
       "summary": "On International Repair Day, we’re highlighting how we design devices for longevity, make repair and reuse more accessible and more.",
@@ -1007,18 +1007,6 @@
       "publishedAt": "2026-10-15T14:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4XW9N9BNAM3T4W2SE62A1B1.01M4XW9NZG3B1PTR3QTA8CK4GR.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "7d0ed3cb5cb4581ac2",
-      "title": "TIME has named Google SynthID one of the Best Inventions of 2026.",
-      "summary": "TIME named Google SynthID a Best Invention of 2026 for its groundbreaking approach to AI watermarking and verification.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/synthid-time-best-inventions/",
-      "publishedAt": "2026-10-15T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Labs_SynthID_Social1920x1080.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-09T18:27:34Z",
       "category": "Yapay Zeka",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4GV0AV5F55NC2CCEBK9XCTA.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "38bfcb4310c98b8dd2",
+      "title": "Introducing on-demand CPU and memory profiling with flamegraphs for Workers and Durable Objects",
+      "summary": "On-demand CPU and memory profiling for Cloudflare Workers and Durable Objects is now available. Now you can generate interactive flamegraphs directly in production to quickly track down memory leaks and performance bottlenecks.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/workers-on-demand-profiling/",
+      "publishedAt": "2026-10-09T13:00:00Z",
+      "category": "Donanım",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M497X1XKZ8XG2FXKMTKEX5F4.png",
       "language": "en",
       "editorial": false
     }
