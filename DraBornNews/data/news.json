@@ -1,7 +1,139 @@
 {
-  "generatedAt": "2026-10-21T17:34:56.133369Z",
-  "sourceCount": 7,
+  "generatedAt": "2026-10-21T20:51:11.156802Z",
+  "sourceCount": 6,
   "items": [
+    {
+      "id": "9792ad9ea46620dfe8",
+      "title": "PHP krizi büyüyor: FBI kurumları uyardı",
+      "summary": "Günümüzde sayısız devlet kurumunun PHP altyapısı üzerinde hizmetlerini sunması büyük bir krizi de beraberinde getirdi. PHP kodlarındaki açık bütün interneti etkisi altına aldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/internet-dunyasi-diken-ustunde--211936",
+      "publishedAt": "2026-10-21T20:50:04Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211936/1200x675internet-dunyasi-diken-ustunde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8f49587bca5c30fce2",
+      "title": "PHP krizi interneti vurdu: Dünya çapında web siteleri kapatılıyor",
+      "summary": "PHP’de keşfedilen iki kritik güvenlik açığı dünya genelinde alarm verdi. Yapay zeka ile bulunan açıklar nedeniyle bazı kamu kurumları ve internet siteleri geçici olarak erişime kapatıldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/php-krizi-interneti-vurdu-dunya-capinda-web-siteleri-kapatiliyor--211935",
+      "publishedAt": "2026-10-21T20:42:08Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211935/1200x675php-krizi-interneti-vurdu-dunya-capinda-web-siteleri-kapatiliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3e2d05caa1fd1b5310",
+      "title": "AMD, FSR 4.1 teknolojisini Xbox konsollarına ve el konsollarına getiriyor",
+      "summary": "AMD, FSR 4.1 teknolojisini Xbox Series S ve Series X'e getiriyor. Yeni teknoloji, özellikle donanımı daha sınırlı olan Series S'te oyun performansını ve görüntü kalitesini artırabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amd-fsr-4-1-i-xbox-konsollarina-ve-el-konsollarina-getiriyor--211926",
+      "publishedAt": "2026-10-21T20:27:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211926/1200x675amd-fsr-4-1-i-xbox-konsollarina-ve-el-konsollarina-getiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a7aecf4121b5bcc1af",
+      "title": "Güneş enerjisi santrallerinde çim biçme makinelerinin yerini koyunlar alıyor",
+      "summary": "ABD'de yaygınlaşan güneş otlatmacılığı, güneş panellerinin altındaki otları koyunlarla kontrol ederek enerji şirketlerine tasarruf, çiftçilere ise yeni gelir kapısı sunuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gunes-tarlalarinda-cim-bicme-makinelerinin-yerini-koyunlar-aliyor--211923",
+      "publishedAt": "2026-10-21T20:05:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211923/1200x675gunes-tarlalarinda-cim-bicme-makinelerinin-yerini-koyunlar-aliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "74620ab12ff2ac257c",
+      "title": "Nvidia'nın AI planları büyüyor: Groq 3D DRAM'e geçiyor",
+      "summary": "Nvidia bünyesindeki Groq, yeni nesil yapay zeka çiplerinde bellek teknolojisini değiştirmeye hazırlanıyor. Şirketin daha yüksek kapasite için 3D yığınlanmış DRAM kullanacağı ortaya çıktı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-nin-ai-planlari-buyuyor-groq-3d-dram-e-geciyor--211910",
+      "publishedAt": "2026-10-21T19:43:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211910/1200x675nvidia-nin-ai-planlari-buyuyor-groq-3d-dram-e-geciyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "97fd738ef6bb1f8469",
+      "title": "Xiaomi katlanabilir tasarımlı yeni araç süpürgesini satışa sundu",
+      "summary": "Xiaomi, uygun fiyatlı yeni araç süpürgesini satışa sundu. 20.000 Pa emiş gücü, katlanabilir tasarımı ve beş farklı aksesuarıyla dikkat çeken cihaz, 40 dakikaya kadar kullanım süresi vadediyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/xiaomi-katlanabilir-tasarimli-yeni-arac-supurgesini-satisa-sundu--211909",
+      "publishedAt": "2026-10-21T19:22:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211909/1200x675xiaomi-katlanabilir-tasarimli-yeni-arac-supurgesini-satisa-sundu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5c903c2b4eea1dc285",
+      "title": "Yapay zeka, akrep zehrine karşı 318 bin protein tasarladı: 17'si testleri geçti",
+      "summary": "Anthropic'in yapay zeka modeli Claude, 64 saatte 318 bin protein tasarladı. Laboratuvarda test edilen 211 adaydan 17'si akrep zehrini hedeflemede başarılı oldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-akrep-zehrine-karsi-318-bin-protein-tasarladi--211908",
+      "publishedAt": "2026-10-21T19:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211908/1200x675yapay-zeka-akrep-zehrine-karsi-318-bin-protein-tasarladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a3a8e3b5240528fe27",
+      "title": "ChatGPT sizi gizlice analiz edip psikolojik profilinizi çıkarıyor olabilir",
+      "summary": "Geçtiğimiz günlerde yayımlanan yeni bir araştırma, ChatGPT'nin hafıza özelliğine dair bazı çarpıcı gerçekleri ortaya çıkardı. Yapay zekâ, konuşmalarınızı analiz edip psikolojik profilinizi çıkarıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/chatgpt-sizi-gizlice-analiz-edip-psikolojik-profilinizi-cikariyor--211905",
+      "publishedAt": "2026-10-21T18:38:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211905/1200x675chatgpt-sizi-gizlice-analiz-edip-psikolojik-profilinizi-cikariyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "86302da1a291cbdaec",
+      "title": "Yapay zeka modellerini daha ucuza çalıştıran altyapı açık kaynak oldu",
+      "summary": "DeepSeek, yapay zeka modellerini daha verimli çalıştıran DeepInfer altyapısını açık kaynak yaptı. Yazılım, hesaplama maliyetlerini ve enerji tüketimini azaltmayı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ai-modellerini-daha-ucuza-calistiran-altyapi-acik-kaynak-oldu--211916",
+      "publishedAt": "2026-10-21T18:17:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211916/1200x675ai-modellerini-daha-ucuza-calistiran-altyapi-acik-kaynak-oldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "555d5af9174ca60b8a",
+      "title": "Amazon Nvidia'dan binlerce yapay zekâ çipi alıyor ama hepsini çalıştıracak elektriği yok",
+      "summary": "Amazon, Nvidia'ya milyarlarca dolar ödeyerek çok sayıda yapay zekâ çipi alıyor. Ancak şirketin bu donanımları çalıştırabilmesi için önce çözmesi gereken büyük bir sorun var.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amazon-nvidia-dan-binlerce-cip-aldi-ama-calistiracak-elektrik-yok--211914",
+      "publishedAt": "2026-10-21T17:55:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211914/1200x675amazon-nvidia-dan-binlerce-cip-aldi-ama-calistiracak-elektrik-yok.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "11a12a0ec53b1e2d45",
+      "title": "Elon Musk: \"Gelecekte paranın yerini fiziksel ölçüler alabilir\"",
+      "summary": "Elon Musk, robotik ve yapay zekadaki ilerlemelerin geleneksel para sistemini gereksiz hale getireceğini düşünüyor. Musk'a göre paranın yerini enerji, güç ve kütle gibi fiziksel büyüklükler alabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/elon-musk-gelecekte-paranin-yerini-fiziksel-olculer-alabilir--211917",
+      "publishedAt": "2026-10-21T17:34:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211917/1200x675elon-musk-gelecekte-paranin-yerini-fiziksel-olculer-alabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "fdef2aa0d868290e7f",
       "title": "Watch 10'dan geçtim, ne fark etti? ''Apple Watch 12 incelemesi''",
@@ -423,18 +555,6 @@
       "editorial": false
     },
     {
-      "id": "c5431fac787d83b83d",
-      "title": "Zyxel, uygun fiyatlı WiFi 7 access point modellerini duyurdu",
-      "summary": "Zyxel, küçük işletmeler ve profesyonel kullanıcılar için iki yeni WiFi 7 access point tanıttı. NWA50BE MAX ve NWA90BE MAX, 9,3 Gbps'ye kadar hız ve kolay kontrol özellikleri sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/zyxel-uygun-fiyatli-wifi-7-access-point-modellerini-duyurdu--211901",
-      "publishedAt": "2026-10-21T12:45:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211901/1200x675zyxel-uygun-fiyatli-wifi-7-access-point-modellerini-duyurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "1c00e7ec76b7da97d7",
       "title": "YouTube’dan Tartışma Yaratacak Değişiklik",
       "summary": "YouTube, yeni bir güncellemeyle beğenmeme butonunu üç noktalı menünün arkasına taşıyor.",
@@ -455,18 +575,6 @@
       "publishedAt": "2026-10-21T12:30:36Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/693946/693946-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8ea3243d8726736c20",
-      "title": "En ucuz geniş ekran telefon geliyor",
-      "summary": "Coolpad Cool X Wide geniş ekranlı akıllı telefonları deneyimlemek isteyen ancak fazla para vermek istemeyen tüketiciler için neredeyse bedava bir fiyat etiketi ile geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/coolpad-cool-x-wide-tanitildi--211888",
-      "publishedAt": "2026-10-21T12:25:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211888/1200x675coolpad-cool-x-wide-tanitildi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -507,18 +615,6 @@
       "editorial": false
     },
     {
-      "id": "2c9033ee4a7f1788e3",
-      "title": "Mercedes iki CLA’yı çarpıştırdı: Batarya ve kabin ne durumda?",
-      "summary": "Mercedes-Benz, iki hareketli CLA’yı 56 km/s hızdaki yan çarpışma testinde karşı karşıya getirdi. Sekiz test mankeninin kullanıldığı denemede kabinlerin ve bataryanın korunduğu açıklandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/mercedes-iki-cla-yi-carpistirdi-batarya-ve-kabin-ne-durumda--211904",
-      "publishedAt": "2026-10-21T12:10:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211904/1200x675mercedes-iki-cla-yi-carpistirdi-batarya-ve-kabin-ne-durumda.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "eaf5d727369bf491ab",
       "title": "PlayStation Store’s Planet of the Deals promotion is live now",
       "summary": "Embark on a new adventure with PlayStation Store’s latest promotion, Planet of the Deals, which is live now. Players can browse hundreds of PS5 and PS4 games featured in the deals and which are discounted for a limited time.* You can preview a selection of titles right now with the below list. Then, head to",
@@ -528,30 +624,6 @@
       "category": "Oyun",
       "image": "",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "5ca87805107c3e8e6d",
-      "title": "İzmir’de geliştirilen elektrikli Karluna Pratik yollara çıktı: İlk teslimatlar yapıldı",
-      "summary": "İzmir’de geliştirilen elektrikli ticari araç Karluna Pratik’in ilk teslimatları yapıldı. Şirket, yaklaşık 500 ön sipariş aldığını ve 2027’de teslimat sayısını 5 bine çıkarmayı hedeflediğini açıkladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/izmir-de-gelistirilen-elektrikli-karluna-pratik-yollara-cikti--211915",
-      "publishedAt": "2026-10-21T11:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211915/1200x675izmir-de-gelistirilen-elektrikli-karluna-pratik-yollara-cikti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9657ddd9cc2bb41ab4",
-      "title": "Xbox Game Pass’te büyük değişim kapıda: Özelleştirme geliyor",
-      "summary": "Microsoft, Xbox Game Pass abonelik sistemini yenilemeye hazırlanıyor. Yeni modelin oyuncuların istedikleri özellikleri ayrı ayrı seçebileceği bir yapıda olması bekleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-game-pass-te-buyuk-degisim-kapida-ozellestirme-geliyor--211895",
-      "publishedAt": "2026-10-21T11:41:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211895/1200x675xbox-game-pass-te-buyuk-degisim-kapida-ozellestirme-geliyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -567,42 +639,6 @@
       "editorial": false
     },
     {
-      "id": "81b654121c0423b57a",
-      "title": "AMD ekran kartları için yeni sürücü yayınlandı: FSR 4.1 desteği geldi",
-      "summary": "AMD, Radeon ekran kartları için yeni Adrenalin 26.10.1 sürücüsünü yayınladı. Güncelleme FSR 4.1 desteğinin yanı sıra 3 yeni oyun için destek ve hata düzeltmeleri getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amd-ekran-kartlari-icin-yeni-surucu-yayinlandi-fsr-4-1-geliyor--211899",
-      "publishedAt": "2026-10-21T11:19:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211899/1200x675amd-ekran-kartlari-icin-yeni-surucu-yayinlandi-fsr-4-1-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1da89605098fb57bc7",
-      "title": "Çalkantı sürüyor: Xbox için yeni işten çıkarmalar planlanıyor",
-      "summary": "Microsoft’un Xbox bölümünde önümüzdeki aylarda üç yeni işten çıkarma dalgası planladığı öne sürüldü. Bu yeni süreçte kaç çalışanın ve stüdyonun etkileneceği ise belirsiz.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-icin-yeni-isten-cikarmalar-planlaniyor--211898",
-      "publishedAt": "2026-10-21T10:57:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211898/1200x675xbox-icin-yeni-isten-cikarmalar-planlaniyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ffc367eaf375a8d9d5",
-      "title": "Windows'ta USB diskler için değişiklik: ReFS artık çalışmayacak",
-      "summary": "Microsoft, Windows’ta ReFS formatlı USB ve harici diskler için yeni bir kısıtlama getiriyor. Ocak 2027'de başlayacak değişiklik, bazı kullanıcıların dosyalarına erişimini etkileyebilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/windows-ta-usb-diskler-icin-degisiklik-refs-artik-calismayacak--211896",
-      "publishedAt": "2026-10-21T10:36:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211896/1200x675windows-ta-usb-diskler-icin-degisiklik-refs-artik-calismayacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "324a83a5200d982b0e",
       "title": "ChatGPT’ye Kullanıcıların Çok İşine Yarayacak Gizlilik Özelliği Geldi",
       "summary": "OpenAI, ChatGPT’ye kullanıcıların hassas sohbetlerini koruma altına alacak “Kilitli Sohbetler” isimli harika bir özellik ekledi.",
@@ -611,42 +647,6 @@
       "publishedAt": "2026-10-21T10:21:52Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/693973/693973-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3fcd54e821a388a8ea",
-      "title": "PS5'in 14.10 sürümü kırıldı: GTA 6 öncesi Sony'ye kritik haber",
-      "summary": "PS5'in yeni 14.10 sürümü için kritik bir açık ortaya çıktı. GTA 6'nın çalışması için bu sürümün gerektiği iddiaları, gelişmeyi Sony açısından daha önemli hale getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ps5-in-14-10-surumu-kirildi-gta-6-oncesi-sony-ye-kritik-haber--211903",
-      "publishedAt": "2026-10-21T09:52:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211903/1200x675ps5-in-14-10-surumu-kirildi-gta-6-oncesi-sony-ye-kritik-haber.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "649fa9334ebba61dc9",
-      "title": "Yeni nesil Xbox konsolu cep yakacak: Fiyatı 1800 dolar olabilir",
-      "summary": "Microsoft’un yeni nesil Xbox planları ortaya çıktı. Şirketin 2027’de el konsolu, 2028’de ise yeni nesil konsolunu piyasaya sürmesi bekleniyor. Yeni konsolun fiyatı 1.800 dolara ulaşabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-nesil-xbox-konsolu-cep-yakacak-fiyati-1800-dolar-olabilir--211893",
-      "publishedAt": "2026-10-21T09:30:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211893/1200x675yeni-nesil-xbox-konsolu-cep-yakacak-fiyati-1800-dolar-olabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4b6485db85c9c4cd67",
-      "title": "GTA 6 ön sipariş rakamları paylaşıldı: PlayStation'da rekora koşuyor",
-      "summary": "GTA 6 ön siparişlerinde yeni rekorlara yaklaşılıyor. Üçüncü taraf tahminlerine göre oyunun dijital ön siparişleri 6,45 milyona ulaşırken PlayStation yüzde 74 pay aldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-on-siparis-rakamlari-paylasildi-rekora-kosuyor--211894",
-      "publishedAt": "2026-10-21T09:08:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211894/1200x675gta-6-on-siparis-rakamlari-paylasildi-rekora-kosuyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -675,18 +675,6 @@
       "editorial": false
     },
     {
-      "id": "74f923280f9c168a72",
-      "title": "Think You’ve Beaten Fountains? Prove it in the Gauntlet",
-      "summary": "So, what exactly is the Gauntlet Mode? Think of it as the ultimate proving ground for warriors who crave a real challenge. Originally designed on PC to accommodate the most demanding souls-like connoisseurs, it’s now arriving on XBOX just after the console version’s premiere. It’s your turn to test your mettle! Built for the most",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/think-youve-beaten-fountains/",
-      "publishedAt": "2026-10-20T20:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/NPC-screenshot-07a344135063533d4d73-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "7a44093bc311d4a625",
       "title": "Get hands-free personalized help on the road with Gemini",
       "summary": "Gemini is available in cars globally. With Personal Intelligence, get uniquely tailored help while keeping your eyes on the road.",
@@ -695,6 +683,18 @@
       "publishedAt": "2026-10-20T20:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/PersonalIntelligence_auto_hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "74f923280f9c168a72",
+      "title": "Think You’ve Beaten Fountains? Prove it in the Gauntlet",
+      "summary": "So, what exactly is the Gauntlet Mode? Think of it as the ultimate proving ground for warriors who crave a real challenge. Originally designed on PC to accommodate the most demanding souls-like connoisseurs, it’s now arriving on XBOX just after the console version’s premiere. It’s your turn to test your mettle! Built for the most",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/think-youve-beaten-fountains/",
+      "publishedAt": "2026-10-20T20:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/NPC-screenshot-07a344135063533d4d73-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
@@ -759,18 +759,6 @@
       "editorial": false
     },
     {
-      "id": "683e29d42531879293",
-      "title": "Coming to XBOX Game Pass: Final Fantasy VII Remake Intergrade, The Séance of Blake Manor, and More",
-      "summary": "Ghosts to question and a planet to save. Sounds like a perfectly reasonable few weeks to me! We have another batch of games coming soon to Game Pass, so clear a little room in that “Play Next List” and let’s get to it! Coming Soon Sandustry(Game Preview) (PC) – October 21Now with Game Pass Premium;",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/xbox-game-pass-october-2026-wave-2/",
-      "publishedAt": "2026-10-20T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/TSOBM_KeyArt_1920x1080-3da54ac5982b0b82cca0-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "2508ace600ddfdfca1",
       "title": "Ask a Scientist: How can AI help doctors spend more time on collaborative care?",
       "summary": "AMIE, an AI system people can chat with before doctor’s appointments, securely gathers patient information, and saves doctors time.",
@@ -791,6 +779,18 @@
       "publishedAt": "2026-10-20T16:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/October_Gemini_VSB_hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "683e29d42531879293",
+      "title": "Coming to XBOX Game Pass: Final Fantasy VII Remake Intergrade, The Séance of Blake Manor, and More",
+      "summary": "Ghosts to question and a planet to save. Sounds like a perfectly reasonable few weeks to me! We have another batch of games coming soon to Game Pass, so clear a little room in that “Play Next List” and let’s get to it! Coming Soon Sandustry(Game Preview) (PC) – October 21Now with Game Pass Premium;",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/20/xbox-game-pass-october-2026-wave-2/",
+      "publishedAt": "2026-10-20T16:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/TSOBM_KeyArt_1920x1080-3da54ac5982b0b82cca0-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
