@@ -1,7 +1,43 @@
 {
-  "generatedAt": "2026-10-21T23:56:33.622097Z",
+  "generatedAt": "2026-10-22T04:14:33.799131Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "5c5175b22becb41930",
+      "title": "Efsane Oyun Şirketi BioWare Kapanıyor!",
+      "summary": "Electronic Arts , Mass Effect ile Dragon Age gibi ikonik serilere imza atan efsanevi geliştirici BioWare'i kapatma kararı aldı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/bioware-kapaniyor-h227671.html",
+      "publishedAt": "2026-10-22T04:05:58Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/694181/694181-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7d045887638666c21d",
+      "title": "Apple Music Logosu Değişti: İşte Yeni Logo!",
+      "summary": "Apple Music, yeniden markalaşmaya gitti. Bu kapsamda logo da değişti.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/apple-music-yeni-logo-h227669.html",
+      "publishedAt": "2026-10-22T03:56:07Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694178/694178-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8cb1b4e862329a59c0",
+      "title": "İnternetin Omurgası PHP'de 2 Kritik Güvenlik Açığı",
+      "summary": "İnternet altyapısının temel taşlarından PHP'de iki kritik güvenlik açığı tespit edildi ve dünya genelinde milyonlarca sunucu alarma geçti.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/php-guvenlik-acigi-h227668.html",
+      "publishedAt": "2026-10-22T03:40:05Z",
+      "category": "Güvenlik",
+      "image": "https://imgrosetta.webtekno.com/file/694174/694174-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "99d33c551fb2604bd8",
       "title": "Windows 11 için sevindirecek karar: Copilot resmen kırpılıyor",
@@ -651,18 +687,6 @@
       "editorial": false
     },
     {
-      "id": "324a83a5200d982b0e",
-      "title": "ChatGPT’ye Kullanıcıların Çok İşine Yarayacak Gizlilik Özelliği Geldi",
-      "summary": "OpenAI, ChatGPT’ye kullanıcıların hassas sohbetlerini koruma altına alacak “Kilitli Sohbetler” isimli harika bir özellik ekledi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/chatgpt-ozellik-geldi-h227596.html",
-      "publishedAt": "2026-10-21T10:21:52Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/693973/693973-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "c7c1db1d24f97b1693",
       "title": "Southeast Asia’s digital economy to hit $368 billion",
       "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-10-13T15:51:41Z",
       "category": "Donanım",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4RYXQ3HHM0NCXGK8DBW1JR3.01M4RYXQR4R5Q48PG2RZ86HSR5.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "80f26b2bd8fbb1d108",
-      "title": "Filter, reshape, and redact logs before export with Transformers",
-      "summary": "Logpush now supports Transformers, allowing teams to filter, redact, and reshape log streams using SQL before export. Powered by Apache DataFusion and Apache Arrow, Transformers apply those changes directly to log data before it reaches the destination.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/transformers-on-logpush/",
-      "publishedAt": "2026-10-12T14:44:59Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4HA4PM499GF25H969ZFXCA3.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "b43fc89aefdae0f55a",
-      "title": "Microsoft to expand Azure Maia system to multi-gigawatt deployments",
-      "summary": "Azure Maia 200 now in production; Azure Maia 300 coming in 2027 As we move into the era of Super Intelligence, Microsoft is entering a new phase of infrastructure. We will scale our Azure Maia family to multi-gigawatt deployments starting in 2027, making Maia the primary inference system for Microsoft products and services. The multigenerational...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/12/microsoft-to-expand-azure-maia-system-to-multi-gigawatt-deployments/",
-      "publishedAt": "2026-10-12T13:01:29Z",
-      "category": "Teknoloji",
-      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Maia-200-Image-1.png.jpg",
       "language": "en",
       "editorial": false
     }
