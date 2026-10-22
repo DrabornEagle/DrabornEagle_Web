@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-10-22T19:06:29.275818Z",
+  "generatedAt": "2026-10-22T22:15:06.031487Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "3946b70f11ff9aa578",
+      "title": "Vivo Y600 yakında geliyor: 10.000 mAh bataryasıyla Guinness Dünya Rekoru kırdı",
+      "summary": "Vivo, 10.000 mAh bataryalı Y600 modelini duyurmaya hazırlanıyor. Cihaz, 32 saat 37 dakikalık kesintisiz canlı yayın testiyle Guinness Dünya Rekorları başarısı elde etti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dev-bataryali-vivo-y600-geliyor-guinness-dunya-rekoru-kirdi--211966",
+      "publishedAt": "2026-10-22T20:31:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211966/1200x675dev-bataryali-vivo-y600-geliyor-guinness-dunya-rekoru-kirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "54799101248eb37157",
+      "title": "iPhone Duo 2, ekran altı Face ID ile gelebilir",
+      "summary": "Apple'ın gelecek yıl tanıtması beklenen iPhone Duo 2'nin prototiplerinde ekran altı Face ID teknolojisinin test edildiği bildiriliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iphone-duo-2-ekran-alti-face-id-ile-gelebilir--211971",
+      "publishedAt": "2026-10-22T20:08:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211971/1200x675iphone-duo-2-ekran-alti-face-id-ile-gelebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4ef43fbbc240601339",
+      "title": "PHP açıklarına yönelik saldırıların günler önce başladığı ortaya çıktı",
+      "summary": "PHP'deki iki kritik güvenlik açığı, yamalar yayımlanmadan dört gün önce saldırganlar tarafından hedef alındı. AWS, PHP2Shell saldırılarının internet genelinde yaygınlaştığını bildirdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/php-aciklari-yamalanmadan-gunler-once-saldirilar-basladi--211972",
+      "publishedAt": "2026-10-22T19:43:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211972/1200x675php-aciklari-yamalanmadan-gunler-once-saldirilar-basladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "add8a51c3b028e99e8",
+      "title": "Epic Games'in bu haftaki ücretsiz oyunları erişime açıldı",
+      "summary": "Epic Games Store ücretsiz oyun fırsatlarına devam ediyor. Son olarak bu hafta sunulacak yeni ücretsiz oyunlar erişime açıldı. İşte bu haftanın ücretsiz oyunları...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/epic-games-in-bu-haftaki-ucretsiz-oyunlari-erisime-acildi--211974",
+      "publishedAt": "2026-10-22T19:20:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211974/1200x675epic-games-in-bu-haftaki-ucretsiz-oyunlari-erisime-acildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f4fc1c10d48bf609f4",
+      "title": "''Yaparsa Apple yapar!'' mı acaba? ''iPhone Duo Kutu Açılışı ve Kıyaslaması''",
+      "summary": "iPhone Duo, Apple'ın ilk katlanır telefonu, sektörü değiştirecek niteliklere sahip mi peki? Kutusunu açtık, kurduk, iPhone 17 Pro ve 18 Pro ile performans ve kamera kıyaslaması yaptık.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yaparsa-apple-yapar-mi-acaba-iphone-duo-kutu-acilisi--211978",
+      "publishedAt": "2026-10-22T19:16:55Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/211978/1200x675yaparsa-apple-yapar-mi-acaba-iphone-duo-kutu-acilisi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "3c144e0f8efba39dde",
       "title": "Tesla sahipleri araçlarını robotaksi olarak kullanabilecek: İşte tarih",
@@ -459,30 +519,6 @@
       "editorial": false
     },
     {
-      "id": "a1d0d2fc3f174f1488",
-      "title": "SpaceX, Starship’in iki aşamasını aynı anda yakalamayı hedefliyor",
-      "summary": "SpaceX, Starship’in 15. test uçuşunda hem Super Heavy güçlendiricisini hem de Ship adı verilen üst aşamayı fırlatma kulesinde yakalamayı hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/spacex-starship-in-iki-asamasini-ayni-anda-yakalamayi-hedefliyor--211934",
-      "publishedAt": "2026-10-22T11:22:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211934/1200x675spacex-starship-in-iki-asamasini-ayni-anda-yakalamayi-hedefliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1be4737ae5f2a5e9a8",
-      "title": "Almanya’da güneş paneli kurmak isteyenlere 5 dakikada onay",
-      "summary": "Almanya, çatı tipi güneş enerjisi sistemlerinin şebekeye bağlanma sürecini hızlandırıyor. Yeni uygulama, başvuru sahiplerinin günlerce süren bekleyişini sadece 5 dakikaya indiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/almanya-da-gunes-paneli-kurmak-isteyenlere-5-dakikada-onay--211921",
-      "publishedAt": "2026-10-22T10:58:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211921/1200x675almanya-da-gunes-paneli-kurmak-isteyenlere-5-dakikada-onay.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "45dab0a6245ab56e53",
       "title": "Audi, Spotify İçin Telefon Bağlama Zorunluluğunu Ortadan Kaldırıyor",
       "summary": "Audi ve Spotify, telefon bağlantısına ihtiyaç duymadan çalışan yeni araç içi uygulamasını duyurdu.",
@@ -507,30 +543,6 @@
       "editorial": false
     },
     {
-      "id": "0e986f34c5684013cf",
-      "title": "Intel Nova Lake mobil işlemciler sızdırıldı: 28 çekirdekli model geliyor",
-      "summary": "Intel'in yeni nesil Nova Lake mobil işlemcilerine ilişkin ilk detaylar ortaya çıktı. Sızıntıya göre amiral gemisi Core Ultra 9 4995HX, 28 çekirdekli yapılandırma ile geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-nova-lake-mobil-islemciler-sizdirildi-28-cekirdek-geliyor--211947",
-      "publishedAt": "2026-10-22T10:35:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/211947/1200x675intel-nova-lake-mobil-islemciler-sizdirildi-28-cekirdek-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e671381ceca9a3dce9",
-      "title": "Siber kıyamet mi yaşanıyor? İnternet zor günlerden geçiyor",
-      "summary": "PHP, GitLab, NGINX ve bulut altyapılarını etkileyen güvenlik sorunları peş peşe gündeme geldi. Kritik açıklar ve veri ihlalleri siber güvenlik dünyasında alarm seviyesini yükseltti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/siber-kiyamet-mi-yasaniyor-internet-zor-gunlerden-geciyor--211953",
-      "publishedAt": "2026-10-22T10:12:00Z",
-      "category": "Güvenlik",
-      "image": "https://www.donanimhaber.com/images/images/haber/211953/1200x675siber-kiyamet-mi-yasaniyor-internet-zor-gunlerden-geciyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "ee060b4ad3048d9174",
       "title": "From the Anime to the Game — Free Update Brings Edgerunners 2 Content and More to Cyberpunk 2077!",
       "summary": "“Cyberpunk: Edgerunners 2” premiered on Netflix on October 20, bringing a whole new cast of characters to Night City for a dark, gritty ride. And now we’re bringing a little piece of that story into Cyberpunk 2077, too! The free Edgerunners 2 Update is here, with content inspired by the anime, new ways to fight,",
@@ -540,18 +552,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/CP77_2.5_Update_Brand_Edgerunners_2_Outfit_PC_4k_FINAL-143615d6da2f02cd45ad-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "cfc9e5381149f0e8a4",
-      "title": "Türkiye üç ülkeyle Bedir Mutabakatı imzaladı: Mekke Anlaşması'ndan farkı ne?",
-      "summary": "Mekke Anlaşması'nın ardından Türkiye, Katar, Pakistan ve Endonezya ile Bedir Mutabakatı'nı imzaladı. Yeni anlaşma, kolektif savunma yerine savunma sanayi teknolojilerinde iş birliğine odaklanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-uc-ulkeyle-bedir-mutabakati-imzaladi-icerigi-ne--211956",
-      "publishedAt": "2026-10-22T09:48:12Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211956/1200x675turkiye-uc-ulkeyle-bedir-mutabakati-imzaladi-icerigi-ne.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
