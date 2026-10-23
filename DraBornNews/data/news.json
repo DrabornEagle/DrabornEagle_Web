@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-10-23T19:53:18.646040Z",
+  "generatedAt": "2026-10-23T22:59:14.095909Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "1caefcb72c55b10142",
+      "title": "OpenAI, 1,25 trilyon dolar değerlemeye ulaşabilir",
+      "summary": "OpenAI, 1,25 trilyon dolar değerleme üzerinden 30 milyar dolara kadar yeni yatırım toplamayı hedefliyor. Anlaşma, şirketin halka arz öncesi değerlemesini daha da yükseltebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/openai-1-25-trilyon-dolar-degerlemeye-ulasabilir--212001",
+      "publishedAt": "2026-10-23T21:11:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212001/1200x675openai-1-25-trilyon-dolar-degerlemeye-ulasabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "72686c9f0997fcafa2",
+      "title": "Güneş ışığı hangi açıdan gelirse gelsin elektrik üreten güneş paneli",
+      "summary": "Çinli araştırmacılar, güneş ışığının geliş açısı değişse bile daha kararlı elektrik üretebilen yeni bir güneş hücresi tasarladı. Simülasyonlarda ışık soğurumu yüzde 95'i aştı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gunes-panellerinde-yeni-donem-gunesin-acisi-sorun-olmayacak--212006",
+      "publishedAt": "2026-10-23T20:40:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212006/1200x675gunes-panellerinde-yeni-donem-gunesin-acisi-sorun-olmayacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8501f015c9bb13880c",
+      "title": "Chery’den SUV’ların dışına çıkan tasarım: Yeni Lepas Aura tanıtıldı",
+      "summary": "Chery’nin Lepas markası, iki kapılı shooting brake konsepti Aura’yı tanıttı. Leopardan ilham alan tasarımı ve kişiselleştirilebilir aydınlatmalarıyla markanın gelecekteki otomobillerine ışık tutuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/chery-den-suv-larin-disina-cikan-tasarim-yeni-lepas-aura--212005",
+      "publishedAt": "2026-10-23T20:17:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212005/1200x675chery-den-suv-larin-disina-cikan-tasarim-yeni-lepas-aura.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8ea9e7c16c6a4ceae0",
+      "title": "15 yaş altına sosyal medyayı yasaklayan ülkelere Yunanistan da katıldı",
+      "summary": "Sosyal medya yasakları tüm dünyaya yayılmaya devam ediyor. Avustralya, Fransa, Türkiye gibi ülkelerden sonra Yunanistan da 15 yaş altına sosyal medyayı yasaklama kararı aldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yunanistan-15-yas-altina-sosyal-medyayi-yasakladi--212002",
+      "publishedAt": "2026-10-23T19:55:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212002/1200x675yunanistan-15-yas-altina-sosyal-medyayi-yasakladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "5d3fe6f28a8e7fe874",
       "title": "Samsung TV’lerde gizlilik skandalı: Sürekli dinleme ve takip iddiası",
@@ -375,18 +423,6 @@
       "editorial": false
     },
     {
-      "id": "bd0f2e2cfb93de8d65",
-      "title": "Çinli YMTC, LPDDR5X belleklerde yüksek hızlara ilerliyor",
-      "summary": "YMTC, 9.600 MT/s hızında LPDDR5X belleklerin seri üretimine hazırlanıyor. Çinli üretici, hücre mimarisi ve Xtacking teknolojisiyle gelecekte 3D DRAM pazarında da avantaj sağlayabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cinli-ymtc-lpddr5x-belleklerde-yuksek-hizlara-ilerliyor--211998",
-      "publishedAt": "2026-10-23T12:35:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211998/1200x675cinli-ymtc-lpddr5x-belleklerde-yuksek-hizlara-ilerliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "8fa1d5243de34bd05c",
       "title": "Telefon Kamerasıyla Kontrol Edilen Matematik Oyunu: Hoppy Math",
       "summary": "Hoppy Math, çocuğun hareketlerini oyun kontrolüne dönüştürüyor.",
@@ -407,18 +443,6 @@
       "publishedAt": "2026-10-23T12:20:47Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/694231/694231-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9f47609c282be0cfe4",
-      "title": "Togg T10F 4More, Kehribar Serisi ile yollara çıkıyor: Yeni tasarım detayları",
-      "summary": "Kendine özgü rengi ve özel tasarım detaylarıyla Kehribar Serisi, T10F 4More’un güçlü ve dinamik karakterine yeni bir yorum getiriyor. İşte T10F 4More Kehribar Serisi fiyatı ve tasarım detayları:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/togg-t10f-4more-kehribar-serisi-ile-yollara-cikiyor--212003",
-      "publishedAt": "2026-10-23T12:14:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212003/1200x675togg-t10f-4more-kehribar-serisi-ile-yollara-cikiyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -492,30 +516,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "885293b49cb42b0325",
-      "title": "Valve ağzından kaçırdı: Half-Life 3 doğrulanmış olabilir",
-      "summary": "Valve, yıllardır merak edilen Half-Life 3 söylentilerini yeniden alevlendirdi. Şirket, ilk kez kamuya açık şekilde Half Life 3 olduğu düşünülen HLX kod adından bahsetti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/valve-agzindan-kacirdi-half-life-3-dogrulanmis-olabilir--211989",
-      "publishedAt": "2026-10-23T11:52:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211989/1200x675valve-agzindan-kacirdi-half-life-3-dogrulanmis-olabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "089543c2907fa6118a",
-      "title": "Galaxy S24 Ultra'da One UI 9 alarmı: Pil hızla tükeniyor",
-      "summary": "Galaxy S24 Ultra kullanıcılarından One UI 9 sonrası pil tüketiminin ciddi şekilde arttığına yönelik şikayetler geliyor. Bazı cihazlarda birkaç saatlik kullanımda pilin büyük bölümü tükeniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/galaxy-s24-ultra-da-one-ui-9-alarmi-pil-hizla-tukeniyor--211992",
-      "publishedAt": "2026-10-23T11:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211992/1200x675galaxy-s24-ultra-da-one-ui-9-alarmi-pil-hizla-tukeniyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -743,18 +743,6 @@
       "publishedAt": "2026-10-22T10:00:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/CP77_2.5_Update_Brand_Edgerunners_2_Outfit_PC_4k_FINAL-143615d6da2f02cd45ad-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "7e77cef1f387ab681e",
-      "title": "Cloud Playtime Now Available to Test with XBOX Insiders",
-      "summary": "Starting today, XBOX Insiders* can try a new way to stream games by purchasing cloud playtime without a Game Pass subscription. This preview gives XBOX Insiders who do not have an active Game Pass subscription an early look at the new option before it rolls out more broadly in November. During the preview, XBOX Insiders",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/21/cloud-playtime-now-available-to-test-with-xbox-insiders/",
-      "publishedAt": "2026-10-21T18:00:03Z",
-      "category": "Oyun",
-      "image": "",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-14T20:24:19Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4Y142SWPQXA8GMMX3DTNYBY.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "9d49354fa5a46a3509",
+      "title": "Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug",
+      "summary": "While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/hyperdrive-mysql/",
+      "publishedAt": "2026-10-14T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4VK1DV41VQ8EZCK68R7E0CS.png",
       "language": "en",
       "editorial": false
     }
