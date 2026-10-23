@@ -1,7 +1,259 @@
 {
-  "generatedAt": "2026-10-23T05:52:31.162780Z",
+  "generatedAt": "2026-10-23T11:22:15.368240Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "ad382e949952ac51c6",
+      "title": "Intel Monsters Reloaded 2026 ESA Espor Arena’da!",
+      "summary": "Intel ve Monster Notebook iş birliğiyle bu yıl yedinci kez düzenlenen Intel Monsters Reloaded, VALORANT final etabında espor tutkunlarını İstanbul’da buluşturuyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/intel-monsters-reloaded-2026-buyuk-final-24-25-ekim-esa-espor-arena-h227815.html",
+      "publishedAt": "2026-10-23T11:08:55Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694504/694504-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9308e6a9f9b44d7831",
+      "title": "Casper, AI PC üretimini yıl sonunda yüzde 50’ye çıkarmayı hedefliyor",
+      "summary": "Casper, bilgisayar üretiminde yüzde 30 olan yapay zekâ destekli modellerin payını yıl sonuna kadar yüzde 50’ye çıkarmayı hedefliyor. Şirketin yeni modelleri arasında Nirvana S100 AI da bulunuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/casper-ai-pc-uretimini-yil-sonunda-yuzde-50-ye-cikaracak--212000",
+      "publishedAt": "2026-10-23T11:07:50Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212000/1200x675casper-ai-pc-uretimini-yil-sonunda-yuzde-50-ye-cikaracak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dda30c16a39e559a3b",
+      "title": "Farklı Kategorilerden Kitap Tavsiyeleri",
+      "summary": "Bu hafta Amazon'da öne çıkan ve okurların ilgisini çeken kitapları farklı kategoriler altında bir araya getirdik.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/yeni-cikanlardan-klasiklere-farkli-kategorilerden-kitap-tavsiyeleri-h227797.html",
+      "publishedAt": "2026-10-23T11:01:05Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694478/694478-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "700cca558dba886d34",
+      "title": "Chery’den 5 dk şarjla 500 km menzil iddiası: 1.440 kW’lık şarj sistemi tanıtıldı",
+      "summary": "Chery, 1.440 kW güce ulaşan Volt-dragon şarj sistemini tanıttı. Şirket, 5 dk'da 500 km menzil kazanımı ve %10’dan %97’ye 7 dk'dan kısa sürede şarj vadederken küresel bir istasyon ağı planlıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/chery-den-buyuk-iddia-5-dk-sarjla-500-km-menzil--211988",
+      "publishedAt": "2026-10-23T10:58:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211988/1200x675chery-den-buyuk-iddia-5-dk-sarjla-500-km-menzil.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7c8f01130cbc652cb8",
+      "title": "Uzaktaki Sevdiklerinize İnternetten Koku Göndermek Mi? Karşınızda Scentronic!",
+      "summary": "Yapay zekâ destekli Scentronic, kokuları dijital verilere dönüştürerek internet üzerinden kilometrelerce uzağa gönderebiliyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/internetten-koku-gondermek-scentronic-h227782.html",
+      "publishedAt": "2026-10-23T10:55:21Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694393/694393-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dd699b649023200eee",
+      "title": "Samsung Galaxy Watch’ta Kullanıcıların Sağlığını Riske Atan Sorun: Bilekleri Yakıyor!",
+      "summary": "Samsung Galaxy Watch kullanıcıları, gece uyurken saatleri taktıklarında bileklerinde yanma ve tahriş oluşmaya başladığını bildirdi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/galaxy-watch-bilekleri-yakiyor-h227780.html",
+      "publishedAt": "2026-10-23T10:55:11Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694414/694414-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8f72f64457a4c2678f",
+      "title": "ABD bankaları alarma geçti: Yapay zeka ajanları hesaplara girdi",
+      "summary": "ABD’nin önde gelen bankaları müşteri hesaplarına erişen yapay zeka ajanlarına karşı harekete geçti. Morgan Stanley ve JPMorgan Chase gibi devler, güvenlik riskleri nedeniyle erişimleri kısıtlıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/abd-bankalari-alarma-gecti-yapay-zeka-ajanlari-hesaplara-girdi--211981",
+      "publishedAt": "2026-10-23T10:36:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211981/1200x675abd-bankalari-alarma-gecti-yapay-zeka-ajanlari-hesaplara-girdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "af0c3a507a52b5a7b0",
+      "title": "AMD Zen 6 Medusa APU'ları için ışın izleme desteği geliyor",
+      "summary": "AMD, Zen 6 tabanlı Medusa APU'ları için önemli bir hazırlık yapıyor. Yeni HIPRT 3.2 sürümü, Medusa ailesine ait üç entegre GPU'yu destekliyor. İşte detaylar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amd-zen-6-medusa-apu-lari-icin-isin-izleme-destegi-geliyor--211985",
+      "publishedAt": "2026-10-23T10:14:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211985/1200x675amd-zen-6-medusa-apu-lari-icin-isin-izleme-destegi-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4585d67755ab33b93a",
+      "title": "Linux’taki kritik açıklar yanlışlıkla herkese açık e-posta listesinde paylaşıldı",
+      "summary": "Linux çekirdeğindeki kritik güvenlik açıkları, yamalar tüm sistemlere ulaşmadan herkese açık bir e-posta listesinde yayımlandı. İki kritik açık ise uzaktan kod çalıştırma riski taşıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/linux-cekirdegindeki-kritik-aciklar-yanlislikla-internete-sizdi--211984",
+      "publishedAt": "2026-10-23T09:52:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211984/1200x675linux-cekirdegindeki-kritik-aciklar-yanlislikla-internete-sizdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fa4e3be53177d9b804",
+      "title": "Microsoft, Windows 11'de oyunları çökerten sorunu çözdü",
+      "summary": "Microsoft, Windows 11'de bazı oyun ve uygulamaların çökmesine neden olan kritik ses sorununu çözdü. Yeni güncelleme, Dolby Digital AC-3 kaynaklı hatayı gideriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/microsoft-windows-11-de-oyunlari-cokerten-sorunu-cozdu--211982",
+      "publishedAt": "2026-10-23T09:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211982/1200x675microsoft-windows-11-de-oyunlari-cokerten-sorunu-cozdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ec6f90de349b82d9b9",
+      "title": "Ukrayna veri merkezlerini vurdukça, Rusya'nın yapay zekâ hayalleri yıkılıyor",
+      "summary": "Ukrayna'nın Rusya'ya düzenlediği saldırılar sırasında veri merkezlerini de hedef almaya başlaması, Rusya'nın yapay zekâ yarışında ABD ve Çin'e rakip olma hayallerini suya düşürüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ukrayna-saldirilari-rusya-nin-yapay-zeka-hedeflerini-vurdu--211986",
+      "publishedAt": "2026-10-23T09:08:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211986/1200x675ukrayna-saldirilari-rusya-nin-yapay-zeka-hedeflerini-vurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "de887105c9cef312c2",
+      "title": "RAM fiyatları bilgisayar satışlarını vurdu: Pazar yüzde 21 daraldı",
+      "summary": "RAM, SSD ve işlemci fiyatlarındaki artış küresel bilgisayar pazarını vurdu. PC sevkiyatları üçüncü çeyrekte yüzde 21 düşerken yılın son çeyreğinde gerileme bekleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ram-fiyatlari-bilgisayar-satislarini-vurdu-dusus-yuzde-21--211987",
+      "publishedAt": "2026-10-23T08:46:14Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211987/1200x675ram-fiyatlari-bilgisayar-satislarini-vurdu-dusus-yuzde-21.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "284e9dda366c834e90",
+      "title": "Meetup Istanbul 2026 Pazarlama ve İş Dünyasını Bir Araya Getirdi",
+      "summary": "Bu yıl 10. yılını kutlayan Meetup Istanbul, 13 Ekim’de UNIQ İstanbul’da pazarlama, iletişim ve iş dünyasının önde gelen isimlerini bir araya getirdi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/meetup-istanbul-2026-pazarlama-ve-is-dunyasini-beyond-control-temasiyla-bulusturdu-h227779.html",
+      "publishedAt": "2026-10-23T08:44:22Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694405/694405-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "98253abc363080fdd9",
+      "title": "Arka aksı kopan Omoda 5 için Chery’nin başkanından özür: 8.878 araç geri çağrılıyor",
+      "summary": "Malezya’da bir Omoda 5’in arka aksının kopmasının ardından Chery Başkanı özür diledi. Olayla ilgili soruşturma sürerken 8.878 araç geri çağırma kapsamına alındı, modelin tescil işlemleri durduruldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/arka-aksi-kopan-omoda-5-icin-chery-nin-baskanindan-ozur--211983",
+      "publishedAt": "2026-10-23T08:22:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211983/1200x675arka-aksi-kopan-omoda-5-icin-chery-nin-baskanindan-ozur.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1dd922f4de9219f92b",
+      "title": "Hem laptop hem tablet olarak kullanılabilen 2'si 1 arada cihazlar",
+      "summary": "Dizüstü bilgisayar ile tablet arasında mı kaldınız? İşte klavyesi ayrılabilen, 360 derece dönebilen en iyi Windows cihazlar ve klavyeli tabletleri içeren 2'si 1 arada laptop önerileri:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/en-iyi-2-si-1-arada-laptop-tablet-modelleri--211886",
+      "publishedAt": "2026-10-23T08:17:51Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211886/1200x675en-iyi-2-si-1-arada-laptop-tablet-modelleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "263d21276dcbc69d64",
+      "title": "Google çalışanları, askeri yapay zekâ anlaşmalarına tepki göstererek istifa ediyor",
+      "summary": "Google'ın askeri yapay zeka anlaşmaları şirket içinde tepki çekiyor. Bazı çalışanlar, şirketin Pentagon ile yaptığı anlaşmaları protesto ederek görevlerinden ayrılıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-in-askeri-yapay-zeka-anlasmalari-calisanlari-ikiye-boldu--211970",
+      "publishedAt": "2026-10-23T07:39:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/211970/1200x675google-in-askeri-yapay-zeka-anlasmalari-calisanlari-ikiye-boldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e723d5cf4ed4168bf0",
+      "title": "Microsoft’un Yapay Zekâsı, Doktorları Geride Bıraktı!",
+      "summary": "Microsoft ve OpenAI iş birliğiyle geliştirilen Diagnostic Orchestrator sistemi, karmaşık tıbbi vakalarda uzman doktorları belirgin farkla geride bıraktı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/microsoft-yapay-zeka-doktorlari-geride-birakti-h227774.html",
+      "publishedAt": "2026-10-23T07:37:04Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/694397/694397-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "09f2f5a64cd1edf7a4",
+      "title": "iPhone Duo, Resmen Satışa Sunuldu: İşte Fiyatları",
+      "summary": "Katlanabilir iPhone Duo, bugün itibarıyla resmen piyasaya sürüldü ve Türkiye'de satışa sunuldu. İşte fiyatları.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/iphone-duo-satisa-sunuldu-fiyatlari-h227776.html",
+      "publishedAt": "2026-10-23T07:36:36Z",
+      "category": "Mobil",
+      "image": "https://imgrosetta.webtekno.com/file/694399/694399-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c0d6dcab1073315826",
+      "title": "A101 marketlere evde spor ürünleri geliyor",
+      "summary": "22 Ekim A101 Ekstra teknoloji ürünleri arasında Walke markasına ait hareketli tırmanma duvarı ve Samsung Galaxy S25 Ultra akıllı telefon modeli yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/22-ekim-a101-ekstra-katalogunda-neler-var--211979",
+      "publishedAt": "2026-10-23T07:17:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211979/1200x67522-ekim-a101-ekstra-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "994f650c0f2796b177",
+      "title": "Toplam Değeri 8.460 TL'den Fazla 7 Oyun, Xbox'ta Bu Hafta Sonu Ücretsiz Oldu",
+      "summary": "Xbox Free Play Days kapsamında bu hafta ücretsiz olacak oyunlar açıklandı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/23-25-ekim-xbox-ucretsiz-oyun-h227770.html",
+      "publishedAt": "2026-10-23T07:12:11Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/694384/694384-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fda77de450dca94efe",
+      "title": "Türkiye’nin kritik altyapıları internete açık! Ankara’nın su sistemine internetten erişildi",
+      "summary": "Bir siber güvenlik araştırmacısı Ankara’daki ASKİ’ye ait su pompalarına erişebildiğini iddia etti. Bulgular, kritik altyapıların güvenliğini yeniden gündeme getirdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/turkiye-nin-kritik-altyapilari-internete-acik-aski-de-listede--211980",
+      "publishedAt": "2026-10-23T06:55:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/211980/1200x675turkiye-nin-kritik-altyapilari-internete-acik-aski-de-listede.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "9b8b521aed0733fada",
       "title": "iPhone Duo 2, Face ID Kamerayla Gelebilir",
@@ -185,7 +437,7 @@
     {
       "id": "c5183577f192ccc9e5",
       "title": "The Power of PEAK Friendship, Coming to XBOX Today",
-      "summary": "Hey Scouts! The co-op climbing game PEAK, is officially out today on XBOX Series X|S. A game built on working together with your troop to traverse the various biomes on an island after a crash landing. PEAK is a collaboration between two studios, Aggro Crab and Landfall, together, we make Team PEAK. Aggro Crab is",
+      "summary": "Hey Scouts! The co-op climbing game PEAK, is officially out today on XBOX Series X|S and XBOX on PC with XBOX Play Anywhere. A game built on working together with your troop to traverse the various biomes on an island after a crash landing. PEAK is a collaboration between two studios, Aggro Crab and Landfall,",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/10/22/peak-friendship-coming-to-xbox-today/",
       "publishedAt": "2026-10-22T17:00:00Z",
@@ -207,30 +459,6 @@
       "editorial": false
     },
     {
-      "id": "23afc29efa90fbf019",
-      "title": "Xbox Cloud Gaming saatlik fiyatı açıklandı: 10 saat 3,99 dolar",
-      "summary": "Microsoft, Xbox Cloud Gaming için yeni kullanım modelinin fiyatlarını açıkladı. Game Pass gerektirmeyen sistemde 10 saatlik bulut oyun erişimi 3,99 dolardan başlayacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-cloud-gaming-saatlik-fiyati-aciklandi-10-saat-3-99-dolar--211944",
-      "publishedAt": "2026-10-22T16:23:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211944/1200x675xbox-cloud-gaming-saatlik-fiyati-aciklandi-10-saat-3-99-dolar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6686a39f0a13515228",
-      "title": "İnterneti kilitleyen PHP açığı: Yapay zeka buldu, siteler kapandı! Ama nasıl?",
-      "summary": "İnternetin yüzde 70'ini ayakta tutan PHP'de kritik bir güvenlik açığı bulundu! Yapay zekanın bulduğu ve dünyayı alarma geçiren PHP2Shell açığı nedir? Devlet siteleri neden kapandı? Hepsi bu videoda",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/interneti-kilitleyen-php-acigi-yapay-zeka-buldu-siteler-kapandi--211977",
-      "publishedAt": "2026-10-22T16:19:02Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211977/1200x675interneti-kilitleyen-php-acigi-yapay-zeka-buldu-siteler-kapandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "9f3d2f25baaf5f2ff5",
       "title": "FINAL FANTASY RESONANCE is a Delightful Return to the Series’ Classic Roots",
       "summary": "It’s 1996. I’m happily traversing via chocobo and airship a magical world full of moogles, espers, crystals and magitek. I’m dazzled by the vibrant pixel art. It’s 2026. I’m happily traversing via chocobo and airship a magical world full of moogles, espers, crystals and magitek. I’m dazzled by the vibrant pixel art. FINAL FANTASY RESONANCE",
@@ -240,42 +468,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/EN23-05-c5c095a1fdf2aefceed5-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "81758849204f987bab",
-      "title": "Apple Music’in yeni logosu tanıtıldı: Ses dalgalarıyla oluşturuldu",
-      "summary": "Apple Music’in yeni logosu, müziği görsel bir deneyime dönüştürmeyi hedefliyor. Ses frekanslarıyla oluşturulan dalgalı müzik notası, platformdaki video içeriklerinde kullanılacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-music-in-ses-dalgalariyla-olusturulan-yeni-logosu-tanitildi--211967",
-      "publishedAt": "2026-10-22T15:56:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211967/1200x675apple-music-in-ses-dalgalariyla-olusturulan-yeni-logosu-tanitildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "66965af4e1f37665b4",
-      "title": "Geniş depolama ve akıcı performans sunan 256 GB tabletler",
-      "summary": "256 GB'lık tabletlerin fiyatları ne kadar, kaç TL merak edenler buraya! İşte Casper, Samsung, Xiaomi ve Apple'ın kalemli en çok tutan 256 GB tablet modelleri için güncel fiyatlar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/256-gb-tablet-fiyatlari-ve-en-iyi-modeller--211838",
-      "publishedAt": "2026-10-22T15:31:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211838/1200x675256-gb-tablet-fiyatlari-ve-en-iyi-modeller.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "cfee58987d7ca1e109",
-      "title": "Nvidia'nın son etkinliğine 399 dolarlık mini robotlar damga vurdu",
-      "summary": "Daha ön siparişe açıldığı gün kullanıcılardan büyük ilgi gören minik robot MicroDuck, Nvidia'nın teknolojileri sayesinde yeni yeteneklere kavuştu; Nvidia'nın son etkinliğine MicroDuck'lar damga vurdu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-etkinligine-399-dolarlik-mini-robotlar-damga-vurdu--211961",
-      "publishedAt": "2026-10-22T15:09:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211961/1200x675nvidia-etkinligine-399-dolarlik-mini-robotlar-damga-vurdu.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -327,18 +519,6 @@
       "editorial": false
     },
     {
-      "id": "959cdc017ff4094ea6",
-      "title": "Cloudflare, PHP açıklarına karşı koruma sağladı: Milyonlarca saldırı oldu",
-      "summary": "PHP'deki iki kritik güvenlik açığı için saldırı girişimleri milyonlara ulaştı. Cloudflare tüm planlarda koruma sağlarken kullanıcıları PHP'yi acilen güncellemeye çağırıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cloudflare-php-aciklarina-karsi-koruma-sagladi--211958",
-      "publishedAt": "2026-10-22T14:17:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211958/1200x675cloudflare-php-aciklarina-karsi-koruma-sagladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "3644197654694ae689",
       "title": "Marvel’s Wolverine: Photo Mode guide",
       "summary": "Photo Modes are a rewarding way to get to grips with some essential elements of photography, while letting you more closely examine and appreciate a game’s art design and increasingly photorealistic visuals. Feature-rich Photo Modes put an entire suite of virtual lighting rigs at your fingertips, subtracting concerns about space requirements, or the patience of",
@@ -348,18 +528,6 @@
       "category": "Oyun",
       "image": "https://live.staticflickr.com/65535/55601775300_b1c47c96e0_k.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "9a037796373b9df071",
-      "title": "PHP açığından etkilenen ülkeler ve siteler açıklandı: İşte liste",
-      "summary": "Yapay zekâ yardımıyla ortaya çıkarılan kritik PHP açıkları, dünya genelinde kamu kurumlarını ve popüler internet sitelerini etkiledi. Bazı hizmetler güvenlik amacıyla geçici olarak erişime kapatıldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/php-acigindan-etkilenen-ulkeler-ve-siteler-aciklandi-iste-liste--211962",
-      "publishedAt": "2026-10-22T13:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211962/1200x675php-acigindan-etkilenen-ulkeler-ve-siteler-aciklandi-iste-liste.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -395,30 +563,6 @@
       "publishedAt": "2026-10-22T13:35:16Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/694336/694336-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ba553646d043d6e926",
-      "title": "Yeni BMW F 450 RR, Mayıs 2027'de Türkiye'de satışa sunulacak",
-      "summary": "S 1000 RR’ın tasarım dilinden ilham alan yeni BMW F 450 RR; 420 cc çift silindirli motoru, 48 HP gücü ve 177 kg’lık sürüşe hazır ağırlığıyla hafiflik, çeviklik ve performansı bir araya getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-bmw-f-450-rr-mayis-2027-de-turkiye-de-satisa-sunulacak--211949",
-      "publishedAt": "2026-10-22T13:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211949/1200x675yeni-bmw-f-450-rr-mayis-2027-de-turkiye-de-satisa-sunulacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "07dbe8a12c982c1091",
-      "title": "Sony'nin disk kararına yeni yorum: \"Tepki gösterenler azınlık\"",
-      "summary": "Sony'nin 2028'de fiziksel PlayStation oyunlarını sonlandırma kararına yönelik tepkiler sürüyor. Yeni analiz, tepkinin kaynağındaki oyuncu kitlesine dair dikkat çekici veriler sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/sony-nin-disk-kararina-yeni-yorum-tepki-gosterenler-azinlik--211957",
-      "publishedAt": "2026-10-22T13:10:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211957/1200x675sony-nin-disk-kararina-yeni-yorum-tepki-gosterenler-azinlik.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -459,18 +603,6 @@
       "editorial": false
     },
     {
-      "id": "4fab0262993ef9c67c",
-      "title": "Hackerlar yapay zekayı kullanarak yüzlerce bankayı hedef aldı",
-      "summary": "Hackerlar Claude ve Grok gibi yapay zeka modellerini kullanarak Latin Amerika’da 400’den fazla finans kuruluşunu hedef aldı. Saldırılarda müşteri verileri ve hesap bilgileri ele geçirildi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/hackerlar-yapay-zekayi-kullanarak-yuzlerce-bankayi-hedef-aldi--211963",
-      "publishedAt": "2026-10-22T12:49:23Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211963/1200x675hackerlar-yapay-zekayi-kullanarak-yuzlerce-bankayi-hedef-aldi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "1e72e2ac0cf4e6a31d",
       "title": "Xbox'ın Yeni Bulut Oyun Hizmetinin Fiyatı Açıklandı",
       "summary": "Xbox, Türkiye’de bulunmayan bulut oyun hizmetini Game Pass’ten ayırıyor. “Kullandıkça öde” mantığına sahip olacak bu hizmetin fiyatları açıklandı.",
@@ -495,42 +627,6 @@
       "editorial": false
     },
     {
-      "id": "5df160f29474894ce7",
-      "title": "Meta'ya Tarihi Tokat: Cambridge Analytica Davasında 25 Milyar Dolarlık İnanılmaz Ceza",
-      "summary": "Meta, Cambridge Analytica davasında 25 milyar dolarlık cezayla karşı karşıya. New Mexico’da verilen kararın ardından cezanın tamamının eyaletteki okulların inşası için kullanılması planlanıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/meta-cambridge-analytica-25-milyar-dolarlik-ceza-h227731.html",
-      "publishedAt": "2026-10-22T12:21:58Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694292/694292-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e79d90a00cac4425b3",
-      "title": "Samsung’un En Sevilen Uygun Fiyatlı 2 Modeline AirDrop Desteği Geldi: İşte O Telefonlar",
-      "summary": "Samsung, şimdiye kadar amiral gemisi modellerinde olan AirDrop desteğini sevilen 2 A serisi modeline getirdi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-a57-a56-airdrop-geldi-h227728.html",
-      "publishedAt": "2026-10-22T12:21:38Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/694291/694291-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a988926e940595b00e",
-      "title": "PHP krizinde son durum: e-Devlet hizmetlerinde kesinti yok",
-      "summary": "PHP altyapısında ortaya çıkan kriz ile birlikte Siber Güvenlik Başkanlığı da aralıksız taramalarını sürdürüyor. Başta e-Devlet olmak üzere hizmetlerde herhangi bir sıkıntıya rastlanmadı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/php-krizi-buyuyor--211959",
-      "publishedAt": "2026-10-22T12:07:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211959/1200x675php-krizi-buyuyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "ead20c2e065471438a",
       "title": "Tomb Raider: Legacy of Atlantis – the evolution of Lara Croft’s design",
       "summary": "When Lara Croft first leapt onto screens in 1996, she was a few hundred polygons and a fistful of pixels. Thirty years later, Tomb Raider: Legacy of Atlantis reimagines that same adventurer with technology the original team could only dream of. Through it all, one goal held steady: she had to look like Lara. For",
@@ -540,18 +636,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "014f8d393df67de1fa",
-      "title": "Çin bağlantılı hackerlardan küresel saldırı: Yüzlerce kuruluş hedef alındı",
-      "summary": "Microsoft, Çin bağlantılı hackerların yapay zeka destekli araçla ConnectWise üzerinden yüzlerce kuruluşu hedef aldığını açıkladı. Saldırıda bazı sistemlerde kalıcı erişim sağlandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cinli-hackerlardan-kuresel-saldiri-yuzlerce-kurulus-hedef-alindi--211950",
-      "publishedAt": "2026-10-22T11:47:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211950/1200x675cinli-hackerlardan-kuresel-saldiri-yuzlerce-kurulus-hedef-alindi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -567,30 +651,6 @@
       "editorial": false
     },
     {
-      "id": "45dab0a6245ab56e53",
-      "title": "Audi, Spotify İçin Telefon Bağlama Zorunluluğunu Ortadan Kaldırıyor",
-      "summary": "Audi ve Spotify, telefon bağlantısına ihtiyaç duymadan çalışan yeni araç içi uygulamasını duyurdu.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/audi-spotify-icin-telefon-baglama-zorunlulugunu-ortadan-kaldiriyor-h227716.html",
-      "publishedAt": "2026-10-22T10:56:30Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/694249/694249-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b0d5652c93860bfb38",
-      "title": "Dünyanın En Büyük Bataryalı Telefonları HONOR Win RT 2 ve Win Turbo 2 Tanıtıldı!",
-      "summary": "Ana akım telefonlar arasında rekor kıran 12.070 mAh’lik bataryaya sahip HONOR Win RT 2 ve Win Turbo 2 tanıtıldı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/honor-win-rt-2-ve-win-turbo-2-tanitildi-h227725.html",
-      "publishedAt": "2026-10-22T10:55:15Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/694276/694276-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "ee060b4ad3048d9174",
       "title": "From the Anime to the Game — Free Update Brings Edgerunners 2 Content and More to Cyberpunk 2077!",
       "summary": "“Cyberpunk: Edgerunners 2” premiered on Netflix on October 20, bringing a whole new cast of characters to Night City for a dark, gritty ride. And now we’re bringing a little piece of that story into Cyberpunk 2077, too! The free Edgerunners 2 Update is here, with content inspired by the anime, new ways to fight,",
@@ -600,66 +660,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/CP77_2.5_Update_Brand_Edgerunners_2_Outfit_PC_4k_FINAL-143615d6da2f02cd45ad-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "ee86d80f28e908030a",
-      "title": "Bütçe Dostu Olması Beklenen Samsung Galaxy A08 5G İçin Geri Sayım Başladı",
-      "summary": "Uygun fiyatlı bir telefon arayanların radarına girmeye aday Samsung Galaxy A08 5G, 6.000 mAh bataryasıyla IMEI veritabanında ortaya çıktı. Bu kayıt, cihazın geliştirme ve piyasaya hazırlık sürecinde olduğuna dair önemli bir işaret.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-a08-5g-icin-geri-sayim-basladi-h227713.html",
-      "publishedAt": "2026-10-22T09:28:57Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694244/694244-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eb20179eb0ff44f51d",
-      "title": "Gemini, Apple CarPlay’in Google Maps Uygulamasına Geldi!",
-      "summary": "Google, Gemini sesli asistanını Apple CarPlay’de Google Maps üzerinden sürücülerine sunmaya başladı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/gemini-apple-carplay-maps-geldi-h227710.html",
-      "publishedAt": "2026-10-22T09:28:38Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/694234/694234-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "403f4ce5094e755639",
-      "title": "Yeni PS5 Kulaklığı PlayStation Pulse’un Çıkış Tarihi ve Fiyatı Açıklandı",
-      "summary": "Sony, eylülde tanıttığı yeni PlayStation Pulse kulaklığının fiyatını ve çıkış tarihini paylaştı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/playstation-pulse-cikis-tarihi-fiyati-aciklandi-h227704.html",
-      "publishedAt": "2026-10-22T09:28:30Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/694229/694229-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "12010df0e6e4385288",
-      "title": "Apple’dan Türkiye Dahil Birçok Ülkede Kritik iPhone Duo Satışı Kararı",
-      "summary": "iPhone Duo, 23 Ekim’de resmen satışa sunulacak. Ancak Apple’ın açıklamasına göre Türkiye dahil tüm dünyada telefon mağazalarda sınırlı sayıda olacak.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/apple-iphone-duo-magazalarda-sinirli-satilacak-h227701.html",
-      "publishedAt": "2026-10-22T07:55:25Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/694225/694225-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d960a3b8976ac5e6af",
-      "title": "Anthropic’in Arka Planda Kendi Başına Çalışabilen Yeni Yapay Zekâ Ajanı Claude Duet Tanıtıldı",
-      "summary": "Anthropic, Meta Muse ve OpenAI Dots’a rakip olarak yeni yapay zekâ asistanı Claude Duet’i duyurdu. Bağlı uygulamalardaki işleri takip edip tamamlayabilen asistan, siz bilgisayarınızın başında değilken de çalışmayı sürdürebiliyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/anthropic-claude-duet-yapay-zeka-asistani-h227698.html",
-      "publishedAt": "2026-10-22T07:55:09Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/694219/694219-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
