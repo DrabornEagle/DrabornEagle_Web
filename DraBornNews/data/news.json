@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-10-22T22:15:06.031487Z",
+  "generatedAt": "2026-10-23T05:52:31.162780Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "9b8b521aed0733fada",
+      "title": "iPhone Duo 2, Face ID Kamerayla Gelebilir",
+      "summary": "Apple, daha ilk nesil tam piyasaya sürülmeden ikinci nesil iPhone Duo testlerine başladı. iPhone Duo 2’de, çok istenen bir özelliğin yer alacağı iddia edildi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/iphone-duo-2-face-id-gelebilir-h227767.html",
+      "publishedAt": "2026-10-23T05:19:09Z",
+      "category": "Mobil",
+      "image": "https://imgrosetta.webtekno.com/file/694381/694381-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dd1abe01b968d3790a",
+      "title": "Canva Kendi Görsel Üretme Modeli Canva Craft'ı Duyurdu!",
+      "summary": "Canva, kendi görsel üretimi odaklı yapay zekâ modeli Canva Craft'ı duyurdu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/canva-craft-gorsel-uretim-modeli-duyuruldu-h227764.html",
+      "publishedAt": "2026-10-23T04:06:58Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694375/694375-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4584778c3774ccbdfa",
+      "title": "T.C. İçişleri Bakanlığı, SİBERAY ve Meta’dan Ortak Siber Dolandırıcılık Kampanyası",
+      "summary": "T.C. İçişleri Bakanlığı, SİBERAY ve Meta, Türkiye’deki kullanıcıları çevrim içi dolandırıcılık yöntemlerine karşı bilinçlendirmek amacıyla bir kampanya başlattı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/icisleri-bakanligi-siberay-meta-siber-dolandiricilik-kampanyasi-h227761.html",
+      "publishedAt": "2026-10-23T03:58:10Z",
+      "category": "Güvenlik",
+      "image": "https://imgrosetta.webtekno.com/file/694366/694366-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a5bf945b8e028fa69a",
+      "title": "Son 3 Ayda Kaç PC Satıldığı Açıklandı",
+      "summary": "2026'nın üçüncü çeyreğinde dünya çapında kaç bilgisayar satıldığı açıklandı. Büyük düşüş var.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/2026-3-ceyrek-kac-pc-satildi-h227758.html",
+      "publishedAt": "2026-10-23T03:41:32Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694363/694363-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "3946b70f11ff9aa578",
       "title": "Vivo Y600 yakında geliyor: 10.000 mAh bataryasıyla Guinness Dünya Rekoru kırdı",
@@ -615,66 +663,6 @@
       "editorial": false
     },
     {
-      "id": "f428eb9bdf666a56a8",
-      "title": "İzmir Büyükşehir Belediyesi'nde Veri İhlali Yaşandı",
-      "summary": "KVKK, İzmir Büyükşehir Belediyesi'nde veri ihlali yaşandığını açıkladı. İşte detaylar.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/izmir-buyuksehir-belediyesi-veri-ihlali-h227695.html",
-      "publishedAt": "2026-10-22T07:54:21Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694216/694216-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c6e3105934c5a7c86c",
-      "title": "Casper Excalibur G870, AAA Oyunları Oynatır mı?",
-      "summary": "Casper Excalibur G870'in RTX 50 serisi seçenekleri, 165 Hz ekranı, yükseltme alanı ve kullanıcı yorumlarıyla ağır oyunlarda ne sunduğunu birlikte bakıyoruz.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/casper-excalibur-g870-aaa-oyunlari-oynatir-mi-h227659.html",
-      "publishedAt": "2026-10-22T07:18:59Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/691270/691270-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4325b317ed4c415e95",
-      "title": "Elektronik Ürün Alımında Taksitlerde Değişikliğe Gidildiği İddia Edildi",
-      "summary": "Tablet, televizyon, bilgisayar ve beyaz eşya gibi ürünlerin taksitli alışverişlerinde değişiklik yapıldığı öne sürüldü.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/elektronik-urunler-taksit-degisiklik-yapildi-h227692.html",
-      "publishedAt": "2026-10-22T07:02:19Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694208/694208-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d65937074142647046",
-      "title": "PHP Nedir? Güvenlik Açıkları Neden Büyük Tehlike Oluşturuyor?",
-      "summary": "Tüm dünya yaygın proglamlama dili PHP'de keşfedilen güvenlik açığıyla çalkalanıyor. Peki nedir bu PHP?",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/php-nedir-h227680.html",
-      "publishedAt": "2026-10-22T05:15:45Z",
-      "category": "Güvenlik",
-      "image": "https://imgrosetta.webtekno.com/file/694198/694198-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "54154f06fc7b73e6fa",
-      "title": "PHP Güvenlik Açıkları Nedeniyle Dünya Çapında Çok Sayıda Site Geçici Olarak Kapatıldı",
-      "summary": "PHP güvenlik açıkları, dünya çapında hükümet, kamu ve medya sitelerinin önlem olarak kapatılmasına yol açtı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/php-guvenlik-acigi-nedeniyle-siteler-kapandi-h227677.html",
-      "publishedAt": "2026-10-22T04:57:28Z",
-      "category": "Güvenlik",
-      "image": "https://imgrosetta.webtekno.com/file/694186/694186-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "7e77cef1f387ab681e",
       "title": "Cloud Playtime Now Available to Test with XBOX Insiders",
       "summary": "Starting today, XBOX Insiders* can try a new way to stream games by purchasing cloud playtime without a Game Pass subscription. This preview gives XBOX Insiders who do not have an active Game Pass subscription an early look at the new option before it rolls out more broadly in November. During the preview, XBOX Insiders",
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-14T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4VK1DV41VQ8EZCK68R7E0CS.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "c883d0dbfead6cfe74",
+      "title": "Under the hood, off the hot path: How D1 scales to millions of databases",
+      "summary": "A deep dive into how D1 architected its control plane to scale and manage millions of databases, while keeping data plane query operations at the edge. We share guiding principles on how to build on the Developer Platform effectively.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/d1-control-plane/",
+      "publishedAt": "2026-10-13T16:20:18Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KW45ADESEJPK73KY57K3T0NX.png",
       "language": "en",
       "editorial": false
     }
