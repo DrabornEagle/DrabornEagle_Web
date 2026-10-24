@@ -1,7 +1,103 @@
 {
-  "generatedAt": "2026-10-23T22:59:14.095909Z",
+  "generatedAt": "2026-10-24T11:28:04.921620Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "103d38e79c0b92a123",
+      "title": "Şeffaf ekranlı ilginç kamera Godox C100 ülkemizde satışta",
+      "summary": "Şeffaf ekranı ve kompakt gövdesi ile dikkat çeken Godox C100 dijital kamera ülkemizde de satışa çıkıyor. Akıllı telefon döneminde rekabetçi olmaya çalışacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/godox-c100-ulkemize-geldi--212030",
+      "publishedAt": "2026-10-24T11:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212030/1200x675godox-c100-ulkemize-geldi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7b9d3dff8438613771",
+      "title": "iPhone Duo için App Store tarafından önerilen yerli oyun gündeme oturdu",
+      "summary": "iPhone Duo katlanabilir telefon modeli için geliştirilen yerli yapım Penalty Area: Face2Face, dikkat çekici özellikleri sayesinde App Store vitrinine çıktı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yerli-oyundan-buyuk-basari--212028",
+      "publishedAt": "2026-10-24T10:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212028/1200x675yerli-oyundan-buyuk-basari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b3445cc39d0e11a6ad",
+      "title": "iPhone Duo'da ekran kırılması şikayetleri gelmeye başladı",
+      "summary": "Apple'ın ilk katlanabilir telefonu iPhone Duo'nun ekranı, bazı kullanıcıların bildirimlerine göre satın alındıktan birkaç saat sonra katlanma çizgisinden kırılıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iphone-duo-da-ekran-kirilmasi-sikayetleri-gelmeye-basladi--212035",
+      "publishedAt": "2026-10-24T10:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212035/1200x675iphone-duo-da-ekran-kirilmasi-sikayetleri-gelmeye-basladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a3cc04e700b7e4f6f4",
+      "title": "A101 marketler iFFALCON televizyonlarda kampanya yapıyor",
+      "summary": "29 Ekim A101 Aktüel teknoloji ürünleri arasında iFFALCON markasına ait akıllı televizyonlar ekstra garanti ve Pegasus BOL BOL puan kampanyası ile geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/29-ekim-a101-aktuel-katalogunda-neler-var--212029",
+      "publishedAt": "2026-10-24T09:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212029/1200x67529-ekim-a101-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e6a62d55841f725764",
+      "title": "Android oyunlarına DLSS rakibi: Adreno Neural Fusion geliyor",
+      "summary": "Qualcomm, Snapdragon GPU'lara özel Adreno Neural Fusion teknolojisini geliştiricilere açtı. Yeni teknoloji, yapay zekâ destekli görüntü yükseltme ve kare üretme özellikleri getiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/android-oyunlarina-dlss-rakibi-adreno-neural-fusion-geliyor--212026",
+      "publishedAt": "2026-10-24T08:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212026/1200x675android-oyunlarina-dlss-rakibi-adreno-neural-fusion-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e9b852b2f0943af48c",
+      "title": "Yeni Renault’lar birbirine daha çok benzeyecek: Tasarım şefi açıkladı",
+      "summary": "Renault, gelecekteki modellerinde daha sade ve ortak bir tasarım diline yönelecek. Markanın R4, R5 ve Twingo gibi retro modelleri ise özgün kimliğini koruyacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-renault-lar-birbirine-daha-cok-benzeyecek--212031",
+      "publishedAt": "2026-10-24T08:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212031/1200x675yeni-renault-lar-birbirine-daha-cok-benzeyecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "906b6310ca1c47c7eb",
+      "title": "Apple'ın katlanabilir iPad'i ortaya çıktı: Devasa olacak",
+      "summary": "Apple'ın katlanabilir iPad planları hakkında yeni detaylar ortaya çıktı. Dev ekranlı modelin Huawei MateBook Fold benzeri bir tasarıma sahip olabileceği iddia ediliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-in-katlanabilir-ipad-i-ortaya-cikti-devasa-olacak--212025",
+      "publishedAt": "2026-10-24T07:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212025/1200x675apple-in-katlanabilir-ipad-i-ortaya-cikti-devasa-olacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2deab2dcf143492a8e",
+      "title": "2026'nın en iyi oyuncu monitörleri: Yüksek hız ve düşük gecikme",
+      "summary": "İyi bir oyuncu monitörü, yüksek yenileme hızının yanında düşük tepki süresi ve doğru panel seçimiyle oyun deneyimini doğrudan etkiliyor. 2026'nın en iyi oyuncu monitörlerini bir araya getirdik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/2026-nin-en-iyi-oyuncu-monitorleri--211973",
+      "publishedAt": "2026-10-24T06:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/211973/1200x6752026-nin-en-iyi-oyuncu-monitorleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "1caefcb72c55b10142",
       "title": "OpenAI, 1,25 trilyon dolar değerlemeye ulaşabilir",
@@ -59,18 +155,6 @@
       "publishedAt": "2026-10-23T19:33:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212010/1200x675samsung-tv-lerde-gizlilik-skandali-surekli-dinleme-iddiasi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "bedb69882036e3044a",
-      "title": "Televizyon Tavsiyeleri - Ekim 2026",
-      "summary": "Televizyon tavsiyeleri serisinin yeni bölümünde Ekim ayında satın alabileceğiniz fiyat/performans olarak aklımıza yatan televizyon modellerinden bahsettik.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/televizyon-tavsiyeleri--212019",
-      "publishedAt": "2026-10-23T19:27:26Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212019/1200x675televizyon-tavsiyeleri.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -243,42 +327,6 @@
       "editorial": false
     },
     {
-      "id": "d975784fdd0160bd50",
-      "title": "BMW, çalışanlarına 650.000 euro'luk gönüllü istifa teklif etti: Yoğun ilgi sistemi çökertti",
-      "summary": "BMW, 2027 sonuna kadar 8.000 masa başı çalışanının görevine son vermek için 650.000 euro'yu aşan dev tazminat paketleri sunmaya başladı. Yoğun ilgi nedeniyle şirketin İK portalı çöktü.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bmw-calisanlarina-650-000-euro-luk-gonullu-istifa-teklif-etti--212018",
-      "publishedAt": "2026-10-23T15:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212018/1200x675bmw-calisanlarina-650-000-euro-luk-gonullu-istifa-teklif-etti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "20685b4dcac7665eb4",
-      "title": "Skoda'dan 3D yazıcılarla üretilebilen yeni aksesuarlar",
-      "summary": "Skoda, Printly Clever adı verilen yeni uygulamasıyla 3D yazıcılarla üretilebilen otomobil aksesuarlarını kullanıcıların erişimine açtı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/skoda-dan-3d-yazicilarla-uretilebilen-yeni-aksesuarlar--211999",
-      "publishedAt": "2026-10-23T15:04:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211999/1200x675skoda-dan-3d-yazicilarla-uretilebilen-yeni-aksesuarlar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "12aeaee2ca8ddb00ab",
-      "title": "Xbox'ta 6 oyun ücretsiz: Dying Light 2 ve daha fazlası",
-      "summary": "Xbox Game Pass kullanıcıları için yeni Ücretsiz Oyun Günleri başladı. Dying Light 2, Tropico 6 ve Monster Hunter Stories dahil 6 oyun kısa süreliğine ücretsiz oynanabiliyor. s",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-ta-6-oyun-ucretsiz-dying-light-2-ve-daha-fazlasi--211993",
-      "publishedAt": "2026-10-23T14:24:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/211993/1200x675xbox-ta-6-oyun-ucretsiz-dying-light-2-ve-daha-fazlasi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "ed8c86e224584a1a4f",
       "title": "Bütçe Dostu Çok Yönlü Laptop: Casper Excalibur G870",
       "summary": "Casper Excalibur G870'in fiyatı, oyun performansı, öğrenci kullanımı ve gerçek kullanıcı yorumları.",
@@ -287,18 +335,6 @@
       "publishedAt": "2026-10-23T14:20:51Z",
       "category": "Donanım",
       "image": "https://imgrosetta.webtekno.com/file/690148/690148-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "adbd79cda11fe3069a",
-      "title": "Açık denizde rüzgar enerjisini hidrojene dönüştüren platform: Benzeri yok",
-      "summary": "Çin, rüzgar enerjisiyle hidrojen üreten dünyanın ilk yarı batık açık deniz platformunu denize indirdi. Platformun, Güney Çin Denizi’nde devreye alınması planlanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/acik-denizde-ruzgar-enerjisini-hidrojene-donusturen-platform--211991",
-      "publishedAt": "2026-10-23T14:02:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211991/1200x675acik-denizde-ruzgar-enerjisini-hidrojene-donusturen-platform.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -312,18 +348,6 @@
       "category": "Oyun",
       "image": "https://store-images.s-microsoft.com/image/apps.16621.14338899831126037.225accb3-8e9c-4c00-a01b-619f2e44276d.56c0b677-c7a4-41bb-ba89-862d2a38f74d?w=400&h=600",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "422eb3665a373ffbf2",
-      "title": "Microsoft: Yapay zeka doktorlardan 4 kat daha doğru teşhis koyabiliyor",
-      "summary": "Microsoft’un yapay zeka sistemi, bazı tıbbi vakalarda doktorları teşhis doğruluğunda geride bıraktı. Şirket, sistemi gerçek hastane ortamlarında test etmeye hazırlanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-doktorlardan-4-kat-daha-dogru-teshis-koyabiliyor--211995",
-      "publishedAt": "2026-10-23T13:40:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/211995/1200x675yapay-zeka-doktorlardan-4-kat-daha-dogru-teshis-koyabiliyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -371,18 +395,6 @@
       "publishedAt": "2026-10-23T13:27:26Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/694534/694534-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a64fa4e63d09445332",
-      "title": "Yeni BYD Seal 07'nin iç mekanı ortaya çıktı: Masajlı koltuklar ve 20 hoparlörlü ses sistemi",
-      "summary": "BYD, yeni Seal 07’nin iç mekanını paylaştı. Beş metreyi aşan sedan; masajlı, ısıtmalı ve havalandırmalı koltukları, 20 hoparlörlü Devialet ses sistemi ve geniş kabiniyle konfor iddiasını artırıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-nesil-byd-seal-07-nin-ic-mekani-ortaya-cikti--211996",
-      "publishedAt": "2026-10-23T13:18:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211996/1200x675yeni-nesil-byd-seal-07-nin-ic-mekani-ortaya-cikti.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-14T20:24:19Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4Y142SWPQXA8GMMX3DTNYBY.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "9d49354fa5a46a3509",
-      "title": "Inside Hyperdrive: How we solved a rare Hyperdrive MySQL caching bug",
-      "summary": "While adding MySQL support to Hyperdrive, we found a subtle protocol bug when caching query results. Here is how we tracked down a 0.001% rate error and made Hyperdrive MySQL generally available.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/hyperdrive-mysql/",
-      "publishedAt": "2026-10-14T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4VK1DV41VQ8EZCK68R7E0CS.png",
       "language": "en",
       "editorial": false
     }
