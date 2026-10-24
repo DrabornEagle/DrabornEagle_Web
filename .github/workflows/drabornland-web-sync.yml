@@ -1,12 +1,6 @@
 name: DraBornLand web sync
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/drabornland-web-sync.yml'
-  schedule:
-    - cron: '2-59/15 * * * *'
   workflow_dispatch:
 
 permissions:
