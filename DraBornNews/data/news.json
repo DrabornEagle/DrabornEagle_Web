@@ -1,7 +1,79 @@
 {
-  "generatedAt": "2026-10-24T14:46:20.319023Z",
+  "generatedAt": "2026-10-24T18:00:00.054456Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "c1fefa89a55045c173",
+      "title": "CS2 için laptop önerileri: Rekabetçi ayarlarda FPS ve kare süresi istikrarı",
+      "summary": "CS2 için laptop arayanlar buraya! İşte rekabetçi ayarlarda akıcı oyun deneyimi sunan, güçlü işlemci, yüksek yenileme hızlı ekran ve RTX ekran kartlarıyla öne çıkan en iyi CS2 laptop önerileri!",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cs2-icin-laptop-onerileri-en-iyi-modeller--211825",
+      "publishedAt": "2026-10-24T17:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/211825/1200x675cs2-icin-laptop-onerileri-en-iyi-modeller.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "08edb675336d50e29b",
+      "title": "WhatsApp, Instagram Reels paylaşımı için yeni kısayol ekliyor",
+      "summary": "WhatsApp, Android beta sürümünde Instagram Reels paylaşımını kolaylaştıran yeni bir kısayol sunuyor. Hesap Merkezi bağlantısıyla çalışan özellik, video paylaşım sürecini daha pratik hale getiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/whatsapp-instagram-reels-paylasimi-icin-yeni-kisayol-ekliyor--212045",
+      "publishedAt": "2026-10-24T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212045/1200x675whatsapp-instagram-reels-paylasimi-icin-yeni-kisayol-ekliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b8cdacd224bc03da3d",
+      "title": "Fransa’daki protestolarda internetsiz mesajlaşma uygulaması Bitchat kullanıldı",
+      "summary": "İnternet bağlantısı olmadan mesajlaşma imkanı sunan Bitchat uygulaması, Fransa’da zirveye çıktı. Protestolar, sosyal medya engeli tartışmaları ve mobil şebeke kesintisi indirmeleri artırdı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/fransa-daki-protestolara-bitchat-damga-vurdu--212033",
+      "publishedAt": "2026-10-24T16:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212033/1200x675fransa-daki-protestolara-bitchat-damga-vurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f6337fc64a171295f2",
+      "title": "Samsung Galaxy Studio kulaklıklar lansmana bir adım daha yaklaştı",
+      "summary": "Samsung Galaxy Studio kulaklıkları, SM-U700 model numarasıyla Güney Kore RRA sertifikası aldı. İşte üst segmentte rekabetin yönünü etkileyebilecek yeni kulak üstü kulaklıkların detayları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-studio-kulakliklar-lansmana-bir-adim-daha-yaklasti--212044",
+      "publishedAt": "2026-10-24T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212044/1200x675samsung-galaxy-studio-kulakliklar-lansmana-bir-adim-daha-yaklasti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c81375d38a555ca627",
+      "title": "Ukrayna, Starlink krizinin ardından Nokia ile kendi uydu iletişim ağını kuracak",
+      "summary": "Starshield kısıtlamaları Ukrayna’yı kendi uydu ağını kurmaya yöneltti. Kiev yönetimi, askeri iletişimde dışa bağımlılığı azaltmak için Nokia ve ICEYE ile görüşmelere başladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ukrayna-nokia-ile-kendi-uydu-iletisim-agini-kuracak--212034",
+      "publishedAt": "2026-10-24T15:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212034/1200x675ukrayna-nokia-ile-kendi-uydu-iletisim-agini-kuracak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4a584a87b6857d1dd3",
+      "title": "Gemini Android’e yeni tasarım geldi: Ayarlar tek yerde",
+      "summary": "Google, Gemini Android uygulamasının yan panelini ve ayarlar sayfasını yeniledi. Yeni tasarım, sohbetlere erişimi kolaylaştırırken hesap tercihleri, gizlilik ve bildirimleri tek yerde topluyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gemini-android-e-yeni-tasarim-geldi-ayarlar-tek-yerde--212040",
+      "publishedAt": "2026-10-24T15:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212040/1200x675gemini-android-e-yeni-tasarim-geldi-ayarlar-tek-yerde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "eaf9e29f52a62142e9",
       "title": "Samsung, katlanabilir telefonların arkasındaki mühendisliği anlattı (Röportaj)",
@@ -231,66 +303,6 @@
       "editorial": false
     },
     {
-      "id": "8ea9e7c16c6a4ceae0",
-      "title": "15 yaş altına sosyal medyayı yasaklayan ülkelere Yunanistan da katıldı",
-      "summary": "Sosyal medya yasakları tüm dünyaya yayılmaya devam ediyor. Avustralya, Fransa, Türkiye gibi ülkelerden sonra Yunanistan da 15 yaş altına sosyal medyayı yasaklama kararı aldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yunanistan-15-yas-altina-sosyal-medyayi-yasakladi--212002",
-      "publishedAt": "2026-10-23T19:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212002/1200x675yunanistan-15-yas-altina-sosyal-medyayi-yasakladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5d3fe6f28a8e7fe874",
-      "title": "Samsung TV’lerde gizlilik skandalı: Sürekli dinleme ve takip iddiası",
-      "summary": "Samsung'un 2025 model televizyonunda güvenlik açıklarından yararlanarak yönetici erişimi elde eden bir araştırmacı, cihazın mikrofonunun sürekli açık olduğunu öne sürdü.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-tv-lerde-gizlilik-skandali-surekli-dinleme-iddiasi--212010",
-      "publishedAt": "2026-10-23T19:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212010/1200x675samsung-tv-lerde-gizlilik-skandali-surekli-dinleme-iddiasi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3d9757ac9917a9dc40",
-      "title": "PHP açıkları Türkiye'yi de vurdu: Yüzbinlerce hizmet eski sürümde",
-      "summary": "Censys verilerine göre dünya genelinde 33,5 milyon PHP hizmeti etkilenen sürümlerde çalışıyor. Türkiye'de ise sürümünü açıklayan hizmetlerin yüzde 92,9'u riskli kategoride yer alıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/php-aciklari-turkiye-yi-de-vurdu-yuzbinlerce-hizmet-eski-surumde--212007",
-      "publishedAt": "2026-10-23T19:11:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212007/1200x675php-aciklari-turkiye-yi-de-vurdu-yuzbinlerce-hizmet-eski-surumde.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "15dc077e62ac4b6005",
-      "title": "The Gentlemen 3. sezon geliyor: İlk detayları ve oyuncu kadrosu paylaşıldı",
-      "summary": "Netflix'in sevilen dizisi The Gentlemen'ın 3. sezonu şekillenmeye başladı. Dizinin yeni sezonu, Yüzüklerin Efendisi filmlerinin iki başrol oyuncusunu tekrar bir araya getirecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/the-gentlemen-3-sezon-detaylari-ve-kadrosu-paylasildi--212017",
-      "publishedAt": "2026-10-23T18:49:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212017/1200x675the-gentlemen-3-sezon-detaylari-ve-kadrosu-paylasildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a9f4092d8b14f9b4c7",
-      "title": "DeepSeek V4.1-Flash ile en iyi açık model daha da iyi oldu",
-      "summary": "Bir süredir piyasadaki en iyi ve en popüler açık model konumunda olan DeepSeek-V4.1-Flash yeni 1017 güncellemesiyle daha da gelişti; En üst kapalı modellerle kafa kafaya yarışıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/deepseek-v4-1-flash-en-iyi-acik-model-daha-da-iyi-oldu--212015",
-      "publishedAt": "2026-10-23T18:27:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212015/1200x675deepseek-v4-1-flash-en-iyi-acik-model-daha-da-iyi-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "60f970e1df3b48e382",
       "title": "Origin Range Requests: Serving large files without range-request tuning",
       "summary": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half.",
@@ -312,18 +324,6 @@
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5MYF3Y4CXM47ZAN16JYM04W.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "24533beb928d9876e4",
-      "title": "Trump: Musk, Ukrayna’nın Starlink erişimini yeniden sağladı",
-      "summary": "Trump, Ukrayna’nın Starlink erişiminin yeniden sağlandığını açıkladı. ABD Başkanı’nın Elon Musk’tan kısıtlamaları kaldırmasını istediği öne sürülürken sistemin tamamen normale dönmediği bildirildi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/trump-musk-ukrayna-nin-starlink-erisimini-yeniden-sagladi--212014",
-      "publishedAt": "2026-10-23T18:05:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212014/1200x675trump-musk-ukrayna-nin-starlink-erisimini-yeniden-sagladi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
