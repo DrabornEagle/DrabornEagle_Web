@@ -1,7 +1,103 @@
 {
-  "generatedAt": "2026-10-24T11:28:04.921620Z",
+  "generatedAt": "2026-10-24T14:46:20.319023Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "eaf9e29f52a62142e9",
+      "title": "Samsung, katlanabilir telefonların arkasındaki mühendisliği anlattı (Röportaj)",
+      "summary": "Samsung Türkiye Başkan Yardımcısı Murat Azdemir, katlanabilir telefonların nasıl geliştirildiğini, Galaxy Z Fold8 serisi için yürütülen çalışmaları ve Galaxy AI vizyonunu anlattı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-katlanabilir-telefonun-arkasindaki-muhendisligi-anlatti--212049",
+      "publishedAt": "2026-10-24T14:37:36Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212049/1200x675samsung-katlanabilir-telefonun-arkasindaki-muhendisligi-anlatti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "94ab463ed2322cad6a",
+      "title": "iPhone Duo'ya özel iOS 27.1 yayınlandı: iOS 27.2 haftaya tüm modellere geliyor",
+      "summary": "iOS 27.2, bir sonraki büyük iPhone güncellemesi olarak yakında kullanıma sunulacak. iOS 27.1, yalnızca iPhone Duo modellerine özel sürümdü. Peki, yeni sürümde ne yenilikler bekleniyor?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ios-27-1-iphone-duo-ya-ozel-cikti-ios-27-2-tum-modellere-geliyor--212038",
+      "publishedAt": "2026-10-24T14:30:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212038/1200x675ios-27-1-iphone-duo-ya-ozel-cikti-ios-27-2-tum-modellere-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "074ebdc59947ab92f0",
+      "title": "Micron, 400 katmanlı yeni NAND bellek geliştiriyor: Yoğunluk ikiye katlanacak",
+      "summary": "Micron, 2027’nin ikinci yarısında seri üretime başlamayı planladığı yeni nesil 3D NAND belleklerle depolama yoğunluğunu iki katına, I/O performansını ise yüzde 50 artırmayı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/micron-un-yeni-nand-bellegi-depolama-yogunlugunu-ikiye-katlayacak--212024",
+      "publishedAt": "2026-10-24T14:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212024/1200x675micron-un-yeni-nand-bellegi-depolama-yogunlugunu-ikiye-katlayacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ea3feabfcd52739df4",
+      "title": "Gigabyte'dan aktif soğutmalı anakart: 2TB RAM, 9 GPU desteğiyle geliyor",
+      "summary": "GIGABYTE, performans tutkunları için tam bir canavar piyasaya sürdü. WRX90 AI TOP anakart, AMD Ryzen Threadripper PRO 9000 ve 7000 serisi işlemcilerden maksimum verim almak üzere tasarlanmış.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gigabyte-wrx90-ai-top-anakart-tanitildi-iste-ozellikleri--212036",
+      "publishedAt": "2026-10-24T13:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212036/1200x675gigabyte-wrx90-ai-top-anakart-tanitildi-iste-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2e59b36f2e8df67df5",
+      "title": "Sınırları Aşan Casper Oyun Bilgisayarı: Excalibur G920",
+      "summary": "Casper Excalibur G920; RTX 5070 Ti, RTX 5080 ve RTX 5090 seçenekleri, i9-14900HX işlemcisi ve 300 Hz QHD ekranıyla ağır oyunlara hazırlanmak isteyenlerin gündemine oturuyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/ust-duzey-oyun-deneyimi-arayanlara-oyuncu-bilgisayari-casper-excalibur-g920-h227756.html",
+      "publishedAt": "2026-10-24T13:00:47Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/690145/690145-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "aab0b1a0f606add787",
+      "title": "iPhone Duo 10.000 kez katlandı: İşte sonuçlar",
+      "summary": "Apple’ın ilk katlanabilir telefonu, 10.000 katlama ve -20 derece sıcaklıkta yapılan ek testlerde menteşe sağlamlığını korudu. Ancak ekranın ortasındaki katlanma izi zamanla daha belirgin hale geldi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iphone-duo-10-000-kez-katlandi-iste-sonuclar--212023",
+      "publishedAt": "2026-10-24T13:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212023/1200x675iphone-duo-10-000-kez-katlandi-iste-sonuclar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "48d8ac6652671af49f",
+      "title": "Starlink Mobile büyüyor: SpaceX, 80 bin baz istasyonu için görüşüyor",
+      "summary": "Starlink Mobile ile ABD telekomünikasyon pazarına girmeye hazırlanan SpaceX, ülke genelinde en az 80 bin baz istasyonu sahasına erişmek için altyapı şirketleriyle görüşüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/spacex-starlink-mobile-icin-80-bin-baz-istasyonu-hedefliyor--212022",
+      "publishedAt": "2026-10-24T12:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212022/1200x675spacex-starlink-mobile-icin-80-bin-baz-istasyonu-hedefliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "25fbe55be2238a953f",
+      "title": "Yeni Fiat Grizzly'nin uygun fiyatlı baz versiyonu görüntülendi",
+      "summary": "Fiat Grizzly'nin giriş seviyesi versiyonu kamuflajsız olarak görüntülendi. Gösterişli tasarım unsurlarından arındırılan SUV sade tasarımıyla bütçe dostu bir seçenek olacağının sinyallerini veriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-fiat-grizzly-nin-uygun-fiyatli-baz-versiyonu-goruntulendi--212037",
+      "publishedAt": "2026-10-24T11:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212037/1200x675yeni-fiat-grizzly-nin-uygun-fiyatli-baz-versiyonu-goruntulendi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "103d38e79c0b92a123",
       "title": "Şeffaf ekranlı ilginç kamera Godox C100 ülkemizde satışta",
@@ -231,18 +327,6 @@
       "editorial": false
     },
     {
-      "id": "f0b53dd585f02d4288",
-      "title": "Apple, iPhone Duo talebine yetişmek için üretimi %44 artırıyor",
-      "summary": "Apple’ın katlanabilir telefonu iPhone Duo’ya yönelik yoğun talep, şirketin üretim planlarını değiştirdi. Tedarikçilere verilen siparişlerin 9,7 milyondan 14 milyon adede çıkarıldığı belirtiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-iphone-duo-talebine-yetismek-icin-uretimi-yuzde-44-artiriyor--212011",
-      "publishedAt": "2026-10-23T17:20:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212011/1200x675apple-iphone-duo-talebine-yetismek-icin-uretimi-yuzde-44-artiriyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "a2c5966f29fc2ffcf0",
       "title": "Call of Duty: Modern Warfare 4 – Kill Block is Must-Play Multiplayer at Launch",
       "summary": "Hidden inside the West Bridge Advanced Military Training Facility is a complex combat environment where shifting, modular battlegrounds challenge even the most elite Operators, with hundreds of unique configurations. This is Kill Block, and if you’re picking up Call of Duty: Modern Warfare 4 today, you must play it – it’s one of the most",
@@ -255,54 +339,6 @@
       "editorial": false
     },
     {
-      "id": "e2d5f430923e25393b",
-      "title": "Finlandiya, dünyanın ilk kalıcı nükleer atık deposu için işletme lisansı verdi",
-      "summary": "Finlandiya hükümeti, kullanılmış nükleer yakıtları yerin 400 metre altında 100 bin yol boyunca depolayacak Onkalo tesisi için işletme lisansını verdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/finlandiya-dunyanin-ilk-kalici-nukleer-atik-deposuna-onay-verdi--212009",
-      "publishedAt": "2026-10-23T16:58:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212009/1200x675finlandiya-dunyanin-ilk-kalici-nukleer-atik-deposuna-onay-verdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ccd17997be23760830",
-      "title": "Samsung One UI 9.5 için geri sayım başladı: Beta yakında gelebilir",
-      "summary": "Samsung, One UI 9.5 için beta hazırlıklarını hızlandırdı. Samsung Members uygulamasında yenilenen beta programı bölümü, test sürecinin yakında başlayabileceğine işaret ediyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-one-ui-9-5-icin-geri-sayim-beta-yakinda-gelebilir--212013",
-      "publishedAt": "2026-10-23T16:36:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212013/1200x675samsung-one-ui-9-5-icin-geri-sayim-beta-yakinda-gelebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a3a98b1597229f9d89",
-      "title": "Getir araştırdı: Market alışverişi yılda 4 günümüzü alıyor",
-      "summary": "Getir ve Veri Enstitüsü araştırmasına göre market alışverişi için yılda 96 saat (4 gün) harcıyoruz. Ulaşım maliyeti ise yaklaşık 13 bin TL'ye ulaşıyor. İşte çarpıcı araştırmanın sonuçları...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/getir-arastirdi-market-alisverisi-yilda-4-gunumuzu-aliyor--212021",
-      "publishedAt": "2026-10-23T16:22:13Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212021/1200x675getir-arastirdi-market-alisverisi-yilda-4-gunumuzu-aliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4b0f01b7d0e1e633b7",
-      "title": "Elon Musk, Terafab için tarih verdi: İlk çip 2027’de üretilecek",
-      "summary": "Elon Musk, Terafab çip fabrikasında ilk deneme çipinin 2027 ortasında üretileceğini açıkladı. Projenin maliyetinin uzun vadede 100 milyar doları aşması bekleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elon-musk-terafab-icin-tarih-verdi-ilk-cip-2027-de-uretilecek--212016",
-      "publishedAt": "2026-10-23T16:14:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212016/1200x675elon-musk-terafab-icin-tarih-verdi-ilk-cip-2027-de-uretilecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "fbadabad4df2c3de0a",
       "title": "See what 5 builders are making with Gemini 4 Argon",
       "summary": "See how five builders are putting Gemini 4 Argon to work — and get inspired for your next build.",
@@ -312,18 +348,6 @@
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/5buildersArgon_Hero.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "dd6541039411adb3c7",
-      "title": "Getty Images yapay zekâya yenik düştü, iflas başvurusu yaptı",
-      "summary": "Stok medya sektörünün lider ismi Getty Images yapay zekâ ile görsel oluşturma trendi sonrasında borçlarını çevirmekte zorlanmaya başladı ve iflas başvurusu yaptı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/getty-images-borc-icinde-yuzuyor--212020",
-      "publishedAt": "2026-10-23T15:52:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212020/1200x675getty-images-borc-icinde-yuzuyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -611,18 +635,6 @@
       "publishedAt": "2026-10-23T07:36:36Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/694399/694399-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "994f650c0f2796b177",
-      "title": "Toplam Değeri 8.460 TL'den Fazla 7 Oyun, Xbox'ta Bu Hafta Sonu Ücretsiz Oldu",
-      "summary": "Xbox Free Play Days kapsamında bu hafta ücretsiz olacak oyunlar açıklandı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/23-25-ekim-xbox-ucretsiz-oyun-h227770.html",
-      "publishedAt": "2026-10-23T07:12:11Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/694384/694384-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-15T13:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4YQC03MMFYZ10P30YWNWGG4.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "049f752dea89d9de43",
-      "title": "Yandex outage: Data shows that instead of going dark, malicious bots went on the move",
-      "summary": "When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/yandex-outage/",
-      "publishedAt": "2026-10-14T20:24:19Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4Y142SWPQXA8GMMX3DTNYBY.png",
       "language": "en",
       "editorial": false
     }
