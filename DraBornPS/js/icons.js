@@ -1,5 +1,12 @@
 window.DKD = window.DKD || {};
 DKD.paths = {
+ dkd_instagram:'<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/>',
+ dkd_x:'<path d="M4 3h4.5L20 21h-4.5L4 3Zm0 18 6.8-8.2M13.2 11.2 20 3"/>',
+ dkd_tiktok:'<path d="M14 3v12.5a4.5 4.5 0 1 1-4.5-4.5M14 3c.5 3 2.4 5 6 5"/>',
+ dkd_linkedin:'<rect x="3" y="3" width="18" height="18" rx="3"/><path d="M7.5 10v7M11.5 17v-7m0 3a3 3 0 0 1 6 0v4"/><circle cx="7.5" cy="7" r=".8" fill="currentColor" stroke="none"/>',
+ dkd_facebook:'<path d="M14 22V13h3l.5-4H14V7c0-1 .5-2 2-2h2V1.5L15.5 1C12 1 10 3 10 6v3H7v4h3v9"/>',
+ dkd_github:'<path d="M8 21v-3c-4 1-4-2-6-2m14 5v-4c0-1-.4-1.6-1-2 3-.3 6-1.4 6-6a4.8 4.8 0 0 0-1.3-3.3A4.5 4.5 0 0 0 19.5 2S18.2 1.6 16 3a12 12 0 0 0-8 0C5.8 1.6 4.5 2 4.5 2a4.5 4.5 0 0 0-.2 3.7A4.8 4.8 0 0 0 3 9c0 4.6 3 5.7 6 6-.6.4-1 1-1 2"/>',
+ dkd_external:'<path d="M14 3h7v7m0-7L10 14M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/>',
  search:'<circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/>',
  settings:'<path d="m10 3 4 0 .7 3 2 1.2 3-.8 2 3.4-2.3 2.2v2.1l2.3 2.3-2 3.4-3-.8-2 1.1-.7 3h-4l-.7-3-2-1.1-3 .8-2-3.4 2.3-2.3v-2.1L2.3 9.8l2-3.4 3 .8 2-1.2z"/><circle cx="12" cy="13" r="3.3"/>',
  home:'<path d="m2 11 10-8 10 8M5 9v12h5v-7h4v7h5V9"/>',

@@ -1,11 +1,92 @@
-.welcome-heading:has(.dkd-brand-description){align-items:flex-start;margin-top:54px;margin-bottom:24px;gap:28px}
-.dkd-brand-copy{max-width:1120px;min-width:0}
-.welcome-heading .dkd-brand-description{font-size:21px;line-height:1.5;max-width:1000px}
-.dkd-brand-description a{color:#b9f1ff;text-underline-offset:4px}
-.dkd-brand-links{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:13px;font-size:16px;line-height:1.5}
-.dkd-brand-links a{color:#f6c7e3;text-decoration:underline;text-underline-offset:4px}
-.dkd-brand-links a:focus-visible{outline:2px solid #8defff;outline-offset:4px;border-radius:3px}
-.dkd-brand-links a:first-child{color:#b9f1ff}
-body.dkd-mobile-ui .welcome-heading:has(.dkd-brand-description){margin-top:7px;margin-bottom:14px}
-body.dkd-mobile-ui .welcome-heading .dkd-brand-description{font-size:13px;line-height:1.5}
-body.dkd-mobile-ui .dkd-brand-links{font-size:12px;gap:7px 14px;margin-top:11px}
+.welcome-heading:has(.dkd-brand-copy){align-items:center;margin-top:54px;margin-bottom:24px;gap:28px}
+.dkd-brand-copy{min-width:0}
+body.dkd-mobile-ui .welcome-heading:has(.dkd-brand-copy){margin-top:7px;margin-bottom:14px}
+
+/* Profile: the ecosystem introduction and official links live together here. */
+.cc-overlay.dkd-profile-open{background:linear-gradient(135deg,#180f2ae8,#0a1b2cf5);backdrop-filter:blur(18px)}
+.cc-panel.dkd-profile-panel{top:70px;right:100px;bottom:228px;left:100px;width:auto;max-height:none;padding:32px;border-radius:30px;overscroll-behavior:contain;scrollbar-width:thin;scrollbar-color:#c9a7de66 transparent}
+.dkd-profile-content{min-width:0}
+.dkd-profile-identity{display:flex;align-items:center;gap:20px;padding:0 48px 26px 0;border-bottom:1px solid #f6c4e52b;position:relative}
+.dkd-profile-identity .avatar.large{width:80px;height:80px;border-color:#ffb5dd88;box-shadow:0 0 30px #ff80c32b;flex-shrink:0}
+.dkd-profile-name{min-width:0;flex:1}
+.dkd-profile-overline{display:block;font-size:13px;line-height:1.4;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#f7aaca}
+.dkd-profile-panel .dkd-profile-name h2{font-size:32px;line-height:1.2;font-weight:650;margin:4px 0 8px;overflow-wrap:anywhere}
+.dkd-profile-presence{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:#e2d8ee}
+.dkd-profile-presence:before{content:'';width:7px;height:7px;border-radius:50%;background:#8ce8d0;box-shadow:0 0 12px #8ce8d055}
+.dkd-profile-edit{font-size:17px;min-height:48px;padding:12px 20px;white-space:nowrap}
+.dkd-profile-edit .icon{width:20px;height:20px}
+.dkd-profile-close{position:absolute;right:0;top:0;width:40px;height:40px;border:1px solid #ffb9df33;background:#ffffff08}
+.dkd-profile-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:24px;margin-top:26px}
+.dkd-profile-story,.dkd-profile-socials,.dkd-profile-console{min-width:0;border:1px solid #e9b6e42e;border-radius:24px;background:linear-gradient(135deg,#352342c4,#17273dc9)}
+.dkd-profile-story{padding:32px;background:radial-gradient(ellipse at 100% 0,#ff9bc724,transparent 70%),linear-gradient(145deg,#382044d9,#17283ed9)}
+.dkd-profile-story h3{font-size:40px;line-height:1.15;letter-spacing:-.7px;font-weight:650;margin:20px 0}
+.dkd-profile-panel .dkd-profile-story p{font-size:19px;line-height:1.6;color:#e8ddeb;margin:0 0 12px}
+.dkd-profile-story p a{color:#a8f6ec;text-decoration:none;border-bottom:1px solid #a8f6ec55}
+.dkd-profile-destinations{display:grid;gap:12px;margin-top:26px}
+.dkd-profile-destinations a{display:flex;align-items:center;gap:16px;padding:18px;border:1px solid #c5b4e23d;border-radius:18px;background:#ffffff08;text-decoration:none;color:#fff1fc;transition:background .18s,border-color .18s}
+.dkd-profile-destinations a:hover{background:#f5a4ce18;border-color:#ffc4e980}
+.dkd-profile-destinations a>.icon:first-child{color:#a6f1ec;width:27px;height:27px}
+.dkd-profile-destinations a>.icon:last-child{margin-left:auto;width:20px;height:20px}
+.dkd-profile-destinations a span{min-width:0}
+.dkd-profile-destinations strong{display:block;font-size:19px;font-weight:600;line-height:1.4}
+.dkd-profile-destinations small{display:block;font-size:14px;line-height:1.5;color:#c7bdd9;margin-top:4px}
+.dkd-profile-aside{min-width:0;display:flex;flex-direction:column;gap:20px}
+.dkd-profile-socials{padding:26px}
+.dkd-profile-socials h3{font-size:27px;font-weight:600;line-height:1.3;margin:7px 0 22px}
+.dkd-profile-social-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.dkd-profile-social{--dkd-social-tone:#d6c4fa;display:flex;align-items:center;gap:10px;min-height:76px;padding:16px 14px;color:#fff1fa;background:#ffffff06;border:1px solid #d3c5ea33;border-radius:16px;font-size:16px;font-weight:550;text-decoration:none;transition:background .18s,border-color .18s}
+.dkd-profile-social:hover{background:#ffffff12;border-color:var(--dkd-social-tone)}
+.dkd-profile-social>.icon{width:25px;height:25px;color:var(--dkd-social-tone)}
+.dkd-profile-social>.dkd-profile-external{width:13px;height:13px;margin-left:auto;color:#c9bed7}
+.dkd-profile-social-instagram{--dkd-social-tone:#ffb0d5}
+.dkd-profile-social-x{--dkd-social-tone:#f6ecff}
+.dkd-profile-social-tiktok{--dkd-social-tone:#94f5ec}
+.dkd-profile-social-linkedin{--dkd-social-tone:#a1d3ff}
+.dkd-profile-social-facebook{--dkd-social-tone:#b8c1ff}
+.dkd-profile-social-github{--dkd-social-tone:#e2c7ff}
+.dkd-profile-console{padding:8px 24px}
+.dkd-profile-trophies{display:flex;align-items:center;gap:14px;width:100%;padding:17px 0;text-align:left;border-radius:12px;font-size:16px}
+.dkd-profile-trophies>.icon:first-child{color:#ffce9c;width:27px;height:27px}
+.dkd-profile-trophies>.icon:last-child{width:20px;height:20px;margin-left:auto}
+.dkd-profile-trophies span{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.dkd-profile-trophies strong{font-size:14px;font-weight:500;color:#e0bed4;border:1px solid #e7c0db30;border-radius:20px;padding:4px 10px}
+.dkd-profile-panel .dkd-profile-console .setting-row{padding:14px 0;min-height:60px;font-size:17px;gap:14px;flex-wrap:wrap}
+.dkd-profile-console select{max-width:55%;min-width:0;font-size:15px}
+.high-contrast .dkd-profile-story,.high-contrast .dkd-profile-socials,.high-contrast .dkd-profile-console{background:#090812;border-color:#ffffff90}
+.high-contrast .dkd-profile-social{border-color:#fff9}
+.large-text .dkd-profile-panel p,.large-text .dkd-profile-destinations strong,.large-text .dkd-profile-social{font-size:22px}
+
+body.dkd-mobile-ui #control-center:not([hidden]) .cc-panel.dkd-profile-panel{inset:12px 12px calc(100px + env(safe-area-inset-bottom))!important;width:auto;max-height:none!important;padding:18px;border-radius:24px;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch}
+body.dkd-mobile-ui .dkd-profile-identity{display:grid;grid-template-columns:60px minmax(0,1fr);gap:13px;padding:6px 0 20px}
+body.dkd-mobile-ui .dkd-profile-identity .avatar.large{width:60px;height:60px}
+body.dkd-mobile-ui .dkd-profile-name{padding-right:28px}
+body.dkd-mobile-ui .dkd-profile-panel .dkd-profile-name h2{font-size:24px;margin:4px 0 6px;line-height:1.2}
+body.dkd-mobile-ui .dkd-profile-overline{font-size:10px;letter-spacing:1.6px}
+body.dkd-mobile-ui .dkd-profile-presence{font-size:12px;gap:6px}
+body.dkd-mobile-ui .dkd-profile-close{top:0;right:0;width:34px;height:34px}
+body.dkd-mobile-ui .dkd-profile-close .icon{width:20px;height:20px}
+body.dkd-mobile-ui .dkd-profile-edit{grid-column:1/-1;justify-content:center;font-size:14px;min-height:46px;padding:12px 16px;margin-top:4px}
+body.dkd-mobile-ui .dkd-profile-grid{grid-template-columns:minmax(0,1fr);gap:16px;margin-top:20px}
+body.dkd-mobile-ui .dkd-profile-story{padding:22px 20px;border-radius:20px}
+body.dkd-mobile-ui .dkd-profile-story h3{font-size:29px;line-height:1.18;letter-spacing:-.5px;margin:14px 0 17px}
+body.dkd-mobile-ui .dkd-profile-panel .dkd-profile-story p{font-size:15px;line-height:1.65;margin-bottom:10px}
+body.dkd-mobile-ui .dkd-profile-destinations{gap:10px;margin-top:20px}
+body.dkd-mobile-ui .dkd-profile-destinations a{gap:12px;padding:14px 12px;border-radius:15px;min-height:68px}
+body.dkd-mobile-ui .dkd-profile-destinations a>.icon:first-child{width:23px;height:23px}
+body.dkd-mobile-ui .dkd-profile-destinations a>.icon:last-child{width:16px;height:16px}
+body.dkd-mobile-ui .dkd-profile-destinations strong{font-size:14px}
+body.dkd-mobile-ui .dkd-profile-destinations small{font-size:11px;margin-top:3px}
+body.dkd-mobile-ui .dkd-profile-aside{gap:16px}
+body.dkd-mobile-ui .dkd-profile-socials{padding:22px 18px;border-radius:20px}
+body.dkd-mobile-ui .dkd-profile-socials h3{font-size:23px;margin:6px 0 18px}
+body.dkd-mobile-ui .dkd-profile-social-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+body.dkd-mobile-ui .dkd-profile-social{gap:9px;min-height:62px;padding:12px 10px;border-radius:14px;font-size:13px}
+body.dkd-mobile-ui .dkd-profile-social>.icon{width:22px;height:22px}
+body.dkd-mobile-ui .dkd-profile-social>.dkd-profile-external{width:11px;height:11px}
+body.dkd-mobile-ui .dkd-profile-console{padding:5px 18px;border-radius:20px}
+body.dkd-mobile-ui .dkd-profile-trophies{font-size:14px;min-height:58px}
+body.dkd-mobile-ui .dkd-profile-panel .dkd-profile-console .setting-row{font-size:13px;min-height:58px}
+body.dkd-mobile-ui .dkd-profile-console select{font-size:12px}
+body.dkd-mobile-ui.large-text .dkd-profile-panel .dkd-profile-story p,body.dkd-mobile-ui.large-text .dkd-profile-destinations strong,body.dkd-mobile-ui.large-text .dkd-profile-social{font-size:18px}
+@media(max-width:350px){body.dkd-mobile-ui .dkd-profile-social>.dkd-profile-external{display:none}body.dkd-mobile-ui #control-center:not([hidden]) .cc-panel.dkd-profile-panel{padding:14px}body.dkd-mobile-ui .dkd-profile-story{padding:20px 16px}}
+@media(prefers-reduced-motion:reduce){.dkd-profile-social,.dkd-profile-destinations a{transition:none}}
