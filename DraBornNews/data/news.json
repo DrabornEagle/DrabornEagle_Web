@@ -1,7 +1,43 @@
 {
-  "generatedAt": "2026-10-25T18:18:10.248433Z",
+  "generatedAt": "2026-10-25T21:08:45.628228Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "ae9840770dd595fcf9",
+      "title": "Efsane Zelda oyunu, yapay zekâ yardımıyla iPhone ve iPad'e geldi",
+      "summary": "Yapay zeka, Nintendo 64 klasiği The Legend of Zelda: Ocarina of Time'ı iPhone ve iPad'e taşıdı. Üstelik oyun, emülatör olmadan 60 FPS hızında çalışabiliyor. Peki bu nasıl mümkün oldu?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-efsane-zelda-oyununu-iphone-ve-ipad-e-tasidi--212074",
+      "publishedAt": "2026-10-25T20:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212074/1200x675yapay-zeka-efsane-zelda-oyununu-iphone-ve-ipad-e-tasidi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "15f1eec0a913744731",
+      "title": "Xbox, Netflix'in 500 milyon dolarlık teklifini reddetti",
+      "summary": "Netflix'in kısa süre önce Xbox'a 500 milyon dolarlık kayda değer bir teklif yaptığı, fakat bu teklifin yetersiz bulunduğu için reddedildiği ortaya çıktı. İşte teklifin detayları...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/xbox-netflix-in-500-milyon-dolarlik-teklifini-reddetti--212073",
+      "publishedAt": "2026-10-25T19:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212073/1200x675xbox-netflix-in-500-milyon-dolarlik-teklifini-reddetti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1d06187c430c01ec8b",
+      "title": "YouTube 2027'de yeni formata geçiyor: Video kalitesi artacak!",
+      "summary": "YouTube, 2027'nin başlarında platformuna AV2'yi getirmeyi planladığını duyurdu. Bu yeni codec, kullanıcıların videoları daha az kesintiyle daha hızlı ve kaliteli izlemelerine olanak tanıyacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/youtube-2027-de-av2-formatina-geciyor-video-kalitesi-artacak--212067",
+      "publishedAt": "2026-10-25T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212067/1200x675youtube-2027-de-av2-formatina-geciyor-video-kalitesi-artacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "cbc0f7463c94fbb956",
       "title": "Jack Dorsey’nin şirketi Block, yalnızca insan konuşmalarıyla eğitilen yapay zekasını tanıttı",
@@ -251,54 +287,6 @@
       "publishedAt": "2026-10-25T08:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://www.donanimhaber.com/images/images/haber/212057/1200x675nvidia-dan-sadece-4-gb-lik-internetsiz-yeni-yapay-zeka-modeli.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "80b12510b07e1439b2",
-      "title": "ColorOS 17 güncellemesi beklenenden erken geldi: İşte modeller",
-      "summary": "ColorOS 17 güncellemesi için beklenen tarih gelmeden dağıtım başladı. OnePlus 15 ve Oppo'nun yeni modelleri, Android 17 tabanlı güncellemeyi almaya başladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/coloros-17-guncellemesi-beklenenden-erken-geldi-iste-modeller--212054",
-      "publishedAt": "2026-10-25T07:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212054/1200x675coloros-17-guncellemesi-beklenenden-erken-geldi-iste-modeller.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4af0d057c4243f564f",
-      "title": "Fiyat/Performans canavarı: 200Hz ve üzeri yenileme hızı sunan monitörler",
-      "summary": "Akıcı oyun deneyimi için yüksek yenileme hızına sahip bir monitör arıyorsanız seçenekler düşündüğünüzden fazla. 200Hz ve üzeri monitörleri, fiyatlarını ve öne çıkan özelliklerini bir araya getirdik.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/fiyat-performans-200-hz-monitor-tavsiyeleri--211960",
-      "publishedAt": "2026-10-25T06:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211960/1200x675fiyat-performans-200-hz-monitor-tavsiyeleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a71fe7c1845c2010a3",
-      "title": "Gears of War: E-Day'in dudak uçuklatan bütçesi ortaya çıktı",
-      "summary": "Bu ayın başında oyunseverlerle buluşan Gears of War: E-Day'in bütçesi ortaya çıktı. Paylaşılan rakamlar, bu ölçekte bir oyun yapmanın ne kadar maliyetli hâle geldiğini ortaya koyuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gears-of-war-e-day-in-dudak-ucuklatan-butcesi-ortaya-cikti--212050",
-      "publishedAt": "2026-10-24T20:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212050/1200x675gears-of-war-e-day-in-dudak-ucuklatan-butcesi-ortaya-cikti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d24111f0cc47f8eec1",
-      "title": "PHP'de yeni bir güvenlik açığı daha ortaya çıktı: PHP2Shell'den iki gün sonra yeni uyarı",
-      "summary": "PHP2Shell açıkları için yayımlanan acil yamalardan iki gün sonra yeni bir güvenlik açığı daha ortaya çıktı. PHP, güncelleme yayınlamak yerine bu kez farklı bir yol izliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/php-de-yeni-bir-kritik-guvenlik-acigi-daha-ortaya-cikti--212051",
-      "publishedAt": "2026-10-24T19:30:00Z",
-      "category": "Güvenlik",
-      "image": "https://www.donanimhaber.com/images/images/haber/212051/1200x675php-de-yeni-bir-kritik-guvenlik-acigi-daha-ortaya-cikti.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-15T14:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4XW9N9BNAM3T4W2SE62A1B1.01M4XW9NZG3B1PTR3QTA8CK4GR.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "d05f789212e75b0389",
+      "title": "Cloudflare and OpenAI: Making AI discovery better for everyone",
+      "summary": "How Cloudflare and OpenAI are working together to help AI find useful content, keep up with changes, and make fewer wasted requests — making the experience better for users and website owners alike.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/cloudflare-openai-discovery-agentic-web/",
+      "publishedAt": "2026-10-15T13:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4YQC03MMFYZ10P30YWNWGG4.png",
       "language": "en",
       "editorial": false
     }
