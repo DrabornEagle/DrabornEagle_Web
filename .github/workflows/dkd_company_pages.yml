@@ -119,6 +119,14 @@ jobs:
           grep -F 'DraBornBuy | Market Alışverişi ve Fiyat Karşılaştırma' DraBornBuy/index.html >/dev/null
           grep -F 'rel="canonical" href="https://www.draborneagle.com/DraBornBuy/"' DraBornBuy/index.html >/dev/null
 
+      - name: DKD Synchronize official founder identity after app exports
+        run: |
+          node --test scripts/dkd-search-identity.test.mjs
+          node scripts/dkd-search-identity.mjs
+          node scripts/dkd-search-identity.mjs --check
+          node scripts/dkd-sync-drabornps-root.mjs --check
+          node scripts/dkd-search-structured-data.mjs
+
       - name: DKD Update and verify public sitemap
         run: |
           node scripts/dkd-search-sitemap.mjs
