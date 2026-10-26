@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-10-26T19:50:41.227277Z",
+  "generatedAt": "2026-10-26T23:40:37.295839Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e77549dba84aa9c32f",
+      "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
+      "summary": "A configuration mismatch in GLM 5.3 on Workers AI triggered an SGLang bug that exposed KV cache pages across requests. Here is how we addressed the issue.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/kv-cache-exposure-remediation/",
+      "publishedAt": "2026-10-26T22:01:23Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5X2P2KSNBX6J13E3B4219PW.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "041587d61f6727f805",
+      "title": "Vivo Y600 rekor kıran bataryasıyla geliyor",
+      "summary": "Vivo Y600 akıllı telefon modelinde 6.83 inçlik AMOLED ekran, 120Hz tazeleme hızı, 10000mAh batarya, 44W hızlı şarj, rekor video oynatma süresi gibi özellikler yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/vivo-y600-tanitildi-iste-ozellikleri-ve-fiyati--212127",
+      "publishedAt": "2026-10-26T20:48:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212127/1200x675vivo-y600-tanitildi-iste-ozellikleri-ve-fiyati.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3734900cb5d3835914",
+      "title": "OnePlus Ace 7 serisi 165Hz ekranla geliyor: Oyunlarda 185Hz!",
+      "summary": "OnePlus, 29 Ekim'de Çin'de gerçekleşecek lansman öncesinde Ace 7 serisinin önemli bir özelliğini doğruladı. OnePlus Ace 7 ve Ace 7 Pro, 185Hz Oriental Screen teknolojisini kullanacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/oneplus-ace-7-pro-165hz-ekranla-geliyor-oyunlarda-185hz--212098",
+      "publishedAt": "2026-10-26T20:14:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212098/1200x675oneplus-ace-7-pro-165hz-ekranla-geliyor-oyunlarda-185hz.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b447b8e98fed2f4898",
+      "title": "Dünyanın en büyük elektrikli gemisi sefere başladı: 250 ton bataryaya sahip",
+      "summary": "Dünyanın en büyük elektrikli gemisi China Zorrilla, Güney Amerika’da ticari seferlerine başladı. 130 metrelik feribot, 250 tonu aşan bataryalarıyla 2.100 yolcu ve 225 araç taşıma kapasitesine sahip.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dunyanin-en-buyuk-elektrikli-gemisi-sefere-basladi--212110",
+      "publishedAt": "2026-10-26T19:52:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212110/1200x675dunyanin-en-buyuk-elektrikli-gemisi-sefere-basladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "34e9b4f18f96948d30",
       "title": "ASUS'tan yılın beklenen oyununa özel 4700 dolarlık Mini PC",
@@ -375,18 +423,6 @@
       "editorial": false
     },
     {
-      "id": "ad21165fd52e8f2a6a",
-      "title": "Windows 11’in internet hız testi Bing’ten kurtuluyor",
-      "summary": "Windows 11, internet hız testi özelliğini yeniliyor. Yeni sistemle indirme ve yükleme hızları ile ping değeri, Bing açılmadan doğrudan Hızlı Ayarlar menüsünden görüntülenebiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/windows-11-in-internet-hiz-testi-bing-ten-kurtuluyor--212080",
-      "publishedAt": "2026-10-26T13:48:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212080/1200x675windows-11-in-internet-hiz-testi-bing-ten-kurtuluyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "e0ce2c6aabf0125766",
       "title": "Logitech, Şekil Değiştiren Çok Kullanışlı Yeni Mouse’u Pebble Up’ı Duyurdu",
       "summary": "Logitech, kompakt tasarımı ergonomik gövdeyle birleştiren yeni kablosuz faresi Pebble Up'ı resmen tanıttı.",
@@ -407,30 +443,6 @@
       "publishedAt": "2026-10-26T13:44:10Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/694717/694717-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "11f13d5598c8f7c8b3",
-      "title": "OLED ekranlı yeni iPad mini tanıtıldı: İşte Türkiye fiyatı ve özellikleri",
-      "summary": "Apple, OLED ekranlı iPad mini'yi resmen tanıttı. Şirket, yeni modeli şimdiye kadarki en büyük güncelleme olarak nitelendiriyor. İşte iPad mini 8 Türkiye fiyatı ve özellikleri:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-ipad-mini-tanitildi-iste-oled-ipad-mini-8-turkiye-fiyati--212115",
-      "publishedAt": "2026-10-26T13:40:53Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212115/1200x675yeni-ipad-mini-tanitildi-iste-oled-ipad-mini-8-turkiye-fiyati.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e4cb51327b25cf27ef",
-      "title": "Phantom Blade Zero övgülerle karşılandı: Yılın oyunu olmaya aday",
-      "summary": "Yılın en merakla beklenen oyunlarından olan Phantom Blade Zero'ya dair ilk yorumlar paylaşıldı. Oyunun eleştirmen puanları, yılın oyunu adaylarından biri olabileceğini gösteriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/phantom-blade-zero-ovgulerle-karsilandi--212089",
-      "publishedAt": "2026-10-26T13:26:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212089/1200x675phantom-blade-zero-ovgulerle-karsilandi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-15T13:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4YQC03MMFYZ10P30YWNWGG4.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "049f752dea89d9de43",
-      "title": "Yandex outage: Data shows that instead of going dark, malicious bots went on the move",
-      "summary": "When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/yandex-outage/",
-      "publishedAt": "2026-10-14T20:24:19Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4Y142SWPQXA8GMMX3DTNYBY.png",
       "language": "en",
       "editorial": false
     }
