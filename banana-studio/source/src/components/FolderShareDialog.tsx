@@ -9,7 +9,7 @@ export const FolderShareDialog: React.FC<{ folder: Folder; onClose: () => void }
   const [busy, setBusy] = useState(true);
   const [error, setError] = useState('');
   const [copied, setCopied] = useState(false);
-  const url = status?.active && status.token ? `${window.location.origin}/share.html#${status.token}` : '';
+  const url = status?.active && status.token ? `${window.location.origin}/banana-studio/share.html#${status.token}` : '';
   useEffect(() => {
     dialog.current?.showModal();
     let cancelled = false;

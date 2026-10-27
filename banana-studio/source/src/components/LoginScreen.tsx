@@ -34,7 +34,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ isUnauthorized = false
         {/* Logo / Brand */}
         <div className="flex flex-col items-center gap-4">
           <img 
-            src="/favicon.png" 
+            src="/banana-studio/favicon.png" 
             alt="Banana Studio" 
             className="w-20 h-20 rounded-2xl shadow-2xl shadow-violet-500/20 rotate-3 hover:rotate-0 transition-transform duration-500"
           />

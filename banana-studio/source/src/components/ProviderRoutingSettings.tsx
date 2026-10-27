@@ -22,8 +22,8 @@ export function useProviderRoute(model: string) {
         if (!active || version !== revision) return;
         const choice = preferences[model] || 'auto';
         try { setState({ model,choice,available,provider:resolveProvider(model,choice,available) }); }
-        catch (error) { setState({ model,choice,available, ...(choice !== 'auto' && MODEL_ROUTES[model]?.includes(choice) ? {provider:choice} : {}), error:(error as Error).message }); }
-      } catch (error) { if (active && version === revision) setState({ model,choice:'auto',available:{},error:(error as Error).message }); }
+        catch (error) { setState({ model,choice,available, ...(choice !== 'auto' && MODEL_ROUTES[model]?.includes(choice) ? {provider:choice} : {}), error:isBrowserWorkspace() ? BROWSER_SETUP_MESSAGE : (error as Error).message }); }
+      } catch (error) { if (active && version === revision) setState({ model,choice:'auto',available:{},error:isBrowserWorkspace() ? BROWSER_SETUP_MESSAGE : (error as Error).message }); }
     };
     void refresh(); window.addEventListener(EVENT,refresh); window.addEventListener('focus',refresh);
     return () => { active = false; window.removeEventListener(EVENT,refresh); window.removeEventListener('focus',refresh); };
