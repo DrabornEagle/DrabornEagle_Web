@@ -15,14 +15,14 @@ export default async function handler(req, res) {
     res.setHeader('Access-Control-Allow-Headers', 'Authorization, Content-Type');
   }
   const route = Array.isArray(req.query.route) ? req.query.route[0] : req.query.route;
-  if (!routes.has(route)) return res.status(404).json({ error: 'Unknown Banana Studio route.' });
+  if (!routes.has(route)) return res.status(404).json({ error: 'Unknown Banana-edits route.' });
   if (!['GET','POST','DELETE','OPTIONS'].includes(req.method)) return res.status(405).json({ error: 'Method not allowed.' });
   if (req.method === 'OPTIONS') return res.status(204).end();
   const configured = process.env.BANANA_WORKSPACE_ORIGIN;
   if (!configured) {
     if (req.method === 'GET' && route === 'workspace-config') return res.status(200).json({ mode: 'browser' });
     if (req.method === 'GET' && ['gemini-status','youtube-status'].includes(route)) return res.status(200).json({ configured: false, providers: {}, youtube: false });
-    return res.status(503).json({ error: 'AI üretimi için özel Banana Studio sunucusu ve sağlayıcı anahtarı kurulmalıdır. Galeri ve yerel dosyalar kullanılabilir.', code: 'BANANA_SETUP_REQUIRED' });
+    return res.status(503).json({ error: 'AI üretimi için özel Banana-edits sunucusu ve sağlayıcı anahtarı kurulmalıdır. Galeri ve yerel dosyalar kullanılabilir.', code: 'BANANA_SETUP_REQUIRED' });
   }
   try {
     const origin = new URL(configured);
@@ -35,5 +35,5 @@ export default async function handler(req, res) {
       ...(['POST','DELETE'].includes(req.method) ? { body: typeof req.body === 'string' ? req.body : JSON.stringify(req.body || {}) } : {}) });
     res.setHeader('Content-Type', response.headers.get('content-type') || 'application/json');
     return res.status(response.status).send(Buffer.from(await response.arrayBuffer()));
-  } catch { return res.status(502).json({ error: 'Banana Studio sunucusuna ulaşılamadı. Yerel dosyaların korunuyor.' }); }
+  } catch { return res.status(502).json({ error: 'Banana-edits sunucusuna ulaşılamadı. Yerel dosyaların korunuyor.' }); }
 }
