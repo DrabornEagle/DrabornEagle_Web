@@ -84,6 +84,12 @@
     <loc>https://www.draborneagle.com/draborngo/</loc>
     <lastmod>2026-10-25</lastmod>
   </url>
-  <url><loc>https://www.draborneagle.com/Coconut-app/</loc><lastmod>2026-10-28</lastmod></url>
-  <url><loc>https://www.draborneagle.com/Banana-edits/</loc><lastmod>2026-10-28</lastmod></url>
+  <url>
+    <loc>https://www.draborneagle.com/Coconut-app/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://www.draborneagle.com/Banana-edits/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
 </urlset>

@@ -13,7 +13,8 @@ const directories = [
   'DraBornGames/LastMile', 'DraBornGames/shifterror', 'DraBornGarage',
   'DraBornGate', 'DraBornLand/Office', 'DraBornNews', 'DraBornOdds',
   'DraBornOdds/App', 'DraBornPark', 'DraBornPortal', 'DraBornPortal/App',
-  'DraBornSeries', 'DraBornStyle', 'DraBornBuy', 'DraBornZikir', 'draborngo'
+  'DraBornSeries', 'DraBornStyle', 'DraBornBuy', 'DraBornZikir', 'draborngo',
+  'Coconut-app', 'Banana-edits'
 ];
 const sitemapPath = resolve(root, 'sitemap.xml');
 const previous = existsSync(sitemapPath) ? readFileSync(sitemapPath, 'utf8') : '';
