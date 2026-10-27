@@ -1907,19 +1907,14 @@ export const saveFolder = async (folder: Folder): Promise<void> => {
   const operationUserId = await bindMediaSession();
   if (supabase && !operationUserId) throw new Error('Sign in to save a reference.');
   if (supabase) {
-    try {
-      const userId = operationUserId;
-      if (!userId) throw new Error('Not authenticated');
-      await supabase.from('folders').insert({
-        id: folder.id,
-        user_id: userId,
-        name: folder.name,
-        created_at: folder.createdAt,
-        parent_id: folder.parentId || null
-      });
-    } catch (e) {
-      console.error("Supabase create folder failed", e);
-    }
+    const { error } = await supabase.from('folders').insert({
+      id: folder.id,
+      user_id: operationUserId,
+      name: folder.name,
+      created_at: folder.createdAt,
+      parent_id: folder.parentId || null,
+    });
+    if (error) throw new Error('The folder could not be saved. Check storage access and try again.');
   }
 
   try {

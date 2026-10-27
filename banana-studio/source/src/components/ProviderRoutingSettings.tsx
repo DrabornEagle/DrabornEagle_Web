@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { MODEL_ROUTES, PROVIDER_LABELS, resolveProvider, type AIProvider, type ProviderAvailability, type ProviderChoice } from '../lib/providers';
 import { getProviderAvailability, getProviderPreferences, saveProviderPreference } from '../services/providerRouting';
 import { Dropdown } from './ControlDropdown';
+import { isBrowserWorkspace } from '../lib/config/runtimeConfig';
+import { BROWSER_SETUP_MESSAGE } from '../services/workspaceApi.mjs';
 
 const EVENT = 'banana-provider-routes-changed';
 const MODELS: Record<string,string> = {
@@ -47,7 +49,7 @@ export function ProviderRouteControl({ model, compact = false, showError = true 
         {options.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
       </select>
     </label>}
-    {(error || showError && route.error) && <span role="status" className="text-amber-300">{error || route.error}</span>}
+    {(error || showError && route.error) && <span role="status" className="text-amber-300">{error || (isBrowserWorkspace() ? BROWSER_SETUP_MESSAGE : route.error)}</span>}
   </div>;
 }
 export function ProviderRoutingSettings() {

@@ -1825,109 +1825,7 @@ export const Gallery: React.FC<GalleryProps> = ({
   ) : null;
 
   const searchDialog = isSearchOpen && <GallerySearchDialog images={images} folders={folders} ownerId={galleryOwner?.user_id} isLoading={isGalleryIndexLoading || isFoldersLoading} loadError={galleryLoadError || folderLoadError} onClose={closeSearch} onSelect={selectSearchResult} />;
-  if (isEmpty && !currentFolderId && !showFavoritesOnly) {
-    return (
-      <div className="relative flex-1 flex min-h-0 flex-col overflow-y-auto bg-[#0d1117] text-gray-600" style={{ paddingBottom: 'var(--generation-bar-safe-area, 16rem)' }}>
-        {searchDialog}
-        {adminGalleryBanner}
-        <button ref={searchButtonRef} onClick={openSearch} aria-label="Search gallery" aria-haspopup="dialog" aria-expanded={isSearchOpen} title="Search gallery (⌘K / Ctrl+K or /)" className="mr-4 mt-4 flex h-10 shrink-0 items-center gap-2 self-end rounded-xl border border-white/10 bg-[#161b22] px-3 text-sm text-gray-300 hover:text-white"><Search className="h-4 w-4" />Search</button>
-        {comparisonNotice && <p role="status" className="px-4 py-2 text-xs text-amber-200">{comparisonNotice}</p>}
-        <div className="flex flex-1 flex-col items-center justify-center p-8 text-center">
-          {(isGalleryLoading || isFoldersLoading) ? (
-            <>
-              <Loader2 className="mb-4 h-9 w-9 animate-spin text-violet-400" />
-              <h3 className="text-lg font-semibold text-gray-300">Loading gallery...</h3>
-              <p className="mt-2 max-w-md text-sm text-gray-500">Fetching this user's generations and folders.</p>
-            </>
-          ) : (galleryLoadError || folderLoadError) ? (
-            <>
-              <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-red-500/10">
-                <AlertCircle className="h-9 w-9 text-red-400" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-200">Gallery could not be loaded</h3>
-              <p className="mt-2 max-w-lg text-sm text-red-300">{galleryLoadError || folderLoadError}</p>
-              {folderLoadError && <button onClick={refreshFolders} className="mt-3 text-sm text-violet-300">Retry loading folders</button>}
-            </>
-          ) : (
-            <>
-              <div className="w-24 h-24 bg-gray-900 rounded-full flex items-center justify-center mb-6">
-                <ZoomIn className="w-10 h-10 opacity-20" />
-              </div>
-              <h3 className="text-xl font-semibold mb-2">No Generations Yet</h3>
-              <p className="max-w-md text-gray-500 mb-6">
-                {galleryOwner ? 'This user has no saved image or video generations.' : 'Create your first masterpiece.'}
-              </p>
-              {!isReadOnly && (
-                <button onClick={() => setIsCreatingFolder(true)} className="flex items-center gap-2 text-violet-400 hover:text-violet-300">
-                  <FolderPlus className="w-4 h-4" /> Create Folder
-                </button>
-              )}
-              {!isReadOnly && isCreatingFolder && (
-                <div className="mt-4 flex gap-2">
-                  <input
-                    autoFocus
-                    className="bg-gray-800 border border-gray-700 rounded px-2 py-1 text-white"
-                    placeholder="Folder Name"
-                    value={newFolderName}
-                    onChange={e => setNewFolderName(e.target.value)}
-                    onKeyDown={e => e.key === 'Enter' && handleCreateFolder()}
-                  />
-                  <button onClick={handleCreateFolder} className="bg-violet-600 text-white px-3 py-1 rounded">Save</button>
-                </div>
-              )}
-            </>
-          )}
-        </div>
-      </div>
-    );
-  }
-
-  const getMediaDisplayAspectRatio = (media: GeneratedMedia): number => getGalleryAspectRatio(
-    media, media.mediaType === 'video' ? detectedVideoAspectRatios[media.id] : detectedImageAspectRatios[media.id],
-  );
-
-  const handleImageDimensions = (mediaId: string, width: number, height: number) => {
-    if (!width || !height) return;
-    const ratio = width / height;
-    setDetectedImageAspectRatios(prev => Math.abs((prev[mediaId] || 0) - ratio) < 0.001
-      ? prev : { ...prev, [mediaId]: ratio });
-  };
-
-  const handleVideoMetadata = (mediaId: string, video: HTMLVideoElement) => {
-    if (!video.videoWidth || !video.videoHeight) return;
-    const ratio = video.videoWidth / video.videoHeight;
-    setDetectedVideoAspectRatios(prev => {
-      if (Math.abs((prev[mediaId] || 0) - ratio) < 0.001) return prev;
-      return { ...prev, [mediaId]: ratio };
-    });
-  };
-
-  // Target row height based on grid columns setting
-  const targetRowHeight = {
-    2: 280,
-    3: 220,
-    4: 180,
-    5: 150,
-    6: 130,
-    7: 110,
-    8: 100,
-  }[gridCols] || 180;
-
-  return (
-    <div
-      ref={scrollContainerRef}
-      className={`flex-1 overflow-y-auto overflow-x-clip bg-[#0d1117] relative min-h-0 custom-scrollbar ${isReadOnly ? 'pb-8' : ''} ${dragOverTarget === 'current-folder' ? 'ring-2 ring-inset ring-violet-400/60' : ''}`}
-      style={isReadOnly ? undefined : { paddingBottom: 'var(--generation-bar-safe-area, 16rem)' }}
-      onDragOver={isReadOnly ? undefined : (e) => handleFolderDragOver(e, currentFolderId, 'current-folder')}
-      onDragLeave={handleFolderDragLeave}
-      onDrop={isReadOnly ? undefined : (e) => handleFolderDrop(e, currentFolderId)}
-      onDragEnd={clearDragState}
-    >
-
-      <HelpCenter open={isHelpCenterOpen} onClose={() => setIsHelpCenterOpen(false)} />
-      {sharingFolder && !isReadOnly && <FolderShareDialog key={sharingFolder.id} folder={sharingFolder} onClose={() => setSharingFolder(null)} />}
-
-      {isCreatingFolder && !isReadOnly && (
+  const createFolderDialog = isCreatingFolder && !isReadOnly && (
         <div
           className="fixed inset-0 z-[310] flex items-center justify-center bg-black/70 p-4 backdrop-blur-sm animate-in fade-in duration-150"
           onMouseDown={(event) => {
@@ -1940,7 +1838,7 @@ export const Gallery: React.FC<GalleryProps> = ({
             aria-modal="true"
             aria-labelledby="create-folder-title"
             aria-describedby="create-folder-description"
-            className="w-full max-w-md overflow-hidden rounded-3xl border border-white/[0.1] bg-[#141a23] shadow-[0_32px_100px_rgba(0,0,0,0.65)] animate-in zoom-in-95 slide-in-from-bottom-2 duration-200"
+            className="max-h-[calc(100dvh-2rem)] w-full max-w-md overflow-y-auto rounded-3xl border border-white/[0.1] bg-[#141a23] shadow-[0_32px_100px_rgba(0,0,0,0.65)] animate-in zoom-in-95 slide-in-from-bottom-2 duration-200"
           >
             <div className="flex items-start justify-between gap-4 border-b border-white/[0.07] px-5 py-5 sm:px-6">
               <div className="flex min-w-0 items-start gap-3">
@@ -2018,7 +1916,99 @@ export const Gallery: React.FC<GalleryProps> = ({
             </form>
           </div>
         </div>
-      )}
+      );
+  if (isEmpty && !currentFolderId && !showFavoritesOnly) {
+    return (
+      <div className="relative flex-1 flex min-h-0 flex-col overflow-y-auto bg-[#0d1117] text-gray-600" style={{ paddingBottom: 'var(--generation-bar-safe-area, 16rem)' }}>
+        {searchDialog}
+        {createFolderDialog}
+        {adminGalleryBanner}
+        <button ref={searchButtonRef} onClick={openSearch} aria-label="Search gallery" aria-haspopup="dialog" aria-expanded={isSearchOpen} title="Search gallery (⌘K / Ctrl+K or /)" className="mr-4 mt-4 flex h-10 shrink-0 items-center gap-2 self-end rounded-xl border border-white/10 bg-[#161b22] px-3 text-sm text-gray-300 hover:text-white"><Search className="h-4 w-4" />Search</button>
+        {comparisonNotice && <p role="status" className="px-4 py-2 text-xs text-amber-200">{comparisonNotice}</p>}
+        <div className="flex flex-1 flex-col items-center justify-center p-8 text-center">
+          {(isGalleryLoading || isFoldersLoading) ? (
+            <>
+              <Loader2 className="mb-4 h-9 w-9 animate-spin text-violet-400" />
+              <h3 className="text-lg font-semibold text-gray-300">Loading gallery...</h3>
+              <p className="mt-2 max-w-md text-sm text-gray-500">Fetching this user's generations and folders.</p>
+            </>
+          ) : (galleryLoadError || folderLoadError) ? (
+            <>
+              <div className="mb-5 flex h-20 w-20 items-center justify-center rounded-full bg-red-500/10">
+                <AlertCircle className="h-9 w-9 text-red-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-gray-200">Gallery could not be loaded</h3>
+              <p className="mt-2 max-w-lg text-sm text-red-300">{galleryLoadError || folderLoadError}</p>
+              {folderLoadError && <button onClick={refreshFolders} className="mt-3 text-sm text-violet-300">Retry loading folders</button>}
+            </>
+          ) : (
+            <>
+              <div className="w-24 h-24 bg-gray-900 rounded-full flex items-center justify-center mb-6">
+                <ZoomIn className="w-10 h-10 opacity-20" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2">No Generations Yet</h3>
+              <p className="max-w-md text-gray-500 mb-6">
+                {galleryOwner ? 'This user has no saved image or video generations.' : 'Create your first masterpiece.'}
+              </p>
+              {!isReadOnly && (
+                <button onClick={() => setIsCreatingFolder(true)} className="flex items-center gap-2 text-violet-400 hover:text-violet-300">
+                  <FolderPlus className="w-4 h-4" /> Create Folder
+                </button>
+              )}
+
+            </>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  const getMediaDisplayAspectRatio = (media: GeneratedMedia): number => getGalleryAspectRatio(
+    media, media.mediaType === 'video' ? detectedVideoAspectRatios[media.id] : detectedImageAspectRatios[media.id],
+  );
+
+  const handleImageDimensions = (mediaId: string, width: number, height: number) => {
+    if (!width || !height) return;
+    const ratio = width / height;
+    setDetectedImageAspectRatios(prev => Math.abs((prev[mediaId] || 0) - ratio) < 0.001
+      ? prev : { ...prev, [mediaId]: ratio });
+  };
+
+  const handleVideoMetadata = (mediaId: string, video: HTMLVideoElement) => {
+    if (!video.videoWidth || !video.videoHeight) return;
+    const ratio = video.videoWidth / video.videoHeight;
+    setDetectedVideoAspectRatios(prev => {
+      if (Math.abs((prev[mediaId] || 0) - ratio) < 0.001) return prev;
+      return { ...prev, [mediaId]: ratio };
+    });
+  };
+
+  // Target row height based on grid columns setting
+  const targetRowHeight = {
+    2: 280,
+    3: 220,
+    4: 180,
+    5: 150,
+    6: 130,
+    7: 110,
+    8: 100,
+  }[gridCols] || 180;
+
+  return (
+    <div
+      ref={scrollContainerRef}
+      className={`flex-1 overflow-y-auto overflow-x-clip bg-[#0d1117] relative min-h-0 custom-scrollbar ${isReadOnly ? 'pb-8' : ''} ${dragOverTarget === 'current-folder' ? 'ring-2 ring-inset ring-violet-400/60' : ''}`}
+      style={isReadOnly ? undefined : { paddingBottom: 'var(--generation-bar-safe-area, 16rem)' }}
+      onDragOver={isReadOnly ? undefined : (e) => handleFolderDragOver(e, currentFolderId, 'current-folder')}
+      onDragLeave={handleFolderDragLeave}
+      onDrop={isReadOnly ? undefined : (e) => handleFolderDrop(e, currentFolderId)}
+      onDragEnd={clearDragState}
+    >
+
+      <HelpCenter open={isHelpCenterOpen} onClose={() => setIsHelpCenterOpen(false)} />
+      {sharingFolder && !isReadOnly && <FolderShareDialog key={sharingFolder.id} folder={sharingFolder} onClose={() => setSharingFolder(null)} />}
+
+      {createFolderDialog}
 
       {/* Sticky Header Container */}
       <div className="sticky top-0 z-50 flex flex-col">
