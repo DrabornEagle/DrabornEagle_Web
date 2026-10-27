@@ -13,8 +13,14 @@
     {
       "source": "/app-ads.txt",
       "headers": [
-        { "key": "Content-Type", "value": "text/plain; charset=utf-8" },
-        { "key": "Cache-Control", "value": "public, max-age=300, s-maxage=300" }
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=300, s-maxage=300"
+        }
       ]
     },
     {
@@ -336,6 +342,40 @@
           "value": "nosniff"
         }
       ]
+    },
+    {
+      "source": "/nashi-app/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/banana-studio/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=0, must-revalidate"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
     }
   ],
   "redirects": [
@@ -408,5 +448,10 @@
     "www.draborneagle.net",
     "draborneagle.org",
     "www.draborneagle.org"
-  ]
+  ],
+  "functions": {
+    "api/banana-studio/[route].js": {
+      "maxDuration": 300
+    }
+  }
 }
