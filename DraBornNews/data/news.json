@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-27T20:32:38.525548Z",
+  "generatedAt": "2026-10-27T23:56:15.503915Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "0535e88ea4e868c947",
+      "title": "Redmi K100 günlerce oyun oynatacak",
+      "summary": "Redmi K100 amiral gemisinde 6.83 inçlik 2772x1280 piksel OLED ekran, 3nm Snapdragon 8 Elite yonga seti, 165Hz ekran tazeleme, 165fps oyun performansı gibi özellikler yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/redmi-k100-tanitildi-iste-ozellikleri-ve-fiyati--212176",
+      "publishedAt": "2026-10-27T20:53:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212176/1200x675redmi-k100-tanitildi-iste-ozellikleri-ve-fiyati.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "0ddec3164037bd65e9",
       "title": "Hem fare hem dokunmatik yüzey hem de klavye: Super Mouse tanıtıldı",
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-15T13:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4YQC03MMFYZ10P30YWNWGG4.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "049f752dea89d9de43",
-      "title": "Yandex outage: Data shows that instead of going dark, malicious bots went on the move",
-      "summary": "When strikes hit Yandex data centers, many assumed Russian bot operations went dark. Cloudflare data reveals that while search crawling stopped, malicious bots simply migrated to other networks.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/yandex-outage/",
-      "publishedAt": "2026-10-14T20:24:19Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M4Y142SWPQXA8GMMX3DTNYBY.png",
       "language": "en",
       "editorial": false
     }
