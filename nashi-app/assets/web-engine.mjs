@@ -1,7 +1,7 @@
 import { FFmpeg } from './vendor/ffmpeg/index.js';
 import { mediaPlan, mediaMimes } from './media-plan.mjs';
 let engine, pending, locked = false;
-const core = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/umd/';
+const core = 'https://cdn.jsdelivr.net/npm/@ffmpeg/core@0.12.10/dist/esm/';
 async function resource(name, type) {
   const response = await fetch(core + name);
   if (!response.ok) throw new Error('Medya motoru indirilemedi. İnternet bağlantını kontrol et.');

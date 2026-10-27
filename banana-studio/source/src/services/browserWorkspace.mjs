@@ -138,7 +138,7 @@ export function createBrowserWorkspaceClient(identity) {
     remove: async paths => { for (const path of paths) { await write('media', path, undefined); if (urls.has(path)) URL.revokeObjectURL(urls.get(path)); urls.delete(path); } return { data: paths, error: null }; },
   };
   return {
-    auth: { getSession: async () => ({ data: { session }, error: null }), refreshSession: async () => ({ data: { session }, error: null }), getUser: async () => ({ data: { user }, error: null }), onAuthStateChange: () => ({ data: { subscription: { unsubscribe() {} } } }), stopAutoRefresh() {}, signOut: async () => ({ error: null }) },
+    auth: { getSession: async () => ({ data: { session }, error: null }), refreshSession: async () => ({ data: { session }, error: null }), getUser: async () => ({ data: { user }, error: null }), onAuthStateChange: () => ({ data: { subscription: { unsubscribe() {} } } }), stopAutoRefresh() {}, signOut: async () => { globalThis.location?.assign?.('/'); return { error: null }; } },
     from: table => new WorkspaceQuery(send, table), rpc: (name, args = {}) => new WorkspaceQuery(send, undefined, name, args), storage: { from: bucket => { if (bucket !== 'media') throw new Error('Unknown bucket.'); return storage; } },
   };
 }

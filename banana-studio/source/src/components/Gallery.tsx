@@ -1827,7 +1827,7 @@ export const Gallery: React.FC<GalleryProps> = ({
   const searchDialog = isSearchOpen && <GallerySearchDialog images={images} folders={folders} ownerId={galleryOwner?.user_id} isLoading={isGalleryIndexLoading || isFoldersLoading} loadError={galleryLoadError || folderLoadError} onClose={closeSearch} onSelect={selectSearchResult} />;
   if (isEmpty && !currentFolderId && !showFavoritesOnly) {
     return (
-      <div className="relative flex-1 flex min-h-screen flex-col bg-[#0d1117] text-gray-600">
+      <div className="relative flex-1 flex min-h-0 flex-col overflow-y-auto bg-[#0d1117] text-gray-600" style={{ paddingBottom: 'var(--generation-bar-safe-area, 16rem)' }}>
         {searchDialog}
         {adminGalleryBanner}
         <button ref={searchButtonRef} onClick={openSearch} aria-label="Search gallery" aria-haspopup="dialog" aria-expanded={isSearchOpen} title="Search gallery (⌘K / Ctrl+K or /)" className="mr-4 mt-4 flex h-10 shrink-0 items-center gap-2 self-end rounded-xl border border-white/10 bg-[#161b22] px-3 text-sm text-gray-300 hover:text-white"><Search className="h-4 w-4" />Search</button>
@@ -1916,7 +1916,7 @@ export const Gallery: React.FC<GalleryProps> = ({
   return (
     <div
       ref={scrollContainerRef}
-      className={`flex-1 overflow-y-auto overflow-x-clip bg-[#0d1117] relative min-h-screen custom-scrollbar ${isReadOnly ? 'pb-8' : ''} ${dragOverTarget === 'current-folder' ? 'ring-2 ring-inset ring-violet-400/60' : ''}`}
+      className={`flex-1 overflow-y-auto overflow-x-clip bg-[#0d1117] relative min-h-0 custom-scrollbar ${isReadOnly ? 'pb-8' : ''} ${dragOverTarget === 'current-folder' ? 'ring-2 ring-inset ring-violet-400/60' : ''}`}
       style={isReadOnly ? undefined : { paddingBottom: 'var(--generation-bar-safe-area, 16rem)' }}
       onDragOver={isReadOnly ? undefined : (e) => handleFolderDragOver(e, currentFolderId, 'current-folder')}
       onDragLeave={handleFolderDragLeave}
