@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-10-26T23:40:37.295839Z",
+  "generatedAt": "2026-10-27T04:34:49.769289Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "d7bc5096f985a4d5eb",
+      "title": "Türkiye'deki iPad Fiyatlarına Yine Zam Geldi: İşte Yeni Fiyatlar",
+      "summary": "Apple, yeni iPad mini duyurusunun ardından Türkiye'deki iPad modellerine zam yaptı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/apple-ipad-turkiye-zam-h227911.html",
+      "publishedAt": "2026-10-27T04:16:21Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694762/694762-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b82e2f82e91c747e3c",
+      "title": "OpenAI, Bilgisayarınızı Sizin Yerinize Kullanacak GPT-6.1 Terra'yı Tanıttı",
+      "summary": "OpenAI, rutin bilgisayar işlerini devralacak orta segment yapay zekâ modeli GPT-6.1 Terra’yı tanıttı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/openai-gpt-6-1-terra-tanitti-h227908.html",
+      "publishedAt": "2026-10-27T04:05:20Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/694753/694753-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7060d421fa2633482d",
+      "title": "Apple Müjdeyi Verdi: Siri AI'a Yakında Türkçe Geliyor!",
+      "summary": "Apple, Siri AI'a yakında Türkçe geleceğini açıkladı. Tarihi konusunda da bilgi verildi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/siri-ai-turkce-geliyor-h227905.html",
+      "publishedAt": "2026-10-27T03:55:39Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/694751/694751-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f3c43019e225367833",
+      "title": "iOS 27.2 Yayımlandı: İşte iPhone'lara Gelen Yeni Özellikler",
+      "summary": "Apple, iPhone'ların yeni büyük güncellemesi iOS 27.2'yi yayımladı. İşte yenilikler.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/ios-27-2-yayimlandi-ozellikler-h227902.html",
+      "publishedAt": "2026-10-27T03:44:48Z",
+      "category": "Mobil",
+      "image": "https://imgrosetta.webtekno.com/file/694738/694738-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e96da34d3d579e9171",
+      "title": "(For Southeast Asia) Crunchyroll Arrives for PS5 and PS4 users in Indonesia, Malaysia and Thailand",
+      "summary": "We are excited to share that Crunchyroll, the global and ultimate destination for anime fandom, has arrived for PlayStation 5 and PlayStation 4 users in Indonesia, Malaysia and Thailand. Anime fans can now subscribe to Crunchyroll directly through PlayStation Media Hub on PS5 or PS4. Crunchyroll offers hundreds of anime titles, including Black Clover Season",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/26/20261027-roll/",
+      "publishedAt": "2026-10-27T02:01:28Z",
+      "category": "Oyun",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "e77549dba84aa9c32f",
       "title": "Cross-request KV cache exposure in the GLM-5.3 Workers AI model, and our remediation with SGLang",
@@ -651,54 +711,6 @@
       "editorial": false
     },
     {
-      "id": "34c9c4f3ef499691c3",
-      "title": "iPhone Duo, Sağlamlık Testine Girdi [Video]",
-      "summary": "Ünlü YouTube kanalı JerryRigEverything, iPhone Duo'yu sağlamlık testine soktu.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/iphone-duo-saglamlik-testi-video-h227845.html",
-      "publishedAt": "2026-10-26T04:00:35Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/694582/694582-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0eea08e3ecdf243fef",
-      "title": "Tasarımıyla Dikkat Çeken DS N°7, Türkiye'de Satışa Sunuldu",
-      "summary": "Fransız lüksünü hibrit verimliliğiyle harmanlayan yeni DS N°7, 2 donanım seçeneğiyle Türkiye'de satışa sunuldu.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/yeni-ds-n7-turkiye-fiyati-ozellikleri-h227842.html",
-      "publishedAt": "2026-10-26T03:49:42Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694565/694565-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c83d30bb4290ec8de9",
-      "title": "Volkswagen’in Uygun Fiyatlı Elektriklisi ID. EVERY1, 2027’de Geliyor: Peki Neler Sunacak?",
-      "summary": "Volkswagen, ID. EVERY1 konseptinin üretim versiyonunu 2027’de yaklaşık 20.000 Euro başlangıç fiyatıyla satışa çıkarmayı planlıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/volkswagen-20-bin-euro-elektrikli-otomobil-2027-h227833.html",
-      "publishedAt": "2026-10-26T03:34:55Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694553/694553-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "67d76ec912fe1ed8c5",
-      "title": "Togg T10F 4More İçin Özel Kehribar Serisi Tanıtıldı: İşte Fiyatı",
-      "summary": "Togg, çift motorlu ve dört tekerlekten çekişli T10F 4More için hazırladığı özel tasarım paketi Kehribar Serisi’ni tanıttı",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/togg-t10f-4more-kehribar-tanitildi-h227839.html",
-      "publishedAt": "2026-10-26T03:34:12Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694564/694564-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "60f970e1df3b48e382",
       "title": "Origin Range Requests: Serving large files without range-request tuning",
       "summary": "Naive byte-range caching can waste gigabytes of origin bandwidth on small requests. We rebuilt our cache architecture in Pingora to coordinate partial fetches automatically, cutting R2 p99 latency in half.",
@@ -887,18 +899,6 @@
       "publishedAt": "2026-10-21T14:10:42Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5E1HKVR7WJX7KGB4B8MSK75.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "066b2d83b82d5f29eb",
-      "title": "Stranger Than Heaven hands-on report: brutal combat and the glitz of show business intermix",
-      "summary": "Fists clashing, bones crunching—it’s combat at its most visceral. On the flip side, there is the glitz and glamour of show business, where you handle everything from song composition to live stage productions. Stranger Than Heaven, an all-new title from RGG Studio, the team behind the Like a Dragon series, delivers a remarkably diverse array",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/21/stranger-than-heaven-hands-on-report-brutal-combat-and-the-glitz-of-show-business-intermix/",
-      "publishedAt": "2026-10-21T14:01:18Z",
-      "category": "Oyun",
-      "image": "https://live.staticflickr.com/65535/55601703000_0996628389_k.jpg",
       "language": "en",
       "editorial": false
     },
