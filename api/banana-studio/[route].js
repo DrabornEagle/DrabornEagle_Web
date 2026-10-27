@@ -4,6 +4,16 @@ const routes = new Set(['workspace-config','gemini-status','gemini-generate','op
 export default async function handler(req, res) {
   res.setHeader('Cache-Control', 'private, no-store');
   res.setHeader('X-Content-Type-Options', 'nosniff');
+  // The public website is served by GitHub Pages; its API may live on Vercel.
+  const requestOrigin = req.headers.origin;
+  const allowedOrigins = new Set(['https://www.draborneagle.com', 'https://draborneagle.com', 'https://draborneagle.github.io']);
+  if (requestOrigin) {
+    if (!allowedOrigins.has(requestOrigin) && requestOrigin !== `https://${req.headers.host}`) return res.status(403).json({ error: 'Origin is not allowed.' });
+    res.setHeader('Access-Control-Allow-Origin', requestOrigin);
+    res.setHeader('Vary', 'Origin');
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE, OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Authorization, Content-Type');
+  }
   const route = Array.isArray(req.query.route) ? req.query.route[0] : req.query.route;
   if (!routes.has(route)) return res.status(404).json({ error: 'Unknown Banana Studio route.' });
   if (!['GET','POST','DELETE','OPTIONS'].includes(req.method)) return res.status(405).json({ error: 'Method not allowed.' });

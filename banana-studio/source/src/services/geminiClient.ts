@@ -1,3 +1,4 @@
+import { workspaceFetch } from './workspaceApi.mjs';
 import { supabase } from './authService';
 import { createTaskDeadline, waitForTask } from '../lib/shared/asyncTask';
 import type { OpenAIReasoningEffort } from '../lib/prompts/openaiText';
@@ -110,7 +111,7 @@ const generateContent = async (
     };
     headers.Accept = 'application/x-ndjson';
     ensureActive();
-    const res = await waitForTask(fetch(endpoint, {
+    const res = await waitForTask(workspaceFetch(endpoint, {
       method: 'POST', headers, body: JSON.stringify(request), signal: task.signal,
     }), task.signal);
     ensureActive();
@@ -185,7 +186,7 @@ export const getOpenAITextClient = () => ({
 
 export const isGeminiConfigured = async (): Promise<boolean> => {
   try {
-    const res = await fetch(STATUS_ENDPOINT, { cache: 'no-store', headers: await getAuthHeaders(new AbortController().signal) });
+    const res = await workspaceFetch(STATUS_ENDPOINT, { cache: 'no-store', headers: await getAuthHeaders(new AbortController().signal) });
     if (!res.ok) return false;
     const data = await res.json();
     return Boolean(data?.configured);

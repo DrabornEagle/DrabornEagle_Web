@@ -1,3 +1,4 @@
+import { workspaceFetch } from './workspaceApi.mjs';
 import { selectProvider } from './providerRouting';
 import type { GeneratedMedia, GenerationConfig } from '../types';
 import { normalizePromptPreparation } from '../lib/prompts/promptPreparation';
@@ -43,7 +44,7 @@ const assertImageSession = async (userId: string | undefined): Promise<void> => 
 /** Recover storage and metadata only; never invoke the paid generation endpoint. */
 export const recoverOpenAIImage = async (media: GeneratedMedia): Promise<GeneratedMedia> => {
   const session = await getImageSession();
-  const response = await fetch('/api/banana-studio/openai-image-recover', {
+  const response = await workspaceFetch('/api/banana-studio/openai-image-recover', {
     method: 'POST', headers: { Authorization: `Bearer ${session.access_token}`, 'Content-Type': 'application/json' },
     body: JSON.stringify({ id: media.id }),
   });
@@ -144,7 +145,7 @@ export const generateOpenAIImage = async (
       if (session.user?.id !== owner) throw new Error('Session changed before image submission.');
       let response: Response;
       try {
-        response = await fetch('/api/banana-studio/openai-image-enqueue', {
+        response = await workspaceFetch('/api/banana-studio/openai-image-enqueue', {
           method: 'POST', headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${session.access_token}` },
           body: JSON.stringify({ id, model: config.imageModel, provider: config.imageProvider, prompt, displayPrompt: config.prompt,
             originalPrompt: config.originalPrompt, promptPreparation: normalizePromptPreparation(config.promptPreparation), youtubeSource: config.youtubeSource,

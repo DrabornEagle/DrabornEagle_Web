@@ -1,3 +1,4 @@
+import { workspaceFetch } from './workspaceApi.mjs';
 import { createClient, Session, SupabaseClient } from '@supabase/supabase-js';
 import { getCloudPublicConfig, getWorkspaceConfig } from '../lib/config/runtimeConfig';
 import { createBrowserWorkspaceClient } from './browserWorkspace.mjs';
@@ -455,7 +456,7 @@ export const getProviderUsageSummary = async (): Promise<ProviderUsageSummary> =
   const token = session?.access_token;
   if (!token) throw new Error('No authenticated session');
 
-  const response = await fetch('/api/banana-studio/provider-usage', {
+  const response = await workspaceFetch('/api/banana-studio/provider-usage', {
     headers: { Authorization: `Bearer ${token}` },
   });
   const data = await response.json().catch(() => null);

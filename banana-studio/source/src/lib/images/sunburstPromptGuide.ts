@@ -5,7 +5,7 @@ import { getStableImageTag } from '../references/referenceTokens.js';
 /** Reviewed against the GPT Image 2.5 guide. This curated policy is included in
  * every Sunburst Brainstorm request; it is not a per-generation web fetch. */
 export const SUNBURST_GUIDE_VERSION = '2026-09-24';
-export const SUNBURST_GUIDE_URL = 'https://developers.openai.com/api/banana-studio/docs/guides/image-prompting';
+export const SUNBURST_GUIDE_URL = 'https://developers.openai.com/api/docs/guides/image-prompting';
 export const SUNBURST_PROMPT_GUIDE = `SUNBURST PROMPTING PRINCIPLES (${SUNBURST_GUIDE_VERSION})
 Describe the intended result through its subject, useful composition, visible detail and requested medium. Use the simplest readable format that carries the requirements; no word-count target or mandatory template. Detail should change the image, not praise its quality. For people, give relevant framing, relative scale, gaze, pose and interaction. Treat camera terminology as optional appearance cues. Specify exact visible wording, placement and typography without extra copy. Assign each reference a clear purpose. In edits, distinguish the requested change from the details that must remain unchanged. Keep API settings outside the image prompt.`;
 

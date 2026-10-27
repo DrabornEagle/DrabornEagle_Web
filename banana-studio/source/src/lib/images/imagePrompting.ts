@@ -374,7 +374,7 @@ const getImagePromptTargetName = (settings: ImagePromptSettings): string => sett
 /** Simple is a brief-led brainstorm, including when a Nano Banana model is
  * selected. Keep one policy so the legacy narrative template cannot override
  * the user's medium, wardrobe, reference roles or local-edit scope.
- * https://developers.openai.com/api/banana-studio/docs/guides/image-prompting */
+ * https://developers.openai.com/api/docs/guides/image-prompting */
 export const buildSimpleBrainstormGuidance = (
   references: ReferenceImage[], settings: ImagePromptSettings, count: number, prompt = '',
 ): string => {
@@ -444,8 +444,8 @@ const buildCompactSunburstBrainstormGuidance = (
 };
 
 /** Adapted for this app from the GPT Image 2.5 guide, reviewed 2026-09-11:
- * https://developers.openai.com/api/banana-studio/docs/guides/image-prompting
- * https://developers.openai.com/api/banana-studio/docs/guides/image-generation
+ * https://developers.openai.com/api/docs/guides/image-prompting
+ * https://developers.openai.com/api/docs/guides/image-generation
  */
 export const buildSunburstGuidance = (
   task: 'enhance' | 'brainstorm' | 'variation',

@@ -2,20 +2,20 @@
   "name": "Banana Studio",
   "short_name": "Banana Studio",
   "description": "AI-powered image generation studio",
-  "start_url": "/",
-  "scope": "/",
+  "start_url": "/banana-studio/",
+  "scope": "/banana-studio/",
   "display": "standalone",
   "background_color": "#0d1117",
   "theme_color": "#0d1117",
   "icons": [
     {
-      "src": "/icon-192.png",
+      "src": "/banana-studio/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/banana-studio/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"

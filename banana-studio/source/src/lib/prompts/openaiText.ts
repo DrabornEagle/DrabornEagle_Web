@@ -8,8 +8,8 @@ export const isOpenAIReasoningEffort = (value: unknown): value is OpenAIReasonin
   OPENAI_REASONING_EFFORTS.some(effort => effort === value);
 
 // Standard prices verified 2026-10-09. Output includes reasoning tokens.
-// https://developers.openai.com/api/banana-studio/docs/models/gpt-6.1-sol
-// https://developers.openai.com/api/banana-studio/docs/guides/prompt-caching
+// https://developers.openai.com/api/docs/models/gpt-6.1-sol
+// https://developers.openai.com/api/docs/guides/prompt-caching
 export const calculateOpenAITextCost = (usage: any): number | null => {
   const valid = (value: unknown): value is number => typeof value === 'number' && Number.isFinite(value) && value >= 0;
   const input = usage?.input_tokens;

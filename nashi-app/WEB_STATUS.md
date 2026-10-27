@@ -20,4 +20,4 @@ Tarayıcıda dosya başına 128 MB sınırı vardır. FFmpeg motoru ilk kullanı
 
 Terminal açma, Finder/Explorer entegrasyonu, sistem klasörü otomasyonu, yerel pencere yönetimi, Office/Pages/PowerPoint dönüşümleri ve sosyal medyadan indirme web sürümünde bulunmaz; özgün masaüstü kaynaklarında korunur. Bunlar tarayıcının doğrudan sağlayamadığı platform/sunucu özellikleridir. Web sürümü bunlar için sahte çıktı üretmez.
 
-Kontroller: DOM üzerinde gerçek PNG imzası, kullanıcı CSV → TSV içeriği, kitaplık ve sekmeler arasında dosya korunması; medya komutlarının yerel FFmpeg ile trim, sessiz video, kare crop, hız ve ses eşitleme çıktıları doğrulandı. Canlı tarayıcı ve tablet cihaz kontrolleri ayrıca yapılmalıdır.
+Kontroller: DOM üzerinde gerçek PNG imzası, kullanıcı CSV → TSV içeriği, kitaplık ve sekmeler arasında dosya korunması; medya komutlarının yerel FFmpeg ile trim, sessiz video, kare crop, hız ve ses eşitleme çıktıları doğrulandı. Canlı Chromium tarayıcısında MP4 → MP3 çıktısı ve dosya kitaplığı doğrulandı. 768 ve 1024 piksel tablet görünümü ile masaüstü görünümü kontrol edildi; fiziksel iPad/Safari doğrulaması yapılmadı.

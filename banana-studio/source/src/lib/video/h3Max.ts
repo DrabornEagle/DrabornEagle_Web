@@ -1,5 +1,5 @@
 /** fal queue contracts verified against each endpoint's OpenAPI on 2026-10-17.
- * https://fal.ai/api/banana-studio/openapi/queue/openapi.json?endpoint_id=minimax/h3-max/...
+ * https://fal.ai/api/openapi/queue/openapi.json?endpoint_id=minimax/h3-max/...
  * The September prompting guide predates 1080P, target audio and editing routes.
  */
 // Retired modes remain readable for saved metadata, billing and pending jobs.

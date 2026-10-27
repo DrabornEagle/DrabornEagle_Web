@@ -1,3 +1,4 @@
+import { workspaceFetch } from './workspaceApi.mjs';
 import { supabase } from './authService';
 import { createTaskDeadline, waitForTask } from '../lib/shared/asyncTask';
 
@@ -147,7 +148,7 @@ const apiFetch = async (
     } catch { /* unauthenticated request will be rejected by the server */ }
     task.signal.throwIfAborted();
 
-    const res = await waitForTask(fetch(YOUTUBE_PROXY_ENDPOINT, {
+    const res = await waitForTask(workspaceFetch(YOUTUBE_PROXY_ENDPOINT, {
       method: 'POST',
       headers,
       body: JSON.stringify({ endpoint, params }),
@@ -175,7 +176,7 @@ export const isYouTubeConfigured = async (): Promise<boolean> => {
   try {
     const { data: { session } } = await supabase.auth.getSession();
     if (!session?.access_token) return false;
-    const res = await fetch(YOUTUBE_STATUS_ENDPOINT, { cache: 'no-store', headers: { Authorization: `Bearer ${session.access_token}` } });
+    const res = await workspaceFetch(YOUTUBE_STATUS_ENDPOINT, { cache: 'no-store', headers: { Authorization: `Bearer ${session.access_token}` } });
     if (!res.ok) return false;
     const data = await res.json();
     return Boolean(data?.configured);
@@ -365,7 +366,7 @@ export const downloadThumbnail = async (url: string, options: { signal?: AbortSi
     task.signal.throwIfAborted();
     // Try fetch first (works when CORS headers are present)
     try {
-      const res = await waitForTask(fetch(url, { signal: task.signal }), task.signal);
+      const res = await waitForTask(workspaceFetch(url, { signal: task.signal }), task.signal);
       if (!res.ok) throw new Error(`Thumbnail download failed (${res.status})`);
       const blob = await waitForTask(res.blob(), task.signal);
       if (!blob.size || !/^image\/(?:jpeg|png|webp)$/i.test(blob.type)) throw new Error('Thumbnail response was not an image');

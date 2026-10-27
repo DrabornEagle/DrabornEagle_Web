@@ -7,7 +7,7 @@ const dollars = (value: number) => `$${value.toFixed(value > 0 && value < 1 ? 3 
 const QUALITY_GRID: Record<ExplicitQuality, number> = { low: 16, medium: 24, high: 48, xhigh: 64, max: 96 };
 
 // OpenAI's GPT Image 2.5 calculator, verified 2026-09-08:
-// https://developers.openai.com/api/banana-studio/docs/guides/image-generation#cost-and-latency
+// https://developers.openai.com/api/docs/guides/image-generation#cost-and-latency
 // Its aspect-ratio scaling rounds half ties to even; Math.round alone differs.
 export const estimateSunburstOutputTokens = (width: number, height: number, quality: ExplicitQuality): number => {
   const longGrid = QUALITY_GRID[quality];

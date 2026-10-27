@@ -1,3 +1,4 @@
+import { workspaceFetch } from './workspaceApi.mjs';
 import { AspectRatio, GenerationConfig, ImageModelId, ReferenceImage, Resolution } from '../types';
 import { uploadBase64ToPublicUrl, refreshMediaAccessUrl } from './storageService';
 import { supabase } from './authService';
@@ -90,7 +91,7 @@ export const createImageTask = async (params: {
   outputFormat?: 'png' | 'jpeg' | 'webp';
 }): Promise<CreateTaskResponse> => {
   const headers = await getAuthHeaders();
-  const res = await fetch('/api/banana-studio/fal-image-generate', {
+  const res = await workspaceFetch('/api/banana-studio/fal-image-generate', {
     method: 'POST',
     headers,
     body: JSON.stringify(params),
@@ -119,7 +120,7 @@ export const submitFalTask = async (
   input: Record<string, unknown>,
 ): Promise<CreateTaskResponse> => {
   const headers = await getAuthHeaders();
-  const res = await fetch('/api/banana-studio/fal-image-generate', {
+  const res = await workspaceFetch('/api/banana-studio/fal-image-generate', {
     method: 'POST',
     headers,
     body: JSON.stringify({ endpoint, input }),
@@ -162,7 +163,7 @@ export const pollImageTask = async (
     let data: any | null = null;
     try {
       const headers = await getAuthHeaders();
-      const res = await fetch(
+      const res = await workspaceFetch(
         `/api/banana-studio/fal-status?requestId=${encodeURIComponent(requestId)}&endpoint=${encodeURIComponent(endpoint)}`,
         { headers }
       );
@@ -233,7 +234,7 @@ export const pollImageTask = async (
  * time-limited so we MUST cache locally.
  */
 export const fetchImageAsDataUrl = async (url: string): Promise<string> => {
-  const res = await fetch(url);
+  const res = await workspaceFetch(url);
   if (!res.ok) throw new Error(`Failed to download generated image (${res.status})`);
   const blob = await res.blob();
   return new Promise<string>((resolve, reject) => {

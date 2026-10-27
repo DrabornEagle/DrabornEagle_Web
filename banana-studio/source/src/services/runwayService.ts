@@ -1,3 +1,4 @@
+import { workspaceFetch } from './workspaceApi.mjs';
 import { selectProvider } from './providerRouting';
 import { seedanceProviderError } from '../lib/video/seedanceProviders';
 import { getPersonGroups, buildPersonIdentityContract } from '../lib/references/personReferences';
@@ -270,7 +271,7 @@ const normalizeVideoForEdit = async (
   height: number,
 ): Promise<string> => {
   const headers = await getServerAuthHeaders();
-  const submitResponse = await fetch('/api/banana-studio/fal-video-scale', {
+  const submitResponse = await workspaceFetch('/api/banana-studio/fal-video-scale', {
     method: 'POST',
     headers,
     body: JSON.stringify({ videoUrl, width, height }),
@@ -284,7 +285,7 @@ const normalizeVideoForEdit = async (
   while (Date.now() - startedAt < VIDEO_PREPROCESS_TIMEOUT) {
     await new Promise(resolve => setTimeout(resolve, VIDEO_PREPROCESS_POLL_INTERVAL));
     const pollHeaders = await getServerAuthHeaders();
-    const statusResponse = await fetch(
+    const statusResponse = await workspaceFetch(
       `/api/banana-studio/fal-video-scale?requestId=${encodeURIComponent(submitData.requestId)}`,
       { headers: pollHeaders },
     );
@@ -442,7 +443,7 @@ const resolveReferenceMediaUrl = async (
   if (isHttpUrl(url)) return refreshMediaAccessUrl(url);
 
   try {
-    const response = await fetch(url);
+    const response = await workspaceFetch(url);
     if (!response.ok) throw new Error(`Could not read local ${label} (${response.status})`);
 
     const sourceBlob = await response.blob();
@@ -467,7 +468,7 @@ const prepareH3ReferenceAudio = async (reference: ReferenceAudio, index: number)
   try {
     const sourceUrl = isHttpUrl(reference.url) ? await refreshMediaAccessUrl(reference.url) : reference.url;
     if (!sourceUrl) throw new Error('The saved audio is no longer accessible. Attach it again.');
-    const response = await fetch(sourceUrl);
+    const response = await workspaceFetch(sourceUrl);
     if (!response.ok) throw new Error(`Could not read the audio (${response.status})`);
     const source = await response.blob();
     // Ref2VA's short reference-audio decoder differs from the target-audio
@@ -843,7 +844,7 @@ const createH3MaxVideoTask = async (config: GenerationConfig, initiatingUserId?:
   if(session?.user?.id!==initiatingUserId)throw new Error('Session changed before video submission.');
   let response:Response;
   const headers=await getServerAuthHeaders(initiatingUserId);
-  try{response=await fetch('/api/banana-studio/fal-h3-video',{method:'POST',headers,body:JSON.stringify(submissionBody)});}
+  try{response=await workspaceFetch('/api/banana-studio/fal-h3-video',{method:'POST',headers,body:JSON.stringify(submissionBody)});}
   catch{throw new RecoverableVideoTaskError('fal.ai did not confirm whether the video was accepted. Do not submit again; check fal task history and usage first.');}
   const result=await response.json().catch(()=>null);
   // An accepted task remains usable if only its gallery acknowledgement failed.
@@ -1013,7 +1014,7 @@ export const createVideoTask = async (
   if (preparedRouteError) throw new Error(preparedRouteError);
   const { data: { session: submitSession } } = await supabase.auth.getSession();
   if (submitSession?.user?.id !== initiatingUserId) throw new Error('Session changed before video submission.');
-  const createRes = await fetch('/api/banana-studio/seedance-video', {
+  const createRes = await workspaceFetch('/api/banana-studio/seedance-video', {
     method: 'POST',
     headers: await getServerAuthHeaders(initiatingUserId),
     body: JSON.stringify(body),
@@ -1096,7 +1097,7 @@ export const pollVideoTask = async (
     const { data: { session: pollingSession } } = await supabase.auth.getSession();
     if (pollingSession?.user?.id !== initiatingUserId) throw new Error('Session changed while checking the video.');
     try {
-      const res = await fetch(
+      const res = await workspaceFetch(
         routed ? `/api/banana-studio/seedance-video?taskId=${encodeURIComponent(taskId)}` : isH3
           ? `/api/banana-studio/fal-h3-video?requestId=${encodeURIComponent(taskId)}${effectiveQueueEndpoint ? `&endpoint=${encodeURIComponent(effectiveQueueEndpoint)}` : ''}`
           : `/api/banana-studio/evolink-status?taskId=${encodeURIComponent(taskId)}`,

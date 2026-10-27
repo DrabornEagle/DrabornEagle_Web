@@ -1,4 +1,5 @@
 import './styles/index.css';
+import { initializeWorkspaceApi, workspaceFetch } from './services/workspaceApi.mjs';
 import './styles/web.css';
 import { browserIdentity } from './services/browserWorkspace.mjs';
 import React from 'react';
@@ -14,8 +15,9 @@ const root = ReactDOM.createRoot(rootElement);
 root.render(<div role="status" style={{ color: '#d1d5db', padding: 48 }}>Opening Banana Studio…</div>);
 const start = async () => {
   try {
-    const response = await fetch('/api/banana-studio/workspace-config', { cache: 'no-store', credentials: 'same-origin' }).catch(() => null);
-    const config = response?.ok ? await response.json() : { mode: 'browser' };
+    const browserOnly = await initializeWorkspaceApi();
+    const response = browserOnly ? null : await workspaceFetch('/api/banana-studio/workspace-config', { cache: 'no-store', credentials: 'same-origin', signal: AbortSignal.timeout(8000) }).catch(() => null);
+    const config = response?.ok && response.headers.get('content-type')?.includes('application/json') ? await response.json() : { mode: 'browser' };
     window.__BANANA_STUDIO_CONFIG__ = Object.freeze(validateWorkspaceConfig(config.mode === 'browser' ? browserIdentity() : config));
     const { default: App } = await import('./App');
     root.render(<React.StrictMode><App /></React.StrictMode>);

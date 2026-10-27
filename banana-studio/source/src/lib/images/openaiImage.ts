@@ -39,7 +39,7 @@ export const DEFAULT_OPENAI_IMAGE_OPTIONS: OpenAIImageOptions = {
 export const SUNBURST_QUALITIES = ['auto', 'low', 'medium', 'high', 'xhigh', 'max'] as const;
 export const SUNBURST_QUALITY_OPTIONS = SUNBURST_QUALITIES.map(value => ({ value,
   label: ({ auto: 'Auto', low: 'Low', medium: 'Medium', high: 'High', xhigh: 'Extra high', max: 'Max' })[value] }));
-// https://developers.openai.com/api/banana-studio/docs/guides/image-generation
+// https://developers.openai.com/api/docs/guides/image-generation
 // Each edge <=3840, multiples of 16, 655360..8294400 pixels, ratio <=3:1.
 const SIZES: Record<Resolution, Record<AspectRatio, string>> = {
   '1K': { '1:1': '1024x1024', '4:3': '1024x768', '3:4': '768x1024', '16:9': '1536x864', '9:16': '864x1536' },

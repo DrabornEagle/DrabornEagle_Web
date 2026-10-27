@@ -2,6 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import handler from '../api/banana-studio/[route].js';
 const response = () => ({ headers:{}, setHeader(key,value){this.headers[key]=value;}, status(code){this.code=code;return this;}, json(body){this.body=body;return this;}, send(body){this.body=body;return this;},end(){return this;} });
+test('Pages can preflight the API; unrelated origins cannot reach the backend', async () => {
+  let result=response();
+  await handler({method:'OPTIONS',query:{route:'gemini-generate'},headers:{origin:'https://www.draborneagle.com',host:'draborneagleweb.vercel.app'}},result);
+  assert.equal(result.code,204);
+  assert.equal(result.headers['Access-Control-Allow-Origin'],'https://www.draborneagle.com');
+  assert.equal(result.headers['Access-Control-Allow-Headers'],'Authorization, Content-Type');
+  assert.equal(result.headers['Access-Control-Allow-Credentials'],undefined);
+  result=response();
+  await handler({method:'POST',query:{route:'gemini-generate'},headers:{origin:'https://unrelated.example.invalid',host:'draborneagleweb.vercel.app'}},result);
+  assert.equal(result.code,403);
+  assert.equal(result.headers['Access-Control-Allow-Origin'],undefined);
+});
 test('unconfigured web workspace opens locally and never submits AI requests', async () => {
   const previous=process.env.BANANA_WORKSPACE_ORIGIN; delete process.env.BANANA_WORKSPACE_ORIGIN;
   try {

@@ -1,3 +1,4 @@
+import { workspaceFetch } from '../services/workspaceApi.mjs';
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { readSharedFolderPage, type SharedFolderImage as SharedImage, type SharedFolderPage as SharedPage } from '../lib/gallery/folderShareResponse';
 
@@ -19,7 +20,7 @@ export function SharedFolder() {
   }, []);
   const request = useCallback(async (args: { offset?: number; mediaId?: string }, signal?: AbortSignal): Promise<SharedPage> => {
     if (!/^[A-Za-z0-9_-]{43}$/.test(token)) throw new Error('This share link is unavailable or expired.');
-    const response = await fetch('/api/banana-studio/shared-folder', {
+    const response = await workspaceFetch('/api/banana-studio/shared-folder', {
       method: 'POST', headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ token, ...args }), credentials: 'omit', cache: 'no-store', signal,
     });
