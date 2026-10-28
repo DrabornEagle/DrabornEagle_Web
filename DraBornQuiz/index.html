@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+  <meta name="theme-color" content="#090d19">
+  <meta name="description" content="DraBornQuiz: Tek düğmeyle 30 şaşırtıcı 3D mantık, hafıza ve refleks bulmacasını çöz. Ücretsiz, mobil uyumlu Türkçe tarayıcı oyunu.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DraBornQuiz | Pressure Chamber">
+  <meta property="og:description" content="Basmak kolay. Ne zaman basacağını bilmek zor. 30 özgün bulmaca!">
+  <meta property="og:url" content="https://www.draborneagle.com/DraBornQuiz/">
+  <link rel="canonical" href="https://www.draborneagle.com/DraBornQuiz/">
+  <link rel="icon" href="/Support/assets/dkd-miami-eagle.png">
+  <link rel="stylesheet" href="./styles.css?v=1.0.0">
+  <title>DraBornQuiz — Pressure Chamber | DrabornEagle</title>
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+  <div id="dkdApp" class="app">
+    <header class="topbar">
+      <a class="identity" href="https://www.draborneagle.com/DraBornGames/" aria-label="DraBornGames sayfasına dön">
+        <span class="brand-symbol">D<span class="brand-dot">.</span></span>
+        <span class="brand-lines"><strong>DRABORN<span>QUIZ</span></strong><small>DRABORNEAGLE • ORIGINAL GAME</small></span>
+      </a>
+      <div class="top-actions">
+        <button id="dkdHelp" class="tool-btn" type="button" title="Nasıl oynanır" aria-label="Nasıl oynanır">?</button>
+        <button id="dkdSound" class="tool-btn" type="button" title="Sesi aç veya kapat" aria-label="Sesi aç veya kapat" aria-pressed="true">♪</button>
+        <button id="dkdFullscreen" class="tool-btn" type="button" title="Tam ekran" aria-label="Tam ekran">⛶</button>
+      </div>
+    </header>
+
+    <main class="workspace">
+      <div class="status-bar" aria-label="Oyun durumu">
+        <div class="status-item"><small>SEVİYE</small><strong id="dkdStageLabel">00 <span>/ 30</span></strong></div>
+        <div class="status-item status-center"><small>GÖREV</small><strong id="dkdModeLabel">HAZIRLIK</strong></div>
+        <div class="status-item status-right"><small>KALAN SÜRE</small><strong id="dkdTimer" aria-live="off">--:--</strong></div>
+      </div>
+
+      <div id="dkdScene" class="scene" aria-label="Üç boyutlu görünümlü bulmaca odası">
+        <div class="room-back" aria-hidden="true"></div>
+        <div class="room-left" aria-hidden="true"></div>
+        <div class="room-right" aria-hidden="true"></div>
+        <div class="room-ceiling" aria-hidden="true"></div>
+        <div class="floor" aria-hidden="true"></div>
+        <div class="light-cone" aria-hidden="true"></div>
+        <div class="wall-ring" aria-hidden="true"></div>
+        <div class="room-sign left-sign" aria-hidden="true"><i></i><i></i><i></i><b>CHAMBER 01</b></div>
+        <div class="room-sign right-sign" aria-hidden="true"><b>DKD • SYSTEM</b><i></i><i></i></div>
+
+        <section class="terminal" aria-label="Görev talimatı">
+          <div class="terminal-top"><span><i class="indicator"></i> CONTROL SYSTEM</span><span id="dkdTerminalState">STANDBY</span></div>
+          <div class="terminal-main">
+            <div id="dkdQuestionNumber" class="question-number">TEST 00</div>
+            <h1 id="dkdPrompt">Hazır mısın?</h1>
+            <p id="dkdSubprompt">Bu odada tek bir düğme var. Kuralları her seferinde değişiyor.</p>
+            <div id="dkdClue" class="clue" aria-live="polite"></div>
+          </div>
+          <div class="terminal-bottom"><span id="dkdHint">TALİMATI DİKKATLİ OKU</span><span class="terminal-pulse">▰ ▰ ▰</span></div>
+        </section>
+
+        <div class="pedestal" aria-label="Tek düğmeli kontrol konsolu">
+          <div class="pedestal-shadow"></div>
+          <div class="pedestal-column"></div>
+          <div class="pedestal-body">
+            <div class="pedestal-side left"></div><div class="pedestal-side right"></div>
+            <div class="pedestal-plate">
+              <span class="plate-screw screw-a"></span><span class="plate-screw screw-b"></span>
+              <span class="plate-screw screw-c"></span><span class="plate-screw screw-d"></span>
+              <span class="plate-label">DKD / INTERFACE 01</span>
+              <div class="button-base">
+                <button id="dkdPress" class="pressure-button" type="button" aria-label="Kırmızı düğme: bas veya basılı tut" disabled>
+                  <span class="button-face"><span class="button-gloss"></span><span class="button-lettering">PUSH</span></span>
+                </button>
+              </div>
+              <span class="plate-warning">⚠ THINK BEFORE YOU PRESS</span>
+            </div>
+          </div>
+        </div>
+        <div class="scene-message" id="dkdSceneMessage" aria-live="polite"></div>
+        <div class="scene-vignette" aria-hidden="true"></div>
+      </div>
+
+      <div class="bottom-hud">
+        <div class="hud-progress"><div class="progress-heading"><span>ASCENSION PROTOCOL</span><strong id="dkdPercent">0%</strong></div><div class="progress-track"><div id="dkdProgress" class="progress-fill"></div></div></div>
+        <div class="bottom-meta"><span id="dkdPressCount">BASMA: 0 / 0</span><span id="dkdBest">EN İYİ: 0 / 30</span></div>
+      </div>
+      <p class="game-tip">Dokun • Tıkla • <kbd>Space</kbd> / <kbd>Enter</kbd> &nbsp; | &nbsp; Talimatı okumadan basma.</p>
+    </main>
+
+    <footer class="footer"><span>© <span id="dkdYear">2026</span> DrabornEagle • DraBornQuiz v1.0</span><a href="https://donitz.itch.io/pressing-under-pressure" target="_blank" rel="noopener noreferrer">İlham kaynağı: Donitz</a></footer>
+
+    <div id="dkdOverlay" class="overlay" role="dialog" aria-modal="true" aria-labelledby="dkdOverlayTitle">
+      <div class="overlay-panel">
+        <div class="overlay-logo"><span>DB<span>Q</span></span><small>PRESSURE CHAMBER</small></div>
+        <div id="dkdOverlayTag" class="overlay-tag">ONE BUTTON. THIRTY TRIALS.</div>
+        <h2 id="dkdOverlayTitle">BASMAK<br><em>YETERLİ DEĞİL.</em></h2>
+        <p id="dkdOverlayText">30 tuzaklı görev. Tek bir kırmızı düğme. Bir hata ve her şey baştan. Talimatları okumak hayatta kalmanın tek yolu.</p>
+        <div id="dkdOverlayStats" class="overlay-stats"><span>30 SEVİYE</span><span>TEK DÜĞME</span><span>0 MAZERET</span></div>
+        <button id="dkdStart" class="main-cta" type="button">OYUNA BAŞLA <span>→</span></button>
+        <p class="overlay-footnote">Telefonda dokunarak, bilgisayarda tıklayarak oynayabilirsin.</p>
+      </div>
+    </div>
+    <div id="dkdHelpDialog" class="help-overlay" hidden role="dialog" aria-modal="true" aria-labelledby="dkdHelpTitle">
+      <div class="help-panel">
+        <button id="dkdCloseHelp" class="help-close" type="button" aria-label="Kapat">×</button>
+        <p class="help-eyebrow">DRABORNQUIZ / MANUAL</p>
+        <h2 id="dkdHelpTitle">Nasıl oynanır?</h2>
+        <p>Ekrandaki talimatı oku. Kırmızı düğmeye bazen bir kez, bazen birden çok kez bas; bazen basılı tut, bazen ise hiç dokunma. Yeni aşama başlayana kadar bekle.</p>
+        <p>Hata yapmak o koşuyu bitirir. Her yeni denemede birinci seviyeden başlarsın. En ileri seviyen cihazında saklanır.</p>
+        <p><strong>Bilgisayar:</strong> fare / Space / Enter. <strong>Telefon:</strong> düğmeye dokun; uzun basma için parmağını basılı tut.</p>
+        <button id="dkdResume" class="main-cta" type="button">ANLADIM <span>✓</span></button>
+      </div>
+    </div>
+    <div id="dkdAnnouncer" class="sr-only" aria-live="assertive"></div>
+  </div>
+  <script src="./game.js?v=1.0.0" defer></script>
+</body>
+</html>
