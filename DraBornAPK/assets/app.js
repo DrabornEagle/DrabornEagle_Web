@@ -35,7 +35,7 @@
     dkdById("dkd-app-art").replaceChildren(document.createTextNode("APK"));
     dkdById("dkd-result-status").className = "dkd-result-status";
     dkdById("dkd-result-status").textContent = "Taranıyor...";
-    dkdById("dkd-result-message").textContent = "Google Play uygulaması ve bağımsız APK kaynakları kontrol ediliyor.";
+    dkdById("dkd-result-message").textContent = "Bağımsız F-Droid APK kataloğunda paket aranıyor.";
     dkdById("dkd-download-link").hidden = true;
     dkdById("dkd-source-link").hidden = true;
     dkdById("dkd-source-note").hidden = true;
@@ -158,13 +158,24 @@
     dkdById("dkd-submit-label").textContent = "Kaynak aranıyor...";
     dkdDisplayResult(dkdPackage);
     try {
-      const dkdResponse = await fetch("/api/drabornapk-lookup?package=" + encodeURIComponent(dkdPackage), {
-        method: "GET", signal: dkdActiveController.signal, headers: { "Accept": "application/json" }
+      const dkdResponse = await fetch("./data/catalog.json", {
+        method: "GET", signal: dkdActiveController.signal, cache: "no-cache", headers: { "Accept": "application/json" }
       });
-      if (!dkdResponse.ok) throw new Error(dkdResponse.status === 429 ? "Çok fazla sorgu yapıldı; daha sonra tekrar dene." : "Kaynak sorgulanamadı. Daha sonra tekrar dene.");
-      const dkdData = await dkdResponse.json();
+      if (!dkdResponse.ok) throw new Error("APK kataloğuna erişilemiyor. Daha sonra tekrar dene.");
+      const dkdCatalog = await dkdResponse.json();
       if (dkdRequestId !== dkdRequestCounter) return;
-      if (dkdData.packageName !== dkdPackage) throw new Error("Kaynak yanıtı doğrulanamadı.");
+      if (!dkdCatalog || typeof dkdCatalog.packages !== "object" || dkdCatalog.packages === null) throw new Error("APK kataloğu doğrulanamadı.");
+      const dkdEntry = Object.hasOwn(dkdCatalog.packages, dkdPackage) ? dkdCatalog.packages[dkdPackage] : null;
+      const dkdData = {
+        packageName: dkdPackage,
+        title: dkdEntry?.title || dkdPackage,
+        fdroid: dkdEntry ? {
+          found: true,
+          versionName: dkdEntry.versionName,
+          versionCode: dkdEntry.versionCode,
+          downloadUrl: "https://f-droid.org/repo/" + encodeURIComponent(dkdEntry.apkName)
+        } : { found: false }
+      };
       dkdStoreHistory(dkdPackage);
       dkdRenderData(dkdData, dkdPackage);
     } catch (dkdCaught) {

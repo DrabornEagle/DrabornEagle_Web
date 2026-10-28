@@ -1,42 +1,43 @@
 # DraBornAPK v0.1
 
-DrabornEagle_Web deposu için bağımsız, mobil uyumlu web tabanlı APK kaynak keşif aracı.
+DraBornAPK, DrabornEagle_Web içinde bağımsız, mobil uyumlu Google Play URL analizi ve **alternatif F-Droid APK keşif** aracıdır.
 
-**Adres:** https://www.draborneagle.com/DraBornAPK/
+**Canlı sayfa:** https://www.draborneagle.com/DraBornAPK/
 
-## Çalışma şekli
+## Kullanım
 
-1. Kullanıcı Google Play uygulama/oyun paylaşım bağlantısını veya Android paket kimliğini girer.
-2. Tarayıcı paket kimliğini doğrular; aynı alan adındaki Vercel \`/api/drabornapk-lookup\` endpoint'ine sorgu yollar.
-3. Backend Google Play herkese açık sayfasından *yalnızca metadata* okumayı dener (başlık/ikon); bloklanırsa paket kimliği gösterilir.
-4. Backend açık kaynak F-Droid'in herkese açık katalog API'sini sorgular, önerilen paket koduyla F-Droid deposunda doğrudan APK URL'sinin HEAD isteğine erişilebilirliğini kontrol eder.
-5. Bağımsız APK mevcutsa kullanıcı F-Droid'de barındırılan APK URL'sine yönlendirilir; varsayılan otomatik indirme tercihi kapatılabilir. Tarayıcı indirmeyi veya güvenlik onayını sorabilir.
-6. F-Droid'de yoksa APK indirdiği izlenimi verilmez, resmi Google Play ve varsa F-Droid sayfası sunulur.
+1. Google Play uygulamasının bağlantısını veya \`org.example.app\` gibi paket kimliğini yapıştır.
+2. DraBornAPK paket kimliğini ayıklar ve **aynı alan adındaki** \`/DraBornAPK/data/catalog.json\` kataloğunda arar.
+3. Katalogda varsa F-Droid'in kendi deposundaki bilinen APK sürümüne bağlantı gösterir. "Otomatik başlat" açıkken tarayıcı indirme isteği gönderir.
+4. Yoksa Google Play sayfasını gösterir. APK indirildiği yanılsamasını vermez.
+5. Son 5 arama, yalnızca cihazdaki localStorage'da tutulur; temizlenebilir.
 
-## Sınırlar ve güvenlik
+**Not:** Google Play, keyfi uygulamalar için halka açık APK indirme API'si sağlamaz. Bu site **Google Play'den APK indirmez**. F-Droid'de dağıtılan açık kaynak sürümü farklı olabilir. Çoğu ticari oyun ve uygulama için doğrudan APK bağlantısı yoktur.
 
-- **Google Play bağlantısı bir APK indirme linki değildir.** Google Play'in resmi, herkesin istediği uygulama APK'sını indireceği açık API'si bulunmaz. AAB/cihaza özel split APK yayımlayan ticari uygulamalar için bu servis genellikle doğrudan APK bulamaz.
-- APK *Google Play'den çekilmez*. Yalnızca F-Droid kendi sunucusundaki alternatif sürümler yönlendirilir. Play sürümüyle imza, sürüm, varyant farkı olabilir ve yükseltme kurulumunda sorun çıkarabilir.
-- F-Droid katalog API'si güvenli imza doğrulama servisi değildir; bu web uygulaması **bağımsız imza/hash doğrulaması yapmaz**. İmzaları güvenle doğrulamak ve otomatik güncelleme almak için resmi F-Droid uygulamasını kullanın. Kaynak: https://f-droid.org/docs/All_our_APIs/
-- APK binary dosyaları DraBornEagle sunucusundan geçmez, depolanmaz veya yeniden dağıtılmaz.
-- Sorgular dış bağlantı olarak yalnızca önceden sabitlenmiş Play/F-Droid hostlarına gider; kullanıcı keyfi URL ile sunucu proxy isteği yaptıramaz.
-- Yalnızca GET; paket formatı doğrulanır. Ekrandaki sunucu verileri metin olarak eklenir (HTML enjekte edilmez). Kullanıcının son 5 sorgusu yalnızca kendi cihazındaki localStorage'da tutulur ve silinebilir.
-- Bu araç Google, Google Play veya F-Droid ile bağlantılı değildir.
-- Tarayıcıların güvenlik modelinden ötürü otomatik indirme ve APK kurulumu her cihazda zorlanamaz.
+## Veri güncelleme
+
+Vercel projesinde var olan API endpoint'lerinin 404 döndürmesi nedeniyle DraBornAPK, mevcut sitenin Vercel projesindeki serverless API'lerine bağlı değildir. Böylece ana sitenin konfigürasyonu değiştirilmez.
+
+\`.github/workflows/dkd-drabornapk-catalog.yml\` GitHub Actions iş akışı her gün ve script/workflow değiştiğinde F-Droid'in \`https://f-droid.org/repo/index-v2.json\` dizinini okur; \`DraBornAPK/scripts/dkd-update-catalog.mjs\` yayınlanmış sabit sürüm APK'larının id, ad, sürüm ve dosya adlarını ayıklar. \`DraBornAPK/data/catalog.json\` içine yazar; değişmişse main'e commit eder. İndirilen binary'leri depolamaz. Manuel workflow_dispatch da kullanılabilir.
+
+Çalışma testi: \`node --test DraBornAPK/scripts/dkd-update-catalog.test.mjs\`
+
+### Güvenlik
+
+- Katalog F-Droid'in HTTPS üzerinden yayımladığı index-v2 JSON'a dayanır, **bağımsız GPG/JAR imza doğrulaması yapmaz**. İndirme bağlantısını takip etmeden önce hedefi ve sürümü denetle.
+- Resmî F-Droid uygulaması, imzalı paket dizini ve imza kontrolü için tercih edilmelidir: https://f-droid.org/docs/All_our_APIs/
+- Yalnızca \`f-droid.org/repo/{paket}_{sürümKodu}.apk\` biçimi kabul edilir; kullanıcı serbest sunucu proxy URL'si veremez.
+- Gerçek APK dosyaları DraBornEagle sunucularında barındırılmaz. Sitenin otomatik indirme özelliği Android tarayıcısının izinlerine bağlıdır.
+- Play ile F-Droid sürümlerinin uygulama imzaları farklı olabilir; yükleme/güncelleme sorunları mümkündür.
+- Bağımsız bir araç; Google veya F-Droid ile resmi bağlantısı bulunmuyor.
 
 ## Dosyalar
 
-- \`index.html\`: erişilebilir semantik HTML
-- \`assets/app.css\`: DrabornEagle tasarımına uygun responsive arayüz
-- \`assets/app.js\`: URL ayrıştırma, metadata sonucu, otomatik indirme tercihi, yerel geçmiş
-- \`../api/drabornapk-lookup.js\`: Vercel Node.js serverless metadata ve kaynak kontrolü
+- \`index.html\`, \`assets/app.css\`, \`assets/app.js\`: sayfa, responsive görünüm ve tarayıcı mantığı
+- \`data/catalog.json\`: kullanıcı aramaları için statik APK kataloğu
+- \`scripts/dkd-update-catalog.mjs\` ve testi: otomatik veri üretimi
+- \`../api/drabornapk-lookup.js\`: ilk API prototipi; aktif istemci tarafından kullanılmaz, Vercel projesi için mevcut statik-route engeli çözülene kadar bağımsızdır
 
-## Lokal doğrulama
+## Sınırlar
 
-Vercel API gereklidir. Normal statik HTTP sunucusu HTML arayüzünü açabilir ancak \`/api/drabornapk-lookup\` route'u olmadan gerçek kaynak sorgusu çalışmaz. Vercel'e bağlı ana dal dağıtıldığında bu endpoint otomatik tanınır.
-
-Örnek Google Play URL: https://play.google.com/store/apps/details?id=org.kde.kdeconnect_tp
-
-## v0.2 fikirleri
-
-Yayıncının izin verdiği resmî GitHub Releases APK dosyaları için açıkça kayıtlı paket->repo eşleştirmesi ve hash/doğrulama ile kaynak çeşitlendirme. Üçüncü taraf belirsiz APK aynalarından otomatik indirme planlanmaz.
+Aracın yaptığı şey *Google Play linkinden paket kimliği çıkarıp aynı uygulamanın F-Droid sürümünü önermektir*. Google Play'in oturum ve cihaz kısıtını aşmaz; ticari APK/split APK çıkarma ya da Play hesabından paket çekme sağlamaz.
