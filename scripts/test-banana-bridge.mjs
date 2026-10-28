@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import handler from '../api/banana-studio/[route].js';
+import handler from '../api/banana-edits/[route].js';
 const response = () => ({ headers:{}, setHeader(key,value){this.headers[key]=value;}, status(code){this.code=code;return this;}, json(body){this.body=body;return this;}, send(body){this.body=body;return this;},end(){return this;} });
 test('Pages can preflight the API; unrelated origins cannot reach the backend', async () => {
   let result=response();

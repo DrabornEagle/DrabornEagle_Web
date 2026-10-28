@@ -344,58 +344,7 @@
       ]
     },
     {
-      "source": "/nashi-app/:path*",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/banana-studio/:path*",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/Coconut-app/:path*",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        },
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        },
-        {
-          "key": "Referrer-Policy",
-          "value": "strict-origin-when-cross-origin"
-        }
-      ]
-    },
-    {
-      "source": "/Banana-edits/:path*",
+      "source": "/DraBornStudio/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -472,6 +421,51 @@
       "source": "/Games/:path*",
       "destination": "/DraBornGames/:path*",
       "permanent": true
+    },
+    {
+      "source": "/nashi-app/:path*",
+      "destination": "/DraBornStudio/Coconut-app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/Coconut-app/:path*",
+      "destination": "/DraBornStudio/Coconut-app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/coconut-app/:path*",
+      "destination": "/DraBornStudio/Coconut-app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/banana-studio/:path*",
+      "destination": "/DraBornStudio/Banana-edits/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/Banana-edits/:path*",
+      "destination": "/DraBornStudio/Banana-edits/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/banana-edits/:path*",
+      "destination": "/DraBornStudio/Banana-edits/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/clipboardline/:path*",
+      "destination": "/DraBornStudio/clipboard-app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/clipboard-app/:path*",
+      "destination": "/DraBornStudio/clipboard-app/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/api/banana-studio/:path*",
+      "destination": "/api/banana-edits/:path*",
+      "permanent": true
     }
   ],
   "alias": [
@@ -484,7 +478,7 @@
     "www.draborneagle.org"
   ],
   "functions": {
-    "api/banana-studio/[route].js": {
+    "api/banana-edits/[route].js": {
       "maxDuration": 300
     }
   }

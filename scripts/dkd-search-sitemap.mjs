@@ -14,7 +14,7 @@ const directories = [
   'DraBornGate', 'DraBornLand/Office', 'DraBornNews', 'DraBornOdds',
   'DraBornOdds/App', 'DraBornPark', 'DraBornPortal', 'DraBornPortal/App',
   'DraBornSeries', 'DraBornStyle', 'DraBornBuy', 'DraBornZikir', 'draborngo',
-  'Coconut-app', 'Banana-edits'
+  'DraBornStudio', 'DraBornStudio/Coconut-app', 'DraBornStudio/Banana-edits', 'DraBornStudio/clipboard-app'
 ];
 const sitemapPath = resolve(root, 'sitemap.xml');
 const previous = existsSync(sitemapPath) ? readFileSync(sitemapPath, 'utf8') : '';

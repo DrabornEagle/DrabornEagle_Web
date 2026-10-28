@@ -21,6 +21,16 @@
     // existing app-specific routing logic is running.
     (function () {
       var p = location.pathname;
+      // GitHub Pages serves this file for retired project folders.
+      // Keep deep paths, query parameters and shared-folder fragments intact.
+      var legacy = p.match(/^\/(nashi-app|coconut-app|banana-studio|banana-edits|clipboardline|clipboard-app)(\/.*)?$/i);
+      if (legacy) {
+        var app = /^(nashi-app|coconut-app)$/i.test(legacy[1]) ? 'Coconut-app'
+          : /^(banana-studio|banana-edits)$/i.test(legacy[1]) ? 'Banana-edits' : 'clipboard-app';
+        document.documentElement.classList.add('dkd-route-handoff');
+        location.replace('/DraBornStudio/' + app + (legacy[2] || '/') + location.search + location.hash);
+        return;
+      }
       if (/^\/DraBornPark\/(?:tag|t)\/[^/]+\/?$/i.test(p) ||
           /^\/DraBornSeries\//i.test(p) ||
           /^\/DraBornGate\//i.test(p) ||
