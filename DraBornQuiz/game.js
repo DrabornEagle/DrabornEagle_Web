@@ -143,6 +143,7 @@
     el.timer.classList.remove("urgent");
     el.scene.classList.remove("is-green","success-flash","error-flash");
     el.scene.classList.toggle("is-hold-test",stage.kind==="hold");
+    el.scene.classList.toggle("test-green",stage.kind==="green");
     el.button.classList.remove("is-pressed");
     el.button.disabled = false;
     setMessage("");
