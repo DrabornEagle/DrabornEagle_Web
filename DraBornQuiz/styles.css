@@ -173,3 +173,9 @@ kbd{display:inline-block;border:1px solid #334052;background:#152131;border-radi
   .game-tip{margin:9px 0}
 }
 @media (prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* On light-lock tests, the indicator really switches red ↔ green. */
+.scene.test-green .indicator{background:#e74340;box-shadow:0 0 12px #ff4e44}
+.scene.test-green.is-green .indicator{background:#adffd7;box-shadow:0 0 14px 4px #64ffaa}
+.scene.test-green .wall-ring{box-shadow:0 9px 35px #ef4a4a55,0 18px 70px #df27272a,inset 0 -4px 8px #ffd3d357}
+.scene.test-green.is-green .wall-ring{box-shadow:0 9px 35px #91ffd8b0,0 18px 90px #a4ffe350,inset 0 -4px 8px #d5fff1}
