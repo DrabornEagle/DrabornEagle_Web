@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090d1b">
+  <meta name="description" content="DraBornAPK: Google Play uygulama ve oyun bağlantılarını analiz edin; mevcutsa F-Droid üzerinden Android APK dosyasını indirin.">
+  <meta name="robots" content="index,follow">
+  <link rel="canonical" href="https://www.draborneagle.com/DraBornAPK/">
+  <link rel="icon" href="/Support/assets/dkd-miami-eagle.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DraBornAPK | Android APK Keşif & İndirme">
+  <meta property="og:description" content="Google Play bağlantısını yapıştır. APK için desteklenen bağımsız kaynakları kontrol et.">
+  <meta property="og:url" content="https://www.draborneagle.com/DraBornAPK/">
+  <meta name="color-scheme" content="dark">
+  <title>DraBornAPK — Akıllı APK İndirme | DrabornEagle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/app.css?v=0.1.0">
+  <script defer src="./assets/app.js?v=0.1.0"></script>
+</head>
+<body>
+  <div class="dkd-glow dkd-glow-one" aria-hidden="true"></div>
+  <div class="dkd-glow dkd-glow-two" aria-hidden="true"></div>
+  <div class="dkd-grid" aria-hidden="true"></div>
+  <div class="dkd-app">
+    <header class="dkd-header">
+      <a href="/" class="dkd-brand" aria-label="DrabornEagle ana sayfa">
+        <span class="dkd-brand-mark">D<span>★</span></span>
+        <span class="dkd-brand-name">DraBorn<span>APK</span><small>DRABORNEAGLE ECOSYSTEM</small></span>
+      </a>
+      <div class="dkd-header-right">
+        <span class="dkd-live"><i></i> WEB APP <b>v0.1</b></span>
+        <a class="dkd-home-link" href="/">Ana sayfa <span aria-hidden="true">↗</span></a>
+      </div>
+    </header>
+    <main>
+      <section class="dkd-hero" aria-labelledby="dkd-title">
+        <div class="dkd-eyebrow"><span class="dkd-spark">✳</span> ANDROID APK TOOLKIT <span class="dkd-dot">•</span> LINK ANALYZER</div>
+        <h1 id="dkd-title">Bir bağlantı.<br><span>Akıllı APK keşfi.</span></h1>
+        <p class="dkd-subtitle">Google Play uygulama veya oyun linkini yapıştır. Paketi anında tanıyalım, bağımsız APK kaynağı varsa doğrudan cihazına yönlendirelim.</p>
+        <div class="dkd-stats" aria-label="Özellikler">
+          <span><i class="dkd-stat-symbol">✓</i> Google Play link analizi</span>
+          <span><i class="dkd-stat-symbol">↓</i> Doğrudan APK bağlantısı*</span>
+          <span><i class="dkd-stat-symbol">⌁</i> Ücretsiz kullanım</span>
+        </div>
+      </section>
+      <section class="dkd-workspace" aria-label="APK bağlantısı analiz ekranı">
+        <div class="dkd-panel-top">
+          <div class="dkd-panel-kicker"><span class="dkd-pulse"></span> APK LINK CONVERTER</div>
+          <span class="dkd-panel-badge">01 / ANALYZE</span>
+        </div>
+        <div class="dkd-panel-content">
+          <label for="dkd-url" class="dkd-field-label">Google Play bağlantısı <span>veya paket kimliği</span></label>
+          <form id="dkd-form" novalidate>
+            <div class="dkd-input-wrap">
+              <span class="dkd-input-icon" aria-hidden="true">↗</span>
+              <input id="dkd-url" name="playUrl" type="text" autocomplete="off" inputmode="url" autocapitalize="off" spellcheck="false" placeholder="https://play.google.com/store/apps/details?id=..." aria-describedby="dkd-input-help" maxlength="2048" required>
+              <button class="dkd-paste" id="dkd-paste" type="button" title="Panodan yapıştır">Yapıştır <span aria-hidden="true">▣</span></button>
+            </div>
+            <p id="dkd-input-help" class="dkd-input-help">Google Play mağaza paylaşım bağlantısı ya da com.ornek.uygulama biçiminde paket adı.</p>
+            <div class="dkd-form-bottom">
+              <label class="dkd-checkbox"><input type="checkbox" id="dkd-auto" checked><span class="dkd-checkbox-ui" aria-hidden="true"></span><span>APK bulunursa indirmeyi otomatik başlat</span></label>
+              <button class="dkd-submit" id="dkd-submit" type="submit"><span id="dkd-submit-label">APK'yi Bul</span><span class="dkd-submit-arrow" aria-hidden="true">➜</span></button>
+            </div>
+          </form>
+          <div class="dkd-example"><span>Örnek bağlantı</span><button type="button" id="dkd-example" class="dkd-example-button">KDE Connect <span aria-hidden="true">↗</span></button></div>
+        </div>
+      </section>
+      <section class="dkd-result" id="dkd-result" aria-live="polite" hidden>
+        <div class="dkd-result-heading"><span>ARAMA SONUCU</span><span id="dkd-result-status" class="dkd-result-status">Taranıyor</span></div>
+        <div class="dkd-result-main">
+          <div class="dkd-app-art" id="dkd-app-art" aria-hidden="true">APK</div>
+          <div class="dkd-app-info"><h2 id="dkd-app-title">Uygulama bulunuyor...</h2><p id="dkd-app-package">Paket kimliği</p><span id="dkd-app-version" class="dkd-app-version"></span></div>
+        </div>
+        <p class="dkd-result-message" id="dkd-result-message"></p>
+        <div class="dkd-result-actions">
+          <a id="dkd-download-link" class="dkd-download" href="#" hidden>↓ APK'yi İndir <span>F-Droid kaynağı</span></a>
+          <a id="dkd-source-link" class="dkd-action-secondary" href="#" target="_blank" rel="noopener noreferrer" hidden>F-Droid sayfası ↗</a>
+          <a id="dkd-play-link" class="dkd-action-secondary" href="#" target="_blank" rel="noopener noreferrer">Google Play'de Aç ↗</a>
+        </div>
+        <p class="dkd-source-note" id="dkd-source-note" hidden>İndirilen dosya Google Play sunucusundan değil, F-Droid'in kendi deposundan gelir. Sürüm ve imza Google Play sürümünden farklı olabilir.</p>
+      </section>
+      <section class="dkd-history" id="dkd-history-section" hidden>
+        <div class="dkd-section-title"><h2>Son sorgular</h2><button type="button" id="dkd-history-clear">Geçmişi temizle</button></div>
+        <ul id="dkd-history-list" class="dkd-history-list"></ul>
+      </section>
+      <section class="dkd-how" aria-labelledby="dkd-how-title">
+        <div class="dkd-section-title"><h2 id="dkd-how-title">Nasıl çalışır?</h2><span>3 KOLAY ADIM</span></div>
+        <div class="dkd-cards">
+          <article class="dkd-step"><div class="dkd-step-icon purple">🔗</div><span>01 — LINK</span><h3>Bağlantıyı yapıştır</h3><p>Google Play'den uygulama ya da oyun bağlantısını kopyala.</p></article>
+          <article class="dkd-step"><div class="dkd-step-icon cyan">⌕</div><span>02 — SCAN</span><h3>Kaynağı tara</h3><p>Paket kimliğini analiz edelim, F-Droid üzerinde APK var mı bakalım.</p></article>
+          <article class="dkd-step"><div class="dkd-step-icon pink">↓</div><span>03 — DOWNLOAD</span><h3>Dosyayı indir</h3><p>Uygun APK varsa Android tarayıcısında indirmeyi başlat.</p></article>
+        </div>
+      </section>
+      <div class="dkd-important"><span class="dkd-important-icon">ⓘ</span><p><strong>Bilmen gerekenler:</strong> Google Play, rastgele bir uygulama için herkese açık doğrudan APK adresi vermez. DraBornAPK, Google Play'den APK çektiğini iddia etmez; yalnızca F-Droid'de ayrıca yayımlanmış sürümlere doğrudan indirme sunar. Çoğu oyun ve ticari uygulamada APK bulunamayabilir. *İndirmenin tamamlanması tarayıcıya ve kaynağın erişilebilirliğine bağlıdır.</p></div>
+    </main>
+    <footer class="dkd-footer"><span>© 2026 <strong>DrabornEagle</strong> <span class="dkd-footer-sep">/</span> DraBornAPK</span><span>Bağımsız bir araçtır. Google Play veya F-Droid ile bağlantılı değildir.</span></footer>
+  </div>
+</body>
+</html>
