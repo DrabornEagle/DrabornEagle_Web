@@ -152,6 +152,19 @@ jobs:
       - name: DKD Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: DKD Include latest DraBornAPK catalog in Pages artifact
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin main --quiet
+          if git cat-file -e origin/main:DraBornAPK/assets/dkd-catalog.json 2>/dev/null; then
+            git show origin/main:DraBornAPK/assets/dkd-catalog.json > DraBornAPK/assets/dkd-catalog.json
+          fi
+          node -e 'const catalog=JSON.parse(require("node:fs").readFileSync("DraBornAPK/assets/dkd-catalog.json","utf8")); const count=Object.keys(catalog.packages||{}).length; console.log("DraBornAPK catalog:",count,"packages"); if(count<100) console.warn("DraBornAPK catalog is currently incomplete");'
+          test -s DraBornAPK/index.html
+          test -s DraBornAPK/assets/app.js
+          test -s DraBornAPK/assets/dkd-catalog.json
+
       - name: DKD Upload company pages
         uses: actions/upload-pages-artifact@v3
         with:
