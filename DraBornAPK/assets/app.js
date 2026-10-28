@@ -158,7 +158,7 @@
     dkdById("dkd-submit-label").textContent = "Kaynak aranıyor...";
     dkdDisplayResult(dkdPackage);
     try {
-      const dkdResponse = await fetch("./data/catalog.json", {
+      const dkdResponse = await fetch("./assets/dkd-catalog.json", {
         method: "GET", signal: dkdActiveController.signal, cache: "no-cache", headers: { "Accept": "application/json" }
       });
       if (!dkdResponse.ok) throw new Error("APK kataloğuna erişilemiyor. Daha sonra tekrar dene.");

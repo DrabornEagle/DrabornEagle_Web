@@ -9,7 +9,7 @@ import { fileURLToPath } from "node:url";
 import path from "node:path";
 
 const dkdScriptDirectory = path.dirname(fileURLToPath(import.meta.url));
-const dkdOutputFile = path.resolve(dkdScriptDirectory, "../data/catalog.json");
+const dkdOutputFile = path.resolve(dkdScriptDirectory, "../assets/dkd-catalog.json");
 const dkdPackagePattern = /^[A-Za-z][A-Za-z0-9_]*(?:\.[A-Za-z][A-Za-z0-9_]*)+$/;
 
 export function dkdBuildCatalog(dkdIndex) {
@@ -56,15 +56,23 @@ export function dkdBuildCatalog(dkdIndex) {
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const dkdController = new AbortController();
-  const dkdTimeout = setTimeout(() => dkdController.abort(), 80000);
   try {
-    const dkdResult = await fetch("https://f-droid.org/repo/index-v2.json", {
-      headers: { "Accept": "application/json", "User-Agent": "DraBornAPK-Catalog/0.1" },
-      signal: dkdController.signal
-    });
-    if (!dkdResult.ok) throw new Error("F-Droid index error: " + dkdResult.status);
-    const dkdIndex = await dkdResult.json();
+    const dkdUrls = [
+      "https://ftp.fau.de/fdroid/repo/index-v2.json",
+      "https://mirror.f-droid.org/repo/index-v2.json",
+      "https://f-droid.org/repo/index-v2.json"
+    ];
+    const dkdIndex = await Promise.any(dkdUrls.map(async (dkdUrl) => {
+      const dkdResponse = await fetch(dkdUrl, {
+        headers: { "Accept": "application/json", "User-Agent": "DraBornAPK-Catalog/0.1.1" },
+        signal: AbortSignal.timeout(110000)
+      });
+      if (!dkdResponse.ok) throw new Error("Failed " + dkdUrl + ": " + dkdResponse.status);
+      const dkdDecoded = await dkdResponse.json();
+      if (!dkdDecoded || typeof dkdDecoded.packages !== "object") throw new Error("Invalid upstream catalog at " + dkdUrl);
+      console.log("Loaded F-Droid index from:", dkdUrl);
+      return dkdDecoded;
+    }));
     const dkdCatalog = dkdBuildCatalog(dkdIndex);
     await mkdir(path.dirname(dkdOutputFile), { recursive: true });
     const dkdExisting = await readFile(dkdOutputFile, "utf-8").catch(() => "");
@@ -80,7 +88,5 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   } catch (dkdError) {
     console.error("Catalog update failed; previous catalog retained:", dkdError);
     process.exitCode = 1;
-  } finally {
-    clearTimeout(dkdTimeout);
   }
 }

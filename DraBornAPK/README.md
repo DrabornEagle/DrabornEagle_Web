@@ -7,7 +7,7 @@ DraBornAPK, DrabornEagle_Web içinde bağımsız, mobil uyumlu Google Play URL a
 ## Kullanım
 
 1. Google Play uygulamasının bağlantısını veya \`org.example.app\` gibi paket kimliğini yapıştır.
-2. DraBornAPK paket kimliğini ayıklar ve **aynı alan adındaki** \`/DraBornAPK/data/catalog.json\` kataloğunda arar.
+2. DraBornAPK paket kimliğini ayıklar ve **aynı alan adındaki** \`/DraBornAPK/assets/dkd-catalog.json\` kataloğunda arar.
 3. Katalogda varsa F-Droid'in kendi deposundaki bilinen APK sürümüne bağlantı gösterir. "Otomatik başlat" açıkken tarayıcı indirme isteği gönderir.
 4. Yoksa Google Play sayfasını gösterir. APK indirildiği yanılsamasını vermez.
 5. Son 5 arama, yalnızca cihazdaki localStorage'da tutulur; temizlenebilir.
@@ -18,7 +18,7 @@ DraBornAPK, DrabornEagle_Web içinde bağımsız, mobil uyumlu Google Play URL a
 
 Vercel projesinde var olan API endpoint'lerinin 404 döndürmesi nedeniyle DraBornAPK, mevcut sitenin Vercel projesindeki serverless API'lerine bağlı değildir. Böylece ana sitenin konfigürasyonu değiştirilmez.
 
-\`.github/workflows/dkd-drabornapk-catalog.yml\` GitHub Actions iş akışı her gün ve script/workflow değiştiğinde F-Droid'in \`https://f-droid.org/repo/index-v2.json\` dizinini okur; \`DraBornAPK/scripts/dkd-update-catalog.mjs\` yayınlanmış sabit sürüm APK'larının id, ad, sürüm ve dosya adlarını ayıklar. \`DraBornAPK/data/catalog.json\` içine yazar; değişmişse main'e commit eder. İndirilen binary'leri depolamaz. Manuel workflow_dispatch da kullanılabilir.
+\`.github/workflows/dkd-drabornapk-catalog.yml\` GitHub Actions iş akışı her gün ve script/workflow değiştiğinde F-Droid'in \`https://f-droid.org/repo/index-v2.json\` dizinini okur; \`DraBornAPK/scripts/dkd-update-catalog.mjs\` yayınlanmış sabit sürüm APK'larının id, ad, sürüm ve dosya adlarını ayıklar. \`DraBornAPK/assets/dkd-catalog.json\` içine yazar; değişmişse main'e commit eder. İndirilen binary'leri depolamaz. Manuel workflow_dispatch da kullanılabilir.
 
 Çalışma testi: \`node --test DraBornAPK/scripts/dkd-update-catalog.test.mjs\`
 
@@ -34,7 +34,7 @@ Vercel projesinde var olan API endpoint'lerinin 404 döndürmesi nedeniyle DraBo
 ## Dosyalar
 
 - \`index.html\`, \`assets/app.css\`, \`assets/app.js\`: sayfa, responsive görünüm ve tarayıcı mantığı
-- \`data/catalog.json\`: kullanıcı aramaları için statik APK kataloğu
+- \`assets/dkd-catalog.json\`: kullanıcı aramaları için statik APK kataloğu
 - \`scripts/dkd-update-catalog.mjs\` ve testi: otomatik veri üretimi
 - \`../api/drabornapk-lookup.js\`: ilk API prototipi; aktif istemci tarafından kullanılmaz, Vercel projesi için mevcut statik-route engeli çözülene kadar bağımsızdır
 

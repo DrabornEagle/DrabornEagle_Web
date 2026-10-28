@@ -35,12 +35,12 @@ jobs:
         run: node DraBornAPK/scripts/dkd-update-catalog.mjs
       - name: Publish updated catalog
         run: |
-          if git diff --quiet -- DraBornAPK/data/catalog.json; then
+          if git diff --quiet -- DraBornAPK/assets/dkd-catalog.json; then
             echo "No catalog changes"
             exit 0
           fi
           git config user.name "draborneagle-automation"
           git config user.email "actions@users.noreply.github.com"
-          git add DraBornAPK/data/catalog.json
+          git add DraBornAPK/assets/dkd-catalog.json
           git commit -m "data(DraBornAPK): refresh independent F-Droid APK catalog"
           git push origin HEAD:main
