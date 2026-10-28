@@ -1,7 +1,223 @@
 {
-  "generatedAt": "2026-10-28T17:17:19.293093Z",
+  "generatedAt": "2026-10-28T21:51:22.438011Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e06413e2bfb0d88899",
+      "title": "McDonald’s Türkiye’den Cumhuriyet’in 103. Yılına Renkli Kutlama",
+      "summary": "McDonald’s Türkiye, Cumhuriyet’in 103. yılını Beşiktaş’ta hayata geçirdiği özel grafiti çalışması ve restoranlarında düzenleyeceği etkinliklerle kutlayacak. 29 Ekim coşkusunu sokaklarda yaşatacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/mcdonald-s-turkiye-den-cumhuriyet-in-103-yilina-renkli-kutlama--212153",
+      "publishedAt": "2026-10-28T21:39:49Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212153/1200x675mcdonald-s-turkiye-den-cumhuriyet-in-103-yilina-renkli-kutlama.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "da27cb2db053180e35",
+      "title": "Ads in AI Mode expand to new markets.",
+      "summary": "Google is expanding AI Mode ads to 10 new countries, including Canada and India. See how these relevant sponsored results improve your search experience.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products/ads-commerce/ads-in-ai-mode-global/",
+      "publishedAt": "2026-10-28T21:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ai_mode_global_ads_hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "441e82854a15181ac5",
+      "title": "Google, Gemini 4 Carbon modelini duyurdu: Siber güvenlikte rakiplerine fark atıyor",
+      "summary": "Google, yeni ve en gelişmiş modeli Gemini 4 Carbon'u duyurdu. Artificial Analysis Intelligence Index'te 59 puanla ilk sıraya yerleşen model, kodlama ve siber güvenlik yetenekleriyle öne çıkıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-gemini-4-carbon-modelini-duyurdu--212223",
+      "publishedAt": "2026-10-28T21:10:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212223/1200x675google-gemini-4-carbon-modelini-duyurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1b154ea43af2f865be",
+      "title": "Q3 2026 earnings call: Remarks from our CEO",
+      "summary": "Read Sundar Pichai’s remarks during Alphabet’s Q3 2026 earnings call.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/",
+      "publishedAt": "2026-10-28T21:05:00Z",
+      "category": "Teknoloji",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "019e0164a8cba1a6d2",
+      "title": "Nvidia, RTX 50 serisindeki siyah ekran sorununu çözüyor",
+      "summary": "Nvidia, GeForce 621.12 Hotfix sürücüsünü yayınladı. Yeni güncelleme, RTX 50 serisi ekran kartlarında video oynatırken yaşanan donma ve siyah ekran sorunlarını gideriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-rtx-50-serisindeki-siyah-ekran-sorununu-cozuyor--212193",
+      "publishedAt": "2026-10-28T20:55:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212193/1200x675nvidia-rtx-50-serisindeki-siyah-ekran-sorununu-cozuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "17090b18351a5a42de",
+      "title": "OpenAI, baş rakibi Google’dan yapay zeka çipleri satın alacak",
+      "summary": "OpenAI, yapay zeka modellerini eğitmek ve çalıştırmak için Google'ın TPU çiplerini satın almayı planlıyor. Anlaşma gerçekleşirse iki şirket arasındaki iş birliği donanım alanında da genişleyecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/openai-google-dan-yapay-zeka-cipleri-satin-alacak--212204",
+      "publishedAt": "2026-10-28T20:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212204/1200x675openai-google-dan-yapay-zeka-cipleri-satin-alacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dc4c68b1a09d44c5de",
+      "title": "Güneş enerjisi nükleeri geride bıraktı: Elektrik üretiminde yeni dönem",
+      "summary": "Güneş enerjisi, 2025'te ve 2026’da nükleeri geride bıraktı. Küresel elektrik üretimindeki payını hızla artıran güneş enerjisinin, 2030'a kadar üretimini ikiye katlaması bekleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gunes-enerjisi-nukleeri-geride-birakti-elektrikte-yeni-donem--212212",
+      "publishedAt": "2026-10-28T20:05:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212212/1200x675gunes-enerjisi-nukleeri-geride-birakti-elektrikte-yeni-donem.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4c4e515211a877f0c1",
+      "title": "Sony, yeni 50 MP kamera sensörünü tanıttı: Gece çekimlerinde iddialı",
+      "summary": "Sony, akıllı telefonlar için geliştirdiği 50 MP LYTIA 720 görüntü sensörünü duyurdu. %50 daha az gürültü vadeden sensör, 100 dB dinamik aralık ve 4K 120 FPS video kaydı desteğiyle öne çıkıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sony-yeni-50-mp-kamera-sensorunu-tanitti-iste-ozellikleri--212211",
+      "publishedAt": "2026-10-28T19:40:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212211/1200x675sony-yeni-50-mp-kamera-sensorunu-tanitti-iste-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "bff87bc37a0d45620d",
+      "title": "10 bin dolarlık BYD Seagull, 140 km/sa hızda lastik patlaması testini geçti",
+      "summary": "10 bin dolardan başlayan fiyatıyla dikkat çeken yeni BYD Seagull, 140 km/sa hızda gerçekleştirilen lastik patlaması testini başarıyla tamamladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/byd-seagull-140-km-sa-hizda-lastik-patlamasi-testini-gecti--212208",
+      "publishedAt": "2026-10-28T19:15:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212208/1200x675byd-seagull-140-km-sa-hizda-lastik-patlamasi-testini-gecti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "55691822cc670f9d83",
+      "title": "Adapt your ad strategy to meet the way people search today.",
+      "summary": "Google's Ads Decoded podcast tells you how to make smarter marketing decisions using the latest data on how consumers search.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products/ads-commerce/ads-decoded-podcast-search-data/",
+      "publishedAt": "2026-10-28T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/S2E7_YT_thumbnail.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "19c5d4b2f25558a4a7",
+      "title": "Sony, 30. Yıl Özel PlayStation'ın Tarihini Anlatan Kitabını Tanıttı (Konsol Fiyatına Kitap)",
+      "summary": "Sony, arşiv prototipleri ve tasarımcı notlarını içeren 30. yıl PlayStation tarih kitabını tanıttı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/sony-30-yil-ozel-playstation-tarihini-anlatan-kitabini-tanitti-h228010.html",
+      "publishedAt": "2026-10-28T18:54:47Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/695005/695005-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e8d34a5c150ac6c13b",
+      "title": "Yeni bir AI girişimi, Anthropic'in sistemlerine sadece 12 saatte sızmayı başardı",
+      "summary": "Yapay zekâ dünyasının yükselen yıldızı Anthropic, bu hafta kendisini epey kötü gösteren bir haberle gündemde. Yeni bir AI girişimi, sadece 12 saatte şirketin kritik sistemlerine sızmayı başardı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-bir-ai-girisimi-anthropic-in-sistemlerine-12-saatte-sizdi--212213",
+      "publishedAt": "2026-10-28T18:25:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212213/1200x675yeni-bir-ai-girisimi-anthropic-in-sistemlerine-12-saatte-sizdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f19c75f51df0c201f6",
+      "title": "Apple, Dynamic Island özelliğini yıllar sonra Mac'e getirdi",
+      "summary": "Apple, PROLED XDR ekranlı yeni MacBook Pro ile Dynamic Island özelliğini ilk kez Mac'e getirdi. Dinamik Ada; Spotlight, Canlı Etkinlikler ve Siri AI için ekranın üst kısmında yeni bir alan.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-dynamic-island-ozelligini-yillar-sonra-mac-e-getirdi--212222",
+      "publishedAt": "2026-10-28T18:01:31Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212222/1200x675apple-dynamic-island-ozelligini-yillar-sonra-mac-e-getirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4bf8e91caed38e9b3a",
+      "title": "Dive into new topics with immersive explorations in the Gemini app.",
+      "summary": "Today, we are rolling out immersive explorations in the new Gemini student hub.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/immersive-explorations-student-hub/",
+      "publishedAt": "2026-10-28T18:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/immersiveView_quasars_16x9_01_2.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "6e3ced4163cfd74c83",
+      "title": "Nvidia ve AMD, Meta’ya 4 milyar dolar yatırım yapacak",
+      "summary": "Nvidia ve AMD, yapay zeka altyapısını büyütmek isteyen Meta’ya toplam 4 milyar dolar yatırım yapacak. İş birliği, Vera Rubin, Vera CPU ve Muse projelerini de kapsayacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-ve-amd-meta-ya-4-milyar-dolar-yatirim-yapacak--212190",
+      "publishedAt": "2026-10-28T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212190/1200x675nvidia-ve-amd-meta-ya-4-milyar-dolar-yatirim-yapacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cf8db818d4b912819a",
+      "title": "Işıklı Apple logosuyla dokunmatik ekranlı MacBook Pro tanıtıldı",
+      "summary": "Apple, dokunmatik ekranlı MacBook Pro'yu resmen tanıttı. 14 ve 16 inç ekran boyutlarıyla gelen yeni model, tandem OLED XDR ekrana ve arka kısmında ışıklı Apple logosuna sahip.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dokunmatik-ekranli-macbook-pro-tanitildi-iste-turkiye-fiyati--212220",
+      "publishedAt": "2026-10-28T17:33:24Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212220/1200x675dokunmatik-ekranli-macbook-pro-tanitildi-iste-turkiye-fiyati.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "77ea6a9182ff8dc6f2",
+      "title": "Toyota, yeni benzinli motorlarını diğer markalara satacak",
+      "summary": "Toyota, yeni nesil benzinli motorlarını ve hibrit sistemlerini diğer üreticilere satmaya hazırlanıyor. Şirket, bu yöntemle 2032’ye kadar yıllık 1,5 milyar euro gelir elde etmeyi planlıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/toyota-yeni-benzinli-motorlarini-diger-markalara-satacak--212189",
+      "publishedAt": "2026-10-28T17:28:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212189/1200x675toyota-yeni-benzinli-motorlarini-diger-markalara-satacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b479963f89ee23e049",
+      "title": "Modern Warfare 4 Season 1: Everything you need to know for November 6 launch",
+      "summary": "Get ready for Season 1, with new maps, modes, events and rewards across Multiplayer and DMZ. Explore the unforgiving corridors of X01, wield new weapons and attachments, acquire new Operator Skins, Weapon Blueprints, DMZ Survival Kits, and more. Call of Duty: Modern Warfare 4 Season 1 goes live on November 6 New Multiplayer maps and",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/28/modern-warfare-4-season-1-everything-you-need-to-know-for-november-6-launch/",
+      "publishedAt": "2026-10-28T17:15:17Z",
+      "category": "Oyun",
+      "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "030c4a2d6a0a6725b6",
       "title": "İsrailli şirket Starlink kullanıcılarını reklamlar üzerinden izledi",
@@ -279,18 +495,6 @@
       "editorial": false
     },
     {
-      "id": "b24683b172aa8c2e38",
-      "title": "Fiat'tan sürpriz hamle: Efsane model Punto geri dönüyor",
-      "summary": "Fiat, 2018'de üretimi biten efsane Punto modelini geri döndürmeye hazırlanıyor. Yeni Punto hem içten yanmalı hem de elektrikli seçenekleriyle Renault'nun pazar hakimiyetine meydan okuyacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/fiat-tan-surpriz-hamle-efsane-model-punto-geri-donuyor--212207",
-      "publishedAt": "2026-10-28T13:01:29Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212207/1200x675fiat-tan-surpriz-hamle-efsane-model-punto-geri-donuyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "7f5d14909c056a02d6",
       "title": "Tiggo 7’nin daha maceracı kardeşi tanıtıldı: İşte yeni Chery Tiggo X7",
       "summary": "Chery Tiggo X7, hibrit motorları ve dört tekerlekten çekiş seçeneğiyle geliyor. Yeni SUV, 700 mm sudan geçiş kapasitesi ve altı arazi moduyla aile kullanımını doğa yolculuklarıyla birleştiriyor.",
@@ -299,102 +503,6 @@
       "publishedAt": "2026-10-28T12:58:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212210/1200x675chery-den-yeni-suv-ailesi-ilk-model-tiggo-x7-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ebf18eb73050a03c0c",
-      "title": "Yeni MacBook Pro Dynamic Island ile geliyor: Çentikli ekrana veda!",
-      "summary": "Dokunmatik ekranlı MacBook Pro'nun tanıtılmasına saatler kala dizüstü bilgisayarın bir özeliği daha ortaya çıktı. Yeni MacBook Pro, çentikli ekran yerine Dynamic Island özellikli ekranla gelecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-macbook-pro-dynamic-island-ozellikli-ekranla-geliyor--212209",
-      "publishedAt": "2026-10-28T12:36:35Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212209/1200x675yeni-macbook-pro-dynamic-island-ozellikli-ekranla-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "fb37df409765734a36",
-      "title": "Çinli GWM, Avrupa üretimi için Bulgaristan’ı seçti",
-      "summary": "GWM, Avrupa’da üretim için Bulgaristan’ı seçti. Ora 5’in montajı 2027’nin ilk çeyreğinde başlayacak. Yıllık 50 bin araç kapasiteli tesis, markanın Avrupa’da 300 bin adetlik üretim hedefinin ilk adımı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cinli-gwm-avrupa-uretimi-icin-bulgaristan-i-secti--212205",
-      "publishedAt": "2026-10-28T12:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212205/1200x675cinli-gwm-avrupa-uretimi-icin-bulgaristan-i-secti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "cb8f30def04093c69e",
-      "title": "Bellek bulmak daha da zorlaşabilir: SK Hynix 2030’u işaret etti",
-      "summary": "SK Hynix, yapay zeka belleklerine yönelik talep nedeniyle üretim kapasitesini artırıyor. Şirket, tüm yatırımlara rağmen bellek piyasasındaki arz sıkıntısının 2030’a kadar sürmesini bekliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bellek-bulmak-daha-da-zorlasabilir-sk-hynix-2030-u-isaret-etti--212195",
-      "publishedAt": "2026-10-28T11:57:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212195/1200x675bellek-bulmak-daha-da-zorlasabilir-sk-hynix-2030-u-isaret-etti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e9ac2bfd4579a5e12f",
-      "title": "Huawei'nin yeni telefonu Pura 90 Plus tanıtıldı: İşte özellikleri ve fiyatı",
-      "summary": "Huawei Pura 90 Plus, yeni Kirin 9025 işlemcisi, dört kenarı kavisli 120Hz ekranı ve 5.700 mAh bataryasıyla tanıtıldı. İşte Huawei Pura 90 Plus özellikleri ve fiyatı",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/huawei-nin-yeni-telefonu-pura-90-plus-tanitildi-iste-ozellikleri--212199",
-      "publishedAt": "2026-10-28T11:35:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212199/1200x675huawei-nin-yeni-telefonu-pura-90-plus-tanitildi-iste-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eb7b55ba67c1fd759a",
-      "title": "Dijital T.C. kimlik kartı geliyor: 2027'de test edilecek",
-      "summary": "Türkiye'de kimlik kartları dijitalleşiyor. Ulusal dijital kimlik cüzdanı için ilk adım 2026 yılında atılacak. Sistemin prototipi gelecek yıl test edilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/dijital-t-c-kimlik-karti-geliyor-2027-de-test-edilecek--212203",
-      "publishedAt": "2026-10-28T11:13:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212203/1200x675dijital-t-c-kimlik-karti-geliyor-2027-de-test-edilecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eebc888db7a97569a4",
-      "title": "Çin'den internet hızında rekor: Fiber üzerinden 3,2 petabit",
-      "summary": "Çinli araştırmacılar, tek bir fiber optik kablo üzerinden saniyede 3,2 petabit veri aktararak yeni bir rekora imza attı. Bu hız, veri merkezlerinin geleceğini değiştirebilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cin-den-internet-hizinda-rekor-fiber-uzerinden-3-2-petabit--212191",
-      "publishedAt": "2026-10-28T10:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212191/1200x675cin-den-internet-hizinda-rekor-fiber-uzerinden-3-2-petabit.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "14ac8c9043a098e50a",
-      "title": "Apple, selfie ile yaş doğrulama özelliğini kullanıma sundu",
-      "summary": "Apple, iOS 27.2 ile birlikte kullanıcıların yetişkin olduklarını doğrulamaları için yeni bir yöntem sundu. Bu yöntem, kullanıcıların selfie çekerek yaşlarını kanıtlamalarına olanak tanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-selfie-ile-yas-dogrulama-ozelligini-kullanima-sundu--212188",
-      "publishedAt": "2026-10-28T10:15:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212188/1200x675apple-selfie-ile-yas-dogrulama-ozelligini-kullanima-sundu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8d5360970e24f514ec",
-      "title": "Samsung'a Galaxy S21 ve S22 için oyun performansı cezası",
-      "summary": "Samsung, Galaxy S21 ve S22 serilerinde oyun performansını sınırlayan GOS özelliğini yeterince açıklamadığı gerekçesiyle Güney Kore'de para cezasına çarptırıldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-a-galaxy-s21-ve-s22-icin-oyun-performansi-cezasi--212187",
-      "publishedAt": "2026-10-28T09:52:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212187/1200x675samsung-a-galaxy-s21-ve-s22-icin-oyun-performansi-cezasi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -459,30 +567,6 @@
       "editorial": false
     },
     {
-      "id": "110bd326554625a82b",
-      "title": "Cyberpunk 2 için açılan yeni ilan multiplayer moduna işaret ediyor",
-      "summary": "Cyberpunk 2077'nin devma oyunu için hazırlıkların hız kazansmasıyla birlikte yeni detaylar da ortaya çıkmaya başladı. Gelen son haberlere bakılırsa Cyberpunk 2'de bir multiplayer modu da olacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cyberpunk-2-multiplayer-moduna-sahip-olabilir--212181",
-      "publishedAt": "2026-10-28T09:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212181/1200x675cyberpunk-2-multiplayer-moduna-sahip-olabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1476ca4a9c2a9e4678",
-      "title": "Oyunlarda tersine mühendislik dönemi başlıyor: Battlefield 2'nin oyun motoru açık kaynak oldu",
-      "summary": "Battlefield 2'nin oyun motorunu tersine mühendislikle yeniden oluşturan OpenBF2, kaynak kodlarını GitHub'da yayımlandı. Yapay zekâ alanında yaşanan gelişmeler, benzer projelerin sayısını artırıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/battlefield-2-nin-oyun-motoru-acik-kaynak-oldu--212192",
-      "publishedAt": "2026-10-28T09:28:38Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212192/1200x675battlefield-2-nin-oyun-motoru-acik-kaynak-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "515b223b2c1e51ba0a",
       "title": "İndirim Diye Aldanmayın: Ticaret Bakanlığı Kasım Ayı Denetimlerini Sıkılaştırdı!",
       "summary": "Ticaret Bakanlığı, kasım indirimleri döneminde tüketiciyi yanıltan kampanyaları ve haksız ticari uygulamaları mercek altına alıyor. İhlalin niteliğine göre işletmelere yaklaşık 40 milyon TL'ye varan idari para cezaları uygulanabilecek.",
@@ -503,18 +587,6 @@
       "publishedAt": "2026-10-28T09:19:49Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/694948/694948-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "86240ced507b9d6d47",
-      "title": "MacBook Neo 2 için çıkış tarihi ortaya çıktı: A19 Pro ve 12 GB RAM geliyor",
-      "summary": "Apple'ın uygun fiyatlı dizüstü bilgisayarı MacBook Neo 2'nin 2027'nin ilk yarısında tanıtılması bekleniyor. Yeni model, A19 Pro işlemci ve 12 GB RAM ile gelebilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/macbook-neo-2-icin-cikis-tarihi-ortaya-cikti--212186",
-      "publishedAt": "2026-10-28T09:08:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212186/1200x675macbook-neo-2-icin-cikis-tarihi-ortaya-cikti.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -819,18 +891,6 @@
       "editorial": false
     },
     {
-      "id": "c291fd4450632df031",
-      "title": "vivo X500s'in Ekran Özellikleri Sızdırıldı",
-      "summary": "vivo’nun X500 serisine dahil edeceği yeni amiral gemisi modeli X500s’in ekran özellikleri sızdırıldı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/vivo-x500s-ekran-ozellikleri-sizdirildi-h227947.html",
-      "publishedAt": "2026-10-27T11:39:57Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694840/694840-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "e96da34d3d579e9171",
       "title": "(For Southeast Asia) Crunchyroll Arrives for PS5 and PS4 users in Indonesia, Malaysia and Thailand",
       "summary": "We are excited to share that Crunchyroll, the global and ultimate destination for anime fandom, has arrived for PlayStation 5 and PlayStation 4 users in Indonesia, Malaysia and Thailand. Anime fans can now subscribe to Crunchyroll directly through PlayStation Media Hub on PS5 or PS4. Crunchyroll offers hundreds of anime titles, including Black Clover Season",
@@ -863,18 +923,6 @@
       "publishedAt": "2026-10-26T17:30:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/TWT_RaidScreenshot-1ae1aaa938bcdc0e17c2-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "9b9ad378ff1778bf3d",
-      "title": "New Marvel Cosmic Invasion: The Siege of Castle Doom gameplay details",
-      "summary": "What was Doctor Doom up to during the Annihilation Wave? How would the master of Latveria react to an invasion of this magnitude to his doorstep? This was the first question we’ve asked ourselves while tackling the design of our second DLC for Marvel Cosmic Invasion. We knew players demanded a mode promising a lot",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/26/new-marvel-cosmic-invasion-the-siege-of-castle-doom-gameplay-details/",
-      "publishedAt": "2026-10-26T16:00:09Z",
-      "category": "Oyun",
-      "image": "https://live.staticflickr.com/65535/55598875302_1cf5f7dd64_k.jpg",
       "language": "en",
       "editorial": false
     },
@@ -947,18 +995,6 @@
       "publishedAt": "2026-10-26T14:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IFC_BlogHeader.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4f9fc025383ea6f7ca",
-      "title": "XBOX Game Pass Is Coming to Eligible T-Mobile Customers",
-      "summary": "Today, T-Mobile announced T-Mix, giving customers in the U.S. more choice and flexibility over the benefits included in their wireless plan, including XBOX Game Pass. Beginning in November, eligible T-Mix customers can choose Game Pass Ultimate or Premium, unlocking an instant library of games playable on the devices they already own, including XBOX consoles, Smart",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/26/xbox-game-pass-t-mobile/",
-      "publishedAt": "2026-10-26T13:00:00Z",
-      "category": "Oyun",
-      "image": "",
       "language": "en",
       "editorial": false
     },
@@ -1059,18 +1095,6 @@
       "editorial": false
     },
     {
-      "id": "bc70ac2dbf779ff88a",
-      "title": "Recreating the lost studios of women sculptors with Prune Nourry",
-      "summary": "Google partnered with experts to recreate the workspaces of 19th-century sculptors, bringing their legacies back into focus.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/visionaries-petit-palais-art-basel-paris-prune-nourry/",
-      "publishedAt": "2026-10-21T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Prune_Nourry_Hero.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "4a59615041b968ae61",
       "title": "Cloudflare deploys protections against php2shell vulnerability",
       "summary": "Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure. The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.",
@@ -1083,18 +1107,6 @@
       "editorial": false
     },
     {
-      "id": "cd3cd724749fa46244",
-      "title": "New bidding and budgeting tools can transform your upcoming holiday ad strategy.",
-      "summary": "Get actionable insights on bidding and budgeting tools in the latest episode of Google's \"Ads Decoded\" podcast.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products/ads-commerce/holiday-shopping-bidding-budgeting/",
-      "publishedAt": "2026-10-21T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/S2E6_thumbnail.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "1c5f83daf4c5b5dc2d",
       "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
       "summary": "Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control.",
@@ -1103,30 +1115,6 @@
       "publishedAt": "2026-10-21T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AYSA5Z4MMJ6XYBSMECP05T.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "dfb6e6be45662091ea",
-      "title": "Drive with “The Cat in the Hat” on Waze.",
-      "summary": "Ready to turn your daily commute into a high-octane joyride? Waze is bringing the connoisseur of happy chaos to your passenger seat for the arrival of The Cat in the Hat",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/waze/waze-the-cat-in-the-hat/",
-      "publishedAt": "2026-10-21T11:39:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/CatInTheHat-KeyVisual_Horizonta.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "c7c1db1d24f97b1693",
-      "title": "Southeast Asia’s digital economy to hit $368 billion",
-      "summary": "Widespread AI adoption is propelling Southeast Asia's digital economy to a projected $368 billion in 2026 and $1 trillion by 2035.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/e-conomy-sea-report-2026/",
-      "publishedAt": "2026-10-21T04:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/e-Conomy_SEA_hero.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-19T13:00:02Z",
       "category": "Güvenlik",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Secure-AI-Image-1-10_19.png.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "72477d086944244f5e",
+      "title": "Beyond the patch: Protecting your NetScaler gateway against future vulnerabilities",
+      "summary": "CVE-2026-88771 lets attackers run commands on NetScaler Gateway before anyone signs in. Patching takes time most teams don't have, so the sign-in decision has to move in front of the vulnerable code.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/protect-your-netscaler-gateway/",
+      "publishedAt": "2026-10-19T13:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M537RBT01XNYZ0RR0CP9PS55.png",
       "language": "en",
       "editorial": false
     }
