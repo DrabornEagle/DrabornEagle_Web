@@ -1,6 +1,18 @@
 {
   "rewrites": [
     {
+      "source": "/DraBornQuiz",
+      "destination": "/DraBornQuiz/play.html"
+    },
+    {
+      "source": "/DraBornQuiz/",
+      "destination": "/DraBornQuiz/play.html"
+    },
+    {
+      "source": "/DraBornQuiz/index.html",
+      "destination": "/DraBornQuiz/play.html"
+    },
+    {
       "source": "/DraBornPark/tag/:slug",
       "destination": "/DraBornPark/tag/index.html?token=:slug"
     },
