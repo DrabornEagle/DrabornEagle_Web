@@ -1,7 +1,187 @@
 {
-  "generatedAt": "2026-10-29T15:27:59.199521Z",
+  "generatedAt": "2026-10-29T20:29:26.174027Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "f00cfd003b22feb32e",
+      "title": "BİM marketler DJI drone satacak",
+      "summary": "1 Kasım BİM Aktüel teknoloji ürünleri arasında DJI markasına ait NEO Drone modeli ve AutoWare firmasına ait hava pompa ve akü takviye cihazı yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/1-kasim-bim-aktuel-katalogunda-neler-var--212225",
+      "publishedAt": "2026-10-29T20:10:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212225/1200x6751-kasim-bim-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8653f76c252f8100fc",
+      "title": "Anthropic, Claude Code harcamalarının getirisini ölçecek",
+      "summary": "Anthropic, Claude Code ve diğer yapay zeka araçlarının işletmelere sağladığı değeri ölçmek için yeni raporlama araçları geliştirdi. İşte yeni sistemin detayları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/anthropic-claude-code-harcamalarinin-getirisini-olcecek--212232",
+      "publishedAt": "2026-10-29T19:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212232/1200x675anthropic-claude-code-harcamalarinin-getirisini-olcecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a628ec2cb94e70fd8a",
+      "title": "Samsung, Çin'e özel katlanabilir W27 modelini tanıttı: İşte özellikleri ve fiyatı",
+      "summary": "Samsung, Çin pazarına özel yeni katlanabilir telefonu W27’yi tanıttı. Galaxy Z Fold 8 Ultra'yı temel alan model, altın detaylı tasarımı ve uydu bağlantısı desteğiyle öne çıkıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-cin-e-ozel-katlanabilir-w27-modelini-tanitti--212242",
+      "publishedAt": "2026-10-29T19:34:53Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212242/1200x675samsung-cin-e-ozel-katlanabilir-w27-modelini-tanitti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "19a61aa7be6a604adf",
+      "title": "Phantom Blade Zero daha ilk günden 500 bin eş zamanlı oyuncuya ulaştı",
+      "summary": "Yılın en merakla beklenen oyunlarından olan Phantom Blade Zero'ya dair ilk yorumlar paylaşıldı. Oyunun eleştirmen puanları, yılın oyunu adaylarından biri olabileceğini gösteriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/phantom-blade-zero-daha-ilk-gunden-zirve-yarisina-girdi--212237",
+      "publishedAt": "2026-10-29T19:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212237/1200x675phantom-blade-zero-daha-ilk-gunden-zirve-yarisina-girdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5cdeccff42018b3d9c",
+      "title": "Football Manager 2027 bu hafta ücretsiz oynanabilecek",
+      "summary": "Çok yakında oyunseverlerle buluşacak olan Football Manager 2027, satışa çıkmadan önce kısa süreliğine ücretsiz oluyor. İşte oyunun ücretsiz alıp deneyebileceğiniz tarihler ve platformlar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/football-manager-2027-bu-hafta-ucretsiz-olacak--212236",
+      "publishedAt": "2026-10-29T18:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212236/1200x675football-manager-2027-bu-hafta-ucretsiz-olacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9d52bd44ebafc2a6b1",
+      "title": "Güneş enerjili uçaklar için kritik batarya eşiği belirlendi: 500 Wh/kg",
+      "summary": "Harvard Üniversitesi araştırmacıları, güneş enerjisiyle çalışan uçakların aylarca havada kalabilmesi için bataryalarda 500 Wh/kg enerji yoğunluğunun kritik bir eşik olduğunu belirledi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gunes-enerjili-ucaklar-icin-kritik-batarya-esigi-belirlendi-500--212239",
+      "publishedAt": "2026-10-29T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212239/1200x675gunes-enerjili-ucaklar-icin-kritik-batarya-esigi-belirlendi-500.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7413cfb163e87a27e3",
+      "title": "Huawei Starlight'ın ilk telefonu geniş ekranla gelebilir",
+      "summary": "Huawei'in alt markası Starlight'ın ilk telefonu, 6,39 inç ekranı, Kirin 9 serisi işlemcisi ve 16 GB RAM iddiasıyla ortaya çıktı. İşte yeni katlanırın detayları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huawei-starlight-in-ilk-telefonu-genis-ekranla-gelebilir--212233",
+      "publishedAt": "2026-10-29T17:40:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212233/1200x675huawei-starlight-in-ilk-telefonu-genis-ekranla-gelebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "08a19472becaa38944",
+      "title": "Samsung Galaxy Watch ve Ring, uyku apnesini daha ayrıntılı izleyecek",
+      "summary": "Samsung, Galaxy Watch ve Galaxy Ring için uyku apnesi tespit özelliğini geliştirdi. Yapay zeka destekli yeni sürüm, solunum bozukluklarını üç seviyede değerlendiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/galaxy-watch-ve-ring-uyku-apnesini-daha-ayrintili-izleyecek--212234",
+      "publishedAt": "2026-10-29T17:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212234/1200x675galaxy-watch-ve-ring-uyku-apnesini-daha-ayrintili-izleyecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "228c5fb5e8c321d069",
+      "title": "METRO Redux Next-Gen Update Out Now for XBOX Series X|S",
+      "summary": "The METRO Redux Next-Gen Update is out now on XBOX Series X|S consoles. Right now, you can experience both METRO 2033 & Last Light Redux with an unprecedented degree of immersion, thanks to performance improvements, enhanced visuals, and control upgrades that combine to take full advantage of the latest XBOX hardware. First, the Next-Gen Update",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/29/metro-redux-next-gen-update/",
+      "publishedAt": "2026-10-29T16:30:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/METRO-Redux-2-a61e4f901da7bda08a04-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "d9e57218237adad657",
+      "title": "You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini.",
+      "summary": "Generate, edit, and preview PDFs or Docs directly in Gemini. Use the new full-screen editor to refine your files today. See what's new in Gemini.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/",
+      "publishedAt": "2026-10-29T16:15:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/fileGen2.0-thumbnail-resize.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "18cf9d55515086acb6",
+      "title": "Weave Your Own Fate: Titan Quest II Is Now Available for Pre-Order on XBOX Series X|S",
+      "summary": "High above the clouds, the gods of Olympus watch in silence – for once, even they are powerless against what is coming. The fate of the world now rests in mortal hands. Your hands. But do you have what it takes to face a goddess? The THQ Nordic and Grimlore Games teams are thrilled to",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/10/29/titan-quest-ii-pre-order/",
+      "publishedAt": "2026-10-29T16:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Image-1-61ec6cc9a979333503da-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "60134842d45d40231d",
+      "title": "Gemini Notebook makes hundreds of textbooks available to help students learn even more.",
+      "summary": "Add textbooks from OpenStax and S Chand to Google Gemini Notebook. Generate custom study guides and quizzes now. See the available catalog.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/new-access-textbooks/",
+      "publishedAt": "2026-10-29T16:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Notebook_EI_Textbooks.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "2f7e4426274adf4566",
+      "title": "Celebrate Halloween with these tricks in Google Photos.",
+      "summary": "Use Ask Photos to find past costumes and edit spooky backgrounds in Google Photos. Try these festive tricks to perfect your Halloween snaps today.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/photos/halloween-tricks-2026/",
+      "publishedAt": "2026-10-29T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/GooglePhotosDropsOct_Static.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "2b7824afb5cc2dcc73",
+      "title": "Evrenin neden var olduğunu açıklayabilecek antimadde deneyi",
+      "summary": "Fizikçiler, tek bir antimadde parçacığını aylarca kontrol altında tutmayı başardı. Yeni yöntem, evrende maddenin neden antimaddeden daha fazla olduğunu anlamaya yardımcı olabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/antimadde-aylarca-hapsedildi-evrenin-sirri-cozulebilir--212229",
+      "publishedAt": "2026-10-29T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212229/1200x675antimadde-aylarca-hapsedildi-evrenin-sirri-cozulebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a8bcfa8e198a97d413",
+      "title": "All in One (AIO) Bilgisayar nedir? Nasıl çalışır ve kimler tercih etmeli?",
+      "summary": "All in One PC nedir? Masaüstü bilgisayar ve monitörü tek gövdede buluşturan AIO bilgisayarların avantajlarını, çalışma yapısını ve öne çıkan modelleri inceliyoruz.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/all-in-one-pc-nedir-nasil-calisir-ve-kimler-tercih-etmeli--212164",
+      "publishedAt": "2026-10-29T15:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212164/1200x675all-in-one-pc-nedir-nasil-calisir-ve-kimler-tercih-etmeli.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "8abb14d5ed9d2a9736",
       "title": "Free Play Days – WUCHANG: Fallen Feathers, Dead by Daylight, Darkwood, Spirittea, and EVERSPACE 2",
@@ -204,6 +384,18 @@
       "category": "Mobil",
       "image": "https://www.donanimhaber.com/images/images/haber/212221/1200x675google-play-katlanir-telefonlara-ozel-uygulamalari-one-cikaracak.jpg",
       "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "aeb0cc69547989372e",
+      "title": "How to use Gemini to update your resume",
+      "summary": "Turn raw notes into high-impact, ATS-friendly resume bullets using Gemini. Follow these four steps to polish your professional profile. Get the details.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/update-resume-with-gemini/",
+      "publishedAt": "2026-10-29T11:33:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IO25_GeminiApp.max-600x600.format-webp.webp",
+      "language": "en",
       "editorial": false
     },
     {
@@ -483,42 +675,6 @@
       "editorial": false
     },
     {
-      "id": "dc4c68b1a09d44c5de",
-      "title": "Güneş enerjisi nükleeri geride bıraktı: Elektrik üretiminde yeni dönem",
-      "summary": "Güneş enerjisi, 2025'te ve 2026’da nükleeri geride bıraktı. Küresel elektrik üretimindeki payını hızla artıran güneş enerjisinin, 2030'a kadar üretimini ikiye katlaması bekleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gunes-enerjisi-nukleeri-geride-birakti-elektrikte-yeni-donem--212212",
-      "publishedAt": "2026-10-28T20:05:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212212/1200x675gunes-enerjisi-nukleeri-geride-birakti-elektrikte-yeni-donem.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4c4e515211a877f0c1",
-      "title": "Sony, yeni 50 MP kamera sensörünü tanıttı: Gece çekimlerinde iddialı",
-      "summary": "Sony, akıllı telefonlar için geliştirdiği 50 MP LYTIA 720 görüntü sensörünü duyurdu. %50 daha az gürültü vadeden sensör, 100 dB dinamik aralık ve 4K 120 FPS video kaydı desteğiyle öne çıkıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/sony-yeni-50-mp-kamera-sensorunu-tanitti-iste-ozellikleri--212211",
-      "publishedAt": "2026-10-28T19:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212211/1200x675sony-yeni-50-mp-kamera-sensorunu-tanitti-iste-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "bff87bc37a0d45620d",
-      "title": "10 bin dolarlık BYD Seagull, 140 km/sa hızda lastik patlaması testini geçti",
-      "summary": "10 bin dolardan başlayan fiyatıyla dikkat çeken yeni BYD Seagull, 140 km/sa hızda gerçekleştirilen lastik patlaması testini başarıyla tamamladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/byd-seagull-140-km-sa-hizda-lastik-patlamasi-testini-gecti--212208",
-      "publishedAt": "2026-10-28T19:15:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212208/1200x675byd-seagull-140-km-sa-hizda-lastik-patlamasi-testini-gecti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "55691822cc670f9d83",
       "title": "Adapt your ad strategy to meet the way people search today.",
       "summary": "Google's Ads Decoded podcast tells you how to make smarter marketing decisions using the latest data on how consumers search.",
@@ -543,30 +699,6 @@
       "editorial": false
     },
     {
-      "id": "e8d34a5c150ac6c13b",
-      "title": "Yeni bir AI girişimi, Anthropic'in sistemlerine sadece 12 saatte sızmayı başardı",
-      "summary": "Yapay zekâ dünyasının yükselen yıldızı Anthropic, bu hafta kendisini epey kötü gösteren bir haberle gündemde. Yeni bir AI girişimi, sadece 12 saatte şirketin kritik sistemlerine sızmayı başardı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-bir-ai-girisimi-anthropic-in-sistemlerine-12-saatte-sizdi--212213",
-      "publishedAt": "2026-10-28T18:25:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212213/1200x675yeni-bir-ai-girisimi-anthropic-in-sistemlerine-12-saatte-sizdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f19c75f51df0c201f6",
-      "title": "Apple, Dynamic Island özelliğini yıllar sonra Mac'e getirdi",
-      "summary": "Apple, PROLED XDR ekranlı yeni MacBook Pro ile Dynamic Island özelliğini ilk kez Mac'e getirdi. Dinamik Ada; Spotlight, Canlı Etkinlikler ve Siri AI için ekranın üst kısmında yeni bir alan.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-dynamic-island-ozelligini-yillar-sonra-mac-e-getirdi--212222",
-      "publishedAt": "2026-10-28T18:01:31Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212222/1200x675apple-dynamic-island-ozelligini-yillar-sonra-mac-e-getirdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4bf8e91caed38e9b3a",
       "title": "Dive into new topics with immersive explorations in the Gemini app.",
       "summary": "Today, we are rolling out immersive explorations in the new Gemini student hub.",
@@ -579,42 +711,6 @@
       "editorial": false
     },
     {
-      "id": "6e3ced4163cfd74c83",
-      "title": "Nvidia ve AMD, Meta’ya 4 milyar dolar yatırım yapacak",
-      "summary": "Nvidia ve AMD, yapay zeka altyapısını büyütmek isteyen Meta’ya toplam 4 milyar dolar yatırım yapacak. İş birliği, Vera Rubin, Vera CPU ve Muse projelerini de kapsayacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-ve-amd-meta-ya-4-milyar-dolar-yatirim-yapacak--212190",
-      "publishedAt": "2026-10-28T18:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212190/1200x675nvidia-ve-amd-meta-ya-4-milyar-dolar-yatirim-yapacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "cf8db818d4b912819a",
-      "title": "Işıklı Apple logosuyla dokunmatik ekranlı MacBook Pro tanıtıldı",
-      "summary": "Apple, dokunmatik ekranlı MacBook Pro'yu resmen tanıttı. 14 ve 16 inç ekran boyutlarıyla gelen yeni model, tandem OLED XDR ekrana ve arka kısmında ışıklı Apple logosuna sahip.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/dokunmatik-ekranli-macbook-pro-tanitildi-iste-turkiye-fiyati--212220",
-      "publishedAt": "2026-10-28T17:33:24Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212220/1200x675dokunmatik-ekranli-macbook-pro-tanitildi-iste-turkiye-fiyati.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "77ea6a9182ff8dc6f2",
-      "title": "Toyota, yeni benzinli motorlarını diğer markalara satacak",
-      "summary": "Toyota, yeni nesil benzinli motorlarını ve hibrit sistemlerini diğer üreticilere satmaya hazırlanıyor. Şirket, bu yöntemle 2032’ye kadar yıllık 1,5 milyar euro gelir elde etmeyi planlıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/toyota-yeni-benzinli-motorlarini-diger-markalara-satacak--212189",
-      "publishedAt": "2026-10-28T17:28:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212189/1200x675toyota-yeni-benzinli-motorlarini-diger-markalara-satacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "b479963f89ee23e049",
       "title": "Modern Warfare 4 Season 1: Everything you need to know for November 6 launch",
       "summary": "Get ready for Season 1, with new maps, modes, events and rewards across Multiplayer and DMZ. Explore the unforgiving corridors of X01, wield new weapons and attachments, acquire new Operator Skins, Weapon Blueprints, DMZ Survival Kits, and more. Call of Duty: Modern Warfare 4 Season 1 goes live on November 6 New Multiplayer maps and",
@@ -624,18 +720,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "030c4a2d6a0a6725b6",
-      "title": "İsrailli şirket Starlink kullanıcılarını reklamlar üzerinden izledi",
-      "summary": "İsrailli reklam şirketi Discover-Tech, Starlink kullanıcılarını hedef alan faaliyetleriyle gündemde. Araştırmacılar, şirketin reklam sistemini gözetleme amacıyla kullandığını bildirdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/israilli-sirket-starlink-kullanicilarini-reklamlar-uzerinden-izle--212198",
-      "publishedAt": "2026-10-28T17:06:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212198/1200x675israilli-sirket-starlink-kullanicilarini-reklamlar-uzerinden-izle.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -999,18 +1083,6 @@
       "editorial": false
     },
     {
-      "id": "b1d7eb2dedce5839f5",
-      "title": "Our newest AI Quest: Mapping the human brain",
-      "summary": "Learn AI literacy via Google’s latest AI Quests lesson on neuroscience, “Polar Peaks.”",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/ai-quests-polar-peaks/",
-      "publishedAt": "2026-10-26T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/social_sharing_updated.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "62377f17395c9d4ef1",
       "title": "Introducing a Voluntary Exit Offer",
       "summary": "Amy Coleman, Executive Vice President and Chief People Officer, shared the below communication with Microsoft employees today. Today, we’re introducing a new Voluntary Exit Offer (VEO) to eligible employees within participating organizations. This offer gives eligible employees who may be considering a future outside the company a new choice to make that transition now with...",
@@ -1019,42 +1091,6 @@
       "publishedAt": "2026-10-26T15:33:56Z",
       "category": "Teknoloji",
       "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f0acb11d7bdafd3b1c",
-      "title": "Powering sub-Saharan Africa beyond the grid",
-      "summary": "Google spent the past three years collaborating with Ignite Energy Access through our Startups for Sustainable Development program.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/sustainability/sub-saharan-africa-ignite/",
-      "publishedAt": "2026-10-26T15:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ignite_hero.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "594be5bd31019da8d9",
-      "title": "We’re helping farmers around the world connect to essential services online.",
-      "summary": "Google.org is investing $2.5M to help 1 million farmers access AI-powered agricultural services via the World Bank's ONA. See how it works.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/google-org/digital-public-infrastructure-farmers/",
-      "publishedAt": "2026-10-26T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IFC_BlogHeader.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "84c8b528621607acc6",
-      "title": "How Google Beam connects military families globally",
-      "summary": "Google and the USO are bringing Google Beam to 20 locations, connecting deployed service members and their families.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/research/google-beam-uso-docuseries-service-members/",
-      "publishedAt": "2026-10-26T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_Beam_x_USO_Rodriguez.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1163,42 +1199,6 @@
       "publishedAt": "2026-10-20T08:20:02Z",
       "category": "Teknoloji",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Digital-Sovereignty-Image-2.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "68e2ee5d21f7dc1bf4",
-      "title": "Cutting our inference bill by 68% by being obsessive about optimization",
-      "summary": "When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/obsessive-inference-optimization/",
-      "publishedAt": "2026-10-19T19:12:53Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M58N5J1Y9HY8N3R115KEY6NE.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "40634a33b7feb1d3da",
-      "title": "Introducing Clairic, a new System One class of extraction models",
-      "summary": "Clairic is a new model from Cloudflare that is a System One extraction modeI, capable of extracting, computing, estimating, and forecasting data from unstructured inputs.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/clairic-extraction-model/",
-      "publishedAt": "2026-10-19T17:48:26Z",
-      "category": "Yapay Zeka",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AKCGDJHDMM9AVJKV73MJGX.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "3917e17d2e227fd7bd",
-      "title": "Securing the agentic insider",
-      "summary": "In the last few months, concerns have arisen about AI safety as a growing number of incidents were publicly disclosed. These incidents exposed how powerful models have become and how they represent a significant threat if not handled well. And with the global race on innovation, the challenge will compound as models become even more...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
-      "publishedAt": "2026-10-19T13:00:02Z",
-      "category": "Güvenlik",
-      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Secure-AI-Image-1-10_19.png.jpg",
       "language": "en",
       "editorial": false
     }
