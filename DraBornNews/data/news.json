@@ -1,17 +1,125 @@
 {
-  "generatedAt": "2026-10-28T21:51:22.438011Z",
+  "generatedAt": "2026-10-29T08:17:22.668456Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e2aa79067533c1e8b2",
+      "title": "Google Chrome'a Gmail Özelliği Geldi: Formlar Otomatik Dolacak",
+      "summary": "Google Chrome, Gmail'deki sipariş, kargo ve uçuş bilgilerini otomatik doldurma önerilerinde kullanmaya başladı. Yeni Gemini destekli özelliğin nasıl çalıştığını ve kimlere sunulduğunu öğrenin.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/chrome-yeni-ozellik-gmail-bilgiler-formlara-aktarilacak-h228023.html",
+      "publishedAt": "2026-10-29T08:10:56Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695051/695051-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "19614db50d6b9a9108",
+      "title": "MINI Yuvarlak Ekranlardan Vazgeçmiyor: Tasarım Devam Edecek",
+      "summary": "MINI, yeni modellerinde yuvarlak merkezi ekran tasarımını koruyacağını açıkladı. Fiziksel düğmelerin eksikliği ve ekranın kullanım sorunları hakkındaki detaylar haberimizde.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/mini-yuvarlak-ekran-aciklama-h228022.html",
+      "publishedAt": "2026-10-29T07:50:15Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695048/695048-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "e06413e2bfb0d88899",
       "title": "McDonald’s Türkiye’den Cumhuriyet’in 103. Yılına Renkli Kutlama",
       "summary": "McDonald’s Türkiye, Cumhuriyet’in 103. yılını Beşiktaş’ta hayata geçirdiği özel grafiti çalışması ve restoranlarında düzenleyeceği etkinliklerle kutlayacak. 29 Ekim coşkusunu sokaklarda yaşatacak.",
       "source": "DonanımHaber",
       "sourceUrl": "https://www.donanimhaber.com/mcdonald-s-turkiye-den-cumhuriyet-in-103-yilina-renkli-kutlama--212153",
-      "publishedAt": "2026-10-28T21:39:49Z",
+      "publishedAt": "2026-10-29T07:35:06Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212153/1200x675mcdonald-s-turkiye-den-cumhuriyet-in-103-yilina-renkli-kutlama.jpg",
       "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c4bec76539605855bf",
+      "title": "Premiere Pro'da 4K video kurgu için laptop önerileri",
+      "summary": "Premiere Pro için laptop arayanlar buraya! Güçlü donanım ve yüksek bellek kapasiteleriyle öne çıkan 4K video kurgu için laptop önerilerini listeledik: İşte Premiere Pro için en iyi laptop modelleri:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/premiere-pro-da-4k-video-kurgu-icin-laptop-onerileri--212156",
+      "publishedAt": "2026-10-29T07:23:11Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212156/1200x675premiere-pro-da-4k-video-kurgu-icin-laptop-onerileri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "21659560e66da8b4ba",
+      "title": "Apple CEO’su Açıkladı: MacBook Pro’ya Dokunmatik Ekran Neden Şimdi Geldi?",
+      "summary": "Apple CEO’su John Ternus, MacBook Pro modellerine dokunmatik ekranın neden yıllar sonra eklendiğini açıkladı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/apple-macbook-pro-dokunmatik-ekran-eklemek-icin-neden-bekledi-h228019.html",
+      "publishedAt": "2026-10-29T07:16:16Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695038/695038-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "43c1736f83c7b31a53",
+      "title": "İnternet Hızında Yeni Rekor",
+      "summary": "Çinli araştırmacılar, tek bir fiber optik kablo üzerinden saniyede 3,2 petabit veri aktararak yeni bir rekora imza attı. İşte rekorun teknik ayrıntıları, yapay zeka için önemi ve ev internetine olası etkileri.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/internet-hizinda-yeni-dunya-rekoru-h228016.html",
+      "publishedAt": "2026-10-29T07:07:32Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695035/695035-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ffabbf846e655a8091",
+      "title": "E-Spor Tutkunlarına Kesintisiz Performans Sağlayacak Oyun Bilgisayarı Tavsiyeleri",
+      "summary": "Casper Excalibur G920 ve G915 ile 300 Hz'e varan ekranlar, RTX 50 serisi ekran kartları ve güçlü soğutma bir arada. Hangi oyuncuya hangi model uygun, tek yazıda.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/e-spor-tutkunlarina-kesintisiz-performans-saglayacak-oyun-bilgisayari-tavsiyeleri-h227836.html",
+      "publishedAt": "2026-10-29T07:00:03Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/690470/690470-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "db1777bc52884b113d",
+      "title": "Partnering with Singapore to bring frontier AI to public health",
+      "summary": "Google announced a new research hub and initiatives to support clinicians, advance research, and help Singaporeans live healthier lives.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/health/google-for-health-summit-singapore/",
+      "publishedAt": "2026-10-29T03:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog-_Hero_Photo.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "00be4d6da5731c6c00",
+      "title": "(For Southeast Asia) First look inside the Prism Collection, with three new transparent designs for PS5 accessories",
+      "summary": "Get ready to see your PS5 console and DualSense controller in a whole new way. Today, we are pleased to introduce the Prism Collection, featuring three striking transparent designs for DualSense wireless controllers and PS5 console covers: Flare Orange, Emerald Green, and Graphite Gray. The new collection was inspired by our design teams’ interest to",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/28/20261029-ps5/",
+      "publishedAt": "2026-10-29T02:03:29Z",
+      "category": "Oyun",
+      "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "3e33574ad87d5b1b8b",
+      "title": "Phantom Blade Zero: How boss weapons transform combat and exploration",
+      "summary": "Phantom Blade Zero blends influences from a variety of sources to create intense, fast-paced combat and a supernaturally infused Kungfupunk world. It draws on the tough, powerful bosses of Soulslikes, the quick, combo-focused combat of hack-and-slash games, the fascinating stories and characters of RPGs, and the unlockable exploration of search action games. All those ideas",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/10/28/phantom-blade-zero-how-boss-weapons-transform-combat-and-exploration/",
+      "publishedAt": "2026-10-29T02:00:00Z",
+      "category": "Oyun",
+      "image": "",
+      "language": "en",
       "editorial": false
     },
     {
@@ -495,18 +603,6 @@
       "editorial": false
     },
     {
-      "id": "7f5d14909c056a02d6",
-      "title": "Tiggo 7’nin daha maceracı kardeşi tanıtıldı: İşte yeni Chery Tiggo X7",
-      "summary": "Chery Tiggo X7, hibrit motorları ve dört tekerlekten çekiş seçeneğiyle geliyor. Yeni SUV, 700 mm sudan geçiş kapasitesi ve altı arazi moduyla aile kullanımını doğa yolculuklarıyla birleştiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/chery-den-yeni-suv-ailesi-ilk-model-tiggo-x7-oldu--212210",
-      "publishedAt": "2026-10-28T12:58:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212210/1200x675chery-den-yeni-suv-ailesi-ilk-model-tiggo-x7-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "181d3f4051a1a7863f",
       "title": "Mobil Fotoğrafçılıkta Yeni Dönem: vivo X500 Pro Max Tanıtıldı!",
       "summary": "vivo X500 Pro Max, 200 MP ZEISS telefoto kamerası, 400 mm lens desteği ve Türkiye'ye özel avantajlı lansman fırsatlarıyla tanıtıldı.",
@@ -699,54 +795,6 @@
       "editorial": false
     },
     {
-      "id": "7de801251e1e849f3e",
-      "title": "Apple, Mac Modellerine Türkiye'de Zam Yaptı: İşte Yeni Fiyatlar",
-      "summary": "Apple, iPad modellerinden sonra Mac modellerine de Türkiye'de zam yaptı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/apple-mac-zam-geldi-yeni-fiyatlar-h227968.html",
-      "publishedAt": "2026-10-28T04:20:40Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694906/694906-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "86308302fa5b047eaa",
-      "title": "GTA 6'nın İndirme Boyutu Belli Oldu!",
-      "summary": "GTA 6'nın çok merak edilen boyutu belli oldu. Kaç GB'lık depoalama alanı gerekecek?",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/gta-6-nin-indirme-boyutu-h227965.html",
-      "publishedAt": "2026-10-28T03:35:46Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694897/694897-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b4b25a6357f7474d5b",
-      "title": "Yeni M6 iMac Tanıtıldı: İşte Özellikleri ve Türkiye Fiyatı",
-      "summary": "Apple, sevilen masaüstü modeli iMac'in M6 işlemcili yeni neslini tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/yeni-m6-imac-ozellikleri-fiyati-h227959.html",
-      "publishedAt": "2026-10-28T03:26:45Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694891/694891-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "835b94dde47b6da09f",
-      "title": "M6 İşlemcili MacBook Pro Tanıtıldı: İşte Türkiye Fiyatı",
-      "summary": "Apple, M6 işlemciyle donattığı yeni 14 inç MacBook Pro modelini tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/m6-macbook-pro-ozellikleri-fiyati-h227956.html",
-      "publishedAt": "2026-10-28T03:12:20Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694886/694886-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "0de3d20ae0833dde9b",
       "title": "(For Southeast Asia) PlayStation 11.11 Power Deals returns from 30 October to 12 November 2026",
       "summary": "PlayStation 11.11 Power Deals returns to Singapore, Malaysia, Thailand, Indonesia and Vietnam from 30th October to 12th November 2026, with discounts on PS5 peripherals and disc versions of PS5 games from PlayStation Studios. Highlights of this year’s 11.11 Power Deals include: The 2026 PlayStation 11.11 Power Deals promotion will be available at participating retailers (https://www.playstation.com/local/retailers/)",
@@ -831,18 +879,6 @@
       "editorial": false
     },
     {
-      "id": "1a58cfb1046025b486",
-      "title": "The sound of Saros: Building an audio identity for Carcosa",
-      "summary": "When we started working on Saros, we knew we had an interesting challenge ahead of us. We had established a very distinctive audio identity with Returnal, and Housemarque gave us a clear direction from the beginning: “Refinement, not Reinvention.” That became a useful principle throughout development. We carried forward our gameplay-first approach, our emphasis on",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/27/the-sound-of-saros-building-an-audio-identity-for-carcosa/",
-      "publishedAt": "2026-10-27T13:01:26Z",
-      "category": "Oyun",
-      "image": "https://live.staticflickr.com/65535/55604767642_326f9e682b_h.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "958f93db13edac304e",
       "title": "Fitbit Edge: Premium design for an active life",
       "summary": "With a reimagined screen, refined mechanics, and elevated style, Fitbit Edge looks as good as it performs, year after year.",
@@ -875,30 +911,6 @@
       "publishedAt": "2026-10-27T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KW453HMZRQX1BZKZQMN21EG8.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "236c8d8ba3834da3ff",
-      "title": "Sony, PS5’te Güvenlik Açığı Keşfeden Kişiye 50 Bin Dolar Ödül Verdi!",
-      "summary": "Bir hacker, PS5’te güvenlik açığı keşfetti. Sony, bu açık nedeniyle ona 50 bin dolar ödül verdi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/sony-ps5-guvenlik-acigi-50-bin-dolar-odul-h227939.html",
-      "publishedAt": "2026-10-27T11:40:48Z",
-      "category": "Güvenlik",
-      "image": "https://imgrosetta.webtekno.com/file/694816/694816-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e96da34d3d579e9171",
-      "title": "(For Southeast Asia) Crunchyroll Arrives for PS5 and PS4 users in Indonesia, Malaysia and Thailand",
-      "summary": "We are excited to share that Crunchyroll, the global and ultimate destination for anime fandom, has arrived for PlayStation 5 and PlayStation 4 users in Indonesia, Malaysia and Thailand. Anime fans can now subscribe to Crunchyroll directly through PlayStation Media Hub on PS5 or PS4. Crunchyroll offers hundreds of anime titles, including Black Clover Season",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/10/26/20261027-roll/",
-      "publishedAt": "2026-10-27T02:01:28Z",
-      "category": "Oyun",
-      "image": "",
       "language": "en",
       "editorial": false
     },
@@ -1067,18 +1079,6 @@
       "publishedAt": "2026-10-22T13:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f32712b46e4edc8d4c",
-      "title": "We are working with Voltus to build a 1-gigawatt virtual power plant.",
-      "summary": "Google and Voltus are building a 1-gigawatt virtual power plant to boost grid reliability for 67 million people. See how this expansion works.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/virtual-power-plant-1-gigawatt/",
-      "publishedAt": "2026-10-22T11:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Google_x_Voltus_Final_Video_Thu.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
