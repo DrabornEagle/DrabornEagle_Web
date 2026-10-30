@@ -1,7 +1,187 @@
 {
-  "generatedAt": "2026-10-30T06:18:16.437424Z",
+  "generatedAt": "2026-10-30T13:24:03.886352Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "7219a0f9e4f10be073",
+      "title": "Binance’i vuran en büyük kripto para hırsızlığının altından Kuzey Kore çıktı",
+      "summary": "TRM Labs, Binance'e yönelik 6,36 milyar dolarlık saldırının arkasında Kuzey Kore bağlantılı TraderTraitor grubunun bulunduğunu açıkladı. Saldırının teknik ayrıntıları da ortaya çıktı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/en-buyuk-kripto-para-hirsizliginin-altindan-kuzey-kore-cikti--212270",
+      "publishedAt": "2026-10-30T13:04:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212270/1200x675en-buyuk-kripto-para-hirsizliginin-altindan-kuzey-kore-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d5e4358c8fff94a22d",
+      "title": "Google Gemini artık PDF ve belge oluşturup düzenleyebiliyor",
+      "summary": "Google, Gemini'a sohbet üzerinden PDF, belge, tablo ve sunum oluşturma ve düzenleme desteği ekledi. Yeni özellik sayesinde kullanıcılar dosyalarını uygulamadan ayrılmadan düzenleyebilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-gemini-artik-pdf-ve-belge-olusturup-duzenleyebiliyor--212275",
+      "publishedAt": "2026-10-30T12:42:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212275/1200x675google-gemini-artik-pdf-ve-belge-olusturup-duzenleyebiliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "10074fb827f637a9a1",
+      "title": "Xbox'ta 5 oyun ücretsiz: WUCHANG: Fallen Feathers ve daha fazlası",
+      "summary": "Xbox Game Pass kullanıcıları için yeni Ücretsiz Oyun Günleri başladı. WUCHANG: Fallen Feathers dahil 5 oyun kısa süreliğine ücretsiz oynanabiliyor. İşte ücretsizler...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/xbox-ta-5-oyun-ucretsiz-wuchang-fallen-feathers-ve-daha-fazlasi--212267",
+      "publishedAt": "2026-10-30T12:00:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212267/1200x675xbox-ta-5-oyun-ucretsiz-wuchang-fallen-feathers-ve-daha-fazlasi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5a54f1e7e33fa2fbf0",
+      "title": "AMD ekran kartlarına bir zam daha gelebilir: DRAM fiyatları artıyor",
+      "summary": "AMD'nin ekran kartı üreticilerine yönelik GPU ve GDDR6 bellek fiyatlarını kasım ayında yeniden artırabileceği ortaya çıktı. Gelişme, Radeon RX 9000 serisi modelleri de etkileyebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/oyuncular-dikkat-amd-ekran-kartlarina-bir-zam-daha-gelebilir--212273",
+      "publishedAt": "2026-10-30T11:42:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212273/1200x675oyuncular-dikkat-amd-ekran-kartlarina-bir-zam-daha-gelebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0da52fdc1ebca0c3c3",
+      "title": "Yeni iPad mini'nin performansı belli oldu: İşte Geekbench sonuçları",
+      "summary": "Apple'ın OLED ekranlı ilk mini tablet modeli, iPad mini 8, tanıtımından birkaç gün sonra performans testi (benchmarking) platformunda görüldü. İşte Geekbench sonuçları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-ipad-mini-performans-testi-sonuclar-sasirtici--212268",
+      "publishedAt": "2026-10-30T11:21:23Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212268/1200x675yeni-ipad-mini-performans-testi-sonuclar-sasirtici.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6257ec11eae24ab1fe",
+      "title": "DirectX'e dev güncelleme: Işın izleme performansı 66 kat arttı!",
+      "summary": "Microsoft, DirectX Raytracing için 2018'den bu yana en büyük güncellemeyi duyurdu. Yeni teknoloji, testlerde ışın izleme performansını 66 kat artırırken bellek kullanımını yaklaşık yüzde 90 azalttı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/directx-e-dev-guncelleme-isin-izleme-performansi-66-kat-artti--212250",
+      "publishedAt": "2026-10-30T10:47:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212250/1200x675directx-e-dev-guncelleme-isin-izleme-performansi-66-kat-artti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8fe87973ce7889408e",
+      "title": "Binance vurgununda fatura 6,3 milyar dolar oldu: Tarihin en büyüğü",
+      "summary": "Dünyanın en büyük kripto para borsası Binance'i hedef alan ve 6,3 milyar dolarlık dijital varlığın çalındığı siber saldırı, kripto sektöründe güvenlik tartışmalarını yeniden gündeme taşıdı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/binance-vurgununda-fatura-6-3-milyar-dolar-oldu--212261",
+      "publishedAt": "2026-10-30T10:25:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212261/1200x675binance-vurgununda-fatura-6-3-milyar-dolar-oldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "46ac1387b59e738639",
+      "title": "n11'de Erken Kasım Fırsatları başladı! İşte öne çıkan indirimler",
+      "summary": "n11'de Erken Kasım Fırsatları şimdiden başladı. Telefon, bilgisayar, televizyon, giyim, küçük ev aletleri ve pek çok üründe indirimli fiyatlar göze çarpıyor. İşte öne çıkan indirimler...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/n11-de-erken-kasim-firsatlari-basladi-iste-one-cikan-indirimler--212266",
+      "publishedAt": "2026-10-30T10:05:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212266/1200x675n11-de-erken-kasim-firsatlari-basladi-iste-one-cikan-indirimler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c607b323eb17820f13",
+      "title": "Saldırı sonrası Binance TR'den açıklama: Kullanıcı varlıkları güvende mi?",
+      "summary": "Binance'i etkileyen ve milyarlarca dolarlık dijital varlığın konu olduğu siber saldırının ardından Binance TR'den açıklama geldi. Şirket, kullanıcı varlıklarının güvende olduğunu duyurdu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/saldiri-sonrasi-binance-tr-den-aciklama-varliklar-guvende-mi--212263",
+      "publishedAt": "2026-10-30T09:51:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212263/1200x675saldiri-sonrasi-binance-tr-den-aciklama-varliklar-guvende-mi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6a0049c953fde5a11e",
+      "title": "iPhone Air 2 özellikleri ortaya çıktı: İlk modeli alanlar pişman olacak!",
+      "summary": "Apple'ın ince telefon modeli Phone Air 2'nin üretim sürecinde önemli bir aşamaya girdiği bildiriliyor. Cihaz, mevcut Air modeline kıyasla önemli yükseltmeler sunacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iphone-air-2-ozellikleri-ortaya-cikti-2027-de-iddiali-geliyor--212253",
+      "publishedAt": "2026-10-30T09:29:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212253/1200x675iphone-air-2-ozellikleri-ortaya-cikti-2027-de-iddiali-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "10e363ef0259902b82",
+      "title": "Windows 11'e dev yeni güncelleme geldi: USB gereksinimi kalkıyor!",
+      "summary": "Windows 11 için yayımlanan yeni güncelleme, sağ tık menüsünü yenilerken USB bellek olmadan sistem kurulumuna da imkan tanıyor. İşte KB5127936 güncellemesinin yenilikleri...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/windows-11-e-dev-yeni-guncelleme-geldi-iste-yenilikler--212257",
+      "publishedAt": "2026-10-30T09:07:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212257/1200x675windows-11-e-dev-yeni-guncelleme-geldi-iste-yenilikler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c6aa2b8a8e05ab7712",
+      "title": "Netflix, PUBG'yi diziye dönüştürüyor; Emmy ödüllü oyuncu hazırlayacak",
+      "summary": "Tüm zamanların en başarılı oyunlarından birine dönüşen PUBG, Netflix tarafından diziye uyarlanıyor. Üstelik projenin başında Emmy ödüllü bir yönetmen ve oyuncu olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/netflix-pubg-dizisi-yapiyor--212251",
+      "publishedAt": "2026-10-30T08:45:52Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212251/1200x675netflix-pubg-dizisi-yapiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "edc0e5a65afb4993fb",
+      "title": "Dark Souls ve Elden Ring'in efsanevi stüdyosu yeni oyununu erteledi",
+      "summary": "Dark Souls, Bloodborne, Elden Ring gibi unutulmaz oyunların arkasındaki stüdyo olan From Software, normalde bu yıl çıkması beklenen yeni RPG oyunu The Duskbloods'ı erteledi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/from-software-the-duskbloods-in-cikisini-erteledi--212241",
+      "publishedAt": "2026-10-30T08:00:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212241/1200x675from-software-the-duskbloods-in-cikisini-erteledi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5bc3b79229c4f06719",
+      "title": "Volkswagen için Türkiye’de üretim yeniden gündemde: Niyet mektubu imzalandı",
+      "summary": "Doğuş Otomotiv ile Volkswagen Grup şirketleri, Volkswagen binek otomobillerin Türkiye’de üretim seçeneklerini değerlendirmek üzere niyet mektubu imzaladı. Peki bu adım ne anlama geliyor?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/volkswagen-icin-turkiye-de-uretim-yeniden-gundemde--212252",
+      "publishedAt": "2026-10-30T07:43:11Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212252/1200x675volkswagen-icin-turkiye-de-uretim-yeniden-gundemde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "023f8d41b601b1efeb",
+      "title": "Dünya genelinde ekran kartı fiyatları uçuşa geçti: Türkiye’de tablo çok daha kötü",
+      "summary": "Ekran kartı fiyatları üç ayda yüzde 35 artarak tarihi seviyelere yaklaştı. RTX 5080 ve RTX 5090 başta olmak üzere Nvidia, AMD ve Intel modellerinde zamların sürdüğü bildirildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dunya-genelinde-ekran-karti-fiyatlari-ucusa-gecti-iste-fiyatlar--212249",
+      "publishedAt": "2026-10-30T07:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212249/1200x675dunya-genelinde-ekran-karti-fiyatlari-ucusa-gecti-iste-fiyatlar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "e0728cf0900aeaa724",
       "title": "Samsung Galaxy S27'nin şarj hızı yine hayal kırıklığı yaratacak",
@@ -87,18 +267,6 @@
       "editorial": false
     },
     {
-      "id": "a628ec2cb94e70fd8a",
-      "title": "Samsung, Çin'e özel katlanabilir W27 modelini tanıttı: İşte özellikleri ve fiyatı",
-      "summary": "Samsung, Çin pazarına özel yeni katlanabilir telefonu W27’yi tanıttı. Galaxy Z Fold 8 Ultra'yı temel alan model, altın detaylı tasarımı ve uydu bağlantısı desteğiyle öne çıkıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-cin-e-ozel-katlanabilir-w27-modelini-tanitti--212242",
-      "publishedAt": "2026-10-29T19:34:53Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212242/1200x675samsung-cin-e-ozel-katlanabilir-w27-modelini-tanitti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "19a61aa7be6a604adf",
       "title": "Phantom Blade Zero daha ilk günden 500 bin eş zamanlı oyuncuya ulaştı",
       "summary": "Yılın en merakla beklenen oyunlarından olan Phantom Blade Zero'ya dair ilk yorumlar paylaşıldı. Oyunun eleştirmen puanları, yılın oyunu adaylarından biri olabileceğini gösteriyor.",
@@ -107,54 +275,6 @@
       "publishedAt": "2026-10-29T19:30:00Z",
       "category": "Oyun",
       "image": "https://www.donanimhaber.com/images/images/haber/212237/1200x675phantom-blade-zero-daha-ilk-gunden-zirve-yarisina-girdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5cdeccff42018b3d9c",
-      "title": "Football Manager 2027 bu hafta ücretsiz oynanabilecek",
-      "summary": "Çok yakında oyunseverlerle buluşacak olan Football Manager 2027, satışa çıkmadan önce kısa süreliğine ücretsiz oluyor. İşte oyunun ücretsiz alıp deneyebileceğiniz tarihler ve platformlar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/football-manager-2027-bu-hafta-ucretsiz-olacak--212236",
-      "publishedAt": "2026-10-29T18:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212236/1200x675football-manager-2027-bu-hafta-ucretsiz-olacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9d52bd44ebafc2a6b1",
-      "title": "Güneş enerjili uçaklar için kritik batarya eşiği belirlendi: 500 Wh/kg",
-      "summary": "Harvard Üniversitesi araştırmacıları, güneş enerjisiyle çalışan uçakların aylarca havada kalabilmesi için bataryalarda 500 Wh/kg enerji yoğunluğunun kritik bir eşik olduğunu belirledi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gunes-enerjili-ucaklar-icin-kritik-batarya-esigi-belirlendi-500--212239",
-      "publishedAt": "2026-10-29T18:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212239/1200x675gunes-enerjili-ucaklar-icin-kritik-batarya-esigi-belirlendi-500.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7413cfb163e87a27e3",
-      "title": "Huawei Starlight'ın ilk telefonu geniş ekranla gelebilir",
-      "summary": "Huawei'in alt markası Starlight'ın ilk telefonu, 6,39 inç ekranı, Kirin 9 serisi işlemcisi ve 16 GB RAM iddiasıyla ortaya çıktı. İşte yeni katlanırın detayları:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/huawei-starlight-in-ilk-telefonu-genis-ekranla-gelebilir--212233",
-      "publishedAt": "2026-10-29T17:40:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212233/1200x675huawei-starlight-in-ilk-telefonu-genis-ekranla-gelebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "08a19472becaa38944",
-      "title": "Samsung Galaxy Watch ve Ring, uyku apnesini daha ayrıntılı izleyecek",
-      "summary": "Samsung, Galaxy Watch ve Galaxy Ring için uyku apnesi tespit özelliğini geliştirdi. Yapay zeka destekli yeni sürüm, solunum bozukluklarını üç seviyede değerlendiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/galaxy-watch-ve-ring-uyku-apnesini-daha-ayrintili-izleyecek--212234",
-      "publishedAt": "2026-10-29T17:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212234/1200x675galaxy-watch-ve-ring-uyku-apnesini-daha-ayrintili-izleyecek.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -231,30 +351,6 @@
       "editorial": false
     },
     {
-      "id": "2b7824afb5cc2dcc73",
-      "title": "Evrenin neden var olduğunu açıklayabilecek antimadde deneyi",
-      "summary": "Fizikçiler, tek bir antimadde parçacığını aylarca kontrol altında tutmayı başardı. Yeni yöntem, evrende maddenin neden antimaddeden daha fazla olduğunu anlamaya yardımcı olabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/antimadde-aylarca-hapsedildi-evrenin-sirri-cozulebilir--212229",
-      "publishedAt": "2026-10-29T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212229/1200x675antimadde-aylarca-hapsedildi-evrenin-sirri-cozulebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a8bcfa8e198a97d413",
-      "title": "All in One (AIO) Bilgisayar nedir? Nasıl çalışır ve kimler tercih etmeli?",
-      "summary": "All in One PC nedir? Masaüstü bilgisayar ve monitörü tek gövdede buluşturan AIO bilgisayarların avantajlarını, çalışma yapısını ve öne çıkan modelleri inceliyoruz.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/all-in-one-pc-nedir-nasil-calisir-ve-kimler-tercih-etmeli--212164",
-      "publishedAt": "2026-10-29T15:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212164/1200x675all-in-one-pc-nedir-nasil-calisir-ve-kimler-tercih-etmeli.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "8abb14d5ed9d2a9736",
       "title": "Free Play Days – WUCHANG: Fallen Feathers, Dead by Daylight, Darkwood, Spirittea, and EVERSPACE 2",
       "summary": "Your weekend quest starts with Free Play Days! WUCHANG: Fallen Feathers, Darkwood, Spirittea, and EVERSPACE 2 are available this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday October 29 until Sunday, Sunday November 1. Spirittea and EVERSPACE 2 are also available across console and PC. Dead by Daylight is",
@@ -267,42 +363,6 @@
       "editorial": false
     },
     {
-      "id": "bafc628d2cd4f9f5f8",
-      "title": "Devran döndü: Bellek üreticileri Apple’dan intikam alıyor",
-      "summary": "Teknoloji devi Apple’ın yıllarca bellek tedarikçilerini baskı altına aldığı ve en ucuz fiyattan bellek tedarik etmeye çalıştığı ortaya çıktı. Şimdi ise bellek tedarikçilerinin eli güçleniyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/devran-dondu-bellek-ureticileri-apple-dan-intikam-aliyor--212238",
-      "publishedAt": "2026-10-29T15:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212238/1200x675devran-dondu-bellek-ureticileri-apple-dan-intikam-aliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5533cf7745e57c3145",
-      "title": "OBS ile oyun yayını yapmak için laptop önerileri",
-      "summary": "YouTube, Twitch gibi platformlarda oyun canlı yayını yapacaklar için en iyi dizüstü bilgisayarlar burada! İşte yayın için laptop arayanlara tavsiye niteliğinde en iyi modeller:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/oyun-canli-yayini-icin-laptop-onerisi--212131",
-      "publishedAt": "2026-10-29T14:30:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212131/1200x675oyun-canli-yayini-icin-laptop-onerisi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "03813e78e1a37c2413",
-      "title": "Intel, giriş seviyesi dizüstüler için Moon Lake işlemcilerini hazırlıyor",
-      "summary": "Intel, giriş seviyesi bilgisayarlar için yeni bir işlemci ailesi hazırlıyor. Moon Lake adıyla piyasaya çıkması beklenen seri, 18A üretim süreciyle düşük güç tüketimine odaklanacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-ucuz-laptoplar-icin-moon-lake-islemcilerini-hazirliyor--212235",
-      "publishedAt": "2026-10-29T14:15:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212235/1200x675intel-ucuz-laptoplar-icin-moon-lake-islemcilerini-hazirliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "45299bfffbfb109ae0",
       "title": "Once Human: From A Misplaced Lighthouse to the Living Ocean of Isles of Abyss",
       "summary": "We recently released Isles of Abyss – the largest free expansion in Once Human history – on XBOX Series X|S. Now that players have had taken some time to chart these dangerous waters, we wanted to take this opportunity to pull back the curtain on how this major expansion came together and how we managed",
@@ -312,30 +372,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Once-Human-The-light-tower-10967759dfa877a1161e-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "a37d420067145aabf9",
-      "title": "AutoCAD ve çizim programları için en iyi laptop tavsiyeleri",
-      "summary": "AutoCAD için laptop önerisi arayanlar, çizim ve 3D modelleme süreçlerinde doğru donanımı seçmeli. İşte farklı bütçelere hitap eden en güçlü laptoplar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/autocad-icin-laptop-onerisi--211954",
-      "publishedAt": "2026-10-29T14:00:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/211954/1200x675autocad-icin-laptop-onerisi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0fedabfd8e209aa802",
-      "title": "MacBook'ta dokunmatik deneyim nasıl olacak: İlk videolar geldi",
-      "summary": "Apple, MacBook Pro'ya dokunmatik ekran eklemekle kalmadı, parmakla kullanımı kolaylaştırmak adına macOS'teki düğmeler ve menüler üzerinde de birtakım küçük değişiklikler yaptı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/macbook-ta-dokunmatik-deneyim-nasil-olacak--212224",
-      "publishedAt": "2026-10-29T13:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212224/1200x675macbook-ta-dokunmatik-deneyim-nasil-olacak.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -372,18 +408,6 @@
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Trailer_Thumbnail_Sohini_Gn2Gz2.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "44af447f9216284517",
-      "title": "Huawei'den kitap tasarımlı yeni yönlendirici: Router X2 Pro",
-      "summary": "Huawei'nin yeni yönlendiricisi Router X2 Pro, kitap şeklindeki şık tasarımıyla dikkat çekiyor. Wi-Fi 7 destekli cihaz, 2,5 Gbps Ethernet bağlantısı ve kişiselleştirilebilir kapak seçenekleri sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/huawei-kitap-tasarimli-wi-fi-7-router-ini-tanitti--212226",
-      "publishedAt": "2026-10-29T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212226/1200x675huawei-kitap-tasarimli-wi-fi-7-router-ini-tanitti.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -447,18 +471,6 @@
       "editorial": false
     },
     {
-      "id": "d3147675f8bfc42f7a",
-      "title": "Google Play, katlanabilir telefonlara özel uygulamaları öne çıkaracak",
-      "summary": "Google, 2027'den itibaren Play Store'da uygulama ve oyunların katlanabilir telefonlardaki performansını değerlendirecek. Büyük ekranlara daha iyi uyum sağlayan uygulamalar daha fazla görünecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-play-katlanir-telefonlara-ozel-uygulamalari-one-cikaracak--212221",
-      "publishedAt": "2026-10-29T12:00:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212221/1200x675google-play-katlanir-telefonlara-ozel-uygulamalari-one-cikaracak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "aeb0cc69547989372e",
       "title": "How to use Gemini to update your resume",
       "summary": "Turn raw notes into high-impact, ATS-friendly resume bullets using Gemini. Follow these four steps to polish your professional profile. Get the details.",
@@ -479,18 +491,6 @@
       "publishedAt": "2026-10-29T10:45:29Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/695068/695068-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a6446cef08a2395ff8",
-      "title": "Fiat Grande Panda'nın menzili 400 km'ye yükseltildi: Ancak bir özellik iptal edildi",
-      "summary": "Fiat elektrikli Grande Panda modelinin menzilini 320 kilometreden 400 kilometreye yükseltti. İtalyan otomobil üreticisi ayrıca aracın kendine has dikkat çekici özelliklerinden birini de kaldırdı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/fiat-grande-panda-nin-menzili-400-km-ye-yukseltildi--212230",
-      "publishedAt": "2026-10-29T09:58:44Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212230/1200x675fiat-grande-panda-nin-menzili-400-km-ye-yukseltildi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -555,18 +555,6 @@
       "editorial": false
     },
     {
-      "id": "9639ad5a211cab887a",
-      "title": "En pahalı MacBook Pro fiyatı 1 milyon TL'yi aştı",
-      "summary": "Yeni MacBook Pro'nun en dolu versiyonunun fiyatı otomobil fiyatlarını yakaladı. M5 Max çip, 128 GB RAM ve 16 TB SSD'li model, Türkiye'de 1 milyon 15 bin 499 TL'ye satılıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/en-pahali-macbook-pro-fiyati-1-milyon-tl-yi-asti--212227",
-      "publishedAt": "2026-10-29T08:18:53Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212227/1200x675en-pahali-macbook-pro-fiyati-1-milyon-tl-yi-asti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "e2aa79067533c1e8b2",
       "title": "Google Chrome'a Gmail Özelliği Geldi: Formlar Otomatik Dolacak",
       "summary": "Google Chrome, Gmail'deki sipariş, kargo ve uçuş bilgilerini otomatik doldurma önerilerinde kullanmaya başladı. Yeni Gemini destekli özelliğin nasıl çalıştığını ve kimlere sunulduğunu öğrenin.",
@@ -587,18 +575,6 @@
       "publishedAt": "2026-10-29T07:50:15Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695048/695048-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c4bec76539605855bf",
-      "title": "Premiere Pro'da 4K video kurgu için laptop önerileri",
-      "summary": "Premiere Pro için laptop arayanlar buraya! Güçlü donanım ve yüksek bellek kapasiteleriyle öne çıkan 4K video kurgu için laptop önerilerini listeledik: İşte Premiere Pro için en iyi laptop modelleri:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/premiere-pro-da-4k-video-kurgu-icin-laptop-onerileri--212156",
-      "publishedAt": "2026-10-29T07:23:11Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212156/1200x675premiere-pro-da-4k-video-kurgu-icin-laptop-onerileri.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-10-20T13:00:00Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5C82VPWPDDZ7P6P0G4H7KB3.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "02ab68be675b3bf679",
+      "title": "Advancing digital sovereignty with greater control and choice",
+      "summary": "Across my conversations with leaders in government, critical infrastructure and regulated industries, one priority consistently rises to the top: putting technology to work on their most important systems while maintaining the control those systems require. This challenge is becoming more important as advanced cloud and AI capabilities move into public services, regulated processes and essential...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
+      "publishedAt": "2026-10-20T08:20:02Z",
+      "category": "Teknoloji",
+      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Digital-Sovereignty-Image-2.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "68e2ee5d21f7dc1bf4",
+      "title": "Cutting our inference bill by 68% by being obsessive about optimization",
+      "summary": "When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/obsessive-inference-optimization/",
+      "publishedAt": "2026-10-19T19:12:53Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M58N5J1Y9HY8N3R115KEY6NE.png",
       "language": "en",
       "editorial": false
     }
