@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-10-30T00:09:43.372035Z",
+  "generatedAt": "2026-10-30T06:18:16.437424Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e0728cf0900aeaa724",
+      "title": "Samsung Galaxy S27'nin şarj hızı yine hayal kırıklığı yaratacak",
+      "summary": "Samsung Galaxy S27'nin yeni sertifikaları yayımlandı. Belgelerdeki değerler, akıllı telefonun önceki nesildeki gibi 25W kablolu şarj desteğiyle geleceğini gösteriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-s27-nin-sarj-hizi-yine-hayal-kirikligi-yaratacak--212244",
+      "publishedAt": "2026-10-30T05:15:41Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212244/1200x675samsung-galaxy-s27-nin-sarj-hizi-yine-hayal-kirikligi-yaratacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "2ba47ff6d8327fcb42",
       "title": "Amazon'un Gülümseten Kasım 2026 kampanyası başladı: İşte öne çıkan ilk indirimler!",
@@ -575,18 +587,6 @@
       "publishedAt": "2026-10-29T07:50:15Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695048/695048-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e06413e2bfb0d88899",
-      "title": "McDonald’s Türkiye’den Cumhuriyet’in 103. Yılına Renkli Kutlama",
-      "summary": "McDonald’s Türkiye, Cumhuriyet’in 103. yılını Beşiktaş’ta hayata geçirdiği özel grafiti çalışması ve restoranlarında düzenleyeceği etkinliklerle kutlayacak. 29 Ekim coşkusunu sokaklarda yaşatacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/mcdonald-s-turkiye-den-cumhuriyet-in-103-yilina-renkli-kutlama--212153",
-      "publishedAt": "2026-10-29T07:35:06Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212153/1200x675mcdonald-s-turkiye-den-cumhuriyet-in-103-yilina-renkli-kutlama.jpg",
       "language": "tr",
       "editorial": false
     },
