@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-10-31T19:29:06.891230Z",
+  "generatedAt": "2026-10-31T22:43:46.423099Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "0561b004fcd9810145",
+      "title": "Clayface'in aldığı övgüler gişeye yansımadı: DC bir hayal kırıklığı daha yaşayabilir",
+      "summary": "Geçtiğimiz hafta vizyona giren yeni DC filmi Clayface, aldığı olumlu yorumlara rağmen gişede hayal kırıklığı yaratabilir. Filmin ikinci haftasındaki düşüşü DC için endişe verici bir tablo çiziyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/clayface-in-aldigi-ovguler-gise-rakamlarina-yansimadi--212323",
+      "publishedAt": "2026-10-31T20:36:03Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212323/1200x675clayface-in-aldigi-ovguler-gise-rakamlarina-yansimadi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7f615e465b82ea6982",
+      "title": "Yeni Mass Effect'in Star Wars yüzünden iptal edildiği ortaya çıktı",
+      "summary": "Kısa süre önce BioWare'i kapatıp yeni Mass Effect oyununu iptal eden Electronic Arts'ın neden böyle karar aldığı belli oldu. İşin altından yeni Star Wars oyunu çıktı. İşte detaylar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-mass-effect-oyunu-star-wars-yuzunden-iptal-oldu--212318",
+      "publishedAt": "2026-10-31T19:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212318/1200x675yeni-mass-effect-oyunu-star-wars-yuzunden-iptal-oldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "7dca20593003d40f34",
       "title": "Volkswagen Türkiye’ye geliyor mu, yeni Corolla ne sunacak, Tofaş’ta K9 üretimi başladı | Oto Gündem",
@@ -251,30 +275,6 @@
       "publishedAt": "2026-10-31T07:00:02Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/693109/693109-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1f4e849ba40aef7e1a",
-      "title": "PUBG için laptop önerileri: Kalabalık çatışmalarda akıcılık için ne gerekli?",
-      "summary": "PUBG için laptop seçerken ekran kartı kadar işlemci, RAM ve yüksek yenileme hızlı ekran da önem taşıyor. Kalabalık çatışmalarda akıcılık için öne çıkan modelleri inceledik.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/pubg-icin-laptop-onerileri--212173",
-      "publishedAt": "2026-10-31T06:30:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212173/1200x675pubg-icin-laptop-onerileri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f4371471e253cd3b53",
-      "title": "Samsung, Xiaomi, OnePlus ve diğer markalarda Android 17 takvimi açıklandı",
-      "summary": "Android 17 güncellemesi Google Pixel modellerinin ardından Samsung, Xiaomi, OnePlus ve diğer markaların telefonlarına da geliyor. İşte markalara göre güncelleme takvimi ve desteklenen modeller...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/android-17-hangi-telefonlara-ne-zaman-gelecek-iste-liste--212258",
-      "publishedAt": "2026-10-30T21:30:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212258/1200x675android-17-hangi-telefonlara-ne-zaman-gelecek-iste-liste.jpg",
       "language": "tr",
       "editorial": false
     },
