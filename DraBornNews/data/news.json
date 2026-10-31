@@ -1,16 +1,112 @@
 {
-  "generatedAt": "2026-10-31T15:13:09.439583Z",
+  "generatedAt": "2026-10-31T19:29:06.891230Z",
   "sourceCount": 7,
   "items": [
     {
-      "id": "05677bedc48b23db5a",
-      "title": "Motorola Signature 27, lansmana günler kala videoda ortaya çıktı",
-      "summary": "Motorola Signature 27, Tandem OLED ekranı, 12.000 nit parlaklığı, Snapdragon işlemcisi ve 200 MP periskop kamerasıyla lansman öncesinde yeni bir videoda ortaya çıktı.",
+      "id": "7dca20593003d40f34",
+      "title": "Volkswagen Türkiye’ye geliyor mu, yeni Corolla ne sunacak, Tofaş’ta K9 üretimi başladı | Oto Gündem",
+      "summary": "Volkswagen Türkiye’de otomobil üretecek mi? Corolla’nın yeni motoru neler sunacak? Oto Gündem’de Grande Panda’dan yeni Jetta’ya, Chery’nin yeni SUV’undan Tofaş’ın üretim hamlesine haftayı konuşuyoruz.",
       "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/motorola-signature-27-lansmana-gunler-kala-videoda-ortaya-cikti--212313",
-      "publishedAt": "2026-10-31T15:00:00Z",
+      "sourceUrl": "https://www.donanimhaber.com/volkswagen-turkiye-ye-geliyor-mu-yeni-corolla-ne-sunacak--212302",
+      "publishedAt": "2026-10-31T19:07:25Z",
       "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212313/1200x675motorola-signature-27-lansmana-gunler-kala-videoda-ortaya-cikti.jpg",
+      "image": "https://www.donanimhaber.com/images/images/haber/212302/1200x675volkswagen-turkiye-ye-geliyor-mu-yeni-corolla-ne-sunacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ebc776d116e8f82e44",
+      "title": "Fortnite için laptop seçimi: Performans modu ve yüksek grafik ayarları için öneriler",
+      "summary": "Fortnite için laptop önerisi mi istiyorsunuz? İşte 2026'da Fortnite oynamak için akıcı ve yüksek FPS sağlayan en iyi dizüstü bilgisayar modelleri:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/fortnite-icin-laptop-onerileri--212177",
+      "publishedAt": "2026-10-31T19:00:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212177/1200x675fortnite-icin-laptop-onerileri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "022f54fd3b293440de",
+      "title": "Özürden 11 gün sonra fişi çekildi: Stellantis'in 1.2 PureTech motor fabrikası kapatıldı",
+      "summary": "Fransa'daki tarihi Stellantis fabrikası, 57 yıllık faaliyetin ardından kapatıldı. Tesis, özellikle kronik sorunlarıyla gündeme gelen 1.2 litrelik PureTech motorların üretim merkezi olarak tanınıyordu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ozur-sonrasi-stellantis-in-1-2-puretech-motor-fabrikasi-kapatildi--212308",
+      "publishedAt": "2026-10-31T18:35:16Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212308/1200x675ozur-sonrasi-stellantis-in-1-2-puretech-motor-fabrikasi-kapatildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1b5dfc06d21fb5e0b4",
+      "title": "It: Welcome to Derry sürpriz bir bölümle ekranlara geri döndü",
+      "summary": "HBO'nun sevilen dizisi It: Welcome to Derry, Cadılar Bayramı vesilesiyle ekranlara geri döndü. HBO, 2. sezon öncesi diziden sürpriz bir bölüm daha yayınladı. İşte detaylar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/it-welcome-to-derry-icin-surpriz-bir-bolum-yayinlandi--212316",
+      "publishedAt": "2026-10-31T18:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212316/1200x675it-welcome-to-derry-icin-surpriz-bir-bolum-yayinlandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2c105b6a61fb43a252",
+      "title": "Samsung, 17 inçlik dev katlanabilir tablet geliştiriyor",
+      "summary": "Yeni bir sızıntıya göre Samsung, katlandığında 8 inç, açıldığında ise 17 inç ekran boyutuna ulaşan katlanabilir bir tablet geliştiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-17-inclik-dev-katlanabilir-tablet-gelistiriyor--212295",
+      "publishedAt": "2026-10-31T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212295/1200x675samsung-17-inclik-dev-katlanabilir-tablet-gelistiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cb2a7198506ea5d879",
+      "title": "Donma ve kasmaya son: 8 GB RAM kapasiteli güçlü tabletler",
+      "summary": "Tablet alırken performanstan ödün vermek istemeyenler buraya! Ders çalışmaktan oyun oynamaya kadar farklı ihtiyaçlara hitap eden en iyi 8 GB RAM’li tablet modellerini bir araya getirdik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/donma-ve-kasmaya-son-en-iyi-8-gb-ram-tablet-onerileri--212228",
+      "publishedAt": "2026-10-31T17:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212228/1200x675donma-ve-kasmaya-son-en-iyi-8-gb-ram-tablet-onerileri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1405a623608e7d1d78",
+      "title": "OnePlus Buds Pro 4, 53 saatlik batarya ömrüyle tanıtıldı",
+      "summary": "OnePlus Buds Pro 4, Dynaudio destekli çift sürücülü ses sistemi, 53 saate ulaşan pil ömrü ve yapay zeka özellikleriyle küresel web sitesinde listelendi. İşte detaylar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/oneplus-buds-pro-4-53-saatlik-batarya-omruyle-tanitildi--212315",
+      "publishedAt": "2026-10-31T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212315/1200x675oneplus-buds-pro-4-53-saatlik-batarya-omruyle-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "106c7f108bfdb0e3bd",
+      "title": "Önce bellekler şimdi de PCB krizi: Siparişler 2030'a kadar doldu",
+      "summary": "Yapay zekaya yönelik yüksek talep şimdi de PCB üretiminde tedarik krizini derinleştiriyor. Siparişler 2030'a kadar dolarken bazı devre kartlarında teslimat süresi iki yılı aşmış durumda.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/once-bellekler-simdi-de-pcb-krizi-siparisler-2030-a-kadar-doldu--212305",
+      "publishedAt": "2026-10-31T16:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212305/1200x675once-bellekler-simdi-de-pcb-krizi-siparisler-2030-a-kadar-doldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a06a6402fb37c26195",
+      "title": "WhatsApp, grup sohbetlerine dört yeni özellik ekliyor",
+      "summary": "WhatsApp, grup sohbetlerini takip etmeyi kolaylaştıran dört yeni özelliğini duyurdu. Kalıcı mesaj sabitleme, geçmiş mesaj paylaşımı ve grup durumlarıyla iletişim daha düzenli hale geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/whatsapp-grup-sohbetlerine-dort-yeni-ozellik-ekliyor--212314",
+      "publishedAt": "2026-10-31T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212314/1200x675whatsapp-grup-sohbetlerine-dort-yeni-ozellik-ekliyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -20,9 +116,21 @@
       "summary": "Android için Apple Music 7.0 yayınlandı. Güncelleme, Apple'ın 27 sürümüyle getirdiği yarı saydam tasarım Liquid Glass ile yenilenen arayüz ve yeni simgeyi içeriyor.",
       "source": "DonanımHaber",
       "sourceUrl": "https://www.donanimhaber.com/apple-music-android-de-liquid-glass-tasarimiyla-yenilendi--212312",
-      "publishedAt": "2026-10-31T14:30:00Z",
+      "publishedAt": "2026-10-31T15:49:46Z",
       "category": "Mobil",
       "image": "https://www.donanimhaber.com/images/images/haber/212312/1200x675apple-music-android-de-liquid-glass-tasarimiyla-yenilendi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "05677bedc48b23db5a",
+      "title": "Motorola Signature 27, lansmana günler kala videoda ortaya çıktı",
+      "summary": "Motorola Signature 27, Tandem OLED ekranı, 12.000 nit parlaklığı, Snapdragon işlemcisi ve 200 MP periskop kamerasıyla lansman öncesinde yeni bir videoda ortaya çıktı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/motorola-signature-27-lansmana-gunler-kala-videoda-ortaya-cikti--212313",
+      "publishedAt": "2026-10-31T15:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212313/1200x675motorola-signature-27-lansmana-gunler-kala-videoda-ortaya-cikti.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -75,18 +183,6 @@
       "editorial": false
     },
     {
-      "id": "022f54fd3b293440de",
-      "title": "Özürden 11 gün sonra fişi çekildi: Stellantis'in 1.2 PureTech motor fabrikası kapatıldı",
-      "summary": "Fransa'daki tarihi Stellantis fabrikası, 57 yıllık faaliyetin ardından kapatıldı. Tesis, özellikle kronik sorunlarıyla gündeme gelen 1.2 litrelik PureTech motorların üretim merkezi olarak tanınıyordu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ozur-sonrasi-stellantis-in-1-2-puretech-motor-fabrikasi-kapatildi--212308",
-      "publishedAt": "2026-10-31T11:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212308/1200x675ozur-sonrasi-stellantis-in-1-2-puretech-motor-fabrikasi-kapatildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "aad6adec250b2190a0",
       "title": "Anthropic, Claude'un mevcut oyunları yeniden oluşturmasını yasakladı",
       "summary": "Anthropic, Claude'un mevcut video oyunlarını isimleri değiştirilse bile yeniden oluşturmasını yasakladı. Yeni kural Claude Code'un kodlarında ortaya çıktı.",
@@ -107,18 +203,6 @@
       "publishedAt": "2026-10-31T09:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212298/1200x6755-kasim-a101-aktuel-katalogunda-neler-var.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7dca20593003d40f34",
-      "title": "Volkswagen Türkiye’ye geliyor mu, yeni Corolla ne sunacak, Tofaş’ta K9 üretimi başladı | Oto Gündem",
-      "summary": "Volkswagen Türkiye’de otomobil üretecek mi? Corolla’nın yeni motoru neler sunacak? Oto Gündem’de Grande Panda’dan yeni Jetta’ya, Chery’nin yeni SUV’undan Tofaş’ın üretim hamlesine haftayı konuşuyoruz.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/volkswagen-turkiye-ye-geliyor-mu-yeni-corolla-ne-sunacak--212302",
-      "publishedAt": "2026-10-31T09:00:52Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212302/1200x675volkswagen-turkiye-ye-geliyor-mu-yeni-corolla-ne-sunacak.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -183,18 +267,6 @@
       "editorial": false
     },
     {
-      "id": "88b5c8799bfcb30399",
-      "title": "Hepsiburada'da telefon, bilgisayar ve tabletlerde indirimler: İşte öne çıkanlar!",
-      "summary": "Hepsiburada Efsane Kasım, büyük indirimlerle başladı. Telefon, bilgisayar ve oyuncu ekipmanlarında son 6 ayın en düşük fiyatları dikkat çekiyor. İşte öne çıkan ürünler...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/hepsiburada-da-telefon-bilgisayar-ve-tabletlerde-indirimler-2026--212296",
-      "publishedAt": "2026-10-31T05:11:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212296/1200x675hepsiburada-da-telefon-bilgisayar-ve-tabletlerde-indirimler-2026.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "f4371471e253cd3b53",
       "title": "Samsung, Xiaomi, OnePlus ve diğer markalarda Android 17 takvimi açıklandı",
       "summary": "Android 17 güncellemesi Google Pixel modellerinin ardından Samsung, Xiaomi, OnePlus ve diğer markaların telefonlarına da geliyor. İşte markalara göre güncelleme takvimi ve desteklenen modeller...",
@@ -203,30 +275,6 @@
       "publishedAt": "2026-10-30T21:30:00Z",
       "category": "Mobil",
       "image": "https://www.donanimhaber.com/images/images/haber/212258/1200x675android-17-hangi-telefonlara-ne-zaman-gelecek-iste-liste.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1d4130f9540ba6f463",
-      "title": "Samsung'dan Galaxy Watch için üzücü güncelleme kararı",
-      "summary": "Samsung, eski akıllı saatlerine yönelik Wear OS desteğini daha erken sonlandırabilir. Bu adım, bazı modellerde büyük güncellemelerin ardından yaşanan sorunlara dair artan şikayetler üzerine geldi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-dan-galaxy-watch-icin-uzucu-guncelleme-karari--212276",
-      "publishedAt": "2026-10-30T20:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212276/1200x675samsung-dan-galaxy-watch-icin-uzucu-guncelleme-karari.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5cbc0b528192e9b3e7",
-      "title": "Ubisoft, Assassin's Creed remake'leri konusunda frene basıyor",
-      "summary": "Assassin's Creed Black Flag Resynced sonrası serinin başka oyunları için de remake'ler yapabileceği düşünülen Ubisoft, bu konuda oyunseverleri hayal kırıklığına uğratacak gibi duruyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ubisoft-assassin-s-creed-remakeleri-konusunda-frene-basiyor--212285",
-      "publishedAt": "2026-10-30T20:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212285/1200x675ubisoft-assassin-s-creed-remakeleri-konusunda-frene-basiyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -240,42 +288,6 @@
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Fitbit_Edge_thumb_OOMcorw.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f726aa878111c080e9",
-      "title": "Intel'in İsrail fabrikasında patlama gerçekleşti: Zarar 600 milyon doları bulabilir",
-      "summary": "Intel’in İsrail’deki Fab 28 tesisinde meydana gelen patlama, üretimin yaklaşık iki hafta durmasına neden oldu. Şirket, yaşanan aksaklıkların 600 milyon dolarlık gelir kaybına yol açmasını bekliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-in-israil-deki-fabrika-kazasi-600-milyon-dolara-mal-olacak--212281",
-      "publishedAt": "2026-10-30T19:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212281/1200x675intel-in-israil-deki-fabrika-kazasi-600-milyon-dolara-mal-olacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2bfbd0b2829796d99e",
-      "title": "Batman'i canlandıracak yeni oyuncu çok yakında belli olacak",
-      "summary": "James Gunn öncülüğünde kurulan yeni DC Sinematik Evreni'nde Batman'i kimin canlandıracağı çok yakında belli olacak. James Gunn aklındaki profile dair detayları paylaştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/batman-i-canlandiracak-yeni-oyuncu-cok-yakinda-belli-olacak--212288",
-      "publishedAt": "2026-10-30T19:20:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212288/1200x675batman-i-canlandiracak-yeni-oyuncu-cok-yakinda-belli-olacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3ffe6cffbf2709b9c4",
-      "title": "Intel hisseleri çakıldı, zayıf PC pazarı beklentileri vurdu",
-      "summary": "Teknoloji devi Intel hisseleri, zayıf PC pazarı ve üretim sorunlarının etkisiyle beklentilerin altında kalan gelir tahmininin ardından yüzde 21'den fazla değer kaybetti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-hisseleri-cakildi-zayif-pc-pazari-beklentileri-vurdu--212289",
-      "publishedAt": "2026-10-30T19:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212289/1200x675intel-hisseleri-cakildi-zayif-pc-pazari-beklentileri-vurdu.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -792,18 +804,6 @@
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/S2E7_YT_thumbnail.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "19c5d4b2f25558a4a7",
-      "title": "Sony, 30. Yıl Özel PlayStation'ın Tarihini Anlatan Kitabını Tanıttı (Konsol Fiyatına Kitap)",
-      "summary": "Sony, arşiv prototipleri ve tasarımcı notlarını içeren 30. yıl PlayStation tarih kitabını tanıttı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/sony-30-yil-ozel-playstation-tarihini-anlatan-kitabini-tanitti-h228010.html",
-      "publishedAt": "2026-10-28T18:54:47Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/695005/695005-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
