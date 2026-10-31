@@ -1,7 +1,79 @@
 {
-  "generatedAt": "2026-10-30T22:53:37.144269Z",
+  "generatedAt": "2026-10-31T08:44:18.743233Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "de8cb4735f4d7a407b",
+      "title": "Android telefonları tek SMS ile kullanılmaz hale getiren açık keşfedildi",
+      "summary": "Android telefonları hedef alan yeni bir güvenlik açığı, özel olarak hazırlanan tek bir SMS mesajıyla cihazların bağlantısını kesebiliyor. Bazı telefonlar tamamen kullanılamaz hale gelebiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/android-telefonlari-tek-sms-ile-kullanilmaz-yapan-acik-kesfedildi--212301",
+      "publishedAt": "2026-10-31T08:30:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212301/1200x675android-telefonlari-tek-sms-ile-kullanilmaz-yapan-acik-kesfedildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7b7e788ed6ac4178f1",
+      "title": "Lexus, Çin’de üretime geçiyor: İlk model elektrikli SUV olacak",
+      "summary": "Lexus, Çin’de yalnızca ithal araç satma dönemini kapatmaya hazırlanıyor. Markanın ülkede üreteceği ilk model, 2027’de yollara çıkması planlanan elektrikli SUV olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/lexus-cin-de-uretime-geciyor-ilk-model-elektrikli-suv-olacak--212303",
+      "publishedAt": "2026-10-31T08:01:42Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212303/1200x675lexus-cin-de-uretime-geciyor-ilk-model-elektrikli-suv-olacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4f58fde34098b8f435",
+      "title": "Intel Nova Lake performansı ortaya çıktı: Arrow Lake'e yüzde 20 fark",
+      "summary": "Intel'in yeni nesil Nova Lake işlemcileri için ilk performans rakamları paylaşıldı. Arrow Lake'e kıyasla yüzde 20'ye, tek çekirdek performansında ise yüzde 17'ye kadar daha hızlı olabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/intel-nova-lake-performansi-ortaya-cikti-arrow-lake-e-yuzde-20-fark--212300",
+      "publishedAt": "2026-10-31T07:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212300/1200x675intel-nova-lake-performansi-ortaya-cikti-arrow-lake-e-yuzde-20-fark.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d360e053df4de7117c",
+      "title": "Mimar, Mühendis ve Tasarımcılar İçin Yüksek Bütçeli Profesyonel Bilgisayar Tavsiyeleri",
+      "summary": "Render alan mimar, sahaya çıkan mühendis ve ofis kuran tasarım stüdyosu için Casper Excalibur G920, Casper Nirvana S100 ve Casper Nirvana M600 rehberi: hangisi kime, hangi bütçeye uygun?",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/mimar-muhendis-ve-tasarimcilar-icin-yuksek-butceli-profesyonel-bilgisayar-tavsiyeleri-h227893.html",
+      "publishedAt": "2026-10-31T07:00:02Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/693109/693109-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1f4e849ba40aef7e1a",
+      "title": "PUBG için laptop önerileri: Kalabalık çatışmalarda akıcılık için ne gerekli?",
+      "summary": "PUBG için laptop seçerken ekran kartı kadar işlemci, RAM ve yüksek yenileme hızlı ekran da önem taşıyor. Kalabalık çatışmalarda akıcılık için öne çıkan modelleri inceledik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/pubg-icin-laptop-onerileri--212173",
+      "publishedAt": "2026-10-31T06:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212173/1200x675pubg-icin-laptop-onerileri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "88b5c8799bfcb30399",
+      "title": "Hepsiburada'da telefon, bilgisayar ve tabletlerde indirimler: İşte öne çıkanlar!",
+      "summary": "Hepsiburada Efsane Kasım, büyük indirimlerle başladı. Telefon, bilgisayar ve oyuncu ekipmanlarında son 6 ayın en düşük fiyatları dikkat çekiyor. İşte öne çıkan ürünler...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/hepsiburada-da-telefon-bilgisayar-ve-tabletlerde-indirimler-2026--212296",
+      "publishedAt": "2026-10-31T05:11:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212296/1200x675hepsiburada-da-telefon-bilgisayar-ve-tabletlerde-indirimler-2026.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "f4371471e253cd3b53",
       "title": "Samsung, Xiaomi, OnePlus ve diğer markalarda Android 17 takvimi açıklandı",
@@ -59,18 +131,6 @@
       "publishedAt": "2026-10-30T19:40:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212281/1200x675intel-in-israil-deki-fabrika-kazasi-600-milyon-dolara-mal-olacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "88b5c8799bfcb30399",
-      "title": "Hepsiburada'da telefon, bilgisayar ve tabletlerde indirimler: İşte öne çıkanlar!",
-      "summary": "Hepsiburada Efsane Kasım, büyük indirimlerle başladı. Telefon, bilgisayar ve oyuncu ekipmanlarında son 6 ayın en düşük fiyatları dikkat çekiyor. İşte öne çıkan ürünler...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/hepsiburada-da-telefon-bilgisayar-ve-tabletlerde-indirimler-2026--212296",
-      "publishedAt": "2026-10-30T19:39:15Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212296/1200x675hepsiburada-da-telefon-bilgisayar-ve-tabletlerde-indirimler-2026.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -339,30 +399,6 @@
       "editorial": false
     },
     {
-      "id": "bc49b603922bcc190b",
-      "title": "Putin'den Elon Musk'a övgü dolu sözler: \"Gerçek bir deha\"",
-      "summary": "Rusya Başkanı Vladimir Putin, Elon Musk'ı \"gerçek bir deha\" olarak nitelendirerek Rusya'nın Starlink rakibi Rassvet projesi için yakın temas halinde olduklarını açıkladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/putin-den-elon-musk-a-ovgu-dolu-sozler-gercek-bir-deha--212282",
-      "publishedAt": "2026-10-30T14:56:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212282/1200x675putin-den-elon-musk-a-ovgu-dolu-sozler-gercek-bir-deha.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "bb0d9152df1f7da528",
-      "title": "Epic Games'in bu haftaki ücretsiz oyunları erişime açıldı",
-      "summary": "Epic Games Store ücretsiz oyun fırsatlarına devam ediyor. Son olarak 29 Ekim-5 Kasım tarihleri arasında sunulacak yeni ücretsiz oyunlar erişime açıldı. İşte bu haftanın ücretsiz oyunları...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/epic-games-in-bu-haftaki-ucretsiz-oyunlari-erisime-acildi--212256",
-      "publishedAt": "2026-10-30T14:35:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212256/1200x675epic-games-in-bu-haftaki-ucretsiz-oyunlari-erisime-acildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4d4206ade98bad0ac9",
       "title": "Cloudflare services for private origins is now generally available",
       "summary": "Public traffic to private origins, with WAF, bot management, caching, and Workers, is now available to every customer with Cloudflare One connectivity.",
@@ -375,18 +411,6 @@
       "editorial": false
     },
     {
-      "id": "207e05334e41d902db",
-      "title": "Ford iddialı konuştu: \"Yeni elektrikli platformumuz BYD'den yüzde 30 daha verimli\"",
-      "summary": "Ford CEO'su Jim Farley, şirketin elektrik motorları, şanzıman ve invertörlerden oluşan güç aktarma sisteminin BYD'nin sistemlerinden yüzde 30 daha verimli olduğunu öne sürdü.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ford-yeni-elektrikli-platformumuz-byd-den-yuzde-30-daha-verimli--212278",
-      "publishedAt": "2026-10-30T14:14:46Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212278/1200x675ford-yeni-elektrikli-platformumuz-byd-den-yuzde-30-daha-verimli.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "ab2cccd18ff1ec9907",
       "title": "Next Week on XBOX: New Games for November 2 to 6",
       "summary": "Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X|S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! ZERO PARADES: Director’s",
@@ -396,18 +420,6 @@
       "category": "Oyun",
       "image": "https://store-images.s-microsoft.com/image/apps.50806.13949582959445374.ea0c1a8c-44e1-403b-9079-6ef2eaca23c4.ad9b0183-4a0f-454e-89ba-ba3229594919?w=400&h=600",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4d1e31aea65271f690",
-      "title": "Amazon Gülümseten Kasım 2026'nın Flaş Fırsatları başladı!",
-      "summary": "Amazon Gülümseten Kasım indirimlerinde bugüne özel Flaş Fırsatlar'da JBL Hoparlörler, Philips OLED TV, Stanley termos ve Bosch akülü matkap modelleri dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-gulumseten-kasim-flas-firsatlari-30-ekim--212284",
-      "publishedAt": "2026-10-30T13:45:08Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212284/1200x675amazon-gulumseten-kasim-flas-firsatlari-30-ekim.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1019,18 +1031,6 @@
       "publishedAt": "2026-10-28T09:47:23Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/694960/694960-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "950ed1e3b11a6e962e",
-      "title": "BMW'nin En Büyük Elektrikli SUV Modeli iX7 Sızdırıldı: 2027'de Tanıtılacak!",
-      "summary": "BMW'nin 2027'de tanıtılması beklenen yeni elektrikli SUV modeli iX7, sızdırılan bilgilerle şimdiden merak uyandırıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/bmw-en-buyuk-elektrikli-suv-modeli-ix7-sizdirildi-2027de-tanitilacak-h228001.html",
-      "publishedAt": "2026-10-28T09:47:12Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694987/694987-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
