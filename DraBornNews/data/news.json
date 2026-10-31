@@ -1,7 +1,127 @@
 {
-  "generatedAt": "2026-10-31T08:44:18.743233Z",
+  "generatedAt": "2026-10-31T15:13:09.439583Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "05677bedc48b23db5a",
+      "title": "Motorola Signature 27, lansmana günler kala videoda ortaya çıktı",
+      "summary": "Motorola Signature 27, Tandem OLED ekranı, 12.000 nit parlaklığı, Snapdragon işlemcisi ve 200 MP periskop kamerasıyla lansman öncesinde yeni bir videoda ortaya çıktı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/motorola-signature-27-lansmana-gunler-kala-videoda-ortaya-cikti--212313",
+      "publishedAt": "2026-10-31T15:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212313/1200x675motorola-signature-27-lansmana-gunler-kala-videoda-ortaya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3a4010160c1bf5ce13",
+      "title": "Apple Music Android'de Liquid Glass tasarımıyla yenilendi",
+      "summary": "Android için Apple Music 7.0 yayınlandı. Güncelleme, Apple'ın 27 sürümüyle getirdiği yarı saydam tasarım Liquid Glass ile yenilenen arayüz ve yeni simgeyi içeriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-music-android-de-liquid-glass-tasarimiyla-yenilendi--212312",
+      "publishedAt": "2026-10-31T14:30:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212312/1200x675apple-music-android-de-liquid-glass-tasarimiyla-yenilendi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "af5ab84a93f694ef88",
+      "title": "Samsung'dan Apple'a gönderme: \"Biz bu işin kitabını yazdık\"",
+      "summary": "Samsung, bu hafta çok sayıda iPhone Duo kullanıcısının yaşadığı ekran sorunlarıyla alay eden reklam kampanyası başlattı. Son paylaşım, anlamlı duvar kağıtlarından oluşuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-dan-apple-in-unutamayacagi-reklam-kampanyasi--212311",
+      "publishedAt": "2026-10-31T13:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212311/1200x675samsung-dan-apple-in-unutamayacagi-reklam-kampanyasi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e6c661070ff254eb28",
+      "title": "Sam Altman'dan tartışma yaratacak açıklama: \"Bilgisayarlarda RAM bulundurmak kaynak israfı\"",
+      "summary": "OpenAI CEO'su Sam Altman, PC'lerdeki RAM'in büyük bölümünün günün çoğunda kullanılmadığını savunarak sınırlı bellek kaynaklarının veri merkezlerinde kullanılmasının daha verimli olacağını söyledi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sam-altman-bilgisayarlarda-ram-bulundurmak-kaynak-israfi--212299",
+      "publishedAt": "2026-10-31T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212299/1200x675sam-altman-bilgisayarlarda-ram-bulundurmak-kaynak-israfi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "100347bef3b81ab59f",
+      "title": "Google'ın yapay zeka hamlesi beklenen getiriyi sağlamıyor: Hisseler çakıldı",
+      "summary": "Google, yapay zeka altyapısına yönelik yatırımlarını hızlandırırken geleneksel arama işindeki büyüme yavaşlıyor. Şirketin gelirleri %25 artmasına rağmen hisseleri yaklaşık %12 değer kaybetti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-in-yapay-zeka-hayali-pahaliya-patliyor-hisseler-cakildi--212292",
+      "publishedAt": "2026-10-31T12:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212292/1200x675google-in-yapay-zeka-hayali-pahaliya-patliyor-hisseler-cakildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c016a2136de04fe55e",
+      "title": "Twitch 15 yaş altına hesap açmayı yasaklıyor",
+      "summary": "15 yaş altına sosyal medya yasağı getirilmesine ilişkin olarak Twitch platformu yeni düzenlemesini duyurdu. 15 yaş altı hesaplar tamamen kapatılıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/twitch-kullanicilarina-uyari--212310",
+      "publishedAt": "2026-10-31T11:35:10Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212310/1200x675twitch-kullanicilarina-uyari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "022f54fd3b293440de",
+      "title": "Özürden 11 gün sonra fişi çekildi: Stellantis'in 1.2 PureTech motor fabrikası kapatıldı",
+      "summary": "Fransa'daki tarihi Stellantis fabrikası, 57 yıllık faaliyetin ardından kapatıldı. Tesis, özellikle kronik sorunlarıyla gündeme gelen 1.2 litrelik PureTech motorların üretim merkezi olarak tanınıyordu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ozur-sonrasi-stellantis-in-1-2-puretech-motor-fabrikasi-kapatildi--212308",
+      "publishedAt": "2026-10-31T11:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212308/1200x675ozur-sonrasi-stellantis-in-1-2-puretech-motor-fabrikasi-kapatildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "aad6adec250b2190a0",
+      "title": "Anthropic, Claude'un mevcut oyunları yeniden oluşturmasını yasakladı",
+      "summary": "Anthropic, Claude'un mevcut video oyunlarını isimleri değiştirilse bile yeniden oluşturmasını yasakladı. Yeni kural Claude Code'un kodlarında ortaya çıktı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/claude-un-mevcut-oyunlari-yeniden-olusturmasini-yasaklandi--212306",
+      "publishedAt": "2026-10-31T10:00:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212306/1200x675claude-un-mevcut-oyunlari-yeniden-olusturmasini-yasaklandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5e88034cf8ed649665",
+      "title": "A101 marketlerde benzinli motosiklet geçidi var",
+      "summary": "5 Kasım A101 Aktüel teknoloji ürünleri arasında Volta GPX Demon, Volta RSX7 ve Volta RSX5 benzinli motosiklet modelleri ve elektrikli bisikletler yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/5-kasim-a101-aktuel-katalogunda-neler-var--212298",
+      "publishedAt": "2026-10-31T09:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212298/1200x6755-kasim-a101-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7dca20593003d40f34",
+      "title": "Volkswagen Türkiye’ye geliyor mu, yeni Corolla ne sunacak, Tofaş’ta K9 üretimi başladı | Oto Gündem",
+      "summary": "Volkswagen Türkiye’de otomobil üretecek mi? Corolla’nın yeni motoru neler sunacak? Oto Gündem’de Grande Panda’dan yeni Jetta’ya, Chery’nin yeni SUV’undan Tofaş’ın üretim hamlesine haftayı konuşuyoruz.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/volkswagen-turkiye-ye-geliyor-mu-yeni-corolla-ne-sunacak--212302",
+      "publishedAt": "2026-10-31T09:00:52Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212302/1200x675volkswagen-turkiye-ye-geliyor-mu-yeni-corolla-ne-sunacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "de8cb4735f4d7a407b",
       "title": "Android telefonları tek SMS ile kullanılmaz hale getiren açık keşfedildi",
@@ -159,42 +279,6 @@
       "editorial": false
     },
     {
-      "id": "68c821485b312d5034",
-      "title": "Google popüler Android sürümlerini açıkladı: İşte acı tablo!",
-      "summary": "Google'ın açıkladığı verilere göre; Android 16, şu anda en yaygın kullanılan Android sürümü. Android 17 ise cihazların yalnızca %1'inde yüklü. İşte güncel kullanım oranları:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-populer-android-surumlerini-acikladi--212291",
-      "publishedAt": "2026-10-30T18:40:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212291/1200x675google-populer-android-surumlerini-acikladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6849e62f31d8941fd4",
-      "title": "Volkswagen, elektrikli Golf projesini askıya aldı",
-      "summary": "Volkswagen, finansal baskılar nedeniyle yeni nesil elektrikli Golf'ün geliştirme çalışmalarını geçici olarak durdurdu. 2028 için planlanan modelin 2031'den önce yollara çıkması artık zor görünüyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/volkswagen-elektrikli-golf-projesini-askiya-aldi--212293",
-      "publishedAt": "2026-10-30T18:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212293/1200x675volkswagen-elektrikli-golf-projesini-askiya-aldi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b1446de046a01604d9",
-      "title": "Aslında çok şey değişti mi? ''iPhone 18 Pro Detaylı İnceleme''",
-      "summary": "1 yıldır iPhone 17 Pro kullanıyordum, şimdi 1 aydır iPhone 18 Pro kullanıyorum. Ne kadar fark etti? Üzerine ekleyip 18 Pro'ya geçmeme değdi mi? Tüm detaylarıyla kıyasladım, anlattım.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/aslinda-cok-sey-degisti-mi-iphone-18-pro-detayli-inceleme--212294",
-      "publishedAt": "2026-10-30T18:04:10Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212294/1200x675aslinda-cok-sey-degisti-mi-iphone-18-pro-detayli-inceleme.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "f51a25d4cb75a4f716",
       "title": "In Puckoff: Reloaded, Hockey Is About More Than Scoring Goals",
       "summary": "What happens when five Finnish developers take the hockey they grew up playing on frozen ponds and turn it into a story about the greatest underground hockey player who ever lived? When I think about my childhood, some of my best memories aren’t from school, holidays or birthday parties. They’re from the ice. Growing up",
@@ -219,30 +303,6 @@
       "editorial": false
     },
     {
-      "id": "2527dd3faa68d34852",
-      "title": "Samsung’dan da kötü haber: Bellek krizi sürecek",
-      "summary": "Samsung, AI kaynaklı talep nedeniyle bellek kıtlığının 2027'de derinleşeceğini ve arz sıkıntısının 2028'e kadar süreceğini öngörürken 2027 HBM4 kapasitesinin tamamını şimdiden sattı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-dan-da-kotu-haber-bellek-krizi-surecek--212255",
-      "publishedAt": "2026-10-30T17:58:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212255/1200x675samsung-dan-da-kotu-haber-bellek-krizi-surecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9fd73f1716d2ff975d",
-      "title": "Yapay zeka veri merkezleri ABD'nin karbon salımını patlatabilir",
-      "summary": "Yapay zeka veri merkezlerinin enerji ihtiyacı ABD'de fosil yakıt yatırımlarını hızlandırıyor. Yeni analiz, elektrik kaynaklı karbon salımının 2030'a kadar yüzde 42 artabileceğini ortaya koyuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-veri-merkezleri-abd-nin-karbon-salimini-patlatabilir--212277",
-      "publishedAt": "2026-10-30T17:40:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212277/1200x675yapay-zeka-veri-merkezleri-abd-nin-karbon-salimini-patlatabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "46377df52764d6fd77",
       "title": "4 real? Tracking exploitation and patching of eMudhra’s weak keys",
       "summary": "Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates. Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the rest of the Internet remains exposed.",
@@ -252,18 +312,6 @@
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M66XYHSQQJRRA4097AJD12PN.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "494a00d0a1b7c501e3",
-      "title": "Intel Nova Lake işlemcilerinde 18A-P üretim sürecini doğruladı",
-      "summary": "Intel CEO'su Lip-Bu Tan, yeni nesil Nova Lake işlemcilerin şirketin 18A-P üretim sürecini kullanacağını doğruladı. İşlemciler hakkında daha fazla detay Ocak ayında paylaşılacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-nova-lake-islemcilerinde-18a-p-uretim-surecini-dogruladi--212287",
-      "publishedAt": "2026-10-30T17:18:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212287/1200x675intel-nova-lake-islemcilerinde-18a-p-uretim-surecini-dogruladi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -291,54 +339,6 @@
       "editorial": false
     },
     {
-      "id": "b8cccc634c3fc70a42",
-      "title": "Kasım ayında çıkacak en dikkat çekici 10 oyun",
-      "summary": "Yıla damga vurması beklenen GTA 6, yeni Football Manager, ikonik Zelda oyunu Ocarina of Time'ın yeni versiyonu... Kasım ayında oyunseverleri dikkat çekici yapımlar bekliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kasim-ayinda-cikacak-dikkat-cekici-10-oyun--212279",
-      "publishedAt": "2026-10-30T16:54:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212279/1200x675kasim-ayinda-cikacak-dikkat-cekici-10-oyun.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "abc63853bcfcc88cde",
-      "title": "Amazon'da teknolojik ürünlerde öne çıkan fırsatlar: Gülümseten Kasım başladı!",
-      "summary": "Amazon Gülümseten Kasım 2026 indirimlerinde öne çıkan teknoloji ürünlerini derledik. Telefon, bilgisayar, oyuncu ekipmanı ve ev elektroniği fırsatları burada.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-da-teknolojik-urunlerde-one-cikan-firsatlar-2026--212280",
-      "publishedAt": "2026-10-30T16:35:30Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212280/1200x675amazon-da-teknolojik-urunlerde-one-cikan-firsatlar-2026.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "84fb1dca328a4b6399",
-      "title": "Waymo'nun yeni robotaksi ortağı Toyota oldu: İlk durak Japonya",
-      "summary": "Waymo ve Toyota, robotaksi operasyonları için güçlerini birleştirdi. 2027 model bZ4X araçlarıyla başlayacak iş birliğinin ilk adresi Japonya, sonraki hedefi ise İngiltere olacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/waymo-nun-yeni-robotaksi-ortagi-toyota-oldu-ilk-durak-japonya--212260",
-      "publishedAt": "2026-10-30T16:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212260/1200x675waymo-nun-yeni-robotaksi-ortagi-toyota-oldu-ilk-durak-japonya.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "361ca13da551c621e9",
-      "title": "Professor X öksüz kaldı, Patrick Stewart hayatını kaybetti",
-      "summary": "X-Men evrenindeki Professor X rolüyle hafızalara kazınan ünlü yıldız Patrick Stewart hayatını kaybetti. Stewart son rolünü yine Professor X olarak oynamıştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/patrick-stewart-hayatini-kaybetti--212243",
-      "publishedAt": "2026-10-30T16:10:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212243/1200x675patrick-stewart-hayatini-kaybetti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "54d67a63412f884df5",
       "title": "Queen’s Domain Releases Today! Some Beginner’s Pro Tips for Success",
       "summary": "Queen’s Domain is a retro-fantasy action RPG that strands you alone on the monster-infested isle of Neasied, available today on XBOX Series X|S. You’ll need wits as well as strength if you want to survive in this twisting, secretive world. Here’s a list of top tips for newly minted warriors, assembled by the Future Friends",
@@ -360,30 +360,6 @@
       "category": "Güvenlik",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Security-Checkup-Thumbnail_Phon.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "93e4dddc083bafd93f",
-      "title": "Nvidia RTX 5080 24GB geliyor: Çıkış takvimi paylaşıldı",
-      "summary": "Nvidia'nın RTX 5080 ekran kartının 24 GB belleğe sahip yeni sürümü için çıkış takvimi öne çekildi. Modelin aralık ayında veya Ocak 2027'de satışa sunulabileceği belirtiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-rtx-5080-24gb-geliyor-cikis-takvimi-paylasildi--212265",
-      "publishedAt": "2026-10-30T15:45:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212265/1200x675nvidia-rtx-5080-24gb-geliyor-cikis-takvimi-paylasildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "672b6a8b6e700172aa",
-      "title": "Elon Musk: Yapay zekalar kendileri için kripto paralara saldırabilir",
-      "summary": "Binance'i hedef alan 6,36 milyar dolarlık saldırının ardından Elon Musk'tan yapay zeka uyarısı geldi. Musk, süper zekalı AI ajanlarının kendi çıkarları için saldırılar düzenleyebileceğini söyledi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elon-musk-yapay-zeka-kendisi-icin-kripto-paralara-saldirabilir--212272",
-      "publishedAt": "2026-10-30T15:22:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212272/1200x675elon-musk-yapay-zeka-kendisi-icin-kripto-paralara-saldirabilir.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -951,30 +927,6 @@
       "editorial": false
     },
     {
-      "id": "70ad41958c9fc3d455",
-      "title": "Pilot Garage Oto Ekspertiz Her Ay 2 Araç Hediye Ediyor",
-      "summary": "Pilot Garage, Oto Ekspertiz hizmeti alan kullanıcılarına yönelik düzenlediği çekiliş kampanyasıyla her ay 2 araç hediye ediyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/pilot-garage-oto-ekspertiz-her-ay-2-arac-hediye-ediyor-h228014.html",
-      "publishedAt": "2026-10-28T13:40:46Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695026/695026-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "aef545d021c808c190",
-      "title": "Konsiyon, Yapay Zekâ ile Güçlendi",
-      "summary": "İstanbul merkezli yerli bir site yönetim yazılımı olan Konsiyon, yapay zekâ özellikleri ile artık daha kullanışlı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/30-bin-projede-kullanilan-yerli-site-yonetim-yazilimi-yapay-zekayla-guclendi-h227936.html",
-      "publishedAt": "2026-10-28T13:06:25Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/694801/694801-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "52a1dc3d1063457027",
       "title": "Suit up as Astro Bot in Rayman Legends Retold",
       "summary": "Rayman Legends Retold is coming to PlayStation 5 and PlayStation 5 Pro on December 3, and Astro Bot’s iconic design is featured in the game as an exclusive costume, bringing the iconic platformer pairing full circle after Rayman made a cameo in Astro Bot (2024). The PS5-exclusive Astro Bot costume in Rayman Legends Retold will",
@@ -984,54 +936,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "181d3f4051a1a7863f",
-      "title": "Mobil Fotoğrafçılıkta Yeni Dönem: vivo X500 Pro Max Tanıtıldı!",
-      "summary": "vivo X500 Pro Max, 200 MP ZEISS telefoto kamerası, 400 mm lens desteği ve Türkiye'ye özel avantajlı lansman fırsatlarıyla tanıtıldı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/vivo-x500-pro-max-ozellikleri-fiyati-h227996.html",
-      "publishedAt": "2026-10-28T09:48:09Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/694969/694969-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "29c029d5bb971a8c14",
-      "title": "OpenAI'a Ağır Suçlama: \"ChatGPT Kızımıza İlacı Bıraktırdı ve Ölümüne Yol Açtı\"",
-      "summary": "OpenAI'a açılan davada, ChatGPT'nin epilepsi hastası genç kadına ilacını bıraktırarak ölümüne yol açtığı öne sürüldü.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/openai-agir-suclama-chatgpt-kizimiza-ilaci-biraktirdi-ve-olumune-yol-acti-h227998.html",
-      "publishedAt": "2026-10-28T09:47:55Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/694975/694975-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9915230c68eea0d532",
-      "title": "Toyota’dan Ezber Bozan Hamle: Yeni Nesil Benzinli Motorlarını Rakiplerine Satacak!",
-      "summary": "Toyota, geliştirdiği yeni nesil benzinli ve hibrit motorları diğer üreticilere satarak 2032’ye kadar milyarlarca euro gelir hedefliyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/toyota-yeni-nesil-benzinli-motorlarini-rakiplerine-satacak-h228007.html",
-      "publishedAt": "2026-10-28T09:47:46Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/694999/694999-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1505e893056120b798",
-      "title": "Samsung, Performansa Yönelik Dev Davayı Kaybetti (Bilerek Oyun Performansını mı Kısıtlıyor?)",
-      "summary": "Güney Kore mahkemesi, Galaxy S21 ve S22 serilerinde oyun performansını kısıtlayan GOS yazılımını gizlediği gerekçesiyle Samsung'a para cezası verdi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-performansa-yonelik-dev-davayi-kaybetti-h228004.html",
-      "publishedAt": "2026-10-28T09:47:23Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/694960/694960-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1199,6 +1103,102 @@
       "publishedAt": "2026-10-20T22:20:16Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5DK5FY53PEFH46MT990YMSR.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "bc34cbec3dd5a0fb15",
+      "title": "Introducing tsrs: A port of TypeScript to Rust",
+      "summary": "Cloudflare is collaborating on tsrs, a Rust port of TypeScript that is up to 8x faster and uses 70% less memory.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/typescript-rust-port/",
+      "publishedAt": "2026-10-20T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5C82VPWPDDZ7P6P0G4H7KB3.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "02ab68be675b3bf679",
+      "title": "Advancing digital sovereignty with greater control and choice",
+      "summary": "Across my conversations with leaders in government, critical infrastructure and regulated industries, one priority consistently rises to the top: putting technology to work on their most important systems while maintaining the control those systems require. This challenge is becoming more important as advanced cloud and AI capabilities move into public services, regulated processes and essential...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/20/advancing-digital-sovereignty-with-greater-control-and-choice/",
+      "publishedAt": "2026-10-20T08:20:02Z",
+      "category": "Teknoloji",
+      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Digital-Sovereignty-Image-2.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "68e2ee5d21f7dc1bf4",
+      "title": "Cutting our inference bill by 68% by being obsessive about optimization",
+      "summary": "When our AI code reviewer's cost per run doubled, we dug into the token usage to find out why. Learn how we used prompt caching and intelligent model routing to slash our inference bill by 68% while speeding up reviews.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/obsessive-inference-optimization/",
+      "publishedAt": "2026-10-19T19:12:53Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M58N5J1Y9HY8N3R115KEY6NE.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "40634a33b7feb1d3da",
+      "title": "Introducing Clairic, a new System One class of extraction models",
+      "summary": "Clairic is a new model from Cloudflare that is a System One extraction modeI, capable of extracting, computing, estimating, and forecasting data from unstructured inputs.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/clairic-extraction-model/",
+      "publishedAt": "2026-10-19T17:48:26Z",
+      "category": "Yapay Zeka",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AKCGDJHDMM9AVJKV73MJGX.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "3917e17d2e227fd7bd",
+      "title": "Securing the agentic insider",
+      "summary": "In the last few months, concerns have arisen about AI safety as a growing number of incidents were publicly disclosed. These incidents exposed how powerful models have become and how they represent a significant threat if not handled well. And with the global race on innovation, the challenge will compound as models become even more...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/19/securing-the-agentic-insider/",
+      "publishedAt": "2026-10-19T13:00:02Z",
+      "category": "Güvenlik",
+      "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Secure-AI-Image-1-10_19.png.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "72477d086944244f5e",
+      "title": "Beyond the patch: Protecting your NetScaler gateway against future vulnerabilities",
+      "summary": "CVE-2026-88771 lets attackers run commands on NetScaler Gateway before anyone signs in. Patching takes time most teams don't have, so the sign-in decision has to move in front of the vulnerable code.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/protect-your-netscaler-gateway/",
+      "publishedAt": "2026-10-19T13:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M537RBT01XNYZ0RR0CP9PS55.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "1beb66d0b231d0b1c0",
+      "title": "Continuous accountability for Verified bots",
+      "summary": "Identity alone doesn't guarantee a bot will behave responsibly. We are introducing a system to continuously evaluate whether Verified bots honor site preferences, like robots.txt and HTTP 429s, ensuring they remain accountable over time.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/verified-bots-accountability/",
+      "publishedAt": "2026-10-16T13:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M51ZPERWNWYTD7Z36YMY80A8.01M51ZPFH7VV8EHQTMPJG9FHZ4.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "8d017137f926178ef1",
+      "title": "A fully programmable secure web gateway",
+      "summary": "Cloudflare Gateway and Data Loss Prevention have inherited the flexibility and power of Cloudflare Workers through our full-stack integration with the Cloudflare Developer platform.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/programmable-gateway-dlp/",
+      "publishedAt": "2026-10-15T17:11:12Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M50725GWYBHA14CTTDWFESC7.png",
       "language": "en",
       "editorial": false
     }
