@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-01T20:23:42.119643Z",
+  "generatedAt": "2026-11-01T23:48:48.262057Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e7da6805ec5cf79a6d",
+      "title": "Doom'un yaratıcısından yeni oyun geliyor: İptal edilen proje hayata döndü",
+      "summary": "Doom, Quake, Wolfenstein gibi efsanevi oyunların arkasındaki isim olan John Romero, Xbox tarafından iptal edilen yeni oyunu hakkında sevindiren açıklamalarda bulundu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/doom-un-yaraticisinin-yeni-oyunu-iptal-kararindan-kurtuldu--212342",
+      "publishedAt": "2026-11-01T20:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212342/1200x675doom-un-yaraticisinin-yeni-oyunu-iptal-kararindan-kurtuldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "fa1666c92c4f00c9a1",
       "title": "YouTube'da yeni sorun: Videolar tam ekrandan çıkıyor, ses kesiliyor!",
@@ -263,18 +275,6 @@
       "publishedAt": "2026-11-01T07:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212319/1200x675samsung-galaxy-z-fold-9-tasarimi-ve-kamera-ozellikleri-sizdirildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e4f376eb667ea2c896",
-      "title": "Epic Games'in yeni ücretsiz oyunları belli oldu: İşte bu haftanın oyunları",
-      "summary": "Epic Games Store'un yeni ücretsiz oyunları belli oldu. 5 Kasım- 12 Kasım tarihleri arasında iki oyun ücretsiz olarak kütüphaneye eklenebilecek. İşte detaylar.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/epic-games-in-yeni-ucretsiz-oyunlari-belli-oldu-bu-hafta-ne-var--212317",
-      "publishedAt": "2026-11-01T06:30:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212317/1200x675epic-games-in-yeni-ucretsiz-oyunlari-belli-oldu-bu-hafta-ne-var.jpg",
       "language": "tr",
       "editorial": false
     },
