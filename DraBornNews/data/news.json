@@ -1,7 +1,55 @@
 {
-  "generatedAt": "2026-11-01T23:48:48.262057Z",
+  "generatedAt": "2026-11-02T05:30:18.160399Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "6ed2c6cbe72b9d2254",
+      "title": "WhatsApp Grup Sohbetlerine 4 Yeni Özellik Geldi",
+      "summary": "WhatsApp, grup sohbetleri için 4 yeni özellik getirdiğini duyurdu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/whatsapp-grup-sohbetleri-4-yeni-ozellik-h228088.html",
+      "publishedAt": "2026-11-02T04:49:16Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695215/695215-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "67f33f90d3874ab551",
+      "title": "Volkswagen, Türkiye'de Üretim Yapabilir!",
+      "summary": "Doğuş Otomotiv ile Volkswagen Grup Şirketleri \"Türkiye'de üretim mi yapılacak?\" dedirten bir niyet mektubu imzaladı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/volkswagen-turkiye-uretim-yapabilir-h228082.html",
+      "publishedAt": "2026-11-02T04:32:21Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695206/695206-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d6627043525eee06f4",
+      "title": "Ticaret Bakanlığı, 2 GSM Şirketine Milyonlarca TL Ceza Verdi",
+      "summary": "Tiacaret Bakanlığı Reklam Kurulu, iki GSM şirketine milyonlarca TL ceza verdi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/rekabet-kurulu-gsm-sirketleri-ceza-h228079.html",
+      "publishedAt": "2026-11-02T04:23:02Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695200/695200-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c65eb58e1da132f32b",
+      "title": "Türkiye'de 15 Yaş Altına Sosyal Medya Yasağı Yürürlüğe Girdi",
+      "summary": "Cumhurbaşkanlığı Siber Güvenlik Başkanlığı tarafından hazırlanan 15 yaş altı sosyal medya yasağı yürürlüğe girdi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/turkiye-15-yas-alti-sosyal-medya-yasagi-yururluge-girdi-h228076.html",
+      "publishedAt": "2026-11-02T04:14:04Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695197/695197-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "e7da6805ec5cf79a6d",
       "title": "Doom'un yaratıcısından yeni oyun geliyor: İptal edilen proje hayata döndü",
