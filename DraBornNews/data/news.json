@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-02T22:40:07.578054Z",
+  "generatedAt": "2026-11-03T03:53:12.641123Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "f4fb55ff9067821b40",
+      "title": "Apple, Son 3 Ayda Kaç Para Kazandığını Açıkladı",
+      "summary": "Apple, son 3 ayda ne kadar kazandığını açıkladı. iPhone ve Mac sayesinde rekor kırıldı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/apple-son-3-ay-kac-para-kazandi-acikladi-h228161.html",
+      "publishedAt": "2026-11-03T03:44:39Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695401/695401-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "8a52db87b3e6237319",
       "title": "Xbox Game Pass, Kasım ayında 14 oyuna veda edecek",
@@ -623,18 +635,6 @@
       "publishedAt": "2026-11-02T10:10:31Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/695239/695239-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9bf07523218dd5cdd4",
-      "title": "Fiat Egea Bilinmeyen Özellikler",
-      "summary": "Fiat Egea'nın bu zamana kadar çok bilinmeyen gizli özelliklerini Webtekno'da açıklıyoruz.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/fiat-egea-gizli-ozellikler-h228070.html",
-      "publishedAt": "2026-11-02T10:05:04Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695185/695185-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
