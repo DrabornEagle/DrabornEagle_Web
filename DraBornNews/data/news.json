@@ -1,7 +1,295 @@
 {
-  "generatedAt": "2026-11-04T15:17:41.236744Z",
+  "generatedAt": "2026-11-04T21:27:11.063238Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "21aeb7ac946adbc9f3",
+      "title": "Sony’nin Turuncu Süngerli Walkman Kulaklıkları Geri mi Dönüyor?",
+      "summary": "Sony’nin yeni tanıtım videosu, 1979’da ilk Walkman’le birlikte çıkan kulaklıkların dönüşüne işaret ediyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/sony-1979-retro-walkman-kulaklik-geri-donuyor-h228316.html",
+      "publishedAt": "2026-11-04T21:19:34Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695734/695734-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0302cfdea438d1bcfb",
+      "title": "From Polish Museums to XBOX: Bringing the World of The End of the Sun to Life",
+      "summary": "Some of the quests in The End of the Sun began in an unusual way – with objects we discovered in small museums across Poland. Sometimes, an old tool or a fascinating piece of traditional craftsmanship inspired us so much that we decided to build part of the game’s story around it. When we first",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/04/from-polish-museums-to-xbox/",
+      "publishedAt": "2026-11-04T21:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/03_REFERENCE_Thatched_Cottage-copy-5dd9572acbf2ee9ceac7-911x683.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "59a9e3ac4e44f00ec6",
+      "title": "ChatGPT, Google arama trafiğinin yüzde 20'sine ulaştı",
+      "summary": "OpenAI, ChatGPT üzerinden gerçekleştirilen web aramalarının hacminin Google'ın toplam arama trafiğinin yaklaşık yüzde 20'sine ulaştığını açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/chatgpt-google-arama-trafiginin-yuzde-20-sine-ulasti--212483",
+      "publishedAt": "2026-11-04T20:47:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212483/1200x675chatgpt-google-arama-trafiginin-yuzde-20-sine-ulasti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fd31f6cdaa528b2aac",
+      "title": "Galaxy S27 Pro'da Snapdragon sürprizi: S27 Ultra'dan farklı olacak",
+      "summary": "Samsung'un gelecek yıl tanıtacağı Galaxy S27 ailesinin işlemci detayları ortaya çıktı. Şirketin dört modelde üç farklı işlemci kullanması bekleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-s27-serisinde-uc-farkli-islemci-yer-alacak--212485",
+      "publishedAt": "2026-11-04T20:26:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212485/1200x675samsung-galaxy-s27-serisinde-uc-farkli-islemci-yer-alacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "23c27cd44d7a4fb422",
+      "title": "AKSUNGUR, İHA'dan sonobuoy bırakarak denizaltı tespiti yaptı",
+      "summary": "TUSAŞ'ın AKSUNGUR İHA'sı Akdeniz'de ilk kez havadan sonobuoy bırakarak denizaltı tespit görevi gerçekleştirdi. Toplanan veriler ise Ankara'da işlendi ve hedefler tespit edildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/aksungur-iha-dan-sonobuoy-birakarak-denizalti-tespiti-yapti--212482",
+      "publishedAt": "2026-11-04T20:04:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212482/1200x675aksungur-iha-dan-sonobuoy-birakarak-denizalti-tespiti-yapti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8d55eb284042505d55",
+      "title": "How The Challenge Shrine Will Change How you Play Halls of Torment",
+      "summary": "Hello, adventurers! The Lost Archives, the second DLC forHalls of Torment, is available now on XBOX! There’s also a large and free update for all players.From the swamps of our first DLC, the Boglands, we are marching into The Lost Archives, where cultists and forgotten knowledge await us. You’re a new tormented Soul? Here’s a",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/04/how-the-challenge-shrine-will-change-how-you-play/",
+      "publishedAt": "2026-11-04T20:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/lostarchives_E-1-107efff597cfb598df58-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "fcbd4a1c2bb26eed90",
+      "title": "Mercedes’e ekranlar yetmedi: Şimdi sıra otomobil camlarında",
+      "summary": "Mercedes-Benz, araç camlarına entegre LED ekranlar ve holografik ön cam teknolojisi geliştiriyor. Sistemler, dışarıya uyarı gösterebilirken yolculara navigasyon ve eğlence içerikleri sunmayı amaçlıyor",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/mercedes-e-ekranlar-yetmedi-simdi-sira-otomobil-camlarinda--212478",
+      "publishedAt": "2026-11-04T19:42:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212478/1200x675mercedes-e-ekranlar-yetmedi-simdi-sira-otomobil-camlarinda.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d561ec0c0b204fa921",
+      "title": "Büyük binalar için doğalgaza alternatif ısı pompası",
+      "summary": "Vaillant, büyük binalar için geliştirdiği yeni ısı pompasını tanıttı. 1.200 metrekareye kadar alanları ısıtabilen Vaillant aroTherm perform sistemi, -15 derece soğukta da çalışabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/buyuk-binalar-icin-dogalgaza-alternatif-isi-pompasi--212477",
+      "publishedAt": "2026-11-04T19:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212477/1200x675buyuk-binalar-icin-dogalgaza-alternatif-isi-pompasi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a839079dd91fee2212",
+      "title": "Preview Two New Ways to Play with XBOX Cloud Gaming",
+      "summary": "Starting today, we’re rolling out two previews for XBOX Cloud Gaming. On supported Smart TVs, you can use your phone as a controller when you don’t have one nearby. In the US, you can also preview cloud connect with the new XBOX Nano Controller. It uses Wi-Fi to connect directly to your cloud gaming session,",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/04/cloud-gaming-inputs-preview/",
+      "publishedAt": "2026-11-04T19:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/XBOX-Wire-DtC-Phone-Controller-110426-5428ff0def107f49971d-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "9cbe55bcaf25e915cf",
+      "title": "Fransa'da kan bankalarına siber saldırı: Tüm stok çöp oldu",
+      "summary": "Fransa'da üç bölgesel kan bankasının soğutma sistemleri siber saldırıya uğradı. Sıcaklık ayarları değiştirilen depolardaki kan ürünleri personelin hızlı müdahalesi sayesinde korundu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bu-da-oldu-fransa-da-kan-bankalarina-siber-saldiri--212489",
+      "publishedAt": "2026-11-04T19:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://www.donanimhaber.com/images/images/haber/212489/1200x675bu-da-oldu-fransa-da-kan-bankalarina-siber-saldiri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1a74df36b0354b5040",
+      "title": "Bayraktar TB2, FPV kamikaze dronları havadan bırakarak hedefleri vurdu",
+      "summary": "Bayraktar TB2, Skydagger FPV kamikaze dronları havadan bırakarak hedefleri tam isabetle vurdu. Test, FPV dronların menzilini binlerce kilometreye çıkarabilecek yeni bir kabiliyeti ortaya koydu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bayraktar-tb2-bu-sefer-fpv-kamikaze-dronlarla-vurdu--212474",
+      "publishedAt": "2026-11-04T18:36:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212474/1200x675bayraktar-tb2-bu-sefer-fpv-kamikaze-dronlarla-vurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "15250aa5983d80cae7",
+      "title": "GTA 6, DLSS 5'li videosu paylaşıldı: Nasıl görünüyor?",
+      "summary": "GTA 6'nın PC sürümü henüz çıkış tarihi bile almamışken, bir kullanıcı DLSS 5 ve Çoklu Kare Oluşturma teknolojisini test etti. Sonuçlar oyunun geleceğine ışık tutuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gta-6-dlss-5-li-videosu-paylasildi-nasil-gorunuyor--212484",
+      "publishedAt": "2026-11-04T18:14:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212484/1200x675gta-6-dlss-5-li-videosu-paylasildi-nasil-gorunuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "851e363ab0b40e6b34",
+      "title": "Indie Selects for November 2026: Survive and Thrive",
+      "summary": "Every Wednesday, dive into the Indie Select Hub — your gateway to a fresh, curated indie collection plus four themed spotlights that rotate weekly! You can always find this collection hub in the XBOX Store and on XBOX.com/IndieSelects. The holiday season is just around the corner, and the ID@XBOX team is excited to share November’s",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/04/indie-selects-november/",
+      "publishedAt": "2026-11-04T18:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/November2026_Selects_Horizontal-c9ebe4e95bf2ddab83c1-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "640ef482dab7f909ee",
+      "title": "Watch Henry Cavill build a video game on his Googlebook",
+      "summary": "Henry Cavill built a video game on his Googlebook to help support men’s health.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/devices/googlebook/henry-cavill-mustache-protocol-video-game/",
+      "publishedAt": "2026-11-04T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/MP_EP1_HORIZONTAL.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "56805bf546d8267cd5",
+      "title": "Sam Altman, RAM tartışmasının ardından adını 'Ram Altman' yaptı",
+      "summary": "OpenAI CEO'su Sam Altman, bilgisayarlardaki RAM kullanımına ilişkin sözleri nedeniyle tepki çekti. Altman, eleştirilerin ardından X'te adını esprili biçimde Ram Altman olarak değiştirdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sam-altman-ram-tartismasinin-ardindan-adini-ram-altman-yapti--212491",
+      "publishedAt": "2026-11-04T17:52:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212491/1200x675sam-altman-ram-tartismasinin-ardindan-adini-ram-altman-yapti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "76a705f6246666c196",
+      "title": "ÖTV’siz araç alımında limit yaklaşık 800 bin TL artıyor",
+      "summary": "Engelli bireylerin ÖTV istisnasıyla araç alımında uygulanan üst limitin, 2027’de yaklaşık 800 bin TL artması bekleniyor. Yeniden değerleme hesabına göre sınır 3.673.700 TL seviyesine yükselecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/otv-siz-arac-aliminda-limit-yaklasik-800-bin-tl-artiyor--212475",
+      "publishedAt": "2026-11-04T17:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212475/1200x675otv-siz-arac-aliminda-limit-yaklasik-800-bin-tl-artiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4c6c6dcbfc3b2dc9c5",
+      "title": "Kuzey Marmara Otoyolu'nda şarj istasyonlarında tekel sona eriyor",
+      "summary": "Rekabet Kurumu, Kuzey Marmara Otoyolu'nda şarj istasyonlarındaki münhasırlığı kaldırdı. Yeni düzenlemeyle farklı markalar eşit koşullarda hizmet verecek ve sürücülerin şarj seçenekleri artacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kuzey-marmara-otoyolu-nda-sarj-istasyonlarinda-tekel-sona-eriyor--212470",
+      "publishedAt": "2026-11-04T17:10:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212470/1200x675kuzey-marmara-otoyolu-nda-sarj-istasyonlarinda-tekel-sona-eriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "adac179cb50b04309a",
+      "title": "Escape Academy 2: Back 2 School – Become a Valedictorian with These Tips",
+      "summary": "For a certain kind of gamer, nothing lights them up more than the promise of a big space full of environmental puzzles. Puzzles can be tricky to make accessible, though, presenting a thin line sometimes between childishly easy and frustratingly difficult. Fortunately, Escape Academy 2: Back 2 School fills a great niche: providing a mountain",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/04/escape-academy-2-tips/",
+      "publishedAt": "2026-11-04T17:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Screenshot-9-a690660e98f596e1905d-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f679d19ff8e5f95ac4",
+      "title": "Google duyurdu: Android ve iPhone arasında dosya paylaşımı değişiyor",
+      "summary": "Google, Android Dev Summit 2026'da Android ve iOS uygulamalarının cihazlar arası dosya paylaşım özelliğini doğrudan entegre etmelerine olanak tanıyacak Quick Share SDK'sı duyurdu. İşte detaylar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-quick-share-i-iphone-ve-android-uygulamalarina-aciyor--212465",
+      "publishedAt": "2026-11-04T16:48:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212465/1200x675google-quick-share-i-iphone-ve-android-uygulamalarina-aciyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2405d3503aa1dc8634",
+      "title": "Samsung Galaxy S27 Ultra'nın maketi ortaya çıktı: İşte tasarımı",
+      "summary": "Samsung Galaxy S27 Ultra'nın maketi, önceki modelle arasındaki tasarım farklarını ortaya koydu. Yeni kamera adası ve mıknatıs desteği dikkat çekiyor. İşte detaylar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-s27-ultra-nin-maketi-ortaya-cikti-iste-tasarimi--212463",
+      "publishedAt": "2026-11-04T16:26:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212463/1200x675samsung-galaxy-s27-ultra-nin-maketi-ortaya-cikti-iste-tasarimi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8912cdca0d3eb6cf38",
+      "title": "Efsane geri dönüyor: Elder Scrolls 6'nın tanıtım videosu ve ilk detayları paylaşıldı",
+      "summary": "Bethesda, sekiz yılı aşkın süredir beklenen The Elder Scrolls 6'nın adını ve geçeceği bölgeyi açıkladı. Oyun için kısa bir tanıtım videosu da yayınlandı. İşte detaylar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/elder-scrolls-6-sentinel-in-tanitim-videosu-ve-ilk-detaylari-pay--212466",
+      "publishedAt": "2026-11-04T16:04:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212466/1200x675elder-scrolls-6-sentinel-in-tanitim-videosu-ve-ilk-detaylari-pay.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "10040d2a734e890ef1",
+      "title": "Siber Güvenlik Başkanlığı’ndan kritik uyarı: WhatsApp hesapları tehlikede!",
+      "summary": "Siber Güvenlik Başkanlığı, son dönemde hızla artan WhatsApp dolandırıcılıklarına karşı kritik bir güvenlik uyarısı yayınladı. WhatsApp hesabını korumak için ne yapmalı?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/siber-guvenlik-baskanligi-ndan-kritik-whatsapp-uyarisi--212492",
+      "publishedAt": "2026-11-04T15:58:00Z",
+      "category": "Güvenlik",
+      "image": "https://www.donanimhaber.com/images/images/haber/212492/1200x675siber-guvenlik-baskanligi-ndan-kritik-whatsapp-uyarisi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b1daaa09917ebf7350",
+      "title": "Binance’teki kripto soygununda yapay zeka detayı",
+      "summary": "Binance’in 6,3 milyar dolarlık kripto soygunu, sahte iş görüşmeleri ve zararlı yazılımlarla aylar süren bir saldırının sonucu oldu. Hackerlar, borsanın dahili yapay zeka aracını da kullandı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/binance-teki-kripto-soygununda-yapay-zeka-detayi--212467",
+      "publishedAt": "2026-11-04T15:42:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212467/1200x675binance-teki-kripto-soygununda-yapay-zeka-detayi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3a019c529d6194cb1b",
+      "title": "Renault'nun yeni elektrikli aracı sürücüler için geliştirilmedi",
+      "summary": "Renault, askeri ve sivil görevler için geliştirilen elektrikli Forefront Concept’i tanıttı. Bir ton yük taşıyabilen araç, uzaktan kontrollü veya otonom olarak tehlikeli bölgelere gönderilebiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/renault-nun-yeni-elektrikli-araci-suruculer-icin-gelistirilmedi--212468",
+      "publishedAt": "2026-11-04T15:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212468/1200x675renault-nun-yeni-elektrikli-araci-suruculer-icin-gelistirilmedi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "08d5c8057bd2435b1d",
       "title": "PlayStation Store: October 2026’s top downloads",
@@ -39,6 +327,18 @@
       "editorial": false
     },
     {
+      "id": "3c9064591e39d8e3d5",
+      "title": "Dokunmatik Olmayan MacBook Pro Modellerine Yakında Veda Edebiliriz",
+      "summary": "Apple, MacBook Pro serisini gelecekte tamamen dokunmatik ekranlı modeller etrafında birleştirmeyi planlıyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/dokunmatik-olmayan-macbook-pro-modellerine-yakinda-veda-edebiliriz-h228313.html",
+      "publishedAt": "2026-11-04T14:42:21Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695737/695737-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
       "id": "42b3da88921950429a",
       "title": "Pegasus'tan 173 GB veri çalındığı iddia edildi: Yolcuların bilgileri tehlikede olabilir",
       "summary": "Pegasus Hava Yolları sistemlerine sızıldığı ve yaklaşık 173 GB verinin ele geçirildiği iddia edildi. Erişilen veriler arasında yolcuların kimlik, pasaport ve rezervasyon bilgileri de bulunuyor.",
@@ -59,6 +359,30 @@
       "publishedAt": "2026-11-04T14:34:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212471/1200x675xiaomi-190-gun-pil-omru-sunan-yeni-akilli-dis-fircasini-tanitti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ac30ca45e20c4a5e5a",
+      "title": "Samsung, \"iPhone Duo\" ile Âdeta Dalga Geçti: \"Deneyim Bu Yüzden Önemli\"",
+      "summary": "Samsung, ekran sorunlarıyla gündeme gelen iPhone Duo'yla, doğrudan isim vermeden yayımladığı yeni blog yazısında âdeta dalga geçti.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/samsung-iphone-duo-ile-adeta-dalga-gecti-h228310.html",
+      "publishedAt": "2026-11-04T14:15:09Z",
+      "category": "Mobil",
+      "image": "https://imgrosetta.webtekno.com/file/695725/695725-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9df255718eef0c1230",
+      "title": "Honor’un Hedefi Haftada Bir Şarj: 15.000 mAh Bataryalı Bir Model Üzerinde Çalışıyor!",
+      "summary": "Honor’un 14.000 ila 15.000 mAh kapasiteli bataryalarla yeni bir telefon test ettiği söyleniyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/honor-15000-mah-bataryali-haftalik-telefon-sizintisi-h228307.html",
+      "publishedAt": "2026-11-04T14:14:58Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695731/695731-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -111,6 +435,18 @@
       "editorial": false
     },
     {
+      "id": "592027e00c6a4e5052",
+      "title": "Otoyollardaki Şarj Ağı Genişliyor: Soket Sayısında Dev Artış!",
+      "summary": "Rekabet Kurumunun müdahalesiyle otoyollarda şarj ağı hızla büyürken İstanbul-İzmir Otoyolu'nda soket sayısı 8 kat artışla 750'ye ulaştı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/otoyollardaki-sarj-agi-genisliyor-h228304.html",
+      "publishedAt": "2026-11-04T13:27:12Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695719/695719-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
       "id": "0556cb0281d3f69343",
       "title": "iPhone ve MacBook için alarm zilleri çalıyor: Yeni zam kapıda",
       "summary": "Apple, artan bellek maliyetleri nedeniyle iPhone, Mac ve iPad fiyatlarına yeniden zam yapabilir. Şirket yönetimi yeni fiyat artışlarını doğrulamasa da maliyet baskısının süreceğini belirtiyor.",
@@ -119,18 +455,6 @@
       "publishedAt": "2026-11-04T13:26:00Z",
       "category": "Mobil",
       "image": "https://www.donanimhaber.com/images/images/haber/212461/1200x675iphone-ve-macbook-icin-alarm-zilleri-caliyor-yeni-zam-kapida.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f87ff901d95f7cff6e",
-      "title": "AMD'nin veri merkezi gelirleri ikiye katlandı, hisseleri yükseldi",
-      "summary": "AMD, üçüncü çeyrekte beklentileri aşan gelir açıkladı. Yapay zeka veri merkezlerine yönelik talep şirketin büyümesini hızlandırırken AMD hisseleri piyasa sonrası işlemlerde yüzde 8 yükseldi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amd-nin-veri-merkezi-gelirleri-ikiye-katlandi-hisseleri-yukseldi--212455",
-      "publishedAt": "2026-11-04T13:04:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212455/1200x675amd-nin-veri-merkezi-gelirleri-ikiye-katlandi-hisseleri-yukseldi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -147,26 +471,38 @@
       "editorial": false
     },
     {
-      "id": "9d905a5f2284e4c8ff",
-      "title": "iPhone Duo en çok Samsung’a yaradı: Satışlar yüzde 20 yükseldi",
-      "summary": "Apple'ın ilk katlanabilir iPhone'u iPhone Duo'nun piyasaya çıkışı Samsung'un Galaxy Z Fold 8 modeline yaradı. Galaxy Z Fold 8 satışlarında yüzde 20 artış yaşandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-duo-en-cok-samsung-a-yaradi-satislar-yuzde-20-yukseldi--212459",
-      "publishedAt": "2026-11-04T12:42:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212459/1200x675iphone-duo-en-cok-samsung-a-yaradi-satislar-yuzde-20-yukseldi.jpg",
+      "id": "1a9b01ad0127186878",
+      "title": "WhatsApp Artık Son Fotoğraf ve Videolarınızı Göndermek İçin Önermeye Başlayacak",
+      "summary": "WhatsApp, sohbet ekranında galerinizdeki en son fotoğraf ve videoları otomatik olarak paylaşmayı öneren yeni özelliğini kullanıma sunuyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/whatsapp-fotograf-ve-videolarinizi-gondermek-icin-onermeye-baslayacak-h228298.html",
+      "publishedAt": "2026-11-04T13:00:29Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695695/695695-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
     {
-      "id": "3743c7256ead2c9781",
-      "title": "Apple Watch artık konuşmaları hatırlayacak: Live Rewind ve Siri Recap geliyor",
-      "summary": "Apple Watch Series 12 ve Ultra 4 modellerinin merakla beklenen yapay zekâ özellikleri test edilmeye başlandı. Live Rewind ve Siri Recap, konuşmaları özetleyip kaçırılanları hatırlatabiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-watch-a-tartismali-yapay-zek-ozellikleri-geldi--212460",
-      "publishedAt": "2026-11-04T12:20:00Z",
+      "id": "0b7aaf28c6501a4ac1",
+      "title": "Siri Artık Sizin Adınıza Uygulamaları Yönetecek: İşte iOS 27.3 Beta ile Gelen Yenilikler",
+      "summary": "iOS 27.3 beta, Siri’ye uygulamalar içinde işlem yapma yeteneği kazandırıyor. Yenilenen Sağlık uygulamasını geri getiren sürümde Safari için dikey sekmeler, Apple Watch için konuşmaları özetleyen özellikler de var. Türkçe dil desteği de hazırlık aşamasında.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/ios-27-3-beta-siri-uygulama-yonetimi-yenilikler-h228295.html",
+      "publishedAt": "2026-11-04T12:36:54Z",
       "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212460/1200x675apple-watch-a-tartismali-yapay-zek-ozellikleri-geldi.jpg",
+      "image": "https://imgrosetta.webtekno.com/file/695665/695665-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3e55c0c2bb2d20fa17",
+      "title": "Geliştiricilere \"5 Dakika\" Şartı: Steam'de Oyun Çıkarmak Artık Çok Daha Zor",
+      "summary": "Steam, yapay zekâ oyunlarının yol açtığı inceleme gecikmelerini önlemek amacıyla geliştiriciler için yeni test ve yayın kurallarını duyurdu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/steam-oyun-cikarmak-artik-cok-daha-zor-h228292.html",
+      "publishedAt": "2026-11-04T12:31:45Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/695689/695689-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -183,18 +519,6 @@
       "editorial": false
     },
     {
-      "id": "e1163c4c8e43a23ad2",
-      "title": "ZTE, Nubia markasını elden çıkarıyor",
-      "summary": "Yıllardır ana akım akıllı telefon pazarının vazgeçilmez markalarından olan Nubia yakın zamanda elden çıkarılıyor. ZTE yeni kurulan ortaklığa tüm faaliyetlerini devredecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/zte-den-kritik-hamle--212445",
-      "publishedAt": "2026-11-04T11:59:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212445/1200x675zte-den-kritik-hamle.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "a603c38aa62143b48f",
       "title": "S27 Ultra'yı Bile Kıskandıracak: 6000 mAh Bataryalı Galaxy A38 Geliyor!",
       "summary": "Samsung Galaxy A38’in 6000 mAh bataryayla gelmesi bekleniyor. Sızıntılar doğruysa orta segmentteki bu model, pil kapasitesinde Galaxy S27 Ultra’nın önüne geçecek.",
@@ -203,18 +527,6 @@
       "publishedAt": "2026-11-04T11:38:30Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695647/695647-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d020867e81bc161028",
-      "title": "TCL, kağıt hissi sunan NXTPAPER teknolojisini telefonlara taşıyor",
-      "summary": "TCL, yansıma ve parmak izi önleyici kaplamalarla geliştirilen NXTPAPER ekran teknolojisini yeni telefon ve tabletlerine taşıdı. Yeni modeller, kağıt benzeri okuma deneyimini hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/tcl-kagit-hissi-sunan-nxtpaper-teknolojisini-telefonlara-tasiyor--212451",
-      "publishedAt": "2026-11-04T11:38:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212451/1200x675tcl-kagit-hissi-sunan-nxtpaper-teknolojisini-telefonlara-tasiyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -243,42 +555,6 @@
       "editorial": false
     },
     {
-      "id": "0492f00fef62716916",
-      "title": "Safari'ye büyük güncelleme: İşte iOS 27.3 ile gelecek yenilikler",
-      "summary": "Apple, iOS 27.3, iPadOS 27.3 ve macOS 27.3 sürümlerinin ilk beta sürümlerini yayınladı. Bu güncellemeler, Safari'ye dikey sekme düzeni, uyarlanabilir koyu mod gibi önemli yenilikler getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/safari-ye-buyuk-guncelleme-iste-ios-27-3-ile-gelecek-yenilikler--212452",
-      "publishedAt": "2026-11-04T11:16:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212452/1200x675safari-ye-buyuk-guncelleme-iste-ios-27-3-ile-gelecek-yenilikler.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "030a0be011fd7334a1",
-      "title": "Hürmüz krizi Türkiye’yi vurdu: Enerji ithalat faturası rekor kırdı",
-      "summary": "Hürmüz krizi Türkiye'nin enerji ithalat faturasını kabarttı. Ekim ayında 8,3 milyar dolara ulaşan fatura, yıl sonunda 70 milyar doları aşabilir. Çözüm ise elektrifikasyondan geçiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/hurmuz-krizi-turkiye-yi-vurdu-enerji-ithalatinda-rekor-fatura--212464",
-      "publishedAt": "2026-11-04T11:11:36Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212464/1200x675hurmuz-krizi-turkiye-yi-vurdu-enerji-ithalatinda-rekor-fatura.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "69efa92e5a49b83a40",
-      "title": "Netflix'in yeni yapay zekâsı ruh hâlinize göre film ve dizi önerecek",
-      "summary": "Netflix kullanıcıların izleyecek içerik bulmasını kolaylaştırmak için yapay zekâyı devreye sokuyor. Yapay zekâ, kullanıcıların ruh hâline ve anlık tercihlerine göre film ve dizi önerileri sunacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/netflix-yapay-zek-destekli-yeni-oneri-sistemini-test-ediyor--212454",
-      "publishedAt": "2026-11-04T10:55:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212454/1200x675netflix-yapay-zek-destekli-yeni-oneri-sistemini-test-ediyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "bea74eb99e49028b72",
       "title": "Neredeyse Hiç Kullanılmayan Ferrari F50’den Dudak Uçuklatan Satış Rekoru!",
       "summary": "1997 model Ferrari F50, Las Vegas’taki Broad Arrow müzayedesinde kendi satış rekorunu kırdı. Yaklaşık 170 kilometredeki otomobil, önceki rekorun 4,1 milyon dolar üzerine çıktı.",
@@ -287,42 +563,6 @@
       "publishedAt": "2026-11-04T10:35:11Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695626/695626-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "86c0769a1f0d1eaf79",
-      "title": "550 bin euroluk Ferrari Luce’nin 2027 kontenjanı doldu",
-      "summary": "Ferrari’nin ilk elektrikli modeli Luce, tartışılan tasarımına rağmen yoğun ilgi gördü. Markaya göre 2027’de müşterilere sunulacak araçların tamamı tahsis edildi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/550-bin-euroluk-ferrari-luce-nin-2027-kontenjani-doldu--212457",
-      "publishedAt": "2026-11-04T10:33:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212457/1200x675550-bin-euroluk-ferrari-luce-nin-2027-kontenjani-doldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a32554e812a2f63f20",
-      "title": "James Dyson Ödülü 2026'nın kazananları açıklandı: Hayat kurtarabilecek iki icat ödül aldı",
-      "summary": "James Dyson Ödülü 2026'da deprem sonrası binalardaki gizli hasarı tespit eden sensör ve sporcularda beyin sarsıntısını tarayan akıllı başlık uluslararası birincilik elde etti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/james-dyson-odulu-2026-nin-kazananlari-aciklandi--212462",
-      "publishedAt": "2026-11-04T10:31:40Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212462/1200x675james-dyson-odulu-2026-nin-kazananlari-aciklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8c293e8cffb315fb61",
-      "title": "Havayolu şirketlerinin kullandığı sistem hacklendi, binlerce yolcunun bilgileri çalındı",
-      "summary": "Amadeus'un rezervasyon sistemlerinde yaşanan güvenlik ihlali, dünyanın dört bir yanından çok sayıda havayolunu etkiledi. On binlerce yolcunun kişisel bilgileri açığa çıkmış olabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/havayolu-sirketlerinin-kullandigi-sistem-hacklendi--212458",
-      "publishedAt": "2026-11-04T10:11:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212458/1200x675havayolu-sirketlerinin-kullandigi-sistem-hacklendi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -411,66 +651,6 @@
       "editorial": false
     },
     {
-      "id": "630219941010d73805",
-      "title": "İtalyan devinde kontrol el değiştirdi: Iveco artık Tata’nın",
-      "summary": "Tata Motors, Iveco’nun hisselerinin %89,42’sini alarak İtalyan ticari araç üreticisinin kontrolünü devraldı. Yaklaşık 3,91 milyar euroluk işlem, Tata'nın Avrupa’daki varlığını önemli ölçüde büyütüyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/italyan-devinde-kontrol-el-degistirdi-iveco-artik-tata-nin--212453",
-      "publishedAt": "2026-11-04T09:49:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212453/1200x675italyan-devinde-kontrol-el-degistirdi-iveco-artik-tata-nin.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "81c030652c5fa0d18c",
-      "title": "Steam neden rakipsiz? Eski Epic Games çalışanı \"Suç oyuncularda\"",
-      "summary": "Eski bir Epic Games çalışanı, Steam'in PC oyun pazarında neden rakipsiz olduğunu açıkladı. \"Steam'in başarısız rakipleri, oyuncuların kararından kaynaklı.\"",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/steam-neden-rakipsiz-eski-epic-games-calisani-suc-oyuncularda--212456",
-      "publishedAt": "2026-11-04T09:28:57Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212456/1200x675steam-neden-rakipsiz-eski-epic-games-calisani-suc-oyuncularda.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5130dd655907aba6a8",
-      "title": "Yapay zeka için dünyanın ilk 800V güç sistemi devreye alındı",
-      "summary": "Çin’de devreye alınan dünyanın ilk ticari 800V DC veri merkezi güç sistemi, enerji kayıplarını azaltarak daha güçlü yapay zeka sunucularının çalışmasını sağlayacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-icin-dunyanin-ilk-800v-guc-sistemi-devreye-alindi--212432",
-      "publishedAt": "2026-11-04T09:06:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212432/1200x675yapay-zeka-icin-dunyanin-ilk-800v-guc-sistemi-devreye-alindi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f466a476c9ca060d36",
-      "title": "10 yıllık AM4 hâlâ zirvede: AMD, Intel'e satış farkı attı",
-      "summary": "Amazon'un Ekim 2026 işlemci satışları, AMD'nin eski AM4 platformunun hâlâ yoğun talep gördüğünü ortaya koydu. Tek başına AM4 işlemciler, Intel'in toplam satışlarını geride bıraktı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/10-yillik-am4-h-l-zirvede-amd-intel-e-satis-farki-atti--212449",
-      "publishedAt": "2026-11-04T08:44:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212449/1200x67510-yillik-am4-h-l-zirvede-amd-intel-e-satis-farki-atti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0958ee7926c3a72172",
-      "title": "Google ile okullar arasında yapay zeka krizi patlak verdi",
-      "summary": "Google, yapay zekayı tamamen yasaklayan okullarda öğrencilerin arama motoruna erişimini de kapatabilecek. Yeni politika, eğitimde AI kullanımı ve şirketin tekel gücü tartışmalarını alevlendirdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-ile-okullar-arasinda-yapay-zeka-krizi-patlak-verdi--212450",
-      "publishedAt": "2026-11-04T08:23:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212450/1200x675google-ile-okullar-arasinda-yapay-zeka-krizi-patlak-verdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "d495b71e3101596747",
       "title": "GTA 6 İçin Geri Sayım Başladı: Ön Yükleme Tarihi ve Kaç GB Olacağı Açıklandı!",
       "summary": "Rockstar Games, GTA 6 için 212 GB'lık dosya boyutunu ve 10 Kasım'da başlayacak konsol ön yükleme tarihini resmî olarak duyurdu.",
@@ -495,18 +675,6 @@
       "editorial": false
     },
     {
-      "id": "370c5af32ece6eb38c",
-      "title": "iOS 27.3 ile Siri AI artık Türkçe konuşacak: İşte uyumlu modeller",
-      "summary": "Apple, iOS 27.3 beta sürümüyle Siri AI desteğini Türkçe dahil dört yeni dile genişletiyor. Güncelleme, asistanın uygulamalar arası yeteneklerini ve iPhone deneyimini de geliştiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ios-27-3-ile-siri-ai-artik-turkce-konusacak-iste-uyumlu-modeller--212446",
-      "publishedAt": "2026-11-04T08:02:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212446/1200x675ios-27-3-ile-siri-ai-artik-turkce-konusacak-iste-uyumlu-modeller.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "24a0ca6194be391783",
       "title": "İlan Sitesinde 111 TL Yazan Ürün İçin 6 Bin TL İsteyen Satıcıya Şok Ceza: 1 Milyon TL Ödeyecek!",
       "summary": "İlanda yazan fiyatla satıcının istediği tutar arasındaki fark, otomobil yedek parçası satıcısına pahalıya mal oldu. Reklam Kurulu, yanıltıcı ilanlar nedeniyle 1 milyon TL’yi aşan para cezası verdi.",
@@ -519,18 +687,6 @@
       "editorial": false
     },
     {
-      "id": "e5729fe1b641684eae",
-      "title": "MOVA N1 cam silme robotu neler sunuyor?",
-      "summary": "MOVA'nın cam silme robotu N1, kompakt tasarımı, akıllı temizlik rotaları ve uzaktan kontrol özellikleriyle ev temizliğine pratiklik kazandırıyor. MOVA N1, Black Friday indirimine girdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/mova-n1-cam-silme-robotu-neler-sunuyor-iste-ozellikleri--212448",
-      "publishedAt": "2026-11-04T07:41:06Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212448/1200x675mova-n1-cam-silme-robotu-neler-sunuyor-iste-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "17d1c7006d292a0252",
       "title": "iPhone 18 Beklenen Bir Yükseltmeyi Es Geçebilir: İşte Son Sızıntılar",
       "summary": "Son sızıntılara göre iPhone 18’de asıl değişiklik donanımda olacak. Dış görünüşteyse pek bir yenilik beklenmiyor.",
@@ -539,18 +695,6 @@
       "publishedAt": "2026-11-04T07:20:08Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/695581/695581-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0791cb70881e7866e9",
-      "title": "Steam Türkiye'de En Çok Satan Oyunlar Açıklandı [27 Ekim-3 Kasım 2026]",
-      "summary": "Steam, Türkiye'de geçen hafta boyunca en çok satan oyunları açıkladı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/steam-turkiye-en-cok-satan-oyunlar-27-ekim-3-kasim-2026-h228235.html",
-      "publishedAt": "2026-11-04T06:55:41Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/695584/695584-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -603,30 +747,6 @@
       "editorial": false
     },
     {
-      "id": "a77d1c38415762a8e1",
-      "title": "Samsung Galaxy Z Fold 9 ve Fold 9 Ultra’nın Kamera Özellikleri Sızdırıldı",
-      "summary": "Samsung Galaxy Z Fold 9 ve Fold 9 Ultra'nın sızdırılan kamera özellikleri, standart ve Ultra modeller arasındaki belirgin farkları ortaya koyuyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-z-fold-9-ultra-kamera-ozellikleri-sizdirildi-h228232.html",
-      "publishedAt": "2026-11-03T15:10:09Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695554/695554-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "53e4d86749edb13afd",
-      "title": "Meta, Yeni Bir İnsansı Robot Üzerinde Çalışıyor: Evinizdeki Yeni Hizmetçi mi, Milyar Dolarlık Bir Tuzak mı?",
-      "summary": "Meta'nın insansı robot planı, tüketicileri aylık aboneliklere bağlayarak yapay zekâ devrimini ceplerinden finanse ettirmeyi amaçlıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/meta-yeni-bir-insansi-robot-uzerinde-calisiyor-h228221.html",
-      "publishedAt": "2026-11-03T14:21:29Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695548/695548-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "95f991e588ce9849bd",
       "title": "Sonic Racing: CrossWorlds Year Two begins today with Duel Mode, new characters, gadgets and more",
       "summary": "Sonic Racing: CrossWorlds Year Two is officially launching later today, with more racers, more vehicles, and more courses joining the ever-growing universe of Sonic Racing: CrossWorlds. In addition, Year Two brings several significant additions to the game, enhancing the already exhilarating experience with more ways to play with friends, gameplay updates to deepen the experience,",
@@ -635,18 +755,6 @@
       "publishedAt": "2026-11-03T14:00:04Z",
       "category": "Oyun",
       "image": "https://live.staticflickr.com/65535/55618240291_8c1c4206ea_4k.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "191850b511f2adc773",
-      "title": "The Silver Seas and How We “Ship” New Features for Age of Wonders 4",
-      "summary": "Ahoy there, folks! I’m the Captain of Age of Wonders 4, a game we’ve been sharing with you for either four years or twenty-seven years, depending on how long you’ve been playing the series. Everyone here at Triumph Studios has spent a lifetime coming up with fantastical ideas to add to our games, but now",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/03/age-of-wonders-4-the-silver-seas/",
-      "publishedAt": "2026-11-03T14:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/2-fd71c6ee6f8670e8a2a5-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
@@ -735,42 +843,6 @@
       "editorial": false
     },
     {
-      "id": "c73ec71b8abfd095db",
-      "title": "Şehir Trafiğinde Yeni Dönem: BMW Seviye 2 Yarı Otonom Sürüşü Sokaklara İndiriyor!",
-      "summary": "BMW, 2027'de şehir trafiğine entegre edeceği Seviye 2 sürüş asistanı ve yenilikçi Symbiotic Drive sistemiyle yarı otonom sürüş deneyimini büyütüyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/bmw-seviye-2-yari-otonom-surusu-sokaklara-indiriyor-h228220.html",
-      "publishedAt": "2026-11-03T13:52:27Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695540/695540-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "186348b4eeed7e85fe",
-      "title": "İngiltere'de Bir Savcı, Yapay Zekânın Uydurduğu Davayı Gerçek Sandı",
-      "summary": "İngiliz savcının yapay zekâ aramasından çıkan hayali bir emsal kararla davayı yürütmesi, yargıda ciddi bir skandala yol açtı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/ingiltere-savci-yapay-zekanin-uydurdugu-davayi-gercek-sandi-h228217.html",
-      "publishedAt": "2026-11-03T13:52:20Z",
-      "category": "Yapay Zeka",
-      "image": "https://imgrosetta.webtekno.com/file/695440/695440-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2d31741bc8338f1c09",
-      "title": "iPhone Duo Lansmanı Samsung’a Yaradı: Galaxy Z Fold 8 Satışları %20 Arttı!",
-      "summary": "iPhone Duo'nun yüksek fiyatı ve ekran sorunları sonrası Samsung Galaxy Z Fold 8 satışları Güney Kore'de %20'nin üzerinde artış gösterdi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/iphone-duo-lansmani-samsung-yaradi-h228214.html",
-      "publishedAt": "2026-11-03T13:52:12Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/695434/695434-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "c54035594c9492a288",
       "title": "Helldivers 2: new poisonous Terminid types, more bug caves spawn across the galaxy today",
       "summary": "Attention, Helldivers. The Ministry of Truth confirms that a new Terminid strain is skittering across the front lines. Designated the Noxious strain, these menaces are fast, venomous, and fundamentally opposed to Managed Democracy. Worse still, the bugs have been digging. Terminid cave networks now course beneath more biomes in the galaxy from scorched deserts to",
@@ -780,18 +852,6 @@
       "category": "Oyun",
       "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "7071448b83ab8353be",
-      "title": "Hepsi 500 TL Altı! Amazon'da Bu Haftanın En Avantajlı Ürünleri",
-      "summary": "Amazon'da fiyatı 500 TL ve altında olan ürünler arasından işinize yarayabilecek olanları sizler için seçtik.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/hepsi-500-tl-alti-amazon-da-bu-haftanin-en-avantajli-urunleri-h228197.html",
-      "publishedAt": "2026-11-03T12:59:31Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695503/695503-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -815,18 +875,6 @@
       "publishedAt": "2026-11-03T04:30:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Blog_post_hero_owiy2Mr.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "139b15d46f32cac570",
-      "title": "World of Warcraft: Forever – How Controller Support Reimagines the Way We Can Play in Azeroth",
-      "summary": "My approach to World of Warcraft has largely been one of logging in and enjoying a casual adventure in Azeroth. I’m not messing around with macros or trying to carry a team through a dungeon. I’m more than happy to spend my time chewing on scenery and gobbling up lore. Yes, I’m that guy that",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/02/world-of-warcraft-forever-controller-support-reimagines-way-we-play-azeroth/",
-      "publishedAt": "2026-11-02T18:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WoW_Forever_Cinematic_Still_1-CROP-bb385d45bb0c9f2283e6-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
@@ -923,18 +971,6 @@
       "publishedAt": "2026-10-30T20:15:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Fitbit_Edge_thumb_OOMcorw.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f51a25d4cb75a4f716",
-      "title": "In Puckoff: Reloaded, Hockey Is About More Than Scoring Goals",
-      "summary": "What happens when five Finnish developers take the hockey they grew up playing on frozen ponds and turn it into a story about the greatest underground hockey player who ever lived? When I think about my childhood, some of my best memories aren’t from school, holidays or birthday parties. They’re from the ice. Growing up",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/30/in-puckoff-reloaded-hockey-is-about-more/",
-      "publishedAt": "2026-10-30T18:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/09/screenshotS-9a13fd7c4606b5b76065-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
@@ -1059,18 +1095,6 @@
       "editorial": false
     },
     {
-      "id": "aeb0cc69547989372e",
-      "title": "How to use Gemini to update your resume",
-      "summary": "Turn raw notes into high-impact, ATS-friendly resume bullets using Gemini. Follow these four steps to polish your professional profile. Get the details.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/update-resume-with-gemini/",
-      "publishedAt": "2026-10-29T11:33:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IO25_GeminiApp.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "9634ae3f006c02d97f",
       "title": "Introducing the Microsoft Copilot harness: Unlocking the potential of truly multi-model agentic work",
       "summary": "If you want to compete, you need to be multi-model. And if you want to take advantage of everything that different AI models have to offer, you need a great harness. But building one that works seamlessly across multiple models and surfaces is incredibly hard. You need to solve for performance, quality, and cost. And...",
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-10-22T13:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "59c87ea544e0e5db59",
-      "title": "Introducing full transaction detection for Cloudflare WAF",
-      "summary": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/full-transaction-waf/",
-      "publishedAt": "2026-10-21T14:10:42Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5E1HKVR7WJX7KGB4B8MSK75.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4a59615041b968ae61",
-      "title": "Cloudflare deploys protections against php2shell vulnerability",
-      "summary": "Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure. The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/",
-      "publishedAt": "2026-10-21T13:56:45Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KXQSMGN3Z955B45GCJR4REK3.png",
       "language": "en",
       "editorial": false
     }
