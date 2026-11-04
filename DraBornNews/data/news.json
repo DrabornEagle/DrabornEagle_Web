@@ -1,7 +1,79 @@
 {
-  "generatedAt": "2026-11-03T19:21:18.942356Z",
+  "generatedAt": "2026-11-04T00:09:16.357937Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "bb4fbf5888e7f2c5a1",
+      "title": "Honor, 15.000 mAh bataryalı telefon geliştiriyor: Tek şarjla 1 hafta pil ömrü!",
+      "summary": "Akıllı telefon pazarında batarya rekabeti yeni bir boyuta taşınıyor. Honor'un üzerinde çalıştığı 15.000 mAh kapasiteli bataryalar, telefonların tek şarjla bir hafta dayanmasını sağlayabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/honor-15-000-mah-bataryali-telefon-gelistiriyor--212438",
+      "publishedAt": "2026-11-03T20:50:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212438/1200x675honor-15-000-mah-bataryali-telefon-gelistiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b167ebd27f735c2031",
+      "title": "Yapay zekâ, Need For Speed Underground 2'yi tarayıcı üzerinden oynanabilir hâle getirdi",
+      "summary": "Need for Speed Underground 2'ye yapay zekâ ile tersine mühendislik yapan bir grup geliştirici, oyunu internet tarayıcısı üzerinden oynanabilir hâle getirdi. Üste ilgi çekici bir dokunuşla...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/need-for-speed-underground-2-artik-tarayicida-acilabiliyor--212433",
+      "publishedAt": "2026-11-03T20:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212433/1200x675need-for-speed-underground-2-artik-tarayicida-acilabiliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4d71213c130edcbe04",
+      "title": "Bilim insanları yaşamın olmadığı bir Dünya simülasyonu yarattı",
+      "summary": "Washington Üniversitesi araştırmacıları, 5 milyar yıllık jeolojik süreçleri simüle eden yaşam olmayan bir Dünya modeli geliştirdi. Yeni model, ötegezegenlerde anlamaya yardımcı olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bilim-insanlari-yasamin-olmadigi-bir-dunya-yaratti--212431",
+      "publishedAt": "2026-11-03T20:10:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212431/1200x675bilim-insanlari-yasamin-olmadigi-bir-dunya-yaratti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0466c5b0cb7cd8856f",
+      "title": "Corner Shop: NightShift How we Built Horror Around an Ordinary Life",
+      "summary": "When people think about psychological horror, they usually think about abandoned buildings, monsters, strange rituals, or someone being chased through a dark corridor. With Corner Shop: NightShift, I wanted to begin somewhere much more ordinary. A job. Adam Callahan works the night shift in a small convenience store. He receives deliveries, puts products on shelves,",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/03/corner-shop-nightshift/",
+      "publishedAt": "2026-11-03T20:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Screenshot_1-de368d5b7913b819e1c6.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "27d4053e4ef3cae6e8",
+      "title": "Dünyanın en büyük PCIe ekran kartı keşfedildi: Tek kartta 4 GPU",
+      "summary": "AMD'nin daha önce hiç tanıtmadığı dört GPU'lu Radeon RX 470 prototipi ortaya çıktı. 32 GB GDDR5 belleğe sahip kartın, kripto para madenciliği için geliştirildiği düşünülüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dunyanin-en-buyuk-pcie-ekran-karti-kesfedildi-tek-kartta-4-gpu--212430",
+      "publishedAt": "2026-11-03T19:50:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212430/1200x675dunyanin-en-buyuk-pcie-ekran-karti-kesfedildi-tek-kartta-4-gpu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0934ec09afe1651e0c",
+      "title": "200 derece sıcaklığa dayanan katı hal batarya 1.000 km menzil vadediyor",
+      "summary": "Sunwoda'nın katı hal bataryası, 200°C sıcaklıkta alev oluşmadan test edildi. Şirket, yüksek enerji yoğunluğuyla elektrikli araçlarda 1.000 kilometreyi aşan menzil hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/200-derece-sicakliga-dayanan-kati-hal-batarya-geliyor--212429",
+      "publishedAt": "2026-11-03T19:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212429/1200x675200-derece-sicakliga-dayanan-kati-hal-batarya-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "4aa2cbb1d36958d1a8",
       "title": "Vivo V80 FE tanıtım öncesinde ortaya çıktı: 7.000 mAh batarya ve 50 MP ZEISS kameralar",
@@ -399,18 +471,6 @@
       "editorial": false
     },
     {
-      "id": "4ebd2c854c1e437f81",
-      "title": "Samsung Galaxy A38'den beklenen haber geldi: Batarya kapasitesi artıyor",
-      "summary": "Samsung, Galaxy A38 ile orta segment telefonlarında batarya kapasitesini önemli ölçüde artırmaya hazırlanıyor. Yeni modelin, selefine göre %20 büyük olan 6.000 mAh bataryayla geleceği belirtiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-a38-6-000-mah-bataryayla-gelecek--212425",
-      "publishedAt": "2026-11-03T13:19:30Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212425/1200x675samsung-galaxy-a38-6-000-mah-bataryayla-gelecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "c54035594c9492a288",
       "title": "Helldivers 2: new poisonous Terminid types, more bug caves spawn across the galaxy today",
       "summary": "Attention, Helldivers. The Ministry of Truth confirms that a new Terminid strain is skittering across the front lines. Designated the Noxious strain, these menaces are fast, venomous, and fundamentally opposed to Managed Democracy. Worse still, the bugs have been digging. Terminid cave networks now course beneath more biomes in the galaxy from scorched deserts to",
@@ -447,42 +507,6 @@
       "editorial": false
     },
     {
-      "id": "c026e97a2cb6534ed4",
-      "title": "2027’de trafik cezaları ne kadar olacak? İşte beklenen tutarlar",
-      "summary": "Trafik cezalarında 2027 için yüzde 27,83 artış bekleniyor. Bu oranla kırmızı ışık ihlali 6.391 TL’ye, makas atma cezası 115.047 TL’ye çıkacak. İşte ihlallere göre hesaplanan tutarlar.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/2027-de-trafik-cezalari-ne-kadar-olacak-iste-beklenen-tutarlar--212417",
-      "publishedAt": "2026-11-03T12:16:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212417/1200x6752027-de-trafik-cezalari-ne-kadar-olacak-iste-beklenen-tutarlar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3c4bfcbadd0279755c",
-      "title": "Cihazlar Türkiye’de de satılıyor! 1,3 milyon Android cihazı botnet ağına dönüştü",
-      "summary": "Google, 1,3 milyondan fazla Android cihazı botnet ağına dönüştüren üreticiyle bağlarını kesti. Türkiye’de 30 binden fazla cihazın etkilendiği saldırıda kullanıcı verileri de hedef alındı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/1-3-milyon-android-cihazi-botnete-donustu-google-darbeyi-vurdu--212418",
-      "publishedAt": "2026-11-03T11:45:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212418/1200x6751-3-milyon-android-cihazi-botnete-donustu-google-darbeyi-vurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3bfcd4b863b6548c1d",
-      "title": "Bir Çinli SUV daha Avrupa'ya geliyor: Xpeng L05",
-      "summary": "Xpeng, Çin’de yaklaşık 19.400 eurodan başlayan L05’i Avrupa’ya getirecek. Elektrikli ve menzil uzatıcılı seçenekleri bulunan SUV’un Avrupa detayları Ocak 2027’de açıklanacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bir-cinli-suv-daha-avrupa-ya-geliyor-xpeng-l05--212407",
-      "publishedAt": "2026-11-03T11:23:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212407/1200x675bir-cinli-suv-daha-avrupa-ya-geliyor-xpeng-l05.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "9967831175605d3f54",
       "title": "Dacia Kasım 2026 Sıfır Araç Fiyat Listesi",
       "summary": "Kasım 2026 Dacia fiyat listesi belli oldu. Yeni Sandero, Yeni Sandero Stepway, Yeni Logan ve Yeni Jogger modellerinin fiyat listesi Webtekno'da!",
@@ -503,18 +527,6 @@
       "publishedAt": "2026-11-03T11:02:03Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695516/695516-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ab4e0c30c0c059ce67",
-      "title": "Raspberry Pi 5'in 16 GB modeli 80 dolar zamlandı: Fiyatlar 3 katına çıktı!",
-      "summary": "Bellek maliyetlerindeki artış Raspberry Pi ürünlerini etkilemeye devam ediyor. 16 GB RAM'li Raspberry Pi 5'in fiyatı 80 dolar artarak 385 dolara yükselirken, Compute Module 5 de zamdan nasibini aldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/raspberry-pi-5-in-16-gb-modeli-80-dolar-zamlandi--212391",
-      "publishedAt": "2026-11-03T11:02:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212391/1200x675raspberry-pi-5-in-16-gb-modeli-80-dolar-zamlandi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -807,18 +819,6 @@
       "editorial": false
     },
     {
-      "id": "130799c150c18f47fd",
-      "title": "Avatar Legends: The Fighting Game Enters the Avatar State",
-      "summary": "The Avatar State Patch is available today for Avatar Legends: The Fighting Game on XBOX Series X|S, and it’s the biggest update the game has seen. It brings a fresh new look for the game’s menus and in-match displays, two totally reimagined fighters, Ranked Mode 2.0, quality-of-life upgrades for story, versus, and online play, plus",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/30/avatar-legends-the-fighting-game-enters-the-avatar-state/",
-      "publishedAt": "2026-10-30T18:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/AvatarAang_turnaround_3-poses-1-63e3d53f3a0e9d75ea29-1024x545.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "46377df52764d6fd77",
       "title": "4 real? Tracking exploitation and patching of eMudhra’s weak keys",
       "summary": "Four, just four: that’s the key to break into any unpatched connection on the Internet that is using eMudhra certificates. Here’s how we quickly patched Cloudflare, what evidence we can see of attempted exploitation, and how much of the rest of the Internet remains exposed.",
@@ -827,18 +827,6 @@
       "publishedAt": "2026-10-30T17:38:50Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M66XYHSQQJRRA4097AJD12PN.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "6359a8c14283d50a31",
-      "title": "Curse of Resthaven: Tips and Tricks to Unravel the Island’s Secrets",
-      "summary": "Hi there! I’m Scott Christian, the studio director of Hilltop Studios here in Toronto, and the game director of Curse of Resthaven. We make games with a particular emphasis on strong characters, intricate storytelling, unique mechanics, and the occasional musical interlude. Before making games, I spent fifteen years working as a composer and conductor here",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/10/30/curse-of-resthaven-tips-and-tricks-xbox/",
-      "publishedAt": "2026-10-30T17:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Resthaven-00c9bc3e4dab30e2ba70-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-19T13:00:02Z",
       "category": "Güvenlik",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-Secure-AI-Image-1-10_19.png.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "72477d086944244f5e",
+      "title": "Beyond the patch: Protecting your NetScaler gateway against future vulnerabilities",
+      "summary": "CVE-2026-88771 lets attackers run commands on NetScaler Gateway before anyone signs in. Patching takes time most teams don't have, so the sign-in decision has to move in front of the vulnerable code.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/protect-your-netscaler-gateway/",
+      "publishedAt": "2026-10-19T13:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M537RBT01XNYZ0RR0CP9PS55.png",
       "language": "en",
       "editorial": false
     }
