@@ -1,7 +1,247 @@
 {
-  "generatedAt": "2026-11-04T21:27:11.063238Z",
+  "generatedAt": "2026-11-05T09:16:27.198134Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "98d9b90ab1fca384fc",
+      "title": "Rusya, ilk hidrojenli yolcu trenini üretti: 740 km menzil sunacak",
+      "summary": "Rusya, dizel trenlere alternatif ilk yerli hidrojen yakıt hücreli yolcu treninin montajını tamamladı. İki farklı konfigürasyonda üretilecek tren, 740 kilometreye kadar menzil sunacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/rusya-ilk-hidrojenli-yolcu-trenini-uretti-740-km-menzil-sunacak--212493",
+      "publishedAt": "2026-11-05T08:54:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212493/1200x675rusya-ilk-hidrojenli-yolcu-trenini-uretti-740-km-menzil-sunacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "21c0dc6a0df5f8b78f",
+      "title": "Hepsiburada'da veri sızıntısı: Müşterilerin verileri çalındı!",
+      "summary": "Hepsiburada'dan KVKK'ya yapılan veri ihlali bildirimine göre müşterilerin kişisel verileri çalındı. Siber saldırganlar müşterilerin sipariş geçmişine ve adres bilgilerine erişti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/hepsiburada-da-veri-sizintisi-musterilerin-verileri-calindi--212502",
+      "publishedAt": "2026-11-05T08:36:57Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212502/1200x675hepsiburada-da-veri-sizintisi-musterilerin-verileri-calindi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a4ca236deda85df1ab",
+      "title": "Vietnam, dünyanın en büyük yüzer güneş santrallerinden birini kuruyor: Kapasitesi 452 MW",
+      "summary": "Vietnam, 452 MW kapasiteli dev bir yüzer güneş enerjisi santrali kuracak. Ea Sup Thuong rezervuarı üzerine inşa edilecek tesis, tamamlandığında dünyanın en büyüklerinden biri olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/vietnam-dev-bir-yuzer-gunes-enerjisi-santrali-kuruyor--212481",
+      "publishedAt": "2026-11-05T08:32:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212481/1200x675vietnam-dev-bir-yuzer-gunes-enerjisi-santrali-kuruyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "130877ab101479d6c3",
+      "title": "God of War Laufey Ertelendi: İşte Yeni Çıkış Tarihi!",
+      "summary": "Santa Monica Studio, God of War Laufey’nin çıkış tarihini son rötuşlar ve optimizasyon gerekçesiyle 20 Mayıs 2027’ye erteledi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/god-of-war-laufey-ertelendi-h228334.html",
+      "publishedAt": "2026-11-05T08:14:05Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695761/695761-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c335320faf3ed00006",
+      "title": "Bu Kadarına Pes! Hackerlar Kan Bankalarındaki -30 Derecelik Dolapları 110 Dereceye Ayarlamaya Çalıştı!",
+      "summary": "Hackerlar bu kez de kan bankalarının soğutma sistemlerine sızıp kan stoklarını bozmaya çalıştı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/hackerlar-kan-bankalarindaki-dolaplari-110-dereceye-ayarlamaya-calisti-h228331.html",
+      "publishedAt": "2026-11-05T08:13:00Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695764/695764-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2cc0355027386cf291",
+      "title": "Arkane stüdyosunu ve krize giren Blade oyununu Ubisoft kurtarabilir",
+      "summary": "Xbox'ın gözden çıkardığı Arkane stüdyosu da stüdyonun bir süredir üzerinde çalıştığı Blade oyunu da krize girmiş durumda. Ancak gelen haberlere göre Ubisoft, ikisini de kurtarabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/krize-giren-blade-oyununu-ubisoft-kurtarabilir--212486",
+      "publishedAt": "2026-11-05T08:11:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212486/1200x675krize-giren-blade-oyununu-ubisoft-kurtarabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "dcb542c290ef2ad184",
+      "title": "BYD Fiyat Listesi - Kasım 2026",
+      "summary": "BYD Kasım 2026 fiyat listesi açıklandı. SEAL, SEALION 7, ve TANG modellerinin Eylül 2026 fiyatları Webtekno’da!",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/kasim-2026-byd-fiyat-listesi-h228319.html",
+      "publishedAt": "2026-11-05T08:09:50Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695743/695743-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b2c43edad29ca8e31a",
+      "title": "KGM Fiyat Listesi - Kasım 2026",
+      "summary": "KGM SsangYong Torres EVX, Musso EV, Torres, Actyon, Musso Grand, Musso Grand ve Korando modellerinin Kasım 2026 fiyatlarını inceliyoruz.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/kasim-2026-kgm-ssangyong-fiyat-listesi-h228289.html",
+      "publishedAt": "2026-11-05T08:09:44Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695683/695683-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5932fb89cbf643c972",
+      "title": "CUPRA Kasım 2026 Fiyat Listesi",
+      "summary": "CUPRA Kasım 2026 fiyatları belli oldu. Markanın güncel listesinde SUV sınıfındaki Formentor ve Terramar ile hatchback gövdeli Leon yer alıyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/kasim-2026-cupra-fiyat-listesi-h228284.html",
+      "publishedAt": "2026-11-05T08:09:34Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695672/695672-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3aa90043fc704e9156",
+      "title": "Volvo 2026 Kasım Fiyat Listesi",
+      "summary": "Volvo Kasım 2026 fiyat listesi açıklandı. EX30, EX40, XC60, XC90, ES90 ve diğer modellerin güncel fiyatlarını, hibrit ve elektrikli versiyon seçeneklerini inceleyin.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/volvo-kasim-2026-fiyat-listesi-h228322.html",
+      "publishedAt": "2026-11-05T07:57:04Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695750/695750-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "deebe7ef93009a3406",
+      "title": "Honda Kasım 2026 Fiyat Listesi",
+      "summary": "Honda Kasım 2026 fiyat listesi belli oldu. Jazz, HR-V, ZR-V, Prelude ve CR-V'nin güncel fiyatlarını ve kampanyalı satış fiyatlarını inceliyoruz.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/kasim-2026-honda-fiyat-listesi-h228280.html",
+      "publishedAt": "2026-11-05T07:56:50Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/682936/682936-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fd19f61feae68f85d9",
+      "title": "Hyundai Fiyat Listesi - Kasım 2026",
+      "summary": "Hyundai’nin Kasım 2026 fiyat listesi açıklandı. Markanın güncel ürün gamında i20, i30, BAYON, KONA, TUCSON, INSTER, KONA Elektrik, IONIQ 5, IONIQ 3, Yeni IONIQ 6, IONIQ 9 ve SANTA FE Hibrit modelleri bulunuyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/hyundai-kasim-2026-fiyat-listesi-h228271.html",
+      "publishedAt": "2026-11-05T07:56:35Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695662/695662-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "57dac1d6ce42727f7e",
+      "title": "Opel Kasım 2026 Fiyat Listesi",
+      "summary": "Opel Kasım 2026 fiyat listesi açıklandı. Corsa, Mokka, Frontera ve Grandland modellerinin güncel fiyatlarını, kampanyalarını ve indirim fırsatlarını inceliyoruz.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/opel-kasim-2026-fiyat-listesi-h228268.html",
+      "publishedAt": "2026-11-05T07:56:05Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/695632/695632-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "37026948056f8ddffb",
+      "title": "İlk kez bir dinozor fosilinde kan hücreleri bulundu",
+      "summary": "115 milyon yıllık dinozor fosillerinde ilk kez kanın kimyasal bileşenleri tespit edildi. Brezilya'da bulunan fosiller, hassas biyolojik moleküllerin milyonlarca yıl korunabileceğini gösteriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ilk-kez-bir-fosilde-dinozor-kani-bulundu--212476",
+      "publishedAt": "2026-11-05T07:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212476/1200x675ilk-kez-bir-fosilde-dinozor-kani-bulundu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8ada8c1f445fcf5aec",
+      "title": "Apple’dan Yapay Zekâ Bütçesine Kısıtlama: Mühendislerin Günlük Limitleri Düşürüldü!",
+      "summary": "Apple, artan maliyetler nedeniyle mühendislerin günlük yapay zekâ kullanım bütçesini 300 dolardan 200 dolara düşürdü.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/apple-muhendislerin-gunluk-yapay-zeka-limitleri-dusuruldu-h228328.html",
+      "publishedAt": "2026-11-05T07:29:20Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/695770/695770-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e68005af1ba85b853f",
+      "title": "Akıllı telefonlara yeni zam kapıda: Samsung OLED panel fiyatlarını artırıyor",
+      "summary": "RAM krizinin ardından akıllı telefon üreticilerini şimdi de OLED ekran maliyetlerindeki artış bekliyor. Samsung'un OLED panel fiyatlarına 10 ila 20 dolar arasında zam yapacağı iddia edildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-oled-ekran-fiyatlarini-20-dolara-kadar-artirabilir--212495",
+      "publishedAt": "2026-11-05T07:29:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212495/1200x675samsung-oled-ekran-fiyatlarini-20-dolara-kadar-artirabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "91a9731f97fdfe394e",
+      "title": "Bluetooth'un hızı dörde katlanacak: Yeni HDT teknolojisi duyuruldu",
+      "summary": "Bluetooth SIG, yeni HDT teknolojisini duyurdu. Bluetooth LE'nin hızını 2 Mbps'den 7,5 Mbps'ye çıkaracak yenilik, kablosuz kulaklıklardan akıllı saatlere kadar birçok cihazın performansını artıracak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bluetooth-un-veri-aktarim-hizi-hizi-dorde-katlanacak--212494",
+      "publishedAt": "2026-11-05T07:08:50Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212494/1200x675bluetooth-un-veri-aktarim-hizi-hizi-dorde-katlanacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8ad58d91bd36d822b0",
+      "title": "OpenAI, Images 2.6'yı Duyurdu: İşte Yeni Modelle Yapabilecekleriniz!",
+      "summary": "OpenAI'ın yeni görsel modeli Images 2.6, GIF desteği, %50 daha hızlı üretim performansı ve gelişmiş API yetenekleriyle kullanıma sunuldu.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/openai-images-2-6-duyurdu-h228325.html",
+      "publishedAt": "2026-11-05T07:03:58Z",
+      "category": "Yapay Zeka",
+      "image": "https://imgrosetta.webtekno.com/file/695755/695755-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d561ec0c0b204fa921",
+      "title": "Büyük binalar için doğal gaza alternatif ısı pompası",
+      "summary": "Vaillant, büyük binalar için geliştirdiği yeni ısı pompasını tanıttı. 1.200 metrekareye kadar alanları ısıtabilen Vaillant aroTherm perform sistemi, -15 derece soğukta da çalışabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/buyuk-binalar-icin-dogalgaza-alternatif-isi-pompasi--212477",
+      "publishedAt": "2026-11-05T06:18:32Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212477/1200x675buyuk-binalar-icin-dogalgaza-alternatif-isi-pompasi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9cbe55bcaf25e915cf",
+      "title": "Bu da oldu: Fransa'da kan bankalarına siber saldırı",
+      "summary": "Fransa'da üç bölgesel kan bankasının soğutma sistemleri siber saldırıya uğradı. Sıcaklık ayarları değiştirilen depolardaki kan ürünleri personelin hızlı müdahalesi sayesinde korundu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bu-da-oldu-fransa-da-kan-bankalarina-siber-saldiri--212489",
+      "publishedAt": "2026-11-05T06:15:12Z",
+      "category": "Güvenlik",
+      "image": "https://www.donanimhaber.com/images/images/haber/212489/1200x675bu-da-oldu-fransa-da-kan-bankalarina-siber-saldiri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "21aeb7ac946adbc9f3",
       "title": "Sony’nin Turuncu Süngerli Walkman Kulaklıkları Geri mi Dönüyor?",
@@ -87,18 +327,6 @@
       "editorial": false
     },
     {
-      "id": "d561ec0c0b204fa921",
-      "title": "Büyük binalar için doğalgaza alternatif ısı pompası",
-      "summary": "Vaillant, büyük binalar için geliştirdiği yeni ısı pompasını tanıttı. 1.200 metrekareye kadar alanları ısıtabilen Vaillant aroTherm perform sistemi, -15 derece soğukta da çalışabiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/buyuk-binalar-icin-dogalgaza-alternatif-isi-pompasi--212477",
-      "publishedAt": "2026-11-04T19:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212477/1200x675buyuk-binalar-icin-dogalgaza-alternatif-isi-pompasi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "a839079dd91fee2212",
       "title": "Preview Two New Ways to Play with XBOX Cloud Gaming",
       "summary": "Starting today, we’re rolling out two previews for XBOX Cloud Gaming. On supported Smart TVs, you can use your phone as a controller when you don’t have one nearby. In the US, you can also preview cloud connect with the new XBOX Nano Controller. It uses Wi-Fi to connect directly to your cloud gaming session,",
@@ -108,18 +336,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/XBOX-Wire-DtC-Phone-Controller-110426-5428ff0def107f49971d-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "9cbe55bcaf25e915cf",
-      "title": "Fransa'da kan bankalarına siber saldırı: Tüm stok çöp oldu",
-      "summary": "Fransa'da üç bölgesel kan bankasının soğutma sistemleri siber saldırıya uğradı. Sıcaklık ayarları değiştirilen depolardaki kan ürünleri personelin hızlı müdahalesi sayesinde korundu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bu-da-oldu-fransa-da-kan-bankalarina-siber-saldiri--212489",
-      "publishedAt": "2026-11-04T19:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://www.donanimhaber.com/images/images/haber/212489/1200x675bu-da-oldu-fransa-da-kan-bankalarina-siber-saldiri.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -303,30 +519,6 @@
       "editorial": false
     },
     {
-      "id": "db555fde3ad4458221",
-      "title": "Amazon Kasım indirimlerinde kaçırmamanız gereken 6 ürün!",
-      "summary": "Bu videoda Amazon Kasım indirimlerinde bulduğum ve kaçırmamanız gereken 6 ürün modeli hakkında konuşuyoruz. Fiyat ve performans anlamında iyi ürünlere listemizde yer verdik. İyi seyirler!",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-kasim-indirimlerinde-kacirmamaniz-gereken-6-urun--212479",
-      "publishedAt": "2026-11-04T15:00:05Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212479/1200x675amazon-kasim-indirimlerinde-kacirmamaniz-gereken-6-urun.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "981c0eafc1bfcae76c",
-      "title": "Mercedes'in yeni batarya teknolojisi elektrikli otomobillerin ömrünü uzatabilir",
-      "summary": "Mercedes, bataryadaki her hücreyi bağımsız olarak kontrol edebilen yeni bir güç dönüştürücü sistemi geliştiriyor. Teknoloji, arızalı hücreleri iptal ederek batarya ömrünün uzatılmasını sağlayabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/mercedes-in-yeni-batarya-teknolojisi-elektrikli-otomobillerin-omr--212469",
-      "publishedAt": "2026-11-04T14:56:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212469/1200x675mercedes-in-yeni-batarya-teknolojisi-elektrikli-otomobillerin-omr.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "3c9064591e39d8e3d5",
       "title": "Dokunmatik Olmayan MacBook Pro Modellerine Yakında Veda Edebiliriz",
       "summary": "Apple, MacBook Pro serisini gelecekte tamamen dokunmatik ekranlı modeller etrafında birleştirmeyi planlıyor.",
@@ -335,30 +527,6 @@
       "publishedAt": "2026-11-04T14:42:21Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695737/695737-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "42b3da88921950429a",
-      "title": "Pegasus'tan 173 GB veri çalındığı iddia edildi: Yolcuların bilgileri tehlikede olabilir",
-      "summary": "Pegasus Hava Yolları sistemlerine sızıldığı ve yaklaşık 173 GB verinin ele geçirildiği iddia edildi. Erişilen veriler arasında yolcuların kimlik, pasaport ve rezervasyon bilgileri de bulunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/pegasus-tan-173-gb-veri-calindigi-iddia-edildi-yolcularin-bilgil--212487",
-      "publishedAt": "2026-11-04T14:39:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212487/1200x675pegasus-tan-173-gb-veri-calindigi-iddia-edildi-yolcularin-bilgil.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a6cfb3525aa813dd03",
-      "title": "Xiaomi, 190 gün pil ömrü sunan yeni akıllı diş fırçasını tanıttı",
-      "summary": "Xiaomi Mijia Electric Toothbrush 2 Pro, renkli ekranı, çift yönlü basınç algılama sistemi ve yeni titreşim motoruyla tanıtıldı. Cihaz, tek şarjla 190 güne kadar kullanım süresi vadediyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xiaomi-190-gun-pil-omru-sunan-yeni-akilli-dis-fircasini-tanitti--212471",
-      "publishedAt": "2026-11-04T14:34:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212471/1200x675xiaomi-190-gun-pil-omru-sunan-yeni-akilli-dis-fircasini-tanitti.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -387,18 +555,6 @@
       "editorial": false
     },
     {
-      "id": "67563dce30d6e1c7ea",
-      "title": "GTA 6 tarihe geçiyor: Ön siparişlerden 7.7 milyon dolar gelir!",
-      "summary": "GTA 6 ön siparişleri 7.71 milyon adede ulaştı. Bu, geçen aya kıyasla 1 milyonluk artış anlamına geliyor. Oyun, Cyberpunk 2077'nin rekorunu geride bırakma yolunda ilerliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-on-siparis-rekoru-1-milyar-dolara-yaklasti--212472",
-      "publishedAt": "2026-11-04T14:12:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212472/1200x675gta-6-on-siparis-rekoru-1-milyar-dolara-yaklasti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "c7602fd30663d21b98",
       "title": "We're sharing our framework for building safer and more helpful AI for health.",
       "summary": "Many of us have turned to AI with a health question or received care from a doctor who’s using it. The adoption of technology for health is accelerating and impacts bill",
@@ -423,18 +579,6 @@
       "editorial": false
     },
     {
-      "id": "fa67a62d510bf4a2ec",
-      "title": "Türkiye'den 2,3 GW'lık rüzgar ve güneş enerjisi atağı: 1.9 milyar dolarlık yatırım",
-      "summary": "Enerji ve Tabii Kaynaklar Bakanlığı tarafından düzenlenen YEKA GES-2026 ve YEKA RES-2026 yarışmaları kapsamında 2026 yılında toplamda 2 bin 285 MW kapasite tahsis edildi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-den-2-3-gw-lik-ruzgar-ve-gunes-enerjisi-atagi--212473",
-      "publishedAt": "2026-11-04T13:48:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212473/1200x675turkiye-den-2-3-gw-lik-ruzgar-ve-gunes-enerjisi-atagi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "592027e00c6a4e5052",
       "title": "Otoyollardaki Şarj Ağı Genişliyor: Soket Sayısında Dev Artış!",
       "summary": "Rekabet Kurumunun müdahalesiyle otoyollarda şarj ağı hızla büyürken İstanbul-İzmir Otoyolu'nda soket sayısı 8 kat artışla 750'ye ulaştı.",
@@ -443,18 +587,6 @@
       "publishedAt": "2026-11-04T13:27:12Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695719/695719-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0556cb0281d3f69343",
-      "title": "iPhone ve MacBook için alarm zilleri çalıyor: Yeni zam kapıda",
-      "summary": "Apple, artan bellek maliyetleri nedeniyle iPhone, Mac ve iPad fiyatlarına yeniden zam yapabilir. Şirket yönetimi yeni fiyat artışlarını doğrulamasa da maliyet baskısının süreceğini belirtiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-ve-macbook-icin-alarm-zilleri-caliyor-yeni-zam-kapida--212461",
-      "publishedAt": "2026-11-04T13:26:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212461/1200x675iphone-ve-macbook-icin-alarm-zilleri-caliyor-yeni-zam-kapida.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -579,18 +711,6 @@
       "editorial": false
     },
     {
-      "id": "5642ad6242e3eea321",
-      "title": "615 Bin Dolarlık Tartışmalı Elektrikli Ferrari Luce, 2027 İçin Tamamen Tükendi!",
-      "summary": "Tasarımıyla tartışılan elektrikli Ferrari Luce’nin 2027’de üretilecek tüm örnekleri şimdiden satıldı. 615 bin dolarlık başlangıç fiyatına rağmen siparişler dolunca yeni alıcılar beklemek zorunda kaldı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/ferrari-luce-elektrikli-otomobil-2027-satis-rekoru-h228259.html",
-      "publishedAt": "2026-11-04T10:09:36Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/664104/664104-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "dee77e2a8f1482c4f6",
       "title": "Take a closer look at art with the Courtauld",
       "summary": "Examine art in new ways with The Art of Looking, a new project from Google Arts & Culture and the Courtauld Institute of Art.",
@@ -600,102 +720,6 @@
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/The_Courtauld_Gallery._Photo_Be.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "da756ec586aa36f132",
-      "title": "Binance, 6,3 Milyar Dolarlık Saldırının Detaylarını Açıkladı: Sahte İş Görüşmesiyle Sisteme Sızmışlar!",
-      "summary": "Binance, milyarlarca dolarlık kripto varlığın çalındığı saldırıya ilişkin ilk bulgularını paylaştı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/binance-6-3-milyar-dolar-kripto-soygunu-detaylari-h228253.html",
-      "publishedAt": "2026-11-04T09:54:45Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695614/695614-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eb52510b4fd2dc90a7",
-      "title": "PlayStation'da 'Black Friday' İndirimleri Başladı: İşte Toplam 10 Bin TL Tasarruf Edebileceğiniz 20 Oyun!",
-      "summary": "PlayStation'da 'Black Friday' indirimleri başladı. Kampanya kapsamında birçok büyük ve önemli oyunda indirimler sunuluyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/playstation-black-friday-indirimleri-2026-h228256.html",
-      "publishedAt": "2026-11-04T09:54:35Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/695608/695608-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4870630f532b58b4fa",
-      "title": "3 Milyon Dolarlık Elektrikli Canavar Parçalandı: BYD Yangwang U9 Xtreme Pistte Kaza Yaptı!",
-      "summary": "BYD'nin 3.000 beygirlik hiper modeli Yangwang U9 Xtreme, 500 km/s hız rekoru testleri sırasında arka aksını koparan büyük bir kaza yaptı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/byd-yangwang-u9-xtreme-pistte-kaza-yapti-h228250.html",
-      "publishedAt": "2026-11-04T09:54:26Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695600/695600-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f118d766ad55421b7e",
-      "title": "13 Oyun Game Pass'ten Kaldırılıyor (Oynamak İstiyorsanız Son Şansınız) [Kasım 2026]",
-      "summary": "Her ay onlarca oyunu satın almadan oynama imkânı sunan Game Pass'in kütüphanesinden bu ay kaldırılacak oyunlar belli oldu. Bu listedeki oyunları yakında oynamak için satın almanız gerekecek.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/game-pass-kaldirilacak-oyunlar-kasim-2026-h228244.html",
-      "publishedAt": "2026-11-04T09:54:17Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/695596/695596-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d495b71e3101596747",
-      "title": "GTA 6 İçin Geri Sayım Başladı: Ön Yükleme Tarihi ve Kaç GB Olacağı Açıklandı!",
-      "summary": "Rockstar Games, GTA 6 için 212 GB'lık dosya boyutunu ve 10 Kasım'da başlayacak konsol ön yükleme tarihini resmî olarak duyurdu.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/gta-6-on-yukleme-tarihi-ve-kac-gb-olacagi-aciklandi-h228238.html",
-      "publishedAt": "2026-11-04T08:22:15Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695587/695587-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c9b1bd2f9a2aeac29d",
-      "title": "Xbox Game Pass'e Eklenecek Yeni Oyunlar Açıklandı [4-17 Kasım]",
-      "summary": "Xbox Game Pass'e her ay yeni oyunlar eklenmeye devam ediyor. Şimdi ise bu ay içerisinde kütüphaneye eklenecek yeni oyunlara bakıyoruz.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/xbox-game-pass-yeni-oyunlar-4-17-kasim-h228241.html",
-      "publishedAt": "2026-11-04T08:20:52Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/695590/695590-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "24a0ca6194be391783",
-      "title": "İlan Sitesinde 111 TL Yazan Ürün İçin 6 Bin TL İsteyen Satıcıya Şok Ceza: 1 Milyon TL Ödeyecek!",
-      "summary": "İlanda yazan fiyatla satıcının istediği tutar arasındaki fark, otomobil yedek parçası satıcısına pahalıya mal oldu. Reklam Kurulu, yanıltıcı ilanlar nedeniyle 1 milyon TL’yi aşan para cezası verdi.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/ilan-sitesinde-111-tl-yazan-urun-satici-ceza-h228239.html",
-      "publishedAt": "2026-11-04T08:01:20Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695602/695602-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "17d1c7006d292a0252",
-      "title": "iPhone 18 Beklenen Bir Yükseltmeyi Es Geçebilir: İşte Son Sızıntılar",
-      "summary": "Son sızıntılara göre iPhone 18’de asıl değişiklik donanımda olacak. Dış görünüşteyse pek bir yenilik beklenmiyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/iphone-18-son-sizintilar-h228236.html",
-      "publishedAt": "2026-11-04T07:20:08Z",
-      "category": "Mobil",
-      "image": "https://imgrosetta.webtekno.com/file/695581/695581-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-10-23T18:22:59Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5MZP89Y10XGACD5T6G2F398.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "70bdd870b2ac82df6e",
-      "title": "Bringing post-quantum cryptography to geographically fenced key management",
-      "summary": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/post-quantum-geo-key-manager/",
-      "publishedAt": "2026-10-23T18:06:56Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5MYF3Y4CXM47ZAN16JYM04W.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "405699f87f1c074465",
-      "title": "Localizing compliance at scale: achieving South Korea’s ISMS certification",
-      "summary": "Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls. Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/k-isms/",
-      "publishedAt": "2026-10-22T13:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
       "language": "en",
       "editorial": false
     }
