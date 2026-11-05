@@ -1,7 +1,187 @@
 {
-  "generatedAt": "2026-11-05T17:34:51.077643Z",
+  "generatedAt": "2026-11-05T22:47:55.135844Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "06c101dd6b31673d16",
+      "title": "Isı pompaları, termokimyasal enerji depolama ile daha verimli hâle gelebilir",
+      "summary": "Isı pompalarını potasyum karbonat bazlı termokimyasal enerji depolama sistemiyle birleştiren yeni sistem, ısı pompalarının elektrik tüketimini kayda değer ölçüde azaltabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/isi-pompalari-termokimyasal-depolama-ile-daha-verimli-olabilir--212541",
+      "publishedAt": "2026-11-05T21:45:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212541/1200x675isi-pompalari-termokimyasal-depolama-ile-daha-verimli-olabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6471a0982343f75aab",
+      "title": "Tencent, yapay zekada halüsinasyon oranını yüzde 7,2'ye indirdi",
+      "summary": "Tencent, yeni yapay zeka modeli Hy4 ile yanlış bilgi üretme oranını yüzde 7,2'ye düşürdü. Model ayrıca bilgisayarları kontrol edebiliyor ve karmaşık görevleri yerine getirebiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/tencent-yapay-zekada-halusinasyon-oranini-yuzde-7-2-ye-indirdi--212539",
+      "publishedAt": "2026-11-05T21:17:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212539/1200x675tencent-yapay-zekada-halusinasyon-oranini-yuzde-7-2-ye-indirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8acca7958d352ac662",
+      "title": "A101 marketler akıllı çocuk saati satıyor",
+      "summary": "5 Kasım A101 Ekstra teknoloji ürünleri arasında TCL markasına ait Movetime Family Watch MT46X ve Movetime Family MT40X akıllı çocuk saatleri yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/5-kasim-a101-ekstra-katalogunda-neler-var--212543",
+      "publishedAt": "2026-11-05T20:55:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212543/1200x6755-kasim-a101-ekstra-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "37c21d41b9bc673cf7",
+      "title": "Yapay zekanın enerji açlığı bitmiyor: Eski jet motorları gündemde",
+      "summary": "Şebeke bağlantısı için yıllarca bekleyen yapay zeka veri merkezleri, elektrik üretimini hızlandırmak için emekliye ayrılmış uçak motorlarını doğal gazla çalışan türbinlere dönüştürüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zekanin-enerji-acligi-bitmiyor-eski-jet-motorlari-gundemde--212542",
+      "publishedAt": "2026-11-05T20:34:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212542/1200x675yapay-zekanin-enerji-acligi-bitmiyor-eski-jet-motorlari-gundemde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c8e4bc137477fa052e",
+      "title": "WhatsApp, Android kullanıcılarına mavi tik bırakmadan mesaj okuma özelliği getiriyor",
+      "summary": "WhatsApp, Android kullanıcılarının sohbetleri açmadan mesajları okumasına olanak tanıyacak yeni bir özellik geliştiriyor. Bu sayede mesajlar, karşı tarafa mavi tik göndermeden okunabilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/whatsapp-ta-mavi-tik-birakmadan-mesaj-okuma-donemi-basliyor--212529",
+      "publishedAt": "2026-11-05T20:13:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212529/1200x675whatsapp-ta-mavi-tik-birakmadan-mesaj-okuma-donemi-basliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c5395290644325a76c",
+      "title": "Generate longer AI videos with Omni 1.2 Flash in Google Vids at no cost.",
+      "summary": "Create longer AI videos in Google Vids with the new Omni 1.2 Flash model. Generate 15-second clips and consistent scenes for free. Try it now.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/workspace/omni-1-2-flash-google-vids/",
+      "publishedAt": "2026-11-05T20:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/pics-blog-header-2784x1566.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "5e1ee67942d24bdb31",
+      "title": "NASA, yeni deneysel uçağı X-70 Fractal'ı tanıttı",
+      "summary": "NASA, yeni deneysel uçağı X-70 Fractal'ı tanıttı. Gelişmiş uçuş kontrol sistemlerini test etmek için tasarlanan uçak, farklı araştırma görevlerine hızlıca uyarlanabilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nasa-yeni-deneysel-ucagi-x-70-fractal-i-tanitti--212528",
+      "publishedAt": "2026-11-05T19:51:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212528/1200x675nasa-yeni-deneysel-ucagi-x-70-fractal-i-tanitti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7b2c388bc6f157dbf3",
+      "title": "Uyurken kulaklığa gerek kalmayacak: Baseus'tan yastık altı hoparlör",
+      "summary": "Kulaklık takmadan yatakta müzik ve podcast dinlemek isteyenlere yönelik geliştirilen Baseus Sleep SK1, çevreye ses yayılımını azaltan özel teknolojisiyle dikkat çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/baseus-yastik-altina-yerlestirilen-bluetooth-hoparlorunu-tanitti--212531",
+      "publishedAt": "2026-11-05T19:29:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212531/1200x675baseus-yastik-altina-yerlestirilen-bluetooth-hoparlorunu-tanitti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f58187d5db6cdad410",
+      "title": "BYD'nin Rolls-Royce'a rakip lüks elektrikli sedanı sızdırıldı: İşte Yangwang Altior",
+      "summary": "BYD'nin Rolls-Royce, Mercedes-Maybach ve Bentley gibi üst segment araçlarla rekabet edecek yeni elektrikli lüks sedan modeli resmi tanıtımına kısa süre kala kamuflajsız olarak görüntülendi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/byd-nin-rolls-royce-a-rakip-luks-elektrikli-sedani-sizdirildi--212524",
+      "publishedAt": "2026-11-05T19:18:45Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212524/1200x675byd-nin-rolls-royce-a-rakip-luks-elektrikli-sedani-sizdirildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "932b1bc1bc28ca9de5",
+      "title": "Güneş panellerinin yönü ve eğimi artık uzaktan tespit edilebilecek",
+      "summary": "Avustralya'da test edilen yeni yöntem, güneş panellerinin eğim ve yön açısını yalnızca elektrik üretim verilerini analiz ederek belirleyebiliyor. Özellikle büyük projelerde işleri kolaylaştırabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gunes-panellerinin-yonu-ve-egimi-uzaktan-tespit-edilebiliyor--212536",
+      "publishedAt": "2026-11-05T19:07:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212536/1200x675gunes-panellerinin-yonu-ve-egimi-uzaktan-tespit-edilebiliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "44c262ec2b9bdf2672",
+      "title": "NASA'nın Swift uzay teleskobu Dünya'ya düştü: İşte o anlar",
+      "summary": "NASA'nın 22 yıllık Swift uzay teleskobu, yörüngesini yükseltme girişiminin başarısız olmasının ardından Dünya'ya düştü. Teleskop, görev süresi boyunca binlerce kozmik olayı gözlemledi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nasa-nin-swift-uzay-teleskobu-dunya-ya-dustu-iste-o-anlar--212515",
+      "publishedAt": "2026-11-05T18:43:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212515/1200x675nasa-nin-swift-uzay-teleskobu-dunya-ya-dustu-iste-o-anlar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "881faeb2e65ad5566f",
+      "title": "PS Store \"Black Friday\" indirimleri başladı: İşte öne çıkan oyunlar",
+      "summary": "Playstation Store'da başlayan \"Black Friday\" indirimleri kapsamında birçok oyun yüzde %75'e varan indirimle sunuluyor. işte Playstation Store'da indirime giren oyunlar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ps-store-black-friday-indirimleri-basladi-iste-firsat-oyunlar--212538",
+      "publishedAt": "2026-11-05T18:22:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212538/1200x675ps-store-black-friday-indirimleri-basladi-iste-firsat-oyunlar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "268473af225cc85ca4",
+      "title": "Bundle Up With Two Beloved Classics, Now on EA Play",
+      "summary": "From garden chaos to cozy creations, two classics are on The Play List. Plants vs. Zombies: Replanted and MySims: Cozy Bundle are now on EA Play for XBOX! Members can fall back into beloved favorites with unlimited access. Game Pass Ultimate members can settle into sweater weather now with EA Play. Get unlimited access today,",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/05/ea-play-november/",
+      "publishedAt": "2026-11-05T18:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/EAP_Group_NovRewards_NA_Social_1920x1080-53f5975890267335fc53.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "ce4e76a772538a92e8",
+      "title": "İspanya elektrik kesintilerine karşı siber güvenlik kalkanı kuruyor",
+      "summary": "İspanya, siber saldırıların elektrik kesintilerine yol açmasını önlemek için yeni adımlar attı. Düzenlemeler, kritik kuruluşlara risk değerlendirmesi ve saldırı bildirimi yükümlülükleri getiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ispanya-elektrik-kesintilerine-karsi-siber-guvenlik-kalkani-kuruy--212533",
+      "publishedAt": "2026-11-05T18:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://www.donanimhaber.com/images/images/haber/212533/1200x675ispanya-elektrik-kesintilerine-karsi-siber-guvenlik-kalkani-kuruy.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3f2240380d587cbc2c",
+      "title": "Huawei'nin yeni markası Osta'nın ilk telefonları ortaya çıktı",
+      "summary": "Huawei'nin yeni akıllı telefon markasının adı Osta olacak. Şirketin ilk etapta Osta O1 ve O1 Pro modellerini tanıtması beklenirken, cihazların özellikleri de ortaya çıktı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huawei-nin-yeni-markasi-osta-nin-ilk-telefonlari-ortaya-cikti--212507",
+      "publishedAt": "2026-11-05T17:38:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212507/1200x675huawei-nin-yeni-markasi-osta-nin-ilk-telefonlari-ortaya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "16f8cb3214bd5136a9",
       "title": "Akıllı telefon pazarı düşerken Qualcomm’un gözü veri merkezlerinde",
@@ -95,18 +275,6 @@
       "publishedAt": "2026-11-05T16:32:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212518/1200x675one-ui-9-da-yeni-sorun-internet-kopuyor-sim-kart-algilanmiyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f58187d5db6cdad410",
-      "title": "BYD'nin Rolls-Royce'a rakip lüks elektrikli sedanı sızdırıldı: İşte Yangwang Altior",
-      "summary": "BYD'nin Rolls-Royce, Mercedes-Maybach ve Bentley gibi üst segment araçlarla rekabet edecek yeni elektrikli lüks sedan modeli resmi tanıtımına kısa süre kala kamuflajsız olarak görüntülendi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/byd-nin-rolls-royce-a-rakip-luks-elektrikli-sedani-sizdirildi--212524",
-      "publishedAt": "2026-11-05T16:06:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212524/1200x675byd-nin-rolls-royce-a-rakip-luks-elektrikli-sedani-sizdirildi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -292,7 +460,7 @@
     },
     {
       "id": "bfc26278ca87f545d9",
-      "title": "Assassin’s Creed Valhalla: new update brings New Game+, upgraded PSSR support for PS5 Pro today",
+      "title": "Assassin’s Creed Valhalla: new update brings New Game Plus, upgraded PSSR support for PS5 Pro today",
       "summary": "Assassin’s Creed Valhalla: The Most Requested Update, a free update bringing several player-requested and quality-of-life features to the game, is live today on PlayStation 5 and PlayStation 5 Pro. The update has new content, a progression update, and more, including: The new PSSR update is exclusive to PlayStation 5 Pro players, giving them an even",
       "source": "PlayStation Blog",
       "sourceUrl": "https://blog.playstation.com/2026/11/05/assassins-creed-valhalla-new-update-brings-new-game-upgraded-pssr-support-for-ps5-pro-today/",
@@ -324,30 +492,6 @@
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Check_out_our_free_livestream_d.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "fa5761b2a9eb7d55f8",
-      "title": "Bosch çip işini ayırıyor, 2030 hedefi 5 milyar euro",
-      "summary": "Bosch, yarı iletken işini ayrı bir bölüme dönüştürerek çip pazarındaki konumunu güçlendirmeye hazırlanıyor. Şirket, otomotiv dışındaki sektörlerde de büyümeyi hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bosch-cip-isini-ayiriyor-2030-hedefi-5-milyar-euro--212513",
-      "publishedAt": "2026-11-05T13:57:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212513/1200x675bosch-cip-isini-ayiriyor-2030-hedefi-5-milyar-euro.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9276e0923407decfed",
-      "title": "Avrupa hava sahasında bomba alarmı: En az 25 uçuş etkilendi",
-      "summary": "Avrupa'da ikinci kez yaşanan bomba ihbarı dalgası en az 25 uçuşu etkiledi. Bazı uçaklar yönlendirilirken savaş uçakları havalandı. İncelemelerde patlayıcı bulunamadı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/avrupa-hava-sahasinda-bomba-alarmi-en-az-25-ucus-etkilendi--212534",
-      "publishedAt": "2026-11-05T13:53:22Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212534/1200x675avrupa-hava-sahasinda-bomba-alarmi-en-az-25-ucus-etkilendi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -423,54 +567,6 @@
       "editorial": false
     },
     {
-      "id": "42d1ced6afc8b78afb",
-      "title": "Chery Arrizo 7 geri dönüyor: Hibrit versiyonda 1.700 km menzil",
-      "summary": "Chery, Arrizo 7 adını benzinli ve şarj edilebilir hibrit motorlarla geri getiriyor. Çin’de yılın son çeyreğinde satışa çıkacak sedanın hibrit versiyonu için 1.700 km’yi aşan toplam menzil açıklanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/chery-arrizo-7-geri-donuyor-hibrit-versiyonda-1-700-km-menzil--212517",
-      "publishedAt": "2026-11-05T13:35:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212517/1200x675chery-arrizo-7-geri-donuyor-hibrit-versiyonda-1-700-km-menzil.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "959d75a6f495b2fc94",
-      "title": "Rus hackerlardan iPhone ve Android kullanıcılarına büyük saldırı",
-      "summary": "Rus hackerlar, sahte internet siteleri ve güvenlik açıkları üzerinden iPhone ve Android kullanıcılarını hedef aldı. Saldırganlar, mesajlardan şifrelere kadar kişisel verileri çalmaya çalıştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/rus-hackerlardan-iphone-ve-android-kullanicilarina-buyuk-saldiri--212506",
-      "publishedAt": "2026-11-05T13:13:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212506/1200x675rus-hackerlardan-iphone-ve-android-kullanicilarina-buyuk-saldiri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "723bcceb6a424d5e42",
-      "title": "Toyota, Çin’de 121 bini aşkın elektrikli aracı geri çağırıyor",
-      "summary": "Toyota, Çin’de bZ3X ve bZ7 modellerini kapsayan üç geri çağırma başlattı. Süspansiyon bağlantıları, frenleme ve direksiyon kontrolüyle ilgili sorunlar ücretsiz onarım ve güncellemelerle giderilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/toyota-cin-de-121-bini-askin-elektrikli-araci-geri-cagiriyor--212523",
-      "publishedAt": "2026-11-05T12:52:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212523/1200x675toyota-cin-de-121-bini-askin-elektrikli-araci-geri-cagiriyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9ffcf135414ddd8a56",
-      "title": "Avrupa’da fabrikalarını kapatan Honda, üretime geri dönebilir",
-      "summary": "Honda, Avrupa’da otomobil üretimine yeniden başlayabilir. Markanın Avrupa başkanı, “Made in EU” kurallarının yerel üretimi gündeme getirebileceğini belirtti. Ancak henüz somut bir plan bulunmuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/avrupa-da-fabrikalarini-kapatan-honda-uretime-geri-donebilir--212510",
-      "publishedAt": "2026-11-05T12:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212510/1200x675avrupa-da-fabrikalarini-kapatan-honda-uretime-geri-donebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "b39ac93f659891be57",
       "title": "Togg, THY ve Eczacıbaşı’ndan Dev Adım: Robotik Türkiye Platformu Kuruldu!",
       "summary": "TBV çatısında kurulan Robotik Türkiye Platformu, yerli sanayi ve girişimleri buluşturarak fiziksel yapay zekâda küresel rekabeti hedefliyor.",
@@ -491,30 +587,6 @@
       "publishedAt": "2026-11-05T12:14:27Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/695854/695854-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "fd027b2f3a9885a5a8",
-      "title": "Nothing'den ekransız yapay zeka cihazı geliyor",
-      "summary": "Nothing CEO'su Carl Pei, şirketin ilk yapay zeka odaklı cihazının Aralık 2026'da geleceğini duyurdu. Ekranı bulunmayan bu yeni AI cihazı üretkenlik aracı olarak konumlandırılacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nothing-den-ekransiz-yapay-zeka-cihazi-geliyor--212503",
-      "publishedAt": "2026-11-05T12:07:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212503/1200x675nothing-den-ekransiz-yapay-zeka-cihazi-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d34b0d7a2b83f5ef90",
-      "title": "En çok indirilen PlayStation oyunları açıklandı (Ekim 2026)",
-      "summary": "Sony, Ekim 2026'da PlayStation Store üzerinden en çok indirilen oyunları açıkladı. Call of Duty: Modern Warfare 4, PS5 listelerinde zirveye yerleşti. İşte tüm kategorilerde öne çıkan yapımlar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/en-cok-indirilen-playstation-oyunlari-aciklandi-ekim-2026--212505",
-      "publishedAt": "2026-11-05T11:45:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212505/1200x675en-cok-indirilen-playstation-oyunlari-aciklandi-ekim-2026.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -551,30 +623,6 @@
       "publishedAt": "2026-11-05T11:21:57Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/678748/678748-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ed88c1b78df62f37b2",
-      "title": "Nvidia App'e yeni GPU önceliklendirme özelliği geliyor",
-      "summary": "Nvidia, GPU kaynaklarının oyunlar ve arka plan uygulamaları arasında nasıl paylaşılacağını belirleyen yeni özelliğini GeForce RTX ekran kartlarına sunmaya başladı. Ancak erişim şimdilik sınırlı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-app-e-yeni-gpu-onceliklendirme-ozelligi-geliyor--212500",
-      "publishedAt": "2026-11-05T11:13:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212500/1200x675nvidia-app-e-yeni-gpu-onceliklendirme-ozelligi-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eec4c771427b25c48d",
-      "title": "Skoda Karoq Yeni Prestige donanımı satışa sunuldu: İşte fiyatı ve özellikleri",
-      "summary": "Skoda Karoq'un Yeni Prestige donanımı Türkiye'de satışa sunuldu. Karoq Yeni Prestige fiyatı ne kadar? Karoq Yeni Prestige neler sunuyor? İşte detaylar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/skoda-karoq-yeni-prestige-donanimi-satisa-sunuldu--212514",
-      "publishedAt": "2026-11-05T10:55:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212514/1200x675skoda-karoq-yeni-prestige-donanimi-satisa-sunuldu.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -783,18 +831,6 @@
       "editorial": false
     },
     {
-      "id": "0466c5b0cb7cd8856f",
-      "title": "Corner Shop: NightShift How we Built Horror Around an Ordinary Life",
-      "summary": "When people think about psychological horror, they usually think about abandoned buildings, monsters, strange rituals, or someone being chased through a dark corridor. With Corner Shop: NightShift, I wanted to begin somewhere much more ordinary. A job. Adam Callahan works the night shift in a small convenience store. He receives deliveries, puts products on shelves,",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/03/corner-shop-nightshift/",
-      "publishedAt": "2026-11-03T20:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Screenshot_1-de368d5b7913b819e1c6.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "039eeeb95278a51342",
       "title": "Grand Theft Auto VI pre-download begins November 10",
       "summary": "Grand Theft Auto VI launches November 19 on PlayStation 5, with pre-download available starting November 10. Whether you’re returning to the series or jumping in for the first time, here are a few key steps you can take now to prepare for launch day. Step 1: Set up your PlayStation account Make sure your PlayStation",
@@ -831,6 +867,18 @@
       "editorial": false
     },
     {
+      "id": "b1acee54f67377df7c",
+      "title": "New research shows how Guided Learning supports students",
+      "summary": "New research shows Guided Learning drives higher learning gains, plus new features for Google Classroom.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/education/guided-learning-uk-japan/",
+      "publishedAt": "2026-11-03T14:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Guided_learning_hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "f841ee71fc6c0a36ef",
       "title": "We’re providing funding for organizations building AI for teachers.",
       "summary": "Google.org is funding five organizations to build AI tools for teachers. See how these initiatives support educators and students. Get the details.",
@@ -843,14 +891,14 @@
       "editorial": false
     },
     {
-      "id": "b1acee54f67377df7c",
-      "title": "New research shows how Guided Learning supports students",
-      "summary": "New research shows Guided Learning drives higher learning gains, plus new features for Google Classroom.",
+      "id": "5d1fb9768da7b3a45e",
+      "title": "Working collaboratively to fight scams in Asia Pacific",
+      "summary": "Google combines built-in protections with local partnerships and education to tackle scams in APAC.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/guided-learning-uk-japan/",
+      "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/fight-against-apac-scams/",
       "publishedAt": "2026-11-03T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Guided_learning_hero.max-600x600.format-webp.webp",
+      "category": "Güvenlik",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/APAC_scams_herosocial.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -875,18 +923,6 @@
       "publishedAt": "2026-11-03T14:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Regional_Blog_Header_Option_1.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "5d1fb9768da7b3a45e",
-      "title": "Working collaboratively to fight scams in Asia Pacific",
-      "summary": "Google combines built-in protections with local partnerships and education to tackle scams in APAC.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/inside-google/around-the-globe/google-asia/fight-against-apac-scams/",
-      "publishedAt": "2026-11-03T14:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/APAC_scams_herosocial.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1071,18 +1107,6 @@
       "editorial": false
     },
     {
-      "id": "d9e57218237adad657",
-      "title": "You can now generate, preview, and edit documents, PDFs, presentations, spreadsheets, and more directly in Gemini.",
-      "summary": "Generate, edit, and preview PDFs or Docs directly in Gemini. Use the new full-screen editor to refine your files today. See what's new in Gemini.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/edit-files-directly/",
-      "publishedAt": "2026-10-29T16:15:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/fileGen2.0-thumbnail-resize.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "93dde8cc7b16e73253",
       "title": "Cloudflare DDoS Threat Report 2026 Q3: More swarms, fewer giants",
       "summary": "Cloudflare mitigated over 8,200 DDoS attacks per hour in Q3 2026 as attackers shifted to shorter, high-frequency strikes. Explore the latest threat data, including the collapse of CLDAP vectors and the impact of recent botnet takedowns.",
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-10-23T18:22:59Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5MZP89Y10XGACD5T6G2F398.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "70bdd870b2ac82df6e",
-      "title": "Bringing post-quantum cryptography to geographically fenced key management",
-      "summary": "Cloudflare's new post-quantum GeoKey Manager protects geographically fenced decryption keys from harvest now, decrypt later attacks. Learn how we redesigned our cryptography stack to support strict data sovereignty in a post-quantum world.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/post-quantum-geo-key-manager/",
-      "publishedAt": "2026-10-23T18:06:56Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5MYF3Y4CXM47ZAN16JYM04W.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "405699f87f1c074465",
-      "title": "Localizing compliance at scale: achieving South Korea’s ISMS certification",
-      "summary": "Cloudflare has achieved South Korea's ISMS certification following an audit across 80 controls. Learn how we localized user consent flows, adapted social sign-up paths at the edge, and validated our global security program.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/k-isms/",
-      "publishedAt": "2026-10-22T13:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
       "language": "en",
       "editorial": false
     }
