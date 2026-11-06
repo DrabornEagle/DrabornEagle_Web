@@ -1,7 +1,103 @@
 {
-  "generatedAt": "2026-11-06T18:17:49.345746Z",
+  "generatedAt": "2026-11-06T23:25:31.682953Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "1bb84852735cfa907d",
+      "title": "Blue Origin, dev roketi New Glenn’in fırlatılışını 2027'ye erteledi",
+      "summary": "Blue Origin, mayıs ayında yaşanan patlamanın ardından New Glenn roketini yeniden fırlatma planını erteledi. Şirket, artık yeni fırlatma için Ocak 2027'yi hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/blue-origin-in-dev-roketi-new-glenn-in-firlatilisi-2027-ye-kaldi--212584",
+      "publishedAt": "2026-11-06T21:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212584/1200x675blue-origin-in-dev-roketi-new-glenn-in-firlatilisi-2027-ye-kaldi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e1e6ed0974ae343072",
+      "title": "Antalya'daki iklim zirvesi öncesi AB'den kritik uyarı: Bu yıl 1,5 derecelik eşik aşılacak",
+      "summary": "Antalya'da düzenlenecek COP31 iklim zirvesi öncesinde Avrupa Birliği'nden kritik bir uyarı geldi. 2026, küresel sıcaklık konusunda korkulan eşiğin aşıldığı bir yıl olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/antalya-daki-iklim-zirvesi-oncesi-ab-den-kritik-uyari--212585",
+      "publishedAt": "2026-11-06T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212585/1200x675antalya-daki-iklim-zirvesi-oncesi-ab-den-kritik-uyari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c6bb50ff6b07c95cd3",
+      "title": "Blue Origin, New Glenn roketini büyütüyor: Yeni motor ve üçüncü aşama geliyor",
+      "summary": "Blue Origin, New Glenn roketine Ay ve derin uzay görevleri için üçüncü aşama ekliyor. Şirket ayrıca BE-4'ten daha güçlü ve dörtte bir maliyetli yeni Northstar motorunu duyurdu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/blue-origin-new-glenn-roketini-buyutuyor-yeni-motor-tanitildi--212586",
+      "publishedAt": "2026-11-06T20:40:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212586/1200x675blue-origin-new-glenn-roketini-buyutuyor-yeni-motor-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a10e0ae3f1fbaba9c4",
+      "title": "ABD'deki seçimler teknoloji şirketlerine ağır darbe indirdi: Bir günde 2 trilyon dolar kayıp",
+      "summary": "Trump'ın partisinin bu haftaki seçimlerde hezimete uğraması teknoloji şirketlerine de büyük darbe indirdi. Planlanan veri merkezi ve yapay zekâ yatırımları tehlikeye girince hisseler çakıldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/abd-deki-secimler-teknoloji-sirketlerine-agir-darbe-indirdi--212588",
+      "publishedAt": "2026-11-06T20:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212588/1200x675abd-deki-secimler-teknoloji-sirketlerine-agir-darbe-indirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "de48b581895ea81da6",
+      "title": "E-Ticaret yönetenler için laptop önerileri: Ürün yükleme ve çoklu mağaza kullanımı",
+      "summary": "E-ticaret operasyonlarında ürün yükleme, stok takibi ve birden fazla mağazayı yönetmek için güçlü işlemci, yeterli RAM ve hızlı SSD sunan laptop modellerini bir araya getirdik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/e-ticaret-icin-laptop-onerileri--212416",
+      "publishedAt": "2026-11-06T19:42:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212416/1200x675e-ticaret-icin-laptop-onerileri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7cf9e1f152fa8ea26e",
+      "title": "Sony, Walkman'in ikonik kulaklığını 47 yıl sonra yeniden canlandırdı",
+      "summary": "Sony, 1979 yılında ilk Walkman ile birlikte tanıttığı ikonik MDR-3 kulaklık tasarımını yeniden canlandırdı. Yeni model, nostaljik görünümünü USB-C bağlantısı ve dahili mikrofonla birleştiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sony-walkman-in-ikonik-kulakligini-yeniden-canlandirdi--212580",
+      "publishedAt": "2026-11-06T19:12:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212580/1200x675sony-walkman-in-ikonik-kulakligini-yeniden-canlandirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "da6470f56b8fa04f2b",
+      "title": "Fabrikalardaki atık ısıyı enerjiye dönüştüren endüstriyel ısı pompası tanıtıldı",
+      "summary": "Doğaz gaz kazanlarına alternatif geliyor. ABD'li Johnson Controls, fabrikalardaki atık ısıyı yeniden kullanarak 87,8 dereceye kadar sıcak su üretebilen endüstriyel ısı pompasını tanıttı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/atik-isiyi-enerjiye-donusturen-endustriyel-isi-pompasi-tanitildi--212549",
+      "publishedAt": "2026-11-06T18:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212549/1200x675atik-isiyi-enerjiye-donusturen-endustriyel-isi-pompasi-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6974576884b0fd6284",
+      "title": "Cat-Astrophy: How a Build Can Change Every Expedition",
+      "summary": "When I enter a new expedition in Cat-Astrophy, I don’t start with a fixed build that I have to repeat. I start with a question: what kind of Polo am I going to build this time? That idea is at the core of the module system, and it’s why two runs can take me down",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/06/cat-astrophy/",
+      "publishedAt": "2026-11-06T18:30:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Cat-Astrophy-04-H-4146579fbd83fcdf0c8d-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "19f85a25936ac89c54",
       "title": "Xbox PC uygulaması yenilendi: Daha hızlı ve kullanışlı olacak",
@@ -339,18 +435,6 @@
       "editorial": false
     },
     {
-      "id": "dd781f594ea5d8a425",
-      "title": "GeForce Now'a Kasım ayında eklenecek yeni oyunlar açıklandı",
-      "summary": "GeForce Now kütüphanesine Kasım ayında 24 yeni oyun ekleniyor. Cyberpunk 2077, Baldur’s Gate 3 ve Graveyard Keeper 2 dahil birçok yapım bulut üzerinden oynanabilir olacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/geforce-now-a-kasim-ayinda-eklenecek-yeni-oyunlar-aciklandi--212574",
-      "publishedAt": "2026-11-06T12:12:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212574/1200x675geforce-now-a-kasim-ayinda-eklenecek-yeni-oyunlar-aciklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "3c05b588a77dc2970f",
       "title": "Toplam Değeri 3.300 TL'den Fazla 7 Oyun, Xbox'ta Bu Hafta Sonu Ücretsiz Oldu",
       "summary": "Xbox Free Play Days kapsamında bu hafta ücretsiz olacak oyunlar açıklandı.",
@@ -375,18 +459,6 @@
       "editorial": false
     },
     {
-      "id": "6d6c07be9bf0b2ea4a",
-      "title": "GeForce 8800 GTX 20 yaşında: Ekran kartı dünyasını değiştiren model",
-      "summary": "Nvidia GeForce 8800 GTX, CUDA mimarisini ekran kartlarına taşımasının üzerinden 20 yıl geçmesine rağmen teknoloji tarihindeki yerini koruyor. Nvidia, özel bir Steam demosuyla bu modeli kutluyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/geforce-8800-gtx-20-yasinda-ekran-karti-dunyasini-degistiren-gpu--212559",
-      "publishedAt": "2026-11-06T11:50:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212559/1200x675geforce-8800-gtx-20-yasinda-ekran-karti-dunyasini-degistiren-gpu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "6fe9ad4d25af3c6c47",
       "title": "Süper Lig'de Yeni Yayın Dönemi: İhale Paketleri ve Detaylar Belli Oldu!",
       "summary": "Süper Lig'in 2027-2032 dönemi yayın ihalesinde 5 farklı paket yer alıyor. Peki ihale paketlerinin tüm detayları neler?",
@@ -399,30 +471,6 @@
       "editorial": false
     },
     {
-      "id": "b574b6c2b68bacd571",
-      "title": "İlk kez bir insansı robot şirketi halka arz oldu: Geliri sadece 1,8 milyon dolar",
-      "summary": "Amazon depolarında kullanılan Digit robotlarının üreticisi Agility Robotics halka açıldı. Şirket, 465 milyon dolar sermaye sağlarken 2025'i 138,1 milyon dolar zararla kapattı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ilk-kez-bir-insansi-robot-sirketi-halka-arz-oldu--212555",
-      "publishedAt": "2026-11-06T11:29:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212555/1200x675ilk-kez-bir-insansi-robot-sirketi-halka-arz-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "da5d66605ce53ffa5f",
-      "title": "WhatsApp'ta fotoğraf ve videolar orijinal kalitede paylaşılacak",
-      "summary": "WhatsApp, fotoğraf ve videoları herhangi bir sıkıştırma olmadan orijinal kalitede paylaşmaya olanak tanıyan bir seçenek üzerinde çalışıyor. Bu, Standart ve HD seçeneğinin yanına eklenecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/whatsapp-ta-fotograf-ve-video-kalitesi-dusmeyecek--212573",
-      "publishedAt": "2026-11-06T11:26:29Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212573/1200x675whatsapp-ta-fotograf-ve-video-kalitesi-dusmeyecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "fc2d1bd4a179ed3039",
       "title": "Yeni Çıkanlardan Klasiklere: Farklı Kategorilerden Kitap Tavsiyeleri",
       "summary": "Kitaplığınıza yeni eserler eklemek istiyor ancak yüzlerce seçenek arasında karar vermekte zorlanıyorsanız doğru yerdesiniz. Bu hafta Amazon'da öne çıkan ve okurların ilgisini çeken kitapları farklı kategoriler altında bir araya getirdik.",
@@ -431,30 +479,6 @@
       "publishedAt": "2026-11-06T11:17:42Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/696025/696025-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "79adf17ab468e240ca",
-      "title": "Elektronik atıklar böyle dönüştürülüyormuş - Tesis turu!",
-      "summary": "Bu videoda Vodafone ve OUNO iş birliğiyle hayata geçirilen e-atık geri dönüşüm çalışmalarını yerinde inceliyoruz. Tuzla'daki OUNO Green Campus tesisini ziyaret ederek süreci sizlerle buluşturuyoruz.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elektronik-atiklar-boyle-donusturuluyormus-tesis-turu--212568",
-      "publishedAt": "2026-11-06T11:06:15Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212568/1200x675elektronik-atiklar-boyle-donusturuluyormus-tesis-turu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "58298e65fcdefc241d",
-      "title": "Küresel tablet pazarında sert düşüş: iPad satışları da azaldı!",
-      "summary": "Omdia'nın son raporuna göre, üçüncü çeyrekte küresel çapta tablet satışları sert düşüş yaşarken, iPad satışları da %27.5 oranında azaldı. Apple, tablet pazarında liderliğini koruyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kuresel-tablet-pazarinda-sert-dusus-ipad-satislari-da-azaldi--212560",
-      "publishedAt": "2026-11-06T10:47:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212560/1200x675kuresel-tablet-pazarinda-sert-dusus-ipad-satislari-da-azaldi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -640,13 +664,13 @@
     },
     {
       "id": "181c9d7783a801a21a",
-      "title": "Free Play Days – PAYDAY 3, Anno 117, BALL x PIT, Deceive Inc, Age of Wonders 4, and More",
-      "summary": "Skip the safe picks – play something daring with Free Play Days! PAYDAY 3, Nowhere Prophet, BALL x PIT, Deceive Inc, and Age of Wonders 4 are available this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday November 5 until Sunday, November 8. IXION will have a 2-hour trial",
+      "title": "Free Play Days – Call of Duty: Modern Warfare 4 – DMZ, PAYDAY 3, Anno 117, BALL x PIT, Deceive Inc, Age of Wonders 4, and More",
+      "summary": "Skip the safe picks – play something daring with Free Play Days! PAYDAY 3, Nowhere Prophet, BALL x PIT, Deceive Inc, and Age of Wonders 4 are available this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday November 5 until Sunday, November 8. Call of Duty: Modern Warfare 4",
       "source": "Xbox Wire",
       "sourceUrl": "https://news.xbox.com/en-us/2026/11/05/free-play-days-11-04-2026/",
       "publishedAt": "2026-11-05T16:00:00Z",
       "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.13332.13779457877292855.8eb1c164-e4f2-4404-90bf-936bd8f0761d.85f9971c-bc5c-43de-bf60-c34432295985?w=400&h=600",
+      "image": "https://store-images.s-microsoft.com/image/apps.51591.13785731566626304.e923c13f-970d-4f83-8919-560c22d5bafc.55596663-b792-4744-b0ff-2074a4a88a2f?w=400&h=600",
       "language": "en",
       "editorial": false
     },
@@ -707,18 +731,6 @@
       "publishedAt": "2026-11-04T21:00:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/03_REFERENCE_Thatched_Cottage-copy-5dd9572acbf2ee9ceac7-911x683.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "8d55eb284042505d55",
-      "title": "How The Challenge Shrine Will Change How you Play Halls of Torment",
-      "summary": "Hello, adventurers! The Lost Archives, the second DLC forHalls of Torment, is available now on XBOX! There’s also a large and free update for all players.From the swamps of our first DLC, the Boglands, we are marching into The Lost Archives, where cultists and forgotten knowledge await us. You’re a new tormented Soul? Here’s a",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/04/how-the-challenge-shrine-will-change-how-you-play/",
-      "publishedAt": "2026-11-04T20:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/lostarchives_E-1-107efff597cfb598df58-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-21T13:56:45Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KXQSMGN3Z955B45GCJR4REK3.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "1c5f83daf4c5b5dc2d",
-      "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
-      "summary": "Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/webmcp-commerce/",
-      "publishedAt": "2026-10-21T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AYSA5Z4MMJ6XYBSMECP05T.png",
       "language": "en",
       "editorial": false
     }
