@@ -1,7 +1,163 @@
 {
-  "generatedAt": "2026-11-07T09:55:11.121088Z",
+  "generatedAt": "2026-11-07T16:13:29.928101Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "6eff957fa9d415a169",
+      "title": "Samsung Galaxy Buds On, Ocak ayında Türkiye'ye gelebilir",
+      "summary": "Samsung Galaxy Buds On kulaklıklarının Avrupa ve Türkiye çıkış tarihi için Ocak ayı işaret ediliyor. İşte klipsli tasarım, Bluetooth 6.2 ve 38 saate ulaşan pil ömrüyle yeni modelin ayrıntıları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-buds-on-ocak-ayinda-turkiye-ye-gelebilir--212618",
+      "publishedAt": "2026-11-07T16:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212618/1200x675samsung-galaxy-buds-on-ocak-ayinda-turkiye-ye-gelebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "63e4026cab522d04ef",
+      "title": "Sodyum iyon bataryalar maliyette LFP bataryaları yakaladı",
+      "summary": "Sodyum iyon bataryalar, 2026 sonunda hücre maliyetinde LFP teknolojisini yakalamaya hazırlanıyor. Sodyum iyon bataryaların uzun vadede LFP’ye göre daha avantajlı olduğu bildirildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sodyum-iyon-bataryalar-maliyette-lfp-bataryalari-yakaladi--212605",
+      "publishedAt": "2026-11-07T15:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212605/1200x675sodyum-iyon-bataryalar-maliyette-lfp-bataryalari-yakaladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b641187943b93c4f4e",
+      "title": "Alphabet'ten Qualcomm'a dev yatırım: Hedef yapay zeka veri merkezleri",
+      "summary": "Alphabet'in Qualcomm'a yaklaşık 548 milyon dolarlık yatırım yaptığı bildirildi. İşte yapay zeka veri merkezlerine yönelirken çip sektöründe yeni bir rekabet alanı oluşturacak yatırımın ayrıntıları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/alphabet-qualcomm-a-548-milyon-dolar-yatirimla-destek-verdi--212616",
+      "publishedAt": "2026-11-07T15:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212616/1200x675alphabet-qualcomm-a-548-milyon-dolar-yatirimla-destek-verdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e19640f7a8d9800b8d",
+      "title": "OMODA ve JAECOO Fiyat Listesi - Kasım 2026",
+      "summary": "Kasım 2026 OMODA ve JAECOO fiyat listesi açıklandı. OMODA 7, OMODA 5 ve JAECOO 7 modellerinin güncel fiyatları Webtekno'da!",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/kasim-2026-omoda-ve-jaecoo-fiyat-listesi-h228487.html",
+      "publishedAt": "2026-11-07T14:32:18Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/696136/696136-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b4d5f958f79ba1f1a0",
+      "title": "DJI Matrice 5T tanıtıldı: Gece görüşü, termal görüntüleme, 176x zoom",
+      "summary": "DJI, zifiri karanlıkta gerçekleştirilen kurtarma görevleri için tasarlanmış, her türlü hava koşuluna uygun dronunu tanıttı. DJI Matrice 5T, yaklaşık 10 saniye içinde uçuşa hazır hale geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dji-matrice-5t-drone-tanitildi-iste-fiyati-ve-ozellikleri--212611",
+      "publishedAt": "2026-11-07T14:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212611/1200x675dji-matrice-5t-drone-tanitildi-iste-fiyati-ve-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d466281302442f795c",
+      "title": "Akıllı telefon işlemci pazarında Qualcomm ve MediaTek kan kaybediyor",
+      "summary": "Bellek fiyatlarındaki hızlı yükseliş, akıllı telefon işlemci pazarında yüzde 21'lik sevkiyat düşüşüne neden oldu. MediaTek ve Qualcomm pazar payı kaybederken Apple ve Samsung yükselişe geçti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/akilli-telefon-islemci-pazarinda-qualcomm-ve-mediatek-geriliyor--212599",
+      "publishedAt": "2026-11-07T14:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212599/1200x675akilli-telefon-islemci-pazarinda-qualcomm-ve-mediatek-geriliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6cc96d2129d8b82826",
+      "title": "Android Auto'da sonsuz arama döngüsü: Gemini çıldırttı!",
+      "summary": "Bazı Android Auto kullanıcıları, kişinin adını belirtmelerine rağmen sistemin sürekli olarak kimi aramak veya kime mesaj göndermek istediğini sorduğunu ifade ediyor. Google, sorunu araştırıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/android-auto-da-sonsuz-arama-dongusu-gemini-cildirtti--212609",
+      "publishedAt": "2026-11-07T13:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212609/1200x675android-auto-da-sonsuz-arama-dongusu-gemini-cildirtti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c56a4b3885231dfe94",
+      "title": "Motorola Signature 27, DXOMARK kamera sıralamasında ikinci sıraya yerleşti",
+      "summary": "Motorola Signature 27, DXOMARK kamera testinden 173 puan alarak küresel sıralamada ikinci oldu. Yeni model, iPhone 18 Pro'yu geride bırakırken Huawei Pura 80 Ultra'nın yalnızca 2 puan gerisinde kaldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/motorola-signature-27-dxomark-kamera-siralamasinda-ikinci-siraya--212587",
+      "publishedAt": "2026-11-07T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212587/1200x675motorola-signature-27-dxomark-kamera-siralamasinda-ikinci-siraya.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c6d76b0e4bca98bfee",
+      "title": "Çin, dünyanın en büyük sıvı hava enerji depolama tesisini devreye aldı",
+      "summary": "Çin, 60 MW/600 MWh depolama kapasitesine sahip dünyanın en büyük sıvı hava enerji depolama tesisini devreye aldı. Sistem, fazla enerjiyi depolayarak 10 saat boyunca elektrik sağlayabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dunyanin-en-buyuk-sivi-hava-enerji-depolama-tesisi-devreye-girdi--212593",
+      "publishedAt": "2026-11-07T12:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212593/1200x675dunyanin-en-buyuk-sivi-hava-enerji-depolama-tesisi-devreye-girdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "47b98ab3f8860bea72",
+      "title": "Instagram Edits uygulaması macOS için yayınlandı",
+      "summary": "Dikey videoları kolay bir şekilde düzenleyerek Instagram platformunda veya başka platformlarda paylaşabildiğiniz Edits uygulaması artık masaüstünde de yerini aldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/instagram-edits-masaustune-geldi--212607",
+      "publishedAt": "2026-11-07T11:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212607/1200x675instagram-edits-masaustune-geldi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a76b2c257fbb0d7146",
+      "title": "One UI 10, Samsung'un en büyük arayüz güncellemesi olabilir",
+      "summary": "Samsung'un One UI 10 ile arayüzünde şimdiye kadarki en büyük değişiklikleri yapması bekleniyor. Şirketin, önemli yenilikleri One UI 9.5 yerine yeni sürüme sakladığı öne sürülüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/one-ui-10-samsung-un-en-buyuk-arayuz-guncellemesi-olabilir--212610",
+      "publishedAt": "2026-11-07T11:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212610/1200x675one-ui-10-samsung-un-en-buyuk-arayuz-guncellemesi-olabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b705c4bd1ea2ae9472",
+      "title": "Yenilenen Volkswagen Virtus'un ilk fotoğrafları yayınlandı",
+      "summary": "Volkswagen, sevilen sedan modeli Virtus’un makyajlı versiyonuna ait ilk görüntüleri paylaştı. 2022’den bu yana ilk kapsamlı güncellemesini alan modelin tazelenen dış tasarımı dikkat çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yenilenen-volkswagen-virtus-un-ilk-fotograflari-yayinlandi--212608",
+      "publishedAt": "2026-11-07T10:47:15Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212608/1200x675yenilenen-volkswagen-virtus-un-ilk-fotograflari-yayinlandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7ea12cf7067db624d1",
+      "title": "Razer kablolu oyuncu kulaklığını duyurdu",
+      "summary": "Razer Hammerhead V3 Chroma kulak içi kulaklık modeli kablolu olmasının yanı sıra aktif gürültü engelleme ve özelleştirilebilir RGB aydınlatma ile dikkat çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/razer-hammerhead-v3-chroma-tanitildi--212603",
+      "publishedAt": "2026-11-07T10:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212603/1200x675razer-hammerhead-v3-chroma-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "342e9a33f3efef7862",
       "title": "BİM marketler Monster oyuncu bilgisayarları satacak",
@@ -147,18 +303,6 @@
       "editorial": false
     },
     {
-      "id": "da6470f56b8fa04f2b",
-      "title": "Fabrikalardaki atık ısıyı enerjiye dönüştüren endüstriyel ısı pompası tanıtıldı",
-      "summary": "Doğaz gaz kazanlarına alternatif geliyor. ABD'li Johnson Controls, fabrikalardaki atık ısıyı yeniden kullanarak 87,8 dereceye kadar sıcak su üretebilen endüstriyel ısı pompasını tanıttı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/atik-isiyi-enerjiye-donusturen-endustriyel-isi-pompasi-tanitildi--212549",
-      "publishedAt": "2026-11-06T18:50:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212549/1200x675atik-isiyi-enerjiye-donusturen-endustriyel-isi-pompasi-tanitildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "6974576884b0fd6284",
       "title": "Cat-Astrophy: How a Build Can Change Every Expedition",
       "summary": "When I enter a new expedition in Cat-Astrophy, I don’t start with a fixed build that I have to repeat. I start with a question: what kind of Polo am I going to build this time? That idea is at the core of the module system, and it’s why two runs can take me down",
@@ -168,42 +312,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Cat-Astrophy-04-H-4146579fbd83fcdf0c8d-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "19f85a25936ac89c54",
-      "title": "Xbox PC uygulaması yenilendi: Daha hızlı ve kullanışlı olacak",
-      "summary": "Microsoft, Windows için Xbox uygulamasını daha hızlı ve kullanışlı hale getiren yeni güncellemesini duyurdu. Yenilenen arayüz, daha hızlı açılış ve gelişmiş kütüphane özellikleri sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-pc-uygulamasi-yenilendi-daha-hizli-ve-kullanisli-olacak--212558",
-      "publishedAt": "2026-11-06T18:06:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212558/1200x675xbox-pc-uygulamasi-yenilendi-daha-hizli-ve-kullanisli-olacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "78f575b09b466e453f",
-      "title": "Ekranlı ve mikrofonlu akıllı yüzük: Aina AI Ring",
-      "summary": "Aina, sıra dışı bir akıllı yüzük tanıttı. Geleneksel akıllı yüzüklerden farklı olarak, küçük bir ekran, joystick, mikrofon ve hatta hoparlör bulunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/aina-ai-ring-tanitildi-ekranli-akilli-yuzuk-neler-sunuyor--212567",
-      "publishedAt": "2026-11-06T17:44:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212567/1200x675aina-ai-ring-tanitildi-ekranli-akilli-yuzuk-neler-sunuyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b45a3486b2e67bb191",
-      "title": "AMD Zen 6 işlemcisi ilk kez Geekbench 7’de görüntülendi: 9950X3D'yi geçiyor",
-      "summary": "AMD'nin yeni nesil Zen 6 mimarisini temel alan Medusa Point işlemcisi, Geekbench 7 testinde ortaya çıktı. İlk sonuçlar, tek çekirdek performansında Ryzen 9 9950X3D'yi geride bıraktığını gösteriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amd-zen-6-islemcisi-ilk-kez-geekbench-7-de-goruntulendi--212566",
-      "publishedAt": "2026-11-06T17:22:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212566/1200x675amd-zen-6-islemcisi-ilk-kez-geekbench-7-de-goruntulendi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -231,54 +339,6 @@
       "editorial": false
     },
     {
-      "id": "eed434fa6841a0d0e0",
-      "title": "Çin, 2030’dan önce Ay’a insan indirmek için düğmeye bastı: İşte plan",
-      "summary": "Çin, 2030’dan önce Ay’a astronot indirmek için dört yıllık yol haritasını açıkladı. Plan, insansız iniş testinden Ay yörüngesinde kenetlenme provasına kadar kritik aşamaları kapsıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cin-2030-dan-once-ay-a-insan-indirmek-icin-dugmeye-basti--212575",
-      "publishedAt": "2026-11-06T17:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212575/1200x675cin-2030-dan-once-ay-a-insan-indirmek-icin-dugmeye-basti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "15b3c2250a1ebbf989",
-      "title": "RPG, FPS ve strateji oyuncularının tercihlerini anlamanın daha akıllı yolu",
-      "summary": "RPG, FPS ve strateji oyunları farklı oyuncu motivasyonlarına hitap ediyor. Oyun türü etiketleri ve dijital mağaza filtreleri, oyuncuların kendilerine uygun oyunları keşfetmesini kolaylaştırıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/oyun-turleri-oyuncu-tercihlerini-nasil-sekillendiriyor--212592",
-      "publishedAt": "2026-11-06T16:30:44Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212592/1200x675oyun-turleri-oyuncu-tercihlerini-nasil-sekillendiriyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f9b18460f752d477b7",
-      "title": "Casper Excalibur G870 Intertek testlerinde hangi sonuçları aldı?",
-      "summary": "Casper Excalibur G870, Intertek tarafından gerçekleştirilen beş farklı test grubunun tamamından PASS sonucu aldı. İşte Excalibur G870 oyuncu laptopun tüm test sonuçları.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/casper-excalibur-g870-intertek-testlerinde-hangi-sonuclari-aldi--212530",
-      "publishedAt": "2026-11-06T16:20:50Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212530/1200x675casper-excalibur-g870-intertek-testlerinde-hangi-sonuclari-aldi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "464f3f3d2c96075557",
-      "title": "Honor 700 serisi ortaya çıktı: Üç modelde de arka ekran bulunuyor",
-      "summary": "Honor 700 serisi için Çin'de ön sipariş süreci başladı. Dört farklı renk seçeneğiyle sunulacak modeller, arka taraftaki ikincil ekranları ve yüksek batarya kapasiteleriyle dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/honor-700-serisi-ortaya-cikti-uc-modelde-de-arka-ekran-bulunuyor--212579",
-      "publishedAt": "2026-11-06T16:09:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212579/1200x675honor-700-serisi-ortaya-cikti-uc-modelde-de-arka-ekran-bulunuyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "0bec9645b662964a46",
       "title": "20 Years of Gears",
       "summary": "It’s hard to believe that 20 years ago, Gears of War launched on XBOX 360 and introduced the world to Marcus Fenix, Dominic Santiago, and the genius of putting a chainsaw on a gun. Since then, a lot has happened. We’ve released new games, introduced new characters and enemies, and welcomed millions of players into",
@@ -288,18 +348,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/GoW_EDAY_FPL_S2_SolemnMemoriesDom_FE-307b6e3c81820345d5c3-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "7f7a6fb0fcb274190d",
-      "title": "ABD hava trafik kontrolünde onlarca yıllık disket dönemi sona eriyor",
-      "summary": "ABD, hava trafik kontrol sistemlerinde kullanılan disketleri tarihe gömmeye hazırlanıyor. FAA, 435 tesisteki eski altyapıyı 2028 sonuna kadar modern sistemlerle değiştirecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/abd-hava-trafik-kontrolunde-disket-donemi-sona-eriyor--212583",
-      "publishedAt": "2026-11-06T15:25:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212583/1200x675abd-hava-trafik-kontrolunde-disket-donemi-sona-eriyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1151,54 +1199,6 @@
       "publishedAt": "2026-10-22T13:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "59c87ea544e0e5db59",
-      "title": "Introducing full transaction detection for Cloudflare WAF",
-      "summary": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/full-transaction-waf/",
-      "publishedAt": "2026-10-21T14:10:42Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5E1HKVR7WJX7KGB4B8MSK75.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4a59615041b968ae61",
-      "title": "Cloudflare deploys protections against php2shell vulnerability",
-      "summary": "Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure. The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/",
-      "publishedAt": "2026-10-21T13:56:45Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KXQSMGN3Z955B45GCJR4REK3.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "1c5f83daf4c5b5dc2d",
-      "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
-      "summary": "Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/webmcp-commerce/",
-      "publishedAt": "2026-10-21T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AYSA5Z4MMJ6XYBSMECP05T.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "c78cf468160e1a4550",
-      "title": "8 eMudhra certificates are compromised. Here's what you need to know",
-      "summary": "Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/emudhra-certificate-compromise/",
-      "publishedAt": "2026-10-20T22:20:16Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5DK5FY53PEFH46MT990YMSR.png",
       "language": "en",
       "editorial": false
     }
