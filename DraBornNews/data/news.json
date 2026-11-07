@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-07T20:25:33.873114Z",
+  "generatedAt": "2026-11-07T23:50:44.112613Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "31913a14ee7519d748",
+      "title": "Yeni James Bond için sürpriz iki isim gündemde",
+      "summary": "Denis Villeneuve'ün (Dune) yöneteceği yeni James Bond filminde ünlü ajana sürpriz bir isim hayat verebilir. Daha önce hiç gündemde olmayan iki oyuncu yarışa dâhil oldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/james-bond-icin-surpriz-iki-isim-gundemde--212622",
+      "publishedAt": "2026-11-07T20:43:05Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212622/1200x675james-bond-icin-surpriz-iki-isim-gundemde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "380bda57a3d8be533e",
       "title": "Siri AI'a kullanım sınırı geliyor: Sınırsız erişim ücretli olacak!",
@@ -263,18 +275,6 @@
       "publishedAt": "2026-11-07T07:30:00Z",
       "category": "Oyun",
       "image": "https://www.donanimhaber.com/images/images/haber/212597/1200x675amd-ceo-su-lisa-su-acikladi-oyuncular-ikinci-planda.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7ff39e8d2dfd802946",
-      "title": "Ofis ve günlük kullanım için yeni başlangıç standardı: 100Hz monitörler",
-      "summary": "100 Hz monitör modelleri, 60 Hz ekranlara kıyasla daha akıcı görüntü sunarak ofis ve günlük kullanımda avantaj sağlıyor. İşte farklı bütçelere göre öne çıkan modeller",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ofis-ve-gunluk-kullanim-icin-en-iyi-100-hz-monitorler--212526",
-      "publishedAt": "2026-11-07T06:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212526/1200x675ofis-ve-gunluk-kullanim-icin-en-iyi-100-hz-monitorler.jpg",
       "language": "tr",
       "editorial": false
     },
