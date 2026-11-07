@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-06T23:25:31.682953Z",
+  "generatedAt": "2026-11-07T03:05:15.509564Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "a819fb5114f8668e03",
+      "title": "Epic Games Bir Oyunu Daha Ücretsiz Sunuyor: Hızlı Aksiyon ve Arcade Severler Buraya!",
+      "summary": "Epic Games, synthwave temalı hızlı aksiyon ve arcade oyunu GMH - Good Morning Human'ı ücretsiz olarak kullanıcılara sunuyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/gmh-good-morning-human-epic-games-ucretsiz-oyun-h228481.html",
+      "publishedAt": "2026-11-07T03:01:40Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/696127/696127-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "1bb84852735cfa907d",
       "title": "Blue Origin, dev roketi New Glenn’in fırlatılışını 2027'ye erteledi",
@@ -563,18 +575,6 @@
       "publishedAt": "2026-11-06T07:57:06Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/695944/695944-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a467137503f6d39a3d",
-      "title": "Kablo Karmaşasına Son: Ev Ofisler İçin Şık ve Kompakt All-in-One Casper Bilgisayar Çözümleri",
-      "summary": "Ekran, kasa ve kablo yığını yerine tek bir ince gövde: Casper Nirvana AIO A970 ve Casper Nirvana AIO A870’i fiyat, ekran, dayanıklılık ve kurulum kolaylığı açısından inceledik.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/kablo-karmasasina-son-ev-ofisler-icin-sik-ve-kompakt-all-in-one-casper-bilgisayar-cozumleri-h228229.html",
-      "publishedAt": "2026-11-06T07:25:49Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/695572/695572-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
