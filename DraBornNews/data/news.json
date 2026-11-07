@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-11-07T16:13:29.928101Z",
+  "generatedAt": "2026-11-07T20:25:33.873114Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "380bda57a3d8be533e",
+      "title": "Siri AI'a kullanım sınırı geliyor: Sınırsız erişim ücretli olacak!",
+      "summary": "Apple, dördüncü çeyrek sonuçlarını açıkladığı sırada, Siri AI için gelecekte kullanım sınırı olacağını, daha kapsamlı erişim için ücret ödeme seçeneği sunulacağını doğruladı. İşte ayrıntılar:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/siri-ai-a-kullanim-siniri-geliyor-sinirsiz-erisim-ucretli-olacak--212613",
+      "publishedAt": "2026-11-07T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212613/1200x675siri-ai-a-kullanim-siniri-geliyor-sinirsiz-erisim-ucretli-olacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ba7c8946764c9c50f3",
+      "title": "Gemini Omni 1.2 Flash duyuruldu: Daha uzun ve tutarlı videolar",
+      "summary": "15 saniyeye kadar video oluşturabilen model, aşamalı düzenleme, daha tutarlı sahneler ve gelişmiş ses üretimi özellikleriyle geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gemini-omni-1-2-flash-duyuruldu-daha-uzun-ve-tutarli-videolar--212600",
+      "publishedAt": "2026-11-07T18:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212600/1200x675gemini-omni-1-2-flash-duyuruldu-daha-uzun-ve-tutarli-videolar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "192d68d6b9d34248a6",
+      "title": "Şarjı uzun giden laptop önerileri: Aynı koşullarda gerçek pil testleri",
+      "summary": "Şarjı uzun giden laptop arayanlar için gerçek pil testi sonuçlarını ve öne çıkan modelleri karşılaştırdık. İşte farklı kullanım ihtiyaçlarına ve bütçelere uygun uzun pil ömürlü laptop önerileri!",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sarji-uzun-giden-laptop-onerileri-iste-gercek-pil-testleri--212512",
+      "publishedAt": "2026-11-07T17:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212512/1200x675sarji-uzun-giden-laptop-onerileri-iste-gercek-pil-testleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "440a1b616d18d10b1f",
+      "title": "DJI Matrice 5T, LiDAR ve 176x zoom ile tanıtıldı",
+      "summary": "DJI Matrice 5T, LiDAR, termal kamera, 176x hibrit zoom ve 59 dakikalık uçuş süresiyle endüstriyel görevleri hedefliyor. İşte yeni nesil drone'un özellikleri ve fiyatı:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dji-matrice-5t-lidar-ve-176x-zoom-ile-tanitildi--212614",
+      "publishedAt": "2026-11-07T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212614/1200x675dji-matrice-5t-lidar-ve-176x-zoom-ile-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cb802dc8cb1c70b489",
+      "title": "Google için yapay zeka paradoksa dönüştü",
+      "summary": "Google yapay zeka aramalarında büyüme kaydederken reklam gelirlerinde yavaşlama yaşıyor. Şirket, yüz milyarlarca dolarlık yatırımlarının karşılığını henüz alamıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-icin-yapay-zeka-paradoksa-donustu--212606",
+      "publishedAt": "2026-11-07T16:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212606/1200x675google-icin-yapay-zeka-paradoksa-donustu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "6eff957fa9d415a169",
       "title": "Samsung Galaxy Buds On, Ocak ayında Türkiye'ye gelebilir",
@@ -227,78 +287,6 @@
       "publishedAt": "2026-11-07T03:01:40Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/696127/696127-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1bb84852735cfa907d",
-      "title": "Blue Origin, dev roketi New Glenn’in fırlatılışını 2027'ye erteledi",
-      "summary": "Blue Origin, mayıs ayında yaşanan patlamanın ardından New Glenn roketini yeniden fırlatma planını erteledi. Şirket, artık yeni fırlatma için Ocak 2027'yi hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/blue-origin-in-dev-roketi-new-glenn-in-firlatilisi-2027-ye-kaldi--212584",
-      "publishedAt": "2026-11-06T21:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212584/1200x675blue-origin-in-dev-roketi-new-glenn-in-firlatilisi-2027-ye-kaldi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e1e6ed0974ae343072",
-      "title": "Antalya'daki iklim zirvesi öncesi AB'den kritik uyarı: Bu yıl 1,5 derecelik eşik aşılacak",
-      "summary": "Antalya'da düzenlenecek COP31 iklim zirvesi öncesinde Avrupa Birliği'nden kritik bir uyarı geldi. 2026, küresel sıcaklık konusunda korkulan eşiğin aşıldığı bir yıl olacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/antalya-daki-iklim-zirvesi-oncesi-ab-den-kritik-uyari--212585",
-      "publishedAt": "2026-11-06T20:59:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212585/1200x675antalya-daki-iklim-zirvesi-oncesi-ab-den-kritik-uyari.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c6bb50ff6b07c95cd3",
-      "title": "Blue Origin, New Glenn roketini büyütüyor: Yeni motor ve üçüncü aşama geliyor",
-      "summary": "Blue Origin, New Glenn roketine Ay ve derin uzay görevleri için üçüncü aşama ekliyor. Şirket ayrıca BE-4'ten daha güçlü ve dörtte bir maliyetli yeni Northstar motorunu duyurdu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/blue-origin-new-glenn-roketini-buyutuyor-yeni-motor-tanitildi--212586",
-      "publishedAt": "2026-11-06T20:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212586/1200x675blue-origin-new-glenn-roketini-buyutuyor-yeni-motor-tanitildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a10e0ae3f1fbaba9c4",
-      "title": "ABD'deki seçimler teknoloji şirketlerine ağır darbe indirdi: Bir günde 2 trilyon dolar kayıp",
-      "summary": "Trump'ın partisinin bu haftaki seçimlerde hezimete uğraması teknoloji şirketlerine de büyük darbe indirdi. Planlanan veri merkezi ve yapay zekâ yatırımları tehlikeye girince hisseler çakıldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/abd-deki-secimler-teknoloji-sirketlerine-agir-darbe-indirdi--212588",
-      "publishedAt": "2026-11-06T20:20:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212588/1200x675abd-deki-secimler-teknoloji-sirketlerine-agir-darbe-indirdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "de48b581895ea81da6",
-      "title": "E-Ticaret yönetenler için laptop önerileri: Ürün yükleme ve çoklu mağaza kullanımı",
-      "summary": "E-ticaret operasyonlarında ürün yükleme, stok takibi ve birden fazla mağazayı yönetmek için güçlü işlemci, yeterli RAM ve hızlı SSD sunan laptop modellerini bir araya getirdik.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/e-ticaret-icin-laptop-onerileri--212416",
-      "publishedAt": "2026-11-06T19:42:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212416/1200x675e-ticaret-icin-laptop-onerileri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7cf9e1f152fa8ea26e",
-      "title": "Sony, Walkman'in ikonik kulaklığını 47 yıl sonra yeniden canlandırdı",
-      "summary": "Sony, 1979 yılında ilk Walkman ile birlikte tanıttığı ikonik MDR-3 kulaklık tasarımını yeniden canlandırdı. Yeni model, nostaljik görünümünü USB-C bağlantısı ve dahili mikrofonla birleştiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/sony-walkman-in-ikonik-kulakligini-yeniden-canlandirdi--212580",
-      "publishedAt": "2026-11-06T19:12:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212580/1200x675sony-walkman-in-ikonik-kulakligini-yeniden-canlandirdi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-22T13:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "59c87ea544e0e5db59",
+      "title": "Introducing full transaction detection for Cloudflare WAF",
+      "summary": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/full-transaction-waf/",
+      "publishedAt": "2026-10-21T14:10:42Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5E1HKVR7WJX7KGB4B8MSK75.png",
       "language": "en",
       "editorial": false
     }
