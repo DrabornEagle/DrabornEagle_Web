@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-11-07T03:05:15.509564Z",
+  "generatedAt": "2026-11-07T09:55:11.121088Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "342e9a33f3efef7862",
+      "title": "BİM marketler Monster oyuncu bilgisayarları satacak",
+      "summary": "11 Kasım BİM Aktüel teknoloji ürünleri arasında Monster markasına ait Abra V22.5.3 dizüstü bilgisayar ve Tulpar TD3 V1.2.3.3 oyuncu kasası yer alıyor. Ürünler kasada sipariş veriliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/11-kasim-bim-aktuel-katalogunda-neler-var--212602",
+      "publishedAt": "2026-11-07T09:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212602/1200x67511-kasim-bim-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9cc1fe33eb2913febe",
+      "title": "WhatsApp'a yeni etkinlik özellikleri geliyor: Hesabı olmayanlar da katılabilecek",
+      "summary": "WhatsApp, etkinlik oluşturma ve davet gönderme özelliklerini genişletiyor. Yeni güncellemeyle kullanıcılar, hesabı olmayan kişileri de bağlantı üzerinden etkinliklere davet edebilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/whatsapp-a-yeni-etkinlik-ozellikleri-geliyor-iste-yenilikler--212595",
+      "publishedAt": "2026-11-07T08:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212595/1200x675whatsapp-a-yeni-etkinlik-ozellikleri-geliyor-iste-yenilikler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "838c7d26d3157f312c",
+      "title": "Malezya'da arka aksı kopmuştu: Chery'den Çin'de 53 bin araçlık geri çağırma",
+      "summary": "Chery, Çin’de Omoda serisi ve Tiggo 5x modellerini kapsayan 53.882 araçlık geri çağırma duyurdu. Arka akstaki kaynak kusuru, bazı koşullarda tekerlek kontrolünün kaybedilmesine yol açabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/malezya-da-aksi-kopmustu-chery-cin-de-53bin-araci-geri-cagiriyor--212594",
+      "publishedAt": "2026-11-07T08:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212594/1200x675malezya-da-aksi-kopmustu-chery-cin-de-53bin-araci-geri-cagiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "421cbc23824974ceb6",
+      "title": "AMD CEO'su Lisa Su açıkladı: \"Oyuncular ikinci planda\"",
+      "summary": "AMD CEO'su Lisa Su, şirketin yeni önceliğini açıkladı. Oyun gelirleri yüzde 40 gerilerken veri merkezi faaliyetleri AMD'nin toplam gelirlerinin yüzde 63'ünü oluşturdu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amd-ceo-su-lisa-su-acikladi-oyuncular-ikinci-planda--212597",
+      "publishedAt": "2026-11-07T07:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212597/1200x675amd-ceo-su-lisa-su-acikladi-oyuncular-ikinci-planda.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7ff39e8d2dfd802946",
+      "title": "Ofis ve günlük kullanım için yeni başlangıç standardı: 100Hz monitörler",
+      "summary": "100 Hz monitör modelleri, 60 Hz ekranlara kıyasla daha akıcı görüntü sunarak ofis ve günlük kullanımda avantaj sağlıyor. İşte farklı bütçelere göre öne çıkan modeller",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ofis-ve-gunluk-kullanim-icin-en-iyi-100-hz-monitorler--212526",
+      "publishedAt": "2026-11-07T06:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212526/1200x675ofis-ve-gunluk-kullanim-icin-en-iyi-100-hz-monitorler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "a819fb5114f8668e03",
       "title": "Epic Games Bir Oyunu Daha Ücretsiz Sunuyor: Hızlı Aksiyon ve Arcade Severler Buraya!",
@@ -243,18 +303,6 @@
       "editorial": false
     },
     {
-      "id": "d0cd79cb83c0f910ea",
-      "title": "Yeni Nissan Primastar Türkiye'de satışa sunuldu: İşte fiyatı ve özellikleri",
-      "summary": "Nissan Türkiye, yeni Primastar ailesini kullanıcılarla buluşturuyor. Panelvan, Combi Van ve Combi olmak üzere üç farklı versiyonla gelen Primastar fiyat listesi ve özellikleri haberimizde:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-nissan-primastar-turkiye-de-satisa-sunuldu--212582",
-      "publishedAt": "2026-11-06T15:02:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212582/1200x675yeni-nissan-primastar-turkiye-de-satisa-sunuldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "5747018807aff9867c",
       "title": "Next Week on XBOX: New Games for November 9 to 13",
       "summary": "Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X|S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! Football Manager 27",
@@ -339,30 +387,6 @@
       "editorial": false
     },
     {
-      "id": "2b852d1ce0bdf77151",
-      "title": "GTA 6'dan 39 yeni ekran görüntüsü paylaşıldı: Göz kamaştırıyor",
-      "summary": "GTA 6'nın çıkışına sayılı günler kala Rockstar Games, oyundan 39 yeni ekran görüntüsü paylaştı. Görseller, karakterlerden çevre tasarımına kadar dikkat çeken ayrıntıları ortaya koyuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-dan-39-yeni-ekran-goruntusu-paylasildi-goz-kamastiriyor--212563",
-      "publishedAt": "2026-11-06T14:38:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212563/1200x675gta-6-dan-39-yeni-ekran-goruntusu-paylasildi-goz-kamastiriyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2597c639c1d103a380",
-      "title": "MECOOL ve diğer Android TV kutularındaki botnet tehlikesine yerli çözüm",
-      "summary": "Android TV kutularındaki XCPE botnetine karşı geliştirilen ücretsiz XCPE Guard, MECOOL başta olmak üzere cihazlardaki zararlı yazılımları tespit edip devre dışı bırakıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/mecool-ve-diger-tv-kutularina-yerli-guvenlik-cozumu--212570",
-      "publishedAt": "2026-11-06T14:16:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212570/1200x675mecool-ve-diger-tv-kutularina-yerli-guvenlik-cozumu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "a4dbacf967e62059cd",
       "title": "The post-quantum future of web privacy",
       "summary": "Cryptographic protocols like Privacy Pass help keep web sites safe from abuse while keeping their users private. This post looks at the quantum threat to these protocols, and some new post-quantum cryptography that may help close the gap.",
@@ -372,42 +396,6 @@
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6RNKQ9RKEJ9CKY6DGNF44RV.01M6RNKRJAQTN05BV66646AM7Z.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "c145727cc1ec70827b",
-      "title": "Türkiye'nin uzay bütçesi 3 yılda 20 milyar lirayı aşacak",
-      "summary": "Türkiye Uzay Ajansı’nın (TUA) 2027-2029 dönemindeki bütçesinin 20 milyar lirayı aşması planlanıyor. Ajans, Ay görevi, uzay limanı ve füzyon teknolojisi gibi projelere odaklanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-nin-uzay-butcesi-3-yilda-20-milyar-lirayi-asacak--212576",
-      "publishedAt": "2026-11-06T13:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212576/1200x675turkiye-nin-uzay-butcesi-3-yilda-20-milyar-lirayi-asacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "05d06d64acf21d0583",
-      "title": "Yeni Star Wars Jedi oyunu beklenenden önce gelebilir",
-      "summary": "Bir süredir hazırlık aşamasında olan yeni Star Wars Jedi oyunu düşünülenden daha önce çıkabilir. Ünlü oyun yazarı Jason Schreier, oyuna dair son duyumlarını paylaştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/star-wars-jedi-3-beklenenden-once-gelebilir--212572",
-      "publishedAt": "2026-11-06T13:35:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212572/1200x675star-wars-jedi-3-beklenenden-once-gelebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9ab5dbfc988631005e",
-      "title": "Windows 11 için büyük 27H2 güncellemesi geliyor, Windows 12 gündemde yok",
-      "summary": "Microsoft, Windows 12 yerine Windows 11'i yenilemeye hazırlanıyor. 2027'de çıkacak 27H2 güncellemesi, performans artışı ve kapsamlı sistem değişiklikleri getirebilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/windows-11-icin-buyuk-degisim-kapida-windows-12-gundemde-yok--212578",
-      "publishedAt": "2026-11-06T13:16:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212578/1200x675windows-11-icin-buyuk-degisim-kapida-windows-12-gundemde-yok.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -563,18 +551,6 @@
       "publishedAt": "2026-11-06T09:07:30Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/695947/695947-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "fb67da4392bda18eee",
-      "title": "39 TL Değerindeki Oyun Epic Games'te Bu Hafta Ücretsiz Oldu [5-12 Kasım]",
-      "summary": "Epic Games'in bu hafta ücretsiz vereceği yeni oyun belli oldu. Her hafta oyuncuları yeni ücretsiz oyunlarla mutlu eden Epic Games peki bu hafta hangi oyunu ücretsiz yaptı?",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/epic-games-ucretsiz-oyun-5-12-kasim-h228415.html",
-      "publishedAt": "2026-11-06T07:57:06Z",
-      "category": "Oyun",
-      "image": "https://imgrosetta.webtekno.com/file/695944/695944-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-10-21T13:56:45Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KXQSMGN3Z955B45GCJR4REK3.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "1c5f83daf4c5b5dc2d",
+      "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
+      "summary": "Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/webmcp-commerce/",
+      "publishedAt": "2026-10-21T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AYSA5Z4MMJ6XYBSMECP05T.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "c78cf468160e1a4550",
+      "title": "8 eMudhra certificates are compromised. Here's what you need to know",
+      "summary": "Following the discovery that eight eMudhra intermediate certificates use weak keys, Cloudflare is deploying mitigations and releasing client updates. We explain the impact, our response, and what customers and developers should do next.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/emudhra-certificate-compromise/",
+      "publishedAt": "2026-10-20T22:20:16Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5DK5FY53PEFH46MT990YMSR.png",
       "language": "en",
       "editorial": false
     }
