@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-08T18:01:43.277664Z",
+  "generatedAt": "2026-11-08T21:53:40.624573Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "6af626692cd1593159",
+      "title": "Çin'in %100 yerli ilk masaüstü bilgisayarı: Qingyun HM650",
+      "summary": "Huawei, işlemci, bellek, SSD ve güç kaynağı dahil olmak üzere tüm bileşenleri Çin'de üretilen ilk masaüstü bilgisayarını tanıttı. Qingyun HM650, devlet kurumları ve işletmeler için geliştirilmiş.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huawei-qingyun-hm650-tanitildi-cin-in-yuzde-100-yerli-ilk-pc-si--212638",
+      "publishedAt": "2026-11-08T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212638/1200x675huawei-qingyun-hm650-tanitildi-cin-in-yuzde-100-yerli-ilk-pc-si.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "febfe38fd9ad6bd1aa",
       "title": "Büyük ekranlı telefonlardan sıkılanlara: Enough Phone tanıtıldı",
@@ -251,30 +263,6 @@
       "publishedAt": "2026-11-08T06:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212522/1200x67531-5-inc-ultra-genis-monitor-tavsiyeleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "31913a14ee7519d748",
-      "title": "Yeni James Bond için sürpriz iki isim gündemde",
-      "summary": "Denis Villeneuve'ün (Dune) yöneteceği yeni James Bond filminde ünlü ajana sürpriz bir isim hayat verebilir. Daha önce hiç gündemde olmayan iki oyuncu yarışa dâhil oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/james-bond-icin-surpriz-iki-isim-gundemde--212622",
-      "publishedAt": "2026-11-07T20:43:05Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212622/1200x675james-bond-icin-surpriz-iki-isim-gundemde.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "380bda57a3d8be533e",
-      "title": "Siri AI'a kullanım sınırı geliyor: Sınırsız erişim ücretli olacak!",
-      "summary": "Apple, dördüncü çeyrek sonuçlarını açıkladığı sırada, Siri AI için gelecekte kullanım sınırı olacağını, daha kapsamlı erişim için ücret ödeme seçeneği sunulacağını doğruladı. İşte ayrıntılar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/siri-ai-a-kullanim-siniri-geliyor-sinirsiz-erisim-ucretli-olacak--212613",
-      "publishedAt": "2026-11-07T19:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212613/1200x675siri-ai-a-kullanim-siniri-geliyor-sinirsiz-erisim-ucretli-olacak.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-22T13:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "59c87ea544e0e5db59",
+      "title": "Introducing full transaction detection for Cloudflare WAF",
+      "summary": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/full-transaction-waf/",
+      "publishedAt": "2026-10-21T14:10:42Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5E1HKVR7WJX7KGB4B8MSK75.png",
       "language": "en",
       "editorial": false
     }
