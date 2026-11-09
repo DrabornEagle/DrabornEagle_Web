@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-08T21:53:40.624573Z",
+  "generatedAt": "2026-11-09T01:33:58.991284Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "418f60c1bd5b1456f2",
+      "title": "Nvidia'da casusluk skandalı! CEO Jensen Huang hakkında soruşturma",
+      "summary": "Nvidia CEO'su Jensen Huang, Çin adına casusluk yaptığı öne sürülen bir kadınla ilişkisi olduğunu kabul etti. Şirket, iddialar üzerine bağımsız bir soruşturma başlattı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-da-casusluk-krizi-ceo-jensen-huang-hakkinda-sorusturma--212641",
+      "publishedAt": "2026-11-08T22:05:44Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212641/1200x675nvidia-da-casusluk-krizi-ceo-jensen-huang-hakkinda-sorusturma.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "6af626692cd1593159",
       "title": "Çin'in %100 yerli ilk masaüstü bilgisayarı: Qingyun HM650",
@@ -251,18 +263,6 @@
       "publishedAt": "2026-11-08T07:30:00Z",
       "category": "Oyun",
       "image": "https://www.donanimhaber.com/images/images/haber/212624/1200x675ps-plus-kasim-2026-oyunlari-4-000tl-degerinde.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7e13b79271ee3e165c",
-      "title": "Geniş görüş alanı arayanlara: 31.5 inç ultra geniş monitörler",
-      "summary": "31.5 inç monitör modelleri, geniş görüntü alanı ve yüksek yenileme hızlarıyla hem oyun hem de günlük kullanım için farklı seçenekler sunuyor. İşte öne çıkan modeller",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/31-5-inc-ultra-genis-monitor-tavsiyeleri--212522",
-      "publishedAt": "2026-11-08T06:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212522/1200x67531-5-inc-ultra-genis-monitor-tavsiyeleri.jpg",
       "language": "tr",
       "editorial": false
     },
