@@ -1,7 +1,259 @@
 {
-  "generatedAt": "2026-11-10T17:14:02.172724Z",
+  "generatedAt": "2026-11-10T22:29:26.840356Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "0564d4d3af56eeacf4",
+      "title": "Amazon'da 11.11 indirimleri başladı: İşte 11 Kasım'a özel fırsatlar!",
+      "summary": "Amazon.com.tr'de Gülümseten Kasım indirimlerine ek olarak şimdi de 11.11 indirimleri başladı. Çok sayıda üründe fiyatlar daha da düştü. Ayrıca indirim kuponu etkinlikleri başladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amazon-da-11-11-indirimleri-basladi-2026-11-kasim-a-ozel-firsat--212741",
+      "publishedAt": "2026-11-10T22:00:28Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212741/1200x675amazon-da-11-11-indirimleri-basladi-2026-11-kasim-a-ozel-firsat.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "53416b5f4e0858b5aa",
+      "title": "OpenAI, ChatGPT'yi işletmeler için yeni bir platforma dönüştürüyor",
+      "summary": "OpenAI, işletmelerin ChatGPT üzerindeki profillerini yönetmesine, müşteri etkileşimlerini analiz etmesine ve kullanıcılarla iletişim kurmasına olanak tanıyan Businesses in ChatGPT platformunu duyurdu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/openai-chatgpt-yi-isletmeler-icin-bir-platforma-donusturuyoro--212740",
+      "publishedAt": "2026-11-10T21:15:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212740/1200x675openai-chatgpt-yi-isletmeler-icin-bir-platforma-donusturuyoro.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "37a79bf7d66a7b28aa",
+      "title": "Bilim insanları kanser hücrelerini kandan temizleyen sistem geliştirdi",
+      "summary": "Çinli bilim insanları kan dolaşımındaki kanser hücrelerini yakalayan deneysel bir cihaz geliştirdi. Deneylerde kemoterapiyle birlikte kullanıldığında yaşam süresini uzattı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kanser-hucrelerini-kandan-temizleyen-sistem-gelistirildi--212730",
+      "publishedAt": "2026-11-10T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212730/1200x675kanser-hucrelerini-kandan-temizleyen-sistem-gelistirildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fc3c9b3a0fb41aecf2",
+      "title": "Rusya veri merkezlerini saldırılardan korumak için yer altına taşıyor",
+      "summary": "Ukrayna'nın Rusya'daki veri merkezlerini de hedef almaya başlaması Rusya'da ciddi bir krize sebep oldu. Kremlin yönetimi şimdi bu krizi aşmak için veri merkezlerini yer altına taşıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/rusya-veri-merkezlerini-yer-altina-tasimaya-karar-verdi--212731",
+      "publishedAt": "2026-11-10T20:40:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212731/1200x675rusya-veri-merkezlerini-yer-altina-tasimaya-karar-verdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "48290bd86171f8567f",
+      "title": "Google’ın en güçlü yapay zekası kullanıma açıldı: İşte Gemini 4 Carbon",
+      "summary": "Google, bugüne kadarki en güçlü yapay zeka modeli Gemini 4 Carbon'u kullanıma sundu. Yeni model, karmaşık kodlama, siber güvenlik ve bilimsel araştırmalarda öne çıkıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/google-gemini-4-carbon-modelini-kullanima-sundu-iste-ozellikleri--212739",
+      "publishedAt": "2026-11-10T20:26:38Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212739/1200x675google-gemini-4-carbon-modelini-kullanima-sundu-iste-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7aa529cb00659354c2",
+      "title": "SpaceX için en kritik an: Starship’in tüm kademelerini yakalamayı deneyecek",
+      "summary": "SpaceX, 13 Kasım'da Starship'in 15'inci test uçuşunu gerçekleştirecek. Şirket, bu görevde ilk kez hem Super Heavy hem de Starship'i fırlatma kulesinin kollarıyla yakalamayı deneyecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/spacex-icin-en-kritik-an-starship-in-tum-kademeleri-yakalanacak--212733",
+      "publishedAt": "2026-11-10T20:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212733/1200x675spacex-icin-en-kritik-an-starship-in-tum-kademeleri-yakalanacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f42cf267b40e9b5c18",
+      "title": "Football Manager 27 Out Now with Game Pass: Discover 5 Unmissable Additions",
+      "summary": "It’s time for you to start making this season’s big calls, with FM27 and FM27 Console out now, including with Game Pass. FM27 delivers greater control over your tactical vision and a deeper football world to explore from the moment your career begins. In FM27 Console, meanwhile, a host of new additions, refinements and returning",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/football-manager-27-game-pass-pc-console-xbox/",
+      "publishedAt": "2026-11-10T20:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/7_Tactical-Tweaks-5f00039b178e6f8dbbef-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "a653403b0a85b43092",
+      "title": "Çin, dünyanın ilk hibrit nükleer santralinin inşaatına başladı",
+      "summary": "Çin, dünyanın ilk ticari yüksek sıcaklıklı gaz soğutmalı nükleer reaktörünün inşasına başladı. Proje, nükleer enerjiyi doğrudan petrokimya sanayisinin ısı ihtiyacını karşılamak için kullanacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-dunyanin-ilk-hibrit-nukleer-santralinin-insaatina-basladi--212735",
+      "publishedAt": "2026-11-10T20:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212735/1200x675cin-dunyanin-ilk-hibrit-nukleer-santralinin-insaatina-basladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c9bdb5b33171e3a748",
+      "title": "Oppo'nun 12.000 mAh bataryalı telefonu ortaya çıktı",
+      "summary": "Oppo, 12.000 mAh kapasiteli bataryaya sahip yeni orta segment akıllı telefon hazırlıyor. TENAA sertifikasında görüntülenen cihaz, devasa bataryasına rağmen nispeten ince tasarımla gelebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/oppo-nun-12-000-mah-bataryali-telefonu-ortaya-cikti--212737",
+      "publishedAt": "2026-11-10T19:40:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212737/1200x675oppo-nun-12-000-mah-bataryali-telefonu-ortaya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "40e9b495ea1a7a68a3",
+      "title": "Samsung Galeri'ye Google Fotoğraflar desteği resmen geldi",
+      "summary": "Samsung, Microsoft OneDrive entegrasyonunun sona ermesinin ardından Galeri uygulamasına Google Fotoğraflar desteğini resmen getirdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galeri-ye-google-fotograflar-destegi-resmen-geldi--212738",
+      "publishedAt": "2026-11-10T19:15:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212738/1200x675samsung-galeri-ye-google-fotograflar-destegi-resmen-geldi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d41e671cf52d3a1e95",
+      "title": "iPhone Duo neden kırıldı? Duo 2 mi gelecek? ''Kimsenin görmediği o detayı gösterdik!''",
+      "summary": "Elimizdeki iPhone Duo zorlamamıza rağmen kırılmadı ama neden kırılabileceğiyle alakalı çok önemli bir şey fark ettik! Videoda gösterip detaylı bir şekilde anlattık.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iphone-duo-neden-kirildi-kimsenin-gormedigi-detay-videoda--212736",
+      "publishedAt": "2026-11-10T19:00:36Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212736/1200x675iphone-duo-neden-kirildi-kimsenin-gormedigi-detay-videoda.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c0101f36ad82bf9132",
+      "title": "Gemini Intelligence: New features, on more devices",
+      "summary": "Gemini Intelligence is rolling out to more devices. See how expanded capabilities across these devices help you do more.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/platforms/android/gemini-intelligence-november-features-devices/",
+      "publishedAt": "2026-11-10T19:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_Intelligence_Signature27.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "d2cb458382e2b59123",
+      "title": "Pixel 10 with Gemini Intelligence, custom widgets, and more in our November Pixel Drop",
+      "summary": "Explore the latest Pixel features, including Gemini Intelligence on Pixel 10, HiLight alerts for Google Messages, and more.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/devices/pixel/november-2026-pixel-drop/",
+      "publishedAt": "2026-11-10T19:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/header_Pixel_drop_image.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "514112b3503896d052",
+      "title": "Get step-by-step workout guidance on your Pixel Watch.",
+      "summary": "Get live workout guidance on your Pixel Watch with Google. Follow custom routines and track reps directly on your wrist. See how it works.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/devices/pixel/step-by-step-workouts-watch/",
+      "publishedAt": "2026-11-10T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Step-by-step_workouts_roll_out_.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "fdd3203ee7025e05e6",
+      "title": "MEXC borsasında deprem, Binance tüm iletişimi kesti",
+      "summary": "Kripto para piyasalarının en önemli borsalarından MEXC büyük bir darbe yedi. ABD tarafından kara para aklama incelemesine alınan borsadan kaçan kaçana.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/mexc-borsasina-kotu-haber--212734",
+      "publishedAt": "2026-11-10T18:52:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212734/1200x675mexc-borsasina-kotu-haber.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b59bfe2ad8b0ddef2a",
+      "title": "Samsung Galaxy S27 serisinin kamera özellikleri sızdırıldı",
+      "summary": "Standart modellerin yıllardır kullanılan donanımları koruması beklenirken Galaxy S27 Ultra'nın çift telefoto kamera sisteminden vazgeçebileceği öne sürülüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-s27-serisinin-kamera-ozellikleri-sizdirildi--212717",
+      "publishedAt": "2026-11-10T18:19:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212717/1200x675samsung-galaxy-s27-serisinin-kamera-ozellikleri-sizdirildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cb7d3720ede0b59ec9",
+      "title": "The Outer Worlds 2’s first DLC arrives December 2",
+      "summary": "The time has come to expand on the experience for The Outer Worlds 2 with the first of a two-part story expansion, Side Effects Guaranteed, arriving on December 2. After a distress signal from a derelict ship is picked up, you and your crew quickly get embroiled into the story of an abandoned settlement, a",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/10/the-outer-worlds-2s-first-dlc-arrives-december-2/",
+      "publishedAt": "2026-11-10T18:00:31Z",
+      "category": "Oyun",
+      "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "3b8ce86e6c4821565d",
+      "title": "Side Effects Guaranteed in the First DLC For The Outer Worlds 2, Coming December 2",
+      "summary": "A distress signal beckons you and your crew of the Incognito to a derelict ship, where you discover the ship’s crew in suspended animation. All signs point to foul play, especially the puddle of what was most likely a person. You recover a video message left by the captain of the vessel, who explains that",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/10/side-effects-guaranteed-the-outer-worlds-2-dlc/",
+      "publishedAt": "2026-11-10T18:00:00Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/tow2-dlc1-npc-gordon-001-3a3c5f396763e34891f0-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "065f240f64ac0bef5c",
+      "title": "Googlebook bilgisayarlara ilk büyük güncelleme geldi",
+      "summary": "Google, Googlebook modelleri için yayınladığı ilk büyük güncellemeyle cihaz içi belleği optimize etti. Bazı modellerde 6 GB'a kadar RAM kullanımı azaltılırken yaklaşık 30 hata da giderildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/googlebook-bilgisayarlara-ilk-buyuk-guncelleme-geldi--212711",
+      "publishedAt": "2026-11-10T17:57:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212711/1200x675googlebook-bilgisayarlara-ilk-buyuk-guncelleme-geldi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6cde48cce9caddf196",
+      "title": "İlk kez bir robot uzayda kendi başına yapı inşa etti",
+      "summary": "Robotlar Dünya'dan sonra uzayda da devreye girmeye başladı. Caltech tarafından geliştirilen bir robot, Dünya yörüngesinde farklı parçaları birleştirerek otonom şekilde yapı inşa etmeyi başardı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ilk-kez-bir-robot-uzayda-yapi-insa-etti--212715",
+      "publishedAt": "2026-11-10T17:35:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212715/1200x675ilk-kez-bir-robot-uzayda-yapi-insa-etti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a048f57672acc8d3d9",
+      "title": "Introducing Google Fi’s new super network",
+      "summary": "Google Fi Wireless is launching a new super network, combining two 5G networks with millions of Wi-Fi networks in one phone plan.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/google-fi-wireless/super-network/",
+      "publishedAt": "2026-11-10T17:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Super_Network_Hero_Thumbnail.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "d571da00300518ea75",
       "title": "Mercedes patronu tarih verdi: İçten yanmalı motorların 10-15 yılı kaldı",
@@ -291,54 +543,6 @@
       "editorial": false
     },
     {
-      "id": "54dfc18e600a722ea4",
-      "title": "iPhone Air 2 ve iPhone 18 yan yana görüntülendi: İşte tasarım",
-      "summary": "iPhone Air 2 ve iPhone 18, Apple'ın 2027'de piyasaya sürmeyi planladığı iki önemli amiral gemisi telefonu. Her iki cihazın da dummy (maket) modelleri gün yüzüne çıktı ve tasarım belli oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-air-2-ve-iphone-18-yan-yana-goruntulendi-iste-tasarim--212729",
-      "publishedAt": "2026-11-10T13:53:06Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212729/1200x675iphone-air-2-ve-iphone-18-yan-yana-goruntulendi-iste-tasarim.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "fda9216e2e357fb4ab",
-      "title": "Yapay zeka GTA 6 için bir tehdit mi? Take-Two CEO'sundan açıklama",
-      "summary": "Take-Two CEO'su, GTA 6'nın kritik lansmanı öncesinde, oyunların yapay zeka destekli tersine mühendislik ve kaynak koduna dönüştürme yoluyla çözülmesi tehdidine yanıt verdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-gta-6-icin-bir-tehdit-mi-take-two-ceo-sundan-aciklama--212716",
-      "publishedAt": "2026-11-10T13:41:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212716/1200x675yapay-zeka-gta-6-icin-bir-tehdit-mi-take-two-ceo-sundan-aciklama.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "51739d79377edccce5",
-      "title": "Anthropic, yeni yapay zekalarını duyurdu: Sıfırdan işletim sistemi geliştirdi!",
-      "summary": "Anthropic, kodlama ve bilimsel araştırmada önemli ilerlemeler kaydeden Claude Fable 5.2 ve Mythos 5.2 modellerini duyurdu. Fable 5.2, performans testlerinde zirveye yerleşti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/anthropic-claude-fable-5-2-ve-mythos-5-2-modellerini-duyurdu--212705",
-      "publishedAt": "2026-11-10T13:19:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212705/1200x675anthropic-claude-fable-5-2-ve-mythos-5-2-modellerini-duyurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7d8cad21d30e97e156",
-      "title": "Amazon'da televizyonlarda yılın en düşük fiyatları! İşte indirimli TV'ler",
-      "summary": "Amazon Gülümseten Kasım indirimlerinde televizyonlardaki düşük fiyatlar dikkat çekiyor. Kaçırmamanız gereken indirimli TV modellerini listeledik.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-da-televizyonlarda-yilin-en-dusuk-fiyatlari-2026--212720",
-      "publishedAt": "2026-11-10T13:03:55Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212720/1200x675amazon-da-televizyonlarda-yilin-en-dusuk-fiyatlari-2026.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "ef83b8dc18b1604dec",
       "title": "Google Cloud launches Gemini for healthcare.",
       "summary": "Google Cloud launches Gemini for healthcare to unify clinical data and automate workflows. Reduce administrative burnout. See how it works.",
@@ -348,18 +552,6 @@
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/social_share_NWQpgus.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4dd046417e7e0c117b",
-      "title": "Çift ekranlı Honor 700 serisi 13 Kasım'da geliyor: Serideki en büyük değişim!",
-      "summary": "Honor 700 serisi arka ekranı ile ortaya çıktı. Görsel, kalp atış hızı ve kandaki oksijen seviyesini ölçme özelliğini gözler önüne seriyor ancak ikinci ekranın işlevi bununla sınırlı kalmayacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iki-ekranli-honor-700-serisi-13-kasim-da-tanitilacak--212708",
-      "publishedAt": "2026-11-10T12:57:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212708/1200x675iki-ekranli-honor-700-serisi-13-kasim-da-tanitilacak.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -483,42 +675,6 @@
       "editorial": false
     },
     {
-      "id": "81d66dd09b62f46d7e",
-      "title": "Bu da oldu: Ucuz telefonlarda ikinci el RAM dönemi başlayabilir",
-      "summary": "Bellek fiyatlarındaki hızlı yükseliş, akıllı telefon üreticilerini farklı çözümlere yöneltiyor. TrendForce'a göre kullanılmış RAM modüllerinin mobil pazardaki payı 2027'de yüzde 9'a ulaşabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bu-da-oldu-ucuz-telefonlarda-ikinci-el-ram-donemi-baslayabilir--212713",
-      "publishedAt": "2026-11-10T11:43:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212713/1200x675bu-da-oldu-ucuz-telefonlarda-ikinci-el-ram-donemi-baslayabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d4ff58586681cb793e",
-      "title": "Meta, yapay zeka ajanları için en ucuz modelini tanıttı: Muse Ember",
-      "summary": "Meta, AI ajanlarının tekrarlayan görevleri için geliştirdiği Muse Ember modelini duyurdu. Model, düşük maliyeti ve bazı testlerde rakiplerini geride bırakan performansıyla öne çıkıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/meta-ai-ajanlari-icin-en-ucuz-modelini-tanitti-muse-ember--212712",
-      "publishedAt": "2026-11-10T11:20:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212712/1200x675meta-ai-ajanlari-icin-en-ucuz-modelini-tanitti-muse-ember.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "65414938d813dbbd35",
-      "title": "RAM fiyatları PC pazarını vurdu: 16GB ve 24GB sistemler artıyor!",
-      "summary": "DDR5 bellek fiyatlarında yaşanan yaklaşık yüzde 500'lük artış, kullanıcılarının RAM tercihlerini de değiştirdi. CPU-Z verilerine göre yüksek bellekli sistemlerin payı geriliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ram-fiyatlari-pc-pazarini-vurdu-16gb-ve-24gb-sistemler-artiyor--212710",
-      "publishedAt": "2026-11-10T10:58:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212710/1200x675ram-fiyatlari-pc-pazarini-vurdu-16gb-ve-24gb-sistemler-artiyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "afb4bf04b7f96d07b6",
       "title": "iOS 27.2.1 Yayımlandı: İşte iPhone'lara Gelen Yeni Güncellemenin Detayları!",
       "summary": "Apple, iPhone için hata düzeltmeleri ve güvenlik yamaları içeren iOS 27.2.1 güncellemesini yayımladı.",
@@ -527,30 +683,6 @@
       "publishedAt": "2026-11-10T10:51:06Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/696538/696538-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2321dced5eae4d1c13",
-      "title": "Eski PlayStation CEO'su \"Pahalı PS6 yerine ucuz PS5 yapın\"",
-      "summary": "Eski PlayStation CEO'su Shawn Layden, Sony'nin pahalı PS6 yerine 300 dolarlık yeni bir PS5 modeline odaklanması gerektiğini söyledi. Layden'a göre gerçek yenilik burada yatıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/eski-playstation-ceo-su-pahali-ps6-yerine-ucuz-ps5-yapin--212707",
-      "publishedAt": "2026-11-10T10:36:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212707/1200x675eski-playstation-ceo-su-pahali-ps6-yerine-ucuz-ps5-yapin.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7b5d604b3fa83a91d0",
-      "title": "Disney ve Adobe, özel yapay zeka modelleri geliştirecek",
-      "summary": "Disney ve Adobe, tema parklarından ESPN yayınlarına kadar farklı alanlarda kullanılacak, şirkete özel üretken yapay zeka modelleri geliştirmek için çok yıllı ortaklık kurdu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/disney-ve-adobe-ozel-yapay-zeka-modelleri-gelistirecek--212709",
-      "publishedAt": "2026-11-10T10:14:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212709/1200x675disney-ve-adobe-ozel-yapay-zeka-modelleri-gelistirecek.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -564,18 +696,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/WS_SCREENSHOT_RELEASE-DATE_01_3840x2160-d7d72aeea17c09098d92-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "2ac86a6762dfea2e4b",
-      "title": "Samsung'dan bir modele daha One UI 9.0 sürprizi",
-      "summary": "Samsung, Android 17 tabanlı One UI 9.0 güncellemesi için dağıtımı sürdürüyor. Son olarak yeni güncelleme, bir model için daha listelenmeye başladı. İşte detaylar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-dan-bir-modele-daha-one-ui-9-0-surprizi--212703",
-      "publishedAt": "2026-11-10T09:44:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212703/1200x675samsung-dan-bir-modele-daha-one-ui-9-0-surprizi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -599,30 +719,6 @@
       "publishedAt": "2026-11-10T09:34:38Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/696526/696526-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "22519bf7e3b4995b81",
-      "title": "Google’dan yapay zeka için iki yeni çip: TPU 8tx ve TPU 8i Max",
-      "summary": "Google, yapay zeka için TPU 8tx ve TPU 8i Max çiplerini tanıttı. Yeni donanımlar, hassas verilerde güvenliği ve milyonlarca tokenlık bağlamlarda işlem performansını artırmayı hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-dan-yapay-zeka-icin-iki-yeni-cip-tpu-8tx-ve-tpu-8i-max--212701",
-      "publishedAt": "2026-11-10T09:24:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212701/1200x675google-dan-yapay-zeka-icin-iki-yeni-cip-tpu-8tx-ve-tpu-8i-max.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "03c809c3752bacc8cc",
-      "title": "DH Quiz 5. Hafta tamamlandı: İşte kazananlar ve yeni haftanın testleri",
-      "summary": "DonanımHaber Ödüllü Test Haftası'nın beşinci haftası sona erdi. Tarih temalı testlerde dereceye girerek ödül kazanan üç kullanıcı belli olurken yeni haftanın test takvimi ve ödülleri de açıklandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/dh-quiz-5-hafta-tamamlandi-iste-kazananlar--212686",
-      "publishedAt": "2026-11-10T09:12:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212686/1200x675dh-quiz-5-hafta-tamamlandi-iste-kazananlar.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -879,30 +975,6 @@
       "editorial": false
     },
     {
-      "id": "d76a0c9ca448c0ab54",
-      "title": "A Faster, Simpler XBOX Experience Is Coming to PC, Web and Cloud",
-      "summary": "Starting today, XBOX Insiders can try an updated XBOX PC app that launches up to 60% faster and makes it easier to find games, connect with friends, and play. We’re also bringing the refreshed XBOX web experience to more players and rolling out updates to XBOX cloud gaming apps on supported TVs and VR headsets.",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/05/a-faster-simpler-xbox-experience-is-coming-to-pc-web-and-cloud/",
-      "publishedAt": "2026-11-05T17:00:04Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/XBOXWire_Bastion_Image2_110526-a63599224e109dddcc5d-1024x576.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "27b87d65d3f9940668",
-      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
-      "summary": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
-      "publishedAt": "2026-11-05T17:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "4180f416c105d02a25",
       "title": "Investing in Wyoming’s infrastructure, energy and workforce",
       "summary": "We’re building our first data center in Wyoming, representing a $17 billion investment in the Cowboy State.",
@@ -927,14 +999,14 @@
       "editorial": false
     },
     {
-      "id": "181c9d7783a801a21a",
-      "title": "Free Play Days – Call of Duty: Modern Warfare 4 – DMZ, PAYDAY 3, Anno 117, BALL x PIT, Deceive Inc, Age of Wonders 4, and More",
-      "summary": "Skip the safe picks – play something daring with Free Play Days! PAYDAY 3, Nowhere Prophet, BALL x PIT, Deceive Inc, and Age of Wonders 4 are available this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday November 5 until Sunday, November 8. Call of Duty: Modern Warfare 4",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/05/free-play-days-11-04-2026/",
-      "publishedAt": "2026-11-05T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.5245.13785731566626304.a67b89e9-bf22-41aa-9870-a04747b8df67.b366ca84-7426-4b4b-9654-aad5a06dd55a?w=400&h=600",
+      "id": "27b87d65d3f9940668",
+      "title": "Gemini Omni 1.2 Flash: Fast and cost-effective with longer clips",
+      "summary": "Gemini Omni 1.2 Flash brings native 15-second video generation and editing, stronger consistency, and 30% lower pricing.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "publishedAt": "2026-11-05T17:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-omni-1.2_FZLql41.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -963,18 +1035,6 @@
       "editorial": false
     },
     {
-      "id": "640ef482dab7f909ee",
-      "title": "Watch Henry Cavill build a video game on his Googlebook",
-      "summary": "Henry Cavill built a video game on his Googlebook to help support men’s health.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/devices/googlebook/henry-cavill-mustache-protocol-video-game/",
-      "publishedAt": "2026-11-04T18:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/MP_EP1_HORIZONTAL.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "08d5c8057bd2435b1d",
       "title": "PlayStation Store: October 2026’s top downloads",
       "summary": "It’s time to see which PS5, PS4, PS VR2, and free-to-play games topped last month’s download charts. In October, Call of Duty: Modern Warfare 4 led the PS5 charts in the US and the EU, and BeamNG.drive landed in the top 3 on both charts. Meanwhile, Hard Bullet dominated the PS VR2 charts. Check out",
@@ -983,18 +1043,6 @@
       "publishedAt": "2026-11-04T15:00:16Z",
       "category": "Oyun",
       "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "c7602fd30663d21b98",
-      "title": "We're sharing our framework for building safer and more helpful AI for health.",
-      "summary": "Many of us have turned to AI with a health question or received care from a doctor who’s using it. The adoption of technology for health is accelerating and impacts bill",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/health/evaluating-health-ai-at-scale/",
-      "publishedAt": "2026-11-04T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Health_AI_Evals_inline.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1023,18 +1071,6 @@
       "editorial": false
     },
     {
-      "id": "dee77e2a8f1482c4f6",
-      "title": "Take a closer look at art with the Courtauld",
-      "summary": "Examine art in new ways with The Art of Looking, a new project from Google Arts & Culture and the Courtauld Institute of Art.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/the-art-of-looking/",
-      "publishedAt": "2026-11-04T10:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/The_Courtauld_Gallery._Photo_Be.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "039eeeb95278a51342",
       "title": "Grand Theft Auto VI pre-download begins November 10",
       "summary": "Grand Theft Auto VI launches November 19 on PlayStation 5, with pre-download available starting November 10. Whether you’re returning to the series or jumping in for the first time, here are a few key steps you can take now to prepare for launch day. Step 1: Set up your PlayStation account Make sure your PlayStation",
@@ -1043,30 +1079,6 @@
       "publishedAt": "2026-11-03T15:28:13Z",
       "category": "Oyun",
       "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "95f991e588ce9849bd",
-      "title": "Sonic Racing: CrossWorlds Year Two begins today with Duel Mode, new characters, gadgets and more",
-      "summary": "Sonic Racing: CrossWorlds Year Two is officially launching later today, with more racers, more vehicles, and more courses joining the ever-growing universe of Sonic Racing: CrossWorlds. In addition, Year Two brings several significant additions to the game, enhancing the already exhilarating experience with more ways to play with friends, gameplay updates to deepen the experience,",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/03/sonic-racing-crossworlds-year-two-begins-today-with-duel-mode-new-characters-gadgets-and-more/",
-      "publishedAt": "2026-11-03T14:00:04Z",
-      "category": "Oyun",
-      "image": "https://live.staticflickr.com/65535/55618240291_8c1c4206ea_4k.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f841ee71fc6c0a36ef",
-      "title": "We’re providing funding for organizations building AI for teachers.",
-      "summary": "Google.org is funding five organizations to build AI tools for teachers. See how these initiatives support educators and students. Get the details.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/education/google-org-funding-ai-education/",
-      "publishedAt": "2026-11-03T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AILE_Comms_social.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-26T22:01:23Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5X2P2KSNBX6J13E3B4219PW.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "62377f17395c9d4ef1",
-      "title": "Introducing a Voluntary Exit Offer",
-      "summary": "Amy Coleman, Executive Vice President and Chief People Officer, shared the below communication with Microsoft employees today. Today, we’re introducing a new Voluntary Exit Offer (VEO) to eligible employees within participating organizations. This offer gives eligible employees who may be considering a future outside the company a new choice to make that transition now with...",
-      "source": "Microsoft Blog",
-      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/",
-      "publishedAt": "2026-10-26T15:33:56Z",
-      "category": "Teknoloji",
-      "image": "",
       "language": "en",
       "editorial": false
     }
