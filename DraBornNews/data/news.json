@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-11-09T19:04:57.035009Z",
+  "generatedAt": "2026-11-10T01:58:45.160080Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "e258f26dca4f90b958",
+      "title": "LG OLED televizyonlarda ekran çürümesi problemi ortaya çıktı",
+      "summary": "Rtings tarafından gerçekleştirilen uzun süreli test, LG Display üretimi bazı WOLED panellerde \"kenar çürümesi\" adı verilen ciddi bir sorunu ortaya çıkardı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/lg-oled-televizyonlarda-ekran-curumesi-problemi-ortaya-cikti--212693",
+      "publishedAt": "2026-11-09T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212693/1200x675lg-oled-televizyonlarda-ekran-curumesi-problemi-ortaya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "54786fe1384b3df3e2",
+      "title": "OLED ekranlar ucuz telefonlara iniyor: HD çözünürlük yeniden gündemde",
+      "summary": "Akıllı telefon pazarındaki daralma, Samsung ve BOE gibi panel üreticilerini yeni arayışlara yöneltti. Şirketler, giriş seviyesi telefonlar için HD çözünürlüklü OLED ekran geliştirmeyi değerlendiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ucuz-telefonlara-hd-cozunurluklu-oled-ekranlar-geliyor--212694",
+      "publishedAt": "2026-11-09T20:30:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212694/1200x675ucuz-telefonlara-hd-cozunurluklu-oled-ekranlar-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ba010562bece1b567c",
+      "title": "Torpidolardan ilham alan teknoloji, büyük gemilerin yakıt tüketimini azaltabilir",
+      "summary": "Büyük gemilerin yakıt tüketimini azaltmak için alışılmadık bir yöntem geliştirildi. Gemilerin altına gönderilen milyonlarca hava kabarcığı, binlerce ton yakıt tasarrufu sağlayabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-in-yeni-teknolojisi-gemilerde-yuzde-5-tasarruf-sagladi--212690",
+      "publishedAt": "2026-11-09T20:10:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212690/1200x675cin-in-yeni-teknolojisi-gemilerde-yuzde-5-tasarruf-sagladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "31254b6bba6fc80707",
+      "title": "Motorola Razr Flex 27 ortaya çıktı: iPhone Duo'ya rakip geliyor",
+      "summary": "Motorola, yeni katlanabilir telefonu Razr Flex 27'yi piyasaya sürmeye hazırlanıyor. Yalnızca 5,8 mm kalınlığında olması beklenen cihaz, güçlü donanımı ve hafif tasarımıyla öne çıkabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/motorola-razr-flex-27-ortaya-cikti-iphone-duo-ya-rakip-geliyor--212691",
+      "publishedAt": "2026-11-09T19:45:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212691/1200x675motorola-razr-flex-27-ortaya-cikti-iphone-duo-ya-rakip-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9118c4e5e93aac9d98",
+      "title": "NASA’nın Ay’a fırlattığı roket atmosferde elektromanyetik boşluk oluşturdu",
+      "summary": "NASA'nın Artemis II roketi, iyonosferde 5.000 kilometre genişliğinde iki boşluk oluşturdu. Bu bozulma GPS sinyallerinde birkaç metrelik konum hatalarına yol açtı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nasa-nin-roketi-atmosferde-elektromanyetik-bosluk-olusturdu--212672",
+      "publishedAt": "2026-11-09T19:22:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212672/1200x675nasa-nin-roketi-atmosferde-elektromanyetik-bosluk-olusturdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "2456aea18be5e78b21",
       "title": "Kahve Makineleri Kahvemizi Nasıl Sevdiğimizi Nasıl Hatırlıyor?",
@@ -315,18 +375,6 @@
       "editorial": false
     },
     {
-      "id": "15718e3d0ab6b3f1b4",
-      "title": "BYD’den araçtan inmeden şarj: Kabloyu robot kol takıyor",
-      "summary": "BYD, sürücünün kablo takmasına gerek bırakmayan robotik şarj sistemini gösterdi. Şarj kapağını açıp fişi takan robot kolun kullanıldığı gösterimde, 1.000 kW güce ulaşıldığı bildirildi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/byd-den-aractan-inmeden-sarj-kabloyu-robot-kol-takiyor--212663",
-      "publishedAt": "2026-11-09T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212663/1200x675byd-den-aractan-inmeden-sarj-kabloyu-robot-kol-takiyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "94027625418f315643",
       "title": "Samsung, Yapay Zekâ Özellikleri İçin \"Galaxy AI Premium\" Aboneliğini Sunmaya Hazırlanıyor: İşte Fiyatı!",
       "summary": "Samsung, Galaxy AI için aylık 4,99 dolarlık Premium abonelik ve kullanım limitleri getirmeye hazırlanıyor.",
@@ -387,42 +435,6 @@
       "editorial": false
     },
     {
-      "id": "096f18912e422f3dcd",
-      "title": "İngiltere'nin en büyük bankaları AI ajanlarını yasakladı: Kontrolden çıkabilirler!",
-      "summary": "Yapay zekâ ajanlarının kontrolden çıkıp onaylanmamış işlemler yaptığı vakaların artması bankaları harekete geçirdi. İngiltere'nin en büyük bankaları, AI ajanlarının hesaplara erişmesini yasakladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ingiltere-nin-en-buyuk-bankalari-yapay-zeka-ajanlarini-yasakladi--212670",
-      "publishedAt": "2026-11-09T13:43:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212670/1200x675ingiltere-nin-en-buyuk-bankalari-yapay-zeka-ajanlarini-yasakladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "afa91304bd6775c195",
-      "title": "Microsoft'tan sıra dışı patent: Canlı konuşmaları yapay zeka değiştirecek",
-      "summary": "Microsoft, canlı yayınlardaki konuşmaları yapay zekayla değiştirebilen bir sistem için patent başvurusu yaptı. Teknoloji, konuşmacının dudak hareketlerini de düzenleyebiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/deepfake-doyut-atliyor-microsoft-canli-konusmalari-degistirecek--212666",
-      "publishedAt": "2026-11-09T13:22:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212666/1200x675deepfake-doyut-atliyor-microsoft-canli-konusmalari-degistirecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "bc1c6e47f5a1fff8e3",
-      "title": "Renault’nun küçük SUV’si Avrupa’ya Dacia olarak gelebilir",
-      "summary": "Renault’nun Hindistan için geliştirdiği Bridger, Dacia markasıyla Avrupa’ya gelebilir. Dört metreden kısa SUV’nin elektrikli versiyonu, Dacia’nın ürün gamına katılması düşünülen modeller arasında.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/renault-nun-kucuk-suv-si-avrupa-ya-dacia-olarak-gelebilir--212668",
-      "publishedAt": "2026-11-09T13:13:36Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212668/1200x675renault-nun-kucuk-suv-si-avrupa-ya-dacia-olarak-gelebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "e9950a58c8925934c5",
       "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
       "summary": "We’ve expanded our eighth generation TPU portfolio with TPU 8tx and TPU 8i Max, marking four new TPU systems in a single year.",
@@ -455,18 +467,6 @@
       "publishedAt": "2026-11-09T12:52:46Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/696277/696277-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6a362f8d0e77f20978",
-      "title": "Çin’den Nvidia CEO’su Jensen Huang hakkındaki casusluk iddialarına yanıt geldi",
-      "summary": "Çin, Nvidia CEO’su Jensen Huang’ın Çin adına casusluk yapan bir kadınla ilişkisi olduğu iddialarını reddetti. Olay, ABD-Çin ilişkilerinde yeni bir gerilim yaratabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cin-nvidia-ceo-suna-yonelik-casusluk-iddialarini-yalanladi--212664",
-      "publishedAt": "2026-11-09T12:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212664/1200x675cin-nvidia-ceo-suna-yonelik-casusluk-iddialarini-yalanladi.jpg",
       "language": "tr",
       "editorial": false
     },
