@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-10T22:29:26.840356Z",
+  "generatedAt": "2026-11-11T02:08:25.377834Z",
   "sourceCount": 7,
   "items": [
     {
@@ -951,18 +951,6 @@
       "editorial": false
     },
     {
-      "id": "268473af225cc85ca4",
-      "title": "Bundle Up With Two Beloved Classics, Now on EA Play",
-      "summary": "From garden chaos to cozy creations, two classics are on The Play List. Plants vs. Zombies: Replanted and MySims: Cozy Bundle are now on EA Play for XBOX! Members can fall back into beloved favorites with unlimited access. Game Pass Ultimate members can settle into sweater weather now with EA Play. Get unlimited access today,",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/05/ea-play-november/",
-      "publishedAt": "2026-11-05T18:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/EAP_Group_NovRewards_NA_Social_1920x1080-53f5975890267335fc53.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "7303cf34c367e5457b",
       "title": "Agents aren’t humans (but they kinda are)",
       "summary": "AI agents act for millions, but servers see intermediaries that strip user visibility. This post defines the problem space and introduces a collaborative approach to safely identifying, allowing, and managing this automated traffic.",
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-26T22:01:23Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5X2P2KSNBX6J13E3B4219PW.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "62377f17395c9d4ef1",
+      "title": "Introducing a Voluntary Exit Offer",
+      "summary": "Amy Coleman, Executive Vice President and Chief People Officer, shared the below communication with Microsoft employees today. Today, we’re introducing a new Voluntary Exit Offer (VEO) to eligible employees within participating organizations. This offer gives eligible employees who may be considering a future outside the company a new choice to make that transition now with...",
+      "source": "Microsoft Blog",
+      "sourceUrl": "https://blogs.microsoft.com/blog/2026/10/26/introducing-a-voluntary-exit-offer/",
+      "publishedAt": "2026-10-26T15:33:56Z",
+      "category": "Teknoloji",
+      "image": "",
       "language": "en",
       "editorial": false
     }
