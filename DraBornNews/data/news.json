@@ -1,7 +1,163 @@
 {
-  "generatedAt": "2026-11-11T17:49:02.353410Z",
+  "generatedAt": "2026-11-12T00:23:43.998468Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "2b9d2265e0cab22e4c",
+      "title": "QuantumScape tamamen katı hal pilini tanıttı: 5 dakikada yüzde 80 şarj!",
+      "summary": "QuantumScape, Osprey adını verdiği tamamen katı hal batarya platformunu duyurdu. Şirket, uygun test koşullarında yüzde 10'dan yüzde 80 doluluğa yalnızca 5 dakikada ulaşabildiğini açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/quantumscape-tamamen-kati-hal-bataryasini-tanitti--212791",
+      "publishedAt": "2026-11-11T21:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212791/1200x675quantumscape-tamamen-kati-hal-bataryasini-tanitti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5d8c5e024c5f187d48",
+      "title": "Çip üretiminde yeni dönem: İlk 300 mm SiC wafer hazır",
+      "summary": "Infineon, 300 mm silisyum karbür wafer kullanarak çalışan çipler üreten ilk şirket oldu. Yeni teknoloji, wafer (yonga plakası) başına çip üretimini 2,3 kat artırıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cip-uretiminde-yeni-donem-ilk-300-mm-sic-wafer-hazir--212786",
+      "publishedAt": "2026-11-11T20:44:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212786/1200x675cip-uretiminde-yeni-donem-ilk-300-mm-sic-wafer-hazir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b6100b73b840e1fe52",
+      "title": "Japonya'nın 2 nm çip hedefi tehlikede: Rapidus takvimin gerisinde kaldı",
+      "summary": "Japonya'nın 2 nm çip üretimi için kurduğu Rapidus, SRAM bellek hücrelerini üretmekte zorlanıyor. Şirketin Mart 2028 seri üretim hedefi tehlikeye girmiş durumda.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/japonya-nin-2-nm-cip-hedefi-tehlikede-rapidus-takvimin-gerisinde--212787",
+      "publishedAt": "2026-11-11T20:26:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212787/1200x675japonya-nin-2-nm-cip-hedefi-tehlikede-rapidus-takvimin-gerisinde.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f4e2d986c0bc7fd620",
+      "title": "Huawei, 336 kWh kapasiteli yeni ev tipi enerji depolama sistemini tanıttı",
+      "summary": "Huawei, güneş enerjisi sistemleriyle birlikte çalışabilen yeni ev tipi bataryası Luterra S2'yi tanıttı. Sistem, birbirine bağlanan modüllerle 336 kWh enerji depolayabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huawei-den-336-kwh-kapasiteli-ev-tipi-enerji-depolama-sistemi--212788",
+      "publishedAt": "2026-11-11T20:08:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212788/1200x675huawei-den-336-kwh-kapasiteli-ev-tipi-enerji-depolama-sistemi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ede31c6363c4ab2b52",
+      "title": "Microsoft, Windows 11'in Windows 95'ten kalan arayüzlerini değiştirmeye hazırlanıyor",
+      "summary": "Microsoft, Windows 95 döneminden kalma iletişim pencerelerini ve sistem araçlarını modernleştirmeye hazırlanıyor. Şirket, eski arayüzleri WinUI 3 altyapısıyla yeniden tasarlamayı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/windows-11-in-30-yillik-arayuzleri-sonunda-degisiyor--212785",
+      "publishedAt": "2026-11-11T19:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212785/1200x675windows-11-in-30-yillik-arayuzleri-sonunda-degisiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c5b0c323235fe072a5",
+      "title": "Redmi 12.000 mAh bataryalı telefon hazırlığında: Sırada 14.000 mAh var",
+      "summary": "Akıllı telefonlarda batarya kapasiteleri hızla yükselirken Redmi'nin yeni hedefi 12.000 mAh oldu. Şirketin ayrıca 14.000 mAh seviyesindeki bataryaları da değerlendirdiği öne sürülüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/redmi-12-000-mah-bataryali-telefon-hazirliginda-14-000-ma-yolda--212752",
+      "publishedAt": "2026-11-11T19:28:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212752/1200x675redmi-12-000-mah-bataryali-telefon-hazirliginda-14-000-ma-yolda.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "90c8d21c26bf5bdfa9",
+      "title": "Yerin 1.5 kilometre altında dev deney başlıyor: Evrenin sırları nötrinolarda aranacak",
+      "summary": "ABD'de yerin 1,5 kilometre altında inşa edilmeye başlanan dev nötrino deneyi, evrenin oluşumuna ve maddenin antimaddeye neden baskın olduğuna dair önemli sorulara yanıt arayacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dunyanin-en-buyuk-notrino-deneyi-icin-yer-altinda-insaat-basladi--212761",
+      "publishedAt": "2026-11-11T19:05:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212761/1200x675dunyanin-en-buyuk-notrino-deneyi-icin-yer-altinda-insaat-basladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ecfbb71a0b955c938f",
+      "title": "Çin'in yeni tehdidi Avrupa'da: Geely Monjaro EM-i rekabetçi fiyatla satışa sunuldu",
+      "summary": "Geely, yeni hibrit modeli Monjaro EM-i'yi Avrupa'da satışa sundu. Skoda Kodiaq ve Volkswagen Tayron gibi modellere rakip olacak araç rekabetçi başlangıç fiyatı ve zengin donanımıyla dikkat çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-in-yeni-tehdidi-avrupa-da-geely-monjaro-em-i-satisa-sunuldu--212789",
+      "publishedAt": "2026-11-11T18:45:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212789/1200x675cin-in-yeni-tehdidi-avrupa-da-geely-monjaro-em-i-satisa-sunuldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6667da8e08ebdd4249",
+      "title": "İspanya'da veri merkezlerinin atık ısısı evleri ısıtmak için kullanılacak",
+      "summary": "İspanya'da iki enerji şirketi, veri merkezlerinin soğutulması sırasında ortaya çıkan atık ısıyı geri kazanarak evlerde, ticari binalarda ve sanayi tesislerinde kullanmayı planlıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ispanya-veri-merkezlerinin-isisini-evleri-isitmak-icin-kullanacak--212784",
+      "publishedAt": "2026-11-11T18:43:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212784/1200x675ispanya-veri-merkezlerinin-isisini-evleri-isitmak-icin-kullanacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b5ee422d001027823f",
+      "title": "SpaceX'ten uzayda yapay zeka devrimi için 100 GW'lık sipariş",
+      "summary": "SpaceX, Starmind yapay zeka uyduları için yıllık 100 GW kapasiteli HJT güneş hücresi üretim ekipmanı sipariş etti. İlk üretim hattı 2027'de Teksas'ta kurulacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/spacex-ten-uzayda-yapay-zeka-devrimi-icin-100-gw-lik-siparis--212762",
+      "publishedAt": "2026-11-11T18:21:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212762/1200x675spacex-ten-uzayda-yapay-zeka-devrimi-icin-100-gw-lik-siparis.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c06fca3b9549fb9570",
+      "title": "Gemini Decisions API: Fast, calibrated multimodal decisions",
+      "summary": "Meet the Gemini Decisions API, powered by our state-of-the-art model Gemini Decision for fast, calibrated multimodal decisions.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/",
+      "publishedAt": "2026-11-11T18:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "a251867faf0e96de53",
+      "title": "Built on Googlebook: Play Henry Cavill’s video game to support Movember",
+      "summary": "Henry Cavill’s “Mustache Protocol” is live. See how the game came together on Googlebook, and help us raise $500,000 for men’s health.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/devices/googlebook/henry-cavill-googlebook-mustache-protocol/",
+      "publishedAt": "2026-11-11T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Henry_Cavill_thumbnail_v2.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "361c7a8f89a1173bc1",
+      "title": "Yeni MacBook Pro'nun içi açıldı: Işıklı logonun sırrı ortaya çıktı",
+      "summary": "Yeni MacBook Pro'nun içini inceleyen iFixit, Apple'ın ışıklı logosunu nasıl yeniden tasarladığını gözler önüne serdi. İnceleme ayrıca OLED ekranı ve onarılabilirlik iyileştirmelerini ortaya koydu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/macbook-pro-nun-ici-acildi-isikli-logonun-sirri-ortaya-cikti--212771",
+      "publishedAt": "2026-11-11T17:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212771/1200x675macbook-pro-nun-ici-acildi-isikli-logonun-sirri-ortaya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "d136d94c6e16a95765",
       "title": "Nvidia'nın patronu Jensen Huang skandalı: Yasak bir aşk mı, yoksa büyük bir casusluk tuzağı mı?",
@@ -107,18 +263,6 @@
       "publishedAt": "2026-11-11T16:28:55Z",
       "category": "Mobil",
       "image": "https://www.donanimhaber.com/images/images/haber/212402/1200x675amazon-da-gulumseten-kasim-2026-indirimine-giren-telefonlar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ecfbb71a0b955c938f",
-      "title": "Çin'in yeni tehdidi Avrupa'da: Geely Monjaro EM-i rekabetçi fiyatla satışa sunuldu",
-      "summary": "Geely, yeni hibrit modeli Monjaro EM-i'yi Avrupa'da satışa sundu. Skoda Kodiaq ve Volkswagen Tayron gibi modellere rakip olacak araç rekabetçi başlangıç fiyatı ve zengin donanımıyla dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cin-in-yeni-tehdidi-avrupa-da-geely-monjaro-em-i-satisa-sunuldu--212789",
-      "publishedAt": "2026-11-11T16:25:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212789/1200x675cin-in-yeni-tehdidi-avrupa-da-geely-monjaro-em-i-satisa-sunuldu.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -327,42 +471,6 @@
       "editorial": false
     },
     {
-      "id": "c507e57b367cb909f0",
-      "title": "Logitech, 7000 çalışanına GTA 6 için özel izin verdi",
-      "summary": "GTA VI çıkışı öncesinde Logitech, Logi Game Day kapsamında tam zamanlı çalışanlardan stajyerlere kadar tüm personele GTA 6 için özel izin vereceğini duyurdu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/logitech-den-7000-calisana-gta-6-icin-ozel-izin--212773",
-      "publishedAt": "2026-11-11T13:55:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212773/1200x675logitech-den-7000-calisana-gta-6-icin-ozel-izin.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a38f155f6858a5abdf",
-      "title": "Elektriğin en pahalı olduğu ülkeler belli oldu: Türkiye kaçıncı sırada?",
-      "summary": "2025 verilerine göre Bermuda, kWh başına 46,5 sentle elektriğin en pahalı olduğu bölge oldu. Türkiye'de ise elektrik fiyatı 7 sentin altında kalırken Avrupa ülkeleri üst sıralarda yer aldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elektrigin-en-pahali-oldugu-ulkeler-belli-oldu-turkiye-kacinci--212767",
-      "publishedAt": "2026-11-11T13:23:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212767/1200x675elektrigin-en-pahali-oldugu-ulkeler-belli-oldu-turkiye-kacinci.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e1a59cbda339a3f2b3",
-      "title": "Amazon'da 11.11'e özel 1.000 TL kuponları yenilendi: Saat 16.11'e özel kuponlar",
-      "summary": "Amazon Türkiye, 11.11'e özel üç farklı saatte toplam 18 bin indirim kuponu dağıtıyor. Sınırlı sayıdaki 1.000 TL'ye varan kuponları kapmak için acele edin.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-da-11-11-e-ozel-1-000-tl-kupon-hediyesi-basladi-2026--212751",
-      "publishedAt": "2026-11-11T13:13:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212751/1200x675amazon-da-11-11-e-ozel-1-000-tl-kupon-hediyesi-basladi-2026.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "7f4013945d055fc5e0",
       "title": "49 Yıldır Uzayda İlerliyor: Voyager 1, İnsanlık Tarihinde Bir İlki Gerçekleştirmek Üzere...",
       "summary": "NASA’nın uzay aracı Voyager 1, Dünya’dan tam bir ışık günü uzaklığa ulaşmak üzere. İnsan yapımı hiçbir nesnenin erişemediği bu mesafeye yaklaşırken geride neredeyse yarım asırlık bir yolculuk var. Yakın zamanda yaşadığı iletişim kesintisine rağmen yoluna devam ediyor.",
@@ -411,66 +519,6 @@
       "editorial": false
     },
     {
-      "id": "f7dca158601626e890",
-      "title": "Sony duyurdu: PlayStation 5 satışları 100 milyonu aştı",
-      "summary": "Sony Interactive Entertainment, 10 Kasım itibarıyla PlayStation 5 konsolunun dünya genelinde 100 milyondan fazla sattığını açıkladı. Bunda elbette GTA 6'nın büyük payı var.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/sony-duyurdu-ps5-satislari-100-milyonu-asti--212765",
-      "publishedAt": "2026-11-11T13:01:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212765/1200x675sony-duyurdu-ps5-satislari-100-milyonu-asti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "10543d38cc703b74a9",
-      "title": "Hepsiburada Efsane 11.11 indirimleri başladı: İşte öne çıkan fırsatlar!",
-      "summary": "Hepsiburada Efsane Kasım'da 11.11 indirimleri başladı. Çok sayıda üründe sepette net indirim kampanyası ve son ayların en düşük fiyatları sunuluyor. İşte Hepsiburada'da 11.11'in öne çıkanları...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/hepsiburada-efsane-11-11-indirimleri-basladi-2026--212772",
-      "publishedAt": "2026-11-11T12:55:15Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212772/1200x675hepsiburada-efsane-11-11-indirimleri-basladi-2026.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a583513e3f61dccf32",
-      "title": "PlayStation, beş yıl ve yüz milyonlarca dolar harcadığı oyunu iptal etti",
-      "summary": "PlayStation büyük umutlarla yeşil ışık yaktığı bir projenin daha fişini çekti. Bütçesinin 400 dolara yaklaştığı konuşulan Fairgames, beş yıllık çalışmanın ardından çöpe gitti.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/playstation-bes-yildir-beklenen-fairgames-i-iptal-etti--212755",
-      "publishedAt": "2026-11-11T12:39:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212755/1200x675playstation-bes-yildir-beklenen-fairgames-i-iptal-etti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d17a88fd45c37d391a",
-      "title": "Amazon 11.11 indirimlerinde yeni fırsat dalgası başladı: İşte öne çıkan ürünler",
-      "summary": "Amazon'un 11.11'e özel Flaş Fırsatlar indirimine giren ürünleri bugün saat 15.00'te yenilendi. İşte Flaş Fırsatlar'ın yeni ürünleri ve kaçırmamanız gereken ürünler.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-11-11-indirimlerinde-yeni-firsat-dalgasi-basladi-iste-one--212777",
-      "publishedAt": "2026-11-11T12:37:06Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212777/1200x675amazon-11-11-indirimlerinde-yeni-firsat-dalgasi-basladi-iste-one.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "91aa5fd84943959d14",
-      "title": "Mercedes’in yeni elektrikli otobüsü tanıtıldı: 750 kg daha hafif",
-      "summary": "Mercedes-Benz, ikinci nesil eCitaro’nun üretime yakın prototipini gösterdi. 2028’de yollara çıkacak elektrikli otobüs; yeni platform, LFP bataryalar ve 450 kW’a ulaşan şarj desteğiyle geliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-elektrikli-mercedes-ecitaro-tanitildi-iste-ozellikleri--212763",
-      "publishedAt": "2026-11-11T12:17:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212763/1200x675yeni-elektrikli-mercedes-ecitaro-tanitildi-iste-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "a2c1562d137168cb9c",
       "title": "OpenAI, Tatil Planlamasını Yapay Zekâya Bırakıyor: Seyahat Girişimini Satın Aldı!",
       "summary": "OpenAI, seyahat planlamasını otonom yapay zekâ ajanlarına bırakan Odessia’yı satın aldı.",
@@ -507,30 +555,6 @@
       "editorial": false
     },
     {
-      "id": "e6e1b4ce8dc3cf16c8",
-      "title": "Google, Türkiye'deki reklam ek ücretini düşürüyor: 2027'de başlayacak",
-      "summary": "Google, Türkiye'de yayınlanan reklamlar için uyguladığı Yasal İşletim Maliyeti oranını 1 Ocak 2027 itibarıyla düşürecek. Düzenleme Google Ads ve YouTube reklamlarını kapsıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-turkiye-deki-reklam-ek-ucretini-dusuruyor--212769",
-      "publishedAt": "2026-11-11T11:58:43Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212769/1200x675google-turkiye-deki-reklam-ek-ucretini-dusuruyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "015a703fe1507fbc2e",
-      "title": "HyperOS 4 alamayacak Xiaomi ve Poco modelleri belli oldu",
-      "summary": "Xiaomi, yeni HyperOS 4 güncellemesini desteklenen modellere dağıtmaya başladı. Ancak Xiaomi 12T ve Redmi Note 12 gibi bazı popüler telefonlar yeni sürümü alamayacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/hyperos-4-alamayacak-xiaomi-ve-poco-modelleri-belli-oldu--212756",
-      "publishedAt": "2026-11-11T11:37:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212756/1200x675hyperos-4-alamayacak-xiaomi-ve-poco-modelleri-belli-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "6ce9fc87a4de2b2b75",
       "title": "X’ten Yeni Özellik: Başkalarının Videolarını Kesip Paylaşarak Para Kazanabileceksiniz!",
       "summary": "X, içerik üreticilerinin etkileşimini artırmak ve izlenmelerden gelir elde etmelerini sağlamak için kendi video kesit alma aracını kullanıma sundu.",
@@ -551,18 +575,6 @@
       "publishedAt": "2026-11-11T11:19:00Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/696664/696664-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a0776d2f96aa619283",
-      "title": "Dönebilen koltuklar, 350 km elektrikli menzil: Yeni Lynk & Co 900L tanıtıldı",
-      "summary": "Lynk & Co, amiral gemisi SUV ailesine yedi koltuklu 900L’yi ekledi. Şarj edilebilir hibrit araç, 320 kilometreye ulaşan elektrikli menzili ve karşılıklı oturmaya imkan tanıyan kabiniyle dikkat çekiyor",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-lynk-co-900l-tanitildi-iste-tasarimi-ve-ozellikleri--212760",
-      "publishedAt": "2026-11-11T11:15:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212760/1200x675yeni-lynk-co-900l-tanitildi-iste-tasarimi-ve-ozellikleri.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -723,14 +735,14 @@
       "editorial": false
     },
     {
-      "id": "172ae3f5f4b569c4d8",
-      "title": "Introducing the Multimodal Knowledge Agent benchmark",
-      "summary": "We’re launching Multimodal Knowledge Agent, a new benchmark to evaluate how agents reason across visually-complex multimodal tasks.",
+      "id": "875de747c34621d4cd",
+      "title": "Introducing 3 new domains: .eat, .fly, and .here",
+      "summary": "Google Registry launches .eat, .fly, and .here today. See how Wingstop, Zillow, Rocket Lawyer, and others are already using them.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/registry/new-google-domains-eat-fly-here/",
       "publishedAt": "2026-11-10T16:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/01_Hero_MKA_Benchmark_2784x1566.png",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Thumbnail__hero_-_eat_fly_here_.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -747,14 +759,14 @@
       "editorial": false
     },
     {
-      "id": "875de747c34621d4cd",
-      "title": "Introducing 3 new domains: .eat, .fly, and .here",
-      "summary": "Google Registry launches .eat, .fly, and .here today. See how Wingstop, Zillow, Rocket Lawyer, and others are already using them.",
+      "id": "172ae3f5f4b569c4d8",
+      "title": "Introducing the Multimodal Knowledge Agent benchmark",
+      "summary": "We’re launching Multimodal Knowledge Agent, a new benchmark to evaluate how agents reason across visually-complex multimodal tasks.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/registry/new-google-domains-eat-fly-here/",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/multimodal-knowledge-agent-benchmark/",
       "publishedAt": "2026-11-10T16:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Thumbnail__hero_-_eat_fly_here_.max-600x600.format-webp.webp",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/original_images/01_Hero_MKA_Benchmark_2784x1566.png",
       "language": "en",
       "editorial": false
     },
@@ -855,18 +867,6 @@
       "editorial": false
     },
     {
-      "id": "fc2fe6c60421902de6",
-      "title": "Developers can now build with Google Maps Platform in AI Studio.",
-      "summary": "Developers can now build with Google Maps Platform in AI Studio.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/build-google-maps-platform-ai-studio/",
-      "publishedAt": "2026-11-09T17:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Studio_blog_social.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "ff944a8b8c0aaf9c5c",
       "title": "FragPunk Reveals Farlands: New Delivery PvPvE Adventure Now Available in Early Access",
       "summary": "FragPunk has launched its biggest new chapter yet with Farlands, a permanent, multiplayer delivery-driven PvPvE adventure where dozens of players share a persistent world, now available in Global Early Access on PC and console. Farlands combines high-stakes cargo deliveries with resource gathering, combat, and long-term progression in a sandbox combat experience. Players take on delivery",
@@ -875,18 +875,6 @@
       "publishedAt": "2026-11-09T16:00:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/HighresScreenshot_2026.10.23-18.54.20-fac883fc0e2ba59ade98-scaled.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "e9950a58c8925934c5",
-      "title": "Our newest TPUs: 8tx and 8i Max, built for the agentic era",
-      "summary": "We’ve expanded our eighth generation TPU portfolio with TPU 8tx and TPU 8i Max, marking four new TPU systems in a single year.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/tpu-8i-max-and-8tx/",
-      "publishedAt": "2026-11-09T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/TPU-8tx_and_8i-Max.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -935,18 +923,6 @@
       "publishedAt": "2026-11-06T17:00:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/10/Image-1-7bf753596de539e98458-1024x576.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "0bec9645b662964a46",
-      "title": "20 Years of Gears",
-      "summary": "It’s hard to believe that 20 years ago, Gears of War launched on XBOX 360 and introduced the world to Marcus Fenix, Dominic Santiago, and the genius of putting a chainsaw on a gun. Since then, a lot has happened. We’ve released new games, introduced new characters and enemies, and welcomed millions of players into",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/06/gears-of-war-e-day-season-2-20th-anniversary/",
-      "publishedAt": "2026-11-06T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/GoW_EDAY_FPL_S2_SolemnMemoriesDom_FE-307b6e3c81820345d5c3-1024x576.jpg",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-10-22T13:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5G8JRPS2ZR304ZH695BQBTD.01M5G8JS8D86H6MQHCQERAW2XC.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "59c87ea544e0e5db59",
+      "title": "Introducing full transaction detection for Cloudflare WAF",
+      "summary": "Cloudflare's web application firewall can now correlate an HTTP request with its response. Full transaction detection helps every customer find successful exploits, data exposure, and risky misconfigurations that request-only inspection can miss.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/full-transaction-waf/",
+      "publishedAt": "2026-10-21T14:10:42Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5E1HKVR7WJX7KGB4B8MSK75.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "4a59615041b968ae61",
+      "title": "Cloudflare deploys protections against php2shell vulnerability",
+      "summary": "Cloudflare has deployed default web application firewall (WAF) protections for newly disclosed PHP vulnerabilities before public disclosure. The rules use request and response signals to stop exploit attempts and prevent exposed data from reaching attackers.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/php-vulnerabilities-waf-protection/",
+      "publishedAt": "2026-10-21T13:56:45Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KXQSMGN3Z955B45GCJR4REK3.png",
       "language": "en",
       "editorial": false
     }
