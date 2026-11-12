@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-12T00:23:43.998468Z",
+  "generatedAt": "2026-11-12T07:35:40.119847Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "202520af1933929107",
+      "title": "Nvidia patronu görevden alınıyor, 1 trilyon dolar kayıp var",
+      "summary": "Yapay zekâ sektöründe adeta tarih yazan Nvidia, patronunun yaptığı akıl dışı bir hareket nedeniyle tarihin en kötü yönetilen şirketi olma yolunda ilerliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-depremi-daha-da-buyuyor--212800",
+      "publishedAt": "2026-11-12T07:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212800/1200x675nvidia-depremi-daha-da-buyuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "2b9d2265e0cab22e4c",
       "title": "QuantumScape tamamen katı hal pilini tanıttı: 5 dakikada yüzde 80 şarj!",
@@ -351,18 +363,6 @@
       "editorial": false
     },
     {
-      "id": "36bfbfbd3320814326",
-      "title": "Türkiye ve AB, elektronik imzaların karşılıklı tanınması için harekete geçti",
-      "summary": "Türkiye ile Avrupa Birliği, elektronik imza ve mühürlerin karşılıklı tanınması için çalışmalara başladı. İşbirliği hayata geçerse Türk şirketlerinin AB ile dijital ticaret işlemleri kolaylaşabilir.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-ve-ab-elektronik-imzalari-karsilikli-olarak-taniyacak--212783",
-      "publishedAt": "2026-11-11T14:40:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212783/1200x675turkiye-ve-ab-elektronik-imzalari-karsilikli-olarak-taniyacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "5fd4465d7e36695801",
       "title": "SEAT Kasım 2026 Fiyat Listesi ve Güncel Kampanyalar",
       "summary": "SEAT Kasım 2026 sıfır araç fiyatları ve kampanyaları! Ibiza, Arona, Leon ve Ateca güncel fiyatlarını, indirimleri ve kredi fırsatlarını inceleyin.",
@@ -444,18 +444,6 @@
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M73MMXB6M86NA1F97GH7Q8TG.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "6896b64dcc63400143",
-      "title": "Elektrikli Dacia Sandero geliyor: 44 kWsa batarya, 400 km menzil hedefi",
-      "summary": "Dacia Sandero, 2028’de yeni nesline geçerken ilk kez tamamen elektrikli bir versiyona kavuşacak. Modelin benzinli ve hibrit seçeneklerinde de fiyatı aşağı çekmeye yönelik değişiklikler planlanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elektrikli-dacia-sandero-geliyor-44-kwsa-batarya-400-km-menzil--212766",
-      "publishedAt": "2026-11-11T14:18:05Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212766/1200x675elektrikli-dacia-sandero-geliyor-44-kwsa-batarya-400-km-menzil.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-21T13:56:45Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KXQSMGN3Z955B45GCJR4REK3.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "1c5f83daf4c5b5dc2d",
+      "title": "How Commerce.com and Cloudflare are getting storefronts ready for AI agents",
+      "summary": "Almost 100,000 Commerce.com domains now give AI agents real shopping tools through WebMCP on Cloudflare. Here's how we turned it on across every store at once, while keeping each merchant in control.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/webmcp-commerce/",
+      "publishedAt": "2026-10-21T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5AYSA5Z4MMJ6XYBSMECP05T.png",
       "language": "en",
       "editorial": false
     }
