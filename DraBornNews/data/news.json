@@ -1,7 +1,127 @@
 {
-  "generatedAt": "2026-11-13T18:27:58.569599Z",
+  "generatedAt": "2026-11-13T23:47:07.316871Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "c2e67485c0bfcf134f",
+      "title": "ABD semalarında panik yaşanıyor: Ülke genelinde tüm uçuşlar durduruldu",
+      "summary": "ABD'de sıcak saatler yaşanıyor. Ülke genelinde tüm uçuşlar durdurulurken havadaki uçaklardan da en yakın havalimanına inmeleri istendi. Sosyal medyada çarpıcı iddialar dolaşıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/abd-genelinde-tum-ucuslar-durduruldu--212907",
+      "publishedAt": "2026-11-13T22:47:49Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212907/1200x675abd-genelinde-tum-ucuslar-durduruldu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6bed2f0df0186f02f3",
+      "title": "ChatGPT artık alışveriş de yapabilecek: ChatGPT Wallet tanıtıldı",
+      "summary": "OpenAI, ChatGPT Wallet özelliğini kullanıma sundu. Yeni sistem, yapay zeka ajanlarının kullanıcılar adına ürün araştırıp satın alma işlemlerini hazırlamasına imkan tanıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/chatgpt-artik-alisveris-de-yapabilecek-chatgpt-wallet-tanitildi--212897",
+      "publishedAt": "2026-11-13T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212897/1200x675chatgpt-artik-alisveris-de-yapabilecek-chatgpt-wallet-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "176a9ceb17b44efc76",
+      "title": "Claim your Google Cloud Credits in Google AI Studio",
+      "summary": "Claim your Google Cloud Credits in Google AI Studio",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/google-cloud-credits-gdp-ai-studio/",
+      "publishedAt": "2026-11-13T20:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/AI_Studio_BlogBanner_990x556.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "959b7d79933d06c210",
+      "title": "AKINCI ve Bayraktar TB2, kara yoluna başarıyla inip kalktı",
+      "summary": "Bayraktar TB2 ve AKINCI SİHA'lar, acil durum senaryoları kapsamında Manisa-Balıkesir Karayolu'na iniş ve kalkış yaptı. Hedef, tüm milli İHA'ların kara yollarını alternatif pist olarak kullanabilmesi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/akinci-ve-bayraktar-tb2-kara-yoluna-inip-kalkti--212903",
+      "publishedAt": "2026-11-13T20:21:57Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212903/1200x675akinci-ve-bayraktar-tb2-kara-yoluna-inip-kalkti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5ab783dcdbdb11e34d",
+      "title": "Kitesurf is now open source",
+      "summary": "Kitesurf, our experimental browser engine for AI agents, is now open source. Inspect the code, run it locally, or deploy your own instance on Cloudflare Workers.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/kitesurf-open-source/",
+      "publishedAt": "2026-11-13T20:20:21Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7B8M53647Q1KNRABY8VM2G7.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "44c9fca3a90f0dbd93",
+      "title": "Nvidia imparatorluğundaki son saatler: Jensen Huang",
+      "summary": "Jensen Huang, Nvidia'yı küçük bir grafik çipi üreticisinden yapay zeka devinin merkezine taşıdı. İşte 33 yıllık imparatorluğunu kuran kararlar ve CEO'luk koltuğundan ayrıldığı son saatler...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-imparatorlugundaki-son-saatler-jensen-huang--212883",
+      "publishedAt": "2026-11-13T19:47:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212883/1200x675nvidia-imparatorlugundaki-son-saatler-jensen-huang.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3b169d0f2e55e6fd9b",
+      "title": "25 Yılda Yalnızca %3,6 Kapasite Kaybı: Yeni Batarya Teknolojisi Devreye Giriyor!",
+      "summary": "Almanya'da kurulacak 30 MWh kapasiteli yeni çinko-bromür batarya tesisi, yanıcı olmayan yapısı ve 25 yılda sadece %3,6 kapasite kaybıyla öne çıkıyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/yalnizca-3-6-kapasite-kaybi-yeni-batarya-teknolojisi-devreye-giriyor-h228982.html",
+      "publishedAt": "2026-11-13T19:45:58Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/697183/697183-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a009bbdbfbe6de4710",
+      "title": "Adapting to AI penetration testing orchestrators: The Modern Security Model",
+      "summary": "AI-orchestrated penetration testing platforms like ARTEX have become increasingly powerful tools enabling effective attacks on exposed infrastructure. Here we share Cloudflare’s observations and recommended countermeasures.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/adapting-to-ai-penetration-testing-orchestrators/",
+      "publishedAt": "2026-11-13T19:26:07Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7B3YN6VXD98D313GQ0MHPM2.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "30f10a371f792a6b72",
+      "title": "Türkiye ve Çin’den dev enerji anlaşması: 7 GW’lık güneş ve rüzgar enerjisi kurulacak",
+      "summary": "Türkiye ile Çin arasında imzalanan 15 milyar dolarlık anlaşmayla 7.000 MW güneş ve rüzgar enerjisi kapasitesi kurulacak. İşbirliği, Türkiye'de rüzgar türbini üretimini de kapsıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/turkiye-ile-cin-arasinda-15-milyar-dolarlik-enerji-anlasmasi--212884",
+      "publishedAt": "2026-11-13T19:25:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212884/1200x675turkiye-ile-cin-arasinda-15-milyar-dolarlik-enerji-anlasmasi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "12e192ac2c502e6ab2",
+      "title": "Uzayda gezinen gizemli cisim kayıp Sovyet aracı mı? NASA açıklama yaptı",
+      "summary": "Sıradan bir göktaşı gibi hareket etmeyen gizemli 1998 KY26, eski bir Sovyet uzay aracı mı? Harvardlı astrofizikçinin iddiası üzerine NASA başkanından açıklama geldi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/uzayda-gezinen-gizemli-obje-kayip-sovyet-araci-mi-nasa-acikladi--212886",
+      "publishedAt": "2026-11-13T18:41:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212886/1200x675uzayda-gezinen-gizemli-obje-kayip-sovyet-araci-mi-nasa-acikladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "b657a819d8f7258b9c",
       "title": "Oyun sektöründe yapay zeka kullanımı hızla yayılıyor",
@@ -339,18 +459,6 @@
       "editorial": false
     },
     {
-      "id": "2c7f91352c48ebc21e",
-      "title": "AMD, Radeon ekran kartlarındaki SSD yazma sorununu düzeltti",
-      "summary": "AMD, Radeon ekran kartı sürücülerinin SSD'ye sürekli veri yazmasına neden olan hatayı Adrenalin 26.11.1 güncellemesiyle giderdi. Ancak yeni sürüm beraberinde başka sorunlar da getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amd-radeon-ekran-kartlarindaki-ssd-yazma-sorununu-duzeltti--212868",
-      "publishedAt": "2026-11-13T12:25:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212868/1200x675amd-radeon-ekran-kartlarindaki-ssd-yazma-sorununu-duzeltti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "f409a21c17a18657d9",
       "title": "206 TL Değerindeki Oyun Epic Games'te Bu Hafta Ücretsiz Oldu [12-19 Kasım]",
       "summary": "Epic Games'in bu hafta ücretsiz vereceği yeni oyun belli oldu. Her hafta oyuncuları yeni ücretsiz oyunlarla mutlu eden Epic Games peki bu hafta hangi oyunu ücretsiz yaptı?",
@@ -363,30 +471,6 @@
       "editorial": false
     },
     {
-      "id": "1ca2689cebfcb4826c",
-      "title": "Jensen Huang, ABD Kongresi'nde ifade verecek",
-      "summary": "Nvidia'nın eski CEO'su Jensen Huang, ABD Kongresi'nde ifade verecek. Üç komite, Çin'e çip ihracatı ve şirket hakkındaki iddialar nedeniyle Huang'dan açıklama bekliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/jensen-huang-abd-kongresi-nde-ifade-verecek--212865",
-      "publishedAt": "2026-11-13T12:03:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212865/1200x675jensen-huang-abd-kongresi-nde-ifade-verecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b68d8b1cfe8638a9a2",
-      "title": "iPhone 18 neden ertelendi? Arkasında Samsung olabilir",
-      "summary": "Apple'ın standart iPhone 18 modelini gelecek yıla ertelemesinin arkasındaki neden ortaya çıktı. İddiaya göre şirket, Samsung'un kamera sensörü üretimini tamamlamasını bekliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-18-neden-ertelendi-arkasinda-samsung-olabilir--212864",
-      "publishedAt": "2026-11-13T11:42:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212864/1200x675iphone-18-neden-ertelendi-arkasinda-samsung-olabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "40cca0568c1fbb92df",
       "title": "Google'da Bulunmak Yetmiyor: Poseidon360, İşletmelerin Yapay Zekâ Tarafından Önerilmesine Odaklanıyor",
       "summary": "Google'da üst sıralarda yer almak, dijital dünyada görünür olmanın en önemli yollarından biriydi. Ancak ChatGPT, Gemini ve Perplexity gibi yapay zekâ platformlarının kullanıcıların bilgiye ulaşma alışkanlıklarını değiştirmesiyle birlikte işletmeler için yeni bir rekabet alanı ortaya çıktı.",
@@ -395,18 +479,6 @@
       "publishedAt": "2026-11-13T11:37:36Z",
       "category": "Yapay Zeka",
       "image": "https://imgrosetta.webtekno.com/file/697159/697159-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "eea229b69f461964e9",
-      "title": "İki araştırmacı, sadece 21 bin dolar bütçeyle görsel üreten yapay zekâ geliştirdi",
-      "summary": "İki araştırmacıdan oluşan Linum ekibi, yalnızca 21 bin dolara eğittiği P-JiT modelini yayımladı. Yeni model, farklı mimarisiyle görsel üretiminde eğitim maliyetlerini önemli ölçüde düşürüyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iki-arastirmaci-sadece-21-bin-dolara-yapay-zeka-gelistirdi--212866",
-      "publishedAt": "2026-11-13T11:21:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212866/1200x675iki-arastirmaci-sadece-21-bin-dolara-yapay-zeka-gelistirdi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -495,42 +567,6 @@
       "editorial": false
     },
     {
-      "id": "2315e4e2198e627a33",
-      "title": "Yangın riski taşımayan, 25 yıl dayanacak dev batarya geliyor",
-      "summary": "Almanya, lityum iyon bataryalara alternatif olabilecek yeni bir enerji depolama teknolojisine yatırım yapıyor. 30 MWh kapasiteli tesisin 2028'de devreye alınması planlanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yangin-riski-tasimayan-25-yil-dayanacak-dev-batarya-geliyor--212859",
-      "publishedAt": "2026-11-13T11:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212859/1200x675yangin-riski-tasimayan-25-yil-dayanacak-dev-batarya-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "993a950ee81488b724",
-      "title": "Nvidia çalışanları Jensen Huang'ın geri dönmesini istiyor",
-      "summary": "Nvidia çalışanları, hakkındaki ilişki iddialarının ardından görevinden ayrılan Jensen Huang'ın yeniden CEO koltuğuna dönmesini istiyor. Şirket içindeki destek mesajları 1.600'ü aştı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-calisanlari-jensen-huang-in-geri-donmesini-istiyor--212861",
-      "publishedAt": "2026-11-13T10:39:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212861/1200x675nvidia-calisanlari-jensen-huang-in-geri-donmesini-istiyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c885f3f174236ad306",
-      "title": "Wolfenstein 3 geliyor: Xbox resmen duyurdu",
-      "summary": "Oyun dünyasının efsane serilerinden Wolfenstein, yıllar sonra ana seriye yeni bir oyun daha ekleyecek. Bir süredir gündemde olan Wolfenstein 3, dün resmi olarak duyuruldu. İşte detaylar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/wolfenstein-3-resmen-duyuruldu--212852",
-      "publishedAt": "2026-11-13T10:18:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212852/1200x675wolfenstein-3-resmen-duyuruldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "bc01ae4cf993249b32",
       "title": "Her 8 Dakikada Bir Tekrarlanan Gizemli Radyo Sinyalinin Kaynağı Çözüldü",
       "summary": "Gökbilimciler, her 8 dakikada bir tekrarlanan gizemli radyo sinyalinin Güneş benzeri bir yıldızın yörüngesindeki beyaz cüceden geldiğini çözdü.",
@@ -591,30 +627,6 @@
       "editorial": false
     },
     {
-      "id": "38a91952d6a1b2b843",
-      "title": "Xiaomi Türkiye lansmanı 17 Kasım'da: Xiaomi 18 Pro ve fazlası geliyor",
-      "summary": "Xiaomi 18 Pro Max 17 Kasım'da Türkiye'ye geliyor. Her ne kadar lansmanın yıldızı yeni Xiaomi 18 Pro serisi olacak olsa da, o gün başka ürünler de ülkemizde satışa sunulacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xiaomi-18-pro-max-turkiye-lansmani-17-kasim-da-iste-detaylar--212867",
-      "publishedAt": "2026-11-13T09:57:09Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212867/1200x675xiaomi-18-pro-max-turkiye-lansmani-17-kasim-da-iste-detaylar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "964f7decb8393383bb",
-      "title": "Mercedes Almanya’da yatırımları durdurdu, fabrikalar kapanabilir",
-      "summary": "Mercedes, işçilik maliyetlerini azaltmak için yürüttüğü görüşmelerden sonuç alamayınca Almanya’daki tesislerine yapacağı yeni yatırımları durdurdu. Şirket, fabrika kapatmayı da değerlendiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/mercedes-almanya-da-yatirimlari-durdurdu-fabrikalar-kapanabilir--212858",
-      "publishedAt": "2026-11-13T09:56:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212858/1200x675mercedes-almanya-da-yatirimlari-durdurdu-fabrikalar-kapanabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "711f4a91a53f460aff",
       "title": "WhatsApp Durumlarına Doğrudan Konum Paylaşma Seçeneği Ekleniyor",
       "summary": "WhatsApp, durumlarda fotoğraf veya video eklemeden konum paylaşmanın bir yolunu hazırlıyor.",
@@ -635,18 +647,6 @@
       "publishedAt": "2026-11-13T08:49:11Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/697072/697072-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f73b0ecb32bbd9709a",
-      "title": "BU FABRİKA TV TARİHİNİ NASIL DEĞİŞTİRDİ? | TCL’in Fabrikasında 3 Gün VLOG",
-      "summary": "Bu videoda TCL'in Shenzhen, Çin'deki TCL CSOT fabrikasına girip Mini-LED teknolojisinin icat edildiği yeri birlikte keşfediyoruz.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/tcl-fabrikasinda-3-gun-vlog-h228940.html",
-      "publishedAt": "2026-11-13T08:42:13Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/697117/697117-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -831,18 +831,6 @@
       "editorial": false
     },
     {
-      "id": "2daba85f0e1974d9c8",
-      "title": "Free Play Days – Sumerian Six, Hypnospace Outlaw, Sunderfolk and STUFFED",
-      "summary": "Dare to play differently with Free Play Days! Sumerian Six, Hypnospace Outlaw, Sunderfolk and STUFFED are available this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday, November 12 until Sunday, November 15. How to Start Playing Scroll down and find and install the games on each of the individual",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/12/free-play-days-11-12-2026/",
-      "publishedAt": "2026-11-12T16:30:00Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.4048.13554005851870537.3319872c-832c-4efd-8db0-c97fc34987e8.4d85c40b-bab1-40d4-8eb0-e026f396525f?w=400&h=600",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "1dd51fb909f5a4db88",
       "title": "Scaling AI value without losing control: Lessons from Frontier Firms",
       "summary": "Results are widespread. Value at scale is not, and that gap is what this year’s research from IDC, commissioned by Microsoft, set out to explain. In our fourth year commissioning IDC, more than 5,200 senior IT and business leaders across 28 industries shared what it takes to maximize value as AI scales. The clearest lessons...",
@@ -927,14 +915,14 @@
       "editorial": false
     },
     {
-      "id": "ab896b3f94b1c56b7c",
-      "title": "Talk it through with Gemini, now on Apple CarPlay",
-      "summary": "Gemini is now available on Apple CarPlay.",
+      "id": "bd91a5e650d44fc89e",
+      "title": "Google Cloud leaders share what to expect in cybersecurity for 2027.",
+      "summary": "In our Security 2027 analysis, leaders from across Google, Google Cloud, and Mandiant break down the critical trends shaping the next era of defense.",
       "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-on-apple-carplay/",
+      "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/cybersecurity-2027/",
       "publishedAt": "2026-11-11T17:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Carplay_hero_image.max-600x600.format-webp.webp",
+      "category": "Güvenlik",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Security_social-share.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -951,18 +939,6 @@
       "editorial": false
     },
     {
-      "id": "bd91a5e650d44fc89e",
-      "title": "Google Cloud leaders share what to expect in cybersecurity for 2027.",
-      "summary": "In our Security 2027 analysis, leaders from across Google, Google Cloud, and Mandiant break down the critical trends shaping the next era of defense.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/infrastructure-and-cloud/google-cloud/cybersecurity-2027/",
-      "publishedAt": "2026-11-11T17:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Security_social-share.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "bf467d9aa9cc13b12b",
       "title": "Get certified as a Google Cloud Professional Agentic Architect.",
       "summary": "Today we announced Google Cloud's new Professional Agentic Architect certification.",
@@ -971,6 +947,18 @@
       "publishedAt": "2026-11-11T17:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/google_cloud_certified_social.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "ab896b3f94b1c56b7c",
+      "title": "Talk it through with Gemini, now on Apple CarPlay",
+      "summary": "Gemini is now available on Apple CarPlay.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-on-apple-carplay/",
+      "publishedAt": "2026-11-11T17:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Carplay_hero_image.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -995,18 +983,6 @@
       "publishedAt": "2026-11-11T14:24:46Z",
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M73MMXB6M86NA1F97GH7Q8TG.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "8e8e851f9ac38a1986",
-      "title": "Experience the art and legacy of Dr. Esther Mahlangu",
-      "summary": "A new online archive of Esther Mahlangu’s life and art is now on Google Arts & Culture.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/arts-culture/esther-mahlangu/",
-      "publishedAt": "2026-11-11T09:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/esther_video_still.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-10-27T16:01:38Z",
       "category": "Yapay Zeka",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-FY27Q1-Image-1-FINAL.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "b98b75e5e3efe8c183",
+      "title": "Introducing the Cloudflare PHP Capture the Flag challenge",
+      "summary": "We are launching a PHP Capture the Flag challenge integrated with our Bug Bounty program to test our WAF protections. Security researchers are invited to bypass our defenses and capture the flag to help make the Internet safer.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/php-ctf/",
+      "publishedAt": "2026-10-27T13:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5YGNS8F8NYE3V5QERKYNG79.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f21bc890ebec1e8cf7",
+      "title": "What took the Internet offline in Q3 2026",
+      "summary": "An examination of global Internet disruptions observed by Cloudflare Radar during the third quarter of 2026. This review analyzes how power failures, natural disasters, and government shutdowns impacted network connectivity and traffic.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/q3-2026-internet-disruption-summary/",
+      "publishedAt": "2026-10-27T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KW453HMZRQX1BZKZQMN21EG8.png",
       "language": "en",
       "editorial": false
     }
