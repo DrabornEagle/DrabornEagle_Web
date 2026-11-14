@@ -1,7 +1,163 @@
 {
-  "generatedAt": "2026-11-14T05:52:36.838101Z",
+  "generatedAt": "2026-11-14T13:18:36.595734Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "6b6cc4f7767029ded3",
+      "title": "Jensen Huang'ın ayrılışında Çin'e kaçırılan milyarlarca dolarlık çiplerin etkisi olabilir",
+      "summary": "Nvidia'nın eski CEO'su Jensen Huang'ın ayrılışının arkasında Çin'e yönelik GPU kaçakçılığının bulunabileceği öne sürüldü. İddiaya göre Çin'e ulaştırılan donanımların kapasitesi 1,5 GW'ı aşmış olabilir",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huang-in-ayriliginin-arkasinda-cin-e-kacak-cip-ticareti-mi-var--212881",
+      "publishedAt": "2026-11-14T13:00:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212881/1200x675huang-in-ayriliginin-arkasinda-cin-e-kacak-cip-ticareti-mi-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "f3df03fa3c079fc309",
+      "title": "Honor 700 serisinin tanıtım tarihi açıklandı: İşte özellikleri",
+      "summary": "Honor, Honor 700, 700 Pro ve 700S modellerinden oluşan yeni akıllı telefon ailesini 23 Kasım'da tanıtacak. Peki yeni seri neler sunacak?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/honor-700-serisinin-tanitim-tarihi-aciklandi-iste-ozellikleri--212896",
+      "publishedAt": "2026-11-14T12:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212896/1200x675honor-700-serisinin-tanitim-tarihi-aciklandi-iste-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c054166eb1f86a0e3d",
+      "title": "Huawei ilk sürekli glikoz takip cihazını duyurdu",
+      "summary": "Huawei Sense G1 sürekli glikoz takip sensörü firmanın Sınıf 3 seviyesinde onay almayı başaran ilk sağlık cihazı olurken 16 güne kadar kullanım sağlayabiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huawei-sense-g1-geliyor--212915",
+      "publishedAt": "2026-11-14T11:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212915/1200x675huawei-sense-g1-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "0ef5667989797178fb",
+      "title": "Microsoft hizmetleri çöktü, Dünya Sağlık Örgütü çağrı yaptı: Ekrandan uzaklaşın",
+      "summary": "Microsoft altyapısında yaşanan ve milyonlarca kullanıcıyı etkileyen erişim sorunu sonrası DSÖ'den dikkat çeken bir paylaşım geldi. Kurumun resmi hesabından yayınlanan mesaj kısa sürede gündem oldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/microsoft-hizmetleri-coktu-dso-cagri-yapti-ekrandan-uzaklasin--212902",
+      "publishedAt": "2026-11-14T11:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212902/1200x675microsoft-hizmetleri-coktu-dso-cagri-yapti-ekrandan-uzaklasin.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9fb3f0a7cea6e1cf06",
+      "title": "ŞOK marketlerde Tchibo ürün geçidi var",
+      "summary": "14 Kasım ŞOK aktüel teknoloji ürünleri arasında Tchibo markasına ait Esperto 2 Süt tam otomatik kahve makinesi ve Esperto Mini espresso makinesi yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/14-kasim-sok-aktuel-katalogunda-neler-var--212906",
+      "publishedAt": "2026-11-14T10:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212906/1200x67514-kasim-sok-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "270f09c79204e2a44c",
+      "title": "Çin'in 3,2 milyar dolarlık yapay zeka projeleri Nvidia krizinin gölgesinde",
+      "summary": "Çin'de 3,2 milyar doları aşan yapay zeka yatırımları, ABD'nin Nvidia çiplerine yönelik ihracat kısıtlamaları nedeniyle belirsizliğe sürüklendi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-in-3-2-milyar-dolarlik-yapay-zeka-yatirimlari-tehlikede--212914",
+      "publishedAt": "2026-11-14T10:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212914/1200x675cin-in-3-2-milyar-dolarlik-yapay-zeka-yatirimlari-tehlikede.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1f7e32171a9a6ae89f",
+      "title": "Küresel enerji depolama kapasitesi 2027'de 209 GW'a ulaşacak",
+      "summary": "Dünya genelinde enerji depolama yatırımları artıyor. 2027 yılında 209 GW yeni kapasite kurulması beklenirken küresel kapasitenin önümüzdeki 10 yılda 10 katına çıkacağı tahmin ediliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kuresel-enerji-depolama-kapasitesi-2027-de-209-gw-a-ulasacak--212910",
+      "publishedAt": "2026-11-14T09:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212910/1200x675kuresel-enerji-depolama-kapasitesi-2027-de-209-gw-a-ulasacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "625f88aadfca64f15f",
+      "title": "Elektrikli Dacia Sandero geliyor! Fiat Grizzly kaç TL olur? | Oto Gündem",
+      "summary": "Oto Gündem'in bu haftaki bölümünde elektrikli Dacia Sandero'nun detaylarını, Fiat Grizzly'nin lansman tarihi ve olası fiyatı ve BYD'nin Rolls-Royce rakibi Altior gibi öne çıkan konuları konuşuyoruz.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/elektrikli-dacia-sandero-geliyor-fiat-grizzly-kac-tl-olur--212913",
+      "publishedAt": "2026-11-14T09:00:55Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212913/1200x675elektrikli-dacia-sandero-geliyor-fiat-grizzly-kac-tl-olur.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1db3bfd79bfa4e04ab",
+      "title": "The Witcher 4 çıkış tarihi ortaya çıktı: İşte beklenen tarih",
+      "summary": "The Witcher 4'ün çıkış tarihi için yeni bir ipucu ortaya çıktı. CD Projekt RED'in iş ilanı, merakla beklenen RPG oyunu için yeni bir tarih bilgisi ile yayınlandı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/the-witcher-4-cikis-tarihi-ortaya-cikti-iste-beklenen-tarih--212905",
+      "publishedAt": "2026-11-14T08:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212905/1200x675the-witcher-4-cikis-tarihi-ortaya-cikti-iste-beklenen-tarih.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e03d2feca0c28c5b95",
+      "title": "Kia’dan Hindistan’a 1,8 milyar euroluk yatırım: İkinci fabrikayı kuruyor",
+      "summary": "Kia, Hindistan’da elektrikli ve içten yanmalı araçlar üretecek ikinci fabrikasını kurmaya hazırlanıyor. Yaklaşık 1,8 milyar euro yatırım yapılacak tesisin 2030’da açılması planlanıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/kia-dan-hindistan-a-1-8-milyar-euroluk-yatirim--212912",
+      "publishedAt": "2026-11-14T08:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212912/1200x675kia-dan-hindistan-a-1-8-milyar-euroluk-yatirim.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "8f94d7ea77044efd75",
+      "title": "Intel, Razor Lake işlemcilerini resmen belgeledi: Masaüstü ve mobil geliyor",
+      "summary": "Intel'in yeni programlama dokümanı, Razor Lake masaüstü ve dizüstü işlemcilerini ilk kez resmi olarak listeliyor. Yeni nesil işlemcilerin destekleyeceği özellikler de belli oldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/intel-razor-lake-ve-coral-rapids-icin-yeni-ozellikleri-acikladi--212904",
+      "publishedAt": "2026-11-14T07:30:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212904/1200x675intel-razor-lake-ve-coral-rapids-icin-yeni-ozellikleri-acikladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7a822a6b92eabb995a",
+      "title": "Misafir Ağırlarken Hızınızı İkiye Katlayacak Teknolojik İnovasyon: Tek Dokunuşla Çift Fincan Özelliği Nasıl Çalışır?",
+      "summary": "Misafir ağırlamanın en keyifli ama mutfakta en çok mesai harcattıran anlarından biri şüphesiz kahve servisidir. Yemekler yenmiş, tatlı faslına geçilmiş ve \"Kimler kahve içiyor?\" sorusu sorulmuştur. Eğer kalabalık bir misafir grubunuz varsa ve klasik, tek tek demleme yapan bir makine kullanıyorsanız; mutfaktaki yalnız mesainiz resmen başlamış demektir.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/misafir-agirlarken-hizinizi-ikiye-katlayacak-teknolojik-inovasyon-tek-dokunusla-cift-fincan-ozelligi-nasil-calisir-h228604.html",
+      "publishedAt": "2026-11-14T07:20:03Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/696112/696112-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5c561cae5e065d4760",
+      "title": "Yırtılmasız ve akıcı görüntü: G-Sync ve FreeSync destekli 27 inç monitör önerileri",
+      "summary": "G-Sync monitör modelleri, ekran kartı ile monitör arasındaki görüntü yenileme hızını eşleştirerek oyunlarda yırtılma ve takılmaları azaltıyor. İşte öne çıkan seçenekler...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/27-inc-g-sync-ve-freesync-monitor-tavsiyesi--212759",
+      "publishedAt": "2026-11-14T06:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212759/1200x67527-inc-g-sync-ve-freesync-monitor-tavsiyesi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "c2e67485c0bfcf134f",
       "title": "ABD semalarında panik yaşanıyor: Ülke genelinde tüm uçuşlar durduruldu",
@@ -183,54 +339,6 @@
       "editorial": false
     },
     {
-      "id": "9dc49df1ba8c750bbd",
-      "title": "Elektrikli Tiguan'ın seri üretimi başladı",
-      "summary": "Volkswagen, ID.4’ün yerini alacak elektrikli SUV modeli ID. Tiguan’ı üretim bandına çıkardı. 600 km’ye kadar menzil sunan model, 2027’nin şubat ayında Türkiye'ye gelecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elektrikli-tiguan-in-seri-uretimi-basladi-ne-zaman-gelecek--212878",
-      "publishedAt": "2026-11-13T15:53:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212878/1200x675elektrikli-tiguan-in-seri-uretimi-basladi-ne-zaman-gelecek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "75a143657a30d7d03b",
-      "title": "Çinli JD.com, MediaMarkt'ı satın aldı: Avrupa'da 1.000'den fazla mağazanın sahibi oldu",
-      "summary": "JD.com, MediaMarkt ve Saturn markalarının sahibi Ceconomy'nin çoğunluk hissesini devraldı. Satın alma, Türkiye'deki MediaMarkt operasyonlarını da dolaylı olarak etkiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cinli-jd-com-mediamarkt-i-satin-aldi--212892",
-      "publishedAt": "2026-11-13T15:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212892/1200x675cinli-jd-com-mediamarkt-i-satin-aldi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9133c479a4a865ad54",
-      "title": "Hem temizliyor hem nemlendiriyor - Philips Pure Protect Water AC3420 incelemesi",
-      "summary": "Philips Pure Protect Water AC3420 inceleme videosuyla karşınızdayız. Hem hava temizleyici hem de hava nemlendirici olarak çalışan Philips AC3420 Pure Protect Water, neler sunuyor? Detaylar videomuzda!",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/philips-pure-protect-water-ac3420-inceleme--211408",
-      "publishedAt": "2026-11-13T15:29:26Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/211408/1200x675philips-pure-protect-water-ac3420-inceleme.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "52e52ccb225b1f29f8",
-      "title": "Google'ın eski çip mimarları, sıfırdan çip tasarlayabilen yapay zekâ geliştirdi",
-      "summary": "Google'ın AlphaChip projesinin arkasındaki isimler tarafından geliştirilen Ripple-65B yayınlandı. Model, bazı testlerde kendisinden çok daha büyük yapay zekâları geride bırakıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-in-cip-tasarimcilari-kendi-yapay-zeka-modelini-gelistirdi--212875",
-      "publishedAt": "2026-11-13T15:11:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212875/1200x675google-in-cip-tasarimcilari-kendi-yapay-zeka-modelini-gelistirdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "91c3f174d3e047fd4e",
       "title": "Next Week on XBOX: New Games for November 16 to 20",
       "summary": "Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X|S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! Grand Theft Auto",
@@ -240,30 +348,6 @@
       "category": "Oyun",
       "image": "https://store-images.s-microsoft.com/image/apps.47529.14542422611289128.2df5f2de-8c5b-4180-adca-60031b66133a.38261ecb-5ee5-4e30-8586-070dd6251f17?w=400&h=600",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "cac651a54c21b608e0",
-      "title": "Nvidia GeForce 621.24 sürücüsü yayınlandı: İşte yenilikler",
-      "summary": "Nvidia, GeForce Game Ready 621.24 sürücüsünü yayınladı. Yeni güncelleme Warhammer 40.000: Dawn of War IV desteği, DLSS 5 ve Assetto Corsa Rally için önemli yenilikler getiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-geforce-621-24-surucusu-yayinlandi-iste-yenilikler--212876",
-      "publishedAt": "2026-11-13T14:49:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212876/1200x675nvidia-geforce-621-24-surucusu-yayinlandi-iste-yenilikler.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "fb7e6575fbd5d90822",
-      "title": "Nissan’dan 19.400 dolara 320 km elektrik menzilli hibrit SUV: Nissan NX7",
-      "summary": "Nissan’ın Çin’deki ortağı Dongfeng ile geliştirdiği NX7, 19.400 dolardan başlayan fiyatlarla ön satışa açıldı. Şarj edilebilir hibrit SUV, büyük bataryası ve konfor donanımlarıyla dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-nissan-nx7-hibrit-suv-on-satista-iste-fiyati-ve-ozellikleri--212877",
-      "publishedAt": "2026-11-13T14:26:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212877/1200x675yeni-nissan-nx7-hibrit-suv-on-satista-iste-fiyati-ve-ozellikleri.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -303,18 +387,6 @@
       "editorial": false
     },
     {
-      "id": "02d5b6c165046971c9",
-      "title": "Xbox'ta bu hafta: Kısa süreliğine 4 oyun ücretsiz",
-      "summary": "Xbox Game Pass kullanıcıları için yeni Ücretsiz Oyun Günleri başladı. Sumerian Six ve Hypnospace Outlaw dahil toplam 4 oyun, hafta sonu boyunca ücretsiz oynanabilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-ta-bu-hafta-2-500-tl-degerinde-4-oyun-ucretsiz--212874",
-      "publishedAt": "2026-11-13T14:04:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212874/1200x675xbox-ta-bu-hafta-2-500-tl-degerinde-4-oyun-ucretsiz.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "68e7ef59b8e07c93d2",
       "title": "QSSR arrives in Marvel’s Spider-Man 2, Control Resonant, The Finals, Arc Raiders, No Man’s Sky, and Hell Let Loose: Vietnam",
       "summary": "Six years after launch, PlayStation 5 is still getting better. Last month, we introduced Quick Spectral Super Resolution (QSSR), bringing AI-guided upscaling to the console you already own. Since then, there’s been a lot of interest from developers eager to try it out. We’re happy to announce that the next set of games is on",
@@ -336,42 +408,6 @@
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M79507GNA08VSCSPAXM0NCC3.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "7c30482158fb7e375e",
-      "title": "Teslimat uygulamalarının komisyonlarına robotlu çözüm",
-      "summary": "Serve Robotics, 2 bin otonom teslimat robotundan oluşan filosunu küçük işletmelere ve geliştiricilere açıyor. Yeni platform, yüksek teslimat komisyonlarını ortadan kaldırmayı hedefliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/teslimat-uygulamalarinin-komisyonlarina-robotlu-cozum--212870",
-      "publishedAt": "2026-11-13T13:42:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212870/1200x675teslimat-uygulamalarinin-komisyonlarina-robotlu-cozum.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "f057dd2ec5402928c4",
-      "title": "Xbox CEO'su yeni konsolu doğruladı: Beşinci nesil yolda",
-      "summary": "Xbox, 25. yıl dönümü öncesinde yeni konsolunu doğruladı. Microsoft'un açıklamasına göre Project Helix geliştirme sürecinde ve ilk donanımlar 2027'de geliştiricilere ulaşacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xbox-ceo-su-yeni-konsolu-dogruladi-besinci-nesil-yolda--212871",
-      "publishedAt": "2026-11-13T13:20:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/212871/1200x675xbox-ceo-su-yeni-konsolu-dogruladi-besinci-nesil-yolda.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "85820b27fb7869cd3c",
-      "title": "OneOdio Black Friday indirimleri başladı: Bedava kulaklık, özel indirimler ve indirim kodu",
-      "summary": "OneOdio, Black Friday kampanyasını duyurdu. Ücretsiz kulaklık kazanma fırsatı, yüzde 20'ye varan indirim ve DH'ye özel indirim kodu sizleri bekliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/oneodio-black-friday-indirimleri-basladi-2026--212863",
-      "publishedAt": "2026-11-13T13:18:47Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212863/1200x675oneodio-black-friday-indirimleri-basladi-2026.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -399,18 +435,6 @@
       "editorial": false
     },
     {
-      "id": "5ab078ec4116c0f170",
-      "title": "n11’in 11.11 alışveriş raporu açıklandı: Bazı ürünlerin satışları yüzde 1.450 arttı",
-      "summary": "n11’in 11.11 alışveriş verileri açıklandı. Kasım ayının ilk 11 gününde tüketicilerin tercihleri değişirken bazı ürün kategorilerinde geçen yıla kıyasla dikkat çekici satış artışları yaşandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/n11-in-11-11-alisveris-raporu-aciklandi--212873",
-      "publishedAt": "2026-11-13T13:09:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212873/1200x675n11-in-11-11-alisveris-raporu-aciklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "aca4f7069258250bf4",
       "title": "Guild Saga: Vanished Worlds brings tactical adventure to PS5 in May 2027",
       "summary": "We’re excited to announce that Guild Saga: Vanished Worlds is coming to PS5 in May 2027. In this story-driven tactical RPG, your first mission for the Heroes Guild takes an unexpected turn when a mysterious maelstrom leaves you stranded on an unfamiliar island. Beyond its shores lie dangerous creatures, suspicious alchemists, and a bustling town",
@@ -431,18 +455,6 @@
       "publishedAt": "2026-11-13T12:54:01Z",
       "category": "Donanım",
       "image": "https://imgrosetta.webtekno.com/file/696940/696940-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "991a911dc1469fbf8e",
-      "title": "Merakla beklenen Fable'dan 4 dakikalık kesintisiz oynanış videosu geldi",
-      "summary": "Normalde bu yıl oyunseverlerle buluşması beklenen ama son dakika alınan kararla 2027'ye ertelenen Fable, 4 dakikalık yeni tanıtım videosuyla oynanış mekaniklerini gözler önüne serdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/fable-dan-4-dakikalik-kesintisiz-oynanis-videosu-geldi--212855",
-      "publishedAt": "2026-11-13T12:47:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212855/1200x675fable-dan-4-dakikalik-kesintisiz-oynanis-videosu-geldi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -635,18 +647,6 @@
       "publishedAt": "2026-11-13T08:49:46Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/697090/697090-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1db2a5ca51fe67e33a",
-      "title": "YouTube, GTA 6 Çıkışına Özel 24 Saatlik Dev Bir Canlı Yayın Gerçekleştirecek",
-      "summary": "YouTube, GTA 6’nın 19 Kasım’daki çıkışını dünyaca ünlü içerik üreticilerinin katılacağı 24 saatlik özel canlı yayınla kutluyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/youtube-gta-6-cikisina-ozel-24-saatlik-dev-canli-yayin-h228934.html",
-      "publishedAt": "2026-11-13T08:49:11Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/697072/697072-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
