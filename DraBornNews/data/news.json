@@ -1,7 +1,103 @@
 {
-  "generatedAt": "2026-11-14T13:18:36.595734Z",
+  "generatedAt": "2026-11-14T18:48:20.700145Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "b7c9504b7ee83b268f",
+      "title": "Starship yörüngeye ulaştı ancak kritik yakalama denemesi başarısız oldu",
+      "summary": "SpaceX'in dev Starship roketi yeni test uçuşunda yörüngeye ulaşmayı başardı. Ancak ilk aşamanın mekanik kollarla yakalanması planı iptal edildi ve roket denize düştükten sonra patladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/elon-musk-in-dev-roketi-yorungeye-ulasti-guclendirici-patladi--212922",
+      "publishedAt": "2026-11-14T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212922/1200x675elon-musk-in-dev-roketi-yorungeye-ulasti-guclendirici-patladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e197c8511678e24d9c",
+      "title": "Huawei Nova Flip, yeni tasarımıyla dengeleri değiştirebilir",
+      "summary": "Huawei Nova Flip serisinin yeni modelinde 6,3 inç geniş ekran ve Kirin 9 serisi işlemci kullanılabileceği iddia ediliyor. İşte yeni katlanabilir telefonun tasarımına dair beklenenler:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huawei-nova-flip-yeni-tasarimiyla-dengeleri-degistirebilir--212920",
+      "publishedAt": "2026-11-14T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212920/1200x675huawei-nova-flip-yeni-tasarimiyla-dengeleri-degistirebilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "bd88a9d084760c9af9",
+      "title": "Uzayda her 8 dakikada bir tekrarlayan gizemli sinyal: Nereden geldiği bulundu",
+      "summary": "Avustralya'daki teleskopların 8 dakikada bir tespit ettiği gizemli radyo sinyalinin kaynağı bulundu. Sinyallerin, Güneş benzeri bir yıldızın yörüngesindeki beyaz cüceden geldiği belirlendi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/uzayda-8-dakikada-bir-tekrarlayan-sinyalin-kaynagi-bulundu--212911",
+      "publishedAt": "2026-11-14T16:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212911/1200x675uzayda-8-dakikada-bir-tekrarlayan-sinyalin-kaynagi-bulundu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "50320ca6ab0ee81a4d",
+      "title": "Samsung Kişiler uygulaması One UI 9.5 ile oyunlara açılıyor",
+      "summary": "Samsung Kişiler uygulaması, One UI 9.5 güncellemesiyle Gaming Hub entegrasyonuna kavuşabilir. İşte oyuncuların arkadaşlık istekleri göndermelerini kolaylaştıracak yeni özelliğin detayları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-kisiler-uygulamasi-one-ui-9-5-ile-oyunlara-aciliyor--212919",
+      "publishedAt": "2026-11-14T16:00:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/212919/1200x675samsung-kisiler-uygulamasi-one-ui-9-5-ile-oyunlara-aciliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9c105fe6a8a7bc20b9",
+      "title": "Ukrayna’nın Starlink erişimi yeniden kısıtlandı: Dron savunması aksıyor",
+      "summary": "Ukrayna, Starlink tabanlı askeri iletişim sisteminde yeniden kısıtlamalarla karşı karşıya. Zelenskiy, kesintilerin cephe hattındaki savunma operasyonlarını olumsuz etkilediğini açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ukrayna-nin-starlink-erisimi-yeniden-kisitlandi--212909",
+      "publishedAt": "2026-11-14T15:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212909/1200x675ukrayna-nin-starlink-erisimi-yeniden-kisitlandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "d0b2d814a689ca2047",
+      "title": "GTA 6'da şaşırtan açık: Kodlar kutu açılmadan çalınabilir",
+      "summary": "GTA 6 fiziksel kopyalarında kutu açılmadan indirme kodunun görülebildiği iddiası, oyunun uluslararası sürümlerinde güvenlik ve ikinci el satış süreçlerine ilişkin soru işaretleri yaratıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gta-6-fiziksel-kopyalarinda-kutuyu-acmadan-kod-gorulebiliyor--212918",
+      "publishedAt": "2026-11-14T15:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212918/1200x675gta-6-fiziksel-kopyalarinda-kutuyu-acmadan-kod-gorulebiliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2895f6cd0c09c24951",
+      "title": "Twitch, canlı yayınlarda on binlerce GTA 6 Ultimate Edition kodu dağıtacak",
+      "summary": "Twitch, GTA 6'nın çıkışını kutlamak amacıyla ödüller vereceğini duyurdu. Canlı yayınlar sırasında dağıtılacak hediyeler (drops) kapsamında, on binlerce ücretsiz GTA VI Ultimate Edition kodu verilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/twitch-den-ucretsiz-gta-6-ultimate-edition-kodu-verecek--212917",
+      "publishedAt": "2026-11-14T14:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212917/1200x675twitch-den-ucretsiz-gta-6-ultimate-edition-kodu-verecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "49ae13ef07aca6c27d",
+      "title": "Gün boyu priz aramayanlar için şarjı en uzun giden tabletler",
+      "summary": "Pil ömrü uzun tablet tavsiyesi isteyenler buraya! İşte 10.000 mAh ve üzeri batarya kapasiteleriyle 2026'da şarjı en uzun süre giden tablet markaları ve modelleri:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sarji-en-uzun-sure-giden-tabletler--212793",
+      "publishedAt": "2026-11-14T13:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212793/1200x675sarji-en-uzun-sure-giden-tabletler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "6b6cc4f7767029ded3",
       "title": "Jensen Huang'ın ayrılışında Çin'e kaçırılan milyarlarca dolarlık çiplerin etkisi olabilir",
@@ -195,18 +291,6 @@
       "editorial": false
     },
     {
-      "id": "959b7d79933d06c210",
-      "title": "AKINCI ve Bayraktar TB2, kara yoluna başarıyla inip kalktı",
-      "summary": "Bayraktar TB2 ve AKINCI SİHA'lar, acil durum senaryoları kapsamında Manisa-Balıkesir Karayolu'na iniş ve kalkış yaptı. Hedef, tüm milli İHA'ların kara yollarını alternatif pist olarak kullanabilmesi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/akinci-ve-bayraktar-tb2-kara-yoluna-inip-kalkti--212903",
-      "publishedAt": "2026-11-13T20:21:57Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212903/1200x675akinci-ve-bayraktar-tb2-kara-yoluna-inip-kalkti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "5ab783dcdbdb11e34d",
       "title": "Kitesurf is now open source",
       "summary": "Kitesurf, our experimental browser engine for AI agents, is now open source. Inspect the code, run it locally, or deploy your own instance on Cloudflare Workers.",
@@ -216,18 +300,6 @@
       "category": "Teknoloji",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7B8M53647Q1KNRABY8VM2G7.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "44c9fca3a90f0dbd93",
-      "title": "Nvidia imparatorluğundaki son saatler: Jensen Huang",
-      "summary": "Jensen Huang, Nvidia'yı küçük bir grafik çipi üreticisinden yapay zeka devinin merkezine taşıdı. İşte 33 yıllık imparatorluğunu kuran kararlar ve CEO'luk koltuğundan ayrıldığı son saatler...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-imparatorlugundaki-son-saatler-jensen-huang--212883",
-      "publishedAt": "2026-11-13T19:47:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212883/1200x675nvidia-imparatorlugundaki-son-saatler-jensen-huang.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -255,42 +327,6 @@
       "editorial": false
     },
     {
-      "id": "30f10a371f792a6b72",
-      "title": "Türkiye ve Çin’den dev enerji anlaşması: 7 GW’lık güneş ve rüzgar enerjisi kurulacak",
-      "summary": "Türkiye ile Çin arasında imzalanan 15 milyar dolarlık anlaşmayla 7.000 MW güneş ve rüzgar enerjisi kapasitesi kurulacak. İşbirliği, Türkiye'de rüzgar türbini üretimini de kapsıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-ile-cin-arasinda-15-milyar-dolarlik-enerji-anlasmasi--212884",
-      "publishedAt": "2026-11-13T19:25:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212884/1200x675turkiye-ile-cin-arasinda-15-milyar-dolarlik-enerji-anlasmasi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "12e192ac2c502e6ab2",
-      "title": "Uzayda gezinen gizemli cisim kayıp Sovyet aracı mı? NASA açıklama yaptı",
-      "summary": "Sıradan bir göktaşı gibi hareket etmeyen gizemli 1998 KY26, eski bir Sovyet uzay aracı mı? Harvardlı astrofizikçinin iddiası üzerine NASA başkanından açıklama geldi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/uzayda-gezinen-gizemli-obje-kayip-sovyet-araci-mi-nasa-acikladi--212886",
-      "publishedAt": "2026-11-13T18:41:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212886/1200x675uzayda-gezinen-gizemli-obje-kayip-sovyet-araci-mi-nasa-acikladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b657a819d8f7258b9c",
-      "title": "Oyun sektöründe yapay zeka kullanımı hızla yayılıyor",
-      "summary": "Oyun geliştiricileri arasında yapay zeka kullanımı bir yılda arttı. Araştırmaya göre geliştiricilerin yüzde 40'ı işlerinde üretken yapay zeka araçlarından yararlanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/oyun-sektorunde-yapay-zeka-kullanimi-hizla-yayiliyor--212887",
-      "publishedAt": "2026-11-13T17:19:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212887/1200x675oyun-sektorunde-yapay-zeka-kullanimi-hizla-yayiliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "7deafdaefb224d33bd",
       "title": "Connect Google Wallet to Gemini for personal finance insights",
       "summary": "All Gemini app users in the U.S. can connect Google Wallet to get responses informed by their spending habits.",
@@ -300,42 +336,6 @@
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Personal_Intelligence_Wallet_27.max-600x600.format-webp.webp",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "03a53c1275512bc8f6",
-      "title": "Meta’nın yapay zekası artık sizin yerinize telefon görüşmesi yapabiliyor",
-      "summary": "Meta'nın yapay zeka asistanı Muse, ücretli abonelere sunulan yeni özellikle işletmeleri arayarak randevu alabiliyor, rezervasyon yaptırabiliyor ve telefon başında bekleyebiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/meta-muse-artik-sizin-yerinize-telefon-gorusmesi-yapabiliyor--212889",
-      "publishedAt": "2026-11-13T16:57:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212889/1200x675meta-muse-artik-sizin-yerinize-telefon-gorusmesi-yapabiliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e3e96b8dee3fc92ec6",
-      "title": "TCL'den dizüstü bilgisayarlar için ultra ince çerçeveli yeni OLED ekran",
-      "summary": "TCL, mürekkep püskürtmeli baskı teknolojisiyle geliştirdiği yeni OLED ekranını tanıttı. 1,6 mm çerçeve kalınlığına sahip panel, 2027 yılında dizüstü bilgisayar üreticilerinin kullanımına sunulacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/tcl-den-laptoplar-icin-ultra-ince-cerceveli-yeni-oled-ekran--212893",
-      "publishedAt": "2026-11-13T16:35:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212893/1200x675tcl-den-laptoplar-icin-ultra-ince-cerceveli-yeni-oled-ekran.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a2fccf1a3a30eecd91",
-      "title": "BYD’de ön ve arka jantlar yanlış takıldı: Şirket özür diledi",
-      "summary": "BYD, Da Tang elektrikli SUV’lerin ön ve arka jantları karıştırılarak teslim edildiğini doğruladı. Şirket, ücretsiz kontrol ve değişimin yanı sıra etkilenen araçların garantisini yeniden başlatacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/byd-de-on-ve-arka-jantlar-yanlis-takildi-sirket-ozur-diledi--212890",
-      "publishedAt": "2026-11-13T16:14:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212890/1200x675byd-de-on-ve-arka-jantlar-yanlis-takildi-sirket-ozur-diledi.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
