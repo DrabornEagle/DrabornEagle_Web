@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-11-14T18:48:20.700145Z",
+  "generatedAt": "2026-11-14T22:54:26.203293Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "faaf11d0c321d4f25e",
+      "title": "GTA 6'nın beş ayda 55 milyon kopya satması bekleniyor",
+      "summary": "Investor’s Business Daily tarafından paylaşılan son analizler, GTA 6'nın dört buçuk ay gibi kısa bir sürede 55 milyondan fazla kopya satabileceğini söylüyor. İşte detaylar.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gta-6-bes-ayda-55-milyon-kopya-satabilir--212926",
+      "publishedAt": "2026-11-14T19:35:53Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212926/1200x675gta-6-bes-ayda-55-milyon-kopya-satabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "76bfd9c342cb124797",
+      "title": "Yeni Apple TV 4K çıktı: Eski modellere Siri AI güncellemesi",
+      "summary": "Apple, yeni Apple TV 4K (4. nesil) modelini 13 Kasım'da satışa sundu ve aynı gün eski modellere Siri yapay zekasını getiren tvOS 27.2.1 güncellemesini yayınladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-apple-tv-4k-cikti-eski-modellere-siri-ai-guncellemesi--212921",
+      "publishedAt": "2026-11-14T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212921/1200x675yeni-apple-tv-4k-cikti-eski-modellere-siri-ai-guncellemesi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "b7c9504b7ee83b268f",
       "title": "Starship yörüngeye ulaştı ancak kritik yakalama denemesi başarısız oldu",
@@ -263,18 +287,6 @@
       "publishedAt": "2026-11-13T22:47:49Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212907/1200x675abd-genelinde-tum-ucuslar-durduruldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6bed2f0df0186f02f3",
-      "title": "ChatGPT artık alışveriş de yapabilecek: ChatGPT Wallet tanıtıldı",
-      "summary": "OpenAI, ChatGPT Wallet özelliğini kullanıma sundu. Yeni sistem, yapay zeka ajanlarının kullanıcılar adına ürün araştırıp satın alma işlemlerini hazırlamasına imkan tanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/chatgpt-artik-alisveris-de-yapabilecek-chatgpt-wallet-tanitildi--212897",
-      "publishedAt": "2026-11-13T20:59:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212897/1200x675chatgpt-artik-alisveris-de-yapabilecek-chatgpt-wallet-tanitildi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-10-27T13:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5YGNS8F8NYE3V5QERKYNG79.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "f21bc890ebec1e8cf7",
-      "title": "What took the Internet offline in Q3 2026",
-      "summary": "An examination of global Internet disruptions observed by Cloudflare Radar during the third quarter of 2026. This review analyzes how power failures, natural disasters, and government shutdowns impacted network connectivity and traffic.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/q3-2026-internet-disruption-summary/",
-      "publishedAt": "2026-10-27T13:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KW453HMZRQX1BZKZQMN21EG8.png",
       "language": "en",
       "editorial": false
     }
