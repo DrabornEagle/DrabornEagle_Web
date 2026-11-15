@@ -1,7 +1,91 @@
 {
-  "generatedAt": "2026-11-15T02:29:24.412892Z",
+  "generatedAt": "2026-11-15T09:47:43.600214Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "7acb9ce5f65ed7da40",
+      "title": "A101 marketler On-Road ATV satıyor",
+      "summary": "19 Kasım A101 Aktüel teknoloji ürünleri arasında Volta markasının ürettiği HiSun RA7 Guardian on-road ATV modeli ve farklı akıllı televizyonlar yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/19-kasim-a101-aktuel-katalogunda-neler-var--212928",
+      "publishedAt": "2026-11-15T09:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212928/1200x67519-kasim-a101-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "17d6685d8b8f014877",
+      "title": "Yapay zeka devre kartı kıtlığı yarattı: Elektronik ürünlerin fiyatını ne bekliyor?",
+      "summary": "Yapay zeka önce belleği, şimdi de PCB’yi yutuyor. Her elektronik cihazın içindeki o yeşil kart kıtlaşıyor. PCB krizinin nedenini, güvenilirliğini ve olası ekonomik yansımalarını konuştuk.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-devre-karti-kitligi-elektronik-fiyatlari-artar-mi--212931",
+      "publishedAt": "2026-11-15T09:01:35Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/212931/1200x675yapay-zeka-devre-karti-kitligi-elektronik-fiyatlari-artar-mi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "04d0e469872c9d1406",
+      "title": "Intel'den beklenmedik yükseliş: AMD'nin payı düşüyor",
+      "summary": "Intel, 2026'nın üçüncü çeyreğinde masaüstü işlemci pazarında önemli bir yükseliş kaydetti. AMD'nin payı yüzde 30'un altına gerilerken dengeler yeniden değişti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/intel-den-beklenmedik-yukselis-amd-nin-payi-dusuyor--212923",
+      "publishedAt": "2026-11-15T08:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212923/1200x675intel-den-beklenmedik-yukselis-amd-nin-payi-dusuyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ce88f3ac2b2a76ddd3",
+      "title": "Vodafone’un Dünya İçin Lazım projesiyle 40 ton e-atık dönüştürüldü",
+      "summary": "Vodafone, COP31 kapsamında gençlerin iklim mücadelesine katılımını ve elektronik atık dönüşümünü ele aldı. Proje kapsamında şimdiye kadar 40 ton e-atık geri dönüştürüldü.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/vodafone-un-dunya-icin-lazim-projesi-40-ton-e-atigi-donusturdu--212933",
+      "publishedAt": "2026-11-15T08:14:10Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212933/1200x675vodafone-un-dunya-icin-lazim-projesi-40-ton-e-atigi-donusturdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cddac8757e533405d6",
+      "title": "Geleneksel Ocaklar Neden Tarihe Karışıyor? İndüksiyon Teknolojisinin Mutfağımıza Getirdiği 3 Büyük Fayda",
+      "summary": "Ateşin bulunmasından bu yana mutfak teknolojileri sürekli evrim geçiriyor. Uzun yıllar boyunca tüplü veya doğal gazlı ocakların o harlı ateşiyle yemek pişirdik, ardından akkor rezistanslı elektrikli ocaklarla tanıştık. Ancak son yıllarda profesyonel mutfaklardan çıkıp evlerimize giren yepyeni bir teknoloji, tüm bu eski yöntemleri rafa kaldırıyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/geleneksel-ocaklar-neden-tarihe-karisiyor-induksiyon-teknolojisinin-mutfagimiza-getirdigi-3-buyuk-fayda-h228565.html",
+      "publishedAt": "2026-11-15T07:30:03Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/696325/696325-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b1457408d89365a35b",
+      "title": "Bellek krizinde kötü dönem henüz gelmedi: 2028 için uyarı paylaşıldı",
+      "summary": "Bellek krizi 2027'de daha da ağırlaşabilir. TeamGroup CEO'su, DRAM tedarikindeki sıkıntıların öyle bir noktaya ulaşabileceğini belirtiyor ki yüksek fiyatları ödemek bile ürünleri garanti etmeyebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bellek-krizinde-kotu-donem-henuz-gelmedi-2028-icin-uyari--212924",
+      "publishedAt": "2026-11-15T07:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212924/1200x675bellek-krizinde-kotu-donem-henuz-gelmedi-2028-icin-uyari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "29b6dc375a1d87bf86",
+      "title": "16:10 ekranlı laptop önerileri: Belgeler ve yan yana pencereler için seçim",
+      "summary": "16:10 laptop modelleri, standart 16:9 ekranlara kıyasla daha fazla dikey çalışma alanı sunuyor. Belgeler, tablolar ve yan yana pencereler için öne çıkan seçenekleri derledik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/16-10-ekranli-laptop-onerileri--212882",
+      "publishedAt": "2026-11-15T06:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212882/1200x67516-10-ekranli-laptop-onerileri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "8e25a474cd73dddd8f",
       "title": "Bitcoin düşüşü derinleşiyor, milyarlarca dolar tasfiye edildi",
@@ -207,66 +291,6 @@
       "editorial": false
     },
     {
-      "id": "1f7e32171a9a6ae89f",
-      "title": "Küresel enerji depolama kapasitesi 2027'de 209 GW'a ulaşacak",
-      "summary": "Dünya genelinde enerji depolama yatırımları artıyor. 2027 yılında 209 GW yeni kapasite kurulması beklenirken küresel kapasitenin önümüzdeki 10 yılda 10 katına çıkacağı tahmin ediliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kuresel-enerji-depolama-kapasitesi-2027-de-209-gw-a-ulasacak--212910",
-      "publishedAt": "2026-11-14T09:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212910/1200x675kuresel-enerji-depolama-kapasitesi-2027-de-209-gw-a-ulasacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "625f88aadfca64f15f",
-      "title": "Elektrikli Dacia Sandero geliyor! Fiat Grizzly kaç TL olur? | Oto Gündem",
-      "summary": "Oto Gündem'in bu haftaki bölümünde elektrikli Dacia Sandero'nun detaylarını, Fiat Grizzly'nin lansman tarihi ve olası fiyatı ve BYD'nin Rolls-Royce rakibi Altior gibi öne çıkan konuları konuşuyoruz.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elektrikli-dacia-sandero-geliyor-fiat-grizzly-kac-tl-olur--212913",
-      "publishedAt": "2026-11-14T09:00:55Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212913/1200x675elektrikli-dacia-sandero-geliyor-fiat-grizzly-kac-tl-olur.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1db3bfd79bfa4e04ab",
-      "title": "The Witcher 4 çıkış tarihi ortaya çıktı: İşte beklenen tarih",
-      "summary": "The Witcher 4'ün çıkış tarihi için yeni bir ipucu ortaya çıktı. CD Projekt RED'in iş ilanı, merakla beklenen RPG oyunu için yeni bir tarih bilgisi ile yayınlandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/the-witcher-4-cikis-tarihi-ortaya-cikti-iste-beklenen-tarih--212905",
-      "publishedAt": "2026-11-14T08:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212905/1200x675the-witcher-4-cikis-tarihi-ortaya-cikti-iste-beklenen-tarih.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e03d2feca0c28c5b95",
-      "title": "Kia’dan Hindistan’a 1,8 milyar euroluk yatırım: İkinci fabrikayı kuruyor",
-      "summary": "Kia, Hindistan’da elektrikli ve içten yanmalı araçlar üretecek ikinci fabrikasını kurmaya hazırlanıyor. Yaklaşık 1,8 milyar euro yatırım yapılacak tesisin 2030’da açılması planlanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kia-dan-hindistan-a-1-8-milyar-euroluk-yatirim--212912",
-      "publishedAt": "2026-11-14T08:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212912/1200x675kia-dan-hindistan-a-1-8-milyar-euroluk-yatirim.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8f94d7ea77044efd75",
-      "title": "Intel, Razor Lake işlemcilerini resmen belgeledi: Masaüstü ve mobil geliyor",
-      "summary": "Intel'in yeni programlama dokümanı, Razor Lake masaüstü ve dizüstü işlemcilerini ilk kez resmi olarak listeliyor. Yeni nesil işlemcilerin destekleyeceği özellikler de belli oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-razor-lake-ve-coral-rapids-icin-yeni-ozellikleri-acikladi--212904",
-      "publishedAt": "2026-11-14T07:30:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/212904/1200x675intel-razor-lake-ve-coral-rapids-icin-yeni-ozellikleri-acikladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "7a822a6b92eabb995a",
       "title": "Misafir Ağırlarken Hızınızı İkiye Katlayacak Teknolojik İnovasyon: Tek Dokunuşla Çift Fincan Özelliği Nasıl Çalışır?",
       "summary": "Misafir ağırlamanın en keyifli ama mutfakta en çok mesai harcattıran anlarından biri şüphesiz kahve servisidir. Yemekler yenmiş, tatlı faslına geçilmiş ve \"Kimler kahve içiyor?\" sorusu sorulmuştur. Eğer kalabalık bir misafir grubunuz varsa ve klasik, tek tek demleme yapan bir makine kullanıyorsanız; mutfaktaki yalnız mesainiz resmen başlamış demektir.",
@@ -275,18 +299,6 @@
       "publishedAt": "2026-11-14T07:20:03Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/696112/696112-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5c561cae5e065d4760",
-      "title": "Yırtılmasız ve akıcı görüntü: G-Sync ve FreeSync destekli 27 inç monitör önerileri",
-      "summary": "G-Sync monitör modelleri, ekran kartı ile monitör arasındaki görüntü yenileme hızını eşleştirerek oyunlarda yırtılma ve takılmaları azaltıyor. İşte öne çıkan seçenekler...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/27-inc-g-sync-ve-freesync-monitor-tavsiyesi--212759",
-      "publishedAt": "2026-11-14T06:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212759/1200x67527-inc-g-sync-ve-freesync-monitor-tavsiyesi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -647,18 +659,6 @@
       "publishedAt": "2026-11-13T10:02:39Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/697150/697150-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "711f4a91a53f460aff",
-      "title": "WhatsApp Durumlarına Doğrudan Konum Paylaşma Seçeneği Ekleniyor",
-      "summary": "WhatsApp, durumlarda fotoğraf veya video eklemeden konum paylaşmanın bir yolunu hazırlıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/whatsapp-durum-konum-paylasma-ozelligi-h228919.html",
-      "publishedAt": "2026-11-13T08:49:46Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/697090/697090-640xauto.jpg",
       "language": "tr",
       "editorial": false
     },
