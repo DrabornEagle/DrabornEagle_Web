@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-11-15T16:53:58.311305Z",
+  "generatedAt": "2026-11-15T21:36:25.871399Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "8456cf940200e3c14e",
+      "title": "İtalya, Android telefonlardaki görüntülere izinsiz erişen Meta'ya cezayı kesti",
+      "summary": "Meta'nın Facebook üzerinden sunduğu bir özellik, İtalya'da büyük bir gizlilik ihlali olarak değerlendirildi. Kullanıcıların galerisine izinsiz erişen şirkete 805 milyon euro para cezası kesildi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/italya-telefonlara-izinsiz-erisen-meta-ya-cezayi-kesti--212949",
+      "publishedAt": "2026-11-15T20:54:48Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/212949/1200x675italya-telefonlara-izinsiz-erisen-meta-ya-cezayi-kesti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5069bfb7bd31109099",
+      "title": "Çin'in elektrikli yolcu uçağı CE-25A ilk insanlı uçuşunu gerçekleştirdi",
+      "summary": "COMAC tarafından geliştirilen CE-25A, ilk insanlı uçuşunu başarıyla tamamladı. 19 yolcu kapasiteli elektrikli uçak, 400 kilometrelik menziliyle kısa mesafeli şehirler arası ulaşımı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-in-elektrikli-yolcu-ucagi-ilk-insanli-ucusunu-gerceklestirdi--212943",
+      "publishedAt": "2026-11-15T18:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212943/1200x675cin-in-elektrikli-yolcu-ucagi-ilk-insanli-ucusunu-gerceklestirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7bd4562a742fdd0b32",
+      "title": "Euro Truck Simulator 2 için laptop önerileri: Harita ve grafik modları ile kullanım",
+      "summary": "ETS2 oynamak için hangi laptop alınmalı? Euro Truck Simulator 2'yi harita, trafik ve grafik modlarıyla oynamak isteyenlere laptop önerileri. İşte en iyi ETS 2 dizüstü bilgisayarları:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/euro-truck-simulator-2-ets-2-icin-laptop-tavsiyeleri--212758",
+      "publishedAt": "2026-11-15T17:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/212758/1200x675euro-truck-simulator-2-ets-2-icin-laptop-tavsiyeleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c2fffb5792187455dd",
+      "title": "XBOX 25th Anniversary Magazine: Explore 25 Years of Games, Stories, and Memories",
+      "summary": "The 25th Anniversary of XBOX has given fans much to celebrate: the milestones, the memories, and a whole slate of fun news for our players. We know that many of our longtime fans first learned about the original XBOX by reading about it in a magazine back in the day. For you, we created",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/15/xbox-25th-anniversary-the-magazine/",
+      "publishedAt": "2026-11-15T17:01:00Z",
+      "category": "Oyun",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "b93b50caa96bf4e143",
+      "title": "Göz yorgunluğunu azaltan Kyodo Myofree tablet tanıtıldı",
+      "summary": "Kyodo, özel polarize gözlüklerle çalışan Myofree tabletini tanıttı. Paralel görüş teknolojisi kullanan 15,6 inç ekranlı cihaz, uzun süreli ekran kullanımında göz yorgunluğunu azaltmayı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/goz-yorgunlugunu-azaltan-kyodo-myofree-tablet-tanitildi--212939",
+      "publishedAt": "2026-11-15T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212939/1200x675goz-yorgunlugunu-azaltan-kyodo-myofree-tablet-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "97fb23a515c2b15678",
       "title": "CapCut ile Reels ve Shorts hazırlamak için laptop önerileri",
@@ -239,66 +299,6 @@
       "publishedAt": "2026-11-15T07:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212924/1200x675bellek-krizinde-kotu-donem-henuz-gelmedi-2028-icin-uyari.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "29b6dc375a1d87bf86",
-      "title": "16:10 ekranlı laptop önerileri: Belgeler ve yan yana pencereler için seçim",
-      "summary": "16:10 laptop modelleri, standart 16:9 ekranlara kıyasla daha fazla dikey çalışma alanı sunuyor. Belgeler, tablolar ve yan yana pencereler için öne çıkan seçenekleri derledik.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/16-10-ekranli-laptop-onerileri--212882",
-      "publishedAt": "2026-11-15T06:30:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212882/1200x67516-10-ekranli-laptop-onerileri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8e25a474cd73dddd8f",
-      "title": "Bitcoin düşüşü derinleşiyor, milyarlarca dolar tasfiye edildi",
-      "summary": "En kötü yıl performansından birine imza atan Bitcoin yeni bir düşüş dalgası daha başlattı. Yüzde 10 daha düşen Bitcoin fiyatı 63 bin doları zorluyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bitcoin-dibe-vurdu--212930",
-      "publishedAt": "2026-11-14T23:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212930/1200x675bitcoin-dibe-vurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "faaf11d0c321d4f25e",
-      "title": "GTA 6'nın beş ayda 55 milyon kopya satması bekleniyor",
-      "summary": "Investor’s Business Daily tarafından paylaşılan son analizler, GTA 6'nın dört buçuk ay gibi kısa bir sürede 55 milyondan fazla kopya satabileceğini söylüyor. İşte detaylar.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-bes-ayda-55-milyon-kopya-satabilir--212926",
-      "publishedAt": "2026-11-14T19:35:53Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212926/1200x675gta-6-bes-ayda-55-milyon-kopya-satabilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "76bfd9c342cb124797",
-      "title": "Yeni Apple TV 4K çıktı: Eski modellere Siri AI güncellemesi",
-      "summary": "Apple, yeni Apple TV 4K (4. nesil) modelini 13 Kasım'da satışa sundu ve aynı gün eski modellere Siri yapay zekasını getiren tvOS 27.2.1 güncellemesini yayınladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yeni-apple-tv-4k-cikti-eski-modellere-siri-ai-guncellemesi--212921",
-      "publishedAt": "2026-11-14T19:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212921/1200x675yeni-apple-tv-4k-cikti-eski-modellere-siri-ai-guncellemesi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "b7c9504b7ee83b268f",
-      "title": "Starship yörüngeye ulaştı ancak kritik yakalama denemesi başarısız oldu",
-      "summary": "SpaceX'in dev Starship roketi yeni test uçuşunda yörüngeye ulaşmayı başardı. Ancak ilk aşamanın mekanik kollarla yakalanması planı iptal edildi ve roket denize düştükten sonra patladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elon-musk-in-dev-roketi-yorungeye-ulasti-guclendirici-patladi--212922",
-      "publishedAt": "2026-11-14T18:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212922/1200x675elon-musk-in-dev-roketi-yorungeye-ulasti-guclendirici-patladi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -795,18 +795,6 @@
       "editorial": false
     },
     {
-      "id": "cf8710dbfd647acbbf",
-      "title": "Halo: Campaign Evolved Players Can Jump Into Firefight for Free This Winter",
-      "summary": "For nearly two decades, Firefight has been a Halo favorite, challenging Spartans to team up, hold the line, and survive wave after wave of enemies. The tradition continues this winter as we add the four-player cooperative PvE mode to Halo: Campaign Evolved in a free update. We’re kicking things off tonight at XBOX FanFest, where",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/12/halo-campaign-evolved-firefight-free-update-this-winter/",
-      "publishedAt": "2026-11-12T17:00:00Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.9868.14349335086612230.8546ceb4-7249-4990-9352-a1c708901534.8381fc28-ea4a-4d61-b08d-ca3062549f71?w=400&h=600",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "1c0ba4a23c7739f768",
       "title": "Scientists are using Google AI to help restore giant kelp forests.",
       "summary": "Underwater forests of giant kelp protect coastlines, provide habitat, and support marine ecosystems — but they’re disappearing worldwide due to ocean warming. As COP31 k",
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-10-27T16:01:38Z",
       "category": "Yapay Zeka",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-FY27Q1-Image-1-FINAL.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "b98b75e5e3efe8c183",
+      "title": "Introducing the Cloudflare PHP Capture the Flag challenge",
+      "summary": "We are launching a PHP Capture the Flag challenge integrated with our Bug Bounty program to test our WAF protections. Security researchers are invited to bypass our defenses and capture the flag to help make the Internet safer.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/php-ctf/",
+      "publishedAt": "2026-10-27T13:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5YGNS8F8NYE3V5QERKYNG79.png",
       "language": "en",
       "editorial": false
     }
