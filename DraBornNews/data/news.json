@@ -1,7 +1,19 @@
 {
-  "generatedAt": "2026-11-14T22:54:26.203293Z",
+  "generatedAt": "2026-11-15T02:29:24.412892Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "8e25a474cd73dddd8f",
+      "title": "Bitcoin düşüşü derinleşiyor, milyarlarca dolar tasfiye edildi",
+      "summary": "En kötü yıl performansından birine imza atan Bitcoin yeni bir düşüş dalgası daha başlattı. Yüzde 10 daha düşen Bitcoin fiyatı 63 bin doları zorluyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bitcoin-dibe-vurdu--212930",
+      "publishedAt": "2026-11-14T23:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212930/1200x675bitcoin-dibe-vurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "faaf11d0c321d4f25e",
       "title": "GTA 6'nın beş ayda 55 milyon kopya satması bekleniyor",
@@ -275,18 +287,6 @@
       "publishedAt": "2026-11-14T06:30:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212759/1200x67527-inc-g-sync-ve-freesync-monitor-tavsiyesi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c2e67485c0bfcf134f",
-      "title": "ABD semalarında panik yaşanıyor: Ülke genelinde tüm uçuşlar durduruldu",
-      "summary": "ABD'de sıcak saatler yaşanıyor. Ülke genelinde tüm uçuşlar durdurulurken havadaki uçaklardan da en yakın havalimanına inmeleri istendi. Sosyal medyada çarpıcı iddialar dolaşıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/abd-genelinde-tum-ucuslar-durduruldu--212907",
-      "publishedAt": "2026-11-13T22:47:49Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212907/1200x675abd-genelinde-tum-ucuslar-durduruldu.jpg",
       "language": "tr",
       "editorial": false
     },
