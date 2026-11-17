@@ -1,7 +1,127 @@
 {
-  "generatedAt": "2026-11-16T18:49:05.803377Z",
+  "generatedAt": "2026-11-17T02:23:57.725559Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "3d16f6f32815c5a954",
+      "title": "XBOX Black Friday Sale Starts November 19 with Our Biggest Sale of the Year on Games, Accessories and More!",
+      "summary": "The best time to grab a gift for gamers is launching on November 19 at 9 PM PST. During our Black Friday sale, save up to 80% on select XBOX and PC games, and check out discounts on select XBOX accessories. Save on a custom controller and get a free engraving with XBOX Design Lab.",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/16/xbox-black-friday-sale-2026/",
+      "publishedAt": "2026-11-16T23:57:43Z",
+      "category": "Oyun",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Black-Friday-Sale_MSOX_Spotlight_A_1136x639_01-1-bf7d714987d24723f754-1024x576.jpg",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "6c602e3e80ce8572a7",
+      "title": "ABD'de bankacılık krizi: Büyük bankaların sistemleri çöktü!",
+      "summary": "ABD'de bazı büyük bankanın dijital sistemlerinde sorunlar yaşanıyor. Müşteriler para transferlerinde gecikmelerle karşılaştıklarını bildiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/abd-de-bankacilik-krizi-buyuk-bankalarin-sistemleri-coktu--212998",
+      "publishedAt": "2026-11-16T21:23:36Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212998/1200x675abd-de-bankacilik-krizi-buyuk-bankalarin-sistemleri-coktu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "99ed2942e359b4941d",
+      "title": "Otomotiv Pazarındaki Daralma ÖTV Gelirlerini Vurdu: Ciddi Düşüş Var!",
+      "summary": "Otomotiv pazarındaki daralma Hazine'nin vergi gelirlerini vururken, ekim ayında ÖTV tahsilatı yüzde 26,38 düşüşle 49,7 milyar TL'ye geriledi.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/otomotiv-pazarindaki-daralma-otv-gelirlerini-vurdu-h229045.html",
+      "publishedAt": "2026-11-16T20:50:41Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/697318/697318-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6ef8e5de75088ec489",
+      "title": "Evler için hem minik hem de verimli ısı pompası üretildi: The Little One",
+      "summary": "Mitsubishi Electric, 2027'de satışa sunacağı yeni ısı pompasını tanıttı. Yüzde 47 daha küçük olan sistem, yüksek verimliliği ve sessiz çalışmasıyla öne çıkıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/evler-icin-hem-minik-hem-de-verimli-isi-pompasi-uretildi--212987",
+      "publishedAt": "2026-11-16T20:20:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212987/1200x675evler-icin-hem-minik-hem-de-verimli-isi-pompasi-uretildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e8c4c9109f24315a01",
+      "title": "Hepsiburada Premium'un HBO Max avantajı sona eriyor",
+      "summary": "Hepsiburada Premium üyelerine sunulan HBO Max hediyesi sona eriyor. 16 Aralık'ta yürürlüğe girecek değişiklikle birlikte platform, Premium abonelik paketinden çıkarılacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/hepsiburada-premium-un-hbo-max-avantaji-sona-eriyor--212995",
+      "publishedAt": "2026-11-16T20:11:24Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212995/1200x675hepsiburada-premium-un-hbo-max-avantaji-sona-eriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "59a63a561714f14d4c",
+      "title": "GTA 6 daha çıkmadan interneti zorladı: Veri trafiği rekoru kırıldı!",
+      "summary": "GTA 6'nın çıkışına günler kala başlayan ön indirmeler, dünya genelinde internet trafiğini zirveye taşıdı. DE-CIX ağında ilk kez 33 terabit sınırı aşıldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gta-6-daha-cikmadan-interneti-zorladi-trafik-rekor-kirdi--212994",
+      "publishedAt": "2026-11-16T20:09:19Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212994/1200x675gta-6-daha-cikmadan-interneti-zorladi-trafik-rekor-kirdi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cad8abee5725e5ef5e",
+      "title": "Apple'ın ilk akıllı gözlüğü netleşiyor: Siri ile gelecek",
+      "summary": "Apple, artırılmış gerçeklik özellikleri bulunmayan ilk akıllı gözlüğünü gelecek yıl tanıtmaya hazırlanıyor. Siri AI’dan güç alacak cihazın WWDC 2027 etkinliğinde duyurulması bekleniyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-in-ilk-akilli-gozlugu-netlesiyor-siri-ile-gelecek--212980",
+      "publishedAt": "2026-11-16T19:57:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212980/1200x675apple-in-ilk-akilli-gozlugu-netlesiyor-siri-ile-gelecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5c22f35d2e7be95fc8",
+      "title": "İnce ve hafif tasarımıyla Oppo Watch 5 tanıtıldı: İşte özellikleri",
+      "summary": "Uzun bir aradan sonra dikdörtgen ekran tasarımına geri dönen Oppo, Watch 5 modelinde gelişmiş sağlık takibi, dahili GPS ve 1.500 nit tepe parlaklık sunan AMOLED ekrana yer veriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ince-ve-hafif-tasarimiyla-oppo-watch-5-tanitildi--212979",
+      "publishedAt": "2026-11-16T19:35:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212979/1200x675ince-ve-hafif-tasarimiyla-oppo-watch-5-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b20b2c8810062107c9",
+      "title": "Oppo Reno 17 serisi tanıtıldı: İşte özellikleri ve fiyatları",
+      "summary": "Oppo Reno 17 serisi, büyük batarya kapasiteleri ve gelişmiş kamera donanımlarıyla tanıtıldı. Serinin standart modeli 8.000 mAh pil taşırken, Pro versiyonu 200 MP kamerasıyla dikkatleri çekiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/oppo-reno-17-serisi-tanitildi-iste-ozellikleri-ve-fiyatlari--212986",
+      "publishedAt": "2026-11-16T18:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/212986/1200x675oppo-reno-17-serisi-tanitildi-iste-ozellikleri-ve-fiyatlari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5cdbb0432c2d7f9c11",
+      "title": "Regional voices are rolling out in the Gemini app.",
+      "summary": "Gemini now offers 66 regional voices on Android and iOS. Choose a natural, local dialect for your app interactions. Pick your favorite voice today.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/regional-voices/",
+      "publishedAt": "2026-11-16T18:45:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/super-g_1.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "4fe7a1d3cccec0b0cd",
       "title": "The era of autonomous attacks has arrived.",
@@ -135,6 +255,18 @@
       "editorial": false
     },
     {
+      "id": "05fe485b609dbaed5c",
+      "title": "Transform notes, research, and sources into interactive sites with Gemini Notebook.",
+      "summary": "Gemini Notebook now turns your research into interactive sites. Build project trackers and visual dashboards with Google. Create your site today.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-notebook/interactive-sites/",
+      "publishedAt": "2026-11-16T16:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/blog_hero_periodic_table3_2784x.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "9ac0da18ffdbc80257",
       "title": "Yeni MacBook Pro'da ciddi ekran sorunu: Kullanıcılar iade ediyor!",
       "summary": "Apple'ın yeni OLED ekranlı MacBook Pro'su, bazı kullanıcılarda baş ağrısı, baş dönmesi ve göz yorgunluğuna yol açtı. Apple ile iletişime geçip herhangi bir çözüm alamadığını belirten kullanıcılar var.",
@@ -255,18 +387,6 @@
       "editorial": false
     },
     {
-      "id": "d50f3589ad0577a43c",
-      "title": "Ask Maps is coming to Europe.",
-      "summary": "Ask Maps is the biggest update to Google Maps in over a decade. Powered by the world’s freshest map and Gemini models, it answers complex, real-world questions a map cou",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products-and-platforms/products/maps/ask-maps-is-coming-to-europe/",
-      "publishedAt": "2026-11-16T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Maps_hero_RItiKwJ.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "dfc32ad6652396f06f",
       "title": "New Ask Maps features to help with holiday travel and prep",
       "summary": "Plan holiday road trips, get route tips, find local appointments, and search your saved lists with new Ask Maps features.",
@@ -303,6 +423,18 @@
       "editorial": false
     },
     {
+      "id": "d50f3589ad0577a43c",
+      "title": "Ask Maps is coming to Europe.",
+      "summary": "Ask Maps is the biggest update to Google Maps in over a decade. Powered by the world’s freshest map and Gemini models, it answers complex, real-world questions a map cou",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products-and-platforms/products/maps/ask-maps-is-coming-to-europe/",
+      "publishedAt": "2026-11-16T14:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Ask_Maps_hero_RItiKwJ.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "b3c60137af441808ea",
       "title": "BMW'nin MINI fabrikasında üretim durdu: Nedeni Rusya'nın saldırıları",
       "summary": "Rusya'nın Ukrayna'daki saldırıları Avrupa otomotiv sektörünü bir kez daha vurdu. BMW ve Skoda'nın üretim hatları, kritik parçaların tedarik edilememesi nedeniyle aksıyor.",
@@ -311,30 +443,6 @@
       "publishedAt": "2026-11-16T13:41:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/212976/1200x675rusya-nin-ukrayna-ya-saldirilari-bmw-ve-skoda-nin-uretimini-vurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1d71646d546dbd0e68",
-      "title": "Oyun yapıyor, molekül keşfediyor: Çinlilerden yeni yapay zeka",
-      "summary": "Alibaba, yapay zeka modeli Qwen4-Max'i tanıttı. Model, Unreal Engine ile oyun geliştirebiliyor, bilimsel araştırmalar yapabiliyor ve görev maliyetlerini yüzde 60'tan fazla düşürüyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/oyun-yapiyor-molekul-kesfediyor-cinlilerden-yeni-yapay-zeka--212977",
-      "publishedAt": "2026-11-16T13:20:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212977/1200x675oyun-yapiyor-molekul-kesfediyor-cinlilerden-yeni-yapay-zeka.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "08e79305cd171b4e10",
-      "title": "PS4 üzerinde yapay zeka modeli çalıştırıldı: Saniyede 39 token üretiyor",
-      "summary": "2013 yılında piyasaya sürülen PlayStation 4, 9 milyar parametreli bir yapay zeka modelini çevrimdışı çalıştırmayı başardı. Konsol, saniyede 39 tokene kadar üretim hızına ulaşabiliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ps4-uzerinde-yapay-zeka-modeli-calistirildi-saniyede-39-token--212964",
-      "publishedAt": "2026-11-16T13:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/212964/1200x675ps4-uzerinde-yapay-zeka-modeli-calistirildi-saniyede-39-token.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -363,30 +471,6 @@
       "editorial": false
     },
     {
-      "id": "c319552d08c7e50680",
-      "title": "Microsoft, dünya genelini etkileyen Outlook kesintisinin nedenini açıkladı",
-      "summary": "Microsoft, Outlook ve Microsoft 365 hizmetlerini saatlerce devre dışı bırakan kesintinin nedenini açıkladı. Temmuz ayındaki yazılım hatası, iki altyapı sorunuyla birleşerek ağın yüzde 80'ini etkiledi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/microsoft-outlook-kesintisinin-nedenini-acikladi--212965",
-      "publishedAt": "2026-11-16T12:38:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212965/1200x675microsoft-outlook-kesintisinin-nedenini-acikladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5220eb9431676735f1",
-      "title": "Volkswagen, üretimi ucuzlatacak projeyi pahalı bulup rafa kaldırdı",
-      "summary": "Volkswagen, elektrikli otomobilleri daha ucuza üretmek için hazırladığı projeyi yatırım maliyeti nedeniyle rafa kaldırdı. Elektrikli Golf ve T-Roc, daha geleneksel üretim yöntemleriyle banttan inecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/volkswagen-uretimi-ucuzlatacak-projeyi-rafa-kaldirdi--212966",
-      "publishedAt": "2026-11-16T12:16:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212966/1200x675volkswagen-uretimi-ucuzlatacak-projeyi-rafa-kaldirdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "4680d3afc063f11f82",
       "title": "PlayStation Plus Fiyatlarında Büyük İndirim Başladı: İşte Yeni İndirimli Fiyatlar!",
       "summary": "PlayStation Plus 12 aylık Deluxe, Extra ve Essential paketleri %33'e varan indirimlerle satışta.",
@@ -395,66 +479,6 @@
       "publishedAt": "2026-11-16T11:57:58Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/696634/696634-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ee7add7244925ad369",
-      "title": "Huawei OSTA O1 Pro'nun tasarımı sızdırıldı: İşte özellikleri",
-      "summary": "Huawei'nin yeni markası OSTA, ilk telefonlarını tanıtmaya hazırlanırken O1 Pro modelinin gerçek fotoğrafları ortaya çıktı. Geniş ekranlı telefonun tasarımı ve özellikleri belli oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/huawei-osta-o1-pro-nun-tasarimi-sizdirildi-iste-ozellikleri--212959",
-      "publishedAt": "2026-11-16T11:54:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212959/1200x675huawei-osta-o1-pro-nun-tasarimi-sizdirildi-iste-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "10dc83f182e0789b61",
-      "title": "Nvidia açıkladı: GeForce ekran kartlarını bırakacak mı?",
-      "summary": "Nvidia'nın yönetim kadrosundaki değişiklikler, GeForce ekran kartlarının geleceği hakkında soru işaretlerini artırmıştı. Şirketin GeForce temsilcisi Jacob Freeman ise kısa ve net yanıt verdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/nvidia-acikladi-geforce-ekran-kartlarini-birakacak-mi--212963",
-      "publishedAt": "2026-11-16T11:32:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/212963/1200x675nvidia-acikladi-geforce-ekran-kartlarini-birakacak-mi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "830d49f12551e04fc5",
-      "title": "Casper Nirvana S100/S200 SGS testinde video oynatırken kaç saat çalıştı?",
-      "summary": "Casper Nirvana S100/S200 modellerinin pil performansı SGS tarafından test edildi. Tam dolu şarj ile 6 saatin üzerinde video oynatma süresi yakalamayı başardı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/casper-nirvana-s100-s200-video-oynatirken-kac-saat-calisiyor--212973",
-      "publishedAt": "2026-11-16T11:25:03Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212973/1200x675casper-nirvana-s100-s200-video-oynatirken-kac-saat-calisiyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "07ee217345bbec7309",
-      "title": "DH Quiz 6. Hafta sona erdi: İşte kazananlar ve yeni haftanın test takvimi",
-      "summary": "DonanımHaber'in ödüllü bilgi yarışması DH Quiz'de altıncı hafta geride kaldı. Yarışmanın kazananları açıklanırken yeni haftada katılımcıları bekleyen testler ve ödüller de belli oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/dh-quiz-6-hafta-sona-erdi-iste-kazananlar--212972",
-      "publishedAt": "2026-11-16T11:15:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212972/1200x675dh-quiz-6-hafta-sona-erdi-iste-kazananlar.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "0eeff6c610a431ac9b",
-      "title": "Türkiye'de araç satışları ekimde çakıldı: İşte en çok tercih edilen markalar",
-      "summary": "TÜİK verilerine göre ekimde trafiğe kaydı yapılan taşıt sayısı yıllık bazda yüzde 26,8 azalarak 130 bin 697'ye geriledi. İlk 10 ayda elektrikli otomobillerin payı yüzde 19,1 oldu.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/turkiye-de-arac-satislari-ekimde-cakildi-dusus-yuzde-26-yi-gecti--212958",
-      "publishedAt": "2026-11-16T11:10:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/212958/1200x675turkiye-de-arac-satislari-ekimde-cakildi-dusus-yuzde-26-yi-gecti.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -735,18 +759,6 @@
       "editorial": false
     },
     {
-      "id": "3b169d0f2e55e6fd9b",
-      "title": "25 Yılda Yalnızca %3,6 Kapasite Kaybı: Yeni Batarya Teknolojisi Devreye Giriyor!",
-      "summary": "Almanya'da kurulacak 30 MWh kapasiteli yeni çinko-bromür batarya tesisi, yanıcı olmayan yapısı ve 25 yılda sadece %3,6 kapasite kaybıyla öne çıkıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/yalnizca-3-6-kapasite-kaybi-yeni-batarya-teknolojisi-devreye-giriyor-h228982.html",
-      "publishedAt": "2026-11-13T19:45:58Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/697183/697183-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "a009bbdbfbe6de4710",
       "title": "Adapting to AI penetration testing orchestrators: The Modern Security Model",
       "summary": "AI-orchestrated penetration testing platforms like ARTEX have become increasingly powerful tools enabling effective attacks on exposed infrastructure. Here we share Cloudflare’s observations and recommended countermeasures.",
@@ -855,26 +867,14 @@
       "editorial": false
     },
     {
-      "id": "6198e2b657c990228f",
-      "title": "Candy Crush Saga Gives Halo, Fallout, Forza and More a Sweet Makeover for XBOX’s 25th",
-      "summary": "XBOX’s 25th anniversary has arrived in Candy Crush Saga. Out now, the Game On! Season brings together Halo, Fallout, Sea of Thieves, Forza, DOOM, Banjo-Kazooie, Crash Bandicoot and Spyro for four weeks of collectible pins and some very familiar music with a distinctly Candy Crush sound. For anyone who’s spent years with these games, there’s",
+      "id": "b75083ae0198d783ed",
+      "title": "Tips for Not Flying too Close to the Sun in Menes: The Chainbreaker",
+      "summary": "The gods guarding this world are prisoners too, and you arrive without a single memory. In Menes: The Chainbreaker, you play as a shard of an Archangel sent into a prison realm to free Bastet. Before you take your first steps in, get to know your sword and your wings. You’ll need to master using",
       "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/12/candy-crush-saga-game-on-halo-fallout-sea-of-thieves-xbox-25/",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/12/tips-for-not-flying-too-close-to-the-sun/",
       "publishedAt": "2026-11-12T22:00:00Z",
       "category": "Oyun",
-      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/GameOnSeason_SpotifyArtwork_1-385e3c0787211ecf55a3-1024x585.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4da1c39c5ef5e07b06",
-      "title": "25 Original XBOX Games Available Today on PC via XBOX Backward Compatibility",
-      "summary": "Today, 21 more original XBOX games are coming to PC, bringing the XBOX Backward Compatibility on PC library to 25 games as we celebrate 25 years of XBOX. We’re also introducing achievements for four original XBOX games, with more titles planned over time. We brought the first four original XBOX games to PC earlier this",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/12/25-original-xbox-games-now-available-on-pc/",
-      "publishedAt": "2026-11-12T21:02:29Z",
-      "category": "Oyun",
-      "image": "",
+      "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/Screenshot-1-1-4cffe5d1baed6a0b9cb8.jpeg",
       "language": "en",
       "editorial": false
     },
@@ -887,18 +887,6 @@
       "publishedAt": "2026-11-12T20:30:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Nov_Cohort_Hero_4.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "80edea19d5fdcf288e",
-      "title": "Introducing Gemini 4 Hydrogen",
-      "summary": "Today, we’re introducing Gemini 4 Hydrogen, our daily driver for agentic workflows",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
-      "publishedAt": "2026-11-12T18:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-element-hydrogen-light.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -927,6 +915,18 @@
       "editorial": false
     },
     {
+      "id": "80edea19d5fdcf288e",
+      "title": "Introducing Gemini 4 Hydrogen",
+      "summary": "Today, we’re introducing Gemini 4 Hydrogen, our daily driver for agentic workflows",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/",
+      "publishedAt": "2026-11-12T18:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/gemini-4-element-hydrogen-light.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "fdf1081819b010772d",
       "title": "From AI ambition to business impact",
       "summary": "Most business leaders I meet no longer need to be convinced that AI works. They’ve seen the pilots, the demos and the copilots. The question I hear in boardrooms now is different: How do we move from AI that impresses to AI that changes how the business actually runs? That is the question Microsoft Frontier...",
@@ -947,30 +947,6 @@
       "publishedAt": "2026-11-12T17:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/West_Virginia_Energy_Impact_Pro.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "1c0ba4a23c7739f768",
-      "title": "Scientists are using Google AI to help restore giant kelp forests.",
-      "summary": "Underwater forests of giant kelp protect coastlines, provide habitat, and support marine ecosystems — but they’re disappearing worldwide due to ocean warming. As COP31 k",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/sustainability/saving-giant-kelp-australia/",
-      "publishedAt": "2026-11-12T17:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Kelp_for_Social_Share.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "dc9088dd5da06760aa",
-      "title": "Get quick answers from Gemini on any website.",
-      "summary": "Get quick answers with Gemini in Chrome. Summarize articles, compare products, and explain complex topics directly in your side panel. Try it now.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/research-with-gemini-in-chrome/",
-      "publishedAt": "2026-11-12T17:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Gemini_in_Chrome_OZMdZhz.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -1199,6 +1175,30 @@
       "publishedAt": "2026-10-27T16:01:38Z",
       "category": "Yapay Zeka",
       "image": "https://blogs.microsoft.com/wp-content/uploads/2026/10/OMB-FY27Q1-Image-1-FINAL.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "b98b75e5e3efe8c183",
+      "title": "Introducing the Cloudflare PHP Capture the Flag challenge",
+      "summary": "We are launching a PHP Capture the Flag challenge integrated with our Bug Bounty program to test our WAF protections. Security researchers are invited to bypass our defenses and capture the flag to help make the Internet safer.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/php-ctf/",
+      "publishedAt": "2026-10-27T13:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M5YGNS8F8NYE3V5QERKYNG79.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "f21bc890ebec1e8cf7",
+      "title": "What took the Internet offline in Q3 2026",
+      "summary": "An examination of global Internet disruptions observed by Cloudflare Radar during the third quarter of 2026. This review analyzes how power failures, natural disasters, and government shutdowns impacted network connectivity and traffic.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/q3-2026-internet-disruption-summary/",
+      "publishedAt": "2026-10-27T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01KW453HMZRQX1BZKZQMN21EG8.png",
       "language": "en",
       "editorial": false
     }
