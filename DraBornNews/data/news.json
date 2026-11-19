@@ -1,7 +1,127 @@
 {
-  "generatedAt": "2026-11-19T17:35:33.482643Z",
+  "generatedAt": "2026-11-19T23:45:50.313430Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "08b755965e4c7e26e5",
+      "title": "Nvidia rekor kırmaya devam ediyor: 115,8 milyar dolar gelir!",
+      "summary": "Nvidia, 2027 mali yılının üçüncü çeyreğinde gelirini yıllık yüzde 103 artırarak 115,8 milyar dolara çıkardı. Şirket, 2028 mali yılı için büyüme tahminini yükseltti",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-rekor-kirmaya-devam-ediyor-115-8-milyar-dolar-gelir--213154",
+      "publishedAt": "2026-11-19T20:59:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213154/1200x675nvidia-rekor-kirmaya-devam-ediyor-115-8-milyar-dolar-gelir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ca50b5b7a4bb645648",
+      "title": "A101 marketler Samsung Galaxy Z Fold 8 ve Roborock S8 Pro satıyor",
+      "summary": "19 Kasım A101 Ekstra teknoloji ürünleri arasında Samsung Galaxy Z Fold 8 katlanabilir telefon modeli ve Roborock S8 Pro robot süpürge modeli yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/19-kasim-a101-ekstra-katalogunda-neler-var--213152",
+      "publishedAt": "2026-11-19T20:39:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213152/1200x67519-kasim-a101-ekstra-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5b6ab73ed264a34248",
+      "title": "ICYMI: Transfer your history from other AI apps into Gemini.",
+      "summary": "Transfer your chat history into Gemini. Import your ZIP files and AI summaries to continue conversations seamlessly. Get the details.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/switch-ai-assistants-transfer-history/",
+      "publishedAt": "2026-11-19T20:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Transfer_socialshare.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "1073f32ac952aa3b5e",
+      "title": "Nvidia sürücülerinde SSD sorunu: Saatte 30 GB veri yazılabiliyor",
+      "summary": "Nvidia ekran kartı sürücülerinde tespit edilen yeni bir hata, bilgisayar boşta olsa bile SSD'ye saatte 30 GB'a kadar veri yazılmasına neden olabiliyor. İşte detaylar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-suruculerinde-ssd-sorunu-saatte-30-gb-veri-yazilabiliyor--213121",
+      "publishedAt": "2026-11-19T20:05:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213121/1200x675nvidia-suruculerinde-ssd-sorunu-saatte-30-gb-veri-yazilabiliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "07be65be2bd54a4d82",
+      "title": "Huawei Mate 90 Air tanıtmaya başladı: İşte özellikleri",
+      "summary": "Huawei Mate 90 Air'in renk seçenekleri ve bellek konfigürasyonları açıklandı. 24 Kasım'da tanıtılacak ince tasarımlı telefonun batarya ve işlemci özellikleri de sızdırıldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/huawei-mate-90-air-tanitmaya-basladi-iste-ozellikleri--213122",
+      "publishedAt": "2026-11-19T19:35:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213122/1200x675huawei-mate-90-air-tanitmaya-basladi-iste-ozellikleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "3908338b2ad07552dc",
+      "title": "Avrupa'nın en büyük elektrikli feribotları geliyor: Her biri 55 MWh bataryalı olacak",
+      "summary": "Danimarka, dizel feribotların yerini alacak üç dev elektrikli gemi hazırlıyor. Her biri 55 MWh batarya kapasitesine sahip olacak feribotlar, 1500 yolcu ve 500 araç taşıyacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/avrupa-nin-en-buyuk-elektrikli-feribotlari-geliyor--213148",
+      "publishedAt": "2026-11-19T19:05:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213148/1200x675avrupa-nin-en-buyuk-elektrikli-feribotlari-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "979f97d8e071f91792",
+      "title": "How we’re putting one of quantum mechanics’ deepest features to the test at scale.",
+      "summary": "Google Quantum AI research proves contextuality powers quantum algorithms at scale. See how our processor beat classical limits. Get the details.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/quantum-computing/putting-one-of-quantum-mechanics-deepest-features-to-test-at-scale/",
+      "publishedAt": "2026-11-19T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Quantum_Contextuality_Social_Sh.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "4a11b62cc83c551da9",
+      "title": "Dünyada bir ilk: Doğal gazı grafit ve hidrojene dönüştüren tesis üretime başladı",
+      "summary": "Elektrikli otomobil bataryalarının önemli bir bileşeni olan grafit, artık doğal gazdan da üretilebilecek. ABD'de kurulan yeni tesis, Çin'in sektördeki hâkimiyetine alternatif olabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dogal-gazi-grafit-ve-hidrojene-donusturen-yeni-uretim-yontemi--213145",
+      "publishedAt": "2026-11-19T18:03:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213145/1200x675dogal-gazi-grafit-ve-hidrojene-donusturen-yeni-uretim-yontemi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1b3aafed7dd5d45c68",
+      "title": "Introducing Tool Retrieval in the Gemini API",
+      "summary": "Give your agents access to hundreds of tools while using fewer tokens with Tool Retrieval, now in preview in the Gemini API.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-api-tool-retrieval/",
+      "publishedAt": "2026-11-19T18:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Tool_retrieval_hero.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "05470788185f5c177e",
+      "title": "Nvidia, Çin'e yapay zeka çipi satışını durdurdu",
+      "summary": "Nvidia, ABD'den satış izni almasına rağmen Çin'e H200 yapay zeka çipi sevkiyatını durdurdu. Kararda Pekin'in ithalat kısıtlamaları ve ABD’ye bağımlılığını azaltma hedefi etkili oldu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-cin-e-yapay-zeka-cipi-satisini-durdurdu--213144",
+      "publishedAt": "2026-11-19T17:39:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213144/1200x675nvidia-cin-e-yapay-zeka-cipi-satisini-durdurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "fef390b6945e621d3b",
       "title": "KIZILELMA envantere girdi: Türkiye, insansız savaş uçağını envanterine alan ilk ülke!",
@@ -51,6 +171,18 @@
       "editorial": false
     },
     {
+      "id": "2ab70deec7ba0baa73",
+      "title": "Build strategic A/B tests to grow your ad performance.",
+      "summary": "Improve your Google Ads performance with expert A/B testing strategies. Master AI Max experiments and Smart Bidding with our latest guide. Listen now.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/products/ads-commerce/ads-decoded-ab-testing/",
+      "publishedAt": "2026-11-19T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/S2E7_Social_Share.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "402324a8363799571b",
       "title": "Genie 4 is now available on the Gemini API.",
       "summary": "Build interactive 720p worlds with Genie 4 on the Google Gemini API. Generate coherent environments with native audio and real-time controls. Get started.",
@@ -71,18 +203,6 @@
       "publishedAt": "2026-11-19T17:00:00Z",
       "category": "Yapay Zeka",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/hero_header_CU_copy.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "2ab70deec7ba0baa73",
-      "title": "Build strategic A/B tests to grow your ad performance.",
-      "summary": "Improve your Google Ads performance with expert A/B testing strategies. Master AI Max experiments and Smart Bidding with our latest guide. Listen now.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products/ads-commerce/ads-decoded-ab-testing/",
-      "publishedAt": "2026-11-19T17:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/S2E7_Social_Share.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -543,54 +663,6 @@
       "editorial": false
     },
     {
-      "id": "f6ee8033d39df4cb53",
-      "title": "İki tekerlekle 180 tonluk uçak çekti: BYD’den gövde gösterisi",
-      "summary": "BYD’nin premium markası Denza, Bao 5 ile 180 tonluk Boeing 747’yi iki tekerlek üzerinde çekti. Sadece elektrik gücüyle yapılan gösteri için SUV’ye 4,5 ton ek ağırlık ve denge destekleri yerleştirildi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iki-tekerlekle-180-tonluk-ucak-cekti-byd-den-govde-gosterisi--213119",
-      "publishedAt": "2026-11-19T11:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213119/1200x675iki-tekerlekle-180-tonluk-ucak-cekti-byd-den-govde-gosterisi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7c4c54a496e67a33dc",
-      "title": "GTA 6 oyun yayıncılarını da rekora taşıdı: Twitch tarihindeki en yüksek etkileşimi aldı",
-      "summary": "Daha çıkmadan satış rekorları kırmaya başlayan GTA 6, oyun yayıncılarını da rekora taşıyor. Twitch, Kick, YouTube gibi platformlar dün canlı yayınlarda zirveyi gördü.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-twitch-yayincilarini-da-rekora-tasidi--213120",
-      "publishedAt": "2026-11-19T11:08:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/213120/1200x675gta-6-twitch-yayincilarini-da-rekora-tasidi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "ff3ec229d676c0f532",
-      "title": "MSI EdgeMesa N AI+ Türkiye’de ön siparişe açıldı: Minik kasada 1 PFLOP AI performansı",
-      "summary": "MSI, NVIDIA RTX Spark N1X platformuyla güçlendirilen yeni AI PC modeli EdgeMesa N AI+ serisini Türkiye'de ön siparişe açtı. Minik boyutlu bu bilgisayar, dev performansıyla dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/msi-edgemesa-n-ai-turkiye-de-on-siparise-acildi-ozellikleri--213130",
-      "publishedAt": "2026-11-19T10:47:06Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213130/1200x675msi-edgemesa-n-ai-turkiye-de-on-siparise-acildi-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1905327eabe3c634d5",
-      "title": "Google Gemini 4 Neon tanıtıldı: Carbon’dan 3 kat daha hızlı",
-      "summary": "Google, karmaşık kodlama ve analitik işlemler için geliştirdiği Gemini 4 Neon'u duyurdu. Yeni model, Carbon'dan üç kat daha hızlı çalışırken daha uygun maliyetler sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-gemini-4-neon-tanitildi-carbon-dan-3-kat-daha-hizli--213118",
-      "publishedAt": "2026-11-19T10:47:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213118/1200x675google-gemini-4-neon-tanitildi-carbon-dan-3-kat-daha-hizli.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "1c145e87fb3786ebdf",
       "title": "Casper NevoPro P40 Kimler İçin Uygun? İş ve Öğrenci Rehberi",
       "summary": "1,4 kg'lık Casper NevoPro P40; geniş port seçeneği, yükseltilebilir RAM ve parmak izi okuyucuyla mobil çalışanlara yönelik. İş için Windows 11 Pro'lu sürüm 64.639 TL, öğrenciye 53.636 TL.",
@@ -599,18 +671,6 @@
       "publishedAt": "2026-11-19T10:06:14Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/697441/697441-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2d30f21cc5e08962a7",
-      "title": "Yenilenen Lexus NX, 2027'nin ilk çeyreğinde Türkiye'ye geliyor",
-      "summary": "2027’nin ilk çeyreğinde Türkiye’de yollara çıkacak olan yeni NX, altıncı nesil hibrit teknolojisi, yenilenen kabini ve gelişmiş sürüş destek sistemleriyle dikkat çekiyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yenilenen-lexus-nx-2027-nin-ilk-ceyreginde-turkiye-ye-geliyor--213117",
-      "publishedAt": "2026-11-19T10:04:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213117/1200x675yenilenen-lexus-nx-2027-nin-ilk-ceyreginde-turkiye-ye-geliyor.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -663,30 +723,6 @@
       "editorial": false
     },
     {
-      "id": "f91ac309aa089d3f70",
-      "title": "Apple, iPhone 20 Pro ile titanyum tasarıma geri dönebilir",
-      "summary": "iPhone 20 Pro, titanyum tasarımı geri getirebilir. Apple'ın 20. yıl dönümü iPhone modeli için iPhone Air'den ilham alan daha yuvarlak tasarımın yanı sıra titanyum çerçeveyi test ettiği bildiriliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-iphone-20-pro-titanyum-tasarimla-gelebilir--213113",
-      "publishedAt": "2026-11-19T09:43:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213113/1200x675apple-iphone-20-pro-titanyum-tasarimla-gelebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "9621a0ebf43a990216",
-      "title": "Apple, 2026 App Store Ödülleri finalistlerini açıkladı: İşte tüm adaylar",
-      "summary": "Apple, 2026 App Store Ödülleri'nde yarışacak 45 uygulama ve oyunu duyurdu. iPhone, iPad, Mac ve Vision Pro dahil tüm kategorilerde finalistler belli oldu. İşte detaylar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/apple-2026-app-store-odulleri-finalistlerini-acikladi--213114",
-      "publishedAt": "2026-11-19T09:22:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213114/1200x675apple-2026-app-store-odulleri-finalistlerini-acikladi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "5924d24cf4902f7026",
       "title": "Giysilerimizin Aşırı Kuruyup Yıpranmasını Nasıl Engelleriz? Akıllı Nem Sensörleri İş Başında",
       "summary": "Çoğumuzun kurutma makineleriyle ilgili duyduğu o meşhur şehir efsanesini biliyorsunuz: \"Kurutma makinesi kıyafetleri çeker, yıpratır ve eskitir.\" Aslında bu bir efsane değil; eski nesil, sadece süreye ayarlı kurutma makinelerinin yarattığı fiziksel bir gerçektir. Siz makineyi 2 saate ayarlarsınız ve kıyafetler 40. dakikada kurusa bile makine o sıcak havayı kumaşın üzerine 80 dakika daha üflemeye devam eder. Sonuç: Çeken",
@@ -735,6 +771,18 @@
       "editorial": false
     },
     {
+      "id": "52f6bc9a43b3606d3a",
+      "title": "Genie 4 is now available",
+      "summary": "We are rolling out a new Project Genie experience to eligible Google AI Ultra subscribers, opening access to our new Genie 4 world model.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
+      "publishedAt": "2026-11-18T18:00:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/resized_ProjectGenie_Thumbnail_.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "63f8f522e563073706",
       "title": "Google for Mexico: Technology impact that goes beyond business",
       "summary": "At this year’s Google for Mexico, we announced how our latest AI innovations and partnerships are translating into real-world growth across the country.",
@@ -755,30 +803,6 @@
       "publishedAt": "2026-11-18T18:00:00Z",
       "category": "Teknoloji",
       "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/Las_Vegas_hero.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "52f6bc9a43b3606d3a",
-      "title": "Genie 4 is now available",
-      "summary": "We are rolling out a new Project Genie experience to eligible Google AI Ultra subscribers, opening access to our new Genie 4 world model.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/genie-4-now-available-project-genie/",
-      "publishedAt": "2026-11-18T18:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/resized_ProjectGenie_Thumbnail_.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "361479cc0a0b93ad5d",
-      "title": "Introducing Stitch Loop: A new way to build and evolve products",
-      "summary": "Stitch Loop is an always-on product agent from Google Labs that works non-stop to help lean teams build better products.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/",
-      "publishedAt": "2026-11-18T17:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/frame_zjQlth4.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
@@ -807,6 +831,18 @@
       "editorial": false
     },
     {
+      "id": "361479cc0a0b93ad5d",
+      "title": "Introducing Stitch Loop: A new way to build and evolve products",
+      "summary": "Stitch Loop is an always-on product agent from Google Labs that works non-stop to help lean teams build better products.",
+      "source": "Google Blog",
+      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-labs/stitch-loop/",
+      "publishedAt": "2026-11-18T17:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/frame_zjQlth4.max-600x600.format-webp.webp",
+      "language": "en",
+      "editorial": false
+    },
+    {
       "id": "bbf5b53e18ee728020",
       "title": "Grand Theft Auto VI launches tomorrow, November 19",
       "summary": "Jason and Lucia have always known the deck is stacked against them. But when an easy score goes wrong, they find themselves on the darkest side of the sunniest place in America, in the middle of a criminal conspiracy stretching across the state of Leonida — forced to rely on each other more than ever",
@@ -831,30 +867,6 @@
       "editorial": false
     },
     {
-      "id": "4d5ea68368124bc34c",
-      "title": "Cybersecurity tips and tools to keep you safe online",
-      "summary": "Explore this collection to see how Google’s cybersecurity tips and tools can keep your accounts and information safe.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/technology/safety-security/cybersecurity-tips/",
-      "publishedAt": "2026-11-18T14:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/cybersecurity_collection.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "93762b1fdcd40305b5",
-      "title": "Drive your best ROI reaching new holiday shoppers with November’s Google Marketing Platform Drop.",
-      "summary": "Boost holiday ROI with November 2026 Google Marketing Platform updates, including Spotify audiences, Pinterest inventory, and Loblaw integration. Get the details.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/products/marketingplatform/360/google-marketing-platform-drop-november/",
-      "publishedAt": "2026-11-18T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/ss_0108-GMP_Drop_November___Des.max-600x600.format-webp.webp",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "6f918569a8c919653e",
       "title": "How to Get Ready for November 19",
       "summary": "November 19, 2026, has long been circled on your calendar. Birthdays, anniversaries, and holidays have come and gone, but this day belongs to you and your XBOX console. We can hardly believe it’s almost here, either. Once midnight strikes, you want to be locked in the action, so to help you prepare, we created a",
@@ -875,18 +887,6 @@
       "publishedAt": "2026-11-17T23:00:00Z",
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/LPDT_gameplay_loot-ab43ee7e169520b83f03.jpg",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "b6a48baf5af3ea03d0",
-      "title": "How genome mapping can help researchers better understand disease",
-      "summary": "A Google DeepMind research scientist explains the potential behind our AlphaGenome and AlphaGenome Atlas tools.",
-      "source": "Google Blog",
-      "sourceUrl": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/alphagenome-disease-research/",
-      "publishedAt": "2026-11-17T22:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://storage.googleapis.com/gweb-uniblog-publish-prod/images/hero_ZCQxfQQ.max-600x600.format-webp.webp",
       "language": "en",
       "editorial": false
     },
