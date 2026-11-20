@@ -1,7 +1,67 @@
 {
-  "generatedAt": "2026-11-19T23:45:50.313430Z",
+  "generatedAt": "2026-11-20T06:46:15.445403Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "36bee98d291a4c3264",
+      "title": "Apple'ın OLED ekranlı iMac planları rafa kalkabilir",
+      "summary": "Apple'ın OLED ekranlı iMac modeli için planlarını ertelediği, hatta projeyi tamamen iptal etmeyi değerlendirdiği bildiriliyor. Şirket, bunun yerine daha uygun fiyatlı IPS LCD panellere yönelebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-in-oled-ekranli-imac-planlari-rafa-kalkabilir--213153",
+      "publishedAt": "2026-11-20T06:40:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213153/1200x675apple-in-oled-ekranli-imac-planlari-rafa-kalkabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "96c7e221970f6c55f8",
+      "title": "Motorola'nın yeni katlanabilir telefonu Razr Flex'in görselleri sızdı",
+      "summary": "Motorola'nın yeni katlanabilir telefonu Razr Flex, sızdırılan görsellerle ilk kez detaylı şekilde görüntülendi. Galaxy Z Fold 8 ve iPhone Duo'ya rakip olacak cihaz neler sunacak?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/motorola-nin-yeni-katlanabilir-telefonu-ortaya-cikti--213156",
+      "publishedAt": "2026-11-20T06:15:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213156/1200x675motorola-nin-yeni-katlanabilir-telefonu-ortaya-cikti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "453452b4473146e406",
+      "title": "Android'in APK kısıtlamaları Ocak'ta küresel olarak yürürlüğe giriyor",
+      "summary": "Google, 2027 itibarıyla Android'de geliştirici doğrulamasını dünya genelinde zorunlu hale getirecek. Google tarafından doğrulanmayan geliştiricilerin APK dosyaları varsayılan olarak yüklenemeyecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/android-in-apk-kisitlamalari-kuresel-olarak-yururluge-giriyor--213155",
+      "publishedAt": "2026-11-20T05:50:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213155/1200x675android-in-apk-kisitlamalari-kuresel-olarak-yururluge-giriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c74263d0c724cfe246",
+      "title": "Yapay zekâ büyüdükçe çevreye zararı da büyüyor: Emisyonlarda yüzde 70 artış bekleniyor",
+      "summary": "Yapay zekâ yarışı enerji sektörünü de dönüştürüyor. ABD ve Çin'in veri merkezlerini fosil yakıtlarla beslemeye yönelmesi, karbon emisyonlarında büyük bir artışa neden olabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/veri-merkezlerinin-karbon-emisyonlari-dort-yilda-yuzde-70-artacak--213157",
+      "publishedAt": "2026-11-20T04:57:47Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213157/1200x675veri-merkezlerinin-karbon-emisyonlari-dort-yilda-yuzde-70-artacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "17fab3637860c9a7ef",
+      "title": "nginx2root: Five new nginx vulnerabilities, and how Cloudflare protects origins from the worst of them",
+      "summary": "Five memory corruption bugs in nginx, called nginx2root, can let an unauthenticated attacker run code on a server. Here’s how they work, and why origins behind Cloudflare's proxy are shielded from the most serious of these bugs.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/nginx2root/",
+      "publishedAt": "2026-11-20T01:58:29Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7V6N9XSHCT1GMC5KHVYE692.01M7V6NAA3FDH1YV1552W4P5P7.png",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "08b755965e4c7e26e5",
       "title": "Nvidia rekor kırmaya devam ediyor: 115,8 milyar dolar gelir!",
@@ -543,30 +603,6 @@
       "editorial": false
     },
     {
-      "id": "d0e95303a9c29e611f",
-      "title": "Instagram'a hikaye düzenleme özelliği geldi",
-      "summary": "Instagram hikaye düzenleme özelliği kullanıma sunuldu. Artık story attıktan sonra 15 dakika içinde gönderiyi düzenleyebiliyorsunuz. Peki, Instagram hikayesinde nasıl düzenleme yapılır?",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/instagram-hikaye-duzenleme-nasil-yapilir--213136",
-      "publishedAt": "2026-11-19T12:36:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213136/1200x675instagram-hikaye-duzenleme-nasil-yapilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "418ea9b16dbf94ba61",
-      "title": "Kesinlikle yapmanız gereken GTA 6 ayarları (TV, PS5 & Xbox)",
-      "summary": "GTA VI çıktı ancak PS5 Pro ve Xbox'ta 30FPS çalıştığından zaman zaman takılmalar, yavaşlamalar yaşanabiliyor. İşte GTA 6 takılma sorunu çözümü için dahil yapılması gereken birkaç ayar:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-takilma-sorunu-cozumu-en-iyi-ayarlar-ps5-xbox--213125",
-      "publishedAt": "2026-11-19T12:14:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/213125/1200x675gta-6-takilma-sorunu-cozumu-en-iyi-ayarlar-ps5-xbox.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "fd979df3e1a4cc65cf",
       "title": "Gerilimden Fantastik Edebiyata: Farklı Kategorilerden Kitap Tavsiyeleri",
       "summary": "Kitaplığınıza yeni eserler eklemek istiyor ancak yüzlerce seçenek arasında karar vermekte zorlanıyorsanız doğru yerdesiniz. Bu hafta Amazon'da öne çıkan ve okurların ilgisini çeken kitapları farklı kategoriler altında bir araya getirdik.",
@@ -635,30 +671,6 @@
       "publishedAt": "2026-11-19T12:06:46Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/697844/697844-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "59989ed536f081cefc",
-      "title": "Grand Theft Auto VI Standart PS5'te Nasıl Görünüyor? | İlk İzlenim",
-      "summary": "Yıllardır beklediğimiz Grand Theft Auto VI sonunda karşımızda. Peki standart PlayStation 5'te performansı nasıl? Cevabı, oyunun ilk 1 saatini oynadığımız ilk izlenim videosunda.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-vi-yi-standart-ps5-te-oynayarak-performansina-baktik--213134",
-      "publishedAt": "2026-11-19T12:02:17Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213134/1200x675gta-vi-yi-standart-ps5-te-oynayarak-performansina-baktik.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "88ec86290926e198cf",
-      "title": "Huawei Watch Air'in renkleri ve özellikleri açıklandı: İşte ilk detaylar",
-      "summary": "Huawei Watch Air, 6,9 mm kalınlığındaki titanyum gövdesi ve AMOLED ekranıyla geliyor. 24 Kasım'da tanıtılacak akıllı saatin renk seçenekleri ve bazı teknik özellikleri de açıklandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/huawei-watch-air-in-renkleri-ve-ozellikleri-aciklandi--213112",
-      "publishedAt": "2026-11-19T11:52:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213112/1200x675huawei-watch-air-in-renkleri-ve-ozellikleri-aciklandi.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-11-04T14:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6HZ1ZE3ZTGF9NEGGPF8SZNS.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "e581154108f523de51",
-      "title": "Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities",
-      "summary": "Zero Wire on Cloudflare Radar pairs plain-language briefings with global attack telemetry and remediation steps. Triage critical CVEs faster and decide how to protect your infrastructure.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/zero-wire/",
-      "publishedAt": "2026-11-03T14:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6GJ6AY4JP65PWEN7N433797.01M6GJ6BBQ9P5FYVNPWDVKT2EY.png",
       "language": "en",
       "editorial": false
     }
