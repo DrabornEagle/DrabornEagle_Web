@@ -1,7 +1,43 @@
 {
-  "generatedAt": "2026-11-21T18:58:19.968507Z",
+  "generatedAt": "2026-11-21T23:44:07.388925Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "09956755952ebfb4a8",
+      "title": "Tesla, otonom sürüş yazılımı FSD v15’i tanıttı: İşte tüm yenilikler",
+      "summary": "Tesla, FSD V15 güncellemesini yayınladı. Yeni sürüm çukurları ve trafik kameralarını daha iyi algılıyor. Tesla ayrıca güvenlik açısından kritik müdahalelerde 25 kat iyileşme sağlandığını öne sürüyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/tesla-fsd-v15-tanitildi-iste-tum-yenilikler--213229",
+      "publishedAt": "2026-11-21T23:01:46Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213229/1200x675tesla-fsd-v15-tanitildi-iste-tum-yenilikler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "96145facc62a9be204",
+      "title": "ABD'de teknoloji krizi büyüyor: Trump, siber güvenlik direktörünü kovdu",
+      "summary": "Siber saldırı gizleniyor mu? ABD'de yüz milyonlarca kişiyi etkileyen Microsoft kesintisi ve 18 binden fazla uçuşun aksamasının ardından Trump, Beyaz Saray'ın siber güvenlik direktörünü görevden aldı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/trump-abd-nin-siber-guvenlik-direktorunu-kovdu--213227",
+      "publishedAt": "2026-11-21T19:39:18Z",
+      "category": "Güvenlik",
+      "image": "https://www.donanimhaber.com/images/images/haber/213227/1200x675trump-abd-nin-siber-guvenlik-direktorunu-kovdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "809898531e8d6cf472",
+      "title": "GTA 6'dan rekor açılış: İlk gün hasılatı 3.79 milyar dolar!",
+      "summary": "Rockstar Games'in Grand Theft Auto 6 oyununun ön sipariş ve ilk gün satışları 3.79 milyar dolara ulaştı. Bu rakam, tahmini değil, oyun geliştiricisi tarafından resmî olarak açıklandı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gta-6-dan-rekor-acilis-ilk-gun-hasilati-3-79-milyar-dolar--213220",
+      "publishedAt": "2026-11-21T19:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213220/1200x675gta-6-dan-rekor-acilis-ilk-gun-hasilati-3-79-milyar-dolar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "4bd758bd21acb7dedf",
       "title": "OpenAI, ilk akıllı telefonunun üretimi için Apple'ın tedarikçisiyle anlaştı",
@@ -255,42 +291,6 @@
       "editorial": false
     },
     {
-      "id": "38da7c8f7abc0e4906",
-      "title": "OLED ekranlı tabletler: Dizi ve film için en iyi seçenekler",
-      "summary": "AMOLED tablet modelleri, yüksek kontrastlı ekranları ve canlı renkleriyle dizi ve film izlemek isteyenlere farklı seçenekler sunuyor. İşte öne çıkan 8 model...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/dizi-ve-film-icin-amoled-tablet-tavsiyeleri--213143",
-      "publishedAt": "2026-11-21T06:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213143/1200x675dizi-ve-film-icin-amoled-tablet-tavsiyeleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d6c8fa405c0d07d2c1",
-      "title": "Bitcoin fiyatı 58 bin dolara düştü, ölüm kesişimi gerçekleşti",
-      "summary": "82 bin dolardan bu yana soluksuz düşen Bitcoin fiyatı beraberinde tüm piyasayı da tepetaklak etti. Kurumsal tarafta da büyük çıkışların yaşanması düşüş derinleştiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/bitcoin-tepetaklak-oldu--213202",
-      "publishedAt": "2026-11-20T20:59:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213202/1200x675bitcoin-tepetaklak-oldu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2c51789ac65b45f858",
-      "title": "1 ms ve 0.5 ms tepki süresi arasındaki fark nedir?",
-      "summary": "Oyuncu monitörlerinde özellikle 1 ms ve 0.5 ms tepki süresi öne çıkıyor. Peki 1 ms monitör ve 0.5 ms monitör tepki süresi arasındaki fark nedir? İşte öne çıkan modeller:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/1-ms-ve-0-5-ms-tepki-suresi-arasindaki-fark-nedir--213124",
-      "publishedAt": "2026-11-20T20:30:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213124/1200x6751-ms-ve-0-5-ms-tepki-suresi-arasindaki-fark-nedir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "c851a250df92def969",
       "title": "How Cloudflare WAF protects against ruby2shell (CVE-2026-132825)",
       "summary": "ruby2shell lets attackers corrupt memory in default Rails and Sinatra apps without logging in. Cloudflare WAF blocks it for every customer, including Free plans. Upgrade Ruby now, and use the WAF to cover the gap.",
@@ -312,18 +312,6 @@
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M7X76DTFTZ4PHVTH5XWJ37KT.png",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4259936a63b4fa016d",
-      "title": "Gökyüzünde yeni dönem: Yıldızların yerini uydular alıyor",
-      "summary": "Yeni bir araştırmaya göre orta enlemlerdeki şehirlerin üzerinde aynı anda 700'den fazla uydu bulunuyor. Gece gökyüzündeki bu yoğun trafik astronomik gözlemleri de tehdit ediyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gokyuzunde-yeni-donem-yildizlarin-yerini-uydular-aliyor--213193",
-      "publishedAt": "2026-11-20T20:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213193/1200x675gokyuzunde-yeni-donem-yildizlarin-yerini-uydular-aliyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -1199,6 +1187,18 @@
       "publishedAt": "2026-11-06T14:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6RNKQ9RKEJ9CKY6DGNF44RV.01M6RNKRJAQTN05BV66646AM7Z.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "7303cf34c367e5457b",
+      "title": "Agents aren’t humans (but they kinda are)",
+      "summary": "AI agents act for millions, but servers see intermediaries that strip user visibility. This post defines the problem space and introduces a collaborative approach to safely identifying, allowing, and managing this automated traffic.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/trusted-agent-delegation/",
+      "publishedAt": "2026-11-05T17:03:04Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6HXVQ0MH26TMB3HFFHA31DK.png",
       "language": "en",
       "editorial": false
     }
