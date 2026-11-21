@@ -1,7 +1,115 @@
 {
-  "generatedAt": "2026-11-21T03:24:32.322696Z",
+  "generatedAt": "2026-11-21T11:38:05.932751Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "cf601f79063db9db3e",
+      "title": "Bitcoin fiyatı 16900 dolara düştü, 10 Ekim krizi geri geldi",
+      "summary": "Kraken borsasında yaşanan Kanada doları likidite sorunu nedeniyle Bitcoin fiyatı bir anda 16900 ABD doları seviyelerine kadar indi ve insanlar satın almayı başardı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/bitcoin-fiyatinda-sok-seviye--213217",
+      "publishedAt": "2026-11-21T11:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213217/1200x675bitcoin-fiyatinda-sok-seviye.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "e9c9ad3da2e15ac2e0",
+      "title": "Yapay zekâ rüzgârı diniyor mu? Hisseler çakılıyor",
+      "summary": "Yıllardır adeta çılgınlar gibi yükselen yapay zekâ ile ilgili şirket hisseleri bu hafta tepetaklak oldu. Anthropic halka arzı da sektöre beklenen ilgiyi getirmedi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zek-husrani--213216",
+      "publishedAt": "2026-11-21T10:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213216/1200x675yapay-zek-husrani.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c30c76e8fbaacd3194",
+      "title": "Android telefonlar Windows 11'de ikinci ekran olarak kullanılabilecek",
+      "summary": "Microsoft, Android telefon ve tabletlerin Windows 11 bilgisayarlar için ikinci ekran olarak kullanılmasını sağlayacak yeni bir özellik geliştiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/android-telefonlar-windows-11-de-ikinci-ekran-olabilecek--213204",
+      "publishedAt": "2026-11-21T10:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213204/1200x675android-telefonlar-windows-11-de-ikinci-ekran-olabilecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "37138f95d903aa4a9c",
+      "title": "ŞOK marketler Razer kulaklık modelleri satıyor",
+      "summary": "21 Kasım ŞOK aktüel teknoloji ürünleri arasında Razer BlackShark V2 Pro, Blackshark V3 x Hyperspeed ve Hammerhead Hyperspeed kulaklık modelleri yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/21-kasim-sok-aktuel-katalogunda-neler-var--213215",
+      "publishedAt": "2026-11-21T09:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213215/1200x67521-kasim-sok-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2baff00a2d49b5c8b6",
+      "title": "Yeni Elantra Çok Değişti! Honda'dan Üç Sıralı Yeni Hibrit SUV | Oto Gündem",
+      "summary": "Programımızın bu haftaki bölümünü Hyundai Elantra, Honda Avancier ve T-Roc R gibi yeni tanıtılan modellerle açtık. Ardından Tesla'daki sipariş sorunu ve CATL'in Türkiye'deki batarya servisine değindik",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yeni-elantra-cok-degisti-honda-dan-uc-sirali-yeni-hibrit-suv--213213",
+      "publishedAt": "2026-11-21T09:00:40Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213213/1200x675yeni-elantra-cok-degisti-honda-dan-uc-sirali-yeni-hibrit-suv.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "7e64ea5a64b4b500dd",
+      "title": "BYD’nin SUV modelinin AB’de satışı yasaklandı",
+      "summary": "Hollanda'da mahkeme BYD Ti7'nin Defender'ın tasarım haklarını ihlal ettiğine karar vererek Avrupa Birliği'nde satışına yasak getirdi. BYD, geçici tedbir niteliğindeki karara itiraz edeceğini açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/byd-nin-suv-modelinin-ab-de-satisi-yasaklandi--213214",
+      "publishedAt": "2026-11-21T08:55:40Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213214/1200x675byd-nin-suv-modelinin-ab-de-satisi-yasaklandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "5504e8a807b68bd656",
+      "title": "Sonunda: Microsoft, Windows 11'in arama performansını artırıyor",
+      "summary": "Microsoft, Windows 11 için yayımladığı KB5132057 güncellemesiyle Dosya Gezgini aramalarını hızlandırıyor. Yeni Windows Search arayüzü ve oyunculara yönelik iyileştirmeler de sunuluyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sonunda-microsoft-windows-11-in-arama-performansini-artiriyor--213209",
+      "publishedAt": "2026-11-21T08:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213209/1200x675sonunda-microsoft-windows-11-in-arama-performansini-artiriyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "63f55fd600182c6cb9",
+      "title": "GeForce Now'a eklenecek yeni oyunlar açıklandı",
+      "summary": "GeForce Now kütüphanesine 9 yeni oyun ekleniyor. DOOM (2016) (GOG), DOOM Eternal (GOG) VE Graveyard Keeper 2 dahil birçok yapım bulut üzerinden oynanabilir olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/geforce-now-a-eklenecek-yeni-oyunlar-aciklandi--213208",
+      "publishedAt": "2026-11-21T07:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/213208/1200x675geforce-now-a-eklenecek-yeni-oyunlar-aciklandi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "38da7c8f7abc0e4906",
+      "title": "OLED ekranlı tabletler: Dizi ve film için en iyi seçenekler",
+      "summary": "AMOLED tablet modelleri, yüksek kontrastlı ekranları ve canlı renkleriyle dizi ve film izlemek isteyenlere farklı seçenekler sunuyor. İşte öne çıkan 8 model...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/dizi-ve-film-icin-amoled-tablet-tavsiyeleri--213143",
+      "publishedAt": "2026-11-21T06:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213143/1200x675dizi-ve-film-icin-amoled-tablet-tavsiyeleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "d6c8fa405c0d07d2c1",
       "title": "Bitcoin fiyatı 58 bin dolara düştü, ölüm kesişimi gerçekleşti",
@@ -195,54 +303,6 @@
       "editorial": false
     },
     {
-      "id": "49a7dab617bb333c58",
-      "title": "Çin'in tamamen yapay zeka ile hazırlanan ilk filmi gişede çakıldı",
-      "summary": "Çin'in tamamen yapay zeka ile hazırlanan ilk uzun metrajlı filmi Sanxingdui: Future Past, üç haftada yalnızca 1,8 milyon yuan hasılat elde edebildi. İşte detaylar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/cin-in-tamamen-yapay-zeka-ile-hazirlanan-ilk-filmi-gisede-cakildi--213179",
-      "publishedAt": "2026-11-20T15:37:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213179/1200x675cin-in-tamamen-yapay-zeka-ile-hazirlanan-ilk-filmi-gisede-cakildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7f3ba5d70a4fb49b5d",
-      "title": "Gerçekten hem telefon, hem tablet mi? ''iPhone Duo'yu 1 ay boyunca test ettim''",
-      "summary": "iPhone Duo'ya geçtim. Katlanır telefon kelimenin tam anlamıyla bambaşka, bir telefon ve bir tabletin bütünü iPhone Duo gerçekten ikisinin birleşimi kadar yetenekli mi? Detaylar videomuzda.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gercekten-hem-telefon-hem-tablet-mi-iphone-duo-incelemesi--213158",
-      "publishedAt": "2026-11-20T15:16:28Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/213158/1200x675gercekten-hem-telefon-hem-tablet-mi-iphone-duo-incelemesi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d07e893ca57494835d",
-      "title": "1.000 TL değerinde 3 oyun, Xbox'ta bu hafta sonu ücretsiz",
-      "summary": "Xbox Free Play Days kapsamında bu hafta ücretsiz olacak oyunlar açıklandı. Game Pass ve Xbox kullanıcıları bu hafta da birçok oyunlara ücretsiz olarak erişebilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/20-22-kasim-xbox-ucretsiz-oyunlari-aciklandi--213174",
-      "publishedAt": "2026-11-20T15:15:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/213174/1200x67520-22-kasim-xbox-ucretsiz-oyunlari-aciklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "d9e7bae1453c07c836",
-      "title": "GTA 6, Türkiye'deki PS5 satışlarını coşturdu: Yüzde 88 artış!",
-      "summary": "Türkiye'de GTA 6'nın çıkışıyla birlikte konsol satışları sıçrama yaşadı. Hepsiburada'dan yapılan açıklamaya göre PlayStation 5 satışları yüzde 88 oranında artış gösterdi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-turkiye-deki-ps5-satislarini-costurdu-yuzde-88-artis--213195",
-      "publishedAt": "2026-11-20T15:13:44Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213195/1200x675gta-6-turkiye-deki-ps5-satislarini-costurdu-yuzde-88-artis.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "751514f5fbca9df4ff",
       "title": "Next Week on XBOX: New Games for November 23 to 27",
       "summary": "Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X|S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! Jaden Industries: Cozy",
@@ -267,18 +327,6 @@
       "editorial": false
     },
     {
-      "id": "13117ba6165d219056",
-      "title": "GTA 6, Rockstar'a bir günde milyarlarca dolar kazandırdı!",
-      "summary": "GTA 6 çıkış yaptığı gün 24.6 milyon adet sattı. Rockstar'ın şimdiden kasasına giren paranın 2.36 milyar dolar olduğu tahmin ediliyor. Bu rakam, dijital satın alımları ve ön siparişleri kapsıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/gta-6-rockstar-a-1-gunde-milyarlarca-dolar-kazandirdi--213177",
-      "publishedAt": "2026-11-20T14:29:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213177/1200x675gta-6-rockstar-a-1-gunde-milyarlarca-dolar-kazandirdi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "cff3c430198990338c",
       "title": "Toyota’nın İlk Corolla Pikabı Tanıtıldı: Hibrit Motorla Gelecek",
       "summary": "Toyota, Corolla Cross altyapısını kullanan yeni pikabı Corolla Deck’i tanıttı. Brezilya’da üretilecek hibrit modelin 2027’de Latin Amerika ve Karayipler’de satışa sunulması bekleniyor.",
@@ -291,30 +339,6 @@
       "editorial": false
     },
     {
-      "id": "eda36886b41567bb95",
-      "title": "Galaxy S27 Pro Geekbench'te test edildi: İşte işlemcisi ve performansı",
-      "summary": "Samsung Galaxy S27 Pro, Geekbench testinde ortaya çıktı. Listeleme, telefonun Exynos 2700 işlemcisini ve 12 GB RAM kapasitesini doğrularken performans sonuçlarını da gösteriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/galaxy-s27-pro-geekbench-te-test-edildi-iste-ozellikleri--213182",
-      "publishedAt": "2026-11-20T13:48:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/213182/1200x675galaxy-s27-pro-geekbench-te-test-edildi-iste-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "8ab2b23f1cbe46b4d3",
-      "title": "Katı hal bataryalı elektrikli uçak 5 bin metreye çıktı, üç dünya rekoru kırdı",
-      "summary": "Helios Horizon'ın katı hal bataryalı elektrikli uçağı 5.242 metre irtifaya çıkarak üç dünya rekoruna imza attı. Üstelik uçak, bataryasının yalnızca yüzde 36'sını kullandı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/kati-hal-bataryali-elektrikli-ucak-17-bin-200-feet-irtifaya-cikti--213183",
-      "publishedAt": "2026-11-20T13:25:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213183/1200x675kati-hal-bataryali-elektrikli-ucak-17-bin-200-feet-irtifaya-cikti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "6cbe3cf85d1f2dc238",
       "title": "En İyi Jeneratör Markaları - 2026",
       "summary": "En iyi jeneratör markalarını 2026 fiyatları, motor güçleri, yakıt tüketimleri ve kullanım özellikleriyle karşılaştırıyoruz.",
@@ -323,18 +347,6 @@
       "publishedAt": "2026-11-20T13:18:19Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/698104/698104-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4959310babccf61a8a",
-      "title": "Yerli üretim FIAT Doblo, bayilerdeki yerini aldı: İşte fiyatlar",
-      "summary": "İlk kez 2000 yılında Tofaş Fabrikası'nda üretilen ve 2023'e kadar Bursa'da üretimine devam edilen Doblo, üç yıllık aranın ardından yeniden doğduğu topraklarda üretilerek showroomlardaki yerini aldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yerli-uretim-fiat-doblo-bayilerdeki-yerini-aldi-iste-fiyatlar--213185",
-      "publishedAt": "2026-11-20T13:14:30Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213185/1200x675yerli-uretim-fiat-doblo-bayilerdeki-yerini-aldi-iste-fiyatlar.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1187,18 +1199,6 @@
       "publishedAt": "2026-11-03T14:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6GJ6AY4JP65PWEN7N433797.01M6GJ6BBQ9P5FYVNPWDVKT2EY.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "3017d51cc49fa391b0",
-      "title": "How we halved DNS build delay and cut memory use by 85%",
-      "summary": "Zone setting changes used to rebuild entire DNS zones, even ones with tens of millions of records. Here is how we built a planner that picks the smallest safe build, cutting full builds by 40%, peak memory by 85%, and halving build delay.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/dns-targeted-zone-builds/",
-      "publishedAt": "2026-11-02T14:00:00Z",
-      "category": "Teknoloji",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6427MMYH94N030R2BSS8Z72.01M6427NA85VEN498BC5RPEDXK.png",
       "language": "en",
       "editorial": false
     }
