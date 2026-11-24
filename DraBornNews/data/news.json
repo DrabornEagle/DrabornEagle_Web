@@ -1,7 +1,31 @@
 {
-  "generatedAt": "2026-11-23T21:57:42.801196Z",
+  "generatedAt": "2026-11-24T05:49:44.390415Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "264d9338af09a24f1e",
+      "title": "Honor CEO'sundan iddialı sözler: \"Yeni katlanabilir telefonda katlanma izi olmayacak\"",
+      "summary": "Honor CEO'su Li Jian, şirketin ilk geniş form faktörlü katlanabilir telefonunun Mart 2027'de tanıtılacağını doğruladı. CEO ayrıca, ekrandaki katlanma izini tamamen ortadan kaldırdıklarını iddia etti.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/honor-un-yeni-katlanabilir-telefonunda-katlanma-izi-olmayacak--213300",
+      "publishedAt": "2026-11-24T05:46:04Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213300/1200x675honor-un-yeni-katlanabilir-telefonunda-katlanma-izi-olmayacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b3605684075de212ef",
+      "title": "Thank you for making Grand Theft Auto VI the biggest launch in PlayStation history",
+      "summary": "After a long wait, players finally have had the chance to jump into Grand Theft Auto VI. It’s been amazing to see the PlayStation community around the world begin their adventures in the state of Leonida. Whether you’ve been counting down the days to return to the streets of Vice City or you’re experiencing the",
+      "source": "PlayStation Blog",
+      "sourceUrl": "https://blog.playstation.com/2026/11/23/thank-you-for-making-grand-theft-auto-vi-the-biggest-launch-in-playstation-history/",
+      "publishedAt": "2026-11-23T23:30:13Z",
+      "category": "Oyun",
+      "image": "",
+      "language": "en",
+      "editorial": false
+    },
     {
       "id": "0d3f3439215854eb88",
       "title": "How to Play Grand Theft Auto VI in the Cloud and with Remote Play",
@@ -347,18 +371,6 @@
       "publishedAt": "2026-11-23T14:46:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/213281/1200x675vodafone-dan-kadina-yonelik-siddetle-mucadele-icin-mobil-uygulama.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e16d5de14f1d0e6729",
-      "title": "Avrupa Birliği, güneş hücresi üretiminde yeni teknolojiler için kesenin ağzını açıyor",
-      "summary": "Avrupa'nın güneş paneli üretiminde geride kaldığı alanları güçlendirmeyi hedefleyen AB, yüksek verimli güneş hücreleri ve yeni üretim teknolojileri için 36 milyon euro ayıracak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/ab-den-gunes-enerjisi-uretimine-36-milyon-euroluk-destek--213280",
-      "publishedAt": "2026-11-23T14:43:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213280/1200x675ab-den-gunes-enerjisi-uretimine-36-milyon-euroluk-destek.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1079,18 +1091,6 @@
       "publishedAt": "2026-11-12T16:00:02Z",
       "category": "Teknoloji",
       "image": "",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "4b2eaf518244f0a5e8",
-      "title": "Vindictus: Defying Fate comes to PS5 next year",
-      "summary": "Hello, PlayStation players. I’m Dongseok Oh, lead director of the high-octane action-RPG Vindictus: Defying Fate. Our team is building a medieval fantasy adventure where heroes must stand against colossal foes in a world inspired by Celtic mythology and, today, we’re officially revealing that Vindictus: Defying Fate is coming to PS5. I’m honored to have this",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/12/vindictus-defying-fate-comes-to-ps5-next-year/",
-      "publishedAt": "2026-11-12T13:07:48Z",
-      "category": "Oyun",
-      "image": "https://blog.playstation.com/content/themes/playstation-2018/images/placeholder.svg",
       "language": "en",
       "editorial": false
     },
