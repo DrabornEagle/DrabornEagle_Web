@@ -1,7 +1,91 @@
 {
-  "generatedAt": "2026-11-25T20:04:42.330133Z",
+  "generatedAt": "2026-11-26T02:44:14.431234Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "5803b034da168681b1",
+      "title": "Şifre yöneticisi 1Password hacklendi, müşteri verileri ele geçirildi",
+      "summary": "1Password, çalışanlarından birinin hesabı üzerinden gerçekleştirilen siber saldırıda müşteri verilerinin ele geçirildiğini doğruladı. Şirket, saldırının kapsamına ilişkin detayları paylaştı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/1password-hacklendi-musteri-verileri-ele-gecirildi--213399",
+      "publishedAt": "2026-11-25T22:18:12Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213399/1200x6751password-hacklendi-musteri-verileri-ele-gecirildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c49face02f2314d093",
+      "title": "Samsung'tan Micro LED ekran yatırımı: OSRAM'ın en büyük hissedarı oluyor",
+      "summary": "Samsung Display, Avusturyalı ams OSRAM'ın yüzde 9,1 hissesini 210 milyon euro karşılığında satın alıyor. İki şirket, yeni nesil ultra küçük Micro LED ekranlar geliştirecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-kucuk-boyutlu-micro-led-ekranlar-icin-dugmeye-basti--213390",
+      "publishedAt": "2026-11-25T21:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213390/1200x675samsung-kucuk-boyutlu-micro-led-ekranlar-icin-dugmeye-basti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "608511469432093f0f",
+      "title": "Ted Lasso'nun 5. sezonu olacak mı? Apple kararını açıkladı",
+      "summary": "Bu yıl 4. sezonuyla ekranlara geri dönen Ted Lasso'nun 5. sezonu olacak mı? Apple, sevilen komedi dizisinin geleceğine dair kararını resmi olarak paylaştı. İşte detaylar...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/apple-ted-lasso-5-sezon-icin-kararini-acikladi--213367",
+      "publishedAt": "2026-11-25T21:10:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213367/1200x675apple-ted-lasso-5-sezon-icin-kararini-acikladi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "455669e2cab77a77f5",
+      "title": "Volkswagen, aracını şarja bağlı tutanlara para ödeyecek",
+      "summary": "Volkswagen, Almanya’da aracını şarja bağlı tutanlara ilk yıl 720 euroya kadar bonus verecek. Ödeme bağlantı süresine göre hesaplanacak. Katılmak için uyumlu şarj cihazı ve elektrik tarifesi gerekecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/volkswagen-aracini-sarja-bagli-tutanlara-para-odeyecek--213373",
+      "publishedAt": "2026-11-25T20:50:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213373/1200x675volkswagen-aracini-sarja-bagli-tutanlara-para-odeyecek.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1deec6195bd41f40bd",
+      "title": "Yapay zekâda ezber bozan mimari: GLM-5.4 aynı katmanları iki kez işleyip gücünü artırıyor",
+      "summary": "Çinli Z.ai'ın Loop Transformer mimarisini temel alan yeni yapay zekâsı GLM-5.4 , sinir ağı katmanlarını tekrar kullanarak kendisinden çok daha büyük modellerin performansına yaklaşıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/glm-5-4-tanitildi-yapay-zeka-modellerinde-ezber-bozan-mimari--213383",
+      "publishedAt": "2026-11-25T20:30:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213383/1200x675glm-5-4-tanitildi-yapay-zeka-modellerinde-ezber-bozan-mimari.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "822fae450ff89cf871",
+      "title": "Uzaktan çalışan ekipler için güvenli erişim: Ev ağından ortak Wi-Fi'ye kadar",
+      "summary": "Uzaktan ve hibrit çalışan ekiplerde şirket verilerine güvenli erişim sağlamak için VPN, çok faktörlü doğrulama ve merkezi erişim yönetimi gibi önlemler öne çıkıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/uzaktan-calismada-guvenli-erisim-ev-agindan-ortak-wi-fi-ye-kadar--213396",
+      "publishedAt": "2026-11-25T20:27:43Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213396/1200x675uzaktan-calismada-guvenli-erisim-ev-agindan-ortak-wi-fi-ye-kadar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fa9ea61cb73efd2bdb",
+      "title": "Büyük kesinti sonrası Microsoft alarma geçti",
+      "summary": "Microsoft, tarihinin en büyük hizmet kesintisinin ardından Code Red alarmı verdi. Şirket, benzer sorunlarda küresel hizmetleri bir saat içinde kurtarmayı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/buyuk-kesinti-sonrasi-microsoft-alarma-gecti--213372",
+      "publishedAt": "2026-11-25T20:10:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213372/1200x675buyuk-kesinti-sonrasi-microsoft-alarma-gecti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "81ae963989e7bed9fe",
       "title": "MacBook Neo 2'nin çıkış tarihi ortaya çıktı: Yeni renkler de yolda",
@@ -279,30 +363,6 @@
       "editorial": false
     },
     {
-      "id": "19aada409559585d02",
-      "title": "5 dolarlık Raspberry Pi ile Nvidia ekran kartının 80 GB belleği açıldı",
-      "summary": "Bir donanım araştırmacısı, 5 dolarlık Raspberry Pi Pico 2 kullanarak Nvidia CMP 170HX ekran kartının bellek kapasitesini 8 GB'tan 80 GB'a çıkardı. İşte detaylar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/raspberry-pi-ile-nvidia-ekran-kartinin-80-gb-bellegi-acildi--213361",
-      "publishedAt": "2026-11-25T13:43:14Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/213361/1200x675raspberry-pi-ile-nvidia-ekran-kartinin-80-gb-bellegi-acildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "efea2084063c6c40b7",
-      "title": "iPhone 18e'nin yeni tasarımı sızdırıldı: Kamera değişiyor",
-      "summary": "Apple'ın uygun fiyatlı modeli iPhone 18e, yeni kamera tasarımıyla Pro serisine daha çok benzeyecek. Telefonun arka tasarımı gösteren yeni CAD görünütleri sızdırıldı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-18e-nin-yeni-tasarimi-sizdirildi-kamera-degisiyor--213359",
-      "publishedAt": "2026-11-25T13:26:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213359/1200x675iphone-18e-nin-yeni-tasarimi-sizdirildi-kamera-degisiyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "bcba1c0c3e66ef2eda",
       "title": "Teknoloji Devlerinden 2027 İçin Şok Karar: Samsung ve Apple Bile Telefon Üretimini Kısıyor (Bir Marka Hariç!)",
       "summary": "Artan bellek maliyetleri yüzünden telefon markaları 2027 sevkiyat hedeflerini düşürürken Honor mevcut hedefini koruyor.",
@@ -351,54 +411,6 @@
       "editorial": false
     },
     {
-      "id": "d791f14d5c0435d16d",
-      "title": "Üç ekranlı laptop Huawei MateBook Fold S tanıtıldı",
-      "summary": "Huawei, üç ekranlı katlanabilir laptop MateBook Fold S'i tanıttı. Yeni model, HarmonyOS 7 işletim sistemi, Kirin XE90 işlemci ve yapay zeka destekli çeşitli özellikler sunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/huawei-matebook-fold-s-tanitildi-iste-fiyati-ve-ozellikleri--213362",
-      "publishedAt": "2026-11-25T13:05:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/213362/1200x675huawei-matebook-fold-s-tanitildi-iste-fiyati-ve-ozellikleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1383412d982190717a",
-      "title": "Take-Two, GTA 6 PC projelerine savaş açtı: Oyun 5 FPS'e ulaştı",
-      "summary": "Take-Two, GTA 6'nın PC sürümüne yönelik 3.007 GitHub deposunu DMCA başvurusuyla kaldırttı. Ancak sızıntı üzerinden geliştirilen projeler özel gruplarda ilerlemeye devam ediyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/take-two-gta-6-pc-projelerine-savas-acti-oyun-5-fps-e-ulasti--213363",
-      "publishedAt": "2026-11-25T12:44:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/213363/1200x675take-two-gta-6-pc-projelerine-savas-acti-oyun-5-fps-e-ulasti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4216d40aa075b19f39",
-      "title": "Intel'in yeni nesil masaüstü işlemcileri geliyor: Tarih açıklandı",
-      "summary": "Intel'in yeni nesil Nova Lake masaüstü işlemcileri için Şubat 2027'de Berlin'de özel bir etkinlik düzenleyeceği ortaya çıktı. Lansman takvimi de netleşiyor. İşte detaylar...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/intel-in-yeni-nesil-masaustu-islemcileri-geliyor-tarih-aciklandi--213364",
-      "publishedAt": "2026-11-25T12:23:00Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/213364/1200x675intel-in-yeni-nesil-masaustu-islemcileri-geliyor-tarih-aciklandi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "04685f75258032f993",
-      "title": "Avrupa, ABD ve Çin'e karşı 50 milyar euroluk teknoloji fonu kuruyor",
-      "summary": "AB, ABD ve Çin'e teknoloji alanında rakip olmak isteyen Avrupa Birliği, yapay zeka ve kuantum şirketlerine yatırım yapmak için 50 milyar euroluk yeni bir fon kurmayı planlıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/avrupa-birligi-50-milyar-euroluk-teknoloji-fonu-kuruyor--213365",
-      "publishedAt": "2026-11-25T12:02:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213365/1200x675avrupa-birligi-50-milyar-euroluk-teknoloji-fonu-kuruyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "83cfdc1cdc7452db0c",
       "title": "Sağlık Verilerinizi Yorumlayabilen ChatGPT Health, Android'e Geldi",
       "summary": "OpenAI, ChatGPT Health özelliğini Android Health Connect desteğiyle genişleterek akıllı saat ve fitness verilerinizi sohbet diliyle analiz ediyor.",
@@ -419,18 +431,6 @@
       "publishedAt": "2026-11-25T12:00:01Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/698596/698596-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "1a4867063f94f84e23",
-      "title": "Tidal'den dijital müzik sektöründe ilk: Yapay zeka yasağı geliyor!",
-      "summary": "Tidal, önümüzdeki aydan itibaren yapay zekayla üretilen parçaların çıkarılacağını duyurdu. Şirketin yöneticisi, bu adımın hem sanatçılar hem de dinleyiciler nezdinde yankı bulacağına inanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/tidal-yapay-zekayla-yapilan-muzikleri-engelleyecek--213356",
-      "publishedAt": "2026-11-25T11:40:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213356/1200x675tidal-yapay-zekayla-yapilan-muzikleri-engelleyecek.jpg",
       "language": "tr",
       "editorial": false
     },
