@@ -1,16 +1,268 @@
 {
-  "generatedAt": "2026-11-27T13:39:08.927124Z",
+  "generatedAt": "2026-11-27T22:35:34.188213Z",
   "sourceCount": 7,
   "items": [
     {
-      "id": "5d7dc1425eec28074b",
-      "title": "Rekabet Kurumundan Xiaomi ve Infinix telefonlarına yönelik fiyat soruşturması",
-      "summary": "Rekabet Kurumu, Xiaomi ve Infinix telefonlarının satış fiyatlarına müdahale edildiği ve beş şirketin fiyatları birlikte belirlediği iddialarıyla soruşturma başlattı.",
+      "id": "d602b35d57d4ea6a8d",
+      "title": "A101 marketler Apple’dan ucuza iPhone Duo satıyor",
+      "summary": "26 Kasım A101 Ekstra teknoloji ürünleri arasında Apple Store satış fiyatından bir tık daha düşük şekilde iPhone Duo katlanabilir telefon modeli yer alıyor.",
       "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/xiaomi-ve-infinix-telefonlarina-yonelik-fiyat-sorusturmasi--213457",
-      "publishedAt": "2026-11-27T13:34:13Z",
+      "sourceUrl": "https://www.donanimhaber.com/26-kasim-a101-ekstra-katalogunda-neler-var--213491",
+      "publishedAt": "2026-11-27T20:00:00Z",
       "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213457/1200x675xiaomi-ve-infinix-telefonlarina-yonelik-fiyat-sorusturmasi.jpg",
+      "image": "https://www.donanimhaber.com/images/images/haber/213491/1200x67526-kasim-a101-ekstra-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6418df03d3bb11db78",
+      "title": "Bellek krizi büyüyor: Şirketler RAM bulabilmek için 'savaş odaları' kuruyor",
+      "summary": "Bellek krizi derinleşirken elektronik üreticileri RAM bulabilmek için adeta seferberlik başlattı. Şirketler, 5-12 adetlik küçük bellek stoklarını bile satın almaya çalışıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sirketler-ram-bulabilmek-icin-savas-odalari-kuruyor--213488",
+      "publishedAt": "2026-11-27T19:07:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213488/1200x675sirketler-ram-bulabilmek-icin-savas-odalari-kuruyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "cb94f1cca1e06b097b",
+      "title": "Sharp, yaşlılar için yapay zeka destekli akıllı telefonunu tanıttı",
+      "summary": "Sharp, Simple Smartphone 8 modelini tanıttı. Cihaz, yapay zeka destekli dolandırıcılık tespiti, fiziksel kısayol tuşları ve kolaylaştırılmış arayüzüyle yaşlı kullanıcıları hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sharp-yaslilar-icin-yapay-zeka-destekli-akilli-telefonunu-tanitti--213487",
+      "publishedAt": "2026-11-27T18:45:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213487/1200x675sharp-yaslilar-icin-yapay-zeka-destekli-akilli-telefonunu-tanitti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c8577d6e369ce545ee",
+      "title": "GPU belleğini 1 petabaytın üzerine çıkaran SSD sistemi tanıtıldı",
+      "summary": "Kioxia ve Nvidia, 144 adet NVMe SSD kullanarak GPU belleğini 1,1 petabaytın üzerine çıkaran yeni bir sistem geliştirdi. Teknoloji, HBM kapasitesine alternatif sunmayı hedefliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gpu-bellegini-1-petabaytin-uzerine-cikaran-ssd-sistemi-tanitildi--213472",
+      "publishedAt": "2026-11-27T18:22:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/213472/1200x675gpu-bellegini-1-petabaytin-uzerine-cikaran-ssd-sistemi-tanitildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "fbbe999db722be3a15",
+      "title": "X, 20 yılın ardından ebeveyn denetimi özelliklerini kullanıma sundu",
+      "summary": "X, çocuklar ve gençler için ilk kez ebeveyn denetimi özelliklerini kullanıma sundu. Yeni araçlar, ebeveynlerin hesaplar üzerinde çeşitli kontroller gerçekleştirmesine izin veriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/x-nihayet-ebeveyn-denetimi-ozelliklerini-kullanima-sundu--213473",
+      "publishedAt": "2026-11-27T18:01:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213473/1200x675x-nihayet-ebeveyn-denetimi-ozelliklerini-kullanima-sundu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2a7b28c32ede551522",
+      "title": "Intel Nova Lake-S işlemciler sızdırıldı: 28 çekirdek ve 5,5 GHz hız",
+      "summary": "Intel'in yeni nesil Nova Lake-S masaüstü işlemcilerine ait teknik özellikler sızdırıldı. Listenin zirvesindeki Core Ultra 9 4970K BFC, 28 çekirdek ve 144 MB önbellekle geliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/intel-nova-lake-s-islemciler-sizdirildi-28-cekirdek-ve-5-5-ghz--213476",
+      "publishedAt": "2026-11-27T17:17:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/213476/1200x675intel-nova-lake-s-islemciler-sizdirildi-28-cekirdek-ve-5-5-ghz.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "790bb683b64922068f",
+      "title": "Nvidia, Güneydoğu Asya'ya yapay zeka çipi sevkiyatını durdurdu",
+      "summary": "Nvidia, ABD'nin yeni ihracat kuralları nedeniyle dört Güneydoğu Asya ülkesine yapay zeka sunucusu sevkiyatını durdurdu. Karar, bölgedeki veri merkezi yatırımlarını ve Çinli şirketleri etkiliyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/nvidia-guneydogu-asya-ya-yapay-zeka-cipi-sevkiyatini-durdurdu--213484",
+      "publishedAt": "2026-11-27T16:56:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213484/1200x675nvidia-guneydogu-asya-ya-yapay-zeka-cipi-sevkiyatini-durdurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a3f81d68edbc199369",
+      "title": "Xiaomi'den 165 Hz ekranlı uygun fiyatlı televizyon: Redmi TV A55 2027 tanıtıldı",
+      "summary": "Xiaomi, 4K çözünürlüklü ve 165 Hz yenileme hızlı yeni televizyonu Redmi TV A55 2027 modelini tanıttı. HyperOS 4 kullanan cihaz, uygun fiyatıyla öne çıkıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/xiaomi-redmi-tv-a55-2027-duyuruldu-4k-165-hz-ve-hyperos-4--213481",
+      "publishedAt": "2026-11-27T16:35:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213481/1200x675xiaomi-redmi-tv-a55-2027-duyuruldu-4k-165-hz-ve-hyperos-4.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "1b488488a250291a1b",
+      "title": "Bakırın aksine küçüldükçe güçlenen bu yeni iletken, çiplere sınıf atlatabilir",
+      "summary": "Geleceğin işlemcilerinde bakırın yerini alabilecek yeni bir malzeme geliştirildi. Niyobyum fosfitten üretilen 6 nanometrelik teller, bakırdan daha iyi iletkenlik sunuyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/ciplerde-bakirin-sinirlarini-asabilecek-yeni-malzeme-gelistirildi--213485",
+      "publishedAt": "2026-11-27T16:14:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/213485/1200x675ciplerde-bakirin-sinirlarini-asabilecek-yeni-malzeme-gelistirildi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "6a698fbb301680ac05",
+      "title": "Samsung Galaxy A38'in işlemcisi ortaya çıktı: İşte ilk sonuçlar",
+      "summary": "Samsung'un yeni orta segment telefonu Galaxy A38, Geekbench veri tabanında ortaya çıktı. Dimensity 7500 işlemciden güç alacak olan model, daha büyük pille beraber daha yüksek kullanım ömrü sunabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-galaxy-a38-in-islemcisi-ortaya-cikti-iste-ilk-sonuclar--213482",
+      "publishedAt": "2026-11-27T15:53:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/213482/1200x675samsung-galaxy-a38-in-islemcisi-ortaya-cikti-iste-ilk-sonuclar.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "bb01fe620f1a324ff2",
+      "title": "BYD'den 900 km menzilli dev minivan: Whale sahneye çıktı",
+      "summary": "BYD, Ocean serisinin ilk MPV modeli Whale'ı tanıttı. Tamamen elektrikli versiyonunda 900 kilometre menzil sunacak araç, yalnızca 9 dakikada şarj edebilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/byd-whale-tanitildi-900-km-menzil-ve-9-dakikada-sarj--213486",
+      "publishedAt": "2026-11-27T15:32:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213486/1200x675byd-whale-tanitildi-900-km-menzil-ve-9-dakikada-sarj.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "bbc438280e3bd0915a",
+      "title": "Microsoft, Windows 11'in RAM kullanımını düşürdü",
+      "summary": "Microsoft, artan RAM fiyatlarına karşı Windows 11'in bellek kullanımını optimize etti. Şirket, sistem genelinde 800 MB'tan fazla bellek tasarrufu sağladığını açıkladı.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/microsoft-windows-11-in-ram-kullanimini-dusurdu--213467",
+      "publishedAt": "2026-11-27T15:11:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213467/1200x675microsoft-windows-11-in-ram-kullanimini-dusurdu.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "85f383c35826b18ef9",
+      "title": "Vodafone CEO'su Engin Aksoy, Onedio'a Sosyal Medyadan Gelen Soruları Yanıtladı",
+      "summary": "Vodafone CEO'su Engin Aksoy, Onedio'da sosyal medyadan gelen soruları yanıtladı.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/vodafone-ceo-engin-aksoy-sosyal-medyadan-gelen-sorulari-yanitladi-h229573.html",
+      "publishedAt": "2026-11-27T15:05:58Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/698998/698998-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "a3d45e8860072d0d15",
+      "title": "Yeni Intel Core 3 304 işlemci dizüstünde günlük kullanımda ne sunuyor? İşte Lenovo IdeaPad Slim 3!",
+      "summary": "Intel'in yeni mobil giriş seviye işlemcisi olan Intel Core 3 304'e sahip olan Lenovo IdeaPad Slim 3 modelini inceledik: Hafif, verimli ve yükseltilebilir. Kimlere uyuyor, nerede zorlanıyor?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iste-yeni-intel-core-3-304-islemcisiyle-lenovo-ideapad-slim-3--213478",
+      "publishedAt": "2026-11-27T15:01:10Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/213478/1200x675iste-yeni-intel-core-3-304-islemcisiyle-lenovo-ideapad-slim-3.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4e26d52f9ccc6020ba",
+      "title": "Next Week on XBOX: New Games for November 30 to December 4",
+      "summary": "Welcome to Next Week on XBOX! In this weekly feature we cover all the games coming soon to XBOX Series X|S, XBOX One, XBOX on PC, and Game Pass! Get more details on these upcoming games below and click their profiles for further info (release dates subject to change). Let’s jump in! Hela: of Mice",
+      "source": "Xbox Wire",
+      "sourceUrl": "https://news.xbox.com/en-us/2026/11/27/next-week-on-xbox-new-games-for-november-30-to-december-4/",
+      "publishedAt": "2026-11-27T15:00:00Z",
+      "category": "Oyun",
+      "image": "https://store-images.s-microsoft.com/image/apps.37680.13695455777746470.b5065f12-4f24-419f-8748-b2862b4eb30c.3be8773f-10df-4d40-a088-e321a9b99f87?w=400&h=600",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "fd46afc2f22db52faf",
+      "title": "Samsung telefonlara akıllı şarj hatırlatıcı özelliği geliyor",
+      "summary": "Samsung, onarım için batarya güvenliğini sağlayan Güvenli Pil Gönderimi özelliğini test ediyor. Ayrıca, normal şarj aralığı kaçırıldığında uyaran şarj hatırlatıcı özelliği geliştiriyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/samsung-telefonlara-akilli-sarj-hatirlatici-ozelligi-geliyor--213475",
+      "publishedAt": "2026-11-27T14:50:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213475/1200x675samsung-telefonlara-akilli-sarj-hatirlatici-ozelligi-geliyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "173209fdf7500a5ead",
+      "title": "ChatGPT ve Gemini için tablet seçimi: AI için tabletler",
+      "summary": "Gemini, ChatGPT ve diğer AI uygulamaları için en iyi tabletler, güçlü işlemci, yüksek kapasiteli RAM ve büyük ekran sunar. Peki, hangi modeli almalı? İşte yapay zeka destekli tablet önerileri:",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-destekli-tabletler--213389",
+      "publishedAt": "2026-11-27T14:38:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213389/1200x675yapay-zeka-destekli-tabletler.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "746d71e03cb9dccd73",
+      "title": "n11'in Kasım Fırsatlarında Büyük Final Başladı: İşte Öne Çıkan İndirimler",
+      "summary": "n11'de Black Friday'e özel indirimler başladı. Teknolojik ürünlerde sepette ek indirim kampanyaları ve \"Akakçe En İyi Fiyat\" rozetli ürünler dikkat çekiyor. Öne çıkan indirimleri listeledik.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/n11-de-kasim-firsatlari-nda-buyuk-final-basladi-2026--213480",
+      "publishedAt": "2026-11-27T14:22:08Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213480/1200x675n11-de-kasim-firsatlari-nda-buyuk-final-basladi-2026.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ddf73693a45b368799",
+      "title": "Çocuklarda Ekran Kullanımının Etkisi Yıllar Sonra Ortaya Çıkıyor: Özellikle Bu 2 Yaşa Dikkat!",
+      "summary": "Bir bilimsel araştırmaya göre çocuk gelişiminde yalnızca ekran süresinin uzunluğu değil, ekranla hangi yaşta tanışıldığı da önemli.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/cocuklarda-ekran-suresi-kritik-yaslar-hafiza-okul-basarisi-h229564.html",
+      "publishedAt": "2026-11-27T14:19:57Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/698959/698959-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "00d55b923c73b5971f",
+      "title": "Hyundai’den Bataryası Değiştirilebilen Yeni Elektrikli SUV Geliyor: Karşınızda Ioniq M",
+      "summary": "Hyundai, şarj bekleme sorununa farklı bir yaklaşım getiren yeni elektrikli SUV'u Ioniq M'in ilk görüntülerini paylaştı. Değiştirilebilir batarya teknolojisiyle öne çıkan kompakt model, 2027'de yollara çıkacak.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/hyundai-bataryasi-degistirilebilen-elektrikli-suv-ioniq-m-h229568.html",
+      "publishedAt": "2026-11-27T14:19:36Z",
+      "category": "Teknoloji",
+      "image": "https://imgrosetta.webtekno.com/file/698977/698977-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "4ff5a23b3df8422a50",
+      "title": "Android geliştiricilerinin adres ve telefon numaraları herkese açık olacak",
+      "summary": "Google, Android uygulama geliştiricileri için yeni bir zorunluluk getiriyor. 2027'de yürürlüğe girecek değişiklikle birlikte geliştiricilerin adres ve telefon numaraları herkese açık olacak.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/android-gelistiricilerinin-adresi-herkese-acik-olacak--213470",
+      "publishedAt": "2026-11-27T13:45:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213470/1200x675android-gelistiricilerinin-adresi-herkese-acik-olacak.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "66c056d8246b1e3e30",
+      "title": "Amazon Gülümseten Cuma Flaş Fırsatları başladı: iPhone 18 Pro ve Galaxy Z Fold indirime girdi",
+      "summary": "Amazon.com.tr'de Gülümseten Cuma'ya özel Flaş Fırsatlar başladı. iPhone 18 Pro, Galaxy Z Fold8 Ultra ve Roborock robot süpürge dahil birçok üründe indirim var.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/amazon-gulumseten-cuma-flas-firsatlari-basladi-iphone-18-pro-ve--213483",
+      "publishedAt": "2026-11-27T13:41:07Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213483/1200x675amazon-gulumseten-cuma-flas-firsatlari-basladi-iphone-18-pro-ve.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -23,18 +275,6 @@
       "publishedAt": "2026-11-27T13:24:00Z",
       "category": "Teknoloji",
       "image": "https://www.donanimhaber.com/images/images/haber/213469/1200x675stellantis-avrupa-daki-fabrikalarinda-uretimi-durduruyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "66c056d8246b1e3e30",
-      "title": "Amazon Gülümseten Cuma Flaş Fırsatları başladı: iPhone 18 Pro ve Galaxy Z Fold indirime girdi",
-      "summary": "Amazon.com.tr'de Gülümseten Cuma'ya özel Flaş Fırsatlar başladı. iPhone 18 Pro, Galaxy Z Fold8 Ultra ve Roborock robot süpürge dahil birçok üründe indirim var.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-gulumseten-cuma-flas-firsatlari-basladi-iphone-18-pro-ve--213483",
-      "publishedAt": "2026-11-27T13:20:29Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213483/1200x675amazon-gulumseten-cuma-flas-firsatlari-basladi-iphone-18-pro-ve.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -99,18 +339,6 @@
       "editorial": false
     },
     {
-      "id": "c80110d1f46eec4322",
-      "title": "Android Auto'nun geniş ekran sorunu çözülüyor: Yeni arayüz hazır",
-      "summary": "Google, Android Auto'nun geniş yatay ekranlardaki kullanımını kolaylaştıran yeni arayüzünü dağıtmaya başladı. Güncelleme, menüleri ekranın sol tarafına taşıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/android-auto-nun-genis-ekran-sorunu-cozuluyor-yeni-arayuz-hazir--213471",
-      "publishedAt": "2026-11-27T11:53:11Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213471/1200x675android-auto-nun-genis-ekran-sorunu-cozuluyor-yeni-arayuz-hazir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "181d2be4eeb88572b7",
       "title": "Apple'ın 20. Yılına Özel Seramik iPhone 20 Pro Gelebilir: Sınırlı Üretim, Yüksek Fiyat!",
       "summary": "iPhone 20'ye seramik bir özel sürüm gelebileceği konuşuluyor.",
@@ -135,30 +363,6 @@
       "editorial": false
     },
     {
-      "id": "08857f224de5fe3b9c",
-      "title": "iPhone 20 Pro özel seramik versiyonla gelebilir",
-      "summary": "Apple, 2027'de iPhone'un 20. yıldönümü için özel bir şey hazırlıyor olabilir. Şirketin sınırlı sayıda üretilecek seramik tasarımlı iPhone 20 Pro üzerinde çalıştığı bildiriliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iphone-20-pro-ozel-seramik-versiyonla-gelebilir--213458",
-      "publishedAt": "2026-11-27T11:06:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213458/1200x675iphone-20-pro-ozel-seramik-versiyonla-gelebilir.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "6559ef6ac997ae085f",
-      "title": "Epic Games'in bu haftaki ücretsiz oyunları erişime açıldı",
-      "summary": "Epic Games Store ücretsiz oyun fırsatlarına devam ediyor. Son olarak 26 Kasım-3 Aralık tarihleri arasında sunulacak yeni ücretsiz oyunlar erişime açıldı. İşte bu haftanın ücretsiz oyunları...",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/epic-games-in-bu-haftaki-ucretsiz-oyunlari-erisime-acildi--213460",
-      "publishedAt": "2026-11-27T10:44:00Z",
-      "category": "Oyun",
-      "image": "https://www.donanimhaber.com/images/images/haber/213460/1200x675epic-games-in-bu-haftaki-ucretsiz-oyunlari-erisime-acildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "8679e49860b699e03b",
       "title": "Apple’ın Hiç Üretmediği Mac Bilgisayar Gerçeğe Dönüştürüldü",
       "summary": "Apple'ın 1982'de ele aldığı ama hiç üretmediği \"Happy Mac\" konsepti, modern parçalarla çalışan bir bilgisayara dönüştürüldü.",
@@ -171,18 +375,6 @@
       "editorial": false
     },
     {
-      "id": "0e40e9d34823e3cbb7",
-      "title": "WhatsApp, seyahatler için Travel eSIM özelliğini duyurdu",
-      "summary": "WhatsApp, yurt dışı seyahatlerinde internet bağlantısını kolaylaştıracak Travel eSIM özelliğini duyurdu. Kullanıcılar, uygulamadan ayrılmadan eSIM satın alıp yükleyebilecek.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/whatsapp-seyahatler-icin-travel-esim-ozelligini-duyurdu--213461",
-      "publishedAt": "2026-11-27T10:22:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213461/1200x675whatsapp-seyahatler-icin-travel-esim-ozelligini-duyurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "3f9e7dcff0ba0e4442",
       "title": "Casper Excalibur Gaming Laptop Rehberi: G920, G915, G870, G887 Karşılaştırması ve Fiyatları",
       "summary": "Casper Excalibur serisi 64.999 TL'den 307.755 TL'ye uzanıyor: bütçe için Excalibur G870, taşınabilirlik için Excalibur G915, büyük ekran için Excalibur G887, en yüksek performans için RTX 5090'lı Excalibur G920.",
@@ -191,66 +383,6 @@
       "publishedAt": "2026-11-27T10:21:06Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/698480/698480-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a6880c44af70165569",
-      "title": "Amazon'da Gülümseten Cuma indirimleri başladı: İşte öne çıkanlar",
-      "summary": "Amazon'un uzun zamandır devam eden Kasım kampanyasında şimdi Black Friday'e özel indirimler devreye girdi. Gülümseten Cuma gününe özel olarak fiyatlar cazip seviyeler indi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-da-gulumseten-cuma-indirimleri-basladi-2026--213462",
-      "publishedAt": "2026-11-27T10:09:09Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213462/1200x675amazon-da-gulumseten-cuma-indirimleri-basladi-2026.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2f553f50de1d20ce68",
-      "title": "170 yıllık finans tarihi incelendi: Yapay zeka balonu patlamak üzere",
-      "summary": "170 yıllık finans tarihi incelenerek yapay zeka piyasasında balon oluşma ihtimali yüzde 97 olarak hesapladı. Bulgular, dot-com balonuyla benzerlik gösteren büyük bir çöküşe işaret ediyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/170-yillik-finans-tarihi-uyardi-yapay-zeka-balonu-patlamak-uzere--213464",
-      "publishedAt": "2026-11-27T10:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213464/1200x675170-yillik-finans-tarihi-uyardi-yapay-zeka-balonu-patlamak-uzere.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "dc6e7f21cb0f8c2397",
-      "title": "Google CEO'sundan Türkiye odaklı yapay zeka açıklaması",
-      "summary": "Google CEO'su Sundar Pichai, Türkiye'nin Gemini kullanımında öne çıktığını belirterek yapay zekanın önümüzdeki 10 yılda ülke ekonomisine 100 milyar dolar katkı sağlayabileceğini açıkladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/google-ceo-sundan-turkiye-odakli-yapay-zeka-aciklamasi--213459",
-      "publishedAt": "2026-11-27T09:41:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213459/1200x675google-ceo-sundan-turkiye-odakli-yapay-zeka-aciklamasi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "12b510c31af92599e3",
-      "title": "Black Friday indirimleri başladı! İşte 2026 Efsane & Kara Cuma kampanyaları",
-      "summary": "2026 Black Friday indirimleri ne zaman diye merak edenler için kampanyalar başladı! Efsane & Kara Cuma indirimleri %80'e varan fırsatlarla burada. İşte indirime giren mağazalar, markalar ve ürünler:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/black-friday-ne-zaman-basliyor-kara-cuma-anlami-ne-demek--141235",
-      "publishedAt": "2026-11-27T09:34:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/141235/1200x675black-friday-ne-zaman-basliyor-kara-cuma-anlami-ne-demek.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c7af812494f66416b2",
-      "title": "En iyi LG televizyon önerileri: OLED, Micro RGB, Mini LED, QNED evo TV modeller",
-      "summary": "LG, görüntü kalitesi en iyi TV'leri üretmesiyle en çok tercih edilen markalardan biri. Peki, hangi modeli almalı? İşte en iyi LG televizyonlar ve güncel QLED, OLED evo TV fiyatları:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/en-iyi-lg-televizyon-onerileri-lg-tv-fiyatlari--213349",
-      "publishedAt": "2026-11-27T09:23:58Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213349/1200x675en-iyi-lg-televizyon-onerileri-lg-tv-fiyatlari.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -279,18 +411,6 @@
       "editorial": false
     },
     {
-      "id": "bdf305f4efc792a753",
-      "title": "Beyne ilaç taşıyan nanorobotlar geliştirildi: Parkinson ve kanser hedefte",
-      "summary": "Caltech araştırmacıları, kan-beyin bariyerini aşarak beyne ilaç taşıyabilen nanorobotlar geliştirdi. Beyin kanser ve Parkinson’u hedefleyen teknoloji, deneylerde taşınan ilaç miktarını 5 kat artırdı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/beyne-ilac-tasiyan-nanorobotlar-gelistirildi--213456",
-      "publishedAt": "2026-11-27T08:57:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213456/1200x675beyne-ilac-tasiyan-nanorobotlar-gelistirildi.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "399bb5cdaf46e8d4cd",
       "title": "YouTube Premium Aboneleri Artık Uygulama Simgesini Değiştirebilecek: İşte Yeni Tasarımlar",
       "summary": "YouTube, yıllardır gördüğümüz klasik kırmızı oynatma butonuna seçenek sunan yeni bir kişiselleştirme özelliğini kullanıma açmaya başladı. Android ve iOS'ta etkinleşen bu yenilik yalnızca YouTube Premium abonelerine özel.",
@@ -299,18 +419,6 @@
       "publishedAt": "2026-11-27T08:51:13Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/695644/695644-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "4ef4c8e6963244b448",
-      "title": "OLED'e rakip yeni LCD teknolojisi 3 kat daha parlak ve 2 kat daha uzun ömürlü",
-      "summary": "Seoul Semiconductor, OLED'e rakip WICOP Pixel teknolojisini seri üretime aldı. Yeni LCD teknolojisi 3.000 nit parlaklık ve iki kat daha uzun kullanım ömrü vadediyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/oled-e-rakip-yeni-lcd-teknolojisi-hem-parlak-hem-de-uzun-omurlu--213454",
-      "publishedAt": "2026-11-27T08:14:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213454/1200x675oled-e-rakip-yeni-lcd-teknolojisi-hem-parlak-hem-de-uzun-omurlu.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -327,30 +435,6 @@
       "editorial": false
     },
     {
-      "id": "86ec1850fee59b7967",
-      "title": "Chery Arrizo 9 ortaya çıktı: Yeni amiral gemisi sedan",
-      "summary": "Chery’nin yeni amiral gemisi sedanı Arrizo 9, Çin’deki tescil belgelerinde ortaya çıktı. Audi'yi andıran tasarımıyla dikkat çeken model, üç motor seçeneğiyle gelecek. Bunlardan biri de tam hibrit.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/chery-arrizo-9-ortaya-cikti-yeni-amiral-gemisi-sedan--213453",
-      "publishedAt": "2026-11-27T07:45:34Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213453/1200x675chery-arrizo-9-ortaya-cikti-yeni-amiral-gemisi-sedan.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5a96d90920168d9d76",
-      "title": "100 Bin TL'ye en iyi Laptop tavsiyeleri",
-      "summary": "100 bin TL laptop arayanlar için oyun, profesyonel işler ve günlük kullanım odaklı modelleri bir araya getirdik. İşte öne çıkan laptop seçenekleri.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/100-bin-tl-laptop-tavsiyeleri--213398",
-      "publishedAt": "2026-11-27T07:35:48Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/213398/1200x675100-bin-tl-laptop-tavsiyeleri.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "ba47e65ca3c35bf5e0",
       "title": "Vivo’dan Yeni Telefon Geliyor!",
       "summary": "Güvenilir bir sızıntı kaynağına göre yeni vivo X500s, MediaTek imzalı 2 nm Dimensity 9600 Pro işlemcisiyle gelecek. Marka çipi olduğu gibi kullanmak yerine kendi ayarlarıyla sınıyor.",
@@ -359,42 +443,6 @@
       "publishedAt": "2026-11-27T07:29:32Z",
       "category": "Mobil",
       "image": "https://imgrosetta.webtekno.com/file/698851/698851-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "7e258aeca984ce9f2f",
-      "title": "Hyundai Ioniq M’ye ilk bakış: Batarya değişimi sunacak",
-      "summary": "Hyundai, Çin’de Ioniq M adıyla satışa çıkacak elektrikli SUV’unu Mercury konseptiyle gösterdi. 2027’de yollara çıkacak model için CATL ile batarya değişimini destekleyen bir sürüm geliştiriliyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/hyundai-ioniq-m-ye-ilk-bakis-batarya-degisimi-sunacak--213452",
-      "publishedAt": "2026-11-27T07:01:58Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213452/1200x675hyundai-ioniq-m-ye-ilk-bakis-batarya-degisimi-sunacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "2cccda72f23eeda586",
-      "title": "Elon Musk, SpaceX'in yapay zeka yarışında geride kaldığını itiraf etti",
-      "summary": "Elon Musk'ın SpaceX çalışanlarını şirketin yapay zeka alanında rakipleriyle rekabet edemediği konusunda uyardığı ortaya çıktı. Şirket, atıl GPU kapasitesini rakiplerine kiralayarak gelir elde ediyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/elon-musk-yapay-zeka-yarisinda-geride-kaldigini-itiraf-etti--213450",
-      "publishedAt": "2026-11-27T06:32:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213450/1200x675elon-musk-yapay-zeka-yarisinda-geride-kaldigini-itiraf-etti.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c1ecc85a45548e4308",
-      "title": "Avrupa’da dev IPTV operasyonu",
-      "summary": "Avrupa’da kaçak olarak faaliyet gösteren onlarca IPTV hizmeti yapılan operasyonla etkisiz hale getirilirken milyonlarca Euroluk para transferi tespit edildi.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iptv-aglarina-darbe--213451",
-      "publishedAt": "2026-11-27T06:06:38Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213451/1200x675iptv-aglarina-darbe.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -408,18 +456,6 @@
       "category": "Oyun",
       "image": "https://live.staticflickr.com/65535/55668942228_0d291ec579_4k.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "a50fb3f056aac29817",
-      "title": "Claude artık masaüstü uygulamaları oluşturabiliyor: Ücretsiz kullanıcılara da açık!",
-      "summary": "Anthropic, Claude için geliştirdiği Install as app özelliğiyle kullanıcıların tek satır kod yazmadan Windows ve macOS uygulamaları oluşturmasına ve bilgisayarlarına yüklemesine olanak tanıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/claude-artik-masaustu-uygulamalari-olusturabiliyor--213447",
-      "publishedAt": "2026-11-26T20:59:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213447/1200x675claude-artik-masaustu-uygulamalari-olusturabiliyor.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -552,54 +588,6 @@
       "category": "Oyun",
       "image": "https://xboxwire.thesourcemediaassets.com/sites/2/2026/11/WOA_Bawma_Wire_img2-3b22debdf766e57c2f67-1024x576.jpg",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "77279e0276403ffd15",
-      "title": "Resmî Olmayan GTA 6 PC Sürümleri Artık 20-30 FPS'de Çalışıyor [Video]",
-      "summary": "Yapay zekâ desteğiyle geliştirilen resmî olmayan GTA 6 PC derlemeleri 20-30 FPS'de çalıştırılabiliyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/gta-6-pc-surumleri-artik-20-30-fps-calisiyor-video-h229504.html",
-      "publishedAt": "2026-11-26T13:24:44Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/698770/698770-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a3956f31a8ce2037c6",
-      "title": "WhatsApp'ın Uzun Süredir Beklenen Özelliği Herkesin Kullanımına Açılıyor",
-      "summary": "WhatsApp, kullanıcıların metin, fotoğraf ve videoları 14 gün sonrasına kadar otomatik göndermesini sağlayan zamanlanmış mesaj özelliğini herkese açıyor.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/whatsapp-zamanlanmis-mesaj-ozelligi-kullanima-aciliyor-h229498.html",
-      "publishedAt": "2026-11-26T13:24:14Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/698755/698755-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "22a0b76f6729b3aa94",
-      "title": "Samsung Galaxy S27 Pro ve Ultra Maketleri Videoda Göründü: Yeni Tasarım Sızdı!",
-      "summary": "Samsung'un 2027 başında tanıtması beklenen Galaxy S27 Pro ile S27 Ultra'nın maket üniteleri yeni bir inceleme videosunda ortaya çıktı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/samsung-galaxy-s27-pro-ultra-maket-videosu-sizdirildi-h229501.html",
-      "publishedAt": "2026-11-26T13:24:03Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/698792/698792-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "e46f97a0e7d22eaa01",
-      "title": "1Password'da Veri İhlali Yaşandığı Açıklandı: Hangi Bilgiler Sızdırıldı?",
-      "summary": "1Password sistemlerinde veri ihlali yaşandığını ve bazı hesap bilgilerinin çalındığını açıkladı.",
-      "source": "Webtekno",
-      "sourceUrl": "https://www.webtekno.com/1password-veri-ihlali-yasandigi-aciklandi-h229493.html",
-      "publishedAt": "2026-11-26T13:23:35Z",
-      "category": "Teknoloji",
-      "image": "https://imgrosetta.webtekno.com/file/698752/698752-640xauto.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -987,18 +975,6 @@
       "editorial": false
     },
     {
-      "id": "371341340b25f385a0",
-      "title": "Free Play Days – Deadlink, Slayers X: Terminal Aftermath: Vengance of the Slayer, and Polterguys: Possession Party",
-      "summary": "Drop into some awesomeness with Free Play Days! Deadlink, Slayers X: Terminal Aftermath: Vengance of the Slayer, and Polterguys Possession Party are available this weekend for XBOX Game Pass Ultimate, Premium and Essential members to play from Thursday, November 19 until Sunday, November 22 . How to Start Playing Scroll down and find and install",
-      "source": "Xbox Wire",
-      "sourceUrl": "https://news.xbox.com/en-us/2026/11/19/free-play-days-11-19-2026/",
-      "publishedAt": "2026-11-19T16:00:00Z",
-      "category": "Oyun",
-      "image": "https://store-images.s-microsoft.com/image/apps.7852.13895100178402269.a4969464-a224-4b78-8b54-cde3d6ba2195.dd22d097-fcce-48f8-9680-4a4f2e3aca79?w=400&h=600",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "32c1e05692d04a88fb",
       "title": "Internet traffic and attacks during the 2026 U.S. midterm elections",
       "summary": "On November 3, 2026 U.S. voters headed to the polls. Here’s what Cloudflare data across more than 1,400 protected sites tells us about Election Day Internet traffic and cyberattacks.",
@@ -1119,18 +1095,6 @@
       "editorial": false
     },
     {
-      "id": "68e7ef59b8e07c93d2",
-      "title": "QSSR arrives in Marvel’s Spider-Man 2, Control Resonant, The Finals, Arc Raiders, No Man’s Sky, and Hell Let Loose: Vietnam",
-      "summary": "Six years after launch, PlayStation 5 is still getting better. Last month, we introduced Quick Spectral Super Resolution (QSSR), bringing AI-guided upscaling to the console you already own. Since then, there’s been a lot of interest from developers eager to try it out. We’re happy to announce that the next set of games is on",
-      "source": "PlayStation Blog",
-      "sourceUrl": "https://blog.playstation.com/2026/11/13/qssr-arrives-in-marvels-spider-man-2-control-resonant-the-finals-arc-raiders-and-hell-let-loose-vietnam/",
-      "publishedAt": "2026-11-13T14:00:16Z",
-      "category": "Oyun",
-      "image": "https://blog.playstation.com/tachyon/2026/11/105d12450fe9246de305a3a43412100d0e299216-scaled.jpg?fit=1024%2C1024",
-      "language": "en",
-      "editorial": false
-    },
-    {
       "id": "40ec4dab142d1c857a",
       "title": "Introducing Spend Management: Spending limits and alerts for Cloudflare",
       "summary": "Spend Management adds opt-in spending caps for Cloudflare Workers and Durable Objects, and more products soon. Here is how we built the metering pipeline that turns usage into runtime decisions.",
@@ -1199,6 +1163,42 @@
       "publishedAt": "2026-11-06T14:00:00Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6RNKQ9RKEJ9CKY6DGNF44RV.01M6RNKRJAQTN05BV66646AM7Z.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "7303cf34c367e5457b",
+      "title": "Agents aren’t humans (but they kinda are)",
+      "summary": "AI agents act for millions, but servers see intermediaries that strip user visibility. This post defines the problem space and introduces a collaborative approach to safely identifying, allowing, and managing this automated traffic.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/trusted-agent-delegation/",
+      "publishedAt": "2026-11-05T17:03:04Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6HXVQ0MH26TMB3HFFHA31DK.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "d13fbfe75d78ae195c",
+      "title": "See the agents, set the terms: New visibility and control for personal agents",
+      "summary": "Personal AI agents have changed how users interact with the web, blurring the lines between automated and human traffic. Learn how Cloudflare gives site owners visibility and control to manage personal agent access.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/personal-agents-visibility-control/",
+      "publishedAt": "2026-11-04T14:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6HZ1ZE3ZTGF9NEGGPF8SZNS.png",
+      "language": "en",
+      "editorial": false
+    },
+    {
+      "id": "e581154108f523de51",
+      "title": "Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities",
+      "summary": "Zero Wire on Cloudflare Radar pairs plain-language briefings with global attack telemetry and remediation steps. Triage critical CVEs faster and decide how to protect your infrastructure.",
+      "source": "Cloudflare Blog",
+      "sourceUrl": "https://blog.cloudflare.com/zero-wire/",
+      "publishedAt": "2026-11-03T14:00:00Z",
+      "category": "Güvenlik",
+      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6GJ6AY4JP65PWEN7N433797.01M6GJ6BBQ9P5FYVNPWDVKT2EY.png",
       "language": "en",
       "editorial": false
     }
