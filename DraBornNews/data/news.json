@@ -1,7 +1,163 @@
 {
-  "generatedAt": "2026-11-27T22:35:34.188213Z",
+  "generatedAt": "2026-11-28T13:28:44.187482Z",
   "sourceCount": 7,
   "items": [
+    {
+      "id": "f854b37938ca170575",
+      "title": "Rusya'dan tarihi başarı: Nükleer yakıt artık tekrar tekrar kullanılabilecek",
+      "summary": "Rusya, kullanılmış nükleer yakıttan geri kazanılan plütonyumu ikinci kez yakıt üretiminde kullanmayı başardı. Teknoloji, doğal uranyum kaynaklarına olan ihtiyacı önemli ölçüde azaltabilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/rusya-ilk-kez-nukleer-atigi-yeniden-yakita-donusturmeyi-basardi--213496",
+      "publishedAt": "2026-11-28T13:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213496/1200x675rusya-ilk-kez-nukleer-atigi-yeniden-yakita-donusturmeyi-basardi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "eea445e8d87b747627",
+      "title": "iPhone 18 ve iPhone 18e'nin üretimi yine ertelendi: Lansman gecikebilir",
+      "summary": "Kasım ayında üretime girmesi beklenen iPhone 18 ve iPhone 18e'nin seri üretiminin yılbaşına ertelendiği iddia edildi. Gecikme, Apple'ın 2027'nin ilk ayları için planladığı lansmanı etkileyebilir.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/iphone-18-ve-iphone-18e-nin-uretimi-yine-ertelendi--213501",
+      "publishedAt": "2026-11-28T12:00:00Z",
+      "category": "Mobil",
+      "image": "https://www.donanimhaber.com/images/images/haber/213501/1200x675iphone-18-ve-iphone-18e-nin-uretimi-yine-ertelendi.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "59b1fe8aa7c12324f0",
+      "title": "Otomasyon devi SAP yapay zekâya yenik düştü, 10 bin kişiyi işten çıkarıyor",
+      "summary": "Uzun yıllar şirketlere otomasyon yazılımları ve bulut dönüşümleri satan Alman devi SAP küçülmeye gidiyor. Şirket iş gücünün yaklaşık yüzde 9’unu kesiyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yazilim-dunyasinda-buyuk-sok--213507",
+      "publishedAt": "2026-11-28T11:35:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213507/1200x675yazilim-dunyasinda-buyuk-sok.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "ac5af11720d92c5eea",
+      "title": "Çin'deki sürücüler araçlarına sahte LiDAR takmaya başladı: Peki neden?",
+      "summary": "Çin'deki sürücüler, otonom araçların tavan sensörlerini taklit eden sahte plastik LiDAR kapaklarına yoğun ilgi göstermeye başladı. Peki sadece 1 dolara satılan bu aksesuar neden bir anda trend oldu?",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/cin-deki-suruculer-araclarina-sahte-lidar-takmaya-basladi-peki-n--213499",
+      "publishedAt": "2026-11-28T11:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213499/1200x675cin-deki-suruculer-araclarina-sahte-lidar-takmaya-basladi-peki-n.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "53a055f9cd01b7b490",
+      "title": "Yapay zekâ destekli zararlı yazılım: Bazuka",
+      "summary": "Bazuka adındaki zararlı yazılım birden fazla fonksiyon modülü ve yapay zekâ desteğiyle hazırlanmış gelişmiş admin paneli ile siber saldırıları daha da kolaylaştırıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/yapay-zek-siber-saldiri-yapiyor--213506",
+      "publishedAt": "2026-11-28T10:35:00Z",
+      "category": "Yapay Zeka",
+      "image": "https://www.donanimhaber.com/images/images/haber/213506/1200x675yapay-zek-siber-saldiri-yapiyor.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "9bd15939878be247c7",
+      "title": "GTA 6'nın satışları ilk haftada 53 milyon kopyayı aştı",
+      "summary": "Alinea Analytics'in tahminlerine göre GTA 6, piyasaya sürüldüğü ilk haftada 53 milyon kopyadan fazla sattı. PlayStation 5, toplam satışların yaklaşık yüzde 76'sını oluşturdu.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/gta-6-nin-satislari-ilk-haftada-53-milyon-kopyayi-asti--213505",
+      "publishedAt": "2026-11-28T10:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213505/1200x675gta-6-nin-satislari-ilk-haftada-53-milyon-kopyayi-asti.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "b9276a473be1720c07",
+      "title": "BİM marketler GTA 6 şerefine PlayStation 5 ve dev akıllı televizyon satacak",
+      "summary": "2 Aralık BİM aktüel teknoloji ürünleri arasında Sony PlayStation 5 dijital sürüm konsol ve TCL markasına ait 75 inçlik akıllı televizyon modeli yer alıyor.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/2-aralik-bim-aktuel-katalogunda-neler-var--213502",
+      "publishedAt": "2026-11-28T09:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/213502/1200x6752-aralik-bim-aktuel-katalogunda-neler-var.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c6ab90f1ac79c9451e",
+      "title": "Hyundai IONIQ M'ye ilk bakış | AB'den Türkiye'ye HİBRİT KOTASI! - Oto Gündem",
+      "summary": "Çin'in yeni elektrikli SUV'u Jetour TX, Hyundai'nin Ioniq M konsepti ve Avrupa'nın hibrit kotası bu hafta gündemde. Türkiye'yi doğrudan ilgilendiren gelişmeleri birlikte yorumluyoruz.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/hyundai-ioniq-m-ye-ilk-bakis-680-binlik-jetour-tx--213504",
+      "publishedAt": "2026-11-28T09:00:36Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213504/1200x675hyundai-ioniq-m-ye-ilk-bakis-680-binlik-jetour-tx.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "2a48bc5e3791d487fb",
+      "title": "Casper Excalibur 27'' 300Hz Curved Gaming Monitör: Özellikler, Fiyat ve Kimlere Uygun?",
+      "summary": "Casper Excalibur 27'' 300Hz Curved Gaming Monitör, 7.999 TL'ye 27 inç 1500R kavisli Fast VA panel, 300 Hz (DP) yenileme hızı, MPRT 0.5 ms tepki süresi, HDR10 ve G-SYNC/FreeSync desteği sunuyor.",
+      "source": "Webtekno",
+      "sourceUrl": "https://www.webtekno.com/oyun-tutkunlari-icin-excalibur-27-300hz-curved-gaming-monitor-h229516.html",
+      "publishedAt": "2026-11-28T09:00:03Z",
+      "category": "Oyun",
+      "image": "https://imgrosetta.webtekno.com/file/698836/698836-640xauto.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "63194d31f0d3f03c77",
+      "title": "Sony, grafik ayarlarını tek tuşla değiştirmeyi mümkün kılabilir",
+      "summary": "Sony'nin yeni patenti, oyuncuların oyun sırasında menülere girmeden kalite ve performans modları arasında geçiş yapmasını sağlayacak özel bir kontrolcü tuşunu gündeme getirdi.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/sony-grafik-ayarlarini-tek-tusla-degistirmeyi-mumkun-kilabilir--213497",
+      "publishedAt": "2026-11-28T08:30:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213497/1200x675sony-grafik-ayarlarini-tek-tusla-degistirmeyi-mumkun-kilabilir.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "c70481c915fc7d06ca",
+      "title": "CATL’den bir dakikada değiştirilebilen 100 kWsa batarya",
+      "summary": "CATL, Çin'de bir dakikadan kısa sürede değiştirilebilen 100 kWsa bataryasını tanıttı. Yaklaşık 700 km CLTC menzil hedefleyen yeni paket, hızlı şarjla 10 dakikada 400 km menzil ekleme imkanı da sunuyor",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/catl-den-bir-dakikada-degistirilebilen-100-kwsa-batarya--213503",
+      "publishedAt": "2026-11-28T08:00:00Z",
+      "category": "Teknoloji",
+      "image": "https://www.donanimhaber.com/images/images/haber/213503/1200x675catl-den-bir-dakikada-degistirilebilen-100-kwsa-batarya.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "13372610024520cb5f",
+      "title": "Xbox'ta bu hafta: Kısa süreliğine 2 oyun ücretsiz",
+      "summary": "Xbox Free Play Days kapsamında bu hafta ücretsiz olacak oyunlar açıklandı. Game Pass ve Xbox kullanıcıları bu hafta da birçok oyunlara ücretsiz olarak erişebilecek.",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/xbox-ta-bu-hafta-kisa-sureligine-2-oyun-ucretsiz--213498",
+      "publishedAt": "2026-11-28T07:30:00Z",
+      "category": "Oyun",
+      "image": "https://www.donanimhaber.com/images/images/haber/213498/1200x675xbox-ta-bu-hafta-kisa-sureligine-2-oyun-ucretsiz.jpg",
+      "language": "tr",
+      "editorial": false
+    },
+    {
+      "id": "90f427d624842d4aee",
+      "title": "17 inç ekranlı en iyi laptoplar",
+      "summary": "17 inç laptop arayanlar için oyun ve profesyonel kullanıma uygun modelleri bir araya getirdik. İşte Casper, MSI, HP, Lenovo ve Acer seçenekleri. İşte modeller...",
+      "source": "DonanımHaber",
+      "sourceUrl": "https://www.donanimhaber.com/17-inc-laptop-tavsiyeleri--213439",
+      "publishedAt": "2026-11-28T06:30:00Z",
+      "category": "Donanım",
+      "image": "https://www.donanimhaber.com/images/images/haber/213439/1200x67517-inc-laptop-tavsiyeleri.jpg",
+      "language": "tr",
+      "editorial": false
+    },
     {
       "id": "d602b35d57d4ea6a8d",
       "title": "A101 marketler Apple’dan ucuza iPhone Duo satıyor",
@@ -135,18 +291,6 @@
       "editorial": false
     },
     {
-      "id": "bbc438280e3bd0915a",
-      "title": "Microsoft, Windows 11'in RAM kullanımını düşürdü",
-      "summary": "Microsoft, artan RAM fiyatlarına karşı Windows 11'in bellek kullanımını optimize etti. Şirket, sistem genelinde 800 MB'tan fazla bellek tasarrufu sağladığını açıkladı.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/microsoft-windows-11-in-ram-kullanimini-dusurdu--213467",
-      "publishedAt": "2026-11-27T15:11:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213467/1200x675microsoft-windows-11-in-ram-kullanimini-dusurdu.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "85f383c35826b18ef9",
       "title": "Vodafone CEO'su Engin Aksoy, Onedio'a Sosyal Medyadan Gelen Soruları Yanıtladı",
       "summary": "Vodafone CEO'su Engin Aksoy, Onedio'da sosyal medyadan gelen soruları yanıtladı.",
@@ -155,18 +299,6 @@
       "publishedAt": "2026-11-27T15:05:58Z",
       "category": "Teknoloji",
       "image": "https://imgrosetta.webtekno.com/file/698998/698998-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "a3d45e8860072d0d15",
-      "title": "Yeni Intel Core 3 304 işlemci dizüstünde günlük kullanımda ne sunuyor? İşte Lenovo IdeaPad Slim 3!",
-      "summary": "Intel'in yeni mobil giriş seviye işlemcisi olan Intel Core 3 304'e sahip olan Lenovo IdeaPad Slim 3 modelini inceledik: Hafif, verimli ve yükseltilebilir. Kimlere uyuyor, nerede zorlanıyor?",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/iste-yeni-intel-core-3-304-islemcisiyle-lenovo-ideapad-slim-3--213478",
-      "publishedAt": "2026-11-27T15:01:10Z",
-      "category": "Donanım",
-      "image": "https://www.donanimhaber.com/images/images/haber/213478/1200x675iste-yeni-intel-core-3-304-islemcisiyle-lenovo-ideapad-slim-3.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -180,42 +312,6 @@
       "category": "Oyun",
       "image": "https://store-images.s-microsoft.com/image/apps.37680.13695455777746470.b5065f12-4f24-419f-8748-b2862b4eb30c.3be8773f-10df-4d40-a088-e321a9b99f87?w=400&h=600",
       "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "fd46afc2f22db52faf",
-      "title": "Samsung telefonlara akıllı şarj hatırlatıcı özelliği geliyor",
-      "summary": "Samsung, onarım için batarya güvenliğini sağlayan Güvenli Pil Gönderimi özelliğini test ediyor. Ayrıca, normal şarj aralığı kaçırıldığında uyaran şarj hatırlatıcı özelliği geliştiriyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/samsung-telefonlara-akilli-sarj-hatirlatici-ozelligi-geliyor--213475",
-      "publishedAt": "2026-11-27T14:50:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213475/1200x675samsung-telefonlara-akilli-sarj-hatirlatici-ozelligi-geliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "173209fdf7500a5ead",
-      "title": "ChatGPT ve Gemini için tablet seçimi: AI için tabletler",
-      "summary": "Gemini, ChatGPT ve diğer AI uygulamaları için en iyi tabletler, güçlü işlemci, yüksek kapasiteli RAM ve büyük ekran sunar. Peki, hangi modeli almalı? İşte yapay zeka destekli tablet önerileri:",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-destekli-tabletler--213389",
-      "publishedAt": "2026-11-27T14:38:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213389/1200x675yapay-zeka-destekli-tabletler.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "746d71e03cb9dccd73",
-      "title": "n11'in Kasım Fırsatlarında Büyük Final Başladı: İşte Öne Çıkan İndirimler",
-      "summary": "n11'de Black Friday'e özel indirimler başladı. Teknolojik ürünlerde sepette ek indirim kampanyaları ve \"Akakçe En İyi Fiyat\" rozetli ürünler dikkat çekiyor. Öne çıkan indirimleri listeledik.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/n11-de-kasim-firsatlari-nda-buyuk-final-basladi-2026--213480",
-      "publishedAt": "2026-11-27T14:22:08Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213480/1200x675n11-de-kasim-firsatlari-nda-buyuk-final-basladi-2026.jpg",
-      "language": "tr",
       "editorial": false
     },
     {
@@ -243,54 +339,6 @@
       "editorial": false
     },
     {
-      "id": "4ff5a23b3df8422a50",
-      "title": "Android geliştiricilerinin adres ve telefon numaraları herkese açık olacak",
-      "summary": "Google, Android uygulama geliştiricileri için yeni bir zorunluluk getiriyor. 2027'de yürürlüğe girecek değişiklikle birlikte geliştiricilerin adres ve telefon numaraları herkese açık olacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/android-gelistiricilerinin-adresi-herkese-acik-olacak--213470",
-      "publishedAt": "2026-11-27T13:45:00Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213470/1200x675android-gelistiricilerinin-adresi-herkese-acik-olacak.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "66c056d8246b1e3e30",
-      "title": "Amazon Gülümseten Cuma Flaş Fırsatları başladı: iPhone 18 Pro ve Galaxy Z Fold indirime girdi",
-      "summary": "Amazon.com.tr'de Gülümseten Cuma'ya özel Flaş Fırsatlar başladı. iPhone 18 Pro, Galaxy Z Fold8 Ultra ve Roborock robot süpürge dahil birçok üründe indirim var.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/amazon-gulumseten-cuma-flas-firsatlari-basladi-iphone-18-pro-ve--213483",
-      "publishedAt": "2026-11-27T13:41:07Z",
-      "category": "Mobil",
-      "image": "https://www.donanimhaber.com/images/images/haber/213483/1200x675amazon-gulumseten-cuma-flas-firsatlari-basladi-iphone-18-pro-ve.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "3deec775f50fa78267",
-      "title": "Stellantis, Avrupa'daki fabrikalarında üretimi durduruyor",
-      "summary": "Stellantis, artan üretim maliyetleri, zayıflayan talep ve Çinli otomobil üreticilerinin rekabetiyle mücadele ediyor. Şirket, Avrupa'daki fabrikalarında üretimi durduruyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/stellantis-avrupa-daki-fabrikalarinda-uretimi-durduruyor--213469",
-      "publishedAt": "2026-11-27T13:24:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213469/1200x675stellantis-avrupa-daki-fabrikalarinda-uretimi-durduruyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "c97ca680729b638069",
-      "title": "Yapay zekâ aracı Artex, dünyanın en önemli kurumlarını hackliyor",
-      "summary": "CIA'ye yönelik saldırıyla gündeme gelen Artex, yapay zekâ ajanlarını kullanarak güvenlik açıklarını bulabiliyor ve sistemlere sızabiliyor. Üstelik aracın 130'dan fazla farklı sürümü bulunuyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/yapay-zeka-artex-dunyanin-en-onemli-kurumlarini-hackliyor--213468",
-      "publishedAt": "2026-11-27T13:00:00Z",
-      "category": "Yapay Zeka",
-      "image": "https://www.donanimhaber.com/images/images/haber/213468/1200x675yapay-zeka-artex-dunyanin-en-onemli-kurumlarini-hackliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "0ade9b13660c6ac985",
       "title": "Samsung Telefonlara Şarjı Unutturmayacak Bir Özellik Gelebilir!",
       "summary": "Samsung, One UI 9.5 kodlarında ortaya çıkan akıllı şarj hatırlatıcısıyla, alıştığınız şarj saatini kaçırdığınızda devreye girmeyi hedefliyor.",
@@ -303,18 +351,6 @@
       "editorial": false
     },
     {
-      "id": "80a996037570fdfd52",
-      "title": "Rockstar'a ikinci darbe: GTA VI online PC için hazırlanıyor!",
-      "summary": "GTA 6'nın resmî olmayan PC sürümünün yayınlanmasının ardından, mod yapımcıları multiplayer modu gösteren bir video yayınlandı. Sözde GTA VI online 30FPS'e kadar çalışıyor.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/modcular-pc-icin-gta-6-online-modu-hazirliyor--213465",
-      "publishedAt": "2026-11-27T12:38:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213465/1200x675modcular-pc-icin-gta-6-online-modu-hazirliyor.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
       "id": "af15c14e353ac433ab",
       "title": "Oyun Anahtarı mı, Hesap mı? Dijital Oyun Satın Alma Yöntemleri Karşılaştırması",
       "summary": "Seçtiğiniz format, oyuna ne kadar hızlı erişeceğinizi, oyunun daha sonra nerede kalacağını ve ne kadar ödeyeceğinizi etkileyebilir.",
@@ -323,18 +359,6 @@
       "publishedAt": "2026-11-27T12:34:45Z",
       "category": "Oyun",
       "image": "https://imgrosetta.webtekno.com/file/698861/698861-640xauto.jpg",
-      "language": "tr",
-      "editorial": false
-    },
-    {
-      "id": "5d3e392cb830f4ab31",
-      "title": "Avrupa'nın en büyük uydu fabrikası açıldı: Hedef Starlink'e rakip olmak",
-      "summary": "Avrupa, Starlink'e bağımlılığını azaltmak için önemli bir adım attı. Belçika'da açılan yeni dev fabrika, Avrupa Birliği'nin 348 uyduluk IRIS2 ağı için üretim yapacak.",
-      "source": "DonanımHaber",
-      "sourceUrl": "https://www.donanimhaber.com/avrupa-nin-en-buyuk-uydu-fabrikasi-acildi-hedef-starlink--213466",
-      "publishedAt": "2026-11-27T12:15:00Z",
-      "category": "Teknoloji",
-      "image": "https://www.donanimhaber.com/images/images/haber/213466/1200x675avrupa-nin-en-buyuk-uydu-fabrikasi-acildi-hedef-starlink.jpg",
       "language": "tr",
       "editorial": false
     },
@@ -1175,30 +1199,6 @@
       "publishedAt": "2026-11-05T17:03:04Z",
       "category": "Güvenlik",
       "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6HXVQ0MH26TMB3HFFHA31DK.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "d13fbfe75d78ae195c",
-      "title": "See the agents, set the terms: New visibility and control for personal agents",
-      "summary": "Personal AI agents have changed how users interact with the web, blurring the lines between automated and human traffic. Learn how Cloudflare gives site owners visibility and control to manage personal agent access.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/personal-agents-visibility-control/",
-      "publishedAt": "2026-11-04T14:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6HZ1ZE3ZTGF9NEGGPF8SZNS.png",
-      "language": "en",
-      "editorial": false
-    },
-    {
-      "id": "e581154108f523de51",
-      "title": "Introducing Zero Wire, a hub for investigating critical Internet vulnerabilities",
-      "summary": "Zero Wire on Cloudflare Radar pairs plain-language briefings with global attack telemetry and remediation steps. Triage critical CVEs faster and decide how to protect your infrastructure.",
-      "source": "Cloudflare Blog",
-      "sourceUrl": "https://blog.cloudflare.com/zero-wire/",
-      "publishedAt": "2026-11-03T14:00:00Z",
-      "category": "Güvenlik",
-      "image": "https://blog.cloudflare.com/_emdash/api/media/file/01M6GJ6AY4JP65PWEN7N433797.01M6GJ6BBQ9P5FYVNPWDVKT2EY.png",
       "language": "en",
       "editorial": false
     }
